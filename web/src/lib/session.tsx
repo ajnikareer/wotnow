@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useState, type React
 import { api } from './api'
 import type { Me } from './types'
 
-/** Who is using the app: nobody (landing), a student, or a parent. Demo auth for the hackathon. */
+/** Who is using the app: nobody (landing), a student, or a parent. Demo identity or a Google account's active child. */
 type Role = 'student' | 'parent' | null
 type Ctx = { role: Role; me?: Me; signIn: (r: Exclude<Role, null>) => void; signOut: () => void; refreshMe: () => Promise<void>; setMe: (m: Me) => void }
 const SessionCtx = createContext<Ctx>({ role: null, signIn: () => {}, signOut: () => {}, refreshMe: async () => {}, setMe: () => {} })
@@ -14,7 +14,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   useEffect(() => { if (role) refreshMe() }, [role, refreshMe])
   const signIn = (r: Exclude<Role, null>) => { localStorage.setItem('wn_role', r); setRole(r) }
   const signOut = () => {
-    localStorage.removeItem('wn_role'); localStorage.removeItem('wn_uid'); localStorage.removeItem('wn_token')
+    for (const k of ['wn_role', 'wn_uid', 'wn_token', 'wn_child']) localStorage.removeItem(k)
     setRole(null); setMe(undefined)
   }
   return <SessionCtx.Provider value={{ role, me, signIn, signOut, refreshMe, setMe }}>{children}</SessionCtx.Provider>

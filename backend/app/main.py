@@ -1,25 +1,34 @@
 """
-wotnow API (FastAPI on Cloud Run) + the built web app (served from STATIC_DIR when present).
-AI calls run through Google ADK agents (app/agents) when AGENT_RUNTIME=adk.
-Local:  uvicorn app.main:app --reload --port 8080   →  http://localhost:8080/docs
+wotnow API (FastAPI) + the built web app (served from STATIC_DIR when present).
+
+  /            web app (React build)
+  /api/*       student / parent / admin API        (/docs = interactive docs)
+  /jobs/*      scheduled jobs (X-Jobs-Token)
+Background: the content pipeline loop keeps posting on schedule (PIPELINE_ENABLED=true).
+Security: rate limits, request size limit, security headers, restricted CORS, Google sign-in (AUTH_MODE=google).
 """
 from __future__ import annotations
 
+import asyncio
 import logging
 import os
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 
 from .agents.api import router as agents_router
 from .ai.llm import agent_runtime_name, get_llm
 from .config import get_settings
-from .routers import api, jobs
+from .core import security
+from .core.settings import get_platform
+from .pipeline import scheduler
+from .routers import admin, api, auth_api, jobs, pipeline_jobs
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
+log = logging.getLogger("wotnow")
 s = get_settings()
 STATIC_DIR = Path(os.getenv("STATIC_DIR", str(Path(__file__).resolve().parent.parent / "static"))).resolve()
 INDEX = STATIC_DIR / "index.html"
@@ -27,31 +36,92 @@ INDEX = STATIC_DIR / "index.html"
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
+    ps = get_platform()
     if s.AUTO_SEED:
         from .seed import seed_all
-        r = await seed_all()
-        logging.getLogger("wotnow").info("seed: %s", r)
+        log.info("seed: %s", await seed_all())
     llm = get_llm()
-    logging.getLogger("wotnow").info("ai provider=%s runtime=%s ready=%s vertex=%s web=%s",
-                                     llm.name, agent_runtime_name(), llm.available, s.use_vertex, INDEX.exists())
+    log.info("ai provider=%s runtime=%s ready=%s vertex=%s web=%s db=%s auth=%s pipeline=%s",
+             llm.name, agent_runtime_name(), llm.available, s.use_vertex, INDEX.exists(), s.DB_BACKEND, ps.auth_mode, ps.pipeline_enabled)
+    stop, task = asyncio.Event(), None
+    if ps.pipeline_enabled:
+        task = asyncio.create_task(scheduler.run_forever(stop))
     yield
+    stop.set()
+    if task:
+        try:
+            await asyncio.wait_for(task, timeout=5)
+        except Exception:
+            task.cancel()
 
 
 app = FastAPI(title="wotnow API", version=s.VERSION, lifespan=lifespan,
               description="The safe social feed where AI experts post real-life scenarios and students learn by responding.")
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+_ps = get_platform()
+if _ps.cors_origins:
+    app.add_middleware(CORSMiddleware, allow_origins=_ps.cors_origins, allow_methods=["*"], allow_headers=["*"])
+
+
+def _limited(retry: int, msg: str = "Too many requests. Please slow down.") -> JSONResponse:
+    return JSONResponse({"detail": msg}, status_code=429, headers={"Retry-After": str(retry)})
+
+
+@app.middleware("http")
+async def guard(request: Request, call_next):
+    ps = get_platform()
+    path, method = request.url.path, request.method
+    if path.startswith(("/api/", "/jobs/")):
+        cl = request.headers.get("content-length")
+        if cl and cl.isdigit() and int(cl) > ps.max_body_bytes:
+            return JSONResponse({"detail": "Request too large"}, status_code=413)
+        ip = security.client_ip(request)
+        ok, retry = security.limiter.allow(f"all:{ip}", ps.rl_general_per_min, 60)
+        if not ok:
+            return _limited(retry)
+        ident = security.identity_key(request)
+        if path.startswith("/api/admin"):
+            ok, retry = security.limiter.allow(f"admin:{ident}", ps.rl_admin_per_min, 60)
+            if not ok:
+                return _limited(retry)
+        elif method == "POST" and path.endswith("/answer"):
+            ok, retry = security.limiter.allow(f"ans-min:{ident}", ps.rl_answers_per_min, 60)
+            if not ok:
+                return _limited(retry, "Slow down a little: you're answering very fast.")
+            ok, retry = security.limiter.allow(f"ans-day:{ident}", ps.rl_answers_per_day, 86400)
+            if not ok:
+                return _limited(retry, "Daily answer limit reached. Come back tomorrow! 🌙")
+        elif path == "/api/auth/google":
+            ok, retry = security.limiter.allow(f"auth:{ip}", ps.rl_auth_per_min, 60)
+            if not ok:
+                return _limited(retry)
+    resp = await call_next(request)
+    resp.headers.setdefault("X-Content-Type-Options", "nosniff")
+    resp.headers.setdefault("X-Frame-Options", "DENY")
+    resp.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
+    resp.headers.setdefault("Permissions-Policy", "camera=(), geolocation=(), microphone=(self)")
+    if request.url.scheme == "https" or request.headers.get("x-forwarded-proto") == "https":
+        resp.headers.setdefault("Strict-Transport-Security", "max-age=31536000")
+    if path.startswith("/api/") and "cache-control" not in resp.headers:
+        resp.headers["Cache-Control"] = "no-store"
+    return resp
+
+
 app.include_router(api.router)
+app.include_router(auth_api.router)
+app.include_router(admin.router)
 app.include_router(jobs.router)
+app.include_router(pipeline_jobs.router)
 app.include_router(agents_router)
 
 
 def _info() -> dict:
-    llm = get_llm()
+    llm, ps = get_llm(), get_platform()
     return {"app": "wotnow", "version": s.VERSION, "llm": s.LLM_PROVIDER, "geminiReady": llm.available,
             "agentRuntime": agent_runtime_name(), "provider": llm.name,
             "model": s.GEMINI_MODEL, "vertex": s.use_vertex, "vertexLocation": s.GOOGLE_CLOUD_LOCATION if s.use_vertex else None,
-            "dataMode": s.DATA_MODE, "db": s.DB_BACKEND, "auth": s.AUTH_MODE, "web": INDEX.exists(), "docs": "/docs",
-            "agents": "/api/ai/agents"}
+            "dataMode": s.DATA_MODE, "db": s.DB_BACKEND, "auth": ps.auth_mode, "googleSignIn": ps.google_enabled,
+            "pipeline": {"enabled": ps.pipeline_enabled, "paused": scheduler.status()["paused"]},
+            "web": INDEX.exists(), "docs": "/docs", "agents": "/api/ai/agents"}
 
 
 @app.get("/api/info")

@@ -1,7 +1,8 @@
 """
-WotnowGuardrails: an ADK plugin applied to EVERY agent the runtime runs.
+WotnowGuardrails: an ADK plugin applied to EVERY agent the runtime runs. Rules come from rules.json + admin edits
+(re-read automatically when they change).
 
-before_model  · appends the global safety policy (rules.json) to the system instruction
+before_model  · appends the global safety policy to the system instruction
               · scrubs phone numbers / emails / handles from student text for agents with pii_scrub
               · flags prompt-injection attempts in student text (recorded in the trace)
               · truncates oversized input
@@ -29,13 +30,21 @@ class WotnowGuardrails(BasePlugin):
     def __init__(self, agent_flags: dict[str, dict]):
         """agent_flags: agent name -> {"pii_scrub": bool, "guard_output": bool, "skill": str}"""
         super().__init__(name="wotnow_guardrails")
-        r = cfg.rules()
         self.flags = agent_flags
+        self._ver = None
+        self._refresh()
+
+    def _refresh(self) -> None:
+        ver = cfg.config_version()
+        if ver == self._ver:
+            return
+        r = cfg.rules()
         self.policy = cfg.policy_text()
         self.max_chars = int(r.get("max_input_chars", 12000))
         self.blocked = {k: re.compile(v, re.I) for k, v in r["blocked_output_patterns"].items()}
         self.pii = {k: re.compile(v) for k, v in r["pii_patterns"].items()}
         self.injection = [m.lower() for m in r.get("injection_markers", [])]
+        self._ver = ver
 
     # ---------- helpers ----------
     @staticmethod
@@ -58,6 +67,7 @@ class WotnowGuardrails(BasePlugin):
 
     # ---------- callbacks ----------
     async def before_model_callback(self, *, callback_context: CallbackContext, llm_request: LlmRequest) -> Optional[LlmResponse]:
+        self._refresh()
         flags = self._flags(callback_context)
         self._append_system(llm_request, self.policy)
         total = 0
@@ -84,6 +94,7 @@ class WotnowGuardrails(BasePlugin):
         return None
 
     async def after_model_callback(self, *, callback_context: CallbackContext, llm_response: LlmResponse) -> Optional[LlmResponse]:
+        self._refresh()
         flags = self._flags(callback_context)
         if not flags.get("guard_output") or not llm_response.content:
             return None

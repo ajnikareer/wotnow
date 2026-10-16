@@ -1,6 +1,7 @@
 """
 ADK runtime: runs one skill as an ADK invocation (Runner + InMemorySessionService + guardrail plugin)
 and records a trace of every run (skill, agent, time, guardrail events, reviewer verdict).
+Traces are kept in memory for /api/ai/traces and persisted to the database for the admin UI.
 Each run uses a fresh, short-lived session: agents never see another child's data.
 """
 from __future__ import annotations
@@ -19,13 +20,16 @@ from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai import types
 
+from ..core.settings import get_platform
 from ..engine import cards as C
+from ..store.base import get_db
 from . import config as cfg
 from .factory import AgentFactory
 from .guardrails import WotnowGuardrails
 
 log = logging.getLogger("wotnow.agents")
 TRACES: deque = deque(maxlen=200)
+TRACE_COLL = "agent_traces"
 
 
 @dataclass
@@ -51,6 +55,13 @@ def _parse(v: Any) -> Any:
     return v
 
 
+def _persist(trace: dict) -> None:
+    try:
+        get_db().put(TRACE_COLL, trace["id"], trace)
+    except Exception as exc:  # tracing must never break a user request
+        log.warning("could not persist trace: %s", exc)
+
+
 class AgentRuntime:
     def __init__(self, model_override=None):
         self.app = cfg.registry()["app_name"]
@@ -58,8 +69,21 @@ class AgentRuntime:
         self.sessions = InMemorySessionService()
         self.plugin = WotnowGuardrails(self.factory.flags)   # shares the live flags dict
         self._runners: dict[int, Runner] = {}
+        self._gen = self.factory.generation
+        self._sem: Optional[asyncio.Semaphore] = None
+        self._sem_loop = None
+
+    def _semaphore(self) -> asyncio.Semaphore:
+        """Caps concurrent model calls (protects quota). Re-created if the event loop changes (tests)."""
+        loop = asyncio.get_running_loop()
+        if self._sem is None or self._sem_loop is not loop:
+            self._sem, self._sem_loop = asyncio.Semaphore(get_platform().llm_concurrency), loop
+        return self._sem
 
     def _runner(self, agent) -> Runner:
+        if self._gen != self.factory.generation:      # agents were rebuilt after an admin change
+            self._runners.clear()
+            self._gen = self.factory.generation
         r = self._runners.get(id(agent))
         if r is None:
             app = App(name=self.app, root_agent=agent, plugins=[self.plugin])
@@ -89,7 +113,8 @@ class AgentRuntime:
         uid = "svc"
         sid = f"{skill}-{uuid.uuid4().hex[:12]}"
         t0 = time.perf_counter()
-        trace = {"ts": time.time(), "skill": skill, "agent": agent.name, "expert": meta.get("agent_id"), "band": meta.get("band")}
+        ts = time.time()
+        trace = {"id": f"{int(ts * 1000)}-{sid[-6:]}", "ts": ts, "skill": skill, "agent": agent.name, "expert": meta.get("agent_id"), "band": meta.get("band")}
         res = RunResult(trace=trace)
         await self.sessions.create_session(app_name=self.app, user_id=uid, session_id=sid, state=self.initial_state(meta, spec))
         try:
@@ -98,7 +123,8 @@ class AgentRuntime:
             async def _go():
                 async for _ in runner.run_async(user_id=uid, session_id=sid, new_message=msg):
                     pass
-            await asyncio.wait_for(_go(), timeout=float(spec.get("timeout_s", 60)))
+            async with self._semaphore():
+                await asyncio.wait_for(_go(), timeout=float(spec.get("timeout_s", 60)))
             st = (await self.sessions.get_session(app_name=self.app, user_id=uid, session_id=sid)).state
             res.output = _parse(st.get(out_key))
             res.review = _parse(st.get(review_key)) if review_key else None
@@ -119,6 +145,7 @@ class AgentRuntime:
             trace.update(ms=round((time.perf_counter() - t0) * 1000), ok=res.ok, blocked=res.blocked,
                          review=res.review if review_key else None)
             TRACES.appendleft(trace)
+            _persist(trace)
             log.info("[adk] skill=%s agent=%s ok=%s ms=%s%s", skill, agent.name, res.ok, trace["ms"],
                      f" blocked={res.blocked}" if res.blocked else "")
             try:

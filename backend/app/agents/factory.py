@@ -1,9 +1,9 @@
 """
-Builds ADK agents from registry.json + the expert personas in content/agents.json.
+Builds ADK agents from registry.json + the expert personas in content/agents.json (both with admin edits applied).
 
 - Writer skills become a 2-agent workflow per expert: SequentialAgent[ <expert>_writer → safety_reviewer ]
 - Other skills become a single LlmAgent with an output_schema (structured JSON) or plain text.
-Agents are built lazily and cached.
+Agents are built lazily and cached; the cache is dropped automatically when an admin changes any agent setting.
 """
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ from pydantic import BaseModel, Field
 
 from ..ai import schemas as S
 from ..config import get_settings
+from ..core import overrides
 from ..engine import cards as C
 from . import config as cfg
 
@@ -59,12 +60,22 @@ class AgentFactory:
         self.model_override = model_override
         self._cache: dict[str, object] = {}
         self.flags: dict[str, dict] = {}       # agent name -> guardrail flags (read by the plugin)
+        self._ver: Optional[str] = None
+        self.generation = 0                    # bumps whenever agents are rebuilt (the runtime drops its runners)
+
+    def _sync(self) -> None:
+        v = cfg.config_version()
+        if v != self._ver:
+            self._cache.clear()
+            self._ver = v
+            self.generation += 1
 
     def _flag(self, name: str, skill: str, spec: dict) -> None:
         self.flags[name] = {"skill": skill, "pii_scrub": bool(spec.get("pii_scrub")), "guard_output": bool(spec.get("guard_output"))}
 
     def get(self, skill: str, expert_id: Optional[str] = None):
         """Returns (agent, output_key, review_key_or_None)."""
+        self._sync()
         spec = cfg.skill(skill)
         expert_id = expert_id if spec.get("per_expert") else None
         if spec.get("per_expert") and (not expert_id or not C.agent(expert_id)):
@@ -92,12 +103,19 @@ class AgentFactory:
         return self._cache[key]
 
     def catalogue(self) -> list[dict]:
-        reg = cfg.registry()
+        """Every skill with its effective settings, file defaults and which settings an admin has overridden."""
+        reg, dreg = cfg.registry(), cfg.default_registry()
         out = []
         for sk, s in reg["skills"].items():
-            s = {**reg["defaults"], **s}
-            out.append({"skill": sk, "agent": s["agent"], "perExpert": bool(s.get("per_expert")), "description": s.get("description", ""),
-                        "schema": s.get("schema"), "temperature": s.get("temperature"), "reviewedBy": "safety_reviewer" if s.get("review") else None,
-                        "guardrails": {"policy": True, "piiScrub": bool(s.get("pii_scrub")), "outputScan": bool(s.get("guard_output"))},
-                        "instruction": cfg.instruction(s["instruction"])})
+            eff = {**reg["defaults"], **s}
+            dflt = {**dreg["defaults"], **dreg["skills"][sk]}
+            changed = [k for k in cfg.SKILL_PARAMS if eff.get(k) != dflt.get(k)]
+            ifile = eff["instruction"]
+            out.append({"skill": sk, "agent": eff["agent"], "perExpert": bool(eff.get("per_expert")), "description": eff.get("description", ""),
+                        "schema": eff.get("schema"), "temperature": eff.get("temperature"), "timeoutS": eff.get("timeout_s"),
+                        "reviewedBy": "safety_reviewer" if eff.get("review") else None, "hasReviewOption": "review" in dreg["skills"][sk],
+                        "guardrails": {"policy": True, "piiScrub": bool(eff.get("pii_scrub")), "outputScan": bool(eff.get("guard_output"))},
+                        "defaults": {k: dflt.get(k) for k in cfg.SKILL_PARAMS if k in dflt},
+                        "overridden": changed, "instructionFile": ifile, "instruction": cfg.instruction(ifile),
+                        "instructionOverridden": overrides.get(f"instr:{ifile}") is not None})
         return out

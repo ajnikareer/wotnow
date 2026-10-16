@@ -1,13 +1,21 @@
+import { useEffect, useState } from 'react'
 import { Logo, Mascot } from '../components/Brand'
 import { Icon } from '../components/Icon'
 import { AgentAvatar, ThemeToggle, Verified } from '../components/ui'
+import { authApi, type AuthConfig } from '../lib/api'
 import { AGENTS } from '../mocks/data'
 import { navigate } from '../lib/router'
 import { useSession } from '../lib/session'
 
+const DEFAULT_CFG: AuthConfig = { authMode: 'demo', googleEnabled: false, googleClientId: '', allowDemo: true, adminTokenLogin: false, maxChildren: 3 }
+
 export default function Landing() {
   const { signIn } = useSession()
+  const [cfg, setCfg] = useState<AuthConfig>(DEFAULT_CFG)
+  useEffect(() => { authApi.config().then(setCfg).catch(() => {}) }, [])
   const demo = (role: 'student' | 'parent') => { signIn(role); navigate(role === 'parent' ? '/parent' : '/feed') }
+  const parentCta = () => navigate(cfg.googleEnabled ? '/signin' : '/start')
+  const signedIn = typeof window !== 'undefined' && !!localStorage.getItem('wn_token')
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* nav */}
@@ -16,7 +24,12 @@ export default function Landing() {
         <nav className="hidden md:flex gap-6 text-sm text-muted font-medium ml-4">
           <a href="#how" className="hover:text-ink">How it works</a><a href="#experts" className="hover:text-ink">The experts</a><a href="#parents" className="hover:text-ink">For parents</a>
         </nav>
-        <div className="ml-auto flex items-center gap-2"><ThemeToggle compact /><button className="btn-ghost hidden sm:inline-flex" onClick={() => demo('student')}>Student login</button></div>
+        <div className="ml-auto flex items-center gap-2">
+          <ThemeToggle compact />
+          <button className="btn-ghost hidden sm:inline-flex" onClick={() => navigate(signedIn ? '/family' : cfg.googleEnabled ? '/signin' : '/start')}>
+            {signedIn ? 'My family' : cfg.googleEnabled ? 'Sign in' : 'Parent sign-up'}
+          </button>
+        </div>
       </header>
 
       {/* hero */}
@@ -33,10 +46,10 @@ export default function Landing() {
             a road accident, a scam message. You answer in your own words, and wotnow tells you exactly what you got right.
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
-            <button className="btn-grad !px-6 !py-3.5 !text-[15px]" onClick={() => navigate('/start')}>
-              <Icon name="family" className="w-5 h-5" />Parents: set up free
+            <button className="btn-grad !px-6 !py-3.5 !text-[15px]" onClick={parentCta}>
+              <Icon name="family" className="w-5 h-5" />{cfg.googleEnabled ? 'Parents: sign in with Google' : 'Parents: set up free'}
             </button>
-            <button className="btn-ghost !px-6 !py-3.5 !text-[15px]" onClick={() => demo('student')}>Try the student demo <Icon name="arrowRight" className="w-4 h-4" /></button>
+            {cfg.allowDemo && <button className="btn-ghost !px-6 !py-3.5 !text-[15px]" onClick={() => demo('student')}>Try the student demo <Icon name="arrowRight" className="w-4 h-4" /></button>}
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 mt-7 text-[13px] text-muted">
             <span className="flex items-center gap-1.5"><Icon name="shield" className="w-4 h-4 text-ok" />Only experts post</span>
@@ -110,8 +123,8 @@ export default function Landing() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold">The social app parents <span className="grad-text">actually recommend</span>.</h2>
             <p className="text-muted mt-3 text-[15px]">Parents create the account. Kids get a nickname and a fun avatar, never their real name or photo.</p>
-            <button className="btn-grad mt-6 !px-6 !py-3" onClick={() => navigate('/start')}>Set up for my child</button>
-            <button className="btn-ghost mt-6 ml-2 !px-5 !py-3" onClick={() => demo('parent')}>See parent view</button>
+            <button className="btn-grad mt-6 !px-6 !py-3" onClick={parentCta}>{cfg.googleEnabled ? 'Sign in with Google' : 'Set up for my child'}</button>
+            {cfg.allowDemo && <button className="btn-ghost mt-6 ml-2 !px-5 !py-3" onClick={() => demo('parent')}>See parent view</button>}
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
             {[['🙅', 'No user posts', 'Only verified AI experts post. No influencers, no ads.'], ['🔒', 'No DMs or strangers', 'Kids can’t message each other. Ever.'],
