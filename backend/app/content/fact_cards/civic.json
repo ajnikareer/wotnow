@@ -1,0 +1,273 @@
+{
+ "agentId": "civic",
+ "cards": [
+  {
+   "id": "CIV-003",
+   "subtopic": "Litter",
+   "title": "Litter and public spaces",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Litter blocks drains and causes waterlogging in the monsoon.",
+    "People copy what they see others do, good or bad."
+   ],
+   "do": [
+    "Keep the wrapper until you find a bin",
+    "Separate wet and dry waste",
+    "Politely encourage friends to do the same"
+   ],
+   "dont": [
+    "Don't drop litter even if others do",
+    "Don't throw things out of vehicle windows"
+   ],
+   "myths": [
+    {
+     "statement": "One wrapper doesn't matter; it's the city's job to clean up.",
+     "answer": "myth",
+     "truth": "Millions of 'just one wrapper' block drains. Everyone shares the job."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "There's no dustbin on the bus. What do you do with your wrapper?",
+     "options": [
+      "Drop it under the seat",
+      "Throw it out of the window",
+      "Keep it in your bag until you find a bin",
+      "Hide it in a crack"
+     ],
+     "correct": 2,
+     "explanation": "Fold it into your bag and bin it later."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "{name} finishes a packet of chips {at}. There's no dustbin anywhere, and {relation} says 'Just drop it under the seat, everyone does.'"
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "🚌",
+     "🍟",
+     "🧒"
+    ],
+    "bubble": "Everyone does it…",
+    "rubric": [
+     {
+      "point": "Keep the wrapper until finding a bin",
+      "note": "Fold it into a pocket or bag and bin it later.",
+      "weight": 40,
+      "critical": true,
+      "keys": "keep|pocket|bag|hold|carry|later|bin"
+     },
+     {
+      "point": "Don't drop it, even if 'everyone does'",
+      "note": "The right thing doesn't depend on others.",
+      "weight": 30,
+      "critical": false,
+      "keys": "(not|don'?t|never)[^.]{0,15}(drop|throw|litter)|everyone"
+     },
+     {
+      "point": "Politely encourage the friend too",
+      "note": "Small nudges change habits.",
+      "weight": 30,
+      "critical": false,
+      "keys": "friend|tell|explain|encourag|remind"
+     }
+    ],
+    "dangerous": [],
+    "settings": [
+     "city bus",
+     "train",
+     "metro"
+    ]
+   },
+   "agentId": "civic",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "CIV-007",
+   "subtopic": "Public transport",
+   "title": "Queues and public transport",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Letting people off first makes boarding faster for everyone.",
+    "Priority seats are for elderly, pregnant, disabled people and parents with small children."
+   ],
+   "do": [
+    "Wait your turn in the queue",
+    "Let passengers get off before boarding",
+    "Offer your seat to someone who needs it more",
+    "Keep bags off seats"
+   ],
+   "dont": [
+    "Don't push or cut the queue",
+    "Don't play loud music without headphones"
+   ],
+   "myths": [
+    {
+     "statement": "Priority seats are only for people who ask for them.",
+     "answer": "myth",
+     "truth": "Offer them without being asked. Many people won't ask."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "The metro doors open and the train is crowded. What first?",
+     "options": [
+      "Push in quickly",
+      "Let people get off first",
+      "Block the door",
+      "Shout"
+     ],
+     "correct": 1,
+     "explanation": "Letting people off first makes boarding faster for everyone."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "{name} has just got the last seat on a crowded bus. At the next stop, an elderly woman with a heavy bag gets on and holds the rail. {relation} whispers 'Pretend you're asleep.'"
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "🚇",
+     "👵",
+     "💺"
+    ],
+    "bubble": "Pretend to sleep!",
+    "rubric": [
+     {
+      "point": "Offer the seat politely",
+      "note": "Offer without waiting to be asked.",
+      "weight": 50,
+      "critical": true,
+      "keys": "offer|give|let her sit|stand up|seat"
+     },
+     {
+      "point": "Help with the bag if she wants",
+      "note": "Small help goes a long way.",
+      "weight": 20,
+      "critical": false,
+      "keys": "bag|help|carry|hold"
+     },
+     {
+      "point": "Not pretend to sleep / set a good example",
+      "note": "Kindness spreads.",
+      "weight": 30,
+      "critical": false,
+      "keys": "(not|don'?t|never)[^.]{0,15}(pretend|ignore)|example|kind|respect"
+     }
+    ],
+    "dangerous": []
+   },
+   "agentId": "civic",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "CIV-020",
+   "subtopic": "Helping others",
+   "title": "Finding a lost child",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Lost children should be handed to officials such as security, police or staff, not taken home.",
+    "1098 is CHILDLINE, India's free helpline for children in need."
+   ],
+   "do": [
+    "Stay with the child in a busy, visible place",
+    "Tell security, a shop counter or police",
+    "Ask for an announcement"
+   ],
+   "dont": [
+    "Don't take the child home or away from the area",
+    "Don't post their photo online"
+   ],
+   "myths": [
+    {
+     "statement": "If you find a lost child, it's best to take them home and look after them.",
+     "answer": "myth",
+     "truth": "Hand them to security, staff or police at the spot, where parents will search."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "You find a crying child alone in a mall. Best step?",
+     "options": [
+      "Take them home",
+      "Ignore them",
+      "Stay with them and tell security or staff",
+      "Post a video online"
+     ],
+     "correct": 2,
+     "explanation": "Staff can make announcements, and parents will come back to that area."
+    }
+   ],
+   "scenario": null,
+   "agentId": "civic",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "CIV-012",
+   "subtopic": "Public property",
+   "title": "Caring for public property",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Public property is paid for by everyone's taxes.",
+    "Leaking public taps can waste thousands of litres."
+   ],
+   "do": [
+    "Report damage or leaks to the authority or school",
+    "Close running public taps",
+    "Use walls and benches as they're meant to be used"
+   ],
+   "dont": [
+    "Don't scribble on walls or monuments",
+    "Don't damage benches, signs or plants"
+   ],
+   "myths": [
+    {
+     "statement": "Writing your name on a monument is harmless fun.",
+     "answer": "myth",
+     "truth": "It damages heritage that belongs to everyone, and it's an offence."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "You see a public tap left running. What do you do?",
+     "options": [
+      "Walk away",
+      "Close it, and report it if it's broken",
+      "Fill a balloon",
+      "Take a selfie"
+     ],
+     "correct": 1,
+     "explanation": "Close it and report broken taps so they get fixed."
+    }
+   ],
+   "scenario": null,
+   "agentId": "civic",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  }
+ ]
+}

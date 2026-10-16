@@ -1,0 +1,143 @@
+{
+ "agentId": "compass",
+ "cards": [
+  {
+   "id": "CAR-001",
+   "subtopic": "Streams after Class 10",
+   "title": "Choosing a stream after Class 10",
+   "bands": [
+    "senior"
+   ],
+   "facts": [
+    "The main streams are Science (PCM or PCB), Commerce and Humanities/Arts; vocational subjects are also available.",
+    "Many careers are open from more than one stream.",
+    "Interest and aptitude predict success better than what friends choose."
+   ],
+   "do": [
+    "List subjects you enjoy and do well in",
+    "Talk to a school counsellor and people working in fields you like",
+    "Take an aptitude or interest test"
+   ],
+   "dont": [
+    "Don't choose only because friends did",
+    "Don't assume one stream is 'better' than others"
+   ],
+   "myths": [
+    {
+     "statement": "Only Science students can have successful careers.",
+     "answer": "myth",
+     "truth": "Commerce and Humanities lead to careers like CA, law, design, psychology, economics, journalism and more."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What's the best basis for choosing a stream?",
+     "options": [
+      "What friends choose",
+      "Your interests and strengths",
+      "What's most popular",
+      "Random choice"
+     ],
+     "correct": 1,
+     "explanation": "Interests and aptitude, plus good advice, lead to better choices."
+    }
+   ],
+   "scenario": null,
+   "agentId": "compass",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "CAR-005",
+   "subtopic": "Diplomas and ITI",
+   "title": "Diplomas and ITI courses",
+   "bands": [
+    "senior"
+   ],
+   "facts": [
+    "Polytechnic diplomas can be started after Class 10 and usually take 3 years.",
+    "Diploma holders can often join an engineering degree directly in the second year (lateral entry).",
+    "ITIs offer skill-based trade courses such as electrician, fitter and mechanic."
+   ],
+   "do": [
+    "Explore polytechnic and ITI options in your state",
+    "Check lateral-entry rules for degree courses"
+   ],
+   "dont": [
+    "Don't see diplomas as a 'lesser' option"
+   ],
+   "myths": [
+    {
+     "statement": "After a diploma, you can never do an engineering degree.",
+     "answer": "myth",
+     "truth": "Many states allow lateral entry into the second year of a B.Tech/B.E. after a diploma."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "After a 3-year engineering diploma, many students can join a B.Tech in…",
+     "options": [
+      "1st year only",
+      "2nd year (lateral entry)",
+      "Final year",
+      "Never"
+     ],
+     "correct": 1,
+     "explanation": "Lateral entry lets diploma holders join the second year in many states."
+    }
+   ],
+   "scenario": null,
+   "agentId": "compass",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "CAR-010",
+   "subtopic": "Entrance exams",
+   "title": "Key entrance exams",
+   "bands": [
+    "senior"
+   ],
+   "facts": [
+    "JEE Main is for engineering admissions; NEET-UG is for medical (MBBS/BDS) admissions.",
+    "CUET-UG is used for admission to many central and other universities.",
+    "CLAT is for national law universities; NID and NIFT have their own design entrance tests.",
+    "Official information is published on the exam websites, e.g. nta.ac.in."
+   ],
+   "do": [
+    "Check official exam websites for dates and eligibility",
+    "Plan preparation early in Class 11"
+   ],
+   "dont": [
+    "Don't rely only on social media rumours about exams"
+   ],
+   "myths": [
+    {
+     "statement": "CUET is only for engineering colleges.",
+     "answer": "myth",
+     "truth": "CUET-UG is used for admission to many universities across arts, science and commerce programmes."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Which exam is used for medical (MBBS) admissions in India?",
+     "options": [
+      "JEE Main",
+      "NEET-UG",
+      "CLAT",
+      "CUET-UG"
+     ],
+     "correct": 1,
+     "explanation": "NEET-UG is the national entrance test for MBBS/BDS admissions."
+    }
+   ],
+   "scenario": null,
+   "agentId": "compass",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "agentId": "cipher",
+ "cards": [
+  {
+   "id": "DIG-002",
+   "subtopic": "OTP scams",
+   "title": "Never share an OTP",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "An OTP works like a one-time key to an account.",
+    "Banks, apps and companies never ask you to share an OTP.",
+    "Scammers create urgency, prizes or fear to rush you."
+   ],
+   "do": [
+    "Never share an OTP with anyone",
+    "Close the message or call",
+    "Tell a parent",
+    "Report fraud to 1930 or cybercrime.gov.in"
+   ],
+   "dont": [
+    "Don't share OTPs, even with 'customer care'",
+    "Don't click links in prize messages"
+   ],
+   "myths": [
+    {
+     "statement": "It's safe to share an OTP with someone who says they're from your bank.",
+     "answer": "myth",
+     "truth": "Banks never ask for OTPs. Anyone asking is a scammer."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Someone calls saying they're from a gaming company and asks for the OTP sent to your parent's phone. You…",
+     "options": [
+      "Read it out",
+      "Hang up and tell your parent",
+      "Share half of it",
+      "Ask them to call later"
+     ],
+     "correct": 1,
+     "explanation": "OTPs are never shared. Tell a parent right away."
+    }
+   ],
+   "scams": [
+    {
+     "from": "GameRewards_Official",
+     "text": "🎁 Congrats! You won 10,000 free coins! Enter your parent's phone number and the OTP you receive to claim now. Offer ends in 5 minutes!",
+     "answer": "scam",
+     "explanation": "Scam! Nobody gives free coins for an OTP. Close it and tell an adult."
+    },
+    {
+     "from": "AX-YOURBNK",
+     "text": "Your OTP for login is 482910. Do NOT share this OTP with anyone. Bank staff will never ask for it.",
+     "answer": "legit",
+     "explanation": "This looks like a genuine OTP message: it warns you not to share it and doesn't ask you to do anything. Only use it if you started the login yourself."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "{name} is playing an online game {at} when a pop-up offers free coins. It asks for the OTP sent to {name}'s mother's phone. {relation} says 'Quick, everyone's doing it!'"
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "🎮",
+     "🔑",
+     "📱"
+    ],
+    "bubble": "Free coins!!",
+    "rubric": [
+     {
+      "point": "Never share the OTP",
+      "note": "An OTP is a key to the account.",
+      "weight": 40,
+      "critical": true,
+      "keys": "(not|no|never|don'?t)[^.]{0,20}(share|give|enter|type)|otp[^.]{0,20}(secret|private)"
+     },
+     {
+      "point": "Close the pop-up / don't click",
+      "note": "Leave the scam page.",
+      "weight": 25,
+      "critical": false,
+      "keys": "close|ignore|block|exit|don'?t click|report"
+     },
+     {
+      "point": "Tell a parent or trusted adult",
+      "note": "Adults can check and report it.",
+      "weight": 35,
+      "critical": false,
+      "keys": "parent|mother|mom|mum|father|dad|adult|tell"
+     }
+    ],
+    "dangerous": [
+     "(share|give|enter|type|send)[^.]{0,15}(the )?otp"
+    ],
+    "settings": [
+     "home",
+     "grandparents' house",
+     "hostel"
+    ]
+   },
+   "agentId": "cipher",
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "DIG-007",
+   "subtopic": "Bill and KYC scams",
+   "title": "Bill, KYC and prize scams",
+   "bands": [
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Scam messages often come from personal mobile numbers and threaten disconnection or account blocking.",
+    "Official companies ask you to use their official app or website.",
+    "India's cyber fraud helpline is 1930."
+   ],
+   "do": [
+    "Check bills only on the official app or website",
+    "Ask an adult before acting",
+    "Report to 1930 or cybercrime.gov.in"
+   ],
+   "dont": [
+    "Don't call numbers from threatening SMS",
+    "Don't install apps a caller asks you to install"
+   ],
+   "myths": [
+    {
+     "statement": "If a message has your name in it, it must be genuine.",
+     "answer": "myth",
+     "truth": "Scammers often have names from leaked data. Check through official apps."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Which is a warning sign of a scam message?",
+     "options": [
+      "Urgent threat with a personal phone number",
+      "A message you expected",
+      "An official app notification",
+      "A bill you already paid in the app"
+     ],
+     "correct": 0,
+     "explanation": "Urgency + personal number + threat = classic scam pattern."
+    }
+   ],
+   "scams": [
+    {
+     "from": "+91 98•••• 4417",
+     "text": "Dear customer, your electricity will be disconnected tonight at 9:30 PM as your last bill was not updated. Please call electricity officer immediately on 98•••• 4417.",
+     "answer": "scam",
+     "explanation": "Scam. Electricity companies don't send threats from personal mobile numbers. Check the bill in the official app and report to 1930."
+    },
+    {
+     "from": "VM-KYCUPD",
+     "text": "Your bank KYC expires today! Update now at bit.ly/kyc-upd8 or your account will be BLOCKED within 2 hours.",
+     "answer": "scam",
+     "explanation": "Scam. Short links, threats and deadlines are red flags. Banks ask you to visit the branch or the official app."
+    }
+   ],
+   "scenario": null,
+   "agentId": "cipher",
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "DIG-010",
+   "subtopic": "Passwords",
+   "title": "Strong passwords",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Long passphrases are harder to guess than short complex passwords.",
+    "Reusing one password means one leak opens every account.",
+    "Two-step verification blocks most account takeovers."
+   ],
+   "do": [
+    "Use a long passphrase",
+    "Use different passwords for important accounts",
+    "Turn on two-step verification"
+   ],
+   "dont": [
+    "Don't share passwords, even with best friends",
+    "Don't use your name or birthday"
+   ],
+   "myths": [
+    {
+     "statement": "It's fine to share your password with your best friend.",
+     "answer": "myth",
+     "truth": "Friendships change, and phones get lost. Keep passwords private (parents can help)."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Which password is strongest?",
+     "options": [
+      "maya2012",
+      "password123",
+      "purple-tiger-eats-mango-rain",
+      "12345678"
+     ],
+     "correct": 2,
+     "explanation": "Long passphrases of random words are strong and easy to remember."
+    }
+   ],
+   "scams": [],
+   "scenario": null,
+   "agentId": "cipher",
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "DIG-015",
+   "subtopic": "Strangers and privacy",
+   "title": "Strangers and privacy online",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "People online may not be who they say they are.",
+    "School name, address and uniform photos can reveal where you are."
+   ],
+   "do": [
+    "Keep profiles private",
+    "Tell a trusted adult if someone makes you uncomfortable",
+    "Block and report"
+   ],
+   "dont": [
+    "Don't share your address, school or live location",
+    "Never agree to meet an online friend alone"
+   ],
+   "myths": [
+    {
+     "statement": "If someone online knows your favourite game, they must be your age.",
+     "answer": "myth",
+     "truth": "Anyone can pretend. Keep personal details private and tell an adult."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "A gaming friend asks which school you go to. You…",
+     "options": [
+      "Tell them",
+      "Don't share, and tell an adult if they keep asking",
+      "Send a photo in uniform",
+      "Share your address"
+     ],
+     "correct": 1,
+     "explanation": "Personal details stay private online."
+    }
+   ],
+   "scams": [],
+   "scenario": {
+    "situations": [
+     "{name} has been chatting with a 'gamer friend' for weeks. Today the friend asks for a photo in school uniform and suggests meeting {at} without telling parents."
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "💬",
+     "🙅",
+     "📸"
+    ],
+    "bubble": "Don't tell your parents 😉",
+    "rubric": [
+     {
+      "point": "Don't send photos or personal details",
+      "note": "Uniform photos reveal your school.",
+      "weight": 30,
+      "critical": true,
+      "keys": "(not|no|never|don'?t)[^.]{0,20}(send|share|photo|picture)"
+     },
+     {
+      "point": "Never meet; refuse secrecy",
+      "note": "'Don't tell your parents' is a big warning sign.",
+      "weight": 30,
+      "critical": true,
+      "keys": "(not|no|never|don'?t)[^.]{0,20}(meet|go)|secret"
+     },
+     {
+      "point": "Tell a parent or trusted adult",
+      "note": "Adults can help and report.",
+      "weight": 25,
+      "critical": true,
+      "keys": "parent|adult|teacher|mom|mum|dad|tell"
+     },
+     {
+      "point": "Block and report the account",
+      "note": "Platforms can act on reports.",
+      "weight": 15,
+      "critical": false,
+      "keys": "block|report|1930|cybercrime"
+     }
+    ],
+    "dangerous": [
+     "(send|share)[^.]{0,15}(photo|picture|pic)(?![^.]{0,10}(no|not))",
+     "(go|agree)[^.]{0,10}meet(?![^.]{0,10}(no|not))"
+    ],
+    "settings": [
+     "mall",
+     "park",
+     "street market"
+    ]
+   },
+   "agentId": "cipher",
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  }
+ ]
+}

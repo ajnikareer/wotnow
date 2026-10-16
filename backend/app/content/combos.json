@@ -1,0 +1,97 @@
+{
+  "_note": "Combination dimensions for the novelty planner. Character names are neutral, easy-to-read English names.",
+  "characters": [
+    "Maya",
+    "Sam",
+    "Alex",
+    "Leo",
+    "Zoe",
+    "Noah",
+    "Mia",
+    "Ben",
+    "Aria",
+    "Max",
+    "Ivy",
+    "Tom",
+    "Ella",
+    "Ryan",
+    "Nina",
+    "Owen"
+  ],
+  "relations": [
+    "a younger cousin",
+    "a grandparent",
+    "a classmate",
+    "a neighbour",
+    "a friend",
+    "a shopkeeper",
+    "a delivery rider",
+    "the school guard",
+    "an elderly man",
+    "a new student"
+  ],
+  "settings": {
+    "junior": [
+      "home",
+      "school classroom",
+      "school playground",
+      "park",
+      "grandparents' house",
+      "birthday party",
+      "market with a parent",
+      "school bus"
+    ],
+    "middle": [
+      "home",
+      "school corridor",
+      "sports ground",
+      "tuition class",
+      "apartment building",
+      "city bus",
+      "railway platform",
+      "mall",
+      "street market",
+      "housing society event"
+    ],
+    "senior": [
+      "home",
+      "college fair",
+      "highway trip",
+      "coaching centre",
+      "metro station",
+      "part-time workplace",
+      "hostel",
+      "office of a relative",
+      "busy junction",
+      "festival ground",
+      "online class"
+    ]
+  },
+  "twists": [
+    "it is night and the lights are off",
+    "nobody else is around",
+    "a younger child is watching",
+    "the phone battery is almost dead",
+    "a crowd is starting to panic",
+    "an adult is giving the wrong advice",
+    "it is raining heavily",
+    "there is only one minute to decide",
+    "a friend says 'everyone does it'",
+    "they are in an unfamiliar place"
+  ],
+  "times": [
+    "7 AM",
+    "8 PM",
+    "lunch break",
+    "late evening",
+    "a Sunday morning",
+    "festival night",
+    "a hot afternoon",
+    "just after school"
+  ],
+  "difficulty": {
+    "junior": "easy",
+    "middle": "medium",
+    "senior": "challenging"
+  }
+}

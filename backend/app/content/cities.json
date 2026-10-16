@@ -1,0 +1,11 @@
+{
+  "_note": "City presets: coordinates + illustrative demo conditions used when DATA_MODE=mock (not live readings).",
+  "pune":      {"name": "Pune",      "lat": 18.52, "lon": 73.86, "demo": {"temp_c": 36, "feels_like_c": 38, "max_c": 37, "aqi": 158, "rain_7d_mm": 0,  "humidity": 30}},
+  "delhi":     {"name": "New Delhi", "lat": 28.61, "lon": 77.21, "demo": {"temp_c": 31, "feels_like_c": 32, "max_c": 33, "aqi": 230, "rain_7d_mm": 0,  "humidity": 45}},
+  "mumbai":    {"name": "Mumbai",    "lat": 19.08, "lon": 72.88, "demo": {"temp_c": 32, "feels_like_c": 38, "max_c": 33, "aqi": 112, "rain_7d_mm": 6,  "humidity": 74}},
+  "bengaluru": {"name": "Bengaluru", "lat": 12.97, "lon": 77.59, "demo": {"temp_c": 27, "feels_like_c": 28, "max_c": 29, "aqi": 64,  "rain_7d_mm": 38, "humidity": 70}},
+  "hyderabad": {"name": "Hyderabad", "lat": 17.39, "lon": 78.49, "demo": {"temp_c": 34, "feels_like_c": 36, "max_c": 35, "aqi": 98,  "rain_7d_mm": 4,  "humidity": 48}},
+  "chennai":   {"name": "Chennai",   "lat": 13.08, "lon": 80.27, "demo": {"temp_c": 33, "feels_like_c": 40, "max_c": 34, "aqi": 72,  "rain_7d_mm": 55, "humidity": 78}},
+  "kolkata":   {"name": "Kolkata",   "lat": 22.57, "lon": 88.36, "demo": {"temp_c": 32, "feels_like_c": 39, "max_c": 33, "aqi": 135, "rain_7d_mm": 12, "humidity": 76}},
+  "jaipur":    {"name": "Jaipur",    "lat": 26.91, "lon": 75.79, "demo": {"temp_c": 39, "feels_like_c": 41, "max_c": 41, "aqi": 145, "rain_7d_mm": 0,  "humidity": 18}}
+}

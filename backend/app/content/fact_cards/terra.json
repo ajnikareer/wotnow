@@ -1,0 +1,242 @@
+{
+ "agentId": "terra",
+ "cards": [
+  {
+   "id": "ENV-001",
+   "subtopic": "Saving water",
+   "title": "Saving water at home",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "A running tap can waste several litres a minute.",
+    "RO purifiers reject a lot of water that can be reused for mopping or plants.",
+    "A bucket bath usually uses far less water than a shower."
+   ],
+   "do": [
+    "Turn off the tap while brushing",
+    "Reuse RO reject water for mopping or plants",
+    "Report or fix leaks",
+    "Water plants early in the morning"
+   ],
+   "dont": [
+    "Don't leave taps running",
+    "Don't wash vehicles with a running hose"
+   ],
+   "myths": [
+    {
+     "statement": "A small dripping tap wastes too little water to matter.",
+     "answer": "myth",
+     "truth": "Drips add up to thousands of litres a year. Fix or report it."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Which saves the most water every day?",
+     "options": [
+      "Leaving the tap on while brushing",
+      "Turning the tap off while brushing",
+      "Washing the car with a hose",
+      "Long showers"
+     ],
+     "correct": 1,
+     "explanation": "Small daily habits save a lot over a year."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "It's a dry summer in {name}'s city and water comes only twice a day. {At}, {relation} is washing a scooter with a hose that's been running for 20 minutes."
+    ],
+    "question": "What could {name} suggest?",
+    "emojis": [
+     "💧",
+     "🚿",
+     "🛵"
+    ],
+    "bubble": "It's just water…",
+    "rubric": [
+     {
+      "point": "Use a bucket instead of a running hose",
+      "note": "A bucket uses a fraction of the water.",
+      "weight": 40,
+      "critical": true,
+      "keys": "bucket|mug|turn off|close the (tap|hose)|stop the hose"
+     },
+     {
+      "point": "Explain the water shortage kindly",
+      "note": "Kind reasons convince people.",
+      "weight": 30,
+      "critical": false,
+      "keys": "shortage|save|scarce|dry|waste|explain|politely"
+     },
+     {
+      "point": "Reuse water (e.g. RO reject) where possible",
+      "note": "Reuse stretches supply.",
+      "weight": 30,
+      "critical": false,
+      "keys": "reuse|ro|plants|mop|recycle"
+     }
+    ],
+    "dangerous": [],
+    "settings": [
+     "apartment building",
+     "home"
+    ]
+   },
+   "agentId": "terra",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "ENV-004",
+   "subtopic": "Heat and air quality",
+   "title": "Heat and air quality days",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "On high-AQI days, hard outdoor exercise means breathing in more pollution.",
+    "Burning leaves and waste adds smoke directly to the air.",
+    "The hottest part of the day is usually around noon to 3 PM."
+   ],
+   "do": [
+    "Check the AQI before outdoor sport",
+    "Carry water on hot days",
+    "Avoid hard exercise outdoors when AQI is high",
+    "Share rides or use public transport"
+   ],
+   "dont": [
+    "Don't burn leaves or waste",
+    "Don't do hard outdoor exercise at midday in a heatwave"
+   ],
+   "myths": [
+    {
+     "statement": "If the sky looks clear, the air quality must be good.",
+     "answer": "myth",
+     "truth": "Fine particles (PM2.5) are invisible. Check the AQI."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "The AQI is 210 today. What's the best choice for sports practice?",
+     "options": [
+      "Long run outdoors",
+      "Move practice indoors or make it light",
+      "Practise near traffic",
+      "Burn leaves to clear the air"
+     ],
+     "correct": 1,
+     "explanation": "High AQI means more pollution in your lungs during hard exercise."
+    }
+   ],
+   "scenario": null,
+   "agentId": "terra",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "ENV-007",
+   "subtopic": "Waste segregation",
+   "title": "Wet, dry and hazardous waste",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Wet waste (food, peels) can be composted.",
+    "Batteries and e-waste contain harmful chemicals and need special disposal.",
+    "Burning plastic releases toxic fumes."
+   ],
+   "do": [
+    "Separate wet, dry and hazardous waste",
+    "Compost food scraps if possible",
+    "Give e-waste and batteries to collection points"
+   ],
+   "dont": [
+    "Don't burn plastic",
+    "Don't throw batteries in the regular bin"
+   ],
+   "myths": [
+    {
+     "statement": "Old batteries can go in the kitchen bin with everything else.",
+     "answer": "myth",
+     "truth": "Batteries are hazardous waste. Use e-waste or battery collection points."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Where do banana peels go?",
+     "options": [
+      "Dry waste",
+      "Wet waste / compost",
+      "E-waste",
+      "Burn them"
+     ],
+     "correct": 1,
+     "explanation": "Food scraps are wet waste and can be composted."
+    }
+   ],
+   "scenario": null,
+   "agentId": "terra",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "ENV-010",
+   "subtopic": "Saving energy",
+   "title": "Saving energy at home",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Setting the AC to 24–26°C saves a lot of electricity compared with 18–20°C.",
+    "Chargers and devices on standby still use some power."
+   ],
+   "do": [
+    "Switch off lights and fans when leaving a room",
+    "Set AC to 24–26°C",
+    "Use daylight when possible",
+    "Unplug chargers when done"
+   ],
+   "dont": [
+    "Don't leave the TV on standby all night",
+    "Don't open the fridge door for long"
+   ],
+   "myths": [
+    {
+     "statement": "Setting the AC to 16°C cools the room faster.",
+     "answer": "myth",
+     "truth": "It cools at the same speed, just longer and colder, using more power. 24–26°C is efficient."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Which AC setting is the most energy-efficient for comfort?",
+     "options": [
+      "16°C",
+      "18°C",
+      "24–26°C",
+      "Fan off, AC on 16°C"
+     ],
+     "correct": 2,
+     "explanation": "24–26°C is comfortable and saves electricity."
+    }
+   ],
+   "scenario": null,
+   "agentId": "terra",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  }
+ ]
+}

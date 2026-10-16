@@ -1,0 +1,333 @@
+{
+ "agentId": "signal",
+ "cards": [
+  {
+   "id": "ROAD-001",
+   "subtopic": "Crossing the road",
+   "title": "Crossing safely",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "In India vehicles drive on the left, so traffic first comes from your right.",
+    "Many pedestrian accidents happen when people step out from between parked vehicles.",
+    "Phones and earphones hide traffic sounds."
+   ],
+   "do": [
+    "Use zebra crossings, subways or footbridges",
+    "Stop at the kerb, look right, left and right again",
+    "Cross when the road is clear or vehicles have stopped",
+    "Walk, don't run, and keep looking",
+    "Hold a younger child's hand"
+   ],
+   "dont": [
+    "Don't cross between parked cars",
+    "Don't use your phone or earphones while crossing",
+    "Don't jump over road dividers"
+   ],
+   "myths": [
+    {
+     "statement": "At a zebra crossing, all vehicles always stop, so you don't need to look.",
+     "answer": "myth",
+     "truth": "Many drivers don't stop. Always look and make eye contact before crossing."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "At a zebra crossing with no signal, what should you do before crossing?",
+     "options": [
+      "Run across quickly",
+      "Stop, look right, left and right again",
+      "Cross while looking at your phone",
+      "Wait for a friend to go first"
+     ],
+     "correct": 1,
+     "explanation": "Look both ways and cross only when it's clear or vehicles have stopped."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "After school, {name} and {relation} need to cross a busy road to reach {the}. The zebra crossing is 50 metres away, but there's a gap between two parked autos right in front of them."
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "🚸",
+     "🚗",
+     "🎒"
+    ],
+    "bubble": "Let's just squeeze through here!",
+    "rubric": [
+     {
+      "point": "Walk to the zebra crossing / safe crossing point",
+      "note": "Crossings are where drivers expect you.",
+      "weight": 35,
+      "critical": true,
+      "keys": "zebra|crossing|footbridge|subway|signal"
+     },
+     {
+      "point": "Don't cross between parked vehicles",
+      "note": "Drivers can't see you step out.",
+      "weight": 25,
+      "critical": true,
+      "keys": "(not|no|never|don'?t)[^.]{0,25}(between|parked|gap)"
+     },
+     {
+      "point": "Stop, look right-left-right and cross when clear",
+      "note": "Traffic first comes from the right in India.",
+      "weight": 25,
+      "critical": false,
+      "keys": "look|both (ways|sides)|right|left|clear|stop"
+     },
+     {
+      "point": "No phone or earphones; hold a younger child's hand",
+      "note": "Stay alert.",
+      "weight": 15,
+      "critical": false,
+      "keys": "phone|earphone|hand|hold"
+     }
+    ],
+    "dangerous": [
+     "(squeeze|go|cross|run)[^.]{0,20}(through|between)(?![^.]{0,5}(no|not))",
+     "\\brun across\\b"
+    ],
+    "settings": [
+     "school",
+     "busy junction",
+     "street market",
+     "park"
+    ]
+   },
+   "agentId": "signal",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "ROAD-021",
+   "subtopic": "Accident response",
+   "title": "Helping at a road accident",
+   "bands": [
+    "senior"
+   ],
+   "facts": [
+    "Moving an injured person can make a spine injury worse.",
+    "Removing a helmet can worsen a neck injury.",
+    "India's Good Samaritan rules protect people who help accident victims in good faith.",
+    "112 is India's single emergency number; 108 is the ambulance number in many states."
+   ],
+   "do": [
+    "Make sure you are safe first",
+    "Warn traffic (hazard lights, warning triangle, a helper waving)",
+    "Call 112 or 108",
+    "Keep the injured person still and talk to them calmly",
+    "Stay until help arrives"
+   ],
+   "dont": [
+    "Don't move the injured person unless there is immediate danger like fire",
+    "Don't remove a helmet unless they can't breathe",
+    "Don't give food or water"
+   ],
+   "myths": [
+    {
+     "statement": "If you help someone after an accident, the police will trouble you.",
+     "answer": "myth",
+     "truth": "Good Samaritan rules protect people who help in good faith. You won't be forced to give personal details."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "You're first to reach a bike accident on a busy road. The rider is awake but can't stand. What do you do first?",
+     "options": [
+      "Lift them into a car and rush to hospital",
+      "Make the spot safe from traffic, then call 112",
+      "Take off their helmet so they can breathe",
+      "Give them water and help them sit up"
+     ],
+     "correct": 1,
+     "explanation": "Moving an injured person can make spine injuries worse, and a helmet should stay on unless they can't breathe. Make the scene safe, call 112, and stay with them. Good Samaritan rules protect people who help."
+    },
+    {
+     "q": "After a crash, a conscious biker is lying on the road. Should you take their helmet off?",
+     "options": [
+      "Yes, right away so they can breathe",
+      "No. Leave it on unless they can't breathe",
+      "Only if they ask you to",
+      "Yes, then help them sit up"
+     ],
+     "correct": 1,
+     "explanation": "Removing a helmet can worsen a neck injury. Keep them still and call 112."
+    },
+    {
+     "q": "Which number works for any emergency in India?",
+     "options": [
+      "100",
+      "112",
+      "139",
+      "1098"
+     ],
+     "correct": 1,
+     "explanation": "112 is India's single emergency number for police, fire and ambulance."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "{name} is the first to reach a bike accident on a busy road near {the}. The rider is awake but can't stand. {relation} wants to lift the rider into a car."
+    ],
+    "question": "What should {name} do first?",
+    "emojis": [
+     "🏍️",
+     "🚑",
+     "⚠️"
+    ],
+    "bubble": "Let's lift him into the car!",
+    "rubric": [
+     {
+      "point": "Make the scene safe and warn traffic",
+      "note": "Protect yourself and the victim from other vehicles.",
+      "weight": 25,
+      "critical": false,
+      "keys": "safe|traffic|hazard|warn|triangle|wave"
+     },
+     {
+      "point": "Call 112 / 108",
+      "note": "Get professional help fast.",
+      "weight": 30,
+      "critical": true,
+      "keys": "\\b112\\b|\\b108\\b|ambulance|call"
+     },
+     {
+      "point": "Don't move them or remove the helmet",
+      "note": "Moving can worsen spine and neck injuries.",
+      "weight": 30,
+      "critical": true,
+      "keys": "(not|no|never|don'?t)[^.]{0,25}(move|lift|helmet)|keep (him|her|them) still|still"
+     },
+     {
+      "point": "Stay with them and keep them calm",
+      "note": "Reassurance helps until help arrives.",
+      "weight": 15,
+      "critical": false,
+      "keys": "stay|calm|talk|reassur"
+     }
+    ],
+    "dangerous": [
+     "(lift|move|carry|pull)[^.]{0,20}(him|her|them|rider|into)(?![^.]{0,8}(no|not))",
+     "(remove|take off)[^.]{0,10}helmet(?![^.]{0,10}(no|not|unless))",
+     "give[^.]{0,10}water"
+    ],
+    "settings": [
+     "school",
+     "busy junction",
+     "street market",
+     "sports ground"
+    ]
+   },
+   "agentId": "signal",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "ROAD-010",
+   "subtopic": "Cycling and helmets",
+   "title": "Cycling safely",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Most cycling falls happen close to home on short rides.",
+    "A helmet only protects when it fits and the strap is fastened.",
+    "Riding with the flow of traffic makes you more visible and predictable."
+   ],
+   "do": [
+    "Wear a helmet every ride, strap fastened",
+    "Ride on the left, with traffic",
+    "Use lights and reflectors at night",
+    "Use hand signals before turning"
+   ],
+   "dont": [
+    "Don't ride with earphones or a phone",
+    "Don't carry a friend on the carrier or crossbar",
+    "Don't ride against traffic"
+   ],
+   "myths": [
+    {
+     "statement": "You only need a helmet on long rides or highways.",
+     "answer": "myth",
+     "truth": "Most falls happen on short rides near home. Wear it every time."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "When is a bicycle helmet most useful?",
+     "options": [
+      "Only on highways",
+      "Only when racing",
+      "Every ride, even short ones",
+      "Only at night"
+     ],
+     "correct": 2,
+     "explanation": "Wear it on every ride, strap fastened."
+    }
+   ],
+   "scenario": null,
+   "agentId": "signal",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "ROAD-015",
+   "subtopic": "School bus and auto",
+   "title": "School bus safety",
+   "bands": [
+    "junior",
+    "middle"
+   ],
+   "facts": [
+    "Drivers of large vehicles have big blind spots right in front of and behind them.",
+    "Most bus-stop injuries happen while getting on or off."
+   ],
+   "do": [
+    "Wait away from the road edge",
+    "Get on and off only when the bus has fully stopped",
+    "Keep hands and head inside",
+    "Cross only where the driver can see you, after the bus has moved"
+   ],
+   "dont": [
+    "Don't run after a moving bus",
+    "Don't jump off before it stops",
+    "Don't stand in the doorway"
+   ],
+   "myths": [
+    {
+     "statement": "It's okay to jump off the bus just before it stops if you're careful.",
+     "answer": "myth",
+     "truth": "Wait for a full stop. Moving vehicles throw you off balance."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Where is the safest place to get off a school bus?",
+     "options": [
+      "Anywhere the bus slows down",
+      "Only at the stop, after the bus has fully stopped",
+      "From the back door in traffic",
+      "Jump off before it stops to save time"
+     ],
+     "correct": 1,
+     "explanation": "Wait for a full stop at the bus stop, then move away from the bus before crossing."
+    }
+   ],
+   "scenario": null,
+   "agentId": "signal",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  }
+ ]
+}

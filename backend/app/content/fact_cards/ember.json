@@ -1,0 +1,446 @@
+{
+ "agentId": "ember",
+ "cards": [
+  {
+   "id": "FIRE-012",
+   "subtopic": "Kitchen fires",
+   "title": "Kitchen oil fires",
+   "bands": [
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Water on burning oil turns instantly to steam and throws burning oil into the air (a fireball).",
+    "Fire needs heat, fuel and oxygen. Covering the pan cuts off oxygen.",
+    "A covered pan should stay covered until it has completely cooled."
+   ],
+   "do": [
+    "Turn off the stove or gas if you can reach it safely",
+    "Slide a metal lid or baking tray over the pan",
+    "Use a damp (wrung-out) towel if there is no lid",
+    "Get everyone out, close the kitchen door and call 101 or 112 if the fire spreads"
+   ],
+   "dont": [
+    "Never pour water on burning oil",
+    "Don't carry the burning pan outside",
+    "Don't throw flour on it, it can flare up"
+   ],
+   "myths": [
+    {
+     "statement": "Water can put out any kind of fire.",
+     "answer": "myth",
+     "truth": "Water makes oil and electrical fires much worse. Smother oil fires, and cut the power for electrical ones."
+    },
+    {
+     "statement": "Covering a burning pan with a metal lid can put the fire out.",
+     "answer": "fact",
+     "truth": "A lid cuts off oxygen. Keep it on until the pan cools down."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Oil in a pan catches fire. What's the safest first move?",
+     "options": [
+      "Pour water on it",
+      "Cover it with a metal lid",
+      "Carry it outside",
+      "Fan the flames"
+     ],
+     "correct": 1,
+     "explanation": "A lid cuts off oxygen. Water causes a dangerous fireball."
+    },
+    {
+     "q": "After covering a burning pan, when can you lift the lid?",
+     "options": [
+      "Right away",
+      "After 10 seconds",
+      "Only when the pan has fully cooled",
+      "When the smoke is white"
+     ],
+     "correct": 2,
+     "explanation": "Lifting it early lets oxygen back in, and hot oil can reignite."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "It's {time}. {name} is frying snacks when the oil in the pan suddenly catches fire. Flames reach up toward the chimney hood, and {relation} runs in with a mug of water.",
+     "{name} is helping make pakoras {at}. The oil overheats and bursts into flames. Someone shouts 'Get water!'"
+    ],
+    "question": "What should {name} do, right now?",
+    "emojis": [
+     "🔥",
+     "🍳",
+     "🧒"
+    ],
+    "bubble": "Should I throw water?!",
+    "rubric": [
+     {
+      "point": "Stop anyone from using water",
+      "note": "Water on burning oil causes a fireball.",
+      "weight": 30,
+      "critical": true,
+      "keys": "(no|not|never|don'?t|stop)[^.]{0,30}water|water[^.]{0,25}(no|not|never|dangerous|fireball)"
+     },
+     {
+      "point": "Turn off the heat source",
+      "note": "Switching off the gas stops the fire getting fuel.",
+      "weight": 20,
+      "critical": false,
+      "keys": "(turn|switch|shut)[^.]{0,15}(off|gas|stove|knob|burner)|(gas|stove|burner)[^.]{0,10}off"
+     },
+     {
+      "point": "Cover the pan with a metal lid or damp cloth",
+      "note": "Covering it cuts off oxygen. The fastest way to put out a small oil fire.",
+      "weight": 30,
+      "critical": true,
+      "keys": "\\blid\\b|cover|damp (cloth|towel)|wet (cloth|towel)|smother|baking tray"
+     },
+     {
+      "point": "Get out and call for help if it spreads",
+      "note": "Leave, close the door, call 101 (fire) or 112.",
+      "weight": 20,
+      "critical": false,
+      "keys": "\\b101\\b|\\b112\\b|fire ?(brigade|service|department)|call|get out|leave|evacuat|adult|parent"
+     }
+    ],
+    "dangerous": [
+     "(throw|pour|use|put|splash)[^.]{0,15}water",
+     "carry[^.]{0,25}(pan|outside)",
+     "\\bflour\\b",
+     "\\bsugar\\b"
+    ],
+    "settings": [
+     "home",
+     "grandparents' house"
+    ],
+    "times": [
+     "8 PM",
+     "late evening",
+     "a Sunday morning"
+    ]
+   },
+   "agentId": "ember",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "FIRE-003",
+   "subtopic": "Escaping a building fire",
+   "title": "Getting out of a building fire",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Smoke rises, so the cleanest air is near the floor.",
+    "Lifts can stop or open onto a smoky floor during a fire.",
+    "Closed doors slow down fire and smoke."
+   ],
+   "do": [
+    "Shout 'Fire!' to warn others",
+    "Use the stairs, never the lift",
+    "Stay low under smoke",
+    "Feel doors with the back of your hand before opening",
+    "Close doors behind you",
+    "Go to the assembly point and stay there",
+    "Call 101 or 112 once you're safe"
+   ],
+   "dont": [
+    "Don't use the lift",
+    "Don't stop to collect belongings",
+    "Never go back inside"
+   ],
+   "myths": [
+    {
+     "statement": "If there's a fire in your building, take the lift. It's the fastest way out.",
+     "answer": "myth",
+     "truth": "Lifts can stop working or open onto a smoky floor. Always use the stairs."
+    },
+    {
+     "statement": "In a smoky room, crawling low helps you breathe cleaner air.",
+     "answer": "fact",
+     "truth": "Smoke and heat rise, so the air near the floor is cleaner."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "The fire alarm rings in your apartment building. How do you go down?",
+     "options": [
+      "Lift",
+      "Stairs",
+      "Wait on the balcony",
+      "Go up to the roof first"
+     ],
+     "correct": 1,
+     "explanation": "Stairs are the safe way out. Lifts can fail in a fire."
+    },
+    {
+     "q": "Before opening a door during a fire, you should…",
+     "options": [
+      "Kick it open",
+      "Feel it with the back of your hand",
+      "Open it quickly",
+      "Pour water on it"
+     ],
+     "correct": 1,
+     "explanation": "A hot door means fire on the other side. Use another way out."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "{name} is {at}, on the 6th floor, when the fire alarm goes off and the corridor starts filling with grey smoke. {relation} heads straight for the lift.",
+     "It's {time}. {name} smells smoke and hears the alarm {at}. The door to the stairwell is closed, and people are shouting."
+    ],
+    "question": "What should {name} do to get out safely?",
+    "emojis": [
+     "🏢",
+     "💨",
+     "🚪"
+    ],
+    "bubble": "Let's take the lift!",
+    "rubric": [
+     {
+      "point": "Use the stairs, not the lift",
+      "note": "Lifts can stop or open onto a smoky floor.",
+      "weight": 30,
+      "critical": true,
+      "keys": "stair|(not|no|never|don'?t|avoid)[^.]{0,15}(lift|elevator)"
+     },
+     {
+      "point": "Stay low under the smoke",
+      "note": "Cleaner air is near the floor.",
+      "weight": 25,
+      "critical": false,
+      "keys": "\\blow\\b|crawl|bend|duck|floor"
+     },
+     {
+      "point": "Check doors for heat and close doors behind",
+      "note": "Hot door = fire behind it. Closed doors slow the fire.",
+      "weight": 20,
+      "critical": false,
+      "keys": "door|back of (the|your) hand|feel"
+     },
+     {
+      "point": "Get out, go to the assembly point, call 101/112",
+      "note": "Stay out once you're out.",
+      "weight": 25,
+      "critical": false,
+      "keys": "assembly|outside|get out|\\b101\\b|\\b112\\b|call|alarm|warn|shout"
+     }
+    ],
+    "dangerous": [
+     "(take|use|go (in|to))[^.]{0,10}(the )?(lift|elevator)",
+     "go back (in|inside)",
+     "hide (under|in)"
+    ],
+    "settings": [
+     "apartment building",
+     "hostel",
+     "tuition class",
+     "coaching centre"
+    ]
+   },
+   "agentId": "ember",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "FIRE-007",
+   "subtopic": "Electrical fires",
+   "title": "Electrical fires and sockets",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Water conducts electricity, so it can cause electric shock on an electrical fire.",
+    "Overloaded sockets and damaged wires are a common cause of home fires.",
+    "Dry powder (ABC) or CO2 extinguishers are suitable for electrical fires."
+   ],
+   "do": [
+    "Switch off power at the main switch if it's safe",
+    "Tell an adult immediately",
+    "Get out and call 101 or 112 if it grows",
+    "Report burning smells and sparking sockets"
+   ],
+   "dont": [
+    "Never throw water on an electrical fire",
+    "Don't plug many heavy appliances into one socket",
+    "Don't touch a sparking socket"
+   ],
+   "myths": [
+    {
+     "statement": "It's fine to use water on a burning TV as long as you're quick.",
+     "answer": "myth",
+     "truth": "Water conducts electricity. Cut the power first and use the right extinguisher, or get out."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "A phone charger starts sparking and smoking. First step?",
+     "options": [
+      "Pour water on it",
+      "Switch off the power if safe and tell an adult",
+      "Pull the wire with wet hands",
+      "Ignore it"
+     ],
+     "correct": 1,
+     "explanation": "Cutting the power removes the danger. Never use water."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "{name} is studying {at} when the extension board under the desk starts sparking and a thin line of smoke rises. {relation} grabs a bottle of water."
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "🔌",
+     "⚡",
+     "💨"
+    ],
+    "bubble": "Splash water on it!",
+    "rubric": [
+     {
+      "point": "Don't use water on an electrical fire",
+      "note": "Water conducts electricity.",
+      "weight": 30,
+      "critical": true,
+      "keys": "(no|not|never|don'?t|stop)[^.]{0,25}water"
+     },
+     {
+      "point": "Switch off power at the main switch if safe",
+      "note": "Cutting power removes the source.",
+      "weight": 30,
+      "critical": true,
+      "keys": "(switch|turn|cut)[^.]{0,15}(off|power|main|mcb|electric)|unplug|mains"
+     },
+     {
+      "point": "Tell an adult and get out / call 101 or 112 if it grows",
+      "note": "Don't fight a growing fire.",
+      "weight": 25,
+      "critical": false,
+      "keys": "adult|parent|\\b101\\b|\\b112\\b|call|get out|leave"
+     },
+     {
+      "point": "Use a suitable extinguisher only if trained",
+      "note": "ABC dry powder or CO2 are suitable for electrical fires.",
+      "weight": 15,
+      "critical": false,
+      "keys": "extinguisher|co2|dry powder|sand"
+     }
+    ],
+    "dangerous": [
+     "(throw|pour|use|splash)[^.]{0,15}water",
+     "touch[^.]{0,15}(socket|wire)"
+    ],
+    "settings": [
+     "home",
+     "hostel",
+     "grandparents' house"
+    ]
+   },
+   "agentId": "ember",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "FIRE-015",
+   "subtopic": "Festival safety",
+   "title": "Diyas and firecrackers",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Most festival burns happen to hands, face and eyes.",
+    "Synthetic clothes can melt onto skin; cotton is safer.",
+    "A cracker that didn't go off can still explode later."
+   ],
+   "do": [
+    "Only use crackers with an adult watching",
+    "Keep a bucket of water and sand nearby",
+    "Light at arm's length and step back",
+    "Wear cotton clothes and closed shoes",
+    "Keep diyas away from curtains and loose clothes"
+   ],
+   "dont": [
+    "Never relight a cracker that didn't go off",
+    "Don't hold crackers in your hand",
+    "Don't burst crackers indoors or near vehicles"
+   ],
+   "myths": [
+    {
+     "statement": "If a cracker doesn't go off, it's safe to walk up and light it again.",
+     "answer": "myth",
+     "truth": "A dud can explode without warning. Wait, then soak it in water."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What should be kept nearby when bursting crackers?",
+     "options": [
+      "A fan",
+      "A bucket of water and sand",
+      "Extra crackers",
+      "Perfume"
+     ],
+     "correct": 1,
+     "explanation": "Water and sand help with small fires and duds."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "It's Diwali night. {At}, a cracker {name} lit doesn't go off. {relation} says 'Go check it and light it again!'"
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "🎆",
+     "🧨",
+     "✨"
+    ],
+    "bubble": "Just light it again!",
+    "rubric": [
+     {
+      "point": "Don't go near or relight the dud",
+      "note": "It can still explode.",
+      "weight": 40,
+      "critical": true,
+      "keys": "(no|not|never|don'?t)[^.]{0,20}(relight|light it|go near|touch)|wait|stay (away|back)"
+     },
+     {
+      "point": "Wait, then soak it in a bucket of water",
+      "note": "Water makes it safe.",
+      "weight": 30,
+      "critical": false,
+      "keys": "water|bucket|soak|sand"
+     },
+     {
+      "point": "Make sure an adult is supervising",
+      "note": "Crackers need adult supervision.",
+      "weight": 30,
+      "critical": false,
+      "keys": "adult|parent|grown|supervis"
+     }
+    ],
+    "dangerous": [
+     "(relight|light it again|pick it up|go (and )?check)(?![^.]{0,5}(no|not))"
+    ],
+    "settings": [
+     "housing society event",
+     "festival ground",
+     "home"
+    ]
+   },
+   "agentId": "ember",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  }
+ ]
+}

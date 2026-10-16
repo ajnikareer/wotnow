@@ -1,0 +1,364 @@
+{
+ "agentId": "pulse",
+ "cards": [
+  {
+   "id": "AID-002",
+   "subtopic": "Burns",
+   "title": "Minor burns",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Cooling a burn under cool running water for about 20 minutes limits the damage.",
+    "Ice, butter and toothpaste can trap heat or damage skin.",
+    "Burns to the face, hands, or large areas need medical help."
+   ],
+   "do": [
+    "Cool the burn under cool (not icy) running water for about 20 minutes",
+    "Remove rings or tight items near the burn, unless stuck",
+    "Cover loosely with cling film or a clean, non-fluffy cloth",
+    "Tell an adult; get medical help for big burns or burns on face or hands"
+   ],
+   "dont": [
+    "No ice, butter, oil or toothpaste",
+    "Don't pop blisters",
+    "Don't use fluffy cotton wool"
+   ],
+   "myths": [
+    {
+     "statement": "Putting toothpaste on a burn helps it heal faster.",
+     "answer": "myth",
+     "truth": "Toothpaste can trap heat and irritate the skin. Cool it under running water for about 20 minutes."
+    },
+    {
+     "statement": "Holding a small burn under cool running water is the right first step.",
+     "answer": "fact",
+     "truth": "Cool water for about 20 minutes reduces pain and damage."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "You touch a hot pan and burn your finger. What first?",
+     "options": [
+      "Rub ice on it",
+      "Cool it under running water",
+      "Put butter on it",
+      "Pop the blister"
+     ],
+     "correct": 1,
+     "explanation": "Cool running water for about 20 minutes is the right first step."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "{At}, {name} accidentally touches the hot handle of a pressure cooker and burns their palm. {relation} says 'Quick, put toothpaste on it!'"
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "🍲",
+     "✋",
+     "💧"
+    ],
+    "bubble": "Toothpaste fixes it!",
+    "rubric": [
+     {
+      "point": "Cool it under cool running water for about 20 minutes",
+      "note": "This limits the damage.",
+      "weight": 45,
+      "critical": true,
+      "keys": "water|tap|cool|rinse"
+     },
+     {
+      "point": "No toothpaste, ice or butter",
+      "note": "They can make the burn worse.",
+      "weight": 25,
+      "critical": true,
+      "keys": "(no|not|never|don'?t)[^.]{0,25}(toothpaste|ice|butter|oil)"
+     },
+     {
+      "point": "Cover loosely with a clean cloth or cling film",
+      "note": "Protects the skin.",
+      "weight": 15,
+      "critical": false,
+      "keys": "cover|cling|clean cloth|bandage|dressing"
+     },
+     {
+      "point": "Tell an adult / get medical help if it's big",
+      "note": "Hand burns can need a doctor.",
+      "weight": 15,
+      "critical": false,
+      "keys": "adult|parent|doctor|hospital|nurse|teacher|112"
+     }
+    ],
+    "dangerous": [
+     "(put|apply|use|rub)[^.]{0,15}(toothpaste|ice|butter|oil|ghee)",
+     "pop[^.]{0,10}blister"
+    ],
+    "settings": [
+     "home",
+     "grandparents' house",
+     "hostel"
+    ]
+   },
+   "agentId": "pulse",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "AID-011",
+   "subtopic": "Nosebleeds",
+   "title": "Nosebleeds",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Leaning forward stops blood running down the throat.",
+    "Pinching the soft part of the nose for 10–15 minutes stops most nosebleeds."
+   ],
+   "do": [
+    "Sit down and lean forward",
+    "Pinch the soft part of the nose for 10–15 minutes without letting go",
+    "Breathe through the mouth",
+    "Get medical help if it lasts more than 20 minutes or followed a head injury"
+   ],
+   "dont": [
+    "Don't tilt the head back",
+    "Don't lie down",
+    "Don't blow the nose right after"
+   ],
+   "myths": [
+    {
+     "statement": "For a nosebleed, tilt your head back.",
+     "answer": "myth",
+     "truth": "Lean forward instead, so blood doesn't run down your throat, and pinch the soft part of the nose."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Your friend has a nosebleed. How should they sit?",
+     "options": [
+      "Lie flat",
+      "Lean forward",
+      "Tilt head back",
+      "Stand on one leg"
+     ],
+     "correct": 1,
+     "explanation": "Lean forward and pinch the soft part of the nose for 10–15 minutes."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "During class {at}, {name}'s friend suddenly gets a nosebleed and looks scared. Someone shouts 'Tilt your head back!'"
+    ],
+    "question": "How should {name} help?",
+    "emojis": [
+     "🩸",
+     "🧑‍🎓",
+     "🏫"
+    ],
+    "bubble": "Tilt your head back!",
+    "rubric": [
+     {
+      "point": "Sit up and lean forward (not back)",
+      "note": "Leaning back makes blood run down the throat.",
+      "weight": 35,
+      "critical": true,
+      "keys": "lean[^.]{0,10}forward|head[^.]{0,10}forward|bend forward|(not|no|don'?t)[^.]{0,15}back"
+     },
+     {
+      "point": "Pinch the soft part of the nose",
+      "note": "Pinch just below the bony part for about 10 minutes.",
+      "weight": 35,
+      "critical": true,
+      "keys": "pinch|press|squeeze"
+     },
+     {
+      "point": "Stay calm and tell a teacher",
+      "note": "An adult can help.",
+      "weight": 15,
+      "critical": false,
+      "keys": "teacher|adult|calm"
+     },
+     {
+      "point": "Get help if it doesn't stop in 20 minutes",
+      "note": "Long or heavy bleeding needs a doctor.",
+      "weight": 15,
+      "critical": false,
+      "keys": "doctor|nurse|minutes|doesn'?t stop|hospital|medical"
+     }
+    ],
+    "dangerous": [
+     "tilt[^.]{0,15}back",
+     "lie (down|flat)"
+    ],
+    "settings": [
+     "school classroom",
+     "tuition class",
+     "coaching centre"
+    ]
+   },
+   "agentId": "pulse",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "AID-008",
+   "subtopic": "Heat illness",
+   "title": "Heat exhaustion and heatstroke",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Heatstroke is an emergency: very hot body, confusion or fainting.",
+    "Thirst, headache, dizziness and heavy sweating are early warning signs."
+   ],
+   "do": [
+    "Move the person to shade or a cool room",
+    "Loosen tight clothing",
+    "Give small sips of water if they're awake",
+    "Cool them with wet cloths and fanning",
+    "Call 112 if they are confused, faint or very hot"
+   ],
+   "dont": [
+    "Don't give fizzy or energy drinks",
+    "Don't leave them alone",
+    "Don't force water if they're drowsy"
+   ],
+   "myths": [
+    {
+     "statement": "If you're not thirsty, you can't be getting dehydrated.",
+     "answer": "myth",
+     "truth": "Thirst comes late. Drink regularly in hot weather and during sport."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "A friend feels dizzy and sick after football in the sun. First step?",
+     "options": [
+      "Keep playing",
+      "Move to shade and sip water",
+      "Have an energy drink",
+      "Run home"
+     ],
+     "correct": 1,
+     "explanation": "Cool down in the shade and sip water. Call for help if they get confused or faint."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "It's {time} {at}. After a long race in the sun, {name}'s teammate says they feel dizzy, has a headache and is very red in the face."
+    ],
+    "question": "What should {name} do?",
+    "emojis": [
+     "🥵",
+     "☀️",
+     "🏃"
+    ],
+    "bubble": "I'm fine… just dizzy.",
+    "rubric": [
+     {
+      "point": "Move them to shade or a cool place",
+      "note": "Get out of the heat first.",
+      "weight": 30,
+      "critical": true,
+      "keys": "shade|cool (place|room)|indoors|inside|fan|ac\\b"
+     },
+     {
+      "point": "Give sips of water",
+      "note": "Small sips, if they're awake.",
+      "weight": 25,
+      "critical": false,
+      "keys": "water|sip|drink"
+     },
+     {
+      "point": "Cool them down (wet cloth, loosen clothes)",
+      "note": "Cooling the skin helps.",
+      "weight": 20,
+      "critical": false,
+      "keys": "wet|cloth|towel|loosen|splash|cool"
+     },
+     {
+      "point": "Tell an adult / call 112 if confused or fainting",
+      "note": "Heatstroke is an emergency.",
+      "weight": 25,
+      "critical": true,
+      "keys": "adult|teacher|coach|112|ambulance|doctor"
+     }
+    ],
+    "dangerous": [
+     "keep (playing|running)",
+     "energy drink"
+    ],
+    "settings": [
+     "sports ground",
+     "school playground",
+     "park"
+    ],
+    "times": [
+     "a hot afternoon",
+     "lunch break"
+    ]
+   },
+   "agentId": "pulse",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "AID-014",
+   "subtopic": "Choking",
+   "title": "Choking: what to do",
+   "bands": [
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "If someone can cough or speak, their airway is only partly blocked.",
+    "If they can't breathe, speak or cough, it is an emergency."
+   ],
+   "do": [
+    "Encourage them to keep coughing if they can",
+    "If they can't breathe or speak, shout for an adult and call 112",
+    "Trained people give back blows and abdominal thrusts"
+   ],
+   "dont": [
+    "Don't put fingers blindly into their mouth",
+    "Don't give water to someone who is choking",
+    "Don't leave them alone"
+   ],
+   "myths": [
+    {
+     "statement": "Giving water helps someone who is choking.",
+     "answer": "myth",
+     "truth": "Water can make it worse. Encourage coughing; if they can't breathe, get help and call 112."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Your friend is choking but can still cough loudly. What do you do?",
+     "options": [
+      "Give them water",
+      "Encourage them to keep coughing",
+      "Lay them down",
+      "Leave them alone"
+     ],
+     "correct": 1,
+     "explanation": "Strong coughing is the body's best way to clear the blockage. Stay with them."
+    }
+   ],
+   "scenario": null,
+   "agentId": "pulse",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  }
+ ]
+}

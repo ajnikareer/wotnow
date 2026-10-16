@@ -1,0 +1,45 @@
+{
+  "_doc": "wotnow ADK agent registry. Every Gemini call in the app goes through one of these skills. Change instructions, temperature, review steps or guardrails HERE (and in instructions/*.md, rules.json), not in Python.",
+  "app_name": "wotnow",
+  "defaults": {"model": "default", "temperature": 0.4, "timeout_s": 60},
+  "skills": {
+    "write_scenario":   {"agent": "expert_writer", "per_expert": true, "instruction": "writer.md", "task": "scenario",   "schema": "ScenarioDraft", "temperature": 0.9, "review": true,  "guard_output": true,
+                         "description": "Writes a 'What would you do?' scenario with a hidden rubric, from the expert's fact cards."},
+    "write_poll":       {"agent": "expert_writer", "per_expert": true, "instruction": "writer.md", "task": "poll",       "schema": "PollDraft",     "temperature": 0.9, "review": true,  "guard_output": true,
+                         "description": "Writes a 4-option poll with one best answer."},
+    "write_myth_fact":  {"agent": "expert_writer", "per_expert": true, "instruction": "writer.md", "task": "myth_fact",  "schema": "MythDraft",     "temperature": 0.9, "review": true,  "guard_output": true,
+                         "description": "Writes a myth-or-fact statement."},
+    "write_scam_legit": {"agent": "expert_writer", "per_expert": true, "instruction": "writer.md", "task": "scam_legit", "schema": "ScamDraft",     "temperature": 0.9, "review": true,  "guard_output": true,
+                         "description": "Writes a realistic message and whether it is a scam."},
+    "review_post":      {"agent": "safety_reviewer", "instruction": "reviewer.md", "schema": "ReviewOut", "temperature": 0.0,
+                         "description": "Second agent that checks every AI-written post against the fact cards and child-safety rules before it can be published."},
+    "judge":            {"agent": "answer_judge", "instruction": "judge.md", "schema": "JudgeOut", "temperature": 0.1, "pii_scrub": true,
+                         "description": "Decides which rubric points a student's answer covers. Never scores (code does)."},
+    "moderate":         {"agent": "moderator", "instruction": "moderator.md", "schema": "ModerationOut", "temperature": 0.0,
+                         "description": "Classifies a student reply before other students can see it."},
+    "expert_reply":     {"agent": "expert_replier", "per_expert": true, "instruction": "reply.md", "schema": null, "temperature": 0.6, "pii_scrub": true, "guard_output": true,
+                         "description": "The expert replies to a top student answer."},
+    "local_alert":      {"agent": "terra_alerts", "instruction": "alert.md", "schema": "AlertDraft", "temperature": 0.6, "guard_output": true,
+                         "description": "Turns live weather and air quality into a student-friendly city alert."},
+    "live_quiz":        {"agent": "quiz_host", "per_expert": true, "instruction": "quiz.md", "schema": "QuizDraft", "temperature": 0.7, "guard_output": true,
+                         "description": "Hosts a 5-question live quiz from the expert's fact cards."},
+    "parent_coach":     {"agent": "parent_coach", "instruction": "parent_coach.md", "schema": "StartersOut", "temperature": 0.6, "guard_output": true,
+                         "description": "Turns what a child missed into dinner-table conversation starters for parents."}
+  },
+  "schema_to_skill": {
+    "ScenarioDraft": "write_scenario", "PollDraft": "write_poll", "MythDraft": "write_myth_fact", "ScamDraft": "write_scam_legit",
+    "JudgeOut": "judge", "ModerationOut": "moderate", "AlertDraft": "local_alert", "QuizDraft": "live_quiz", "StartersOut": "parent_coach"
+  },
+  "audiences": {
+    "junior": "Classes 3-5 (age 8-10). Very simple words, short sentences, gentle situations, no injuries shown.",
+    "middle": "Classes 6-8 (age 11-13). Simple, clear English. Realistic but not frightening.",
+    "senior": "Classes 9-12 (age 14-17). Realistic situations, can include more responsibility.",
+    "all":    "School students from Class 3 to Class 12. Keep it simple and friendly."
+  },
+  "tasks": {
+    "scenario":   "Write ONE 'What would you do?' scenario. Build 3-5 rubric items whose weights sum to 100; every item must cite a card id from the FACT CARDS. List dangerous actions a learner might wrongly suggest.",
+    "poll":       "Write ONE multiple-choice poll with exactly 4 options and one clearly best answer from the fact cards. Make wrong options common real-life mistakes.",
+    "myth_fact":  "Write ONE myth-or-fact statement that many people believe or doubt. Answer must be 'myth' or 'fact' per the cards.",
+    "scam_legit": "Write ONE realistic message (SMS, pop-up or chat) and say whether it is a 'scam' or 'legit', per the cards. Never include real brand names, real phone numbers or working links; mask numbers with •."
+  }
+}

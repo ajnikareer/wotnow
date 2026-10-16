@@ -1,0 +1,246 @@
+{
+ "agentId": "basil",
+ "cards": [
+  {
+   "id": "NUT-005",
+   "subtopic": "Hydration",
+   "title": "Staying hydrated",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Plain water is the best drink for everyday hydration.",
+    "You need more water in hot weather and during sport.",
+    "Energy drinks contain caffeine and are not meant for children."
+   ],
+   "do": [
+    "Carry a water bottle",
+    "Sip through the day, not all at once",
+    "Drink more on hot days and after sport"
+   ],
+   "dont": [
+    "Don't use fizzy drinks to quench thirst",
+    "Don't have energy drinks"
+   ],
+   "myths": [
+    {
+     "statement": "Energy drinks are a good way for kids to recover after sport.",
+     "answer": "myth",
+     "truth": "They have lots of caffeine and sugar. Plain water is best after normal play."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "You just played football for an hour on a hot afternoon. Best drink?",
+     "options": [
+      "A cold fizzy drink",
+      "Plain water (lots of it)",
+      "An energy drink",
+      "Packaged fruit juice"
+     ],
+     "correct": 1,
+     "explanation": "Plain water rehydrates best. Other drinks add a lot of sugar."
+    }
+   ],
+   "scenario": null,
+   "agentId": "basil",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "NUT-010",
+   "subtopic": "Food labels",
+   "title": "Reading food labels",
+   "bands": [
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Ingredients are listed from most to least.",
+    "'No added sugar' doesn't mean no sugar.",
+    "Nutrition values are often given per serving, not per pack."
+   ],
+   "do": [
+    "Check the serving size first",
+    "Look at sugar and salt (sodium)",
+    "Read the first three ingredients",
+    "Check the expiry date"
+   ],
+   "dont": [
+    "Don't trust front-of-pack slogans alone",
+    "Don't assume 'baked' or 'multigrain' means healthy"
+   ],
+   "myths": [
+    {
+     "statement": "A label saying 'no added sugar' means the food has no sugar.",
+     "answer": "myth",
+     "truth": "It can still contain natural sugars, sometimes a lot. Check the sugar line."
+    },
+    {
+     "statement": "Ingredients on a label are listed from the largest amount to the smallest.",
+     "answer": "fact",
+     "truth": "The first ingredient is what the food contains most of."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "On a food label, ingredients are listed…",
+     "options": [
+      "Alphabetically",
+      "From most to least",
+      "Randomly",
+      "By colour"
+     ],
+     "correct": 1,
+     "explanation": "The first ingredients make up most of the product."
+    }
+   ],
+   "scenario": {
+    "situations": [
+     "{At}, {name} is choosing a snack. One packet says 'Multigrain! Baked!' in big letters, but the label lists sugar and refined flour first. {relation} says the slogan means it's healthy."
+    ],
+    "question": "How should {name} decide which snack is the better choice?",
+    "emojis": [
+     "🏷️",
+     "🍪",
+     "🛒"
+    ],
+    "bubble": "It says multigrain!",
+    "rubric": [
+     {
+      "point": "Read the ingredients list, not the slogan",
+      "note": "Ingredients are listed from most to least.",
+      "weight": 35,
+      "critical": true,
+      "keys": "ingredient|label|back of|read"
+     },
+     {
+      "point": "Check sugar and salt per serving",
+      "note": "These are the key numbers.",
+      "weight": 35,
+      "critical": false,
+      "keys": "sugar|salt|sodium|serving|nutrition"
+     },
+     {
+      "point": "Prefer fruit, nuts or roasted snacks as a better swap",
+      "note": "Whole foods usually win.",
+      "weight": 30,
+      "critical": false,
+      "keys": "fruit|nut|roasted|chana|makhana|homemade|healthier|swap"
+     }
+    ],
+    "dangerous": [],
+    "settings": [
+     "street market",
+     "mall",
+     "school canteen"
+    ]
+   },
+   "agentId": "basil",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "NUT-002",
+   "subtopic": "Balanced plate",
+   "title": "A balanced tiffin",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "A balanced meal includes vegetables or fruit, whole grains and a protein.",
+    "Different coloured vegetables give different nutrients."
+   ],
+   "do": [
+    "Fill half the plate with vegetables and fruit",
+    "Add a protein like dal, eggs, paneer, curd or sprouts",
+    "Choose whole grains like roti, brown rice or millets",
+    "Eat a rainbow of colours"
+   ],
+   "dont": [
+    "Don't skip breakfast",
+    "Don't make packaged snacks the main meal"
+   ],
+   "myths": [
+    {
+     "statement": "Skipping breakfast helps you concentrate better at school.",
+     "answer": "myth",
+     "truth": "Breakfast gives energy for the morning. Skipping it can make concentrating harder."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Which tiffin is the most balanced?",
+     "options": [
+      "Chips and a biscuit packet",
+      "Roti, dal, cucumber and an apple",
+      "Only noodles",
+      "A cold drink and cake"
+     ],
+     "correct": 1,
+     "explanation": "Grain + protein + vegetables + fruit = balanced."
+    }
+   ],
+   "scenario": null,
+   "agentId": "basil",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  },
+  {
+   "id": "NUT-015",
+   "subtopic": "Food hygiene",
+   "title": "Food hygiene",
+   "bands": [
+    "junior",
+    "middle",
+    "senior"
+   ],
+   "facts": [
+    "Washing hands with soap for 20 seconds removes most germs.",
+    "Cooked food left uncovered attracts flies and germs."
+   ],
+   "do": [
+    "Wash hands with soap before eating",
+    "Wash fruits and vegetables",
+    "Keep cooked food covered",
+    "Refrigerate leftovers"
+   ],
+   "dont": [
+    "Don't eat food left uncovered for long",
+    "Don't share half-eaten food or bottles when sick"
+   ],
+   "myths": [
+    {
+     "statement": "Rinsing hands with water alone is as good as washing with soap.",
+     "answer": "myth",
+     "truth": "Soap helps lift germs off the skin. Wash for about 20 seconds."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "How long should you wash hands with soap?",
+     "options": [
+      "2 seconds",
+      "About 20 seconds",
+      "5 minutes",
+      "No need"
+     ],
+     "correct": 1,
+     "explanation": "About 20 seconds, the time it takes to hum 'Happy Birthday' twice."
+    }
+   ],
+   "scenario": null,
+   "agentId": "basil",
+   "scams": [],
+   "reviewed": false,
+   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
+  }
+ ]
+}
