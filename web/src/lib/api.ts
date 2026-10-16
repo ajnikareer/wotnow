@@ -42,6 +42,7 @@ export async function http<T>(path: string, init?: RequestInit): Promise<T> {
 export interface AuthConfig { authMode: string; googleEnabled: boolean; googleClientId: string; allowDemo: boolean; adminTokenLogin: boolean; maxChildren: number }
 export interface Account { id: string; email: string; name: string; picture: string; isAdmin: boolean; children: Me[]; maxChildren: number }
 export interface NewChild { nickname: string; avatar: string; grade: number; city: string }
+export interface FeedLatest { latest: string | null; newCount: number }
 
 const NO_AUTH: AuthConfig = { authMode: 'demo', googleEnabled: false, googleClientId: '', allowDemo: true, adminTokenLogin: false, maxChildren: 3 }
 const notLive = () => Promise.reject(new Error('Sign-in is only available when the app runs against the server.'))
@@ -57,6 +58,10 @@ export const authApi = {
   removeChild: (id: string): Promise<Account> => (API_MODE === 'live' ? http<Account>(`/account/children/${id}`, { method: 'DELETE' }) : notLive()),
   deleteAccount: (): Promise<{ deleted: boolean }> => (API_MODE === 'live' ? http('/account', { method: 'DELETE' }) : notLive()),
 }
+
+/** "Anything new since <time>?" for the feed. Cheap on the server (no AI, shared cache). Resolves null in mock mode. */
+export const feedLatest = (tab: 'foryou' | 'following' | 'near', since: string): Promise<FeedLatest | null> =>
+  API_MODE === 'live' ? http<FeedLatest>(`/feed/latest?tab=${tab}&since=${encodeURIComponent(since)}`) : Promise.resolve(null)
 
 const liveApi = {
   me: () => http<Me>('/me'),

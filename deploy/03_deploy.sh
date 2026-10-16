@@ -1,39 +1,48 @@
 #!/usr/bin/env bash
-# Build (Cloud Build: npm install + vite build + pip install) and deploy ONE Cloud Run service
-# that serves the web app at /  and the API at /api/*.   Re-run any time to redeploy.
+# Build (Cloud Build: npm install + vite build + pip install) and deploy ONE Cloud Run service that serves the web app
+# at / and the API at /api/*. Re-run any time to redeploy. First build takes ~5–8 minutes.
 source "$(dirname "$0")/_common.sh"
-AGENT_RUNTIME="${AGENT_RUNTIME:-adk}"
 
-ENV="LLM_PROVIDER=gemini,GEMINI_MODEL=${GEMINI_MODEL},EMBED_MODEL=${EMBED_MODEL},AGENT_RUNTIME=${AGENT_RUNTIME}"
-ENV+=",DATA_MODE=${DATA_MODE},DB_BACKEND=firestore,AUTH_MODE=${AUTH_MODE},AUTO_SEED=${AUTO_SEED}"
-ENV+=",TIMEZONE=${TIMEZONE},DEMO_CROWD=${DEMO_CROWD},ENV=cloudrun"
-SECRETS="JOBS_TOKEN=${JOBS_SECRET}:latest"
+GC="$(clean "$GOOGLE_CLIENT_ID")"; AE="$(clean "$ADMIN_EMAILS")"
+
+# Environment variables. gcloud's "^;^" prefix switches the separator to ';' so values may contain commas (ADMIN_EMAILS).
+E=("LLM_PROVIDER=gemini" "GEMINI_MODEL=${GEMINI_MODEL}" "EMBED_MODEL=${EMBED_MODEL}" "AGENT_RUNTIME=${AGENT_RUNTIME}"
+   "DATA_MODE=${DATA_MODE}" "DB_BACKEND=${DB_BACKEND}" "AUTO_SEED=${AUTO_SEED}" "TIMEZONE=${TIMEZONE}" "DEMO_CROWD=${DEMO_CROWD}"
+   "AUTH_MODE=${AUTH_MODE}" "ALLOW_DEMO=${ALLOW_DEMO}" "ENV=cloudrun" "TRUST_PROXY=true"
+   "PIPELINE_ENABLED=${PIPELINE_ENABLED}" "PIPELINE_TICK_SECONDS=${PIPELINE_TICK_SECONDS}"
+   "FEED_CACHE_TTL_S=${FEED_CACHE_TTL_S}" "OVERRIDES_TTL_S=${OVERRIDES_TTL_S}" "LLM_CONCURRENCY=${LLM_CONCURRENCY}")
+[[ -n "$GC" ]] && E+=("GOOGLE_CLIENT_ID=${GC}")
+[[ -n "$AE" ]] && E+=("ADMIN_EMAILS=${AE}")
+SECRETS="JOBS_TOKEN=${JOBS_SECRET}:latest,SESSION_SECRET=${SESSION_SECRET_NAME}:latest"
 
 if [[ "$GEMINI_AUTH" == "vertex" ]]; then
   # GOOGLE_CLOUD_PROJECT set => Gemini on Agent Platform (Vertex AI) with the service account (no key).
-  # GOOGLE_GENAI_USE_VERTEXAI tells ADK's model client to do the same.
-  ENV+=",GOOGLE_CLOUD_PROJECT=${PROJECT_ID},GOOGLE_CLOUD_LOCATION=${VERTEX_LOCATION},GOOGLE_GENAI_USE_VERTEXAI=TRUE"
+  E+=("GOOGLE_CLOUD_PROJECT=${PROJECT_ID}" "GOOGLE_CLOUD_LOCATION=${VERTEX_LOCATION}" "GOOGLE_GENAI_USE_VERTEXAI=TRUE")
 else
-  # no GOOGLE_CLOUD_PROJECT => the app uses GEMINI_API_KEY (AI Studio)
-  ENV+=",GOOGLE_GENAI_USE_VERTEXAI=FALSE"
+  E+=("GOOGLE_GENAI_USE_VERTEXAI=FALSE")
   SECRETS+=",GEMINI_API_KEY=${GEMINI_KEY_SECRET}:latest"
 fi
-[[ -n "$MAPS_KEY_SECRET" ]] && SECRETS+=",GOOGLE_MAPS_API_KEY=${MAPS_KEY_SECRET}:latest"
-[[ "$ALLOW_PUBLIC" == "true" ]] && ACCESS="--allow-unauthenticated" || ACCESS="--no-allow-unauthenticated"
+is_set MAPS_KEY_SECRET && SECRETS+=",GOOGLE_MAPS_API_KEY=${MAPS_KEY_SECRET}:latest"
+ENV_VARS="$(IFS=';'; echo "${E[*]}")"
 
-step "Deploying $SERVICE to Cloud Run ($REGION, agent runtime: $AGENT_RUNTIME). The first build takes ~5–8 min"
-echo "  source: $ROOT_DIR   (Dockerfile builds web + API together)"
+[[ "$ALLOW_PUBLIC" == "true" ]] && ACCESS="--allow-unauthenticated" || ACCESS="--no-allow-unauthenticated"
+if [[ "$RUN_MODE" == "always_on" ]]; then SCALE=(--min-instances 1 --max-instances 1 --no-cpu-throttling)
+else SCALE=(--min-instances 0 --max-instances 1 --cpu-throttling); fi
+
+step "Deploying $SERVICE to Cloud Run ($REGION · mode: $RUN_MODE · agents: $AGENT_RUNTIME · db: $DB_BACKEND)"
+echo "  source: $ROOT_DIR   (the Dockerfile builds the web app and the API together)"
+[[ -z "$GC" ]] && c_warn "GOOGLE_CLIENT_ID is not set: the site will work with the demo student only until you run Part 6 + ./09_auth.sh"
 cd "$ROOT_DIR"
 gcloud run deploy "$SERVICE" \
   --source . \
   --region "$REGION" \
   --service-account "$RUNTIME_SA" \
   $ACCESS \
-  --set-env-vars "$ENV" \
+  --set-env-vars "^;^${ENV_VARS}" \
   --set-secrets "$SECRETS" \
   --cpu "$CPU" --memory "$MEMORY" \
-  --min-instances "$MIN_INSTANCES" --max-instances "$MAX_INSTANCES" \
-  --concurrency "$CONCURRENCY" --timeout 300 \
+  "${SCALE[@]}" \
+  --concurrency "$CONCURRENCY" --timeout 600 \
   --cpu-boost \
   --labels app=wotnow \
   --quiet
@@ -42,8 +51,13 @@ URL="$(service_url)"
 echo "$URL" > "$DEPLOY_DIR/.service_url"
 echo
 echo "✅ Deployed: $URL"
-echo "   Web app : $URL"
-echo "   API docs: $URL/docs"
-echo "   Status  : $URL/api/info        (want \"geminiReady\": true, \"agentRuntime\": \"adk\")"
-echo "   Agents  : $URL/api/ai/agents   (ADK skills, experts and guardrails)"
-echo "   Next    : ./04_scheduler.sh  then  ./05_smoke_test.sh"
+echo "   Web app   : $URL"
+echo "   Admin     : $URL/#/admin     (token: gcloud secrets versions access latest --secret=$JOBS_SECRET)"
+echo "   API docs  : $URL/docs"
+echo "   Status    : $URL/api/info        (want \"geminiReady\": true, \"db\": \"firestore\")"
+echo "   Agents    : $URL/api/ai/agents"
+echo
+echo "   Google sign-in origins to register (Part 6):"
+echo "     $URL"
+echo "     $(predicted_url)"
+echo "   Next: ./04_scheduler.sh  then  ./05_smoke_test.sh"

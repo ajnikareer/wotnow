@@ -31,7 +31,7 @@ class PlatformSettings:
     admin_emails: frozenset = field(default_factory=frozenset)
     admin_token_login: bool = True          # allow the jobs token as an admin password (handy on the build-host)
     cors_origins: list = field(default_factory=list)
-    trust_proxy: bool = False               # read client IP from X-Forwarded-For (only behind your own LB)
+    trust_proxy: bool = False               # read client IP from X-Forwarded-For (only behind your own LB / Cloud Run)
     max_body_bytes: int = 65536
     rl_general_per_min: int = 240
     rl_answers_per_min: int = 12
@@ -42,6 +42,8 @@ class PlatformSettings:
     pipeline_tick_seconds: int = 60
     llm_concurrency: int = 6
     max_children: int = 3
+    feed_cache_ttl_s: int = 20              # how long the "newest posts" window is cached in memory (0 = off)
+    overrides_ttl_s: int = 10               # how often admin-edited settings are re-read from the database
 
     @property
     def google_enabled(self) -> bool:
@@ -77,4 +79,6 @@ def get_platform() -> PlatformSettings:
         pipeline_tick_seconds=max(10, _i("PIPELINE_TICK_SECONDS", 60)),
         llm_concurrency=max(1, _i("LLM_CONCURRENCY", 6)),
         max_children=max(1, _i("MAX_CHILDREN", 3)),
+        feed_cache_ttl_s=max(0, _i("FEED_CACHE_TTL_S", 20)),
+        overrides_ttl_s=max(0, _i("OVERRIDES_TTL_S", 10)),
     )

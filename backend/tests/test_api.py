@@ -6,7 +6,7 @@ HIDDEN = {"rubric", "answerKey", "explanation", "dangerPatterns", "modelAnswer",
 
 def test_root_and_health(client):
     assert client.get("/healthz").json() == {"ok": True}
-    r = client.get("/").json()
+    r = client.get("/api/info").json()
     assert r["llm"] == "mock" and r["geminiReady"] is False
 
 

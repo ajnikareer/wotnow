@@ -24,8 +24,10 @@ from .ai.llm import agent_runtime_name, get_llm
 from .config import get_settings
 from .core import security
 from .core.settings import get_platform
+from .pipeline import config as pcfg
 from .pipeline import scheduler
-from .routers import admin, api, auth_api, jobs, pipeline_jobs
+from .routers import admin, api, auth_api, feed_api, jobs, pipeline_jobs
+from .services import feed as feedcache
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 log = logging.getLogger("wotnow")
@@ -40,6 +42,12 @@ async def lifespan(_: FastAPI):
     if s.AUTO_SEED:
         from .seed import seed_all
         log.info("seed: %s", await seed_all())
+    try:
+        n = feedcache.pin_defaults_once()
+        if n:
+            log.info("pinned %d demo posts so they stay in the feed", n)
+    except Exception as exc:                         # never block startup on a convenience feature
+        log.warning("could not pin demo posts: %s", exc)
     llm = get_llm()
     log.info("ai provider=%s runtime=%s ready=%s vertex=%s web=%s db=%s auth=%s pipeline=%s",
              llm.name, agent_runtime_name(), llm.available, s.use_vertex, INDEX.exists(), s.DB_BACKEND, ps.auth_mode, ps.pipeline_enabled)
@@ -108,6 +116,7 @@ async def guard(request: Request, call_next):
 
 app.include_router(api.router)
 app.include_router(auth_api.router)
+app.include_router(feed_api.router)
 app.include_router(admin.router)
 app.include_router(jobs.router)
 app.include_router(pipeline_jobs.router)
@@ -120,7 +129,7 @@ def _info() -> dict:
             "agentRuntime": agent_runtime_name(), "provider": llm.name,
             "model": s.GEMINI_MODEL, "vertex": s.use_vertex, "vertexLocation": s.GOOGLE_CLOUD_LOCATION if s.use_vertex else None,
             "dataMode": s.DATA_MODE, "db": s.DB_BACKEND, "auth": ps.auth_mode, "googleSignIn": ps.google_enabled,
-            "pipeline": {"enabled": ps.pipeline_enabled, "paused": scheduler.status()["paused"]},
+            "pipeline": {"enabled": ps.pipeline_enabled, "paused": pcfg.load()["paused"]},     # config only: no database scans
             "web": INDEX.exists(), "docs": "/docs", "agents": "/api/ai/agents"}
 
 

@@ -5,6 +5,9 @@ Every PIPELINE_TICK_SECONDS (default 60) tick() looks at the admin-editable sche
 expert is "behind" for today, runs the content studio once for that expert: plan → write (ADK writer) → safety review
 (ADK reviewer) → validate → dedupe, then publishes it live or into the review queue. Only one worker runs a tick at a
 time (database lease). Cloud Scheduler can call POST /jobs/tick instead of (or as well as) the in-app loop.
+
+Cost: an idle tick reads a handful of small documents (per-expert daily counters, state flags) and never scans the posts,
+users or traces collections, so it stays cheap on Firestore (billed per document read).
 """
 from __future__ import annotations
 
@@ -23,15 +26,19 @@ from ..engine import cards as C
 from ..engine import dedupe, generator, local_alerts
 from ..engine import quiz as quiz_mod
 from ..services import clock
+from ..services import feed as feedcache
 from ..store.base import get_db
 from . import config as pcfg
 
 log = logging.getLogger("wotnow.pipeline")
 RUNS = "pipeline_runs"
 STATE = "pipeline_state"
+COUNTS = "pipeline_counts"          # one small document per expert: {day, count} of pipeline posts made today
 TRACES = "agent_traces"
 LEASE = "pipeline_tick"
 LEASE_TTL = 900
+CITY_RECHECK_S = 3600               # re-read the users' cities at most this often once today's alerts are done
+CITY_RETRY_S = 600                  # …or this often while some city's alert failed
 
 
 # ---------------- schedule maths ----------------
@@ -49,8 +56,7 @@ def _hhmm(m: int) -> str:
     return f"{m // 60:02d}:{m % 60:02d}"
 
 
-def posts_today(agent_id: str, today: str) -> int:
-    """Pipeline posts created today (any status), so admin-rejected posts don't trigger endless regeneration."""
+def _count_from_posts(agent_id: str, today: str) -> int:
     n = 0
     for p in get_db().query(generator.POSTS, agentId=agent_id):
         if p.get("origin") == "pipeline":
@@ -59,6 +65,21 @@ def posts_today(agent_id: str, today: str) -> int:
                     n += 1
             except Exception:
                 continue
+    return n
+
+
+def posts_today(agent_id: str, today: str) -> int:
+    """Pipeline posts this expert made on `today` (any status, so admin-rejected posts don't trigger endless regeneration).
+
+    Read from a tiny per-expert counter. If there is none for today (first tick of the day, or right after an upgrade) the
+    posts are counted once and the counter is created. Asking about a day other than the current one never writes."""
+    db = get_db()
+    c = db.get(COUNTS, agent_id)
+    if c and c.get("day") == today:
+        return int(c.get("count", 0))
+    n = _count_from_posts(agent_id, today)
+    if today == clock.today().isoformat():
+        db.put(COUNTS, agent_id, {"id": agent_id, "day": today, "count": n})
     return n
 
 
@@ -80,11 +101,19 @@ def schedule_today(cfg: Optional[dict] = None) -> list[dict]:
 # ---------------- one expert, one post ----------------
 async def _publish(post: dict, cfg: dict) -> dict:
     db = get_db()
+    today = clock.today().isoformat()
+    counter = db.get(COUNTS, post["agentId"])
+    had_counter = bool(counter and counter.get("day") == today)
     post["origin"] = "pipeline"
     post["status"] = "pending" if cfg["approve_first"] else "live"
     if post["status"] == "live":
         post["publishedAt"] = clock.utc_iso()
     db.put(generator.POSTS, post["id"], post)
+    if had_counter:
+        db.put(COUNTS, post["agentId"], {"id": post["agentId"], "day": today, "count": int(counter.get("count", 0)) + 1})
+    else:
+        posts_today(post["agentId"], today)         # recounts from the stored posts (this one included) and remembers
+    feedcache.invalidate()
     try:
         vec = await get_llm().embed(dedupe.post_text(post))
         dedupe.save_vector(post["id"], post["agentId"], vec)
@@ -141,7 +170,12 @@ async def _alerts(cfg: dict, run: dict, today: str, now_min: int) -> None:
         return
     db = get_db()
     st = db.get(STATE, "alerts") or {}
-    done = set(st.get("cities", [])) if st.get("day") == today else set()
+    same_day = st.get("day") == today
+    done = set(st.get("cities", [])) if same_day else set()
+    wait = CITY_RECHECK_S if st.get("complete") else CITY_RETRY_S
+    if same_day and time.time() - st.get("checkedAt", 0) < wait:
+        return                                     # don't re-read all users every minute
+    failed = False
     for city in _cities():
         if city in done:
             continue
@@ -150,8 +184,11 @@ async def _alerts(cfg: dict, run: dict, today: str, now_min: int) -> None:
             run["actions"].append({"type": "alert", "city": city, "postId": p.get("id"), "source": p.get("source")})
             done.add(city)
         except Exception as exc:
+            failed = True
             run["errors"].append({"city": city, "error": f"alert failed: {str(exc)[:120]}"})
-    db.put(STATE, "alerts", {"id": "alerts", "day": today, "cities": sorted(done)})
+    if run["actions"]:
+        feedcache.invalidate()
+    db.put(STATE, "alerts", {"id": "alerts", "day": today, "cities": sorted(done), "complete": not failed, "checkedAt": time.time()})
 
 
 async def _quizzes(cfg: dict, run: dict, today: str, now_min: int) -> None:
@@ -171,16 +208,18 @@ async def _quizzes(cfg: dict, run: dict, today: str, now_min: int) -> None:
 
 
 def _housekeeping(cfg: dict) -> None:
+    """Hourly clean-up that only ever reads the OLDEST few documents (bounded cost, however large the collections grow)."""
     db = get_db()
     st = db.get(STATE, "housekeeping") or {}
     if time.time() - st.get("ts", 0) < 3600:
         return
     cutoff = time.time() - cfg["trace_retention_days"] * 86400
-    for t in db.query(TRACES):
+    for t in db.query_ex(TRACES, order_by="ts", desc=False, limit=200):
         if t.get("ts", 0) < cutoff:
             db.delete(TRACES, t["id"])
-    runs = sorted(db.query(RUNS), key=lambda r: r.get("ts", ""))
-    for r in runs[: max(0, len(runs) - cfg["run_retention"])]:
+    keep = int(cfg["run_retention"])
+    runs = db.query_ex(RUNS, order_by="ts", desc=True, limit=keep + 200)     # trims up to 200 surplus runs per hour
+    for r in runs[keep:]:
         db.delete(RUNS, r["id"])
     db.put(STATE, "housekeeping", {"id": "housekeeping", "ts": time.time()})
 
@@ -204,12 +243,14 @@ async def tick(*, source: str = "scheduler", force_agents: Optional[list[str]] =
                 if C.agent(aid):
                     await _generate_for(aid, cfg, run, force_kind)
         else:
-            pending = db.count(generator.POSTS, status="pending")
             cands = []
             for row in schedule_today(cfg):
                 if row["enabled"] and row["behind"] > 0:
                     cands.append((row["behind"], row["agent"]))
             cands.sort(key=lambda x: (-x[0], x[1]))
+            pending = 0
+            if cands and cfg["approve_first"]:      # only needed (and only read, capped) when posts wait for approval
+                pending = len(db.query_ex(generator.POSTS, {"status": "pending"}, limit=cfg["max_pending"] + 1))
             attempts = 0
             for _behind, aid in cands:
                 if attempts >= cfg["max_per_tick"]:
@@ -244,10 +285,10 @@ async def generate_now(agent_ids: Optional[list[str]] = None, kind: Optional[str
 def status() -> dict:
     db = get_db()
     hb = db.get(STATE, "heartbeat") or {}
-    runs = sorted(db.query(RUNS), key=lambda r: r.get("ts", ""), reverse=True)
+    last = db.query_ex(RUNS, order_by="ts", desc=True, limit=1)
     cfg = pcfg.load()
     return {"enabled": cfg["enabled"] and get_platform().pipeline_enabled, "paused": cfg["paused"], "lastTickAt": hb.get("at"),
-            "tickSeconds": get_platform().pipeline_tick_seconds, "lastRun": runs[0] if runs else None,
+            "tickSeconds": get_platform().pipeline_tick_seconds, "lastRun": last[0] if last else None,
             "pending": db.count(generator.POSTS, status="pending")}
 
 

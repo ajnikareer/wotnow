@@ -16,11 +16,13 @@ from ..judge.judge import judge
 from ..judge.moderation import moderate
 from ..store.base import get_db
 from . import clock, users
+from . import feed as feedmod
 
 log = logging.getLogger("wotnow.posts")
 HIDDEN = {"rubric", "dangerousActions", "dangerPatterns", "modelAnswer", "answerKey", "explanation", "voteCounts", "scoreSum",
           "combo", "status", "source", "quality", "conditions", "citySlug", "checkins"}
 RESP = "responses"
+FEED_LIMIT = 40
 
 
 def public(p: dict, my: dict | None = None) -> dict:
@@ -38,33 +40,17 @@ def get_post(post_id: str) -> dict:
     return p
 
 
-def _allowed(u: dict, p: dict) -> bool:
-    a = C.agent(p["agentId"])
-    topics = u.get("parentSettings", {}).get("topics", {})
-    return (u["band"] in p.get("bands", []) and a and topics.get(a["domain"], True) and u["grade"] >= a["minGrade"])
-
-
-async def feed(u: dict, tab: str = "foryou", agent_id: str | None = None, limit: int = 30) -> list[dict]:
-    db = get_db()
-    city_slug = None
+async def feed(u: dict, tab: str = "foryou", agent_id: str | None = None, limit: int = FEED_LIMIT) -> list[dict]:
+    """The student's feed (see services/feed.py for the rules). Today's alert for their city is created on demand."""
+    alert = None
     try:
         alert = await asyncio.wait_for(build_alert(u.get("city") or "Pune"), timeout=12)
-        city_slug = alert.get("citySlug")
     except Exception as exc:
         log.warning("local alert unavailable: %s", exc)
-    posts = [p for p in db.query(POSTS) if p.get("status") == "live"]
-    posts = [p for p in posts if p["type"] != "local_alert" or p.get("citySlug") == city_slug]
-    posts = [p for p in posts if _allowed(u, p)]
-    if agent_id:
-        posts = [p for p in posts if p["agentId"] == agent_id]
-    elif tab == "following":
-        posts = [p for p in posts if p["agentId"] in u.get("follows", [])]
-    elif tab == "near":
-        posts = [p for p in posts if p["type"] == "local_alert" or p["agentId"] in ("terra", "civic")]
-    today = clock.today().isoformat()
-    posts.sort(key=lambda p: (p["type"] == "local_alert" and p["createdAt"][:10] >= today[:10], p["createdAt"]), reverse=True)
+    extra = [alert] if alert and alert.get("status", "live") == "live" else None
+    posts = feedmod.select(feedmod.visible(u, tab, agent_id, extra), limit)
     my = users.my_state(u["id"])
-    return [public(p, my.get(p["id"])) for p in posts[:limit]]
+    return [public(p, my.get(p["id"])) for p in posts]
 
 
 # ---------------- votes ----------------

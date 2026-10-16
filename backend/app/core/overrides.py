@@ -8,8 +8,10 @@ Admin-editable configuration stored in the database, layered over the files ship
   card:<id>           fact-card edits (facts / do / dont / title / reviewed / disabled)
   evals:cases         golden test cases for the judge agent
 
-Reads are cached for a few seconds; every write is versioned, audited in config_history, and invalidates the cache,
-so a change in the admin UI reaches every agent within seconds, with no redeploy.
+Reads are cached (OVERRIDES_TTL_S, default 10 s); every write is versioned, audited in config_history, and invalidates the
+cache of THIS process immediately, so a change in the admin UI reaches every agent within seconds, with no redeploy.
+(With several instances the others pick it up within the TTL. On Firestore every refresh reads all override documents,
+so Cloud Run uses a longer TTL.)
 """
 from __future__ import annotations
 
@@ -20,16 +22,20 @@ import time
 from typing import Any, Optional
 
 from ..store.base import get_db
+from .settings import get_platform
 
 log = logging.getLogger("wotnow.overrides")
 COLL = "config_overrides"
 HIST = "config_history"
-TTL_S = 10.0
 
 _lock = threading.RLock()
 _cache: dict[str, dict] = {}
 _loaded_at = 0.0
 _version = "0"
+
+
+def _ttl() -> float:
+    return float(get_platform().overrides_ttl_s)
 
 
 def invalidate() -> None:
@@ -41,7 +47,7 @@ def invalidate() -> None:
 def _refresh() -> None:
     global _cache, _loaded_at, _version
     with _lock:
-        if time.time() - _loaded_at < TTL_S:
+        if time.time() - _loaded_at < _ttl():
             return
         try:
             docs = get_db().query(COLL)
