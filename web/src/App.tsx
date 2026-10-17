@@ -2,7 +2,9 @@ import { useEffect } from 'react'
 import { RouterProvider, useRoute, navigate } from './lib/router'
 import { ThemeProvider } from './lib/theme'
 import { SessionProvider, useSession } from './lib/session'
-import { ToastProvider } from './lib/toast'
+import { ToastProvider, useToast } from './lib/toast'
+import { ApiError } from './lib/api'
+import { AccountBar } from './components/AccountBar'
 import Landing from './pages/Landing'
 import Start from './pages/Start'
 import SignIn from './pages/SignIn'
@@ -17,17 +19,39 @@ import Parent from './pages/Parent'
 import LiveQuiz from './pages/LiveQuiz'
 import AdminPage from './pages/admin/AdminPage'
 
-// Pages that don't need a student/parent role (sign-in flows have their own checks; admin has its own login).
+// Pages anyone can open. Everything else needs a signed-in family or the demo; without either, the visitor is sent to sign in.
+// ('start' is the old sign-up form: it forwards to the sign-in page.)
 const PUBLIC = new Set(['', 'start', 'signin', 'family', 'admin'])
+// The app pages show the account strip (who is signed in, switch child, sign out).
+const APP_PAGES = new Set(['feed', 'post', 'experts', 'leaderboard', 'me', 'parent', 'live'])
+
+/** A safety net: an API error that a page didn't handle (for example "The shared demo student can't be changed") becomes a message
+ *  instead of silence. Expired sessions (401) are already handled by the API client. */
+function ErrorNotices() {
+  const toast = useToast()
+  useEffect(() => {
+    const on = (e: PromiseRejectionEvent) => {
+      const r: unknown = e.reason
+      if (r instanceof ApiError && r.status !== 401) { toast('⚠️ ' + r.message); e.preventDefault() }
+    }
+    window.addEventListener('unhandledrejection', on)
+    return () => window.removeEventListener('unhandledrejection', on)
+  }, [toast])
+  return null
+}
 
 function Routes() {
   const { parts } = useRoute()
-  const { role } = useSession()
+  const { kind } = useSession()
   const page = parts[0] ?? ''
   const isPublic = PUBLIC.has(page)
-  useEffect(() => { if (!role && !isPublic) navigate('/') }, [role, isPublic])
-  if (!role && !isPublic) return null
+  useEffect(() => { if (!kind && !isPublic) navigate('/signin') }, [kind, isPublic])
+  if (!kind && !isPublic) return null
+  const content = pageFor(page, parts)
+  return <>{APP_PAGES.has(page) && <AccountBar />}{content}</>
+}
 
+function pageFor(page: string, parts: string[]) {
   switch (page) {
     case '': return <Landing />
     case 'start': return <Start />
@@ -51,6 +75,7 @@ export default function App({ initialPath }: { initialPath?: string }) {
       <RouterProvider initial={initialPath}>
         <SessionProvider>
           <ToastProvider>
+            <ErrorNotices />
             <Routes />
           </ToastProvider>
         </SessionProvider>

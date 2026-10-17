@@ -1,6 +1,4 @@
 """Sessions, Google sign-in (verifier patched), accounts/children, demo identities, admin auth, rate limits, headers."""
-import time
-
 import pytest
 
 from app.core import security
@@ -121,10 +119,13 @@ def test_google_failures(client, google):
 
 
 def test_demo_identities_in_google_mode(client, google, monkeypatch):
-    assert client.get("/api/me", headers={"X-Demo-User": "demo-student"}).status_code == 200
+    assert client.get("/api/me", headers={"X-Demo-User": "demo-student"}).status_code == 200             # the shared demo student
+    assert client.get("/api/me", headers={"X-Demo-User": "guest-1"}).status_code == 403                   # invented guest ids are refused
+    assert client.get("/api/me").status_code == 401                                                       # no default identity in google mode
+    assert client.get("/api/me", headers={"X-Demo-User": "c_abc"}).status_code == 400                     # cannot impersonate a real child
+    monkeypatch.setenv("ALLOW_GUESTS", "true")                                                            # explicit opt-in brings guests back
+    get_platform.cache_clear()
     assert client.get("/api/me", headers={"X-Demo-User": "guest-1"}).status_code == 200
-    assert client.get("/api/me").status_code == 401                                          # no default identity in google mode
-    assert client.get("/api/me", headers={"X-Demo-User": "c_abc"}).status_code == 400        # cannot impersonate a real child
     monkeypatch.setenv("ALLOW_DEMO", "false")
     get_platform.cache_clear()
     assert client.get("/api/me", headers={"X-Demo-User": "demo-student"}).status_code == 401

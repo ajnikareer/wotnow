@@ -6,9 +6,11 @@ source "$(dirname "$0")/_common.sh"
 GC="$(clean "$GOOGLE_CLIENT_ID")"; AE="$(clean "$ADMIN_EMAILS")"
 
 # Environment variables. gcloud's "^;^" prefix switches the separator to ';' so values may contain commas (ADMIN_EMAILS).
+# ALLOW_GUESTS=false: with Google sign-in nobody can invent guest profiles through the X-Demo-User header (only the shared demo student).
+# DEV_LOGIN is never set here: the test sign-in must not exist on Cloud Run (the app also refuses it when K_SERVICE is set).
 E=("LLM_PROVIDER=gemini" "GEMINI_MODEL=${GEMINI_MODEL}" "EMBED_MODEL=${EMBED_MODEL}" "AGENT_RUNTIME=${AGENT_RUNTIME}"
    "DATA_MODE=${DATA_MODE}" "DB_BACKEND=${DB_BACKEND}" "AUTO_SEED=${AUTO_SEED}" "TIMEZONE=${TIMEZONE}" "DEMO_CROWD=${DEMO_CROWD}"
-   "AUTH_MODE=${AUTH_MODE}" "ALLOW_DEMO=${ALLOW_DEMO}" "ENV=cloudrun" "TRUST_PROXY=true"
+   "AUTH_MODE=${AUTH_MODE}" "ALLOW_DEMO=${ALLOW_DEMO}" "ALLOW_GUESTS=${ALLOW_GUESTS:-false}" "ENV=cloudrun" "TRUST_PROXY=true"
    "PIPELINE_ENABLED=${PIPELINE_ENABLED}" "PIPELINE_TICK_SECONDS=${PIPELINE_TICK_SECONDS}"
    "FEED_CACHE_TTL_S=${FEED_CACHE_TTL_S}" "OVERRIDES_TTL_S=${OVERRIDES_TTL_S}" "LLM_CONCURRENCY=${LLM_CONCURRENCY}")
 [[ -n "$GC" ]] && E+=("GOOGLE_CLIENT_ID=${GC}")
@@ -29,9 +31,9 @@ ENV_VARS="$(IFS=';'; echo "${E[*]}")"
 if [[ "$RUN_MODE" == "always_on" ]]; then SCALE=(--min-instances 1 --max-instances 1 --no-cpu-throttling)
 else SCALE=(--min-instances 0 --max-instances 1 --cpu-throttling); fi
 
-step "Deploying $SERVICE to Cloud Run ($REGION · mode: $RUN_MODE · agents: $AGENT_RUNTIME · db: $DB_BACKEND)"
+step "Deploying $SERVICE to Cloud Run ($REGION · mode: $RUN_MODE · agents: $AGENT_RUNTIME · db: $DB_BACKEND · auth: $AUTH_MODE)"
 echo "  source: $ROOT_DIR   (the Dockerfile builds the web app and the API together)"
-[[ -z "$GC" ]] && c_warn "GOOGLE_CLIENT_ID is not set: the site will work with the demo student only until you run Part 6 + ./09_auth.sh"
+[[ -z "$GC" ]] && c_warn "GOOGLE_CLIENT_ID is not set: only the shared demo student works until you create the OAuth client (CLOUD_RUN_DEPLOY.md Part 6) and run ./09_auth.sh"
 cd "$ROOT_DIR"
 gcloud run deploy "$SERVICE" \
   --source . \

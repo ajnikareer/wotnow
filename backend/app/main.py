@@ -26,7 +26,8 @@ from .core import security
 from .core.settings import get_platform
 from .pipeline import config as pcfg
 from .pipeline import scheduler
-from .routers import admin, api, auth_api, feed_api, jobs, pipeline_jobs
+from .routers import admin, api, auth_api, feed_api, jobs, me_api, pipeline_jobs
+from .services import demo as demo_svc
 from .services import feed as feedcache
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -46,11 +47,16 @@ async def lifespan(_: FastAPI):
         n = feedcache.pin_defaults_once()
         if n:
             log.info("pinned %d demo posts so they stay in the feed", n)
+        if demo_svc.ensure_demo_defaults():
+            log.info("demo student: cleared quiet hours and raised the shared daily limit")
     except Exception as exc:                         # never block startup on a convenience feature
-        log.warning("could not pin demo posts: %s", exc)
+        log.warning("startup tidy-up skipped: %s", exc)
     llm = get_llm()
-    log.info("ai provider=%s runtime=%s ready=%s vertex=%s web=%s db=%s auth=%s pipeline=%s",
-             llm.name, agent_runtime_name(), llm.available, s.use_vertex, INDEX.exists(), s.DB_BACKEND, ps.auth_mode, ps.pipeline_enabled)
+    log.info("ai provider=%s runtime=%s ready=%s vertex=%s web=%s db=%s auth=%s guests=%s devLogin=%s pipeline=%s",
+             llm.name, agent_runtime_name(), llm.available, s.use_vertex, INDEX.exists(), s.DB_BACKEND, ps.auth_mode,
+             ps.allow_guests, ps.dev_login_enabled, ps.pipeline_enabled)
+    if ps.dev_login and not ps.dev_login_enabled:
+        log.warning("DEV_LOGIN is set but ignored: the test sign-in never runs on Cloud Run")
     stop, task = asyncio.Event(), None
     if ps.pipeline_enabled:
         task = asyncio.create_task(scheduler.run_forever(stop))
@@ -98,7 +104,7 @@ async def guard(request: Request, call_next):
             ok, retry = security.limiter.allow(f"ans-day:{ident}", ps.rl_answers_per_day, 86400)
             if not ok:
                 return _limited(retry, "Daily answer limit reached. Come back tomorrow! 🌙")
-        elif path == "/api/auth/google":
+        elif method == "POST" and path.startswith("/api/auth/"):          # Google, test sign-in, refresh, sign-out-everywhere
             ok, retry = security.limiter.allow(f"auth:{ip}", ps.rl_auth_per_min, 60)
             if not ok:
                 return _limited(retry)
@@ -114,8 +120,10 @@ async def guard(request: Request, call_next):
     return resp
 
 
-# feed_api FIRST: its GET /api/feed (with the Today tab and card states) must win over the older GET /api/feed in routers/api.py.
+# Order matters: for the same method + path the FIRST router wins.
+#   feed_api  → GET /api/feed (Today tab, card states)   me_api → POST/DELETE /api/me, POST /api/parent/settings (demo student protected)
 app.include_router(feed_api.router)
+app.include_router(me_api.router)
 app.include_router(api.router)
 app.include_router(auth_api.router)
 app.include_router(admin.router)
@@ -129,7 +137,8 @@ def _info() -> dict:
     return {"app": "wotnow", "version": s.VERSION, "llm": s.LLM_PROVIDER, "geminiReady": llm.available,
             "agentRuntime": agent_runtime_name(), "provider": llm.name,
             "model": s.GEMINI_MODEL, "vertex": s.use_vertex, "vertexLocation": s.GOOGLE_CLOUD_LOCATION if s.use_vertex else None,
-            "dataMode": s.DATA_MODE, "db": s.DB_BACKEND, "auth": ps.auth_mode, "googleSignIn": ps.google_enabled,
+            "dataMode": s.DATA_MODE, "db": s.DB_BACKEND, "auth": ps.auth_mode, "googleSignIn": ps.google_enabled, "devLogin": ps.dev_login_enabled,
+            "guestProfiles": ps.allow_guests,
             "pipeline": {"enabled": ps.pipeline_enabled, "paused": pcfg.load()["paused"]},     # config only: no database scans
             "web": INDEX.exists(), "docs": "/docs", "agents": "/api/ai/agents"}
 

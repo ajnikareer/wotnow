@@ -11,6 +11,8 @@ from typing import Optional
 
 from .settings import get_platform
 
+DEMO_ID = "demo-student"
+
 
 # ---------------- signed session tokens (no external JWT dependency) ----------------
 def _b64e(b: bytes) -> str:
@@ -26,8 +28,9 @@ def _sign(msg: str) -> str:
 
 
 def issue_session(account: dict, ttl_days: Optional[int] = None) -> str:
+    """`ep` is the account's session epoch: "sign out of all devices" bumps it, which invalidates every token issued before."""
     now = int(time.time())
-    payload = {"sub": account["id"], "email": account.get("email", ""), "iat": now,
+    payload = {"sub": account["id"], "email": account.get("email", ""), "ep": int(account.get("epoch", 0)), "iat": now,
                "exp": now + 86400 * (ttl_days or get_platform().session_ttl_days)}
     body = _b64e(json.dumps(payload, separators=(",", ":")).encode())
     return f"v1.{body}.{_sign('v1.' + body)}"
@@ -96,11 +99,14 @@ def client_ip(request) -> str:
 
 
 def identity_key(request) -> str:
-    """Who is making the request (for per-user limits): session / demo id, falling back to IP."""
+    """Who is making the request (for per-user limits). The shared demo student is limited PER VISITOR (by IP), otherwise
+    one busy visitor would use up the demo's limits for everybody."""
     auth = request.headers.get("authorization")
     if auth:
         return "t:" + hashlib.sha1(auth.encode()).hexdigest()[:16]
     demo = request.headers.get("x-demo-user")
+    if demo == DEMO_ID:
+        return f"d:{DEMO_ID}:{client_ip(request)}"
     if demo:
         return "d:" + demo[:64]
     return "ip:" + client_ip(request)

@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# End-to-end checks on the deployed service: web, API, Firestore, Gemini, ADK agents, pipeline, admin and security.
+# End-to-end checks on the deployed service: web, API, Firestore, Gemini, ADK agents, pipeline, admin, sign-in settings and security.
 source "$(dirname "$0")/_common.sh"
 set +e
 URL="$(service_url)"; [[ -n "$URL" ]] || { c_err "Service not deployed. Run ./03_deploy.sh"; exit 1; }
 TOKEN="$(jobs_token)"
-U="smoke-$(date +%s)"
-H=(-H "X-Demo-User: $U" -H "Content-Type: application/json")
+# The shared demo student: with Google sign-in on, guest ids are refused, and the demo student can't be changed or deleted.
+H=(-H "X-Demo-User: demo-student" -H "Content-Type: application/json")
 A=(-H "X-Admin-Token: $TOKEN")
 pass=0; fail=0
 chk () { if [[ "$2" == *"$3"* ]]; then c_ok "$1"; ((pass++)); else c_err "$1 → ${2:0:300}"; ((fail++)); fi; }
+code () { curl -s -o /dev/null -w '%{http_code}' "$@"; }
 py  () { python3 -c "import sys,json
 try:
   d=json.load(sys.stdin); print($1)
@@ -22,9 +23,20 @@ chk "ADK agent runtime"     "$INFO" '"agentRuntime":"adk"'
 chk "Firestore database"    "$INFO" '"db":"firestore"'
 chk "Web app served at /"   "$(curl -s "$URL/")" '<div id="root">'
 chk "Agent catalogue"       "$(curl -s "$URL/api/ai/agents")" '"safety_reviewer"'
+
+step "Sign-in settings"
 CFG="$(curl -s "$URL/api/auth/config")"; echo "  ℹ auth: $CFG"
 chk "demo login allowed"    "$CFG" '"allowDemo":true'
-if [[ "$CFG" == *'"googleEnabled":true'* ]]; then c_ok "Google sign-in is switched on"; else c_warn "Google sign-in is not on yet (Part 6 + ./09_auth.sh)"; fi
+chk "test sign-in is OFF on Cloud Run" "$(code -X POST -H 'Content-Type: application/json' -d '{"email":"smoke@example.com"}' "$URL/api/auth/dev-login")" "404"
+if [[ "$CFG" == *'"googleEnabled":true'* ]]; then
+  c_ok "Google sign-in is switched on"
+  chk "invented guest profiles are refused" "$(code -H 'X-Demo-User: guest-smoke' "$URL/api/feed")" "403"
+else
+  c_warn "Google sign-in is not on yet (Part 6 + ./09_auth.sh)"
+fi
+chk "demo student can't be renamed" "$(code -X POST "${H[@]}" -d '{"nickname":"Hacker"}' "$URL/api/me")" "403"
+chk "demo student can't be deleted" "$(code -X DELETE "${H[@]}" "$URL/api/me")" "403"
+chk "sign-out-everywhere needs a session" "$(code -X POST "$URL/api/auth/logout-all")" "401"
 
 step "The student feed"
 FEED="$(curl -s "${H[@]}" "$URL/api/feed")"
@@ -55,12 +67,11 @@ step "Firestore feed index"
 gcloud firestore indexes composite list --format="table(name.basename(),state)" 2>/dev/null | head -5
 
 step "Security"
-chk "jobs reject missing token"   "$(curl -s -o /dev/null -w '%{http_code}' -X POST "$URL/jobs/tick")" "403"
-chk "admin rejects missing token" "$(curl -s -o /dev/null -w '%{http_code}' "$URL/api/admin/overview")" "403"
+chk "jobs reject missing token"   "$(code -X POST "$URL/jobs/tick")" "403"
+chk "admin rejects missing token" "$(code "$URL/api/admin/overview")" "403"
 HDR="$(curl -sI "$URL/api/health" | tr -d '\r' | tr 'A-Z' 'a-z')"
 chk "nosniff header"              "$HDR" "x-content-type-options: nosniff"
 chk "HSTS over https"             "$HDR" "strict-transport-security"
-curl -s "${H[@]}" -X DELETE "$URL/api/me" >/dev/null
 
 echo; echo "Result: $pass passed, $fail failed"
 [[ $fail -eq 0 ]] && echo "🎉 Open $URL" || echo "See CLOUD_RUN_DEPLOY.md → Troubleshooting, and ./07_logs.sh error"

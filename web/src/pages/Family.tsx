@@ -11,50 +11,49 @@ import type { Me } from '../lib/types'
 const AVATARS = ['🦊', '🐼', '🐯', '🦉', '🐬', '🐨', '🦁', '🐙', '🦄', '🐸', '🐧', '🦖']
 const EMPTY: NewChild = { nickname: '', avatar: '🦊', grade: 8, city: 'Pune' }
 
-/** The parent's home after Google sign-in: choose which child is learning, add or remove children. */
-export default function Family() {
-  const { signIn, signOut, refreshMe } = useSession()
-  const toast = useToast()
-  const [acc, setAcc] = useState<Account>()
-  const [err, setErr] = useState<string>()
-  const [adding, setAdding] = useState(false)
-  const [form, setForm] = useState<NewChild>(EMPTY)
-  const [busy, setBusy] = useState(false)
+/** Create or edit one child profile. */
+export function ChildForm({ initial, title, submitLabel, busy, onSubmit, onCancel }: {
+  initial: NewChild; title: string; submitLabel: string; busy: boolean; onSubmit: (c: NewChild) => void; onCancel?: () => void
+}) {
+  const [f, setF] = useState<NewChild>(initial)
+  const ok = f.nickname.replace(/[^A-Za-z0-9]/g, '').length >= 3
+  return (
+    <div className="card p-6 mt-5 animate-rise" data-testid="child-form">
+      <h2 className="text-xl font-bold">{title}</h2>
+      <p className="text-sm text-muted mt-1">No real names or photos. Kids are known only by a fun nickname.</p>
+      <div className="mt-4"><label className="label">Avatar</label>
+        <div className="grid grid-cols-6 gap-2">{AVATARS.map(a => (
+          <button key={a} type="button" onClick={() => setF({ ...f, avatar: a })} aria-pressed={f.avatar === a}
+            className={`aspect-square rounded-2xl text-2xl grid place-items-center border transition ${f.avatar === a ? 'border-brand-violet bg-brand-violet/10 scale-105' : 'border-line bg-surface2 hover:bg-surface3'}`}>{a}</button>
+        ))}</div></div>
+      <div className="mt-4"><label className="label">Nickname (3–16 letters or numbers)</label>
+        <input className="input" value={f.nickname} maxLength={16} placeholder="e.g. CleverFox" onChange={e => setF({ ...f, nickname: e.target.value.replace(/[^A-Za-z0-9]/g, '') })} /></div>
+      <div className="grid grid-cols-2 gap-3 mt-4">
+        <div><label className="label">Class</label>
+          <select className="input" value={f.grade} onChange={e => setF({ ...f, grade: +e.target.value })}>
+            {Array.from({ length: 10 }, (_, i) => i + 3).map(g => <option key={g} value={g}>Class {g}</option>)}</select></div>
+        <div><label className="label">City</label><input className="input" value={f.city} maxLength={40} onChange={e => setF({ ...f, city: e.target.value })} /></div>
+      </div>
+      <div className="flex gap-2 mt-5">
+        <button className="btn-grad" disabled={!ok || busy} onClick={() => onSubmit(f)}>{busy ? 'Saving…' : submitLabel}</button>
+        {onCancel && <button className="btn-ghost" onClick={onCancel}>Cancel</button>}
+      </div>
+    </div>
+  )
+}
 
-  useEffect(() => {
-    if (!localStorage.getItem('wn_token')) { navigate('/signin'); return }
-    authApi.account().then(a => { setAcc(a); if (a.children.length === 0) setAdding(true) }).catch(e => setErr(e.message))
-  }, [])
+export interface FamilyViewProps {
+  acc?: Account; err?: string; adding: boolean; editing?: Me; busy: boolean
+  onOpen: (c: Me, role: 'student' | 'parent') => void; onAdd: (f: NewChild) => void; onSave: (f: NewChild) => void; onRemove: (c: Me) => void
+  onStartAdd: () => void; onCancelAdd: () => void; onStartEdit: (c: Me) => void; onCancelEdit: () => void
+  onSignOut: () => void; onSignOutEverywhere: () => void; onDeleteAccount: () => void
+}
 
-  const open = async (c: Me, role: 'student' | 'parent') => {
-    localStorage.setItem('wn_child', c.id)
-    signIn(role)
-    await refreshMe()
-    navigate(role === 'parent' ? '/parent' : '/feed')
-  }
-
-  const add = async () => {
-    setBusy(true); setErr(undefined)
-    try {
-      const r = await authApi.addChild(form)
-      setAcc(r.account); setAdding(false); setForm(EMPTY)
-      toast(`Added ${r.child.nickname} 🎉`)
-    } catch (e: any) { setErr(e.message) } finally { setBusy(false) }
-  }
-
-  const remove = async (c: Me) => {
-    if (!confirm(`Delete ${c.nickname} and all their progress? This can't be undone.`)) return
-    try {
-      const a = await authApi.removeChild(c.id)
-      setAcc(a)
-      if (localStorage.getItem('wn_child') === c.id) localStorage.removeItem('wn_child')
-    } catch (e: any) { setErr(e.message) }
-  }
-
-  const out = () => { signOut(); navigate('/') }
+/** "Who's learning?": children, add / edit / remove, and the account (sign out, sign out everywhere, delete). No logic of its own. */
+export function FamilyView(p: FamilyViewProps) {
+  const { acc, err, adding, editing, busy } = p
   const full = acc ? acc.children.length >= acc.maxChildren : false
-  const ok = form.nickname.replace(/[^A-Za-z0-9]/g, '').length >= 3
-
+  const first = (acc?.name || '').split(' ')[0]
   return (
     <div className="min-h-screen">
       <header className="max-w-3xl mx-auto flex items-center gap-3 px-5 py-4">
@@ -62,21 +61,22 @@ export default function Family() {
         <div className="ml-auto flex items-center gap-2">
           {acc?.isAdmin && <Link to="/admin" className="btn-ghost">Admin</Link>}
           <ThemeToggle compact />
-          <button className="btn-ghost" onClick={out}><Icon name="logout" className="w-4 h-4" />Sign out</button>
+          <button className="btn-ghost" onClick={p.onSignOut}><Icon name="logout" className="w-4 h-4" />Sign out</button>
         </div>
       </header>
       <main className="max-w-3xl mx-auto px-5 pb-16">
         <div className="flex items-center gap-4">
           {acc?.picture ? <img src={acc.picture} alt="" className="w-14 h-14 rounded-full" referrerPolicy="no-referrer" /> : <Mascot mood="happy" size={56} />}
-          <div><h1 className="text-2xl md:text-3xl font-bold">{acc ? `Hi ${acc.name?.split(' ')[0] || 'there'}!` : 'Loading…'}</h1>
-            <p className="text-muted text-sm">{acc?.email} · Who’s learning today?</p></div>
+          <div className="min-w-0"><h1 className="text-2xl md:text-3xl font-bold">{acc ? `Hi ${first || 'there'}!` : 'Loading…'}</h1>
+            <p className="text-muted text-sm truncate">{acc ? <>{acc.email}{acc.provider === 'dev' && <span className="ml-2 chip !py-0.5 !text-[10px] text-warn">TEST ACCOUNT</span>}</> : ' '}{acc && ' · Who’s learning today?'}</p></div>
         </div>
 
-        {err && <div className="mt-5 p-3 rounded-2xl bg-bad/10 border border-bad/25 text-sm">⚠️ {err}</div>}
+        {err && <div className="mt-5 p-3 rounded-2xl bg-bad/10 border border-bad/25 text-sm" role="alert">⚠️ {err}</div>}
 
         <div className="grid sm:grid-cols-2 gap-4 mt-6">
+          {!acc && !err && [0, 1].map(i => <div key={i} className="card p-5 skeleton h-[150px]" />)}
           {acc?.children.map(c => (
-            <div key={c.id} className="card p-5">
+            <div key={c.id} className="card p-5" data-testid="child-card">
               <div className="flex items-center gap-3">
                 <UserAvatar emoji={c.avatar} size={56} />
                 <div className="min-w-0"><div className="font-display text-xl font-bold truncate">{c.nickname}</div>
@@ -84,43 +84,80 @@ export default function Family() {
                   <div className="text-xs text-muted">Level {c.level} · 🔥 {c.streak}-day streak · {c.xp.toLocaleString('en-IN')} XP</div></div>
               </div>
               <div className="flex gap-2 mt-4">
-                <button className="btn-grad flex-1" onClick={() => open(c, 'student')}>Start learning</button>
-                <button className="btn-ghost" onClick={() => open(c, 'parent')} title="Parent view">📊</button>
-                <button className="btn-ghost text-bad" onClick={() => remove(c)} aria-label={`Delete ${c.nickname}`}>🗑️</button>
+                <button className="btn-grad flex-1" onClick={() => p.onOpen(c, 'student')}>Start learning</button>
+                <button className="btn-ghost" onClick={() => p.onOpen(c, 'parent')} title="Parent view" aria-label={`Parent view for ${c.nickname}`}>📊</button>
+                <button className="btn-ghost" onClick={() => p.onStartEdit(c)} title="Edit" aria-label={`Edit ${c.nickname}`}>✏️</button>
+                <button className="btn-ghost text-bad" onClick={() => p.onRemove(c)} title="Delete" aria-label={`Delete ${c.nickname}`}>🗑️</button>
               </div>
             </div>
           ))}
-          {acc && !full && !adding && (
-            <button className="card p-5 grid place-items-center text-muted hover:text-ink border-dashed min-h-[150px]" onClick={() => setAdding(true)}>
+          {acc && !full && !adding && !editing && (
+            <button className="card p-5 grid place-items-center text-muted hover:text-ink border-dashed min-h-[150px]" onClick={p.onStartAdd}>
               <div className="text-center"><div className="text-3xl">＋</div><div className="font-semibold mt-1">Add a child</div></div>
             </button>
           )}
         </div>
 
-        {acc && adding && (
-          <div className="card p-6 mt-5 animate-rise">
-            <h2 className="text-xl font-bold">New child profile</h2>
-            <p className="text-sm text-muted mt-1">No real names or photos. Kids are known only by a fun nickname.</p>
-            <div className="mt-4"><label className="label">Avatar</label>
-              <div className="grid grid-cols-6 gap-2">{AVATARS.map(a => (
-                <button key={a} onClick={() => setForm({ ...form, avatar: a })} className={`aspect-square rounded-2xl text-2xl grid place-items-center border transition ${form.avatar === a ? 'border-brand-violet bg-brand-violet/10 scale-105' : 'border-line bg-surface2 hover:bg-surface3'}`}>{a}</button>
-              ))}</div></div>
-            <div className="mt-4"><label className="label">Nickname (3–16 letters or numbers)</label>
-              <input className="input" value={form.nickname} maxLength={16} placeholder="e.g. CleverFox" onChange={e => setForm({ ...form, nickname: e.target.value.replace(/[^A-Za-z0-9]/g, '') })} /></div>
-            <div className="grid grid-cols-2 gap-3 mt-4">
-              <div><label className="label">Class</label>
-                <select className="input" value={form.grade} onChange={e => setForm({ ...form, grade: +e.target.value })}>
-                  {Array.from({ length: 10 }, (_, i) => i + 3).map(g => <option key={g} value={g}>Class {g}</option>)}</select></div>
-              <div><label className="label">City</label><input className="input" value={form.city} maxLength={40} onChange={e => setForm({ ...form, city: e.target.value })} /></div>
-            </div>
-            <div className="flex gap-2 mt-5">
-              <button className="btn-grad" disabled={!ok || busy} onClick={add}>{busy ? 'Saving…' : 'Create profile'}</button>
-              {acc.children.length > 0 && <button className="btn-ghost" onClick={() => { setAdding(false); setErr(undefined) }}>Cancel</button>}
-            </div>
-          </div>
-        )}
+        {acc && adding && <ChildForm initial={EMPTY} title="New child profile" submitLabel="Create profile" busy={busy} onSubmit={p.onAdd}
+          onCancel={acc.children.length > 0 ? p.onCancelAdd : undefined} />}
+        {editing && <ChildForm key={editing.id} initial={{ nickname: editing.nickname, avatar: editing.avatar, grade: editing.grade, city: editing.city }}
+          title={`Edit ${editing.nickname}`} submitLabel="Save changes" busy={busy} onSubmit={p.onSave} onCancel={p.onCancelEdit} />}
         {acc && full && <p className="text-xs text-muted mt-4">You’ve reached the limit of {acc.maxChildren} child profiles.</p>}
+
+        {acc && (
+          <section className="mt-10 pt-6 border-t border-line" aria-label="Account">
+            <h2 className="text-sm font-bold text-muted uppercase tracking-wider">Account</h2>
+            <div className="flex flex-wrap gap-2 mt-3">
+              <button className="btn-ghost" disabled={busy} onClick={p.onSignOutEverywhere}>Sign out of all devices</button>
+              <button className="btn-ghost text-bad" disabled={busy} onClick={p.onDeleteAccount}>Delete my account</button>
+            </div>
+            <p className="text-xs text-faint mt-3">Signing out only ends the session on this device. “All devices” ends every session. Deleting removes your account and all children’s progress.</p>
+          </section>
+        )}
       </main>
     </div>
   )
+}
+
+/** The parent's home after signing in. */
+export default function Family() {
+  const { kind, enterChild, signOut } = useSession()
+  const toast = useToast()
+  const [acc, setAcc] = useState<Account>()
+  const [err, setErr] = useState<string>()
+  const [adding, setAdding] = useState(false)
+  const [editing, setEditing] = useState<Me>()
+  const [busy, setBusy] = useState(false)
+
+  useEffect(() => { if (kind !== 'account') navigate('/signin') }, [kind])
+  useEffect(() => {
+    if (kind !== 'account') return
+    authApi.account().then(a => { setAcc(a); if (a.children.length === 0) setAdding(true) }).catch(e => setErr(e.message))
+  }, [kind])
+
+  const run = async (fn: () => Promise<void>) => { setBusy(true); setErr(undefined); try { await fn() } catch (e: any) { setErr(e.message) } finally { setBusy(false) } }
+
+  return <FamilyView acc={acc} err={err} adding={adding} editing={editing} busy={busy}
+    onOpen={async (c, role) => { await enterChild(c.id, role); navigate(role === 'parent' ? '/parent' : '/feed') }}
+    onAdd={f => run(async () => { const r = await authApi.addChild(f); setAcc(r.account); setAdding(false); toast(`Added ${r.child.nickname} 🎉`) })}
+    onSave={f => run(async () => { if (!editing) return; setAcc(await authApi.editChild(editing.id, f)); setEditing(undefined); toast('Saved ✓') })}
+    onRemove={c => run(async () => {
+      if (!confirm(`Delete ${c.nickname} and all their progress? This can't be undone.`)) return
+      setAcc(await authApi.removeChild(c.id))
+      if (localStorage.getItem('wn_child') === c.id) localStorage.removeItem('wn_child')
+    })}
+    onStartAdd={() => { setAdding(true); setEditing(undefined) }} onCancelAdd={() => { setAdding(false); setErr(undefined) }}
+    onStartEdit={c => { setEditing(c); setAdding(false) }} onCancelEdit={() => setEditing(undefined)}
+    onSignOut={() => { signOut('/signin'); toast('Signed out') }}
+    onSignOutEverywhere={() => run(async () => {
+      if (!confirm('Sign out of every device where you are signed in?')) return
+      await authApi.logoutAll()
+      signOut('/signin'); toast('Signed out everywhere')
+    })}
+    onDeleteAccount={() => run(async () => {
+      if (!confirm('Delete your account and ALL your children’s profiles? This can’t be undone.')) return
+      if ((prompt('Type DELETE to confirm') || '').trim() !== 'DELETE') return
+      await authApi.deleteAccount()
+      signOut('/'); toast('Your account was deleted')
+    })} />
 }

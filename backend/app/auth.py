@@ -2,9 +2,11 @@
 Request auth.
 
   Student/parent API  (get_uid)
-     Bearer <session token>   → a Google account's active child profile (header X-Child picks which one)
-     X-Demo-User: <id>        → demo / guest identity (only when ALLOW_DEMO, or AUTH_MODE=dev). 'a_' and 'c_' ids are reserved
-                                for real accounts and can never be claimed through this header.
+     Bearer <session token>   → a signed-in parent's active child profile (header X-Child picks which one)
+     X-Demo-User: demo-student → the ONE shared demo student (judges, "Try the student demo"); changes to its profile are blocked
+     X-Demo-User: <any id>     → a throw-away guest profile. Only when ALLOW_GUESTS (default: AUTH_MODE=dev); with Google sign-in
+                                 these are refused, so nobody can create unlimited profiles by inventing ids.
+                                 'a_' and 'c_' ids are reserved for real accounts and can never be claimed this way.
   Admin API           (require_admin)  Google session whose verified email is in ADMIN_EMAILS, or X-Admin-Token (= JOBS_TOKEN)
   Scheduler / jobs    (require_jobs_token)  header X-Jobs-Token
 """
@@ -18,6 +20,7 @@ from fastapi import Header, HTTPException
 
 from .config import get_settings
 from .core import accounts, security
+from .core.security import DEMO_ID
 from .core.settings import get_platform
 
 SAFE_ID = re.compile(r"^[A-Za-z0-9_-]{1,64}$")
@@ -40,6 +43,8 @@ def session_account(authorization: Optional[str]) -> Optional[dict]:
     acc = accounts.get_account(sess["sub"])
     if not acc:
         raise HTTPException(401, "Account not found. Please sign in again.")
+    if int(sess.get("ep", 0)) != int(acc.get("epoch", 0)):
+        raise HTTPException(401, "You were signed out. Please sign in again.")
     return acc
 
 
@@ -53,11 +58,13 @@ async def get_uid(authorization: Optional[str] = Header(default=None), x_demo_us
         return child
     ps = get_platform()
     if ps.auth_mode == "dev" or ps.allow_demo:
-        uid = (x_demo_user or ("demo-student" if ps.auth_mode == "dev" else "")).strip()
+        uid = (x_demo_user or (DEMO_ID if ps.auth_mode == "dev" else "")).strip()
         if not uid:
             raise HTTPException(401, "Sign in required")
         if not SAFE_ID.match(uid) or uid.startswith(RESERVED_PREFIXES):
             raise HTTPException(400, "bad X-Demo-User")
+        if uid != DEMO_ID and not ps.allow_guests:
+            raise HTTPException(403, "Guest profiles are turned off. Please sign in.")
         return uid
     raise HTTPException(401, "Sign in required")
 
