@@ -1,0 +1,50 @@
+/*
+  Neon card borders (imported by components/PostCard.tsx).
+    yellow = new since your last visit · green = done · red = needs another try
+  Dark mode glows; light mode uses deeper tones and a soft drop shadow so the colours stay readable on white.
+*/
+:root {
+  --wn-new: 250 204 21;       /* neon yellow */
+  --wn-done: 34 230 120;      /* neon green  */
+  --wn-retry: 255 77 109;     /* neon red    */
+}
+html:not(.dark) {
+  --wn-new: 202 138 4;
+  --wn-done: 22 163 74;
+  --wn-retry: 225 29 72;
+}
+
+.card.wn-card { transition: border-color .45s ease, box-shadow .45s ease; }
+.card.wn-card.wn-new   { --wn: var(--wn-new); }
+.card.wn-card.wn-done  { --wn: var(--wn-done); }
+.card.wn-card.wn-retry { --wn: var(--wn-retry); }
+
+.card.wn-card.wn-new, .card.wn-card.wn-done, .card.wn-card.wn-retry {
+  border-color: rgb(var(--wn));
+  box-shadow: 0 0 0 1px rgb(var(--wn) / .45), 0 0 22px -4px rgb(var(--wn) / .6);
+}
+html:not(.dark) .card.wn-card.wn-new, html:not(.dark) .card.wn-card.wn-done, html:not(.dark) .card.wn-card.wn-retry {
+  box-shadow: 0 0 0 1px rgb(var(--wn) / .55), 0 10px 24px -12px rgb(var(--wn) / .75);
+}
+
+/* "new" breathes gently (the entrance animation of the card is kept: `rise` comes from the Tailwind config) */
+.card.wn-card.wn-new { animation: rise .4s ease-out both, wn-glow 3s ease-in-out .4s infinite; }
+@keyframes wn-glow {
+  0%, 100% { box-shadow: 0 0 0 1px rgb(var(--wn) / .45), 0 0 18px -4px rgb(var(--wn) / .45); }
+  50%      { box-shadow: 0 0 0 1px rgb(var(--wn) / .75), 0 0 30px -2px rgb(var(--wn) / .75); }
+}
+
+/* the label sitting on the top border */
+.wn-tag {
+  position: absolute; top: -10px; right: 22px; z-index: 2;
+  font-size: 10.5px; font-weight: 800; letter-spacing: .08em; line-height: 1;
+  padding: 4px 9px; border-radius: 999px;
+  color: #0b0d14; background: rgb(var(--wn));
+  box-shadow: 0 0 14px -2px rgb(var(--wn) / .85);
+  animation: pop .35s cubic-bezier(.2, .9, .3, 1.2) both;
+}
+html:not(.dark) .wn-tag { color: #fff; }
+
+/* legend dots */
+.wn-dot { display: inline-block; width: 9px; height: 9px; border-radius: 999px; background: rgb(var(--wn)); box-shadow: 0 0 8px rgb(var(--wn) / .8); }
+.wn-dot.wn-new { --wn: var(--wn-new); } .wn-dot.wn-done { --wn: var(--wn-done); } .wn-dot.wn-retry { --wn: var(--wn-retry); }

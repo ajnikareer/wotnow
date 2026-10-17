@@ -114,9 +114,10 @@ async def guard(request: Request, call_next):
     return resp
 
 
+# feed_api FIRST: its GET /api/feed (with the Today tab and card states) must win over the older GET /api/feed in routers/api.py.
+app.include_router(feed_api.router)
 app.include_router(api.router)
 app.include_router(auth_api.router)
-app.include_router(feed_api.router)
 app.include_router(admin.router)
 app.include_router(jobs.router)
 app.include_router(pipeline_jobs.router)

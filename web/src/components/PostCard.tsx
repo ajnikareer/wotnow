@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
 import type { Post, VoteResult } from '../lib/types'
 import { api } from '../lib/api'
+import { labelOf, stateOf, type CardState } from '../lib/cardState'
 import { timeAgo } from '../lib/hooks'
 import { Link, navigate } from '../lib/router'
 import { useToast } from '../lib/toast'
 import { useSession } from '../lib/session'
 import { AgentAvatar, Verified, agentOf } from './ui'
 import { Icon } from './Icon'
+import '../styles/neon.css'
 
 const TYPE_LABEL: Record<Post['type'], string> = {
   scenario: 'WHAT WOULD YOU DO?', poll: 'POLL', myth_fact: 'MYTH OR FACT', scam_legit: 'SCAM OR LEGIT?', local_alert: 'LOCAL ALERT',
@@ -77,7 +79,7 @@ function ScenarioBody({ post }: { post: Post }) {
 }
 
 /* ---------- Vote-style posts: poll / myth-fact / scam-legit ---------- */
-function useVote(post: Post) {
+function useVote(post: Post, onResult?: (s: CardState) => void) {
   const [res, setRes] = useState<VoteResult | null>(null)
   const [busy, setBusy] = useState(false)
   const toast = useToast()
@@ -86,8 +88,13 @@ function useVote(post: Post) {
   const vote = async (c: string) => {
     if (res || busy) return
     setBusy(true)
-    try { const r = await api.vote(post.id, c); setRes(r); toast(r.isCorrect ? `✅ Correct! +${r.xpAwarded} XP` : `Good try! +${r.xpAwarded} XP for answering`); refreshMe() }
-    finally { setBusy(false) }
+    try {
+      const r = await api.vote(post.id, c)
+      setRes(r)
+      onResult?.(r.isCorrect ? 'done' : 'retry')                    // the border changes colour straight away
+      toast(r.isCorrect ? `✅ Correct! +${r.xpAwarded} XP` : `Good try! +${r.xpAwarded} XP for answering`)
+      refreshMe()
+    } finally { setBusy(false) }
   }
   return { res, vote, busy }
 }
@@ -100,8 +107,8 @@ function Explanation({ res }: { res: VoteResult }) {
   )
 }
 
-function PollBody({ post }: { post: Post }) {
-  const { res, vote, busy } = useVote(post)
+function PollBody({ post, onResult }: { post: Post; onResult: (s: CardState) => void }) {
+  const { res, vote, busy } = useVote(post, onResult)
   return (
     <>
       <p className="mt-3 text-[15px] leading-relaxed text-ink/90">{post.body} <strong className="text-ink">{post.question}</strong></p>
@@ -130,8 +137,8 @@ function PollBody({ post }: { post: Post }) {
   )
 }
 
-function BinaryBody({ post, kind }: { post: Post; kind: 'myth_fact' | 'scam_legit' }) {
-  const { res, vote, busy } = useVote(post)
+function BinaryBody({ post, kind, onResult }: { post: Post; kind: 'myth_fact' | 'scam_legit'; onResult: (s: CardState) => void }) {
+  const { res, vote, busy } = useVote(post, onResult)
   const opts = kind === 'myth_fact'
     ? [{ id: 'myth', label: '❌ Myth' }, { id: 'fact', label: '✅ Fact' }]
     : [{ id: 'scam', label: '🚩 Scam' }, { id: 'legit', label: '✅ Legit' }]
@@ -168,7 +175,7 @@ function BinaryBody({ post, kind }: { post: Post; kind: 'myth_fact' | 'scam_legi
 }
 
 /* ---------- Local alert ---------- */
-function AlertBody({ post }: { post: Post }) {
+function AlertBody({ post, onResult }: { post: Post; onResult: (s: CardState) => void }) {
   const [done, setDone] = useState(!!post.my?.checkedIn)
   const toast = useToast()
   const { refreshMe } = useSession()
@@ -185,7 +192,7 @@ function AlertBody({ post }: { post: Post }) {
       </div>
       <div className="flex items-center gap-3 mt-3">
         <button disabled={done} className={done ? 'btn-soft' : 'btn-ink'}
-          onClick={async () => { const r = await api.checkin(post.id); setDone(true); toast(`🌱 Nice! +${r.xpAwarded} XP`); refreshMe() }}>
+          onClick={async () => { const r = await api.checkin(post.id); setDone(true); onResult('done'); toast(`🌱 Nice! +${r.xpAwarded} XP`); refreshMe() }}>
           <Icon name="check" className="w-4 h-4" />{done ? 'You did one today' : 'I’ll do one today'}
         </button>
         <span className="text-[13px] text-muted">{post.stats.responses.toLocaleString('en-IN')} students did one</span>
@@ -196,15 +203,21 @@ function AlertBody({ post }: { post: Post }) {
 
 export function PostCard({ post }: { post: Post }) {
   const isAlert = post.type === 'local_alert'
+  // A result produced on this card (a vote, a check-in) is shown at once; the server's state takes over on the next load.
+  const [local, setLocal] = useState<CardState | null>(null)
+  useEffect(() => { setLocal(null) }, [post.id, (post as any).state])
+  const state = stateOf(post, local)
+  const label = labelOf(post, state)
   return (
-    <article className={`card p-4 md:p-5 animate-rise ${isAlert ? 'grad-soft' : ''}`}
+    <article className={`card wn-card wn-${state} relative p-4 md:p-5 animate-rise ${isAlert ? 'grad-soft' : ''}`} data-state={state}
       onDoubleClick={() => post.type === 'scenario' && navigate(`/post/${post.id}`)}>
+      {label && <span key={state} className="wn-tag" aria-label={`Status: ${label}`}>{label}</span>}
       <PostHeader post={post} />
       {post.type === 'scenario' && <ScenarioBody post={post} />}
-      {post.type === 'poll' && <PollBody post={post} />}
-      {post.type === 'myth_fact' && <BinaryBody post={post} kind="myth_fact" />}
-      {post.type === 'scam_legit' && <BinaryBody post={post} kind="scam_legit" />}
-      {isAlert && <AlertBody post={post} />}
+      {post.type === 'poll' && <PollBody post={post} onResult={setLocal} />}
+      {post.type === 'myth_fact' && <BinaryBody post={post} kind="myth_fact" onResult={setLocal} />}
+      {post.type === 'scam_legit' && <BinaryBody post={post} kind="scam_legit" onResult={setLocal} />}
+      {isAlert && <AlertBody post={post} onResult={setLocal} />}
     </article>
   )
 }

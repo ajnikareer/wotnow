@@ -171,7 +171,7 @@ def test_feed_service_limit_and_my_state(monkeypatch):
     u = student("my", 8)
     users.set_my("my", "f59", {"choice": "a"})
     rows = asyncio.run(posts.feed(u))
-    assert len(rows) == posts.FEED_LIMIT == 40 and rows[0]["id"] == "f59" and rows[0]["my"] == {"choice": "a"}
+    assert len(rows) == posts.FEED_LIMIT == 40 and rows[0]["id"] == "f59" and rows[0]["my"] == {"choice": "a", "correct": True}   # `correct` is added for older votes
     assert len(asyncio.run(posts.feed(u, limit=5))) == 5
 
 
@@ -180,14 +180,16 @@ def test_latest_endpoint(v3_client):
     mk("a", at=ts(1)); mk("b", at=ts(2)); mk("c", at=ts(3)); mk("senior-only", bands=["senior"], at=ts(4)); mk("old", at=ts(0, 1), pinned=True)
     h = {"X-Demo-User": "viewer"}
     r = v3_client.get("/api/feed/latest", headers=h).json()
-    assert r == {"latest": ts(3), "newCount": 0}                                     # a Class 8 student never sees the senior-only post
-    assert v3_client.get("/api/feed/latest", params={"since": ts(1)}, headers=h).json() == {"latest": ts(3), "newCount": 2}       # properly encoded
-    assert v3_client.get(f"/api/feed/latest?since={ts(1)}", headers=h).json() == {"latest": ts(3), "newCount": 2}                # raw '+' (decoded as a space) still works
+    assert r["latest"] == ts(3) and r["newCount"] == 0                               # a Class 8 student never sees the senior-only post
+    assert v3_client.get("/api/feed/latest", params={"since": ts(1)}, headers=h).json()["newCount"] == 2       # properly encoded
+    assert v3_client.get(f"/api/feed/latest?since={ts(1)}", headers=h).json()["newCount"] == 2                  # raw '+' (decoded as a space) still works
     assert v3_client.get("/api/feed/latest", params={"since": ts(3)}, headers=h).json()["newCount"] == 0
-    assert v3_client.get("/api/feed/latest?tab=near", headers=h).json() == {"latest": None, "newCount": 0}
+    near = v3_client.get("/api/feed/latest?tab=near", headers=h).json()
+    assert near["latest"] is None and near["newCount"] == 0
     assert v3_client.get("/api/feed/latest?tab=nonsense", headers=h).status_code == 400
     mk("d", at=ts(6)); feed.invalidate()
-    assert v3_client.get("/api/feed/latest", params={"since": ts(3)}, headers=h).json() == {"latest": ts(6), "newCount": 1}
+    r = v3_client.get("/api/feed/latest", params={"since": ts(3)}, headers=h).json()
+    assert r["latest"] == ts(6) and r["newCount"] == 1
 
 
 def test_pin_endpoint_needs_admin_and_takes_effect_at_once(v3_client):

@@ -1,16 +1,18 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { AppShell } from '../components/AppShell'
 import { PostCard } from '../components/PostCard'
+import { StateLegend } from '../components/StateLegend'
 import { AgentAvatar, EmptyState, PostSkeleton } from '../components/ui'
 import { Icon } from '../components/Icon'
-import { api, feedLatest } from '../lib/api'
+import { feedLatest, loadFeed, type FeedTab } from '../lib/api'
+import { shouldLeaveToday } from '../lib/feedTabs'
 import { useAsync } from '../lib/hooks'
 import { Link } from '../lib/router'
 import { useSession } from '../lib/session'
 import { AGENTS } from '../mocks/data'
 
-type Tab = 'foryou' | 'following' | 'near'
 const POLL_MS = 60_000
+const TABS: [FeedTab, string][] = [['today', 'Today'], ['foryou', 'For you'], ['near', 'Near me'], ['following', 'Following']]
 
 /** Floating pill that appears when experts have posted since the feed was loaded. */
 export function NewPostsBanner({ count, onClick }: { count: number; onClick: () => void }) {
@@ -25,11 +27,23 @@ export function NewPostsBanner({ count, onClick }: { count: number; onClick: () 
 }
 
 export default function Feed() {
-  const [tab, setTab] = useState<Tab>('foryou')
+  // "Today" comes first and is the landing tab, unless nothing but the city alert has been posted today
+  const [tab, setTab] = useState<FeedTab>('today')
+  const picked = useRef(false)                                        // true once the student chooses a tab themselves
   const { me } = useSession()
-  const { data, loading, error, reload } = useAsync(() => api.feed(tab), [tab])
+  const { data, loading, error, reload } = useAsync(() => loadFeed(tab), [tab])
   const [fresh, setFresh] = useState(0)
+  const [todayCount, setTodayCount] = useState<number | null>(null)
   const seen = new Set(['civic', 'cipher', 'compass'])
+
+  const choose = (t: FeedTab) => { picked.current = true; setTab(t) }
+
+  // Nothing new today (only the city alert, or nothing at all): start on "For you" instead of an empty page.
+  useEffect(() => { if (shouldLeaveToday(tab, picked.current, loading, data)) setTab('foryou') }, [tab, data, loading])
+
+  // The number on the Today tab: from the page itself when it is open, otherwise from the server.
+  useEffect(() => { if (tab === 'today' && data && !loading) setTodayCount(data.length) }, [tab, data, loading])
+  useEffect(() => { feedLatest('today', '').then(r => { if (r) setTodayCount(r.todayCount) }).catch(() => { /* not signed in yet */ }) }, [])
 
   // The newest post time currently on screen; the poll asks the server how many are newer.
   const newest = useMemo(() => (data && data.length ? data.reduce((m: string, p: any) => (p.createdAt > m ? p.createdAt : m), '') : ''), [data])
@@ -40,7 +54,10 @@ export default function Feed() {
     let stop = false
     const check = async () => {
       if (document.hidden) return
-      try { const r = await feedLatest(tab, newest); if (!stop && r) setFresh(r.newCount) } catch { /* offline or signed out: try again next time */ }
+      try {
+        const r = await feedLatest(tab, newest)
+        if (!stop && r) { setFresh(r.newCount); setTodayCount(r.todayCount) }
+      } catch { /* offline or signed out: try again next time */ }
     }
     const t = setInterval(check, POLL_MS)
     const onVisible = () => { if (!document.hidden) check() }
@@ -53,11 +70,19 @@ export default function Feed() {
   return (
     <AppShell>
       <div className="max-w-[640px] mx-auto">
-        <div className="flex items-center gap-1 mb-4">
-          {([['foryou', 'For you'], ['near', 'Near me'], ['following', 'Following']] as [Tab, string][]).map(([t, l]) => (
-            <button key={t} onClick={() => setTab(t)} className={`px-4 py-2 rounded-full text-sm font-bold transition ${tab === t ? 'bg-ink text-bg' : 'text-muted hover:text-ink'}`}>{l}</button>
-          ))}
-          <span className="ml-auto chip"><Icon name="pin" className="w-3.5 h-3.5" />{me?.city ?? 'Pune'}</span>
+        <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center gap-1 overflow-x-auto no-scrollbar" role="tablist">
+            {TABS.map(([t, l]) => (
+              <button key={t} role="tab" aria-selected={tab === t} onClick={() => choose(t)}
+                className={`shrink-0 px-4 py-2 rounded-full text-sm font-bold transition inline-flex items-center gap-1.5 ${tab === t ? 'bg-ink text-bg' : 'text-muted hover:text-ink'}`}>
+                {l}
+                {t === 'today' && !!todayCount && (
+                  <span className={`px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none ${tab === t ? 'bg-bg text-ink' : 'grad-bg text-[#06080C]'}`}>{todayCount}</span>
+                )}
+              </button>
+            ))}
+          </div>
+          <span className="ml-auto chip shrink-0"><Icon name="pin" className="w-3.5 h-3.5" />{me?.city ?? 'Pune'}</span>
         </div>
 
         <NewPostsBanner count={fresh} onClick={refresh} />
@@ -86,10 +111,14 @@ export default function Feed() {
           </div>
         </Link>
 
+        <StateLegend />
+
         <div className="space-y-4">
           {loading && !data && [0, 1, 2].map(i => <PostSkeleton key={i} />)}
           {error && <EmptyState title="Couldn’t load the feed" text={error} action={<button className="btn-ghost" onClick={reload}>Try again</button>} />}
-          {data?.length === 0 && <EmptyState title="Nothing here yet" text="Follow a few more experts to fill this tab." action={<Link to="/experts" className="btn-grad">Find experts</Link>} />}
+          {data?.length === 0 && (tab === 'today'
+            ? <EmptyState title="Nothing new today yet" text="The experts post through the day. Check back soon, or have a look at everything in For you." action={<button className="btn-grad" onClick={() => choose('foryou')}>Go to For you</button>} />
+            : <EmptyState title="Nothing here yet" text="Follow a few more experts to fill this tab." action={<Link to="/experts" className="btn-grad">Find experts</Link>} />)}
           {data?.map(p => <PostCard key={p.id} post={p} />)}
           {data && data.length > 0 && <p className="text-center text-sm text-muted py-6">🎉 You’re all caught up. New posts arrive through the day.</p>}
         </div>

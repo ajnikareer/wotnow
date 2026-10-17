@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import asyncio
 import logging
+from datetime import datetime
+from typing import Optional
 
 from fastapi import HTTPException
 
@@ -15,7 +17,7 @@ from ..judge import scoring
 from ..judge.judge import judge
 from ..judge.moderation import moderate
 from ..store.base import get_db
-from . import clock, users
+from . import clock, users, visits
 from . import feed as feedmod
 
 log = logging.getLogger("wotnow.posts")
@@ -25,11 +27,15 @@ RESP = "responses"
 FEED_LIMIT = 40
 
 
-def public(p: dict, my: dict | None = None) -> dict:
+def public(p: dict, my: Optional[dict] = None, baseline: Optional[datetime] = None) -> dict:
+    """What the web app may see of a post. `state` is the neon-border colour (see services/feed.py); pass the student's
+    `baseline` (services/visits.py) to let posts made since their last visit show as 'new'."""
     out = {k: v for k, v in p.items() if k not in HIDDEN}
     if p["type"] == "local_alert":
         out["stats"] = {"responses": p.get("checkins", 0) + p.get("stats", {}).get("responses", 0)}
+    my = feedmod.enrich_my(p, my)
     out["my"] = my
+    out["state"] = feedmod.card_state(p, my, baseline)
     return out
 
 
@@ -42,6 +48,7 @@ def get_post(post_id: str) -> dict:
 
 async def feed(u: dict, tab: str = "foryou", agent_id: str | None = None, limit: int = FEED_LIMIT) -> list[dict]:
     """The student's feed (see services/feed.py for the rules). Today's alert for their city is created on demand."""
+    baseline = visits.touch(u)                  # starts or continues this student's visit
     alert = None
     try:
         alert = await asyncio.wait_for(build_alert(u.get("city") or "Pune"), timeout=12)
@@ -50,7 +57,7 @@ async def feed(u: dict, tab: str = "foryou", agent_id: str | None = None, limit:
     extra = [alert] if alert and alert.get("status", "live") == "live" else None
     posts = feedmod.select(feedmod.visible(u, tab, agent_id, extra), limit)
     my = users.my_state(u["id"])
-    return [public(p, my.get(p["id"])) for p in posts]
+    return [public(p, my.get(p["id"]), baseline) for p in posts]
 
 
 # ---------------- votes ----------------
@@ -88,7 +95,7 @@ def vote(u: dict, post_id: str, choice: str) -> dict:
     if ok and p["type"] == "scam_legit":
         u.setdefault("counts", {})["scamCorrect"] = u["counts"].get("scamCorrect", 0) + 1
     users.record(u, "vote", xp, post=p, score=100 if ok else 0, domain=domain)
-    users.set_my(u["id"], post_id, {"choice": choice})
+    users.set_my(u["id"], post_id, {"choice": choice, "correct": ok})          # `correct` keeps the card's colour after a reload
     return vote_result(p, choice, xp)
 
 
@@ -144,7 +151,7 @@ async def answer(u: dict, post_id: str, text: str) -> dict:
     domain = C.agent(p["agentId"])["domain"]
     u = users.record(u, "answer", xp, post=p, score=ev["score"], domain=domain, missed=missed,
                      extra={"judgedBy": ev["judgedBy"], "blocked": mod["label"] != "ok"})
-    users.set_my(u["id"], post_id, {"answered": True, "score": max(ev["score"], best_before)})
+    users.set_my(u["id"], post_id, {"answered": True, "score": max(ev["score"], best_before)})    # best score: a retry can turn a red card green
     pub = users.public(u)
     return {"score": ev["score"], "label": ev["label"], "checklist": ev["checklist"], "dangerous": ev["dangerous"],
             "dangerousReason": ev["dangerousReason"], "feedback": ev["feedback"], "sourceCards": p["sourceCards"],

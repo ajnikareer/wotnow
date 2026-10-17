@@ -42,7 +42,8 @@ export async function http<T>(path: string, init?: RequestInit): Promise<T> {
 export interface AuthConfig { authMode: string; googleEnabled: boolean; googleClientId: string; allowDemo: boolean; adminTokenLogin: boolean; maxChildren: number }
 export interface Account { id: string; email: string; name: string; picture: string; isAdmin: boolean; children: Me[]; maxChildren: number }
 export interface NewChild { nickname: string; avatar: string; grade: number; city: string }
-export interface FeedLatest { latest: string | null; newCount: number }
+export type FeedTab = 'today' | 'foryou' | 'near' | 'following'
+export interface FeedLatest { latest: string | null; newCount: number; todayCount: number }
 
 const NO_AUTH: AuthConfig = { authMode: 'demo', googleEnabled: false, googleClientId: '', allowDemo: true, adminTokenLogin: false, maxChildren: 3 }
 const notLive = () => Promise.reject(new Error('Sign-in is only available when the app runs against the server.'))
@@ -59,8 +60,8 @@ export const authApi = {
   deleteAccount: (): Promise<{ deleted: boolean }> => (API_MODE === 'live' ? http('/account', { method: 'DELETE' }) : notLive()),
 }
 
-/** "Anything new since <time>?" for the feed. Cheap on the server (no AI, shared cache). Resolves null in mock mode. */
-export const feedLatest = (tab: 'foryou' | 'following' | 'near', since: string): Promise<FeedLatest | null> =>
+/** "Anything new since <time>?" and today's post count, for the feed. Cheap on the server (no AI, shared cache). Resolves null in mock mode. */
+export const feedLatest = (tab: FeedTab, since: string): Promise<FeedLatest | null> =>
   API_MODE === 'live' ? http<FeedLatest>(`/feed/latest?tab=${tab}&since=${encodeURIComponent(since)}`) : Promise.resolve(null)
 
 const liveApi = {
@@ -68,7 +69,7 @@ const liveApi = {
   updateMe: (patch: Partial<Me>) => http<Me>('/me', { method: 'POST', body: JSON.stringify(patch) }),
   agents: () => http<Agent[]>('/agents'),
   agent: (id: string) => http<Agent>(`/agents/${id}`),
-  feed: (tab: 'foryou' | 'following' | 'near' = 'foryou', agentId?: string) =>
+  feed: (tab: FeedTab = 'foryou', agentId?: string) =>
     http<Post[]>(`/feed?tab=${tab}${agentId ? `&agent=${agentId}` : ''}`),
   post: (id: string) => http<{ post: Post; responses: Response[] }>(`/posts/${id}`),
   answer: (id: string, text: string) => http<Evaluation>(`/posts/${id}/answer`, { method: 'POST', body: JSON.stringify({ text }) }),
@@ -84,3 +85,7 @@ const liveApi = {
 }
 
 export const api = API_MODE === 'live' ? liveApi : mockApi
+
+/** The feed for a tab (or for one expert). One place that hides the live/mock typing difference. */
+export const loadFeed = (tab: FeedTab, agentId?: string): Promise<Post[]> =>
+  (api.feed as unknown as (t: FeedTab, a?: string) => Promise<Post[]>)(tab, agentId)
