@@ -1,273 +1,1752 @@
 {
- "agentId": "civic",
- "cards": [
-  {
-   "id": "CIV-003",
-   "subtopic": "Litter",
-   "title": "Litter and public spaces",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Litter blocks drains and causes waterlogging in the monsoon.",
-    "People copy what they see others do, good or bad."
-   ],
-   "do": [
-    "Keep the wrapper until you find a bin",
-    "Separate wet and dry waste",
-    "Politely encourage friends to do the same"
-   ],
-   "dont": [
-    "Don't drop litter even if others do",
-    "Don't throw things out of vehicle windows"
-   ],
-   "myths": [
+  "agentId": "civic",
+  "cards": [
     {
-     "statement": "One wrapper doesn't matter; it's the city's job to clean up.",
-     "answer": "myth",
-     "truth": "Millions of 'just one wrapper' block drains. Everyone shares the job."
-    }
-   ],
-   "quiz": [
+      "id": "CIV-003",
+      "subtopic": "Litter",
+      "title": "Litter and public spaces",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Litter blocks drains and causes waterlogging in the monsoon.",
+        "People copy what they see others do, good or bad."
+      ],
+      "do": [
+        "Keep the wrapper until you find a bin",
+        "Separate wet and dry waste",
+        "Politely encourage friends to do the same"
+      ],
+      "dont": [
+        "Don't drop litter even if others do",
+        "Don't throw things out of vehicle windows"
+      ],
+      "myths": [
+        {
+          "statement": "One wrapper doesn't matter; it's the city's job to clean up.",
+          "answer": "myth",
+          "truth": "Millions of 'just one wrapper' block drains. Everyone shares the job."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "There's no dustbin on the bus. What do you do with your wrapper?",
+          "options": [
+            "Drop it under the seat",
+            "Throw it out of the window",
+            "Keep it in your bag until you find a bin",
+            "Hide it in a crack"
+          ],
+          "correct": 2,
+          "explanation": "Fold it into your bag and bin it later."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} finishes a packet of chips {at}. There's no dustbin anywhere, and {relation} says 'Just drop it under the seat, everyone does.'"
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "🚌",
+          "🍟",
+          "🧒"
+        ],
+        "bubble": "Everyone does it…",
+        "rubric": [
+          {
+            "point": "Keep the wrapper until finding a bin",
+            "note": "Fold it into a pocket or bag and bin it later.",
+            "weight": 40,
+            "critical": true,
+            "keys": "keep|pocket|bag|hold|carry|later|bin"
+          },
+          {
+            "point": "Don't drop it, even if 'everyone does'",
+            "note": "The right thing doesn't depend on others.",
+            "weight": 30,
+            "critical": false,
+            "keys": "(not|don'?t|never)[^.]{0,15}(drop|throw|litter)|everyone"
+          },
+          {
+            "point": "Politely encourage the friend too",
+            "note": "Small nudges change habits.",
+            "weight": 30,
+            "critical": false,
+            "keys": "friend|tell|explain|encourag|remind"
+          }
+        ],
+        "dangerous": [],
+        "settings": [
+          "city bus",
+          "train",
+          "metro"
+        ]
+      },
+      "agentId": "civic",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "There's no dustbin on the bus. What do you do with your wrapper?",
-     "options": [
-      "Drop it under the seat",
-      "Throw it out of the window",
-      "Keep it in your bag until you find a bin",
-      "Hide it in a crack"
-     ],
-     "correct": 2,
-     "explanation": "Fold it into your bag and bin it later."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "{name} finishes a packet of chips {at}. There's no dustbin anywhere, and {relation} says 'Just drop it under the seat, everyone does.'"
-    ],
-    "question": "What should {name} do?",
-    "emojis": [
-     "🚌",
-     "🍟",
-     "🧒"
-    ],
-    "bubble": "Everyone does it…",
-    "rubric": [
-     {
-      "point": "Keep the wrapper until finding a bin",
-      "note": "Fold it into a pocket or bag and bin it later.",
-      "weight": 40,
-      "critical": true,
-      "keys": "keep|pocket|bag|hold|carry|later|bin"
-     },
-     {
-      "point": "Don't drop it, even if 'everyone does'",
-      "note": "The right thing doesn't depend on others.",
-      "weight": 30,
-      "critical": false,
-      "keys": "(not|don'?t|never)[^.]{0,15}(drop|throw|litter)|everyone"
-     },
-     {
-      "point": "Politely encourage the friend too",
-      "note": "Small nudges change habits.",
-      "weight": 30,
-      "critical": false,
-      "keys": "friend|tell|explain|encourag|remind"
-     }
-    ],
-    "dangerous": [],
-    "settings": [
-     "city bus",
-     "train",
-     "metro"
-    ]
-   },
-   "agentId": "civic",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "CIV-007",
-   "subtopic": "Public transport",
-   "title": "Queues and public transport",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Letting people off first makes boarding faster for everyone.",
-    "Priority seats are for elderly, pregnant, disabled people and parents with small children."
-   ],
-   "do": [
-    "Wait your turn in the queue",
-    "Let passengers get off before boarding",
-    "Offer your seat to someone who needs it more",
-    "Keep bags off seats"
-   ],
-   "dont": [
-    "Don't push or cut the queue",
-    "Don't play loud music without headphones"
-   ],
-   "myths": [
+      "id": "CIV-007",
+      "subtopic": "Public transport",
+      "title": "Queues and public transport",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Letting people off first makes boarding faster for everyone.",
+        "Priority seats are for elderly, pregnant, disabled people and parents with small children."
+      ],
+      "do": [
+        "Wait your turn in the queue",
+        "Let passengers get off before boarding",
+        "Offer your seat to someone who needs it more",
+        "Keep bags off seats"
+      ],
+      "dont": [
+        "Don't push or cut the queue",
+        "Don't play loud music without headphones"
+      ],
+      "myths": [
+        {
+          "statement": "Priority seats are only for people who ask for them.",
+          "answer": "myth",
+          "truth": "Offer them without being asked. Many people won't ask."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "The metro doors open and the train is crowded. What first?",
+          "options": [
+            "Push in quickly",
+            "Let people get off first",
+            "Block the door",
+            "Shout"
+          ],
+          "correct": 1,
+          "explanation": "Letting people off first makes boarding faster for everyone."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} has just got the last seat on a crowded bus. At the next stop, an elderly woman with a heavy bag gets on and holds the rail. {relation} whispers 'Pretend you're asleep.'"
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "🚇",
+          "👵",
+          "💺"
+        ],
+        "bubble": "Pretend to sleep!",
+        "rubric": [
+          {
+            "point": "Offer the seat politely",
+            "note": "Offer without waiting to be asked.",
+            "weight": 50,
+            "critical": true,
+            "keys": "offer|give|let her sit|stand up|seat"
+          },
+          {
+            "point": "Help with the bag if she wants",
+            "note": "Small help goes a long way.",
+            "weight": 20,
+            "critical": false,
+            "keys": "bag|help|carry|hold"
+          },
+          {
+            "point": "Not pretend to sleep / set a good example",
+            "note": "Kindness spreads.",
+            "weight": 30,
+            "critical": false,
+            "keys": "(not|don'?t|never)[^.]{0,15}(pretend|ignore)|example|kind|respect"
+          }
+        ],
+        "dangerous": []
+      },
+      "agentId": "civic",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "statement": "Priority seats are only for people who ask for them.",
-     "answer": "myth",
-     "truth": "Offer them without being asked. Many people won't ask."
-    }
-   ],
-   "quiz": [
+      "id": "CIV-020",
+      "subtopic": "Helping others",
+      "title": "Finding a lost child",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Lost children should be handed to officials such as security, police or staff, not taken home.",
+        "1098 is CHILDLINE, India's free helpline for children in need."
+      ],
+      "do": [
+        "Stay with the child in a busy, visible place",
+        "Tell security, a shop counter or police",
+        "Ask for an announcement"
+      ],
+      "dont": [
+        "Don't take the child home or away from the area",
+        "Don't post their photo online"
+      ],
+      "myths": [
+        {
+          "statement": "If you find a lost child, it's best to take them home and look after them.",
+          "answer": "myth",
+          "truth": "Hand them to security, staff or police at the spot, where parents will search."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You find a crying child alone in a mall. Best step?",
+          "options": [
+            "Take them home",
+            "Ignore them",
+            "Stay with them and tell security or staff",
+            "Post a video online"
+          ],
+          "correct": 2,
+          "explanation": "Staff can make announcements, and parents will come back to that area."
+        }
+      ],
+      "scenario": null,
+      "agentId": "civic",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "The metro doors open and the train is crowded. What first?",
-     "options": [
-      "Push in quickly",
-      "Let people get off first",
-      "Block the door",
-      "Shout"
-     ],
-     "correct": 1,
-     "explanation": "Letting people off first makes boarding faster for everyone."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "{name} has just got the last seat on a crowded bus. At the next stop, an elderly woman with a heavy bag gets on and holds the rail. {relation} whispers 'Pretend you're asleep.'"
-    ],
-    "question": "What should {name} do?",
-    "emojis": [
-     "🚇",
-     "👵",
-     "💺"
-    ],
-    "bubble": "Pretend to sleep!",
-    "rubric": [
-     {
-      "point": "Offer the seat politely",
-      "note": "Offer without waiting to be asked.",
-      "weight": 50,
-      "critical": true,
-      "keys": "offer|give|let her sit|stand up|seat"
-     },
-     {
-      "point": "Help with the bag if she wants",
-      "note": "Small help goes a long way.",
-      "weight": 20,
-      "critical": false,
-      "keys": "bag|help|carry|hold"
-     },
-     {
-      "point": "Not pretend to sleep / set a good example",
-      "note": "Kindness spreads.",
-      "weight": 30,
-      "critical": false,
-      "keys": "(not|don'?t|never)[^.]{0,15}(pretend|ignore)|example|kind|respect"
-     }
-    ],
-    "dangerous": []
-   },
-   "agentId": "civic",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "CIV-020",
-   "subtopic": "Helping others",
-   "title": "Finding a lost child",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Lost children should be handed to officials such as security, police or staff, not taken home.",
-    "1098 is CHILDLINE, India's free helpline for children in need."
-   ],
-   "do": [
-    "Stay with the child in a busy, visible place",
-    "Tell security, a shop counter or police",
-    "Ask for an announcement"
-   ],
-   "dont": [
-    "Don't take the child home or away from the area",
-    "Don't post their photo online"
-   ],
-   "myths": [
+      "id": "CIV-012",
+      "subtopic": "Public property",
+      "title": "Caring for public property",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Public property is paid for by everyone's taxes.",
+        "Leaking public taps can waste thousands of litres."
+      ],
+      "do": [
+        "Report damage or leaks to the authority or school",
+        "Close running public taps",
+        "Use walls and benches as they're meant to be used"
+      ],
+      "dont": [
+        "Don't scribble on walls or monuments",
+        "Don't damage benches, signs or plants"
+      ],
+      "myths": [
+        {
+          "statement": "Writing your name on a monument is harmless fun.",
+          "answer": "myth",
+          "truth": "It damages heritage that belongs to everyone, and it's an offence."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You see a public tap left running. What do you do?",
+          "options": [
+            "Walk away",
+            "Close it, and report it if it's broken",
+            "Fill a balloon",
+            "Take a selfie"
+          ],
+          "correct": 1,
+          "explanation": "Close it and report broken taps so they get fixed."
+        }
+      ],
+      "scenario": null,
+      "agentId": "civic",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "statement": "If you find a lost child, it's best to take them home and look after them.",
-     "answer": "myth",
-     "truth": "Hand them to security, staff or police at the spot, where parents will search."
-    }
-   ],
-   "quiz": [
+      "id": "CIV-021",
+      "agentId": "civic",
+      "subtopic": "Hygiene",
+      "title": "Public spitting, paan stains and respiratory disease spread",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Saliva and sputum droplets carry bacteria (like Mycobacterium tuberculosis) that remain airborne for hours.",
+        "Public spitting disfigures sidewalks and walls and is a punishable offense under municipal civic bylaws."
+      ],
+      "do": [
+        "Always spit into a tissue paper and dispose of it in a closed waste bin",
+        "Rinse mouth in dedicated washbasin sinks, not on walls or staircases",
+        "Remind family and peers that spitting spreads tuberculosis and respiratory infections"
+      ],
+      "dont": [
+        "Never spit on footpaths, roads, bus stops, or building stairwells",
+        "Never spit out of moving buses or car windows"
+      ],
+      "myths": [
+        {
+          "statement": "Spitting paan or tobacco on public walls is harmless once it dries.",
+          "answer": "myth",
+          "truth": "Dried sputum particles get kicked up as infectious dust that passersby inhale into their lungs."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is public spitting strictly prohibited on roads, metro stations, and public spaces?",
+          "options": [
+            "It looks funny",
+            "It spreads deadly airborne diseases like Tuberculosis and damages public hygiene",
+            "It wastes saliva",
+            "It takes time"
+          ],
+          "correct": 1,
+          "explanation": "Spitting transmits infectious respiratory bacteria and viruses to everyone nearby."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Walking through a bus station at {at}, {name} sees someone about to spit paan onto the wall."
+        ],
+        "question": "How can {name} promote responsible civic cleanliness?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely remind that public spitting spreads diseases and spoils shared spaces",
+            "note": "Promotes community hygiene awareness.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t spit|spreads disease|public cleanliness|polite"
+          },
+          {
+            "point": "Use designated washroom sinks or spit into a tissue for the dustbin",
+            "note": "Directs to hygienic disposal.",
+            "weight": 35,
+            "critical": true,
+            "keys": "use sink|tissue|dustbin"
+          },
+          {
+            "point": "Lead by personal example and never spit on shared streets",
+            "note": "Sets positive civic standard.",
+            "weight": 20,
+            "critical": false,
+            "keys": "lead by example|civic sense"
+          }
+        ],
+        "dangerous": [
+          "spit on the wall",
+          "encourage spitting",
+          "ignore completely"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Swachh Bharat Urban Guidelines",
+          "url": "https://swachhbharaturban.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "You find a crying child alone in a mall. Best step?",
-     "options": [
-      "Take them home",
-      "Ignore them",
-      "Stay with them and tell security or staff",
-      "Post a video online"
-     ],
-     "correct": 2,
-     "explanation": "Staff can make announcements, and parents will come back to that area."
-    }
-   ],
-   "scenario": null,
-   "agentId": "civic",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "CIV-012",
-   "subtopic": "Public property",
-   "title": "Caring for public property",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Public property is paid for by everyone's taxes.",
-    "Leaking public taps can waste thousands of litres."
-   ],
-   "do": [
-    "Report damage or leaks to the authority or school",
-    "Close running public taps",
-    "Use walls and benches as they're meant to be used"
-   ],
-   "dont": [
-    "Don't scribble on walls or monuments",
-    "Don't damage benches, signs or plants"
-   ],
-   "myths": [
+      "id": "CIV-022",
+      "agentId": "civic",
+      "subtopic": "Noise",
+      "title": "Noise pollution: Honking, loudspeakers and silent zones",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Prolonged exposure to noise above 85 decibels causes permanent sensorineural hearing loss.",
+        "Hospitals, courts, and educational institutions are designated Silent Zones (no honking allowed within 100m)."
+      ],
+      "do": [
+        "Avoid honking vehicle horns unless preventing an imminent collision",
+        "Keep personal headphones and portable speaker volumes moderate in public transport",
+        "Respect night-time silence rules: no loud speakers after 10 PM near residential areas"
+      ],
+      "dont": [
+        "Never honk near hospital ICUs, old-age homes, or school exam centres",
+        "Never blast party speakers into midnight disturbing studying neighbours"
+      ],
+      "myths": [
+        {
+          "statement": "Continuous honking in a traffic jam makes the vehicles in front move faster.",
+          "answer": "myth",
+          "truth": "Honking does not clear stopped traffic; it causes intense acoustic stress and road rage."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is honking completely prohibited within 100 meters of a hospital?",
+          "options": [
+            "Hospitals are big",
+            "Sudden loud acoustic spikes trigger cardiac stress and disturb critical patients",
+            "To save horn battery",
+            "Doctors don't like sound"
+          ],
+          "correct": 1,
+          "explanation": "Noise spikes induce dangerous stress and sleep deprivation in ICU patients."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A driver behind {name}'s school van at {at} is leaning on their horn right outside a hospital gate."
+        ],
+        "question": "What civic rule should road users remember?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Hospitals are 24/7 Silent Zones where honking is strictly illegal",
+            "note": "Protects recovering patients from acoustic shock.",
+            "weight": 45,
+            "critical": true,
+            "keys": "silent zone|hospital|no honking|illegal"
+          },
+          {
+            "point": "Honking does not magically clear red lights or traffic bottlenecks",
+            "note": "Dispels useless aggressive honking.",
+            "weight": 35,
+            "critical": true,
+            "keys": "honking doesn'?t clear traffic|patience"
+          },
+          {
+            "point": "Keep noise low and respect quiet hours in residential neighbourhoods",
+            "note": "Basic civic courtesy.",
+            "weight": 20,
+            "critical": false,
+            "keys": "respect quiet|neighbourhood"
+          }
+        ],
+        "dangerous": [
+          "honk louder",
+          "encourage honking at hospital",
+          "blast horn"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Pollution Control Board (CPCB) Noise Rules",
+          "url": "https://cpcb.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "Writing your name on a monument is harmless fun.",
-     "answer": "myth",
-     "truth": "It damages heritage that belongs to everyone, and it's an offence."
-    }
-   ],
-   "quiz": [
+      "id": "CIV-023",
+      "agentId": "civic",
+      "subtopic": "Accessibility",
+      "title": "Respectful assistance for visually impaired citizens",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "People with visual impairment navigate using white canes, tactile pavings, and auditory landmarks.",
+        "Grabbing someone's arm or cane unexpectedly without asking startles and disorients them."
+      ],
+      "do": [
+        "Always ask first: 'Hello, may I help you cross the road or find the platform?'",
+        "Offer your elbow for them to hold lightly; walk a half-step ahead at a natural pace",
+        "Verbally describe steps, curbs, and hazards clearly (e.g. 'Step down in two steps')"
+      ],
+      "dont": [
+        "Never grab someone's white cane or pull them by the wrist",
+        "Never pet or distract a working guide dog"
+      ],
+      "myths": [
+        {
+          "statement": "You should grab a blind person's hand and pull them across the road without talking.",
+          "answer": "myth",
+          "truth": "Grabbing people without consent causes fear and loss of balance. Ask first, offer elbow."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How should you offer physical guidance to a visually impaired person crossing a street?",
+          "options": [
+            "Pull their cane",
+            "Ask first, then offer your elbow for them to hold as you walk",
+            "Push them from behind",
+            "Shout directions"
+          ],
+          "correct": 1,
+          "explanation": "Holding your elbow allows them to follow your body movement smoothly and safely."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Near a busy road crossing at {at}, {name} sees a person with a white cane waiting by the curb."
+        ],
+        "question": "How should {name} offer assistance respectfully?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Greet them politely and ask: 'Hello, would you like assistance crossing the street?'",
+            "note": "Always obtains consent first.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ask first|may i help|greet politely"
+          },
+          {
+            "point": "If they accept, offer your elbow and guide them smoothly",
+            "note": "Proper sighted-guide technique.",
+            "weight": 35,
+            "critical": true,
+            "keys": "offer elbow|guide gently|walk ahead"
+          },
+          {
+            "point": "Describe curbs and steps clearly: 'Curb step down right now'",
+            "note": "Provides necessary spatial context.",
+            "weight": 20,
+            "critical": false,
+            "keys": "verbal descriptions|curb step|describe road"
+          }
+        ],
+        "dangerous": [
+          "grab cane suddenly",
+          "drag across road without speaking",
+          "push from behind"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Department of Empowerment of Persons with Disabilities",
+          "url": "https://disabilityaffairs.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "You see a public tap left running. What do you do?",
-     "options": [
-      "Walk away",
-      "Close it, and report it if it's broken",
-      "Fill a balloon",
-      "Take a selfie"
-     ],
-     "correct": 1,
-     "explanation": "Close it and report broken taps so they get fixed."
+      "id": "CIV-024",
+      "agentId": "civic",
+      "subtopic": "Emergency transit",
+      "title": "Giving immediate right-of-way to emergency ambulances",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Every second lost in transit reduces survival odds for heart attack and trauma victims.",
+        "Failing to give way to emergency vehicles attracts a fine of up to ₹10,000 under the Motor Vehicles Act."
+      ],
+      "do": [
+        "Move your vehicle or cycle immediately to the left side of the road when a siren sounds",
+        "Clear the center lane or create an emergency green corridor",
+        "Never tail or closely follow an ambulance to zip through cleared traffic"
+      ],
+      "dont": [
+        "Never block or race an ambulance with flashing lights and sirens",
+        "Never freeze in the middle of an intersection"
+      ],
+      "myths": [
+        {
+          "statement": "Following right behind a rushing ambulance is a smart shortcut to bypass city traffic.",
+          "answer": "myth",
+          "truth": "Tailgating ambulances causes rear-end crashes and obstructs emergency braking."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should all vehicles immediately do when an ambulance siren is heard approaching from behind?",
+          "options": [
+            "Speed up and race it",
+            "Safely pull over to the left to open a clear lane",
+            "Stop dead in the middle lane",
+            "Ignore siren"
+          ],
+          "correct": 1,
+          "explanation": "Pulling to the left creates a continuous open emergency corridor for critical patients."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Riding on the road at {at}, an ambulance siren blares loudly behind {name}'s vehicle."
+        ],
+        "question": "What is the immediate legal and moral civic duty?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Safely maneuver to the left side of the road to clear the path",
+            "note": "Opens a clear channel for emergency transit.",
+            "weight": 45,
+            "critical": true,
+            "keys": "pull to left|clear path|move aside|give way"
+          },
+          {
+            "point": "Encourage other drivers to yield right-of-way",
+            "note": "Builds active community compliance.",
+            "weight": 20,
+            "critical": false,
+            "keys": "encourage others|yield right of way"
+          },
+          {
+            "point": "Never tailgate behind the ambulance to skip signals",
+            "note": "Extremely hazardous and illegal.",
+            "weight": 35,
+            "critical": true,
+            "keys": "don'?t tailgate|no chasing ambulance"
+          }
+        ],
+        "dangerous": [
+          "block the ambulance",
+          "race the ambulance",
+          "tailgate to skip traffic"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Motor Vehicles Act Section 194E",
+          "url": "https://morth.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-025",
+      "agentId": "civic",
+      "subtopic": "Respect",
+      "title": "Treating sanitation workers, security guards and domestic staff with dignity",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Sanitation workers, housekeeping staff, and security guards keep our cities functional and safe.",
+        "Article 14 and 21 of the Indian Constitution uphold equal human dignity for every citizen."
+      ],
+      "do": [
+        "Greet service staff with a warm 'Namaste', 'Good morning', or 'Thank you'",
+        "Address domestic workers, bus conductors, and guards with polite respectful honorifics (Bhaiya, Didi, Uncle)",
+        "Offer drinking water to delivery agents and cleaners visiting your building"
+      ],
+      "dont": [
+        "Never speak rudely, snap fingers, or look down upon manual laborers",
+        "Never leave broken glass unseparated in trash that can cut waste collectors' hands"
+      ],
+      "myths": [
+        {
+          "statement": "You only need to show respect to rich professionals, not sanitation workers.",
+          "answer": "myth",
+          "truth": "Dignity of labor is the bedrock of civilized society. Every honest job deserves deep respect."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the simplest everyday habit that shows civic respect to your apartment security guard?",
+          "options": [
+            "Ignoring them completely",
+            "A polite greeting, acknowledging their work, and saying 'Thank you'",
+            "Ordering them around",
+            "Complaining always"
+          ],
+          "correct": 1,
+          "explanation": "Simple everyday courtesy validates the dignity and contribution of essential service staff."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A delivery partner climbs three flights of stairs in hot weather at {at} to hand over a package."
+        ],
+        "question": "What civic courtesy should {name} extend?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Receive package with a warm 'Thank you' and offer a glass of clean water",
+            "note": "Demonstrates genuine human warmth and empathy.",
+            "weight": 45,
+            "critical": true,
+            "keys": "thank you|offer water|polite greeting"
+          },
+          {
+            "point": "Speak with respect and patience without snapping or arrogance",
+            "note": "Affirms dignity of labor.",
+            "weight": 35,
+            "critical": true,
+            "keys": "respectful tone|patience|no arrogance"
+          },
+          {
+            "point": "Recognize their hard work keeping city logistics moving",
+            "note": "Fosters civic appreciation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "appreciate work|kindness"
+          }
+        ],
+        "dangerous": [
+          "slam door in face",
+          "scold for taking stairs",
+          "speak rudely"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Commission for Safai Karamcharis",
+          "url": "https://ncsk.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-026",
+      "agentId": "civic",
+      "subtopic": "Functions",
+      "title": "Buffet discipline and zero food waste at weddings and parties",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Thousands of tons of edible food are dumped into garbage pits after lavish weddings every night.",
+        "Unattended heaps of wasted food on dirty paper plates attract stray pests and rot."
+      ],
+      "do": [
+        "Take small initial portions at wedding buffets; you can revisit counters freely",
+        "Only pick dishes you genuinely intend to eat rather than trying to taste everything on one plate",
+        "Encourage hosts to partner with food rescue NGOs (like Robin Hood Army) to distribute surplus untouched food"
+      ],
+      "dont": [
+        "Never pile mountains of halwa and biryani only to abandon half-eaten plates",
+        "Never throw whole untouched food packets into garden hedges"
+      ],
+      "myths": [
+        {
+          "statement": "Leaving half your wedding buffet plate unconsumed is standard high-class etiquette.",
+          "answer": "myth",
+          "truth": "Wasting food while millions face hunger is deeply insensitive and un-civic."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You are at a wedding reception buffet with 20 delicious dishes. What is the smart, civic way to eat?",
+          "options": [
+            "Heap all 20 dishes onto one plate so it overflows",
+            "Take 2-3 dishes you really enjoy in small portions, and return for seconds if hungry",
+            "Take everything and dump half",
+            "Smash the plate"
+          ],
+          "correct": 1,
+          "explanation": "Taking modest portions avoids wasting food and lets you enjoy meals fresher."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At a family wedding function at {at}, {name} is at the dessert buffet counter."
+        ],
+        "question": "What is the responsible civic approach?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Take small portions of one or two treats you will actually finish",
+            "note": "Prevents plate food abandonment.",
+            "weight": 45,
+            "critical": true,
+            "keys": "small portion|take what you finish|one treat"
+          },
+          {
+            "point": "Do not leave half-eaten desserts on chairs or ledges",
+            "note": "Leaves shared spaces clean.",
+            "weight": 35,
+            "critical": true,
+            "keys": "don'?t abandon plate|put in bin"
+          },
+          {
+            "point": "If surplus untouched food remains, suggest donating to verified food charities",
+            "note": "Feeds vulnerable communities.",
+            "weight": 20,
+            "critical": false,
+            "keys": "donate surplus|food charity|no waste"
+          }
+        ],
+        "dangerous": [
+          "pile plate to overflow",
+          "leave half-eaten food on chairs",
+          "dump full plates"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Robin Hood Army & Feeding India Guidelines",
+          "url": "https://robinhoodarmy.com"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-027",
+      "agentId": "civic",
+      "subtopic": "Water",
+      "title": "Closing leaking public taps and reporting pipeline bursts",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A single faucet dripping one drop per second wastes over 3,000 litres of treated water every year.",
+        "Clean drinking water is an increasingly scarce natural resource in Indian cities."
+      ],
+      "do": [
+        "Close any running or half-open public tap you see at railway stations, parks, or schools",
+        "Place a bucket underneath while alerting facility maintenance if a tap cannot be shut fully",
+        "Report major street pipeline bursts on municipal citizen grievance helplines"
+      ],
+      "dont": [
+        "Never walk past a gushing municipal drinking tap without taking action",
+        "Never leave school washroom taps running while soaping hands"
+      ],
+      "myths": [
+        {
+          "statement": "A leaking tap in a public park is the government's problem, not a citizen's concern.",
+          "answer": "myth",
+          "truth": "Public water belongs to all citizens. Closing running taps is a direct civic duty."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do if you notice a drinking water tap running freely at a train station?",
+          "options": [
+            "Walk past quickly",
+            "Stop for 5 seconds and turn the tap handle fully closed",
+            "Take a selfie",
+            "Complain on social media without closing it"
+          ],
+          "correct": 1,
+          "explanation": "Taking 5 seconds to close the tap saves hundreds of litres of clean drinking water."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the public park or sports ground at {at}, a drinking water fountain tap is left gushing full blast."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Step up and turn the tap firmly clockwise until the water flow stops completely",
+            "note": "Immediately halts precious water wastage.",
+            "weight": 45,
+            "critical": true,
+            "keys": "turn off tap|close tap|stop water"
+          },
+          {
+            "point": "If the washer is broken, report the leak to the park supervisor or maintenance staff",
+            "note": "Ensures permanent plumbing fix.",
+            "weight": 35,
+            "critical": true,
+            "keys": "report leak|tell supervisor|maintenance"
+          },
+          {
+            "point": "Remind peers to turn off taps while brushing or applying soap",
+            "note": "Promotes everyday conservation habits.",
+            "weight": 20,
+            "critical": false,
+            "keys": "remind peers|save water"
+          }
+        ],
+        "dangerous": [
+          "walk past freely",
+          "leave tap running",
+          "break the tap"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Jal Jeevan Mission Guidelines",
+          "url": "https://jaljeevanmission.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-028",
+      "agentId": "civic",
+      "subtopic": "Pets",
+      "title": "Responsible pet walking: Leashes, scooping and colony courtesy",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Dog waste contains harmful bacteria (Campylobacter, Salmonella) and parasite eggs that contaminate shoes.",
+        "Unleashed pet dogs can startle young children, elderly strollers, or provoke territorial street dogs."
+      ],
+      "do": [
+        "Always keep your pet dog on a secure, comfortable leash in public society areas and parks",
+        "Carry old newspapers, plastic bags, or a poop-scooper to clean up your pet's waste immediately",
+        "Ensure pets are up-to-date on yearly anti-rabies vaccinations and society registration"
+      ],
+      "dont": [
+        "Never leave your pet's waste on common walking tracks, flowerbeds, or building corridors",
+        "Never allow pets to jump onto unwilling neighbors or strangers"
+      ],
+      "myths": [
+        {
+          "statement": "Leaving dog poop on public pavements is fine because it dissolves in rain naturally.",
+          "answer": "myth",
+          "truth": "Pavement feces spread diseases to children, soil shoes, and ruin common hygiene."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What must a responsible pet parent always carry when walking their dog in a society park?",
+          "options": [
+            "Only a phone",
+            "A sturdy leash and a bag or scooper to pick up pet waste",
+            "Heavy stick",
+            "Biscuits only"
+          ],
+          "correct": 1,
+          "explanation": "Leashing ensures control and waste bags keep neighborhood walking tracks spotless."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Walking a family pet in the colony garden at {at}, the dog relieves itself near the jogging track."
+        ],
+        "question": "What is {name}'s civic obligation as a pet guardian?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Use a bag or paper to pick up the waste and deposit it in an outdoor garbage bin",
+            "note": "Restores public cleanliness immediately.",
+            "weight": 45,
+            "critical": true,
+            "keys": "scoop waste|pick up poop|bag|dustbin"
+          },
+          {
+            "point": "Keep the dog on a secure leash at all times in common areas",
+            "note": "Prevents unexpected jumps on elderly neighbors.",
+            "weight": 35,
+            "critical": true,
+            "keys": "keep on leash|leashed dog|control"
+          },
+          {
+            "point": "Respect neighbors who may feel anxious around unfamiliar dogs",
+            "note": "Cultivates mutual community harmony.",
+            "weight": 20,
+            "critical": false,
+            "keys": "respect neighbors|courteous"
+          }
+        ],
+        "dangerous": [
+          "leave waste on jogging track",
+          "run away without cleaning",
+          "unleash dog near toddlers"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Animal Welfare Board Guidelines on Pet Dogs in Resident Welfare Associations",
+          "url": "https://awbi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-029",
+      "agentId": "civic",
+      "subtopic": "Community",
+      "title": "Respecting shared spaces: Corridors, elevators and parks",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Corridors and stairwells are primary emergency fire evacuation corridors that must stay 100% clear.",
+        "Dumping personal shoes, bicycles, and flowerpots in common corridors creates dangerous trip hazards."
+      ],
+      "do": [
+        "Keep shared stairwells and lift lobbies free of personal junk, old furniture, and garbage bags",
+        "Hold the elevator door politely for approaching residents carrying groceries or prams",
+        "Dispose of personal snack wrappers in outdoor dustbins, never leaving them on park benches"
+      ],
+      "dont": [
+        "Never leave leaky garbage bags leaking smelly liquid in shared elevator lobbies",
+        "Never scribble graffiti or stick chewing gum inside common lifts"
+      ],
+      "myths": [
+        {
+          "statement": "Corridors outside your apartment door belong exclusively to your flat to store clutter.",
+          "answer": "myth",
+          "truth": "Common corridors are shared community property and legal fire escape routes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why must building stairwells and common corridors always be kept completely clear of clutter?",
+          "options": [
+            "For decoration",
+            "They are emergency fire evacuation routes that people must navigate in smoke and darkness",
+            "To sweep faster",
+            "No reason"
+          ],
+          "correct": 1,
+          "explanation": "Blocked staircases cause lethal crush injuries and trapped residents during night fire alarms."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the apartment building at {at}, someone has dumped old broken bicycles and boxes in the stairwell."
+        ],
+        "question": "What civic issue does {name} recognize?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stairwells are emergency fire escape routes that must remain completely unobstructed",
+            "note": "Ensures unhindered life-saving evacuation.",
+            "weight": 45,
+            "critical": true,
+            "keys": "fire escape|unobstructed|emergency exit|clear stairwell"
+          },
+          {
+            "point": "Common spaces belong to all residents and should be kept tidy and clean",
+            "note": "Prevents blight and community friction.",
+            "weight": 35,
+            "critical": true,
+            "keys": "shared space|tidy|clean lobby"
+          },
+          {
+            "point": "Notify the Resident Welfare Association (RWA) or building committee to clear the blockage",
+            "note": "Follows proper governance channels.",
+            "weight": 20,
+            "critical": false,
+            "keys": "inform rwa|society committee|clear items"
+          }
+        ],
+        "dangerous": [
+          "dump more junk in stairs",
+          "block the fire exit completely",
+          "ignore fire hazard"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Model Bye-Laws for Resident Welfare Associations",
+          "url": "https://mohua.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-030",
+      "agentId": "civic",
+      "subtopic": "Anti-bullying",
+      "title": "From bystander to upstander: Standing up against teasing",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Bullying thrives when surrounding peers remain silent, which bullies interpret as approval.",
+        "Research shows that when a single peer intervenes kindly, over 50% of bullying stops within 10 seconds."
+      ],
+      "do": [
+        "Stand next to the targeted student and invite them away: 'Come on, let's go play basketball together'",
+        "Speak clearly to the teaser: 'That's not funny, let's stop this'",
+        "Report persistent bullying to a trusted teacher or school counselor"
+      ],
+      "dont": [
+        "Never join in laughing or filming teasing videos on mobile phones",
+        "Never resort to physical violence or aggressive insults to solve conflict"
+      ],
+      "myths": [
+        {
+          "statement": "Watching someone get teased without saying anything means you are neutral and innocent.",
+          "answer": "myth",
+          "truth": "Passive silence empowers the bully. An upstander uses gentle words to support the victim."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most effective way a student can act as an 'upstander' when a classmate is mocked?",
+          "options": [
+            "Laugh along",
+            "Step in, support the classmate, and invite them away to a safe spot",
+            "Film a video for social media",
+            "Punch the bully"
+          ],
+          "correct": 1,
+          "explanation": "Distracting the situation and supporting the victim dissolves the bully's audience."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school courtyard at {at}, two older students are mocking a classmate's accent and laughing."
+        ],
+        "question": "How can {name} act as a courageous civic upstander?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Walk up to the classmate and warmly invite them to join your group",
+            "note": "Removes the victim from the aggressive interaction.",
+            "weight": 45,
+            "critical": true,
+            "keys": "invite away|support friend|stand with victim|upstander"
+          },
+          {
+            "point": "Clearly say: 'Hey, that's unkind, let's stop this' without getting aggressive",
+            "note": "Disapproves bullying behavior firmly.",
+            "weight": 35,
+            "critical": true,
+            "keys": "tell to stop|not funny|unkind|speak up"
+          },
+          {
+            "point": "Inform a teacher if the teasing persists or turns physical",
+            "note": "Secures responsible adult intervention.",
+            "weight": 20,
+            "critical": false,
+            "keys": "tell teacher|counselor|report"
+          }
+        ],
+        "dangerous": [
+          "laugh along with teasers",
+          "record a video on phone",
+          "encourage mockery"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CBSE Anti-Bullying Guidelines for Schools",
+          "url": "https://cbse.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-031",
+      "agentId": "civic",
+      "subtopic": "Heritage",
+      "title": "Preserving historical monuments and stopping graffiti vandalism",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Ancient stone monuments and forts represent irreplaceable centuries-old national architecture.",
+        "Scratching names or painting graffiti on protected archaeological sites is a crime under AMASR Act."
+      ],
+      "do": [
+        "Admire historical monuments with eyes and cameras without touching delicate carvings",
+        "Follow all ASI site rules: carry waste back with you and stay within marked visitor ropes",
+        "Speak up politely if friends pull out keys or markers to scratch graffiti on ancient walls"
+      ],
+      "dont": [
+        "Never carve or scratch initials ('Raju loves Priya') into ancient stone or bricks",
+        "Never discard plastic bottles, wrappers, or chewing gum inside heritage compounds"
+      ],
+      "myths": [
+        {
+          "statement": "Scratching your name onto an ancient fort wall is a harmless romantic tradition.",
+          "answer": "myth",
+          "truth": "Carving scratches off the protective mineral patina, accelerating chemical weathering and stone crumbling."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What law protects Indian historical monuments from graffiti, defacement, and destruction?",
+          "options": [
+            "The Traffic Code",
+            "The Ancient Monuments and Archaeological Sites and Remains (AMASR) Act",
+            "The Forest Bill",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "The AMASR Act makes defacing historical monuments punishable by fines and imprisonment."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On a school excursion to a historical monument at {at}, a classmate takes out a coin to carve initials on a stone pillar."
+        ],
+        "question": "What should {name} tell them immediately?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Firmly stop them: 'Please don't carve on ancient stone, it permanently ruins centuries of heritage'",
+            "note": "Prevents irreversible physical vandalism.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t carve|preserve heritage|stop scratching|ruins monument"
+          },
+          {
+            "point": "Remind them that defacing monuments is an illegal offense under archaeological laws",
+            "note": "Cites legal prohibition and penalties.",
+            "weight": 35,
+            "critical": true,
+            "keys": "illegal|heritage law|asi|punishable"
+          },
+          {
+            "point": "Keep our shared cultural heritage pristine for future generations",
+            "note": "Instills civic pride.",
+            "weight": 20,
+            "critical": false,
+            "keys": "cultural pride|future generations|protect"
+          }
+        ],
+        "dangerous": [
+          "hand them a marker",
+          "scratch names together",
+          "ignore vandalism"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Archaeological Survey of India (ASI)",
+          "url": "https://asi.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-032",
+      "agentId": "civic",
+      "subtopic": "Grievances",
+      "title": "Reporting civic problems on municipal apps (potholes, streetlights)",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Municipal corporations in India have dedicated grievance apps (Swachhata, MyGov, local Smart City portals).",
+        "Geo-tagged citizen photo reports automatically route repair work orders to local ward engineers."
+      ],
+      "do": [
+        "Download and use your city's municipal grievance app (e.g. Swachhata-MoHUA or city corporation app)",
+        "Take a clear, geotagged photo showing the broken streetlight, open pothole, or garbage dump",
+        "Track the complaint ticket number until the municipal authority marks it resolved with an 'after' photo"
+      ],
+      "dont": [
+        "Never submit fake, abusive, or duplicate frivolous complaint tickets",
+        "Never ignore severe public hazards (like open electric junction boxes) without reporting"
+      ],
+      "myths": [
+        {
+          "statement": "Filing municipal complaints online is useless because nobody ever checks civic apps.",
+          "answer": "myth",
+          "truth": "Swachhata and Smart City portals have mandatory time-bound SLAs monitored by municipal commissioners."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What feature in citizen grievance apps ensures municipal workers find the exact location of a pothole?",
+          "options": [
+            "The colour of your phone",
+            "GPS geotagging embedded in the submitted photograph",
+            "Your horoscope",
+            "Social media likes"
+          ],
+          "correct": 1,
+          "explanation": "Geotagged photos pinpoint exact latitude/longitude coordinates for engineering crews."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Outside school at {at}, a deep road pothole fills with water, creating an accident hazard for cyclists."
+        ],
+        "question": "How can {name} and their family take constructive civic action?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Take a clear geotagged photo using the official municipal grievance app",
+            "note": "Initiates an official traceable civic repair ticket.",
+            "weight": 45,
+            "critical": true,
+            "keys": "municipal app|swachhata app|photo|geotagged|file complaint"
+          },
+          {
+            "point": "Provide the exact street name and prominent landmark in the description",
+            "note": "Enables ward staff to locate the pothole easily.",
+            "weight": 35,
+            "critical": true,
+            "keys": "landmark|street name|description"
+          },
+          {
+            "point": "Track the complaint ticket until the road repair is completed",
+            "note": "Ensures civic accountability.",
+            "weight": 20,
+            "critical": false,
+            "keys": "track ticket|resolution|follow up"
+          }
+        ],
+        "dangerous": [
+          "do nothing and complain",
+          "post memes without reporting",
+          "fill with garbage"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Housing and Urban Affairs (MoHUA)",
+          "url": "https://mohua.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-033",
+      "agentId": "civic",
+      "subtopic": "Democracy",
+      "title": "Why voting and Fundamental Duties matter for every citizen",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Democracy thrives on active, informed citizen participation, not passive cynicism.",
+        "Article 51A of the Indian Constitution lists 11 Fundamental Duties, including protecting public property and the environment."
+      ],
+      "do": [
+        "Learn how local elections function (ward corporators, MLAs, MPs) and how budgets are spent",
+        "Encourage eligible adult family members to register and vote in every single election",
+        "Fulfill student fundamental duties: protect the environment, respect the national flag, and develop scientific temper"
+      ],
+      "dont": [
+        "Never treat voting day as just a leisure picnic holiday",
+        "Never trade votes for money, gifts, or communal pressure"
+      ],
+      "myths": [
+        {
+          "statement": "A single citizen's vote makes zero difference in a country of 1.4 billion people.",
+          "answer": "myth",
+          "truth": "Crucial elections have been won or lost by a single vote. Every vote shapes governance and schools."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where are the Fundamental Duties of Indian citizens listed in the Constitution?",
+          "options": [
+            "Article 21",
+            "Article 51A",
+            "Article 370",
+            "The Preamble"
+          ],
+          "correct": 1,
+          "explanation": "Article 51A outlines citizen duties toward the nation, public property, and nature."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Election day approaches in the city at {at}, and {name}'s family considers skipping voting to go to the mall."
+        ],
+        "question": "What democratic perspective should {name} share?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Voting is a democratic right and duty that determines our roads, schools, and hospitals",
+            "note": "Connects voting to quality of public life.",
+            "weight": 45,
+            "critical": true,
+            "keys": "duty to vote|democracy|vote matters|elect good leaders"
+          },
+          {
+            "point": "Encourage every eligible adult in the family to exercise their constitutional franchise",
+            "note": "Promotes civic participation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "encourage family|go vote|cast vote"
+          },
+          {
+            "point": "Remember that student fundamental duties include developing a rational scientific temper",
+            "note": "Cites Article 51A civic values.",
+            "weight": 20,
+            "critical": false,
+            "keys": "scientific temper|fundamental duties|article 51a"
+          }
+        ],
+        "dangerous": [
+          "tell family to skip voting",
+          "sell vote for cash",
+          "mock the election"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Election Commission of India (SVEEP)",
+          "url": "https://ecisveep.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-034",
+      "agentId": "civic",
+      "subtopic": "Religious spaces",
+      "title": "Decorum, courtesy and quiet respect in places of worship",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Temples, mosques, churches, gurdwaras, and viharas are sanctified spaces for quiet contemplation.",
+        "Respecting diverse traditions (removing shoes, covering heads, turning off phones) fosters interfaith peace."
+      ],
+      "do": [
+        "Turn mobile phones completely to silent or switch them off before entering any place of worship",
+        "Follow traditional dress and entry customs respectfully (cover head, remove footwear, wash feet)",
+        "Maintain quiet speaking tones and refrain from running or shouting inside prayer halls"
+      ],
+      "dont": [
+        "Never take intrusive flash photography or selfies in front of praying worshippers",
+        "Never mock or disrespect sacred symbols or rituals of other communities"
+      ],
+      "myths": [
+        {
+          "statement": "It is acceptable to answer loud phone calls in a temple or church if it's an important video game update.",
+          "answer": "myth",
+          "truth": "Prayer spaces are sanctuaries of peace. Loud phone chatter is deeply disruptive and disrespectful."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the first thing you should do with your mobile phone before entering a place of worship?",
+          "options": [
+            "Turn ringtone to max",
+            "Switch it to silent mode or turn it off completely",
+            "Play loud music",
+            "Record a live stream"
+          ],
+          "correct": 1,
+          "explanation": "Silencing phones preserves the tranquil spiritual atmosphere for all visitors."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Visiting an ancient temple, gurdwara, or church at {at}, {name} enters the quiet prayer hall."
+        ],
+        "question": "What respectful decorum should {name} uphold?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Silence mobile phone and speak only in gentle whisper tones",
+            "note": "Protects tranquil worship environment.",
+            "weight": 45,
+            "critical": true,
+            "keys": "silence phone|whisper|quiet|turn off sound"
+          },
+          {
+            "point": "Respect site-specific customs like removing shoes or covering head",
+            "note": "Demonstrates cultural courtesy.",
+            "weight": 35,
+            "critical": true,
+            "keys": "remove shoes|cover head|follow customs"
+          },
+          {
+            "point": "Do not disturb praying devotees with flash selfies or videos",
+            "note": "Preserves personal privacy and sanctity.",
+            "weight": 20,
+            "critical": false,
+            "keys": "no flash|no selfies|respect devotees"
+          }
+        ],
+        "dangerous": [
+          "shout loudly across hall",
+          "answer phone calls loudly",
+          "mock sacred traditions"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Foundation for Communal Harmony",
+          "url": "https://nfch.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-035",
+      "agentId": "civic",
+      "subtopic": "Priority queues",
+      "title": "Prioritizing the elderly, pregnant women and disabled in public queues",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Standing for extended periods causes painful joint stress for elderly and pregnant citizens.",
+        "Designated priority seats and ticket counters ensure equitable access to basic public infrastructure."
+      ],
+      "do": [
+        "Offer your seat immediately to elderly passengers, pregnant women, or people with infants on buses/metros",
+        "Allow seniors or persons with mobility aids to move ahead in ticket, billing, or clinic queues",
+        "Queue in an orderly single-file line without jumping spots or cutting in front of others"
+      ],
+      "dont": [
+        "Never pretend to be asleep in designated 'Senior Citizen' seats to avoid standing",
+        "Never shove past slow-walking elderly commuters on escalators or stairs"
+      ],
+      "myths": [
+        {
+          "statement": "Pretending to sleep in a metro priority seat is a smart way to keep your seat.",
+          "answer": "myth",
+          "truth": "Feigning sleep to deprive elderly or pregnant citizens of seats shows a severe lack of empathy."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You are seated on a crowded metro and an elderly person with a cane boards. What should you do?",
+          "options": [
+            "Close your eyes and pretend to sleep",
+            "Stand up immediately, smile, and offer them your seat",
+            "Look at your phone",
+            "Complain loudly"
+          ],
+          "correct": 1,
+          "explanation": "Offering your seat to seniors demonstrates basic civic compassion and respect."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In a long queue at a medical dispensary or metro counter at {at}, an elderly person with a walking stick joins the back of the line."
+        ],
+        "question": "How can {name} exhibit exemplary civic kindness?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Smile and offer to let the senior person move ahead in the queue",
+            "note": "Shows active consideration for physical vulnerability.",
+            "weight": 45,
+            "critical": true,
+            "keys": "let move ahead|offer spot|priority queue|seniors first"
+          },
+          {
+            "point": "Offer your seat if on a bus or metro train",
+            "note": "Protects fragile commuters from falling during transit.",
+            "weight": 35,
+            "critical": true,
+            "keys": "give seat|offer seat|stand up"
+          },
+          {
+            "point": "Maintain orderly queue discipline without pushing or cutting lines",
+            "note": "Prevents stampedes and chaos.",
+            "weight": 20,
+            "critical": false,
+            "keys": "queue discipline|no pushing|orderly line"
+          }
+        ],
+        "dangerous": [
+          "pretend to sleep",
+          "cut in front of senior",
+          "push past"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Social Justice and Empowerment",
+          "url": "https://socialjustice.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CIV-036",
+      "agentId": "civic",
+      "subtopic": "Gratitude",
+      "title": "Everyday gratitude to community helpers and municipal crews",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A community that values its service workers fosters higher social happiness and civic pride.",
+        "Expressing genuine verbal appreciation ('Thank you for your service') transforms working morale."
+      ],
+      "do": [
+        "Thank your school bus driver and conductor when stepping down every afternoon",
+        "Say a heartfelt 'Thank you' to street sweepers and garbage collectors working in your lane",
+        "Keep your own classroom desks and school cafeteria tables neat to lighten helper workloads"
+      ],
+      "dont": [
+        "Never treat cleaners as invisible or treat their service as something to take for granted",
+        "Never litter on grounds right in front of someone sweeping"
+      ],
+      "myths": [
+        {
+          "statement": "Saying 'Thank you' to sanitation workers or bus conductors is unnecessary because they get paid.",
+          "answer": "myth",
+          "truth": "Compensation pays for work; human gratitude and courtesy validate human dignity."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the simplest way to show everyday gratitude to your school bus driver at the end of the day?",
+          "options": [
+            "Run out without looking",
+            "Smile and say: 'Thank you Bhaiya/Uncle, have a good evening!'",
+            "Honk the horn",
+            "Leave candy wrappers on the floor"
+          ],
+          "correct": 1,
+          "explanation": "A warm, respectful verbal thank you acknowledges their responsibility for your safety."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At school dismissal at {at}, {name} steps off the bus after a safe journey home."
+        ],
+        "question": "What closing civic gesture should {name} make?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Look at the driver and conductor, smile, and say: 'Thank you for the safe ride!'",
+            "note": "Recognizes essential daily service with warmth.",
+            "weight": 45,
+            "critical": true,
+            "keys": "thank you|gratitude|safe ride|polite goodbye"
+          },
+          {
+            "point": "Pick up any personal snack wrappers or trash from your seat",
+            "note": "Keeps the shared vehicle tidy for tomorrow.",
+            "weight": 35,
+            "critical": true,
+            "keys": "pick up trash|clean seat|no litter"
+          },
+          {
+            "point": "Extend the same everyday kindness to all community workers",
+            "note": "Cultivates lifelong civic empathy.",
+            "weight": 20,
+            "critical": false,
+            "keys": "kindness|community helpers"
+          }
+        ],
+        "dangerous": [
+          "rush off without acknowledging",
+          "throw trash under seat",
+          "scold driver"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Department of School Education and Literacy (Civic Values)",
+          "url": "https://dsel.education.gov.in"
+        }
+      ],
+      "reviewed": true
     }
-   ],
-   "scenario": null,
-   "agentId": "civic",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  }
- ]
+  ]
 }

@@ -1,0 +1,1635 @@
+{
+  "agentId": "forge",
+  "cards": [
+    {
+      "id": "ENT-001",
+      "agentId": "forge",
+      "subtopic": "Problem Discovery",
+      "title": "Spotting real problems: Where every great venture begins",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Entrepreneurs do not start with products; they start with genuine human frustrations, inefficiencies, and unmet needs.",
+        "The best student inventions solve everyday frictions they experience firsthand in school, transit, or neighborhood life."
+      ],
+      "do": [
+        "Keep a 'Bug List' notebook where you write down 3 things that annoyed or slowed people down each day",
+        "Listen carefully to customer complaints: 'I hate waiting in this queue' is a direct business opportunity",
+        "Observe how people create makeshift hacks to solve problems—that hack is your product prototype"
+      ],
+      "dont": [
+        "Never start building a gadget or software without verifying that real people actually suffer from that problem",
+        "Never fall in love with your solution before falling in love with the problem"
+      ],
+      "myths": [
+        {
+          "statement": "Great business ideas come exclusively from sudden lightning bolts of genius inspiration.",
+          "answer": "myth",
+          "truth": "Vast majority of successful ventures originate from disciplined observation of everyday frictions and inefficiencies."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most effective starting point for creating a successful student enterprise?",
+          "options": [
+            "Designing a flashy logo before anything else",
+            "Identifying an unsolved recurring frustration that people already complain about",
+            "Copying an American tech company blindly",
+            "Borrowing huge bank loans"
+          ],
+          "correct": 1,
+          "explanation": "Businesses exist to solve real problems. Without an authentic pain point, products have no willing buyers."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school library at {at}, {name} notices students constantly struggle to find available reference books because index cards are misplaced and torn."
+        ],
+        "question": "How should {name} approach this as an aspiring student builder?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Interview 5 classmates and the librarian to pinpoint exact friction points in locating books",
+            "note": "Conducts foundational customer problem discovery.",
+            "weight": 45,
+            "critical": true,
+            "keys": "interview students and librarian|pinpoint friction|listen to users"
+          },
+          {
+            "point": "Document the recurring pain point in a problem log before jumping into complex coding",
+            "note": "Validates the real need thoroughly.",
+            "weight": 35,
+            "critical": true,
+            "keys": "document pain point|validate need before building"
+          },
+          {
+            "point": "Observe what temporary hacks students currently use to find books",
+            "note": "Studies existing informal workarounds.",
+            "weight": 20,
+            "critical": false,
+            "keys": "observe current hacks|workarounds"
+          }
+        ],
+        "dangerous": [
+          "build an expensive app without talking to anyone",
+          "ignore the issue as not my job",
+          "print random posters"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Atal Innovation Mission (AIM) - NITI Aayog",
+          "url": "https://aim.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-002",
+      "agentId": "forge",
+      "subtopic": "Ideation",
+      "title": "Brainstorming without judgment: Divergent thinking",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Effective ideation has two distinct phases: Divergent thinking (generating wild quantity) and Convergent thinking (filtering feasibility).",
+        "Critiquing ideas early kills psychological safety and stops bold breakthroughs from ever surfacing."
+      ],
+      "do": [
+        "Set a timer for 10 minutes and aim for at least 30 diverse ideas without evaluating any of them",
+        "Encourage wild, unconventional ideas—it is easier to tame a wild idea than invigorate a boring one",
+        "Build upon teammates' concepts using the phrase 'Yes, and...' rather than 'No, but...'"
+      ],
+      "dont": [
+        "Never ridicule a teammate's wild suggestion during the initial ideation phase",
+        "Never allow one dominant voice to monopolize the brainstorming whiteboard"
+      ],
+      "myths": [
+        {
+          "statement": "In a brainstorming session, you should immediately reject impossible or absurd ideas as soon as they are mentioned.",
+          "answer": "myth",
+          "truth": "Judging too early kills creative momentum. Absurd ideas often spark practical, revolutionary hybrid solutions."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which conversational phrase encourages creative team ideation best?",
+          "options": [
+            "'That will never work'",
+            "'That sounds too expensive'",
+            "'Yes, and we could also add...'",
+            "'Our competitors already do that'"
+          ],
+          "correct": 2,
+          "explanation": "'Yes, and...' accepts the premise and builds upon it, fostering psychological safety and compounding creativity."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During an innovation club session at {at}, a quiet team member suggests using origami paper folding to package eco-friendly seed balls, but another student laughs."
+        ],
+        "question": "How should {name} facilitate the team dynamic?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Remind the team that early brainstorming strictly suspends criticism to foster novel concepts",
+            "note": "Protects divergent psychological safety.",
+            "weight": 45,
+            "critical": true,
+            "keys": "suspend criticism|protect brainstorming|encourage wild ideas"
+          },
+          {
+            "point": "Build on the idea with 'Yes, and we can test recycled newspaper instead of fresh paper'",
+            "note": "Uses constructive ideation phrasing.",
+            "weight": 35,
+            "critical": true,
+            "keys": "yes and|build on concept|recycled paper"
+          },
+          {
+            "point": "Ensure everyone gets uninterrupted turns to pitch their ideas onto the board",
+            "note": "Maintains inclusive team participation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "uninterrupted turns|inclusive whiteboard"
+          }
+        ],
+        "dangerous": [
+          "join in mocking the unconventional idea",
+          "shut down the session in anger",
+          "let only the loudest student speak"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Design Thinking for Educators - IDEO",
+          "url": "https://designthinkingforeducators.com"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-003",
+      "agentId": "forge",
+      "subtopic": "Teamwork",
+      "title": "The builder trifecta: Hacker, Hustler, and Designer",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Enduring projects need diverse skill sets: the Builder (technical/craft), the Hustler (business/sales), and the Designer (user experience/storyteller).",
+        "Teams composed of clones with identical skills frequently fight over identical tasks and neglect essential sales and aesthetics."
+      ],
+      "do": [
+        "Map each team member's natural strengths rather than assigning roles by friend popularity",
+        "Define clear owners for key pillars: Product Quality, Customer Outreach, and Visual Identity",
+        "Establish a weekly standup meeting where everyone answers: What did I do? What is next? Am I blocked?"
+      ],
+      "dont": [
+        "Never form a team where everyone wants to code or craft but no one wants to talk to customers",
+        "Never leave responsibilities ambiguous so tasks fall through the cracks"
+      ],
+      "myths": [
+        {
+          "statement": "The best venture teams are formed by three best friends who all share the exact same strengths and hobbies.",
+          "answer": "myth",
+          "truth": "Homogeneous teams leave massive blind spots in marketing, finance, or design. Complementary diversity drives success."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In classic venture building, what is the primary responsibility of the 'Hustler' role?",
+          "options": [
+            "Writing backend server code",
+            "Talking to customers, securing sales, partnerships, and managing money",
+            "Drawing vector logo art",
+            "Cleaning the office floor"
+          ],
+          "correct": 1,
+          "explanation": "The hustler drives customer acquisition, communication, resource management, and commercial sustainability."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the science fair team registration at {at}, four friends all want to design the robotic arm, but no one wants to prepare the presentation deck or speak to judges."
+        ],
+        "question": "How should {name} guide the team allocation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Identify individual complementary strengths across building, communication, and visual design",
+            "note": "Allocates roles based on functional diversity.",
+            "weight": 45,
+            "critical": true,
+            "keys": "complementary roles|builder hustler designer|balanced team"
+          },
+          {
+            "point": "Assign a dedicated communicator/hustler responsible for judge presentations and user testing",
+            "note": "Ensures vital outreach is not neglected.",
+            "weight": 35,
+            "critical": true,
+            "keys": "dedicated communicator|judge presentation|clear ownership"
+          },
+          {
+            "point": "Establish clear shared accountability and celebrate all roles equally",
+            "note": "Prevents status hierarchy among teammates.",
+            "weight": 20,
+            "critical": false,
+            "keys": "equal respect|shared accountability"
+          }
+        ],
+        "dangerous": [
+          "let all four fight over the same robotic motor",
+          "force one person to do everything alone",
+          "quit the competition"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Startup India - DPIIT",
+          "url": "https://startupindia.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-004",
+      "agentId": "forge",
+      "subtopic": "Communication",
+      "title": "The 60-second elevator pitch: Hook, problem, solution, ask",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "An elevator pitch summarizes your venture in under a minute: Hook, Problem, Solution, Traction/Secret Sauce, and the Ask.",
+        "If you cannot explain your project clearly in 60 seconds to a 10-year-old, you do not understand it well enough."
+      ],
+      "do": [
+        "Structure your pitch: 'We help [Target User] solve [Urgent Problem] through [Unique Solution]'",
+        "Hook the listener in the first 10 seconds with a striking fact or relatable scenario",
+        "End with a concrete 'Ask' (e.g., 'We are looking for 10 beta testers' or 'Rs 500 seed material')"
+      ],
+      "dont": [
+        "Never recite complex technical jargon or buzzwords that confuse listeners",
+        "Never exceed your time limit during school pitch competitions"
+      ],
+      "myths": [
+        {
+          "statement": "An elevator pitch should cram in every single technical line of code and feature specification.",
+          "answer": "myth",
+          "truth": "Pitches are designed to spark curiosity and secure a follow-up conversation, not deliver an exhaustive user manual."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What are the four essential building blocks of a concise 60-second pitch?",
+          "options": [
+            "Logo, office address, favorite color, price tag",
+            "Hook, Problem, Solution, and Clear Ask",
+            "Technical dictionary, apologies, long backstory, resume",
+            "Jokes, complaints, excuses, phone number"
+          ],
+          "correct": 1,
+          "explanation": "Hook catches attention, Problem establishes urgency, Solution shows value, and the Ask specifies next steps."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the school innovation challenge at {at}, {name} has 60 seconds to present their solar-powered backpack charger to a panel of busy teachers."
+        ],
+        "question": "How should {name} structure the presentation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Open with a sharp hook on students losing phone battery during emergency commutes",
+            "note": "Captures immediate panel interest.",
+            "weight": 40,
+            "critical": true,
+            "keys": "sharp hook|emergency commute problem|grab attention"
+          },
+          {
+            "point": "Explain the solar charging backpack solution clearly without technical jargon",
+            "note": "Articulates value proposition simply.",
+            "weight": 35,
+            "critical": true,
+            "keys": "clear solution|solar backpack|no jargon"
+          },
+          {
+            "point": "Conclude with a clear ask for student testers to trial the prototype next week",
+            "note": "Provides actionable next step.",
+            "weight": 25,
+            "critical": true,
+            "keys": "clear ask|recruit testers|actionable finish"
+          }
+        ],
+        "dangerous": [
+          "ramble about solar physics for 55 seconds without stating what the product is",
+          "exceed time limit",
+          "read monotonously from paper"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Atal Innovation Mission - Pitch Deck Guidelines",
+          "url": "https://aim.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-005",
+      "agentId": "forge",
+      "subtopic": "Sales & Retail",
+      "title": "Running a school carnival stall: Unit economics and cash floats",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A successful retail stall requires knowing your Cost of Goods Sold (COGS), setting a profitable price, and keeping an exact cash float for change.",
+        "Revenue is not profit; if you make Rs 2,000 in sales but spent Rs 1,800 on ingredients, your actual profit is only Rs 200."
+      ],
+      "do": [
+        "Calculate unit cost: total ingredient/material expense divided by number of servings produced",
+        "Price items to cover costs plus a 30-50% profit margin while remaining affordable for students",
+        "Prepare a cash box with plenty of Rs 10, Rs 20, and Rs 50 notes and coins for customer change"
+      ],
+      "dont": [
+        "Never consume stall food or give freebies to friends without accounting for them in the ledger",
+        "Never leave the stall cash box unattended at any time"
+      ],
+      "myths": [
+        {
+          "statement": "If your stall collects Rs 3,000 cash in the cash box at the end of the day, your team has earned Rs 3,000 profit.",
+          "answer": "myth",
+          "truth": "Gross sales revenue must subtract material costs, stall entry fees, and packaging before net profit is known."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "If you spend Rs 300 to make 30 bookmarks and sell all 30 at Rs 20 each, what is your net profit?",
+          "options": [
+            "Rs 600",
+            "Rs 300 (Rs 600 revenue minus Rs 300 cost)",
+            "Rs 20",
+            "Rs 1,000"
+          ],
+          "correct": 1,
+          "explanation": "Net Profit = Total Revenue (30 x 20 = Rs 600) minus Total Cost (Rs 300) = Rs 300."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s student club at {at} prepares homemade lemonade for the annual sports day carnival."
+        ],
+        "question": "How should {name} manage the stall's financial operations?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Tally all expenses for lemons, sugar, cups, and ice to calculate exact unit cost per cup",
+            "note": "Establishes accurate cost of goods sold.",
+            "weight": 45,
+            "critical": true,
+            "keys": "tally expenses|calculate unit cost|track cogs"
+          },
+          {
+            "point": "Maintain an organized cash box with small change and record every sale in a ledger",
+            "note": "Ensures cash flow integrity and customer service.",
+            "weight": 35,
+            "critical": true,
+            "keys": "cash box with change|record sales|ledger"
+          },
+          {
+            "point": "Calculate net profit only after fully reimbursing initial material costs",
+            "note": "Applies strict financial discipline.",
+            "weight": 20,
+            "critical": false,
+            "keys": "net profit after costs|reimburse seed money"
+          }
+        ],
+        "dangerous": [
+          "eat stock without paying",
+          "leave cash box open on table",
+          "assume all revenue is pure profit"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Institute for Micro, Small and Medium Enterprises (NI-MSME)",
+          "url": "https://nimsme.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-006",
+      "agentId": "forge",
+      "subtopic": "Resilience",
+      "title": "Embracing failure: 'No' is just data, not defeat",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Every renowned entrepreneur faced dozens of rejections before finding product-market fit; rejection is simply market feedback.",
+        "Treating failure as learning (iteration) separates enduring creators from those who give up at the first hurdle."
+      ],
+      "do": [
+        "When someone says 'No thanks', ask politely: 'Could you share what you would change about this?'",
+        "Keep an 'Iteration Log' tracking what worked, what flopped, and what adjustment to test next",
+        "Separate your personal self-worth from your product prototype; your idea was rejected, not you"
+      ],
+      "dont": [
+        "Never take constructive customer feedback as a personal insult or attack",
+        "Never repeat the exact same flawed pitch without modifying your approach"
+      ],
+      "myths": [
+        {
+          "statement": "If the first five customers you approach reject your product, you should immediately quit entrepreneurship.",
+          "answer": "myth",
+          "truth": "Early rejection is standard. World-class founders test hundreds of iterations based on early critique before finding traction."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most constructive response when a customer declines to buy your homemade product?",
+          "options": [
+            "Argue with them angrily",
+            "Politely ask what feature or pricing would make it genuinely useful to them",
+            "Cry in the hallway",
+            "Lower the price to zero"
+          ],
+          "correct": 1,
+          "explanation": "Customer objections provide the exact roadmap needed to refine product features and value."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the craft fair at {at}, {name}'s hand-painted clay pots receive zero purchases in the first three hours while visitors walk past."
+        ],
+        "question": "How should {name} respond constructively?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Step out and politely ask browsing visitors what designs or products they were hoping to find",
+            "note": "Gathers rapid customer discovery feedback.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ask visitors feedback|listen to objections|market discovery"
+          },
+          {
+            "point": "Notice that visitors are asking for functional drainage holes or smaller desk sizes",
+            "note": "Identifies concrete product improvement opportunities.",
+            "weight": 35,
+            "critical": true,
+            "keys": "identify missing features|drainage holes|adjust size"
+          },
+          {
+            "point": "Pivot the display and signage to highlight practical desk utility rather than giving up",
+            "note": "Executes an immediate iterative pivot.",
+            "weight": 20,
+            "critical": false,
+            "keys": "pivot display|test adjustments|resilience"
+          }
+        ],
+        "dangerous": [
+          "pack up and leave in despair",
+          "insult customers for having poor taste",
+          "slash prices below material costs"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Skill Development Corporation (NSDC)",
+          "url": "https://nsdcindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-007",
+      "agentId": "forge",
+      "subtopic": "User Research",
+      "title": "The Mom Test: Gathering genuinely honest customer feedback",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Asking 'Do you like my idea?' prompts friends and family to lie politely to avoid hurting your feelings.",
+        "The famous 'Mom Test' rule: Ask about their past behaviors, real habits, and actual money spent, never theoretical opinions."
+      ],
+      "do": [
+        "Ask: 'How do you currently handle this problem?' rather than 'Would you buy my app?'",
+        "Look for evidence of action: If they haven't spent time or money trying to fix it, the problem isn't urgent",
+        "Listen 80% of the time and speak only 20% during user research interviews"
+      ],
+      "dont": [
+        "Never ask leading questions like 'Don't you think my handmade badge is awesome?'",
+        "Never count polite compliments from best friends as proof of market demand"
+      ],
+      "myths": [
+        {
+          "statement": "Asking your parents and best friends 'Would you buy this?' gives completely reliable market validation.",
+          "answer": "myth",
+          "truth": "Loved ones lie to encourage you. Only observed actions, past spending, and neutral feedback reveal true demand."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which interview question provides the most honest validation about a new study-planner tool?",
+          "options": [
+            "'Don't you think my study planner is pretty?'",
+            "'How did you organize your exam revision last week, and what frustrated you about it?'",
+            "'Will you promise to buy this when it launches?'",
+            "'Do you love apps?'"
+          ],
+          "correct": 1,
+          "explanation": "Asking about specific past behavior uncovers actual user friction without fishing for polite compliments."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} develops a prototype cardboard desk organizer at {at}. Friends say 'It's super cool!' but no one asks to keep one."
+        ],
+        "question": "How should {name} validate true user demand?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Apply the Mom Test: observe whether students actually put pens into it and ask what they currently use",
+            "note": "Probes authentic behavioral adoption.",
+            "weight": 50,
+            "critical": true,
+            "keys": "apply mom test|observe real usage|probe past habits"
+          },
+          {
+            "point": "Avoid relying on polite verbal compliments as proof of commercial viability",
+            "note": "Recognizes politeness bias in research.",
+            "weight": 30,
+            "critical": true,
+            "keys": "discount polite compliments|seek behavioral proof"
+          },
+          {
+            "point": "Ask students what specific desk clutter problem frustrates them most during homework",
+            "note": "Uncovers real functional pain points.",
+            "weight": 20,
+            "critical": false,
+            "keys": "uncover real clutter problems|open questions"
+          }
+        ],
+        "dangerous": [
+          "assume instant success based on friend compliments",
+          "force friends to buy out of obligation",
+          "stop asking questions"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NITI Aayog - Women Entrepreneurship Platform (WEP)",
+          "url": "https://wep.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-008",
+      "agentId": "forge",
+      "subtopic": "Execution",
+      "title": "Milestones & Gantt charts: Turning chaotic projects into reality",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Ambitious ventures collapse when teams wait until the final 48 hours to assemble prototypes and posters.",
+        "Backward planning (working back from launch day) breaks daunting projects into bite-sized weekly milestones."
+      ],
+      "do": [
+        "Pinpoint launch day and work backwards: prototype ready by Day 10, testing by Day 15, launch by Day 20",
+        "Assign a single accountable owner and deadline for every sub-task on a shared visual checklist",
+        "Hold a 5-minute daily check-in to identify blockers before they cause multi-day delays"
+      ],
+      "dont": [
+        "Never leave deadlines as 'sometime next week' without an exact day and time",
+        "Never let silent bottlenecks fester without asking team members for help"
+      ],
+      "myths": [
+        {
+          "statement": "Leaving all project tasks open-ended without deadlines sparks spontaneous creative genius.",
+          "answer": "myth",
+          "truth": "Unstructured timelines breed chronic procrastination and emergency all-nighters that destroy build quality."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the core principle of 'backward planning' for a school project exhibition?",
+          "options": [
+            "Starting on the first day and improvising as you go",
+            "Setting the final exhibition date as the target and scheduling reverse deadlines for each milestone",
+            "Doing all the work the night before",
+            "Waiting for teachers to assign dates"
+          ],
+          "correct": 1,
+          "explanation": "Reverse scheduling ensures every necessary phase—sourcing, fabrication, testing, and rehearsal—has dedicated time."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "With a science-venture exhibition only 3 weeks away at {at}, {name}'s team has many ambitious ideas but zero physical prototypes built."
+        ],
+        "question": "How should {name} structure the project timeline?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Create a backward schedule: Week 1 prototype build, Week 2 user testing, Week 3 presentation rehearsal",
+            "note": "Implements structured reverse milestone planning.",
+            "weight": 45,
+            "critical": true,
+            "keys": "backward schedule|week 1 prototype|week 2 testing|week 3 rehearsal"
+          },
+          {
+            "point": "Assign specific component ownership (hardware, poster, script) with hard Friday check-ins",
+            "note": "Establishes clear task accountability.",
+            "weight": 35,
+            "critical": true,
+            "keys": "assign component ownership|hard deadlines"
+          },
+          {
+            "point": "Identify critical dependencies early so delay in sourcing does not stall the entire team",
+            "note": "Mitigates project pipeline bottlenecks.",
+            "weight": 20,
+            "critical": false,
+            "keys": "identify dependencies|prevent blockers"
+          }
+        ],
+        "dangerous": [
+          "wait until day 20 to start assembling parts",
+          "blame teammates without setting deadlines",
+          "abandon the project"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Project Management Institute (PMI) Educational Foundation",
+          "url": "https://pmief.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-009",
+      "agentId": "forge",
+      "subtopic": "Mindset",
+      "title": "Sweat equity vs shortcuts: Real enterprise takes patience",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Social media glamorizes teenage dropouts making millions overnight through dropshipping or crypto; real enterprise is built on patient iteration.",
+        "Sustainable businesses require deep craftsmanship, customer empathy, ethical supplier relationships, and operational discipline."
+      ],
+      "do": [
+        "Focus on mastering a craft or solving a tangible community need rather than pursuing overnight viral wealth",
+        "Celebrate small milestones: your first paying non-family customer is worth more than 10,000 viral views",
+        "Be suspicious of any course, influencer, or book promising guaranteed passive income with zero effort"
+      ],
+      "dont": [
+        "Never sacrifice product quality, safety, or ethical honesty to make a quick buck",
+        "Never jump between five unrelated business ideas every two weeks without executing one thoroughly"
+      ],
+      "myths": [
+        {
+          "statement": "Successful entrepreneurs achieve wealth effortlessly within a few weeks using automated internet shortcuts.",
+          "answer": "myth",
+          "truth": "Enduring businesses require years of hard work, continuous iteration, and solving complex real-world challenges."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which mindset is essential for enduring entrepreneurial success?",
+          "options": [
+            "Hunting for overnight get-rich-quick hacks",
+            "Patient craftsmanship, resilience through setbacks, and genuine customer focus",
+            "Copying someone else's viral video",
+            "Avoiding hard work at all costs"
+          ],
+          "correct": 1,
+          "explanation": "Real value creation requires continuous learning, resilience, and ethical problem solving over long horizons."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A peer at {at} urges {name} to abandon their eco-friendly pen recycling initiative to join a dubious 'automated social media crypto trading bot'."
+        ],
+        "question": "How should {name} evaluate this proposition?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Reject the get-rich-quick shortcut, recognizing that sustainable ventures solve real human needs",
+            "note": "Rebuffs speculative traps in favor of genuine value.",
+            "weight": 45,
+            "critical": true,
+            "keys": "reject shortcut|sustainable venture|solve real needs"
+          },
+          {
+            "point": "Continue iterating the recycling initiative through measured customer feedback",
+            "note": "Maintains focus on grounded craftsmanship.",
+            "weight": 35,
+            "critical": true,
+            "keys": "iterate recycling initiative|stay grounded|patience"
+          },
+          {
+            "point": "Evaluate business ideas based on tangible utility rather than flashy influencer hype",
+            "note": "Applies critical business judgment.",
+            "weight": 20,
+            "critical": false,
+            "keys": "evaluate utility over hype|critical thinking"
+          }
+        ],
+        "dangerous": [
+          "gamble project funds on trading bots",
+          "quit school to pursue viral fame",
+          "believe automated riches hype"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Innovation Foundation (NIF) India",
+          "url": "https://nif.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-010",
+      "agentId": "forge",
+      "subtopic": "Leadership",
+      "title": "Servant leadership: Lead by clearing obstacles, not giving orders",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Being the project leader does not make you a royal monarch; effective leadership means serving your team and clearing their roadblocks.",
+        "Dictatorial leaders alienate talented peers, while empathetic servant leaders inspire voluntary excellence and shared pride."
+      ],
+      "do": [
+        "Ask teammates daily: 'What is blocking you, and how can I help you finish it?'",
+        "Publicly credit teammates for successes while personally absorbing blame for collective mistakes",
+        "Do the unglamorous grunt work (cleaning up tools, organizing files) alongside your team"
+      ],
+      "dont": [
+        "Never micromanage competent teammates or bark orders like an autocrat",
+        "Never steal credit for a teammate's creative design during showcase presentations"
+      ],
+      "myths": [
+        {
+          "statement": "A strong team leader should make every single minor decision alone and command teammates without discussion.",
+          "answer": "myth",
+          "truth": "Command-and-control alienates team members. Great leaders empower peers, delegate trust, and facilitate consensus."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the hallmark behavior of a true 'servant leader' on a student project?",
+          "options": [
+            "Ordering everyone around with a megaphone",
+            "Asking how to clear roadblocks for teammates and sharing credit generously",
+            "Taking all the praise on stage",
+            "Leaving early while others clean up"
+          ],
+          "correct": 1,
+          "explanation": "Servant leaders view their job as supporting and empowering their team to do their best work."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "As team captain of the robotics squad at {at}, {name} sees two teammates arguing intensely over motor bracket designs."
+        ],
+        "question": "How should {name} exercise constructive leadership?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Facilitate a calm discussion focusing on objective design criteria rather than personal egos",
+            "note": "Guides collaborative problem solving.",
+            "weight": 45,
+            "critical": true,
+            "keys": "focus on objective criteria|calm discussion|remove ego"
+          },
+          {
+            "point": "Help test both bracket options experimentally to let data decide the better solution",
+            "note": "Uses empirical evidence over personal opinion.",
+            "weight": 35,
+            "critical": true,
+            "keys": "test both options experimentally|data driven choice"
+          },
+          {
+            "point": "Acknowledge both teammates' creative efforts and keep the team atmosphere supportive",
+            "note": "Maintains high team morale and unity.",
+            "weight": 20,
+            "critical": false,
+            "keys": "acknowledge efforts|keep team supportive"
+          }
+        ],
+        "dangerous": [
+          "scream at both members to obey captain orders",
+          "kick both members off the team",
+          "flip a coin without testing"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Center for Creative Leadership - Youth Leadership Development",
+          "url": "https://ccl.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-011",
+      "agentId": "forge",
+      "subtopic": "Marketing & Ethics",
+      "title": "Honest marketing: Communicating value without exaggeration",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Great marketing connects a real solution with the people who need it; deceptive advertising destroys trust permanently.",
+        "Clean visual hierarchy (Headline, Benefit, Proof, Call to Action) outperforms cluttered, exaggerated promotional posters."
+      ],
+      "do": [
+        "Follow the rule of three: Highlight 1 big headline, 3 key benefits, and 1 clear next action",
+        "Use high-contrast colors and legible fonts that can be read from 5 meters away",
+        "State exactly what your product can and cannot do with absolute honesty"
+      ],
+      "dont": [
+        "Never make false medical, environmental, or performance claims on your promotional flyers",
+        "Never use stolen copyrighted logos or watermarked images without attribution"
+      ],
+      "myths": [
+        {
+          "statement": "Marketing means exaggerating your product's capabilities as much as possible so customers buy it.",
+          "answer": "myth",
+          "truth": "Exaggeration creates disappointed customers who demand refunds and destroy your reputation. Honest marketing builds loyalty."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which element makes a promotional event poster most effective at school?",
+          "options": [
+            "Ten different fancy cursive fonts with glitter text",
+            "A bold readable headline, clear user benefit, event time/venue, and simple contact info",
+            "Twenty paragraphs of fine print",
+            "Stock photos of celebrities without permission"
+          ],
+          "correct": 1,
+          "explanation": "Clear visual hierarchy and legible essential facts inform viewers quickly and drive action."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s club is designing a poster for their student bike-repair workshop at {at}. A teammate wants to write: 'Guaranteed 100% Brand-New Bike Performance in 5 Minutes!'"
+        ],
+        "question": "How should {name} refine the marketing message?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Replace misleading hyperbole with honest value: 'Fast brake tune-ups, tire checks, and chain lubrication by students'",
+            "note": "Restores factual credibility and trust.",
+            "weight": 50,
+            "critical": true,
+            "keys": "honest value proposition|replace hyperbole|clear service list"
+          },
+          {
+            "point": "Ensure the poster features clear dates, room location, and pricing or free-service details",
+            "note": "Provides essential functional logistics.",
+            "weight": 30,
+            "critical": true,
+            "keys": "clear dates|location|pricing details"
+          },
+          {
+            "point": "Use clean visual layout with plenty of white space so key information stands out",
+            "note": "Applies solid graphic design principles.",
+            "weight": 20,
+            "critical": false,
+            "keys": "clean layout|white space|legible fonts"
+          }
+        ],
+        "dangerous": [
+          "promise impossible bicycle repairs",
+          "leave off location and time",
+          "copy commercial brand logos"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Advertising Standards Council of India (ASCI)",
+          "url": "https://ascionline.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-012",
+      "agentId": "forge",
+      "subtopic": "Sustainability",
+      "title": "Upcycling ventures: Turning discarded waste into community wealth",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Waste-to-wealth enterprises apply circular economy principles, transforming discarded trash (paper, fabric scraps, plastic) into valuable products.",
+        "Circular ventures generate revenue while reducing municipal landfill pollution, creating dual economic and ecological impact."
+      ],
+      "do": [
+        "Identify clean waste streams available in large quantities (e.g., used exam notebooks, textile scraps from tailors)",
+        "Design an upcycled product that people want for its quality, not just out of sympathy for the environment",
+        "Calculate production costs thoroughly to ensure the recycled item is economically viable"
+      ],
+      "dont": [
+        "Never produce flimsy novelty items that break immediately and end up back in the landfill in 24 hours",
+        "Never collect hazardous or medical waste for school recycling projects"
+      ],
+      "myths": [
+        {
+          "statement": "Eco-friendly upcycled products will sell automatically even if the build quality is poor and pricing is double market rate.",
+          "answer": "myth",
+          "truth": "Eco-friendly benefits cannot compensate for terrible utility. Sustainable products must deliver equal or superior quality and fair pricing."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the core principle of a 'circular economy' venture?",
+          "options": [
+            "Throwing away goods after a single use",
+            "Designing systems where materials are reclaimed, upcycled, and kept in productive use continuously",
+            "Burning plastic waste in open fields",
+            "Mining more raw metals from nature"
+          ],
+          "correct": 1,
+          "explanation": "Circular models minimize waste by cycling existing materials through reuse, remanufacture, and upcycling."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At school at {at}, {name} sees kilograms of one-sided blank paper thrown into recycling bins after final term exams."
+        ],
+        "question": "How can {name} launch an entrepreneurial waste-to-wealth project?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Collect and bind clean one-sided sheets into sturdy pocket sketchbooks and scratch pads",
+            "note": "Transforms wasted resource into functional product.",
+            "weight": 45,
+            "critical": true,
+            "keys": "bind one-sided paper|pocket sketchbooks|upcycling"
+          },
+          {
+            "point": "Test sales among art students and library visitors at an affordable, attractive price point",
+            "note": "Validates product-market fit practically.",
+            "weight": 35,
+            "critical": true,
+            "keys": "test sales|affordable price|validate demand"
+          },
+          {
+            "point": "Reinvest a portion of proceeds into school green club tree-planting initiatives",
+            "note": "Creates circular community benefit.",
+            "weight": 20,
+            "critical": false,
+            "keys": "reinvest in green club|circular impact"
+          }
+        ],
+        "dangerous": [
+          "burn scrap paper behind school",
+          "make unusable shoddy notebooks and force teachers to buy",
+          "discard clean paper"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Environment, Forest and Climate Change - Mission LiFE",
+          "url": "https://missionlife-moefcc.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-013",
+      "agentId": "forge",
+      "subtopic": "Social Innovation",
+      "title": "Social enterprise: Doing good by doing sustainable business",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A social enterprise uses commercial market strategies to solve social, cultural, or environmental problems self-sustainably.",
+        "Unlike traditional charities reliant on perpetual donations, a social enterprise earns revenue from sales to fund its community mission."
+      ],
+      "do": [
+        "Identify a clear double bottom line: Financial sustainability AND measurable social or environmental impact",
+        "Ensure the business model generates sufficient gross margin to survive without continuous grant dependency",
+        "Engage the beneficiary community as partners and co-creators rather than passive charity recipients"
+      ],
+      "dont": [
+        "Never treat social enterprise as an excuse for sloppy accounting or poor product standards",
+        "Never prioritize short-term profit at the cost of the core social mission"
+      ],
+      "myths": [
+        {
+          "statement": "Social enterprises are identical to standard charities and cannot charge money for their products or services.",
+          "answer": "myth",
+          "truth": "Social enterprises sell products or services commercially to generate independent revenue that perpetually powers their social mission."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What defines the 'double bottom line' of an authentic social enterprise?",
+          "options": [
+            "Earning twice as much personal money as traditional jobs",
+            "Measuring both commercial financial sustainability AND positive social/environmental impact",
+            "Filing two sets of tax returns",
+            "Operating in two different countries simultaneously"
+          ],
+          "correct": 1,
+          "explanation": "A double bottom line holds the enterprise accountable to financial health and measurable positive community impact."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s team at {at} wants to help local potters whose traditional earthenware lamps (diyas) face declining sales against cheap plastic LED imports."
+        ],
+        "question": "How can {name} structure this as a social enterprise rather than a one-time charity donation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Partner with potters to design contemporary home decor and create a digital direct-to-consumer store",
+            "note": "Builds durable market linkage and value addition.",
+            "weight": 45,
+            "critical": true,
+            "keys": "partner with artisans|contemporary designs|digital store"
+          },
+          {
+            "point": "Price the pottery fairly, guaranteeing the artisans receive 70%+ of net margins directly",
+            "note": "Ensures ethical and dignified revenue sharing.",
+            "weight": 35,
+            "critical": true,
+            "keys": "fair pricing|equitable margin share|artisan dignity"
+          },
+          {
+            "point": "Reinvest platform profits into potter apprenticeships and clay sourcing infrastructure",
+            "note": "Creates sustainable community capacity building.",
+            "weight": 20,
+            "critical": false,
+            "keys": "reinvest in infrastructure|sustainable growth"
+          }
+        ],
+        "dangerous": [
+          "give one-time donation and walk away",
+          "sell pottery at huge loss and go bankrupt",
+          "exploit artisans for personal profit"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Social Entrepreneurship Mission - Skill India",
+          "url": "https://skillindia.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-014",
+      "agentId": "forge",
+      "subtopic": "Networking",
+      "title": "Approaching mentors: Specific questions and respecting time",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Experienced professionals love helping proactive, respectful young builders who demonstrate initiative and do their homework.",
+        "Vague requests like 'Can you be my mentor?' get ignored; concise, specific questions about a concrete challenge get enthusiastic replies."
+      ],
+      "do": [
+        "Research the mentor's past work before reaching out so you can reference specific relevant projects",
+        "Ask 1 or 2 focused questions that can be answered in under 5 minutes or a brief 15-minute call",
+        "Always send a follow-up thank-you note sharing what action you took based on their advice"
+      ],
+      "dont": [
+        "NEVER send a generic 'Hi sir, please mentor me' message without context or proof of work",
+        "NEVER expect busy mentors to do your homework, write your business plan, or review 40-page decks"
+      ],
+      "myths": [
+        {
+          "statement": "Busy industry professionals never respond to student emails or messages.",
+          "answer": "myth",
+          "truth": "Most leaders gladly help passionate students who write concise, polite, well-researched emails showing genuine commitment."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most effective way to request guidance from an experienced entrepreneur?",
+          "options": [
+            "Send a 20-page business proposal with no introduction",
+            "Send a polite 4-sentence email introducing your project, asking one specific question, and offering flexible 15-minute time slots",
+            "Call their personal phone repeatedly during dinner hours",
+            "Ask them to fund your entire project upfront"
+          ],
+          "correct": 1,
+          "explanation": "Concise, specific emails that respect the recipient's schedule have the highest response rates."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} is building an open-source air quality sensor at {at} and needs advice on calibrating low-cost PM2.5 lasers from an environmental researcher."
+        ],
+        "question": "How should {name} craft the outreach email?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "State who you are, what sensor prototype you have already built, and link the test data",
+            "note": "Shows concrete proof of work and initiative.",
+            "weight": 45,
+            "critical": true,
+            "keys": "who you are|proof of built prototype|link test data"
+          },
+          {
+            "point": "Ask one precise technical question regarding laser sensor baseline calibration in dusty weather",
+            "note": "Respects their time with a focused inquiry.",
+            "weight": 35,
+            "critical": true,
+            "keys": "precise technical question|calibration|focused ask"
+          },
+          {
+            "point": "Keep the message under 150 words and express gratitude for their published research papers",
+            "note": "Demonstrates professionalism and courtesy.",
+            "weight": 20,
+            "critical": false,
+            "keys": "concise under 150 words|cite published research"
+          }
+        ],
+        "dangerous": [
+          "send vague one-line email asking for money",
+          "demand immediate video calls",
+          "copy-paste generic spam template"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Atal Innovation Mission - Mentor India Network",
+          "url": "https://aim.gov.in/mentor-india.php"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-015",
+      "agentId": "forge",
+      "subtopic": "Negotiation",
+      "title": "Win-win negotiation: Getting what you need while helping others",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Negotiation is not a combat sport where one party crushes the other; enduring business relationships require both sides to win.",
+        "Focus on interests, not rigid positions: understanding what the other party truly values unlocks creative compromises."
+      ],
+      "do": [
+        "Understand the other party's constraints (e.g., a vendor may lack cash but have surplus warehouse space)",
+        "Identify non-monetary trade-offs: publicity, volunteer labor, flexible delivery dates, or barter exchanges",
+        "Know your BATNA (Best Alternative to a Negotiated Agreement) before starting any discussion"
+      ],
+      "dont": [
+        "Never use aggressive ultimatums or threats during business or school negotiations",
+        "Never agree to a deal that leaves you harboring deep resentment or severe financial loss"
+      ],
+      "myths": [
+        {
+          "statement": "In a good negotiation, you must trick or force the other party into losing as much as possible.",
+          "answer": "myth",
+          "truth": "Win-lose deals cause the loser to sabotage delivery, breach contracts, or refuse future collaboration. Win-win builds enduring partnerships."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the term 'BATNA' mean in negotiation strategy?",
+          "options": [
+            "Buying All The New Assets",
+            "Best Alternative To a Negotiated Agreement (your backup plan if talks fail)",
+            "Borrowing All Total Net Amounts",
+            "Billing Always Takes New Accounts"
+          ],
+          "correct": 1,
+          "explanation": "Your BATNA is your walk-away alternative; knowing it gives you confidence to negotiate calmly without desperation."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the neighborhood community center at {at}, {name}'s student club wants to host a weekend science workshop, but the manager quotes Rs 2,000 hall rent, which the club cannot afford."
+        ],
+        "question": "How should {name} negotiate a win-win arrangement?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Ask the manager what operational challenges the community center currently faces",
+            "note": "Discovers underlying interests and needs.",
+            "weight": 45,
+            "critical": true,
+            "keys": "understand center challenges|listen to manager|find needs"
+          },
+          {
+            "point": "Offer a creative barter: club members will clean and repaint the center's courtyard benches in exchange for room usage",
+            "note": "Proposes non-cash mutually beneficial trade.",
+            "weight": 35,
+            "critical": true,
+            "keys": "barter volunteer service|clean courtyard|room trade"
+          },
+          {
+            "point": "Reserve 5 free workshop seats specifically for children of community center staff",
+            "note": "Adds direct personal value for the facility.",
+            "weight": 20,
+            "critical": false,
+            "keys": "free seats for staff children|shared value"
+          }
+        ],
+        "dangerous": [
+          "threaten to complain to the mayor",
+          "abandon the workshop without discussion",
+          "break into the hall secretly"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Harvard Program on Negotiation - Principles of Negotiation",
+          "url": "https://pon.harvard.edu"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-016",
+      "agentId": "forge",
+      "subtopic": "Productivity",
+      "title": "Balancing grades and building: The Eisenhower Matrix",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Student builders who neglect board exam studies fail school; student builders who never execute remain dreamers.",
+        "The Eisenhower Matrix categorizes tasks into four quadrants: Urgent & Important, Important but Not Urgent, Urgent but Not Important, and Neither."
+      ],
+      "do": [
+        "Schedule 90-minute deep work blocks for school revision before opening project software",
+        "Spend time daily in Quadrant 2 (Important, Not Urgent: strategic building, health, revision) before crises hit",
+        "Say 'no' to time-wasting social obligations and mindless scrolling that drain builder energy"
+      ],
+      "dont": [
+        "Never sacrifice 7+ hours of essential nightly sleep to crunch on startup prototypes",
+        "Never use your venture as a psychological excuse to evade fundamental homework commitments"
+      ],
+      "myths": [
+        {
+          "statement": "Real founders sleep only 3 hours a night and completely fail their high school classes to succeed.",
+          "answer": "myth",
+          "truth": "Sleep deprivation destroys cognitive performance and decision making. High achievers master focused time blocking."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "According to the Eisenhower Matrix, which quadrant should ambitious student builders prioritize to prevent perpetual crises?",
+          "options": [
+            "Quadrant 4 (Mindless video games and gossip)",
+            "Quadrant 2 (Important but Not Urgent: planning, proactive study, prototype testing)",
+            "Quadrant 3 (Every random notification that rings)",
+            "Quadrant 1 (Only emergency fire-fighting)"
+          ],
+          "correct": 1,
+          "explanation": "Investing focused time into Quadrant 2 prevents tasks from exploding into stressful last-minute emergencies."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "With midterm exams in two weeks at {at}, {name} is tempted to spend all evening tweaking 3D models for an entrepreneurship contest."
+        ],
+        "question": "How should {name} manage time effectively?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Time-block dedicated study slots for core exam subjects first as the primary priority",
+            "note": "Protects academic baseline without compromise.",
+            "weight": 45,
+            "critical": true,
+            "keys": "time block study first|prioritize exams|academic baseline"
+          },
+          {
+            "point": "Dedicate a strict 45-minute evening block to project progress rather than unstructured all-nighters",
+            "note": "Maintains measured builder momentum.",
+            "weight": 35,
+            "critical": true,
+            "keys": "strict 45 min block|measured momentum|no all nighter"
+          },
+          {
+            "point": "Protect 8 hours of sleep to ensure peak retention and cognitive stamina",
+            "note": "Safeguards neurological recovery and health.",
+            "weight": 20,
+            "critical": false,
+            "keys": "protect sleep|cognitive stamina"
+          }
+        ],
+        "dangerous": [
+          "skip school study entirely for startup",
+          "pull all-nighters and fall sick during exams",
+          "abandon project permanently"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Board of Secondary Education (CBSE) - Life Skills & Time Management",
+          "url": "https://cbse.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-017",
+      "agentId": "forge",
+      "subtopic": "Practical Wisdom",
+      "title": "Street-smart economics: Lessons from chaiwallas and kirana stores",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Local street vendors, chaiwallas, and kirana shopkeepers are master entrepreneurs in cash flow, inventory turnover, and customer loyalty.",
+        "Silicon Valley buzzwords often obscure fundamental retail truths that local bazaar merchants execute flawlessly every single day."
+      ],
+      "do": [
+        "Observe how chai vendors manage zero-waste just-in-time inventory with perishable milk and tea leaves",
+        "Study how neighborhood kirana owners remember customer family names and personalize credit to build unbreakable loyalty",
+        "Notice prime foot-traffic location dynamics: why a vendor sets up right beside a bustling railway exit"
+      ],
+      "dont": [
+        "Never dismiss humble informal merchants as uneducated; their practical business mastery is formidable",
+        "Never overlook unit economics and daily cash reconciliation in favor of abstract software theories"
+      ],
+      "myths": [
+        {
+          "statement": "You can only learn valid business strategy from billionaires and professors at elite business schools.",
+          "answer": "myth",
+          "truth": "Informal street merchants possess deep mastery of micro-location, rapid inventory turns, customer psychology, and cash resilience."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What critical business lesson does a busy morning chaiwalla demonstrate perfectly?",
+          "options": [
+            "Carrying massive 3-year stockpiles of milk",
+            "High-speed execution, minimal inventory holding cost, and unbeatable customer relationship warmth",
+            "Spending millions on billboard advertising",
+            "Ignoring customer preference"
+          ],
+          "correct": 1,
+          "explanation": "Street vendors excel at high-velocity turnover, zero dead stock, tight working capital, and personal rapport."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On the walk home from school at {at}, {name} observes a vegetable vendor reorganizing fresh spinach under damp jute sacks while placing ripe tomatoes up front."
+        ],
+        "question": "What entrepreneurial insight can {name} extract from this observation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize active inventory preservation (damp sacks protect perishables) and merchandising (eye-level display)",
+            "note": "Extracts practical supply chain and retail principles.",
+            "weight": 50,
+            "critical": true,
+            "keys": "inventory preservation|merchandising|practical retail"
+          },
+          {
+            "point": "Appreciate how daily customer relationship trust enables small businesses to thrive without advertising budgets",
+            "note": "Values customer loyalty and retention dynamics.",
+            "weight": 30,
+            "critical": true,
+            "keys": "customer trust|unwritten loyalty|retention"
+          },
+          {
+            "point": "Document practical operational lessons in a personal business observation notebook",
+            "note": "Translates everyday observation into actionable insights.",
+            "weight": 20,
+            "critical": false,
+            "keys": "document practical lessons|field observation"
+          }
+        ],
+        "dangerous": [
+          "mock street vendors as unsophisticated",
+          "assume only app startups have valid business models",
+          "ignore real-world commerce"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Housing and Urban Affairs - PM SVANidhi Scheme",
+          "url": "https://pmsvanidhi.mohua.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENT-018",
+      "agentId": "forge",
+      "subtopic": "Ethics & IP",
+      "title": "Intellectual property & plagiarism: Building on original work",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Copying someone else's logo, design, or written code and calling it your own is intellectual theft and copyright infringement.",
+        "Ethical builders leverage open-source licenses, attribute original creators properly, and focus on adding genuine novel value."
+      ],
+      "do": [
+        "Check open-source license terms (MIT, Apache, Creative Commons) before using third-party code or media",
+        "Always provide clear attribution to original creators when remixing public domain resources",
+        "Protect your own original designs by documenting creation dates and applying for school innovation patents where appropriate"
+      ],
+      "dont": [
+        "NEVER copy a competitor's logo, trademark name, or marketing slogans for your project",
+        "NEVER submit someone else's project work into a science competition as your own"
+      ],
+      "myths": [
+        {
+          "statement": "If an image or code snippet is visible on Google, it is free for anyone to use commercially without permission or credit.",
+          "answer": "myth",
+          "truth": "Publicly visible does not mean copyright-free. Most web content is protected by automatic copyright requiring explicit licensing."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the required practice when using an open-source icon pack or software library in your student project?",
+          "options": [
+            "Claim that you designed all the icons from scratch in Photoshop",
+            "Check the license terms (e.g., Creative Commons / MIT) and include required creator attribution",
+            "Remove the copyright notices from the code files",
+            "Sell the icon library to classmates"
+          ],
+          "correct": 1,
+          "explanation": "Open-source licenses require honoring attribution terms and keeping licensing notices intact."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While building a mobile website for their club at {at}, a teammate downloads a famous company's copyrighted swoosh logo to use as the app icon."
+        ],
+        "question": "How should {name} address this intellectual property breach?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that copying trademarked logos is illegal and damages the club's credibility",
+            "note": "Explains trademark infringement risks clearly.",
+            "weight": 45,
+            "critical": true,
+            "keys": "trademark violation illegal|copyright risk|protect credibility"
+          },
+          {
+            "point": "Guide the team to create an original icon or use a verified Creative Commons open-source icon with proper credit",
+            "note": "Implements ethical creative alternatives.",
+            "weight": 35,
+            "critical": true,
+            "keys": "create original icon|creative commons|proper credit"
+          },
+          {
+            "point": "Include a dedicated credits section acknowledging open-source tools and fonts used in the project",
+            "note": "Demonstrates professional attribution standards.",
+            "weight": 20,
+            "critical": false,
+            "keys": "credits section|acknowledge open source"
+          }
+        ],
+        "dangerous": [
+          "use stolen logo hoping nobody notices",
+          "lie to competition judges about origin",
+          "plagiarize competitor code"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Cell for IPR Promotion and Management (CIPAM) - DPIIT",
+          "url": "https://cipam.gov.in"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

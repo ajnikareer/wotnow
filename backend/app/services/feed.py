@@ -112,7 +112,7 @@ def visible(u: dict, tab: str = "foryou", agent_id: Optional[str] = None, extra:
     elif tab == "following":
         posts = [p for p in posts if p["agentId"] in u.get("follows", [])]
     elif tab == "near":
-        posts = [p for p in posts if p["type"] == "local_alert" or p["agentId"] in ("terra", "civic")]
+        posts = [p for p in posts if p["type"] == "local_alert" or p["agentId"] in ("terra", "civic", "storm", "paws")]
     elif tab == "today":
         posts = [p for p in posts if posted_today(p, today)]
     elif tab == "learned":

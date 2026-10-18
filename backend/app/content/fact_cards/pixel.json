@@ -1,0 +1,1638 @@
+{
+  "agentId": "pixel",
+  "cards": [
+    {
+      "id": "TECH-001",
+      "agentId": "pixel",
+      "subtopic": "Digital Habits",
+      "title": "Digital balance: Setting phone boundaries that stick",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Smartphones are pocket slot machines engineered with infinite feeds and variable notifications to keep your attention captive.",
+        "Setting intentional physical and temporal boundaries reclaims 3 to 4 hours of your day for real-world passions, fitness, and sleep."
+      ],
+      "do": [
+        "Establish a 'phone curfew' by charging your phone outside your bedroom 60 minutes before bedtime",
+        "Turn your phone screen to Grayscale (black & white) mode to eliminate visual dopamine rewards from icons",
+        "Use app limits with passcode locks managed by yourself or a parent to enforce realistic cut-offs"
+      ],
+      "dont": [
+        "Never keep your smartphone right beside your pillow while sleeping",
+        "Never check your notifications within the first 15 minutes of waking up in the morning"
+      ],
+      "myths": [
+        {
+          "statement": "Using your phone for 7 hours a day on social media has zero impact on your academic or mental performance.",
+          "answer": "myth",
+          "truth": "Heavy screen time is clinically linked to attention fragmentation, decreased reading comprehension, and heightened anxiety."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What simple screen display adjustment removes the addictive visual appeal of app icons and notifications?",
+          "options": [
+            "Setting brightness to maximum",
+            "Switching screen display to Grayscale (black and white)",
+            "Using neon yellow wallpaper",
+            "Inverting colors randomly"
+          ],
+          "correct": 1,
+          "explanation": "Grayscale strips away the vibrant red and orange notification badges engineered by app designers to hook attention."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At home at {at}, {name} realizes they spent 5 hours scrolling through short-form video feeds instead of practicing guitar and doing homework."
+        ],
+        "question": "How should {name} establish healthy digital boundaries?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Switch phone screen to grayscale mode and place it in another room during study and sleep hours",
+            "note": "Reduces visual dopamine hooks and physical accessibility.",
+            "weight": 45,
+            "critical": true,
+            "keys": "switch to grayscale|keep phone in another room|phone curfew"
+          },
+          {
+            "point": "Set daily 30-minute hard app limits on video platforms using built-in digital wellbeing tools",
+            "note": "Automates behavioral boundaries through software timers.",
+            "weight": 35,
+            "critical": true,
+            "keys": "set 30 min app limit|digital wellbeing tools"
+          },
+          {
+            "point": "Substitute scrolling with hands-on physical activities: guitar practice, outdoor cycling, or board games",
+            "note": "Replaces passive consumption with active engagement.",
+            "weight": 20,
+            "critical": false,
+            "keys": "substitute real activities|guitar practice|outdoor cycling"
+          }
+        ],
+        "dangerous": [
+          "delete all apps then reinstall them 2 hours later",
+          "blame parents for having a phone",
+          "give up all technology"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Electronics and IT - Digital Wellbeing Advisory",
+          "url": "https://meity.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-002",
+      "agentId": "pixel",
+      "subtopic": "Attention Management",
+      "title": "The notification diet: Silence the synthetic noise",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Every notification chime triggers a cortisol and dopamine spike that interrupts your brain's flow state and takes 23 minutes to fully recover.",
+        "Most notifications are not urgent messages from friends; they are corporate algorithms begging you to reopen their apps."
+      ],
+      "do": [
+        "Turn off all notifications for shopping, gaming, video streaming, and news apps immediately",
+        "Keep sound/vibration alerts enabled ONLY for direct phone calls and 1-on-1 human messages",
+        "Schedule batch notification summaries twice a day rather than receiving real-time interruptions"
+      ],
+      "dont": [
+        "Never leave push notifications turned on for casual mobile games or shopping discounts",
+        "Never allow flashing LED notification lights to disturb your study desk"
+      ],
+      "myths": [
+        {
+          "statement": "You must keep all app notifications turned on so you don't miss breaking world news or flash sales.",
+          "answer": "myth",
+          "truth": "Push notifications are advertising channels, not emergency alarms. Turning off 90% of notifications restores hours of deep daily focus."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How long does it take the human brain to regain deep focus after being interrupted by a single phone chime?",
+          "options": [
+            "3 seconds",
+            "Roughly 20 to 23 minutes",
+            "2 hours",
+            "Zero seconds"
+          ],
+          "correct": 1,
+          "explanation": "Cognitive science shows task switching and attentional residue require over 20 minutes to return to deep concentration."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While working on a science project at {at}, {name}'s phone buzzes every 3 minutes with game energy alerts, sale coupons, and group chat memes."
+        ],
+        "question": "How should {name} execute a notification diet?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Open system settings and permanently disable notifications for all games, shopping, and social feeds",
+            "note": "Eliminates non-essential algorithmic distractions.",
+            "weight": 50,
+            "critical": true,
+            "keys": "disable non-essential notifications|turn off game alerts|shopping alerts off"
+          },
+          {
+            "point": "Enable 'Do Not Disturb' or Focus Mode during dedicated study blocks",
+            "note": "Shields working memory during deep study sessions.",
+            "weight": 30,
+            "critical": true,
+            "keys": "enable do not disturb|focus mode|study block"
+          },
+          {
+            "point": "Keep alerts active only for urgent direct calls from family members",
+            "note": "Preserves genuine emergency channels.",
+            "weight": 20,
+            "critical": false,
+            "keys": "family calls only|emergency channel"
+          }
+        ],
+        "dangerous": [
+          "check phone at every single buzz",
+          "throw phone at the wall",
+          "leave all notifications on full volume"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Cyber Swachhta Kendra - Mobile Hygiene Guidelines",
+          "url": "https://cyberswachhtakendra.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-003",
+      "agentId": "pixel",
+      "subtopic": "Gaming Health",
+      "title": "Mastering gaming limits: Sunk cost and stopping cues",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Modern competitive and online games deliberately eliminate 'stopping cues' (like chapters or quarters) to keep players locked in 'just one more match'.",
+        "The 'sunk cost fallacy' tricks you into grinding hours for virtual armor or rank points that have zero utility outside the game server."
+      ],
+      "do": [
+        "Set a clear end time BEFORE booting up a game (e.g., 'I will play exactly two matches or 45 minutes')",
+        "Use an external physical alarm clock placed across the room rather than an easily dismissed phone banner",
+        "Treat gaming as a delicious dessert earned after finishing homework and exercise, not the main course of your day"
+      ],
+      "dont": [
+        "Never play online games past midnight on school nights",
+        "Never spend real family money or allowance on randomized digital weapon crates"
+      ],
+      "myths": [
+        {
+          "statement": "Professional esports players play 16 hours a day without sleeping, so doing the same is good training.",
+          "answer": "myth",
+          "truth": "Top esports athletes follow strict physical workouts, sleep hygiene, nutrition, and mental health protocols to maintain reaction speed."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a 'stopping cue' in digital media and games?",
+          "options": [
+            "A button that turns off the internet",
+            "A natural transition point (like the end of a chapter or match) that reminds you to pause and re-evaluate your time",
+            "An in-game weapon",
+            "A cheat code"
+          ],
+          "correct": 1,
+          "explanation": "Stopping cues signal natural closure; games remove them intentionally to foster endless automatic play."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "It is 10:30 PM on a school night at {at}. {name} lost three ranked battle royale matches in a row and wants to keep playing until winning."
+        ],
+        "question": "How should {name} overcome this gaming spiral?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize the 'tilt' and sunk-cost trap: playing tired leads to worse gameplay and ruined tomorrow sleep",
+            "note": "Recognizes emotional tilt and cognitive fatigue.",
+            "weight": 45,
+            "critical": true,
+            "keys": "recognize tilt|sunk cost trap|stop playing when tired"
+          },
+          {
+            "point": "Firmly log off the console, power down the display, and head to bed",
+            "note": "Enforces discipline over impulse.",
+            "weight": 35,
+            "critical": true,
+            "keys": "log off console|power down|go to bed"
+          },
+          {
+            "point": "Remind yourself that virtual rank points do not matter compared to tomorrow's school performance",
+            "note": "Puts gaming status in perspective.",
+            "weight": 20,
+            "critical": false,
+            "keys": "rank points do not matter|school performance priority"
+          }
+        ],
+        "dangerous": [
+          "play until 3 AM chasing one win",
+          "smash controller in rage",
+          "skip school tomorrow to sleep"
+        ]
+      },
+      "sources": [
+        {
+          "name": "WHO - Gaming Disorder Clinical Guidance",
+          "url": "https://who.int"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-004",
+      "agentId": "pixel",
+      "subtopic": "Information Diet",
+      "title": "Escaping doom-scrolling: Breaking the catastrophe news loop",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Doom-scrolling is the compulsive habit of continuously scrolling through distressing, sensationalist disaster news and outrage online.",
+        "Social media algorithms heavily favor terrifying headlines because human survival instincts prioritize threat detection above all else."
+      ],
+      "do": [
+        "Notice the bodily sensation of doom-scrolling: tight chest, clenched jaw, shallow breathing, and rising dread",
+        "Set a hard 10-minute daily timer for checking current events and get news from curated, reliable print/weekly summaries",
+        "Practice 'scroll-stopping': physically stand up, stretch your arms, and look out the window at green trees"
+      ],
+      "dont": [
+        "Never consume sensationalist crime or disaster headlines right before closing your eyes to sleep",
+        "Never share unverified terrifying breaking news videos on WhatsApp without fact-checking"
+      ],
+      "myths": [
+        {
+          "statement": "Doom-scrolling through catastrophic news for three hours a day makes you a responsible, well-informed citizen.",
+          "answer": "myth",
+          "truth": "Compulsive doom-scrolling causes learned helplessness, severe anxiety, and emotional paralysis without helping a single victim."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do social media algorithms consistently serve catastrophic, negative news to your feed?",
+          "options": [
+            "Because only bad things happen in the universe",
+            "Because threatening news hooks human survival attention and keeps eyes on screen longer for ad revenue",
+            "Because algorithms want you to be safe",
+            "Because government mandates it"
+          ],
+          "correct": 1,
+          "explanation": "Fear and outrage generate the highest engagement metrics, which algorithms exploit for commercial profit."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Lying in bed at {at}, {name} spends 90 minutes scrolling through horrifying stories of wars, plane crashes, and epidemics, feeling sick with anxiety."
+        ],
+        "question": "What immediate action should {name} take?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize the doom-scrolling loop, physically place the phone on the desk, and stand up",
+            "note": "Breaks the physical trance state.",
+            "weight": 45,
+            "critical": true,
+            "keys": "break doom scrolling trance|put phone on desk|stand up"
+          },
+          {
+            "point": "Drink a glass of water and replace digital dread with calming physical reality (reading a book or deep breathing)",
+            "note": "Re-grounds the nervous system in immediate safety.",
+            "weight": 35,
+            "critical": true,
+            "keys": "drink water|calming reality|deep breathing"
+          },
+          {
+            "point": "Delete sensationalist algorithm-driven news aggregators from the phone",
+            "note": "Removes the source of toxic information overload.",
+            "weight": 20,
+            "critical": false,
+            "keys": "delete news aggregators|curate information diet"
+          }
+        ],
+        "dangerous": [
+          "keep scrolling until dawn",
+          "forward scary posts to all classmates",
+          "believe the world is ending tomorrow"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NIMHANS Guidelines on Media Consumption & Mental Well-being",
+          "url": "https://nimhans.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-005",
+      "agentId": "pixel",
+      "subtopic": "Interpersonal Presence",
+      "title": "Phone-free meals: Reclaiming human connection at the dinner table",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "'Phubbing' (phone snubbing) is the act of ignoring the living people sitting right across from you to stare at a glowing glass screen.",
+        "Family meal tables without digital screens are the single strongest predictor of adolescent emotional resilience and vocabulary development."
+      ],
+      "do": [
+        "Keep the dining table a sacred 100% phone-free zone for the entire family",
+        "Place all phones in a basket or on a side table on silent mode during dinner",
+        "Ask engaging table conversation questions: 'What was the funniest thing that happened today?'"
+      ],
+      "dont": [
+        "Never scroll social feeds, text friends, or watch YouTube videos while eating meals with others",
+        "Never leave your phone face-up on the dining table where flashing screens interrupt conversations"
+      ],
+      "myths": [
+        {
+          "statement": "Having your phone sitting face-up on the dinner table has zero effect on conversation quality if it is on silent.",
+          "answer": "myth",
+          "truth": "Studies prove the mere visible presence of a phone on a table reduces conversation depth, empathy, and interpersonal trust."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the term used by psychologists for ignoring the people right in front of you in favor of your smartphone?",
+          "options": [
+            "Multi-texting",
+            "Phubbing (Phone Snubbing)",
+            "Screen diving",
+            "Digital surfing"
+          ],
+          "correct": 1,
+          "explanation": "Phubbing damages personal relationships and signals to loved ones that a screen is more important than their presence."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During dinner with family at {at}, {name}'s phone chimes with non-urgent Instagram comments, and {name} reaches to unlock it."
+        ],
+        "question": "How should {name} handle this social situation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Leave the phone untouched and place it face-down away from the dinner table",
+            "note": "Prioritizes immediate family presence over digital pings.",
+            "weight": 45,
+            "critical": true,
+            "keys": "leave phone untouched|place face down away|prioritize family"
+          },
+          {
+            "point": "Engage actively in conversation with family members about their day",
+            "note": "Cultivates genuine interpersonal connection.",
+            "weight": 35,
+            "critical": true,
+            "keys": "engage in family conversation|listen actively"
+          },
+          {
+            "point": "Suggest a family rule where everyone deposits devices in a basket during meal times",
+            "note": "Builds collective healthy digital norms.",
+            "weight": 20,
+            "critical": false,
+            "keys": "family device basket|screen free meals"
+          }
+        ],
+        "dangerous": [
+          "eat while texting with both hands",
+          "ignore family questions to watch reels",
+          "wear headphones at dinner"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Academy of Pediatrics (IAP) - Screen Time Guidelines",
+          "url": "https://iapindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-006",
+      "agentId": "pixel",
+      "subtopic": "Deep Work",
+      "title": "Deep study focus: The Pomodoro technique and phone separation",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Human multitasking is a neurological myth; the brain cannot focus on two complex tasks simultaneously, it merely switches back and forth frantically.",
+        "Studying with a phone buzzing nearby reduces effective IQ and doubles the hours required to memorize textbook material."
+      ],
+      "do": [
+        "Use the Pomodoro Technique: 25 minutes of 100% distraction-free study followed by a strict 5-minute break",
+        "Physically place your phone in another room or inside a closed drawer while studying",
+        "Use website blockers on your computer to lock distracting entertainment portals during homework hours"
+      ],
+      "dont": [
+        "Never attempt to study for difficult exams with a video stream playing in the corner of your screen",
+        "Never respond to text messages during active 25-minute study sprints"
+      ],
+      "myths": [
+        {
+          "statement": "Gen Z brains have evolved to multitask effortlessly between calculus homework, music, and group texting at the same time.",
+          "answer": "myth",
+          "truth": "Human brain architecture has not changed. Multitasking creates superficial learning, frequent errors, and cognitive exhaustion."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the core structure of the classic 'Pomodoro Technique' for academic study?",
+          "options": [
+            "Studying for 10 hours straight without food",
+            "25 minutes of single-task focused study followed by a 5-minute restorative break",
+            "Checking social media every 2 minutes",
+            "Studying only while eating tomatoes"
+          ],
+          "correct": 1,
+          "explanation": "The 25/5 rhythm matches optimal human attention spans and prevents mental fatigue during revision."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the study desk at {at}, {name} needs to prepare three chapters of biology but keeps picking up the phone every 4 minutes to check messages."
+        ],
+        "question": "How should {name} structure their study environment?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Physically walk the phone into another room or drawer and turn on Do Not Disturb",
+            "note": "Removes visual and physical cognitive temptation.",
+            "weight": 45,
+            "critical": true,
+            "keys": "phone in another room|drawer|do not disturb"
+          },
+          {
+            "point": "Set a kitchen or desk timer for 25 minutes of single-task biology reading",
+            "note": "Implements Pomodoro focus sprint.",
+            "weight": 35,
+            "critical": true,
+            "keys": "25 minute timer|pomodoro sprint|single task study"
+          },
+          {
+            "point": "Reward yourself with a 5-minute stretch or walk after completing the focus block",
+            "note": "Provides clean, restorative break without digital relapse.",
+            "weight": 20,
+            "critical": false,
+            "keys": "5 min stretch break|restorative pause"
+          }
+        ],
+        "dangerous": [
+          "keep phone open next to textbook",
+          "reply to every text instantly",
+          "study with music videos playing"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CBSE Guidance on Study Skills and Concentration",
+          "url": "https://cbse.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-007",
+      "agentId": "pixel",
+      "subtopic": "Gaming Economics",
+      "title": "Resisting microtransactions: Virtual cosmetics vs real wealth",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Free-to-play mobile games employ behavioral dark patterns, fake countdowns, and peer pressure to sell virtual gun skins and dance emotes.",
+        "Spending real rupee money on pixels inside a game yields zero tangible value; when the game server shuts down, all skins vanish permanently."
+      ],
+      "do": [
+        "Set a firm rule: Never spend real currency on cosmetic skins that do not alter core gameplay",
+        "If you want to make an in-game purchase, wait a mandatory 72-hour cooling-off period before deciding",
+        "Never memorize or store parental credit cards or UPI details inside app stores"
+      ],
+      "dont": [
+        "NEVER secretly use a parent's credit card or banking OTP to purchase game passes",
+        "NEVER fall for scams promising 'free diamonds' or 'free V-bucks' in exchange for account passwords"
+      ],
+      "myths": [
+        {
+          "statement": "Buying rare limited-edition weapon skins in online games is a smart financial investment that will make you wealthy later.",
+          "answer": "myth",
+          "truth": "Game terms of service forbid real-money account trading, and game economies crash regularly. Virtual cosmetics are pure consumable expenses."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens to all your purchased in-game weapon skins and character outfits when the game developer closes the game servers?",
+          "options": [
+            "They get transferred to your bank account",
+            "They disappear completely and permanently with zero compensation",
+            "The government reimburses you",
+            "They turn into real physical clothes"
+          ],
+          "correct": 1,
+          "explanation": "You do not own virtual items; you merely hold a temporary, revocable license that expires when servers shut down."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A new limited-time mythical character skin appears in {name}'s favorite battle game at {at} for Rs 1,499, expiring in 12 hours."
+        ],
+        "question": "How should {name} evaluate this virtual purchase?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize the artificial scarcity countdown as a dark marketing pattern designed to trigger impulse buys",
+            "note": "Identifies deceptive urgency marketing.",
+            "weight": 45,
+            "critical": true,
+            "keys": "artificial scarcity|marketing trick|resist fake countdown"
+          },
+          {
+            "point": "Remember that Rs 1,499 represents real family money that could fund books, shoes, or long-term savings",
+            "note": "Compares virtual utility to real-world purchasing power.",
+            "weight": 35,
+            "critical": true,
+            "keys": "real money utility|1499 for books or savings"
+          },
+          {
+            "point": "Refuse to spend real money on cosmetic pixels that offer zero gameplay improvement",
+            "note": "Enforces sound spending boundaries.",
+            "weight": 20,
+            "critical": false,
+            "keys": "refuse cosmetic spending|zero real value"
+          }
+        ],
+        "dangerous": [
+          "steal parent phone to authorize transaction",
+          "borrow money from peers to buy skin",
+          "fall for scam diamond websites"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Consumer Affairs - Advisory on E-Gaming Microtransactions",
+          "url": "https://consumeraffairs.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-008",
+      "agentId": "pixel",
+      "subtopic": "Content Safety",
+      "title": "App age ratings: Protecting developing brains from adult content",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Age ratings on games and apps (PEGI 18, ESRB M, 13+) exist because developing adolescent brains process extreme violence, horror, and sexual themes differently than adults.",
+        "Premature exposure to hyper-graphic violence and adult themes desensitizes emotional empathy and triggers chronic sleep disturbances."
+      ],
+      "do": [
+        "Check app and game age ratings (12+, 16+, 18+) before downloading new titles",
+        "Respect age restrictions: they are designed by neuroscientists and psychologists to safeguard adolescent mental development",
+        "Talk openly with parents if you accidentally stumble across graphic, violent, or disturbing web content"
+      ],
+      "dont": [
+        "Never fake your date of birth to bypass 18+ restrictions on adult gambling or dating apps",
+        "Never peer-pressure younger siblings or juniors into watching graphic horror movies or adult games"
+      ],
+      "myths": [
+        {
+          "statement": "Age ratings on video games are just pointless suggestions made by boring adults with no real scientific basis.",
+          "answer": "myth",
+          "truth": "Age ratings reflect clinical research on cognitive readiness, emotional trauma processing, and addiction vulnerability in youth."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does an '18+' or 'Mature' rating on a video game indicate?",
+          "options": [
+            "The game is suitable for kindergarten children",
+            "The game contains graphic violence, mature sexual content, or intense themes unsuitable for developing adolescents",
+            "The game costs 18 rupees",
+            "The game takes 18 hours to complete"
+          ],
+          "correct": 1,
+          "explanation": "Mature ratings warn that content requires adult emotional maturity to process without psychological distress."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At a friend's house at {at}, peers want to boot up an ultra-violent 18+ horror survival game known for extreme gore and torture scenes."
+        ],
+        "question": "How should {name} respond?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely decline to play graphic 18+ horror, suggesting an engaging multiplayer alternative suitable for the group",
+            "note": "Sets comfortable personal boundary against distressing content.",
+            "weight": 45,
+            "critical": true,
+            "keys": "decline 18+ horror|suggest multiplayer alternative|boundary"
+          },
+          {
+            "point": "Recognize that setting boundaries around what enters your mind protects your mental health and sleep",
+            "note": "Values mental wellbeing over peer conformity.",
+            "weight": 35,
+            "critical": true,
+            "keys": "protect mental health|care for mind|no peer pressure"
+          },
+          {
+            "point": "Leave the room comfortably if others insist on playing disturbing content",
+            "note": "Removes self from uncomfortable environment calmly.",
+            "weight": 20,
+            "critical": false,
+            "keys": "leave room comfortably|remove self"
+          }
+        ],
+        "dangerous": [
+          "force yourself to watch and suffer nightmares for weeks",
+          "mock friends who feel scared",
+          "lie about age online"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Information and Broadcasting - Digital Content Classification",
+          "url": "https://mib.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-009",
+      "agentId": "pixel",
+      "subtopic": "Online Conduct",
+      "title": "The midnight rule: Never post or message when tired or angry",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Late at night, your prefrontal cortex is depleted, your inhibitions drop, and emotional impulses dominate your judgment.",
+        "Frantic midnight texts, impulsive romantic confessions, and angry comments posted after 11 PM account for 80% of digital regrets."
+      ],
+      "do": [
+        "Enforce the 'Midnight Rule': Never send a sensitive, emotional, or confrontational text after 10 PM",
+        "Save passionate, angry messages as drafts and sleep on them; review them with fresh eyes tomorrow morning",
+        "Put your phone away across the room when settling in for bed"
+      ],
+      "dont": [
+        "Never hit 'Send' on a heated argument while lying in bed in the dark",
+        "Never post personal vulnerability rants on public social media stories late at night"
+      ],
+      "myths": [
+        {
+          "statement": "If someone insults you online at midnight, you must reply within 60 seconds or you look weak.",
+          "answer": "myth",
+          "truth": "Late-night replies look reckless and reactive. Replying with cool, calculated composure the next morning shows mastery and power."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the golden rule regarding angry or emotionally intense text drafts typed late at night?",
+          "options": [
+            "Send them immediately with five exclamation marks",
+            "Save the message as a draft, sleep on it, and review it in daylight before deciding to send",
+            "Post it on your public Instagram story",
+            "Send it to their parents"
+          ],
+          "correct": 1,
+          "explanation": "Sleeping on emotional drafts allows prefrontal executive function to restore, preventing embarrassing relationship catastrophes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At 11:45 PM in bed at {at}, {name} receives a rude, sarcastic message from a peer and types out a furious, 4-paragraph scathing counter-attack."
+        ],
+        "question": "What should {name} do before hitting Send?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pause and apply the midnight rule: do NOT send the message right now",
+            "note": "Enforces impulse control during neurological fatigue.",
+            "weight": 45,
+            "critical": true,
+            "keys": "apply midnight rule|do not send now|pause"
+          },
+          {
+            "point": "Save the text in a notes app or draft, put the phone down, and go to sleep",
+            "note": "Allows restorative sleep to clear emotional adrenaline.",
+            "weight": 35,
+            "critical": true,
+            "keys": "save as draft|sleep on it|put phone down"
+          },
+          {
+            "point": "Reread the draft in the morning to decide whether a calm 1-sentence reply is even necessary",
+            "note": "Exercises daylight perspective.",
+            "weight": 20,
+            "critical": false,
+            "keys": "reread in morning|calm reply if needed"
+          }
+        ],
+        "dangerous": [
+          "hit send immediately in rage",
+          "forward screenshot to public groups",
+          "call peer repeatedly to scream"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Cyber Swachhta Kendra - Netiquette for Young Citizens",
+          "url": "https://cyberswachhtakendra.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-010",
+      "agentId": "pixel",
+      "subtopic": "Digital Peace",
+      "title": "Muting the chaos: Surviving 50-person group chats",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Large school, sports, and social group chats generate hundreds of meaningless memes, stickers, and side chatter every hour.",
+        "Feeling obligated to read every single group chat bubble creates continuous background anxiety and drains battery and study time."
+      ],
+      "do": [
+        "Mute large group chats permanently or for 1 year, checking them on YOUR schedule once or twice a day",
+        "Turn off auto-download for photos and videos in WhatsApp to save phone storage and cellular data",
+        "Use group chats for functional logistics (homework questions, event times), not endless 24/7 banter"
+      ],
+      "dont": [
+        "Never feel guilty for missing 200 unread memes in a school chat group",
+        "Never post large chain letters, spam forwarding messages, or unverified rumors into group chats"
+      ],
+      "myths": [
+        {
+          "statement": "You have a social obligation to read every single message and respond with an emoji in every group chat you belong to.",
+          "answer": "myth",
+          "truth": "Group chats are broadcast channels, not private conversations. Constantly checking group chats fractures your attention span."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What WhatsApp setting protects your phone storage from being clogged with thousands of forwarded memes and videos?",
+          "options": [
+            "Turning brightness down",
+            "Disabling 'Media Auto-Download' in chat settings",
+            "Deleting your account",
+            "Using airplane mode forever"
+          ],
+          "correct": 1,
+          "explanation": "Disabling media auto-download stops thousands of useless media files from automatically filling your phone storage."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s phone at {at} receives 450 notifications in one afternoon from an energetic school dance group chat discussing song ideas."
+        ],
+        "question": "How should {name} manage this digital overload?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Mute the group chat for 1 year so alerts do not buzz continuously",
+            "note": "Protects focus and peace of mind effortlessly.",
+            "weight": 50,
+            "critical": true,
+            "keys": "mute group chat 1 year|silence alerts|stop buzzing"
+          },
+          {
+            "point": "Schedule a dedicated 10-minute window in the evening to review key announcements",
+            "note": "Batches information consumption efficiently.",
+            "weight": 30,
+            "critical": true,
+            "keys": "review on own schedule|batch check evening"
+          },
+          {
+            "point": "Disable automatic media downloads to preserve device storage and mobile data",
+            "note": "Prevents storage clutter.",
+            "weight": 20,
+            "critical": false,
+            "keys": "disable media auto download|save storage"
+          }
+        ],
+        "dangerous": [
+          "leave and rejoin the group 10 times in anger",
+          "scream at classmates to stop texting",
+          "throw phone in water"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CERT-In Guidelines on Safe Messaging Practices",
+          "url": "https://cert-in.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-011",
+      "agentId": "pixel",
+      "subtopic": "Physical Safety",
+      "title": "Zombie walking: Why staring at screens while walking is deadly",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "'Distracted walking' while texting or watching videos narrows your peripheral vision by 90%, blinding you to open manholes, stairs, and traffic.",
+        "Pedestrians using phones have a 4x higher risk of collision with motor vehicles, electric scooters, and train platforms."
+      ],
+      "do": [
+        "Keep your phone safely in your pocket or backpack whenever your feet are moving outdoors",
+        "If you must answer an urgent message, step completely aside against a building wall and stop moving",
+        "Never wear noise-cancelling headphones over both ears while crossing busy roads or railway tracks"
+      ],
+      "dont": [
+        "NEVER cross a road, pedestrian zebra crossing, or railway track while looking at a phone screen",
+        "NEVER walk down school staircases with your eyes glued to a mobile video"
+      ],
+      "myths": [
+        {
+          "statement": "Walking while texting is completely safe because peripheral vision automatically alerts you to all oncoming traffic.",
+          "answer": "myth",
+          "truth": "Cognitive tunneling blinds distracted pedestrians. People staring at screens regularly walk straight into open drains, poles, and moving cars."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens to your field of situational awareness when you walk while looking down at a smartphone?",
+          "options": [
+            "It expands by 200%",
+            "It narrows by up to 90%, leaving you oblivious to approaching vehicles and road hazards",
+            "It makes your reflexes twice as fast",
+            "Nothing changes"
+          ],
+          "correct": 1,
+          "explanation": "Looking down creates severe cognitive tunneling, rendering you completely blind to environmental hazards."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While walking home from school along a busy road at {at}, {name}'s phone buzzes with a video link from a friend."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Keep the phone in your pocket and keep eyes and ears focused on traffic until reaching home safely",
+            "note": "Prioritizes immediate physical survival over digital content.",
+            "weight": 50,
+            "critical": true,
+            "keys": "keep phone in pocket|eyes on traffic|safety first"
+          },
+          {
+            "point": "If truly urgent, step safely off the roadway onto a wide sidewalk corner before glancing at the screen",
+            "note": "Stops movement before checking device.",
+            "weight": 30,
+            "critical": true,
+            "keys": "step aside safely|stop moving before checking"
+          },
+          {
+            "point": "Remove headphones or keep volume low so approaching vehicle horns are clearly audible",
+            "note": "Maintains vital auditory situational awareness.",
+            "weight": 20,
+            "critical": false,
+            "keys": "remove headphones|hear vehicle horns"
+          }
+        ],
+        "dangerous": [
+          "watch video while crossing busy intersection",
+          "text while walking down stairs",
+          "ignore approaching bus"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Road Transport and Highways (MoRTH) - Pedestrian Safety Advisory",
+          "url": "https://morth.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-012",
+      "agentId": "pixel",
+      "subtopic": "Content Consumption",
+      "title": "Intentional viewing: Taming the infinite video algorithm",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Video platforms use autoplay, recommended feeds, and variable short-form clips to keep viewers in a semi-hypnotic consumption trance.",
+        "Shifting from passive algorithmic feeding to intentional, active searching restores control over what enters your mind."
+      ],
+      "do": [
+        "Turn OFF 'Autoplay' in YouTube and streaming app settings so videos do not play automatically",
+        "Search specifically for what you want to learn, watch it, and then close the browser tab",
+        "Ask yourself every 20 minutes: 'Did I choose to watch this, or did an algorithm pick it for me?'"
+      ],
+      "dont": [
+        "Never click on hyper-sensationalist clickbait thumbnails designed to outrage or shock you",
+        "Never leave video streams running in the background all night while falling asleep"
+      ],
+      "myths": [
+        {
+          "statement": "Video recommendation algorithms care deeply about your education, character, and mental health.",
+          "answer": "myth",
+          "truth": "Algorithms have one single commercial objective: maximize time-on-screen to sell more advertisements, regardless of content quality."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What setting on YouTube prevents the app from immediately starting a new video when your current video finishes?",
+          "options": [
+            "Turning on captions",
+            "Disabling 'Autoplay'",
+            "Increasing playback speed to 2x",
+            "Lowering screen brightness"
+          ],
+          "correct": 1,
+          "explanation": "Disabling autoplay restores an essential stopping cue, allowing you to choose whether to continue or close the app."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} opens a video app at {at} to watch a 5-minute physics tutorial, but finds themselves clicking through gaming drama clips 45 minutes later."
+        ],
+        "question": "How should {name} take back control?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Turn off Autoplay and close the video platform immediately upon finishing the physics tutorial",
+            "note": "Restores intentionality and enforces stopping cues.",
+            "weight": 45,
+            "critical": true,
+            "keys": "turn off autoplay|close tab after tutorial|intentionality"
+          },
+          {
+            "point": "Clean your watch history and click 'Not Interested' on clickbait recommendation rabbit holes",
+            "note": "Retrains algorithmic feed recommendations.",
+            "weight": 35,
+            "critical": true,
+            "keys": "clean watch history|click not interested|retrain algorithm"
+          },
+          {
+            "point": "Bookmark direct educational playlists rather than browsing the chaotic homepage feed",
+            "note": "Eliminates algorithmic homepage traps.",
+            "weight": 20,
+            "critical": false,
+            "keys": "bookmark direct playlists|avoid homepage feed"
+          }
+        ],
+        "dangerous": [
+          "keep watching clickbait for another 3 hours",
+          "blame physics for being boring",
+          "leave videos playing all night"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Digital India - Safe Internet Surfing Practices",
+          "url": "https://digitalindia.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-013",
+      "agentId": "pixel",
+      "subtopic": "Digital Fasting",
+      "title": "The weekend digital detox: Rediscovering the physical world",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Taking a 24-hour break from screens on a Saturday or Sunday resets your dopamine baseline, lowers cortisol, and sparks creative clarity.",
+        "Unplugged time frees up hours for deep conversations, outdoor sports, cooking, reading physical books, and tactile creativity."
+      ],
+      "do": [
+        "Choose a specific 24-hour window (e.g., Saturday 6 PM to Sunday 6 PM) for your digital detox",
+        "Inform family and close friends in advance: 'I am taking a screen-free day, call my home landline or parent if urgent'",
+        "Plan tactile physical activities in advance: hiking, sketching, board games, cycling, or baking"
+      ],
+      "dont": [
+        "Never treat a screen-free day as punishment; view it as a luxurious retreat for your brain",
+        "Never keep your phone in your pocket during a detox day; lock it in a desk drawer"
+      ],
+      "myths": [
+        {
+          "statement": "Taking one day off from your smartphone will cause your social relationships to completely collapse.",
+          "answer": "myth",
+          "truth": "Real friends respect digital detoxes. Disconnecting for 24 hours rejuvenates your mental energy and deepens real-world presence."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the primary neurological benefit of an occasional 24-hour digital detox?",
+          "options": [
+            "Your phone charges 500% faster",
+            "It resets overstimulated dopamine receptors and restores attention stamina and presence",
+            "It cures myopia completely",
+            "It makes you forget how to type"
+          ],
+          "correct": 1,
+          "explanation": "Stepping away from hyper-stimulating screens resets dopamine baselines, making everyday real-world activities feel enjoyable again."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On Sunday morning at {at}, {name} realizes they feel constantly anxious, irritable, and chained to their glowing phone screen."
+        ],
+        "question": "How should {name} plan and execute a restorative digital detox?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Turn off the smartphone, store it in a drawer, and declare a 24-hour screen-free retreat",
+            "note": "Initiates clean physical boundary from digital stimulation.",
+            "weight": 50,
+            "critical": true,
+            "keys": "turn off phone|store in drawer|24 hour screen free"
+          },
+          {
+            "point": "Fill the day with immersive offline activities: playing football, reading a paper novel, and cooking with family",
+            "note": "Replaces digital dopamine with healthy tactile stimulation.",
+            "weight": 30,
+            "critical": true,
+            "keys": "offline activities|football|paper novel|cooking with family"
+          },
+          {
+            "point": "Notice the return of mental stillness, creative thoughts, and deep restful sleep",
+            "note": "Reaps the cognitive rewards of unplugged time.",
+            "weight": 20,
+            "critical": false,
+            "keys": "mental stillness|creative clarity|deep sleep"
+          }
+        ],
+        "dangerous": [
+          "stare at the locked drawer complaining of boredom",
+          "cheat by using a tablet instead",
+          "quit after 5 minutes"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Institute of Mental Health and Neurosciences - Digital Detox Advisory",
+          "url": "https://nimhans.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-014",
+      "agentId": "pixel",
+      "subtopic": "Self-Worth",
+      "title": "Vanity metrics: Why follower counts do not equal human worth",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Social media 'likes', 'views', and follower counts are vanity metrics engineered by ad tech companies to trigger slot-machine dopamine loops.",
+        "Tying your self-esteem to fluctuating social metrics makes you emotionally vulnerable to internet algorithms and anonymous trolls."
+      ],
+      "do": [
+        "Remember: A post with 5 likes is not inferior to a post with 50,000 likes; algorithms measure virality, not truth or beauty",
+        "Turn off public like counts in Instagram settings to liberate yourself from metric anxiety",
+        "Focus on the quality of your real-world character: Are you loyal, trustworthy, hardworking, and kind?"
+      ],
+      "dont": [
+        "Never delete a creative drawing or essay you love just because it didn't get enough online likes",
+        "Never engage in dangerous stunts, pranks, or humiliating acts to chase viral views"
+      ],
+      "myths": [
+        {
+          "statement": "The number of followers you have on Instagram or YouTube is an accurate measure of how smart, beautiful, and successful you are.",
+          "answer": "myth",
+          "truth": "Follower counts measure sensationalism, algorithmic favor, or paid promotion—never wisdom, integrity, or true happiness."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What setting on major social platforms helps disconnect your self-worth from engagement approval?",
+          "options": [
+            "Buying fake bot followers",
+            "Hiding like and view counts on posts",
+            "Posting 50 selfies a day",
+            "Using extreme face filters"
+          ],
+          "correct": 1,
+          "explanation": "Hiding like counts removes the public scorecard, allowing you to share and consume content without constant comparison anxiety."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} spends four hours painting a watercolor landscape at {at}, posts it online, and feels heartbroken when it receives only 6 likes."
+        ],
+        "question": "How should {name} reframe this creative experience?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Remember that the intrinsic joy and artistic growth of painting is what truly matters, not an algorithm's score",
+            "note": "Restores internal locus of creative evaluation.",
+            "weight": 45,
+            "critical": true,
+            "keys": "intrinsic joy of painting|artistic growth|ignore vanity score"
+          },
+          {
+            "point": "Recognize that social algorithms prioritize controversial outrage over delicate art",
+            "note": "Understands technical mechanics of platform distribution.",
+            "weight": 35,
+            "critical": true,
+            "keys": "algorithms favor outrage over art|not reflection of talent"
+          },
+          {
+            "point": "Display the physical painting proudly in your room or gift it to a friend who appreciates it",
+            "note": "Anchors art in meaningful real-world connection.",
+            "weight": 20,
+            "critical": false,
+            "keys": "display painting in room|gift to friend"
+          }
+        ],
+        "dangerous": [
+          "tear up painting in tears",
+          "spend money buying fake bot likes",
+          "quit art forever"
+        ]
+      },
+      "sources": [
+        {
+          "name": "UNICEF - The Psychology of Social Media Metrics on Youth",
+          "url": "https://unicef.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-015",
+      "agentId": "pixel",
+      "subtopic": "Addiction Awareness",
+      "title": "Spotting screen addiction: Recognizing the red flags",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Digital addiction is characterized by loss of control over screen use, withdrawal irritability when offline, and neglect of essential life duties.",
+        "Catching digital overuse early through self-assessment prevents severe academic failure, physical posture degradation, and social isolation."
+      ],
+      "do": [
+        "Watch for red flags: lying about screen time, feeling restless/angry when disconnected, neglecting meals and hygiene",
+        "Take an honest weekly self-inventory: Are your grades slipping? Are you sleeping less than 7 hours? Are real friendships fading?",
+        "Ask for help from parents, school counselors, or clinics (like SHUT clinic at NIMHANS) if you cannot stop alone"
+      ],
+      "dont": [
+        "Never steal money, lie to family, or skip school to feed an online gaming habit",
+        "Never dismiss friends or parents when they express loving concern about your device obsession"
+      ],
+      "myths": [
+        {
+          "statement": "Because everyone carries a smartphone, it is scientifically impossible to become addicted to screens.",
+          "answer": "myth",
+          "truth": "Behavioral addictions hijack the exact same dopamine reward circuits as chemical dependencies. Clinical screen addiction is recognized globally by WHO."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following is a recognized clinical warning sign of behavioral screen addiction?",
+          "options": [
+            "Charging your phone when the battery reaches 10%",
+            "Experiencing intense anger, agitation, or panic whenever the phone is temporarily removed",
+            "Using a phone calculator for math homework",
+            "Calling your grandmother on weekends"
+          ],
+          "correct": 1,
+          "explanation": "Severe emotional distress or aggression when separated from devices indicates psychological dependency."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At home at {at}, {name}'s parents ask to put away the phone for dinner, and {name} screams in fury, feeling uncontrollable panic and rage."
+        ],
+        "question": "How should {name} reflect upon this intense reaction?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize the intense anger as a serious warning sign of digital dependency and neurological dysregulation",
+            "note": "Identifies behavioral addiction red flag objectively.",
+            "weight": 50,
+            "critical": true,
+            "keys": "recognize rage as addiction warning|loss of control|dependency"
+          },
+          {
+            "point": "Acknowledge that parents are trying to help establish healthy life balance, not attack you",
+            "note": "Replaces defensive hostility with understanding.",
+            "weight": 30,
+            "critical": true,
+            "keys": "acknowledge parents care|healthy balance"
+          },
+          {
+            "point": "Agree together on structured daily screen windows and seek school counseling support if rage persists",
+            "note": "Collaborates on constructive intervention.",
+            "weight": 20,
+            "critical": false,
+            "keys": "agree on structured limits|counseling if needed"
+          }
+        ],
+        "dangerous": [
+          "smash dinner plates in rage",
+          "lock bedroom door and refuse to eat",
+          "run away from home with phone"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NIMHANS SHUT Clinic (Service for Healthy Use of Technology)",
+          "url": "https://nimhans.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-016",
+      "agentId": "pixel",
+      "subtopic": "Hardware Care",
+      "title": "Device hygiene: Cleaning screens safely and protecting hardware",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Smartphone screens harbor more bacteria than a toilet seat; regular gentle cleaning prevents acne, skin infections, and device decay.",
+        "Taking physical care of your digital tools (cables, keyboards, screens) extends their lifespan and teaches financial stewardship."
+      ],
+      "do": [
+        "Clean glass screens using a dry microfiber cloth; lightly dampen with 70% isopropyl alcohol for disinfection",
+        "Never spray liquids, soapy water, or harsh household window cleaners directly onto device ports or screens",
+        "Gently coil charging cables in wide loops; never bend or yank cords sharply from the plug head"
+      ],
+      "dont": [
+        "Never eat crumbly snacks directly over laptop keyboards or drop sticky juice onto game controllers",
+        "Never use metal safety pins or needles to dig dirt out of phone charging ports"
+      ],
+      "myths": [
+        {
+          "statement": "Washing your smartphone screen with running tap water and dish soap is the best way to sanitize it.",
+          "answer": "myth",
+          "truth": "Water and soap penetrate microphone meshes and speaker grilles, destroying internal motherboards. Use dry microfiber and alcohol wipes only."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the safest material to use when wiping dust, oil, and fingerprints off a glass smartphone or tablet screen?",
+          "options": [
+            "Rough paper towels or sandpaper",
+            "A clean microfiber cloth (like the ones used for spectacles)",
+            "A wet soapy bathroom sponge",
+            "Steel wool"
+          ],
+          "correct": 1,
+          "explanation": "Microfiber lifts skin oils and dust without scratching delicate anti-fingerprint oleophobic glass coatings."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the study desk at {at}, {name}'s phone screen is coated in greasy fingerprints and study desk dust, and the charging cable is frayed near the connector."
+        ],
+        "question": "How should {name} properly maintain this hardware?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Wipe the screen gently with a clean dry microfiber cloth, avoiding harsh liquid sprays into ports",
+            "note": "Applies safe screen cleaning technique.",
+            "weight": 45,
+            "critical": true,
+            "keys": "microfiber cloth|gentle wipe|avoid liquid in ports"
+          },
+          {
+            "point": "Stop yanking cables by the thin wire; grasp the hard plastic plug head to disconnect safely",
+            "note": "Protects electrical cable integrity.",
+            "weight": 35,
+            "critical": true,
+            "keys": "grasp plug head|never yank cord|reinforce cable"
+          },
+          {
+            "point": "Keep food, beverages, and open water bottles away from electronic keyboards and tablets",
+            "note": "Prevents catastrophic liquid spills.",
+            "weight": 20,
+            "critical": false,
+            "keys": "keep drinks away|food away from devices"
+          }
+        ],
+        "dangerous": [
+          "run phone under bathroom tap",
+          "clean screen with glass bleach and steel wool",
+          "yank cable from 3 meters away"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Consumer Electronics Safety & Maintenance Guidelines",
+          "url": "https://bis.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-017",
+      "agentId": "pixel",
+      "subtopic": "Creative Agency",
+      "title": "Consumer to creator: Using tech to build, compose, and solve",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The greatest tragedy of the smartphone era is reducing a miraculous supercomputer into a passive entertainment pacifier.",
+        "Transforming from a passive digital consumer into an active digital creator (coding, 3D modeling, music production, writing) builds true agency."
+      ],
+      "do": [
+        "Shift your screen ratio: For every 1 hour of passive video consumption, spend 1 hour actively building or creating",
+        "Learn foundational digital creation tools: Python programming, Canva/Figma visual design, Audacity audio editing",
+        "Use the internet to publish educational tutorials, open-source code, digital art, or community journalism"
+      ],
+      "dont": [
+        "Never allow technology to keep you entirely in the role of a passive, paying customer",
+        "Never assume that creating software or digital media is reserved only for geniuses"
+      ],
+      "myths": [
+        {
+          "statement": "Smartphones and computers are designed exclusively for playing games, scrolling memes, and streaming movies.",
+          "answer": "myth",
+          "truth": "Computers are bicycles for the mind. They are the most powerful creative, scientific, and enterprise instruments ever invented."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What characterizes an active 'digital creator' mindset compared to a passive 'digital consumer'?",
+          "options": [
+            "Watching 10 hours of video game walkthroughs per day",
+            "Using digital software to write code, design artwork, compose music, or solve community problems",
+            "Buying every new phone model on launch day",
+            "Commenting angry emojis on celebrity pages"
+          ],
+          "correct": 1,
+          "explanation": "Creators leverage technology as an expressive tool to solve problems, build assets, and share original value."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During school holidays at {at}, {name} realizes they have spent 6 hours every day watching other people play sandbox games."
+        ],
+        "question": "How can {name} transition from consumer to creator?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Decide to use the computer to design their own game levels, write stories, or learn basic Python coding",
+            "note": "Channels time into active digital production.",
+            "weight": 50,
+            "critical": true,
+            "keys": "learn python coding|design game levels|create original content"
+          },
+          {
+            "point": "Follow free structured courses on creative platforms like Atal Tinkering Labs or Khan Academy",
+            "note": "Leverages free, world-class educational tools.",
+            "weight": 30,
+            "critical": true,
+            "keys": "free creative courses|atal tinkering labs|structured learning"
+          },
+          {
+            "point": "Share an original creation with classmates for constructive feedback rather than just consuming others' work",
+            "note": "Builds confidence and community through creation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "share original work|seek feedback"
+          }
+        ],
+        "dangerous": [
+          "watch 8 hours of gaming streams instead",
+          "believe you can never learn to code",
+          "give up on technology completely"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Atal Innovation Mission - Atal Tinkering Labs",
+          "url": "https://aim.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "TECH-018",
+      "agentId": "pixel",
+      "subtopic": "Physical Wellbeing",
+      "title": "Screen ergonomics: Defeating 'Text Neck' and the 20-20-20 eye rule",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Bending your neck forward at a 60-degree angle to look down at a phone places 27 kilograms of crushing gravitational pressure on your cervical spine.",
+        "Staring at nearby digital screens reduces blink rates by 50%, causing dry eye syndrome, ocular strain, and progressive myopia."
+      ],
+      "do": [
+        "Apply the 20-20-20 Rule: Every 20 minutes, look at an object at least 20 feet (6 meters) away for 20 seconds",
+        "Hold your phone up closer to eye level rather than dropping your chin to your chest ('bring phone to eyes, not eyes to phone')",
+        "Keep computer screens an arm's length away with the top of the monitor aligned with your eye line"
+      ],
+      "dont": [
+        "Never hunch over a laptop in bed with your spine bent like a folded taco",
+        "Never read smartphones in a pitch-black bedroom without ambient room lighting"
+      ],
+      "myths": [
+        {
+          "statement": "Slouching over your phone with your neck bent down for 6 hours a day causes no permanent physical spinal damage.",
+          "answer": "myth",
+          "truth": "'Text Neck' causes premature spinal disc degeneration, chronic headaches, pinched nerves, and permanent postural hunching."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the famous ophthalmological '20-20-20 Rule' prescribe for screen users?",
+          "options": [
+            "Spend 20 hours on screens, 20 minutes outside, 20 rupees on drops",
+            "Every 20 minutes, look at an object 20 feet away for at least 20 seconds",
+            "Blink 20 times every 20 hours",
+            "Wear 20 pairs of spectacles"
+          ],
+          "correct": 1,
+          "explanation": "Looking 20 feet away relaxes the eye's ciliary muscles, immediately preventing eye strain and fatigue."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After 3 hours of online study at {at}, {name} has a throbbing headache, dry burning eyes, and a stiff, painful neck."
+        ],
+        "question": "How should {name} adjust ergonomics immediately?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Apply the 20-20-20 rule: stand up, look out the window at distant trees, and blink deliberately",
+            "note": "Relaxes ciliary eye muscles and restores tear film.",
+            "weight": 45,
+            "critical": true,
+            "keys": "20-20-20 rule|look at distant trees|blink deliberately"
+          },
+          {
+            "point": "Elevate the screen on books so the top edge is at eye level and sit with back supported",
+            "note": "Eliminates forward cervical spinal strain.",
+            "weight": 35,
+            "critical": true,
+            "keys": "elevate screen to eye level|straight back|proper posture"
+          },
+          {
+            "point": "Ensure room has comfortable, balanced ambient lighting rather than a glare in pitch darkness",
+            "note": "Reduces harsh ocular contrast fatigue.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ambient lighting|eliminate glare"
+          }
+        ],
+        "dangerous": [
+          "rub eyes aggressively with dirty hands",
+          "continue hunching closer to the screen",
+          "take painkillers and ignore posture"
+        ]
+      },
+      "sources": [
+        {
+          "name": "All India Ophthalmological Society (AIOS) - Computer Vision Syndrome Advisory",
+          "url": "https://aios.org"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

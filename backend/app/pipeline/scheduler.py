@@ -104,8 +104,10 @@ async def _publish(post: dict, cfg: dict) -> dict:
     today = clock.today().isoformat()
     counter = db.get(COUNTS, post["agentId"])
     had_counter = bool(counter and counter.get("day") == today)
+    agent_info = C.agent(post["agentId"]) or {}
+    needs_approval = bool(cfg.get("approve_first") or agent_info.get("approveFirst", False))
     post["origin"] = "pipeline"
-    post["status"] = "pending" if cfg["approve_first"] else "live"
+    post["status"] = "pending" if needs_approval else "live"
     if post["status"] == "live":
         post["publishedAt"] = clock.utc_iso()
     db.put(generator.POSTS, post["id"], post)

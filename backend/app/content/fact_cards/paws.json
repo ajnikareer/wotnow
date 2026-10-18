@@ -1,0 +1,1642 @@
+{
+  "agentId": "paws",
+  "cards": [
+    {
+      "id": "ANI-001",
+      "agentId": "paws",
+      "subtopic": "Canine communication",
+      "title": "Understanding stray dog body language: Wagging vs stiff posture",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A wagging tail does NOT always mean a friendly dog; a stiff, fast-wagging tail can signal high tension or aggression.",
+        "Yawning, lip licking, averting eyes, and turning the head are 'calming signals' dogs use when feeling nervous."
+      ],
+      "do": [
+        "Look for relaxed body language: loose wagging hips, open mouth, and soft eyes before approaching",
+        "If a dog stiffens, stares fixedly, growls, or curls lips, freeze in place like a tree and avoid direct eye contact",
+        "Walk slowly backwards or sideways away without turning your back or running"
+      ],
+      "dont": [
+        "Never stare directly into an unfamiliar dog's eyes (dogs perceive staring as an aggressive challenge)",
+        "Never disturb a sleeping, eating, or nursing dog or corner a frightened stray"
+      ],
+      "myths": [
+        {
+          "statement": "If a dog's tail is moving back and forth, you can run up and hug it safely without any risk.",
+          "answer": "myth",
+          "truth": "A high, rigid vibrating tail signals heightened alertness or defensive aggression, not affection."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do if an unfamiliar street dog stiffens its body, raises hackles, and growls at you?",
+          "options": [
+            "Scream loudly and sprint",
+            "Freeze calmly like a tree, look slightly down, and back away slowly without running",
+            "Kick the dog",
+            "Smile and show teeth"
+          ],
+          "correct": 1,
+          "explanation": "Freezing like a tree and avoiding eye contact de-escalates the dog's perceived threat."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Walking through a colony lane at {at}, {name} sees an unfamiliar stray dog growling stiffly with ears pinned back."
+        ],
+        "question": "How should {name} navigate this safely?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Freeze calmly in place and avoid staring directly into the dog's eyes",
+            "note": "Neutralizes perceived challenge and allows dog to calm down.",
+            "weight": 45,
+            "critical": true,
+            "keys": "freeze like a tree|no direct eye contact|calm posture"
+          },
+          {
+            "point": "Back away slowly and sideways without running or screaming",
+            "note": "Avoids triggering predatory chase instinct.",
+            "weight": 35,
+            "critical": true,
+            "keys": "back away slowly|sideways|no running|no screaming"
+          },
+          {
+            "point": "Keep arms folded across chest and do not make sudden rapid gestures",
+            "note": "Protects vital torso without threatening movement.",
+            "weight": 20,
+            "critical": false,
+            "keys": "arms folded|no sudden moves"
+          }
+        ],
+        "dangerous": [
+          "sprint away screaming",
+          "stare into dog's eyes aggressively",
+          "throw stones"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Animal Welfare Board of India (Street Dog Behavior Guide)",
+          "url": "https://awbi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-002",
+      "agentId": "paws",
+      "subtopic": "Bite safety",
+      "title": "Immediate dog bite first aid: Soap, running water and rabies vaccine",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Rabies virus is transmitted via saliva through broken skin, scratches, or mucous membranes.",
+        "Washing the bite wound immediately with soap and water for 15 minutes eliminates over 90% of the viral load."
+      ],
+      "do": [
+        "Wash the scratch or bite immediately under running tap water with soap for at least 15 continuous minutes",
+        "Apply an antiseptic solution like povidone iodine after washing thoroughly",
+        "Visit a medical clinic or government hospital on the same day for anti-rabies vaccination (PEP) and tetanus toxoid"
+      ],
+      "dont": [
+        "Never apply chili powder, lime, haldi, or cow dung to animal bites (causes severe sepsis)",
+        "Never bandage the bite wound tightly (traps virus and anaerobic bacteria in tissue)"
+      ],
+      "myths": [
+        {
+          "statement": "If the dog that scratched you looks healthy, you can skip seeing a doctor for 10 days.",
+          "answer": "myth",
+          "truth": "Rabies can be transmitted before animals show visible symptoms. Post-exposure prophylaxis MUST start immediately."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the single most critical first aid action immediately following an animal bite or scratch?",
+          "options": [
+            "Tie a tight tourniquet",
+            "Wash the wound under running tap water with soap for at least 15 minutes",
+            "Put red chili on it",
+            "Wait 2 weeks"
+          ],
+          "correct": 1,
+          "explanation": "Soap dissolves the rabies viral envelope and running water physically flushes virus particles out."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While playing in the park at {at}, a startled street dog nips {name}'s ankle, breaking the skin."
+        ],
+        "question": "What immediate life-saving protocol must {name} follow?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Wash the wound under a running water tap with soap for at least 15 full minutes",
+            "note": "Physically eliminates rabies virus from the wound bed.",
+            "weight": 45,
+            "critical": true,
+            "keys": "wash with soap|15 minutes|running water|clean wound"
+          },
+          {
+            "point": "Do not cover with tight bandages or apply irritants like chili powder or turmeric",
+            "note": "Prevents tissue damage and infection.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no tight bandage|no chili|no haldi"
+          },
+          {
+            "point": "Go to a medical clinic on the exact same day to start the anti-rabies vaccination course",
+            "note": "Post-exposure prophylaxis is 100% effective when started early.",
+            "weight": 20,
+            "critical": false,
+            "keys": "doctor same day|rabies vaccine|clinic"
+          }
+        ],
+        "dangerous": [
+          "apply chili powder",
+          "ignore minor scratch",
+          "delay doctor for 2 weeks"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Rabies Control Programme (NCDC India)",
+          "url": "https://ncdc.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-003",
+      "agentId": "paws",
+      "subtopic": "Community animals",
+      "title": "Responsible stray animal feeding: Fixed spots, hygiene and harmony",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Community dogs naturally defend territory; feeding them near crowded gates or parking bays creates conflict.",
+        "The Animal Welfare Board of India (AWBI) mandates feeding in designated, quiet spots away from walkways."
+      ],
+      "do": [
+        "Feed community dogs at a fixed, designated spot away from building gates, children's play areas, and traffic",
+        "Feed at consistent, quiet times (early morning or late evening) so dogs do not linger in pedestrian corridors",
+        "Clean up food plates and paper bowls immediately after feeding to maintain colony cleanliness"
+      ],
+      "dont": [
+        "Never feed dogs on narrow stairwells, right outside lift doors, or near play swings",
+        "Never leave rotting food waste lying on common society pavements"
+      ],
+      "myths": [
+        {
+          "statement": "Throwing leftover spicy bones at dogs from your 4th-floor balcony is great animal care.",
+          "answer": "myth",
+          "truth": "Balcony tossing creates colony hygiene disputes, hits pedestrians, and spicy cooked bones splinter dog intestines."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where should community dogs be fed in residential apartment societies?",
+          "options": [
+            "Directly inside the elevator",
+            "In an agreed, designated quiet corner away from children's play areas and building gates",
+            "On public stairs",
+            "On busy roads"
+          ],
+          "correct": 1,
+          "explanation": "Designated feeding corners prevent territorial congregation near crowded pedestrian gates."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Family at {at} wants to feed community street dogs in their neighborhood."
+        ],
+        "question": "How should {name} structure this compassion responsibly?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Choose a designated quiet corner away from busy entrance gates, parking spots, and play parks",
+            "note": "Minimizes human-animal conflict in common walking corridors.",
+            "weight": 45,
+            "critical": true,
+            "keys": "designated spot|away from gates|quiet corner|no play areas"
+          },
+          {
+            "point": "Feed fresh, dog-friendly food (rice with eggs/curd/kibble) at consistent morning or evening hours",
+            "note": "Healthy feeding without toxic cooked spices.",
+            "weight": 35,
+            "critical": true,
+            "keys": "dog friendly food|consistent time|rice and curd"
+          },
+          {
+            "point": "Clean up all food wrappers and paper bowls immediately after dogs finish eating",
+            "note": "Maintains neighborhood hygiene and harmony.",
+            "weight": 20,
+            "critical": false,
+            "keys": "clean up bowls|no litter|hygiene"
+          }
+        ],
+        "dangerous": [
+          "feed in center of busy road",
+          "leave rotting meat on stairs",
+          "feed spicy curry bones"
+        ]
+      },
+      "sources": [
+        {
+          "name": "AWBI Revised Guidelines for Feeding Community Animals",
+          "url": "https://awbi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-004",
+      "agentId": "paws",
+      "subtopic": "Pet care",
+      "title": "Pet dog care fundamentals: Annual rabies shots, hydration and love",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Pet dogs require annual core booster vaccinations (Anti-Rabies and DHPPIL) to stay protected.",
+        "Dogs cannot sweat through their skin (only pant through tongues); they suffer heatstroke rapidly in summer."
+      ],
+      "do": [
+        "Ensure your pet receives an annual anti-rabies vaccination certified in their official veterinary book",
+        "Keep fresh, clean drinking water accessible 24/7 in a clean bowl in a cool shady area",
+        "Walk your dog during cool morning and late evening hours; avoid hot asphalt that burns paw pads"
+      ],
+      "dont": [
+        "Never leave a dog locked inside a parked car, even with windows cracked (deadly in 15 mins)",
+        "Never walk dogs on scorching asphalt roads in afternoon sun (blisters sensitive paw pads)"
+      ],
+      "myths": [
+        {
+          "statement": "Dogs only need one rabies vaccination when they are puppies and never need another shot for life.",
+          "answer": "myth",
+          "truth": "Rabies immunity wanes over time; annual booster shots are legally required to maintain protective immunity."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do dogs primarily regulate their body temperature and cool down in hot weather?",
+          "options": [
+            "Sweating through their back",
+            "Panting through their open mouth and tongue, and small sweat glands on paw pads",
+            "Shedding teeth",
+            "Drinking soda"
+          ],
+          "correct": 1,
+          "explanation": "Panting evaporates moisture from the respiratory tract; excessive heat overwhelms this mechanism."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Caring for a pet dog during peak summer at {at}, the afternoon sun makes the road pavement burning hot."
+        ],
+        "question": "What protective pet care routine should {name} maintain?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Walk the dog during early mornings and late evenings; test pavement with the back of your hand",
+            "note": "Prevents painful third-degree paw pad burns.",
+            "weight": 45,
+            "critical": true,
+            "keys": "walk early morning|late evening|test pavement|cool hours"
+          },
+          {
+            "point": "Provide clean, cool drinking water at all times in a shaded corner of the home",
+            "note": "Prevents rapid canine dehydration and heatstroke.",
+            "weight": 35,
+            "critical": true,
+            "keys": "clean water 24/7|shade|hydration"
+          },
+          {
+            "point": "Ensure yearly anti-rabies and multi-disease booster shots are up to date with the veterinarian",
+            "note": "Maintains essential lifelong immunity.",
+            "weight": 20,
+            "critical": false,
+            "keys": "annual rabies vaccine|vet checkup"
+          }
+        ],
+        "dangerous": [
+          "walk on burning 2 pm asphalt",
+          "leave dog locked in car",
+          "skip annual rabies vaccine"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Veterinary Council of India Guidelines",
+          "url": "https://vci.dadf.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-005",
+      "agentId": "paws",
+      "subtopic": "Wildlife",
+      "title": "Urban monkeys (Macaques): Food rules, eye contact and calmness",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Rhesus macaques associate crinkling plastic carry bags with food and will snatch them aggressively.",
+        "Direct eye contact and smiling (baring your teeth) are interpreted by monkeys as an aggressive threat display."
+      ],
+      "do": [
+        "Conceal all food, fruits, and snacks inside closed backpacks when walking near monkey troops",
+        "If confronted by an assertive monkey, avoid direct eye contact, stay calm, and walk away slowly without running",
+        "Keep doors and window mesh grills latched in areas with urban monkey populations"
+      ],
+      "dont": [
+        "Never tease, point sticks, throw stones, or chase monkeys (provokes defensive troop attacks)",
+        "Never smile or bare your teeth at an aggressive monkey (monkeys perceive teeth baring as a battle challenge)"
+      ],
+      "myths": [
+        {
+          "statement": "Smiling warmly at an angry monkey will make it feel friendly toward you.",
+          "answer": "myth",
+          "truth": "In primate body language, showing teeth (grimacing) is a sign of aggression and battle challenge."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you NEVER do when carrying food near monkeys at a tourist fort or temple?",
+          "options": [
+            "Keep food in backpack",
+            "Carry open plastic bags or eat bananas out in the open in front of them",
+            "Walk calmly",
+            "Stay quiet"
+          ],
+          "correct": 1,
+          "explanation": "Visible food and crinkling plastic bags instantly trigger monkeys to snatch items aggressively."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Visiting an ancient temple or fort at {at}, {name} sees a troop of urban monkeys sitting along the railing."
+        ],
+        "question": "How should {name} pass by without conflict?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Keep all food, drinks, and snacks securely zipped inside backpacks out of sight",
+            "note": "Eliminates visual and auditory food triggers.",
+            "weight": 45,
+            "critical": true,
+            "keys": "food in backpack|hide food|no plastic bags"
+          },
+          {
+            "point": "Do not make direct eye contact or bare your teeth at the monkeys",
+            "note": "Avoids triggering territorial primate aggression.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no eye contact|don'?t show teeth|calm posture"
+          },
+          {
+            "point": "Walk at a steady, calm pace without running or swinging arms aggressively",
+            "note": "Signals non-threatening neutral transit.",
+            "weight": 20,
+            "critical": false,
+            "keys": "walk calmly|no running|no teasing"
+          }
+        ],
+        "dangerous": [
+          "tease monkeys with sticks",
+          "smile showing teeth",
+          "wave food in monkey's face"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Wildlife Institute of India (Human-Macaque Conflict Guidelines)",
+          "url": "https://wii.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-006",
+      "agentId": "paws",
+      "subtopic": "Reptiles",
+      "title": "Snakes at home or garden: Calmness, distance and rescuer helplines",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Snakes have zero interest in attacking humans; they only bite in self-defense when stepped on or cornered.",
+        "Snakes are vital ecological allies that keep crop-destroying rodent populations under control."
+      ],
+      "do": [
+        "Freeze and take slow steps backwards to maintain a safe 3-meter distance from the snake",
+        "Keep family members, curious children, and domestic pets well away from the area",
+        "Call a certified wildlife rescuer, local NGO, or Forest Department helpline to relocate the snake safely"
+      ],
+      "dont": [
+        "Never try to hit, kill, poke with sticks, or catch the snake yourself",
+        "Never block the snake's exit route if it is trying to escape outside"
+      ],
+      "myths": [
+        {
+          "statement": "If you see a snake in your garden, you must immediately beat it to death with bamboo sticks.",
+          "answer": "myth",
+          "truth": "Over 80% of snake bites happen when people attempt to corner and kill snakes. Give them space and call a rescuer."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the single best response when you spot a snake in your home courtyard or garden?",
+          "options": [
+            "Try to grab its tail",
+            "Keep calm, step back at least 3 meters, keep pets away, and call a professional snake rescuer",
+            "Pour kerosene on it",
+            "Throw rocks"
+          ],
+          "correct": 1,
+          "explanation": "Giving space prevents defensive strikes while a trained rescuer safely bags and relocates the snake."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the backyard garden at {at}, {name} spots a 4-foot snake resting near the flowerpots."
+        ],
+        "question": "What is the safe, ecological response for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Keep calm and back away slowly to maintain a safe distance of at least 3-5 meters",
+            "note": "Removes strike hazard; snakes only strike when cornered.",
+            "weight": 45,
+            "critical": true,
+            "keys": "back away slowly|safe distance|3 meters|stay calm"
+          },
+          {
+            "point": "Alert adults and keep family dogs and curious children far away from the garden",
+            "note": "Secures human and pet safety.",
+            "weight": 35,
+            "critical": true,
+            "keys": "keep pets away|alert adults|clear area"
+          },
+          {
+            "point": "Call a certified local snake rescuer or Forest Department helpline for humane relocation",
+            "note": "Preserves wildlife without harm.",
+            "weight": 20,
+            "critical": false,
+            "keys": "call snake rescuer|forest helpline|relocate"
+          }
+        ],
+        "dangerous": [
+          "attack snake with stick",
+          "throw petrol on snake",
+          "try to pick up snake"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Forest Department Wildlife Rescue Guidelines",
+          "url": "https://moef.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-007",
+      "agentId": "paws",
+      "subtopic": "Road animals",
+      "title": "Cattle and buffaloes on Indian roads: Wide berth and patience",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Cattle have lateral monocular vision with a blind spot directly behind their tail.",
+        "Loud, sudden horn blasts panic cows, causing erratic bolting across active traffic lanes."
+      ],
+      "do": [
+        "Slow down your vehicle or cycle smoothly when approaching cattle sitting or walking on the road",
+        "Give cattle a wide passing berth of at least 2 meters, especially avoiding walking right behind their rear hooves",
+        "Do not honk aggressively; cows cannot move quickly on slippery asphalt roads"
+      ],
+      "dont": [
+        "Never slap, strike, or throw objects at cows crossing the road",
+        "Never try to squeeze your bicycle between a moving cow and the road curb"
+      ],
+      "myths": [
+        {
+          "statement": "Blaring your horn continuously an inch away from a sitting cow makes it stand up and move away faster.",
+          "answer": "myth",
+          "truth": "Loud horns disorient cattle, causing them to panic, kick backward, or bolt directly into oncoming cars."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where is a cow's natural blind spot located?",
+          "options": [
+            "Directly in front of its nose",
+            "Directly behind its tail (never approach quietly from directly behind)",
+            "Above its head",
+            "It has no blind spot"
+          ],
+          "correct": 1,
+          "explanation": "Standing directly behind cattle risks unexpected defensive backward kicks."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Cycling home from school at {at}, two large cows are resting near the road divider ahead."
+        ],
+        "question": "How should {name} navigate past safely?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Slow down bicycle speed and observe the cows' movements calmly",
+            "note": "Prevents collision if an animal turns suddenly.",
+            "weight": 40,
+            "critical": true,
+            "keys": "slow down|observe calmly|safe speed"
+          },
+          {
+            "point": "Steer wide around the cattle giving at least 2 meters of clear breathing space",
+            "note": "Maintains safe standoff distance outside kick range.",
+            "weight": 40,
+            "critical": true,
+            "keys": "steer wide|wide berth|2 meters distance"
+          },
+          {
+            "point": "Do not ring bicycle bells aggressively right into the animals' ears",
+            "note": "Prevents startling animals into traffic lanes.",
+            "weight": 20,
+            "critical": false,
+            "keys": "no aggressive bell|patience"
+          }
+        ],
+        "dangerous": [
+          "kick cow while cycling past",
+          "honk bell an inch from ear",
+          "squeeze dangerously between cow and divider"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Road Transport and Highways (Rural Road Safety)",
+          "url": "https://morth.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-008",
+      "agentId": "paws",
+      "subtopic": "Avian care",
+      "title": "Rescuing an injured or heat-exhausted bird: Safe protocol",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Injured birds suffer extreme stress; handling them improperly can break fragile hollow wing bones.",
+        "A dark, quiet, well-ventilated cardboard box mimics natural shelter, lowering the bird's heart rate."
+      ],
+      "do": [
+        "Gently cover the injured bird with a light cloth or towel and place it into a ventilated cardboard box",
+        "Keep the box in a warm, quiet, dark room away from household cats, dogs, and loud noises",
+        "Contact a local avian veterinarian, animal shelter, or wildlife rescue NGO immediately for medical care"
+      ],
+      "dont": [
+        "Never force water or milk down an unconscious or injured bird's beak (enters windpipe and drowns them)",
+        "Never try to splint broken wings or pluck damaged feathers with home tweezers"
+      ],
+      "myths": [
+        {
+          "statement": "If an injured bird is lying weak on the ground, you should pry open its beak and pour water down its throat.",
+          "answer": "myth",
+          "truth": "Forcing water into a bird's beak fills its tracheal airway, causing immediate asphyxiation and drowning."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the safest immediate emergency shelter for an injured bird while waiting for a wildlife vet?",
+          "options": [
+            "A wire cage with loud music",
+            "A dark, warm cardboard box with air holes lined with a soft cloth",
+            "Under a running tap",
+            "In the freezer"
+          ],
+          "correct": 1,
+          "explanation": "Darkness and quiet reduce physiological stress and shock in injured birds."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school courtyard at {at}, a pigeon or myna has struck a glass window and lies stunned on the ground."
+        ],
+        "question": "How should {name} render compassionate, correct first aid?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Gently pick up the bird using a clean cloth and place in a ventilated cardboard box",
+            "note": "Safe handling that prevents wing damage and reduces shock.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ventilated cardboard box|cloth|gentle handling"
+          },
+          {
+            "point": "Keep the box in a dark, quiet place away from predatory cats and children",
+            "note": "Allows nervous system recovery from concussion.",
+            "weight": 35,
+            "critical": true,
+            "keys": "dark quiet place|away from cats|low stress"
+          },
+          {
+            "point": "Do NOT force liquids down its beak; call a local wildlife rescue NGO for treatment",
+            "note": "Prevents fatal aspiration drowning.",
+            "weight": 20,
+            "critical": false,
+            "keys": "no forced water|call wildlife rescue"
+          }
+        ],
+        "dangerous": [
+          "pour water into beak",
+          "throw bird into air to make it fly",
+          "let cats play with it"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Wildlife Trust of India (WTI Emergency Relief Network)",
+          "url": "https://wti.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-009",
+      "agentId": "paws",
+      "subtopic": "Zoo ethics",
+      "title": "Zoo and wildlife park etiquette: Respecting captive animals",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Animals in zoological parks suffer intense chronic stress when visitors scream, throw stones, or tap glass.",
+        "Feeding human junk food (chips, biscuits) to captive animals causes fatal gastrointestinal blockages."
+      ],
+      "do": [
+        "Observe zoo animals quietly from designated visitor pathways without shouting or making loud mock calls",
+        "Keep all snack packets and plastic wrappers safely zipped inside bags (animals can swallow dropped wrappers)",
+        "Respect safety barriers and moats: never climb over safety railings or lean over enclosures"
+      ],
+      "dont": [
+        "Never throw stones, plastic bottles, or coins into animal enclosures to make them move",
+        "Never feed personal chips, popcorn, or bread to zoo animals"
+      ],
+      "myths": [
+        {
+          "statement": "Throwing a small pebble at a sleeping lion in the zoo is fine because it wakes the animal for your photo.",
+          "answer": "myth",
+          "truth": "Throwing objects is illegal under the Wildlife Protection Act and causes severe stress and physical injury."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is feeding snacks like chips or bread to animals in zoos strictly illegal?",
+          "options": [
+            "Animals prefer cooking",
+            "Human processed snacks cause severe digestive toxicity and plastic wrappers can choke animals",
+            "It wastes money",
+            "No reason"
+          ],
+          "correct": 1,
+          "explanation": "Zoo animals require specialized species-appropriate diets; human junk food is toxic."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On a school excursion to the zoological park at {at}, some students want to throw chips to monkeys."
+        ],
+        "question": "What responsible wildlife ethics should {name} uphold?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Intervene firmly: 'Please don't feed the animals; processed human snacks make them critically sick'",
+            "note": "Stops harmful feeding and enforces zoo rules.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t feed animals|human food makes sick|zoo rules"
+          },
+          {
+            "point": "Keep all plastic snack packets zipped inside bags and dispose of trash in park dustbins",
+            "note": "Prevents plastic ingestion by wildlife.",
+            "weight": 35,
+            "critical": true,
+            "keys": "zip trash|use dustbins|no plastic in cages"
+          },
+          {
+            "point": "Observe animals quietly with respect without banging on glass or climbing safety barriers",
+            "note": "Maintains visitor safety and animal peace.",
+            "weight": 20,
+            "critical": false,
+            "keys": "quiet observation|respect barriers"
+          }
+        ],
+        "dangerous": [
+          "throw stones at sleeping tiger",
+          "feed plastic chips packet to bear",
+          "climb over safety fence"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Zoo Authority (CZA Visitor Guidelines)",
+          "url": "https://cza.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-010",
+      "agentId": "paws",
+      "subtopic": "Pollinators",
+      "title": "Bee and wasp nests near home: Calm co-existence and safe removal",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Honeybees are vital keystone pollinators responsible for pollinating over 70% of human food crops.",
+        "Bees sting exclusively in defense of their colony when their hive is physically disturbed or threatened."
+      ],
+      "do": [
+        "Keep a calm 5-meter distance from outdoor beehives and avoid throwing stones or poking with sticks",
+        "Keep window wire mesh screens closed if a honeybee comb is located near your balcony",
+        "If a hive must be removed, hire professional eco-friendly bee relocators who save the bees without burning them"
+      ],
+      "dont": [
+        "Never throw stones, spray chemical insecticides, or set fire to beehives (triggers mass defensive swarming)",
+        "Never swat wildly at a single bee buzzing near you; stay still and let it fly away"
+      ],
+      "myths": [
+        {
+          "statement": "If you see a honeybee nest on your apartment ledge, burning it with a fiery torch is the best solution.",
+          "answer": "myth",
+          "truth": "Setting fire to hives is cruel, destroys essential pollinators, and triggers hundreds of aggressive retaliatory stings."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do if a curious honeybee buzzes close to your head in a garden?",
+          "options": [
+            "Scream and flail arms wildly",
+            "Stay calm, keep still, and do not swat; the bee will realize you are not a flower and fly away",
+            "Smack it with your phone",
+            "Run fast"
+          ],
+          "correct": 1,
+          "explanation": "Flailing arms alarms bees; staying calm and still signals you are not a threat."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A honeybee colony begins building a comb near a balcony window at {at}."
+        ],
+        "question": "How should {name} and family manage this safely and humanely?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Keep the window glass or mosquito mesh closed and do NOT disturb or throw objects at the hive",
+            "note": "Avoids provoking defensive swarming behavior.",
+            "weight": 45,
+            "critical": true,
+            "keys": "keep mesh closed|don'?t throw stones|do not disturb"
+          },
+          {
+            "point": "Understand that honeybees are precious pollinators essential for nature's food security",
+            "note": "Builds ecological reverence for pollinators.",
+            "weight": 35,
+            "critical": true,
+            "keys": "vital pollinators|nature balance|honeybees"
+          },
+          {
+            "point": "If removal is necessary, contact ethical beekeepers or professional wildlife relocators",
+            "note": "Ensures humane non-lethal colony relocation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ethical beekeeper|humane relocation|no burning"
+          }
+        ],
+        "dangerous": [
+          "burn hive with fire torch",
+          "spray lethal chemical pesticide",
+          "poke hive with broomstick"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Bee Board (Department of Agriculture)",
+          "url": "https://nbb.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-011",
+      "agentId": "paws",
+      "subtopic": "Zoonotic disease",
+      "title": "Rabies awareness: Transmission facts and zero delay in vaccination",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Rabies travels along peripheral nerves to the central nervous system; once symptoms appear, fatality is nearly 100%.",
+        "Timely post-exposure prophylaxis (washing + Anti-Rabies Vaccine series) is 100% effective in preventing the disease."
+      ],
+      "do": [
+        "Understand that rabies can be transmitted by dogs, cats, monkeys, bats, and other warm-blooded mammals",
+        "Know that even a minor scratch that breaks the skin or saliva on an open wound requires vaccine evaluation",
+        "Complete the full 4-dose or 5-dose vaccine course on the exact scheduled days (Day 0, 3, 7, 14, 28)"
+      ],
+      "dont": [
+        "Never miss or delay scheduled vaccine booster dates recommended by the doctor",
+        "Never wait to see if the biting animal survives before starting your own vaccination"
+      ],
+      "myths": [
+        {
+          "statement": "Rabies can be cured easily with herbal pills even after symptoms of hydrophobia appear.",
+          "answer": "myth",
+          "truth": "Once clinical rabies symptoms appear, the disease is universally fatal. Immediate post-exposure vaccination is the ONLY prevention."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What animal bite or scratch exposures require medical evaluation for anti-rabies vaccination?",
+          "options": [
+            "Only tiger bites",
+            "Any break in skin or scratch caused by dogs, cats, monkeys, or other mammals",
+            "Mosquito bites",
+            "Ant bites"
+          ],
+          "correct": 1,
+          "explanation": "Any mammalian saliva contact with broken skin carries potential rabies risk and requires clinical assessment."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A friend at {at} was scratched by a stray cat 3 days ago but hasn't visited a clinic because 'it's just a cat.'"
+        ],
+        "question": "What urgent scientific counsel should {name} deliver?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Insist on visiting a medical doctor immediately for anti-rabies vaccination",
+            "note": "Timely post-exposure prophylaxis saves lives.",
+            "weight": 45,
+            "critical": true,
+            "keys": "visit doctor immediately|anti rabies vaccine|cat scratch counts"
+          },
+          {
+            "point": "Explain that rabies can be transmitted by cats and dogs alike through minor scratches",
+            "note": "Debunks dog-only rabies myths.",
+            "weight": 35,
+            "critical": true,
+            "keys": "transmitted by cats|mammals|rabies risk"
+          },
+          {
+            "point": "Emphasize that completing the full prescribed vaccine schedule guarantees complete protection",
+            "note": "Promotes complete vaccine adherence.",
+            "weight": 20,
+            "critical": false,
+            "keys": "complete vaccine schedule|100% effective"
+          }
+        ],
+        "dangerous": [
+          "tell friend cat scratches are harmless",
+          "apply herbal paste and ignore",
+          "wait until fever starts"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Center for Disease Control (Rabies Prevention Protocols)",
+          "url": "https://ncdc.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-012",
+      "agentId": "paws",
+      "subtopic": "Animal rights",
+      "title": "Stopping animal cruelty: The Prevention of Cruelty to Animals Act",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The Prevention of Cruelty to Animals (PCA) Act 1960 makes beating, torturing, or abandoning animals illegal.",
+        "Animal cruelty is recognized by psychologists as an early indicator of deep behavioral pathology and violence."
+      ],
+      "do": [
+        "Treat all sentient animals with compassion, dignity, and kindness",
+        "Speak up firmly if you see peers teasing, hitting, or tying firecrackers to street animals",
+        "Report serious animal cruelty incidents to the local police (112), SPCA, or Animal Welfare Board"
+      ],
+      "dont": [
+        "Never throw stones at sleeping street dogs, cats, or birds for fun",
+        "Never tie tin cans, plastic bags, or crackers to animals' tails"
+      ],
+      "myths": [
+        {
+          "statement": "Street dogs have zero legal protections in India and anyone can beat or poison them freely.",
+          "answer": "myth",
+          "truth": "Maiming or killing street animals is a punishable criminal offense under Section 428/429 IPC and the PCA Act."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What national legislation in India prohibits and punishes cruelty to animals?",
+          "options": [
+            "Traffic Code",
+            "The Prevention of Cruelty to Animals (PCA) Act 1960",
+            "Building Code",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "The PCA Act 1960 protects all animals from unnecessary pain, suffering, and torture."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In a colony lane at {at}, {name} sees some older kids throwing stones at a mother dog and her puppies."
+        ],
+        "question": "How can {name} act as a courageous animal advocate?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Speak up firmly: 'Stop! Hurting defenseless animals is cruel and illegal under the law'",
+            "note": "Directly halts cruel behavior with authority.",
+            "weight": 45,
+            "critical": true,
+            "keys": "stop cruelty|illegal under law|protect animals"
+          },
+          {
+            "point": "Alert a trusted adult, society elder, or security guard to intervene",
+            "note": "Enlists adult authority to protect the puppies.",
+            "weight": 35,
+            "critical": true,
+            "keys": "alert adult|tell security|elder help"
+          },
+          {
+            "point": "Report repeated animal cruelty to local animal welfare NGOs or police 112",
+            "note": "Legal enforcement mechanism.",
+            "weight": 20,
+            "critical": false,
+            "keys": "report to police|112|animal welfare ngo"
+          }
+        ],
+        "dangerous": [
+          "join in throwing stones",
+          "film the cruelty for laughs",
+          "ignore suffering animals"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Animal Welfare Board of India (PCA Act Provisions)",
+          "url": "https://awbi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-013",
+      "agentId": "paws",
+      "subtopic": "Coexistence",
+      "title": "Living near forest fringes: Leopards, elephants and safety rules",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Human settlement expansion into forest fringes creates overlapping corridors with wild leopards and elephants.",
+        "Wild animals avoid human interaction; conflict happens when humans surprise them in darkness or block migration paths."
+      ],
+      "do": [
+        "Keep outdoor village and home perimeter areas brightly lit at night with solar lamps",
+        "Never walk alone after dusk near forest edges; walk in groups making gentle vocal sounds (talking, singing)",
+        "Inform the local Forest Department immediately if a wild animal is sighted near village settlements"
+      ],
+      "dont": [
+        "Never chase wild elephants or try to take close-up selfies with wild leopards",
+        "Never corner or throw stones at a wild animal that has entered human habitation"
+      ],
+      "myths": [
+        {
+          "statement": "Running towards a wild leopard with sticks and flashing phone cameras will scare it away safely.",
+          "answer": "myth",
+          "truth": "Surrounding and mobbing wild predators induces intense defensive panic, triggering fatal retaliatory attacks."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the single most important safety rule when walking near forest border areas after dark?",
+          "options": [
+            "Sneak in complete silence",
+            "Travel in groups, carry a torch, and make audible vocal sounds (talking, singing)",
+            "Wear bright green clothes",
+            "Run fast alone"
+          ],
+          "correct": 1,
+          "explanation": "Sound alerts wild animals from far away, allowing them to retreat into forest cover peacefully."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Visiting a village near a national park buffer zone at {at}, reports indicate a wild leopard is in the vicinity."
+        ],
+        "question": "What safety protocol should {name} follow?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stay indoors after dusk and keep children and domestic animals inside securely",
+            "note": "Eliminates nocturnal encounter vulnerability.",
+            "weight": 45,
+            "critical": true,
+            "keys": "stay indoors after dusk|secure pets|keep children inside"
+          },
+          {
+            "point": "Keep outdoor compound lights on and avoid walking alone in dark sugarcane fields",
+            "note": "Illuminates surroundings and deters wildlife.",
+            "weight": 35,
+            "critical": true,
+            "keys": "keep lights on|no walking alone in dark"
+          },
+          {
+            "point": "Contact the local Forest Department range office for professional tracking and safe rescue",
+            "note": "Ensures scientific wildlife management.",
+            "weight": 20,
+            "critical": false,
+            "keys": "alert forest department|range office"
+          }
+        ],
+        "dangerous": [
+          "go hunting the leopard with sticks",
+          "take flash selfies with wild elephant",
+          "leave toddlers outside in dark"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Environment, Forest and Climate Change (Project Tiger / Elephant)",
+          "url": "https://moef.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-014",
+      "agentId": "paws",
+      "subtopic": "Bird protection",
+      "title": "Kite strings (Manja): The invisible killer of urban birds",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Glass-coated Chinese manja and nylon strings do not biodegrade, acting as razor-sharp airborne wire traps.",
+        "Thousands of pigeons, kites, owls, and fruit bats suffer amputated wings and throat slits from tangled manja."
+      ],
+      "do": [
+        "Fly kites exclusively with traditional, plain cotton thread (saddi) with zero glass or metal powder coating",
+        "Fly kites in wide, open sports grounds far away from trees where birds roost and nest",
+        "Pick up and safely dispose of tangled stray kite strings found dangling in bushes or trees"
+      ],
+      "dont": [
+        "Never use synthetic nylon or Chinese manja (strictly banned by the National Green Tribunal)",
+        "Never fly kites near dawn and dusk when birds are actively flying to and from their nests"
+      ],
+      "myths": [
+        {
+          "statement": "Synthetic glass-coated Chinese manja is totally legal and safe to use if you wear gloves.",
+          "answer": "myth",
+          "truth": "Synthetic manja is strictly banned across India; it slashes bird wings, kills two-wheeler riders, and conducts high-voltage electricity."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What type of thread is safe, legal, and bird-friendly for flying kites during festivals?",
+          "options": [
+            "Nylon fishing line",
+            "Traditional plain cotton thread (saddi) without glass coating",
+            "Glass-coated wire",
+            "Copper string"
+          ],
+          "correct": 1,
+          "explanation": "Plain cotton thread snaps under tension without slicing bird flesh or human throats."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During kite-flying festival celebrations at {at}, {name}'s friends want to buy sharp, banned nylon manja."
+        ],
+        "question": "How can {name} champion bird-safe skies?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Insist on flying kites only with traditional plain cotton thread (saddi)",
+            "note": "Eliminates razor-sharp slicing hazards for birds.",
+            "weight": 45,
+            "critical": true,
+            "keys": "plain cotton thread|saddi|no glass coating|bird safe"
+          },
+          {
+            "point": "Explain that synthetic Chinese manja is illegal and kills thousands of flying birds and motorists",
+            "note": "Highlights statutory ban and severe lethality.",
+            "weight": 35,
+            "critical": true,
+            "keys": "chinese manja is banned|kills birds|slashes wings"
+          },
+          {
+            "point": "Avoid flying kites near trees, rooftop power lines, or bird roosting colonies",
+            "note": "Reduces physical entanglement risks.",
+            "weight": 20,
+            "critical": false,
+            "keys": "away from trees|open ground"
+          }
+        ],
+        "dangerous": [
+          "buy sharpest glass manja",
+          "fly kites into bird flocks",
+          "leave tangled manja in trees"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Green Tribunal (Ban on Synthetic Manja)",
+          "url": "https://greentribunal.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-015",
+      "agentId": "paws",
+      "subtopic": "Pet comfort",
+      "title": "Protecting pets and street animals during festival fireworks",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Dogs and cats hear acoustic frequencies up to 45,000 Hz (humans hear max 20,000 Hz) with 4x acoustic sensitivity.",
+        "High-decibel fireworks explosions cause severe acoustic trauma, heart tremors, and panic running into traffic."
+      ],
+      "do": [
+        "Create a safe, cozy indoor sanctuary room: close windows, draw heavy curtains, and play soothing music/TV",
+        "Keep pet dogs on a leash during festival evening walks; ensure they wear collars with ID tags and phone numbers",
+        "Provide open stairwell or building compound shelter for terrified neighborhood street animals"
+      ],
+      "dont": [
+        "Never burst loud firecrackers near sleeping street animals or animal shelters",
+        "Never lock a frightened pet outdoors on a balcony where they can leap over in panic"
+      ],
+      "myths": [
+        {
+          "statement": "Dogs who shake and cower during Diwali crackers are just acting dramatic for attention.",
+          "answer": "myth",
+          "truth": "High-decibel explosions cause genuine physical agony, eardrum pain, and terrifying cardiac stress in animals."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is it essential that pet dogs wear a collar with a phone ID tag during festival cracker season?",
+          "options": [
+            "For fashion",
+            "Panic from explosions causes hundreds of terrified pets to bolt from gates and get lost",
+            "To look smart",
+            "It is optional"
+          ],
+          "correct": 1,
+          "explanation": "ID tags ensure lost, panicked pets can be quickly reunited with their families."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "As evening festival fireworks begin at {at}, the family dog is trembling, panting, and hiding under the bed."
+        ],
+        "question": "How should {name} comfort and protect the pet?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Close all windows, draw curtains, and turn on soft background television or music to mask the noise",
+            "note": "Dampens external explosion acoustic spikes.",
+            "weight": 45,
+            "critical": true,
+            "keys": "close windows|draw curtains|soft music|mask noise"
+          },
+          {
+            "point": "Sit near the pet, speak in gentle reassuring tones, and provide a safe indoor den under blankets",
+            "note": "Provides emotional security without reinforcing panic.",
+            "weight": 35,
+            "critical": true,
+            "keys": "gentle reassuring tone|safe den|comfort pet"
+          },
+          {
+            "point": "Ensure all external doors and balcony railings are securely locked so pet cannot bolt in fear",
+            "note": "Prevents frantic escape and traffic accidents.",
+            "weight": 20,
+            "critical": false,
+            "keys": "secure doors|cannot bolt"
+          }
+        ],
+        "dangerous": [
+          "drag trembling pet outside into fireworks",
+          "tie crackers near dog",
+          "lock dog on open balcony"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Humane Society International (Animal Welfare Guidelines)",
+          "url": "https://hsi.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-016",
+      "agentId": "paws",
+      "subtopic": "Adoption",
+      "title": "Adopting Indie dogs: Natural resilience, loyalty and breaking breed bias",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Indian Pariah and Indie community dogs have evolved naturally over thousands of years to thrive in the Indian climate.",
+        "Foreign brachycephalic breeds (Pugs, Huskies, Bulldogs) suffer severe respiratory distress in hot Indian weather."
+      ],
+      "do": [
+        "Adopt an Indian community dog from an animal shelter or rescue group instead of buying from commercial puppy mills",
+        "Indie dogs possess exceptional genetic immunity, rarely suffer hereditary diseases, and live long, healthy lives",
+        "Spay/neuter and vaccinate adopted Indie pets to support humane community dog population management"
+      ],
+      "dont": [
+        "Never buy Siberian Huskies or Saint Bernards in tropical Indian cities (it is cruelty to keep arctic dogs in 45°C heat)",
+        "Never abandon pet dogs on the streets when they grow old or fall sick"
+      ],
+      "myths": [
+        {
+          "statement": "Foreign pedigree breed dogs are naturally smarter and more loyal than Indian stray dogs.",
+          "answer": "myth",
+          "truth": "Indie dogs are among the most intelligent, resilient, loyal, and low-maintenance canine companions in the world."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why are native Indian street dogs ('Indies') ideally suited for Indian family homes?",
+          "options": [
+            "They cost thousands of dollars",
+            "They are naturally adapted to the Indian climate, have strong immune systems, and are fiercely loyal",
+            "They never bark",
+            "They eat plastic"
+          ],
+          "correct": 1,
+          "explanation": "Centuries of natural selection give Indie dogs robust health, minimal genetic disorders, and natural heat tolerance."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A family at {at} is planning to get a pet dog and considers buying an expensive imported breed."
+        ],
+        "question": "What compassionate, logical case should {name} make?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Advocate for adopting a native Indie street dog or shelter rescue: 'Adopt, Don't Shop!'",
+            "note": "Saves a homeless animal and rejects commercial puppy mills.",
+            "weight": 45,
+            "critical": true,
+            "keys": "adopt don'?t shop|indie dog|shelter rescue|adopt local"
+          },
+          {
+            "point": "Explain that Indie dogs are naturally adapted to our climate and have robust genetic health",
+            "note": "Highlights superior climate resilience.",
+            "weight": 35,
+            "critical": true,
+            "keys": "adapted to climate|strong immunity|healthy"
+          },
+          {
+            "point": "Warn that keeping arctic breeds like Huskies in hot Indian weather causes severe thermal suffering",
+            "note": "Prevents cruelty to foreign breeds.",
+            "weight": 20,
+            "critical": false,
+            "keys": "no arctic breeds in heat|prevent cruelty"
+          }
+        ],
+        "dangerous": [
+          "buy from illegal backyard breeder",
+          "demand a husky in 48°C heat",
+          "abandon old pet on road"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Animal Welfare Board of India (Adopt Indies Campaign)",
+          "url": "https://awbi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-017",
+      "agentId": "paws",
+      "subtopic": "Summer relief",
+      "title": "Animals in extreme heatwaves: Water bowls, shade and heatstroke signs",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Urban heat island effects push city surface temperatures over 50°C, causing widespread wildlife heat collapse.",
+        "Dehydrated birds and street animals suffer kidney failure when clean drinking water is inaccessible."
+      ],
+      "do": [
+        "Place wide terracotta water bowls outside your home, shops, and under shady colony trees daily",
+        "Allow street dogs and cats to rest quietly in shaded building corridors, porticos, and basements during peak heat",
+        "Notice heatstroke symptoms in animals: excessive panting, drooling, glassy eyes, and inability to stand up"
+      ],
+      "dont": [
+        "Never chase panting, heat-stressed animals out into scorching afternoon sun",
+        "Never pour ice-cold freezing water directly over a heatstroked animal (triggers thermal shock)"
+      ],
+      "myths": [
+        {
+          "statement": "Street animals never feel the summer heat because they have thick fur coats to protect them.",
+          "answer": "myth",
+          "truth": "Fur traps heat; street animals suffer intense dehydration, heat cramps, and heatstroke in peak summer."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the simplest community service to save urban birds and street animals during scorching June heatwaves?",
+          "options": [
+            "Spray perfume",
+            "Place wide, clean water bowls in shady spots outside homes and refill daily",
+            "Keep animals in sun",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "Shaded water bowls provide critical hydration that prevents fatal heatstroke in urban wildlife."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a blistering 44°C heatwave day at {at}, {name} sees a panting street dog lying exhausted under a small tree."
+        ],
+        "question": "What compassionate care should {name} provide?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Provide a shallow bowl of clean, cool drinking water placed nearby in the shade",
+            "note": "Quenches dehydration without startling the animal.",
+            "weight": 45,
+            "critical": true,
+            "keys": "bowl of clean water|water in shade|hydration relief"
+          },
+          {
+            "point": "Allow the animal to rest peacefully in the shade without chasing it into hot sun",
+            "note": "Permits vital thermoregulation recovery.",
+            "weight": 35,
+            "critical": true,
+            "keys": "allow to rest|keep in shade|don'?t chase"
+          },
+          {
+            "point": "Apply a cool (not freezing) damp cloth to paw pads and belly if heat exhaustion is severe",
+            "note": "Aids safe external evaporative cooling.",
+            "weight": 20,
+            "critical": false,
+            "keys": "damp cloth on paws|cool down"
+          }
+        ],
+        "dangerous": [
+          "pour boiling water on dog",
+          "chase into burning sun",
+          "throw stones at exhausted animal"
+        ]
+      },
+      "sources": [
+        {
+          "name": "PETA India Summer Animal Care Advisory",
+          "url": "https://petaindia.com"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ANI-018",
+      "agentId": "paws",
+      "subtopic": "Waste & animals",
+      "title": "Plastic menace for cattle: Rumen impaction and wet waste rules",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Cows eat vegetable peelings discarded inside plastic carry bags because they smell the food inside.",
+        "Plastic bags cannot be digested; they accumulate in the cow's rumen stomach into a 50 kg concrete-like mass."
+      ],
+      "do": [
+        "Never discard kitchen vegetable scraps or leftover food sealed inside plastic carry bags",
+        "Feed leftover vegetable peels to cattle in clean metal or bucket containers directly",
+        "Segregate household waste into distinct wet and dry streams so plastic never mixes with organic food"
+      ],
+      "dont": [
+        "Never throw plastic-wrapped food into open garbage dumps accessible to grazing cattle",
+        "Never throw sharp toothpicks, safety pins, or plastic cling film mixed with food waste"
+      ],
+      "myths": [
+        {
+          "statement": "Cows have strong stomachs that can easily digest plastic bags and rubber wrappers safely.",
+          "answer": "myth",
+          "truth": "Plastic is completely indigestible. Hundreds of kilograms of plastic accumulate inside cows' stomachs, starving them to death."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do urban cattle in India swallow dangerous plastic bags?",
+          "options": [
+            "They like the taste of plastic",
+            "People throw food scraps and vegetable peels tied inside plastic bags; cows swallow the whole bag to eat the food",
+            "Plastic has vitamins",
+            "No reason"
+          ],
+          "correct": 1,
+          "explanation": "Cows smell the food inside thin polythene bags and swallow the entire plastic bag whole."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At home at {at}, someone is about to tie vegetable peelings inside a plastic bag and throw it into the dumpster."
+        ],
+        "question": "What ecological intervention should {name} make?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop them: 'Never throw food waste tied inside plastic bags; stray cows swallow the bags and die'",
+            "note": "Prevents fatal plastic rumen impaction in grazing cattle.",
+            "weight": 45,
+            "critical": true,
+            "keys": "no food in plastic bags|cows swallow plastic|rumen impaction|segregate"
+          },
+          {
+            "point": "Feed vegetable peelings directly to cattle in a clean trough, or add to your home compost bin",
+            "note": "Provides safe nourishment or organic soil building.",
+            "weight": 35,
+            "critical": true,
+            "keys": "feed directly without plastic|home compost|composting"
+          },
+          {
+            "point": "Ensure dry recyclable plastic is kept completely separate from wet organic kitchen waste",
+            "note": "Practices foundational source segregation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "separate wet and dry waste|source segregation"
+          }
+        ],
+        "dangerous": [
+          "tie food inside thick plastic knots",
+          "throw batteries in cow feed",
+          "dump plastic on grazing ground"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Fisheries, Animal Husbandry and Dairying",
+          "url": "https://dahd.nic.in"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

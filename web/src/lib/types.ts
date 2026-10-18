@@ -1,6 +1,12 @@
 /** Shared types = the API contract with the backend (see docs/project doc §15). */
 
-export type Domain = 'fire' | 'road' | 'firstaid' | 'nutrition' | 'civic' | 'environment' | 'digital' | 'careers'
+export type Domain =
+  | 'fire' | 'road' | 'firstaid' | 'disaster' | 'safety' | 'law' | 'fitness' | 'hygiene'
+  | 'environment' | 'animals' | 'greenenergy' | 'civic'
+  | 'money' | 'enterprise' | 'careers' | 'digital' | 'nutrition'
+  | 'feelings' | 'screentime' | 'inclusion'
+
+export type Pillar = 'LIFE' | 'PLANET' | 'FUTURE' | 'MIND'
 export type Band = 'junior' | 'middle' | 'senior' // Classes 3–5 · 6–8 · 9–12
 export type PostType = 'scenario' | 'poll' | 'myth_fact' | 'scam_legit' | 'local_alert'
 export type Mood = 'think' | 'look' | 'happy' | 'wow'
@@ -14,6 +20,10 @@ export interface Agent {
   colors: [string, string]
   bio: string
   topics: string[]
+  pillar?: Pillar
+  minGrade?: number
+  sensitive?: boolean
+  approveFirst?: boolean
   stats: { posts: number; learners: number; avgScore: number; factCards: number }
 }
 

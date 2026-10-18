@@ -1,0 +1,1642 @@
+{
+  "agentId": "stride",
+  "cards": [
+    {
+      "id": "FIT-001",
+      "agentId": "stride",
+      "subtopic": "Physical play",
+      "title": "60 minutes of active play daily: Heart health and joy",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The WHO recommends at least 60 minutes of moderate-to-vigorous daily physical activity for youth.",
+        "Active outdoor play releases endorphins and brain-derived neurotrophic factor (BDNF) which enhances learning."
+      ],
+      "do": [
+        "Accumulate at least 60 minutes of movement daily: running, football, cycling, swimming, or dancing",
+        "Mix high-energy games with casual playground activities throughout the day",
+        "Invite friends outdoors instead of spending all weekend glued to mobile gaming screens"
+      ],
+      "dont": [
+        "Never replace active outdoor playtime with continuous sedentary sofa sitting",
+        "Never worry about body shape or calories: movement is about energy, joy, and vitality"
+      ],
+      "myths": [
+        {
+          "statement": "Playing active outdoor games is only for kids who want to become professional Olympic athletes.",
+          "answer": "myth",
+          "truth": "Daily physical play is essential for every young person's heart, bone density, and emotional happiness."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How much daily physical activity does the World Health Organization recommend for students aged 5 to 17?",
+          "options": [
+            "Zero minutes",
+            "At least 60 minutes of moderate-to-vigorous physical play daily",
+            "5 hours of heavy gym lifting",
+            "10 seconds"
+          ],
+          "correct": 1,
+          "explanation": "60 minutes of daily play builds strong bones, cardiovascular endurance, and cheerful moods."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On a Saturday afternoon at {at}, {name} and friends have been playing mobile games for 4 hours."
+        ],
+        "question": "How can {name} energize the afternoon?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Propose going outside for an hour of football, cycling, tag, or badminton",
+            "note": "Achieves essential daily 60 minutes of movement.",
+            "weight": 45,
+            "critical": true,
+            "keys": "go outside|play football|cycling|60 minutes play"
+          },
+          {
+            "point": "Recognize that active play releases endorphins that boost happiness and focus",
+            "note": "Understands mental and physical vitality benefits.",
+            "weight": 35,
+            "critical": true,
+            "keys": "endorphins|vitality|heart health|mood"
+          },
+          {
+            "point": "Encourage playful movement for fun, friendship, and joy without any body talk",
+            "note": "Promotes body-neutral joyful fitness.",
+            "weight": 20,
+            "critical": false,
+            "keys": "movement for fun|no body shaming|joyful"
+          }
+        ],
+        "dangerous": [
+          "stay on sofa for 8 hours",
+          "obsess over calories",
+          "refuse to move"
+        ]
+      },
+      "sources": [
+        {
+          "name": "World Health Organization Physical Activity Guidelines for Children",
+          "url": "https://who.int"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-002",
+      "agentId": "stride",
+      "subtopic": "Ergonomics",
+      "title": "Study ergonomics: Sitting posture and spine alignment",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Slouching forward ('tech neck') tilts the head, exerting up to 27 kg of gravitational strain on the cervical spine.",
+        "Poor study posture causes chronic upper back pain, tension headaches, and shallow chest breathing."
+      ],
+      "do": [
+        "Sit with feet flat on the floor, knees at a 90-degree angle, and lower back supported by the chair",
+        "Raise study books or screens to eye level using book stands or a stack of boxes",
+        "Keep shoulders relaxed and roll them backwards every 30 minutes"
+      ],
+      "dont": [
+        "Never study lying flat on your stomach on a soft bed for hours (compresses neck nerves)",
+        "Never hunch shoulders forward with your nose 10 cm from the textbook"
+      ],
+      "myths": [
+        {
+          "statement": "Lying on your stomach on the bed while doing homework is completely healthy for your spine.",
+          "answer": "myth",
+          "truth": "Prone bed reading hyperextends cervical vertebrae, causing chronic neck muscle spasms."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What angle should your knees and elbows ideally maintain while studying at an ergonomic desk?",
+          "options": [
+            "180 degrees straight",
+            "Approximately 90 degrees with feet flat on the floor",
+            "Crossed under body",
+            "Hanging loose"
+          ],
+          "correct": 1,
+          "explanation": "A 90-degree alignment keeps the spine naturally supported and prevents muscular strain."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Studying for long hours at a desk at {at}, {name} notices their neck aching and shoulders hunched forward."
+        ],
+        "question": "How should {name} optimize their study posture?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Adjust chair and desk so feet rest flat on the floor with knees and hips at 90 degrees",
+            "note": "Restores biomechanically neutral spine alignment.",
+            "weight": 45,
+            "critical": true,
+            "keys": "feet flat|90 degrees|spine neutral|lumbar support"
+          },
+          {
+            "point": "Elevate the textbook or laptop screen closer to eye level",
+            "note": "Eliminates forward cervical neck tilt.",
+            "weight": 35,
+            "critical": true,
+            "keys": "eye level|elevate screen|book stand"
+          },
+          {
+            "point": "Take a 2-minute posture break to roll shoulders backwards and stretch",
+            "note": "Relieves accumulated muscular tension.",
+            "weight": 20,
+            "critical": false,
+            "keys": "roll shoulders|stretch break"
+          }
+        ],
+        "dangerous": [
+          "slouch nose to desk",
+          "study on bed on stomach",
+          "ignore neck pain"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Association of Physiotherapists Ergonomic Guidelines",
+          "url": "https://physiotherapyindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-003",
+      "agentId": "stride",
+      "subtopic": "Backpack safety",
+      "title": "School backpack safety: The 10% weight rule and dual straps",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Carrying a school bag heavier than 10% of your body weight causes compensatory spine curvature.",
+        "Sliding a heavy bag over one shoulder causes asymmetrical shoulder hiking and scoliosis."
+      ],
+      "do": [
+        "Ensure your packed school bag weighs under 10% of your body weight (e.g. max 4 kg for a 40 kg student)",
+        "Always wear BOTH padded shoulder straps snugly so the bag rests flat against your mid-back",
+        "Pack heaviest books closest to your spine and unpack unnecessary books every evening"
+      ],
+      "dont": [
+        "Never sling a heavy school backpack over a single shoulder",
+        "Never let the backpack sag below your lower waist or buttocks"
+      ],
+      "myths": [
+        {
+          "statement": "Slinging a heavy school bag over one single shoulder looks cool and causes zero harm.",
+          "answer": "myth",
+          "truth": "Single-shoulder carrying shifts your entire skeletal center of gravity, causing chronic shoulder asymmetry."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "According to the Ministry of Education School Bag Policy, a student's bag should not exceed what percentage of body weight?",
+          "options": [
+            "50%",
+            "Not more than 10% of the student's body weight",
+            "25%",
+            "80%"
+          ],
+          "correct": 1,
+          "explanation": "The 10% limit protects developing spinal columns from compressive disc damage."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Packing the school bag for tomorrow at {at}, {name}'s backpack feels like a heavy sack of bricks."
+        ],
+        "question": "How should {name} practice backpack ergonomics?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Unpack books not on tomorrow's timetable to keep bag weight below 10% of body weight",
+            "note": "Adheres to statutory School Bag Policy limits.",
+            "weight": 45,
+            "critical": true,
+            "keys": "under 10 percent|unpack extra books|follow timetable"
+          },
+          {
+            "point": "Place the heaviest textbooks closest to your back and use both padded shoulder straps",
+            "note": "Optimizes load distribution near center of gravity.",
+            "weight": 35,
+            "critical": true,
+            "keys": "wear both straps|heaviest books close to spine"
+          },
+          {
+            "point": "Adjust straps so the bottom of the backpack rests above the waistline",
+            "note": "Prevents lumbar backward pulling.",
+            "weight": 20,
+            "critical": false,
+            "keys": "above waistline|snug straps"
+          }
+        ],
+        "dangerous": [
+          "carry over one shoulder only",
+          "pack whole library daily",
+          "let bag sag below knees"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Education Policy on School Bag",
+          "url": "https://dsel.education.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-004",
+      "agentId": "stride",
+      "subtopic": "Sleep",
+      "title": "Quality sleep for growing minds: 8-10 hours and regular schedules",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Growth hormone (somatotropin) is secreted primarily during deep Stage 3 slow-wave sleep.",
+        "Sleep deprivation impairs memory consolidation, immune resistance, and emotional regulation."
+      ],
+      "do": [
+        "Aim for 8 to 10 hours of consistent, restful sleep every single night",
+        "Maintain a regular sleep schedule: go to bed and wake up at the same time even on weekends",
+        "Keep the bedroom dark, quiet, and cool to support natural sleep cycle transitions"
+      ],
+      "dont": [
+        "Never pull all-nighter study sessions before examinations (severely damages recall)",
+        "Never consume heavy meals or caffeine right before sleeping"
+      ],
+      "myths": [
+        {
+          "statement": "Sleeping 4 hours a night during exam week gives you more time to study and score higher.",
+          "answer": "myth",
+          "truth": "Sleep-deprived brains experience severe cognitive blackout, memory lapses, and panic during exams."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How many hours of nightly sleep do school-age children and teenagers require for optimal brain growth?",
+          "options": [
+            "3 hours",
+            "8 to 10 hours of quality sleep",
+            "14 hours",
+            "2 hours"
+          ],
+          "correct": 1,
+          "explanation": "8-10 hours enables deep REM dreaming (memory consolidation) and physical cellular repair."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "It is 11 PM before an exam at {at}, and {name} is tempted to stay awake all night cramming."
+        ],
+        "question": "What scientific advice should {name} follow?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Go to sleep now to ensure at least 7-8 hours of sleep before the morning exam",
+            "note": "Enables hippocampal memory consolidation.",
+            "weight": 45,
+            "critical": true,
+            "keys": "sleep now|7-8 hours sleep|memory consolidation"
+          },
+          {
+            "point": "Understand that sleep deprivation causes severe brain fog and calculation errors during tests",
+            "note": "Debunks all-nighter cramming myths.",
+            "weight": 35,
+            "critical": true,
+            "keys": "prevent brain fog|no all-nighter|recall needs sleep"
+          },
+          {
+            "point": "Maintain consistent bedtimes to keep circadian rhythms synchronized",
+            "note": "Promotes deep restorative sleep.",
+            "weight": 20,
+            "critical": false,
+            "keys": "circadian rhythm|consistent bedtime"
+          }
+        ],
+        "dangerous": [
+          "stay awake all night with coffee",
+          "sleep 2 hours only",
+          "cram in panic all night"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Society for Sleep Research (ISSR)",
+          "url": "https://issr.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-005",
+      "agentId": "stride",
+      "subtopic": "Sleep science",
+      "title": "Screen-free wind-down: Blue light and natural melatonin",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Blue wavelength light from smartphones tricks the brain's pineal gland into thinking it is daytime.",
+        "Using screens in bed suppresses natural melatonin secretion, delaying sleep onset by over 60 minutes."
+      ],
+      "do": [
+        "Turn off all screens (mobiles, tablets, laptops, TV) at least 60 minutes before bedtime",
+        "Replace late-night scrolling with calming activities: reading physical books, listening to soft music, or journaling",
+        "Charge your mobile phone outside the bedroom or away from arm's reach of your pillow"
+      ],
+      "dont": [
+        "Never scroll through social media or play video games in the dark in bed",
+        "Never sleep with a buzzing phone right next to your head"
+      ],
+      "myths": [
+        {
+          "statement": "Using a phone in complete darkness before sleeping helps your eyes get tired and fall asleep faster.",
+          "answer": "myth",
+          "truth": "Intense blue light in dark bedrooms severely disrupts circadian melatonin release and strains retinas."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What natural sleep hormone is suppressed when your eyes stare at bright smartphone screens before bed?",
+          "options": [
+            "Adrenaline",
+            "Melatonin (the sleep signal hormone)",
+            "Insulin",
+            "Digestive bile"
+          ],
+          "correct": 1,
+          "explanation": "Melatonin prepares the body for slumber; blue screen photons completely suppress its release."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At 10 PM at {at}, {name} is lying in bed scrolling through short video reels on a smartphone in the dark."
+        ],
+        "question": "How should {name} reset their nighttime routine for deep sleep?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Put the smartphone away and switch off screens 60 minutes before sleeping",
+            "note": "Allows natural melatonin production to kick in.",
+            "weight": 45,
+            "critical": true,
+            "keys": "put phone away|screens off 60 mins|melatonin"
+          },
+          {
+            "point": "Engage in a calm offline wind-down: read a physical book or listen to calming music",
+            "note": "Lowers nervous system arousal.",
+            "weight": 35,
+            "critical": true,
+            "keys": "read physical book|offline wind down|calm"
+          },
+          {
+            "point": "Charge the phone across the room to prevent subconscious midnight scrolling",
+            "note": "Removes sleep disruption temptation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "charge across room|no phone in bed"
+          }
+        ],
+        "dangerous": [
+          "stare at bright reels in dark",
+          "sleep with phone under ear",
+          "play games till 2 am"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Sleep Medicine Guidelines (AIIMS New Delhi)",
+          "url": "https://aiims.edu"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-006",
+      "agentId": "stride",
+      "subtopic": "Vision care",
+      "title": "Digital eye strain: The 20-20-20 rule and blinking",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Staring at digital screens drops normal blinking rate by 60%, causing dry, burning eyes.",
+        "The 20-20-20 rule relaxes the eye's ciliary accommodation muscles, preventing myopia progression."
+      ],
+      "do": [
+        "Follow the 20-20-20 Rule: Every 20 minutes, look at an object 20 feet (6 meters) away for 20 seconds",
+        "Remember to blink consciously while reading screens to spread protective tear film across eyes",
+        "Spend at least 90 minutes outdoors in natural daylight daily (proven to slow childhood nearsightedness)"
+      ],
+      "dont": [
+        "Never read in dim lighting or with severe glare reflecting off your monitor",
+        "Never rub itchy dry eyes with unwashed fingers"
+      ],
+      "myths": [
+        {
+          "statement": "Staring continuously at a screen for 4 hours without blinking builds stronger eye muscles.",
+          "answer": "myth",
+          "truth": "Continuous near-focus locks ciliary muscles in spasm, triggering severe headaches and vision strain."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the famous '20-20-20' vision rule advise during computer or phone usage?",
+          "options": [
+            "Play 20 games in 20 minutes",
+            "Every 20 minutes, look at an object 20 feet away for at least 20 seconds",
+            "Blink 200 times",
+            "Turn screen brightness to 20%"
+          ],
+          "correct": 1,
+          "explanation": "Looking 20 feet away allows intraocular focusing muscles to relax to an infinite focal resting state."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Attending online classes or doing digital homework for 2 hours at {at}, {name}'s eyes feel dry and stinging."
+        ],
+        "question": "How should {name} practice the 20-20-20 rule?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pause every 20 minutes and gaze out of the window at a distant tree (20 feet away) for 20 seconds",
+            "note": "Relaxes overworked ciliary eye muscles.",
+            "weight": 45,
+            "critical": true,
+            "keys": "20-20-20 rule|look 20 feet away|20 seconds|relax eyes"
+          },
+          {
+            "point": "Blink eyes completely several times to lubricate the cornea with natural tears",
+            "note": "Restores moisture barrier.",
+            "weight": 35,
+            "critical": true,
+            "keys": "blink consciously|lubricate eyes|moisture"
+          },
+          {
+            "point": "Ensure study room has balanced ambient lighting without harsh screen glare",
+            "note": "Reduces contrast strain.",
+            "weight": 20,
+            "critical": false,
+            "keys": "balanced lighting|no glare"
+          }
+        ],
+        "dangerous": [
+          "rub eyes vigorously with dirty hands",
+          "stare unblinking for 3 hours",
+          "turn room lights off completely"
+        ]
+      },
+      "sources": [
+        {
+          "name": "All India Ophthalmological Society (AIOS Vision Care)",
+          "url": "https://aios.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-007",
+      "agentId": "stride",
+      "subtopic": "Flexibility",
+      "title": "Safe warm-ups and stretching: Dynamic before, static after",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Dynamic warm-ups (high knees, arm circles) increase core muscle temperature and synovial joint lubrication.",
+        "Static stretches (holding still for 30s) are best performed after workouts during the cool-down."
+      ],
+      "do": [
+        "Perform 5-10 minutes of dynamic warm-ups (jogging, lunges, leg swings) before playing competitive sports",
+        "Perform gentle static stretches (hamstring stretch, quad stretch, calf stretch) after workouts",
+        "Breathe smoothly through your nose during all stretches—never hold your breath"
+      ],
+      "dont": [
+        "Never perform aggressive, bouncy stretches on cold, un-warmed muscles (causes muscle tears)",
+        "Never stretch to the point of sharp, stabbing joint pain"
+      ],
+      "myths": [
+        {
+          "statement": "Stretching cold muscles by bouncing violently up and down is the best way to prevent sports injuries.",
+          "answer": "myth",
+          "truth": "Bouncing (ballistic stretching) on cold muscles triggers the stretch reflex, tearing muscle fibers."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "When should dynamic warm-ups (moving joints through full range) be performed?",
+          "options": [
+            "While sleeping",
+            "Before starting sports and workouts, to prepare muscles and joints",
+            "Only after you shower",
+            "Never"
+          ],
+          "correct": 1,
+          "explanation": "Dynamic warm-ups prepare cardiovascular and neuromuscular pathways for exertion."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "About to play a fast-paced game of football or athletics at {at}, {name} wants to sprint immediately."
+        ],
+        "question": "What safe warm-up protocol should {name} follow?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Spend 5 to 10 minutes doing dynamic warm-ups (light jogging, high knees, arm swings)",
+            "note": "Elevates muscle temperature and joint fluid.",
+            "weight": 45,
+            "critical": true,
+            "keys": "dynamic warm up|light jog|arm circles|prepare muscles"
+          },
+          {
+            "point": "Do not bounce aggressively into cold static stretches",
+            "note": "Prevents acute muscle strain.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no bouncing|no aggressive stretch"
+          },
+          {
+            "point": "Perform slow, relaxing static stretches during the post-game cool-down",
+            "note": "Restores resting muscle length safely.",
+            "weight": 20,
+            "critical": false,
+            "keys": "cool down|static stretch after game"
+          }
+        ],
+        "dangerous": [
+          "sprint at 100% on cold muscles",
+          "bounce violently on toes",
+          "skip warm up completely"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Sports Authority of India (Athlete Warm-up Manual)",
+          "url": "https://sportsauthorityofindia.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-008",
+      "agentId": "stride",
+      "subtopic": "Hydration",
+      "title": "Sports hydration: Sipping water and beating dehydration cramps",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Losing just 2% of body weight in sweat reduces athletic stamina, agility, and concentration by over 20%.",
+        "Severe dehydration during sports causes painful muscle spasms and heat exhaustion."
+      ],
+      "do": [
+        "Drink a glass of water 30 minutes before starting sports or physical training",
+        "Take small sips of water every 15-20 minutes during play rather than gulping massive volumes all at once",
+        "Rehydrate with water, fresh nimbu pani, or coconut water after finishing active play"
+      ],
+      "dont": [
+        "Never wait until you are severely dizzy or parched before drinking fluids",
+        "Never substitute clean water with sugary commercial sodas during sports"
+      ],
+      "myths": [
+        {
+          "statement": "Gulping down 1 litre of ice water while sprinting heavily prevents all sports tiredness.",
+          "answer": "myth",
+          "truth": "Gulping huge quantities causes stomach sloshing and nausea. Small, frequent sips are optimal."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How often should student athletes take small sips of water during outdoor sports in warm weather?",
+          "options": [
+            "Once every 5 hours",
+            "Every 15 to 20 minutes during active play intervals",
+            "Never drink during sports",
+            "Only before bed"
+          ],
+          "correct": 1,
+          "explanation": "Frequent small sips replace sweat losses continuously without overloading the stomach."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Playing an intense cricket or basketball match at {at} in hot 34°C weather, {name} begins sweating heavily."
+        ],
+        "question": "How should {name} manage hydration?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Take small, frequent sips of water during game timeouts every 15-20 minutes",
+            "note": "Maintains blood volume and prevents heat cramps.",
+            "weight": 45,
+            "critical": true,
+            "keys": "frequent sips|water breaks|every 15-20 mins|hydrate"
+          },
+          {
+            "point": "Avoid gulping down huge amounts of ice cold water all at once",
+            "note": "Prevents stomach cramps and discomfort.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no gulping huge water|small sips"
+          },
+          {
+            "point": "Replenish electrolytes after the game with natural nimbu pani or coconut water",
+            "note": "Restores lost sodium and potassium.",
+            "weight": 20,
+            "critical": false,
+            "keys": "nimbu pani|coconut water|electrolytes"
+          }
+        ],
+        "dangerous": [
+          "refuse water for 3 hours",
+          "drink sugary cola during match",
+          "wait until fainting"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Institute of Sports Medicine Guidelines",
+          "url": "https://sportsauthorityofindia.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-009",
+      "agentId": "stride",
+      "subtopic": "Injury prevention",
+      "title": "Listening to your body: Never playing through sharp pain",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Normal exercise creates mild muscular fatigue; sharp, localized, or stabbing pain signals acute tissue damage.",
+        "'Playing through the pain' transforms minor muscle strains into severe, surgery-requiring ligament tears."
+      ],
+      "do": [
+        "Stop playing immediately if you feel a sharp twist, pop, snap, or localized joint stabbing pain",
+        "Inform your PE coach, sports teacher, or parents honestly rather than hiding injuries",
+        "Follow the RICE protocol (Rest, Ice, Compression, Elevation) and see a sports doctor for evaluation"
+      ],
+      "dont": [
+        "Never ignore persistent joint swelling or inability to bear weight on a limb",
+        "Never let teammates pressure you to 'be tough and keep running' on an injured joint"
+      ],
+      "myths": [
+        {
+          "statement": "True champions always ignore broken bones and sharp torn ligaments to finish the match.",
+          "answer": "myth",
+          "truth": "Playing on damaged ligaments causes permanent chronic joint instability and ruins athletic careers."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the difference between healthy workout tiredness and an acute sports injury?",
+          "options": [
+            "There is no difference",
+            "Tiredness is general muscle fatigue; an injury is sharp, localized, stabbing pain or swelling",
+            "Tiredness hurts joints",
+            "Pain is always good"
+          ],
+          "correct": 1,
+          "explanation": "Sharp pain is the body's mandatory emergency signal to halt movement immediately."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a football match at {at}, {name}'s knee twists with a sharp pop and intense throbbing pain."
+        ],
+        "question": "What is the only responsible action for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop playing immediately and step off the field; do not bear weight on the knee",
+            "note": "Prevents catastrophic secondary ligament tear.",
+            "weight": 45,
+            "critical": true,
+            "keys": "stop playing|step off field|no weight on knee"
+          },
+          {
+            "point": "Inform the coach and apply a wrapped cold ice pack to reduce swelling",
+            "note": "Initiates prompt acute first response.",
+            "weight": 35,
+            "critical": true,
+            "keys": "inform coach|ice pack|rest"
+          },
+          {
+            "point": "Seek medical evaluation before returning to running or competitive sports",
+            "note": "Ensures proper diagnosis.",
+            "weight": 20,
+            "critical": false,
+            "keys": "medical evaluation|doctor check"
+          }
+        ],
+        "dangerous": [
+          "run through the sharp pain",
+          "let friends twist the knee to fix it",
+          "hide injury from coach"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Orthopaedic Association Sports Committee",
+          "url": "https://ioaindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-010",
+      "agentId": "stride",
+      "subtopic": "Hearing health",
+      "title": "Protecting hearing: The 60/60 rule for headphones and earbuds",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Listening through in-ear earbuds at maximum volume exposes eardrums to over 100 decibels.",
+        "Auditory hair cells in the cochlea cannot regenerate once destroyed by excessive acoustic pressure."
+      ],
+      "do": [
+        "Follow the 60/60 Rule: Listen at a maximum of 60% volume for no more than 60 minutes at a time",
+        "Choose over-ear headphones instead of in-ear earbuds that blast acoustic waves directly against eardrums",
+        "If someone sitting an arm-length away can hear music leaking from your headphones, it is dangerously loud"
+      ],
+      "dont": [
+        "Never crank headphone volume to maximum to drown out loud bus or city street noise",
+        "Never sleep with in-ear headphones playing music into your ears all night"
+      ],
+      "myths": [
+        {
+          "statement": "If you lose some hearing from loud music, eardrum cells naturally regrow like fingernails.",
+          "answer": "myth",
+          "truth": "Cochlear hair cells are non-renewable; noise-induced sensorineural hearing loss is irreversible."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the scientifically proven '60/60' hearing protection rule state?",
+          "options": [
+            "Listen for 60 seconds",
+            "Keep volume below 60% and limit continuous listening to 60 minutes",
+            "Listen 60 times a day",
+            "Buy 60 earphones"
+          ],
+          "correct": 1,
+          "explanation": "The 60/60 rule maintains acoustic decibel pressure within biologically safe limits."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Listening to music or podcasts with earbuds at {at}, {name} keeps turning the volume slider to 100%."
+        ],
+        "question": "How should {name} protect their lifelong hearing?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Set the volume slider to 60% or lower and take regular listening breaks",
+            "note": "Prevents acoustic trauma to cochlear hair cells.",
+            "weight": 45,
+            "critical": true,
+            "keys": "60% volume|lower volume|listening breaks|60/60 rule"
+          },
+          {
+            "point": "Recognize that noise-induced hearing loss and tinnitus (ear ringing) are permanent",
+            "note": "Understands non-renewable nature of hearing.",
+            "weight": 35,
+            "critical": true,
+            "keys": "permanent hearing loss|tinnitus|protect eardrums"
+          },
+          {
+            "point": "Use noise-canceling headphones in noisy environments instead of blasting volume",
+            "note": "Allows comfortable listening at safe low volumes.",
+            "weight": 20,
+            "critical": false,
+            "keys": "over ear headphones|safe volume"
+          }
+        ],
+        "dangerous": [
+          "blast volume at 100% all day",
+          "sleep with earphones playing loud",
+          "ignore ear ringing"
+        ]
+      },
+      "sources": [
+        {
+          "name": "World Health Organization Make Listening Safe Campaign",
+          "url": "https://who.int"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-011",
+      "agentId": "stride",
+      "subtopic": "Sedentary breaks",
+      "title": "Breaking prolonged sitting: 2-minute movement snacks",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Sitting still for over 60 minutes slows vascular blood circulation, lowering brain alertness.",
+        "Taking a 2-minute 'movement snack' (standing, stretching, pacing) boosts focus and metabolic rate."
+      ],
+      "do": [
+        "Stand up and stretch every 45 to 60 minutes while studying or reading",
+        "Perform quick movement snacks: 10 jumping jacks, 5 bodyweight squats, or a brisk walk around the room",
+        "Walk while memorizing vocabulary or pacing during phone conversations"
+      ],
+      "dont": [
+        "Never stay frozen in a chair for 4 continuous hours without standing up",
+        "Never spend your entire school recess sitting at your desk looking at screens"
+      ],
+      "myths": [
+        {
+          "statement": "Sitting completely motionless for 5 hours without moving proves superior academic dedication.",
+          "answer": "myth",
+          "truth": "Prolonged sitting stagnates cerebral blood flow, actually reducing memory retention and problem-solving speed."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a 'movement snack' during study sessions?",
+          "options": [
+            "Eating chips while sitting",
+            "A quick 1 to 2 minute physical burst of standing, stretching, or light pacing every hour",
+            "Running a marathon",
+            "Sleeping"
+          ],
+          "correct": 1,
+          "explanation": "Short active micro-breaks reactivate muscle pumps, circulating oxygen back to the brain."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Studying for term exams at {at}, {name} has been sitting at the desk continuously for 3 hours."
+        ],
+        "question": "How should {name} refresh their mind and body?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stand up immediately, stretch arms overhead, and do a 2-minute movement break",
+            "note": "Reactivates blood circulation and breaks muscular stiffness.",
+            "weight": 45,
+            "critical": true,
+            "keys": "stand up|stretch|movement break|2 minutes"
+          },
+          {
+            "point": "Pace around the room or do 10 gentle squats to pump fresh oxygen to the brain",
+            "note": "Improves cognitive alertness and focus.",
+            "weight": 35,
+            "critical": true,
+            "keys": "pace room|squats|boost focus|oxygen to brain"
+          },
+          {
+            "point": "Drink a glass of water before sitting back down to resume studying",
+            "note": "Combines movement with hydration.",
+            "weight": 20,
+            "critical": false,
+            "keys": "drink water|resume study refreshed"
+          }
+        ],
+        "dangerous": [
+          "sit motionless for 6 hours",
+          "eat sugary cookies to stay awake",
+          "slouch deeper into chair"
+        ]
+      },
+      "sources": [
+        {
+          "name": "American College of Sports Medicine (Sedentary Behavior Guidelines)",
+          "url": "https://acsm.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-012",
+      "agentId": "stride",
+      "subtopic": "Aquatics",
+      "title": "Swimming pool safety: Supervision and no shallow diving",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Diving headfirst into shallow water causes severe cervical spine fractures and permanent paralysis.",
+        "Drowning in pools happens silently and swiftly in under 30 seconds without splashing or shouting."
+      ],
+      "do": [
+        "Only swim in pools or beaches with certified adult lifeguards on active duty",
+        "Always check pool water depth markings; NEVER dive headfirst into water less than 2.5 meters (8 feet) deep",
+        "Follow pool deck rules: walk calmly without running on slippery wet tile decks"
+      ],
+      "dont": [
+        "Never push friends into swimming pools or hold someone's head underwater as a prank",
+        "Never swim alone without adult supervision, no matter how confident a swimmer you are"
+      ],
+      "myths": [
+        {
+          "statement": "Diving headfirst into the shallow 4-foot end of the pool is safe if you arch your back.",
+          "answer": "myth",
+          "truth": "Shallow diving is the leading cause of catastrophic sports spinal cord injuries and quadriplegia."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the golden safety rule regarding diving headfirst into swimming pools?",
+          "options": [
+            "Dive anywhere",
+            "NEVER dive into shallow water; only dive in designated deep pools with certified lifeguard oversight",
+            "Close your eyes",
+            "Dive in darkness"
+          ],
+          "correct": 1,
+          "explanation": "Shallow water diving causes the head to strike the concrete floor with catastrophic impact."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At a swimming pool party at {at}, a classmate wants to dive headfirst into the 4-foot shallow pool."
+        ],
+        "question": "What life-saving warning should {name} deliver?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop them immediately: 'Never dive headfirst into shallow water, it causes severe neck and spinal fractures'",
+            "note": "Prevents catastrophic spinal cord injury.",
+            "weight": 45,
+            "critical": true,
+            "keys": "never dive shallow|spinal fracture|no diving 4 feet"
+          },
+          {
+            "point": "Check depth markings: enter shallow water feet-first by stepping down ladders",
+            "note": "Ensures safe pool entry protocol.",
+            "weight": 35,
+            "critical": true,
+            "keys": "feet first|check depth markings|use ladder"
+          },
+          {
+            "point": "Remind everyone that pool pranks like pushing people in can lead to silent drowning",
+            "note": "Promotes pool safety discipline.",
+            "weight": 20,
+            "critical": false,
+            "keys": "no pushing pranks|swimming supervision"
+          }
+        ],
+        "dangerous": [
+          "encourage diving in 3 feet",
+          "push friend into pool unexpectedly",
+          "swim alone in dark"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Rashtriya Life Saving Society (RLSS India Water Safety)",
+          "url": "https://lifesavingindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-013",
+      "agentId": "stride",
+      "subtopic": "Environmental fitness",
+      "title": "Exercising in polluted air: Adapting workouts when AQI is high",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "During heavy aerobic exercise, minute ventilation increases 10-fold, pulling pollutants deep into lung alveoli.",
+        "Running outdoors on 'Severe' AQI days does more cardiovascular damage than benefits."
+      ],
+      "do": [
+        "Check your city's daily Air Quality Index (AQI) before planning outdoor sports workouts",
+        "If AQI exceeds 200 ('Poor' or worse), shift workouts indoors (skipping rope, yoga, bodyweight training)",
+        "Exercise in well-ventilated indoor spaces or air-purified rooms during winter smog episodes"
+      ],
+      "dont": [
+        "Never run outdoor endurance marathons or play intense outdoor matches in heavy winter smog",
+        "Never believe that 'tough athletes' can adapt their lungs to breathe toxic chemical smoke safely"
+      ],
+      "myths": [
+        {
+          "statement": "Exercising heavily outdoors in thick toxic winter smog makes your lungs tougher and immune.",
+          "answer": "myth",
+          "truth": "Deep inhalation of PM2.5 in heavy smog triggers acute asthma attacks and permanent pulmonary inflammation."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "When the outdoor Air Quality Index (AQI) is in the 'Severe' category (300+), what should students do for fitness?",
+          "options": [
+            "Run 10 km on highway",
+            "Shift workouts indoors (yoga, bodyweight exercises, indoor stretches)",
+            "Stop moving for 3 months",
+            "Sleep all day"
+          ],
+          "correct": 1,
+          "explanation": "Indoor light training maintains physical fitness while protecting delicate lung alveoli from toxic particulates."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Planning outdoor football practice at {at}, the morning air is thick with winter smog and AQI is 340."
+        ],
+        "question": "How should {name} and the team adapt?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Shift physical training indoors: do indoor stretching, bodyweight circuits, or yoga",
+            "note": "Avoids heavy inhalation of toxic PM2.5 smog.",
+            "weight": 45,
+            "critical": true,
+            "keys": "indoor training|yoga|bodyweight circuit|avoid smog"
+          },
+          {
+            "point": "Cancel strenuous outdoor sprinting and marathon runs during severe air pollution alerts",
+            "note": "Protects cardiovascular and pulmonary health.",
+            "weight": 35,
+            "critical": true,
+            "keys": "cancel outdoor sprinting|severe aqi alert"
+          },
+          {
+            "point": "Understand that fitness is about long-term health, which includes protecting lung tissue",
+            "note": "Embraces holistic health wisdom.",
+            "weight": 20,
+            "critical": false,
+            "keys": "protect lungs|long term health"
+          }
+        ],
+        "dangerous": [
+          "run sprints in dense smog",
+          "ignore burning throat",
+          "claim air pollution is fake"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Journal of Medical Research (Air Pollution & Exercise)",
+          "url": "https://ijmr.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-014",
+      "agentId": "stride",
+      "subtopic": "Character",
+      "title": "Team sportsmanship: Celebrating effort and handling defeat gracefully",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Sports build character, resilience, teamwork, and emotional regulation under pressure.",
+        "Blaming teammates, arguing with referees, or throwing equipment degrades sportsmanship and team morale."
+      ],
+      "do": [
+        "Shake hands warmly with opponents and referees after every match, win or lose",
+        "Encourage teammates who make mistakes: 'Good try, let's win the next ball together!'",
+        "Celebrate effort, improvement, and teamwork rather than solely obsessing over the final score"
+      ],
+      "dont": [
+        "Never throw tantrums, abuse referees, or blame individual teammates for a lost match",
+        "Never gloat or mock defeated opponents with arrogant celebration dances"
+      ],
+      "myths": [
+        {
+          "statement": "A true winner is someone who screams at their teammates whenever they make a mistake.",
+          "answer": "myth",
+          "truth": "True leadership is lifting up teammates who make mistakes and respecting opponents with humility."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the mark of authentic, mature sportsmanship after losing a hard-fought championship match?",
+          "options": [
+            "Kicking the goalpost in anger",
+            "Shaking hands with opponents with a smile, congratulating them, and reviewing areas to improve",
+            "Crying and insulting the referee",
+            "Refusing to leave the pitch"
+          ],
+          "correct": 1,
+          "explanation": "Gracious defeat demonstrates inner resilience, dignity, and true sporting character."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After a tense inter-school match at {at}, {name}'s team loses by one point in the final minute."
+        ],
+        "question": "How should {name} lead the team's conduct?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Lead the team to shake hands warmly with the opponents and congratulate their victory",
+            "note": "Exhibits dignified, gracious sportsmanship.",
+            "weight": 45,
+            "critical": true,
+            "keys": "shake hands|congratulate opponents|gracious in defeat"
+          },
+          {
+            "point": "Encourage teammates who made mistakes: 'We fought hard together, we will learn and grow'",
+            "note": "Maintains supportive team cohesion.",
+            "weight": 35,
+            "critical": true,
+            "keys": "encourage teammates|no blaming|learn and grow"
+          },
+          {
+            "point": "Thank the match referees and volunteers for officiating the game",
+            "note": "Shows respect for match officials.",
+            "weight": 20,
+            "critical": false,
+            "keys": "thank referees|respect officials"
+          }
+        ],
+        "dangerous": [
+          "blame the goalkeeper angrily",
+          "refuse to shake hands",
+          "throw equipment on pitch"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Youth Affairs and Sports (Code of Sports Ethics)",
+          "url": "https://yas.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-015",
+      "agentId": "stride",
+      "subtopic": "Mind-body",
+      "title": "Diaphragmatic belly breathing for calm focus and stress release",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Shallow chest breathing triggers the sympathetic 'fight-or-flight' stress and anxiety response.",
+        "Deep diaphragmatic (belly) breathing stimulates the vagus nerve, lowering heart rate and cortisol in 60 seconds."
+      ],
+      "do": [
+        "Practice 'Box Breathing' or 4-4-4 belly breathing: Inhale for 4 seconds, hold for 4, exhale slowly for 4",
+        "Place one hand on your chest and one on your belly; make the belly hand rise while the chest stays still",
+        "Use diaphragmatic breathing right before walking into an exam hall, stepping up to bat, or public speaking"
+      ],
+      "dont": [
+        "Never hyperventilate with rapid, shallow gasps when feeling nervous",
+        "Never underestimate the immediate physical calming power of your breath"
+      ],
+      "myths": [
+        {
+          "statement": "Taking deep belly breaths is just a superstitious myth that has zero medical effect on stress.",
+          "answer": "myth",
+          "truth": "Diaphragmatic breathing physically activates the parasympathetic nervous system, slowing heart rate and lowering blood pressure."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How should your stomach move during proper calming diaphragmatic (belly) breathing?",
+          "options": [
+            "It should suck in completely on inhale",
+            "Your belly should gently expand outward like a balloon on inhale, and sink in on exhale",
+            "It should not move at all",
+            "Only shoulders should rise"
+          ],
+          "correct": 1,
+          "explanation": "Expanding the belly allows the diaphragm to descend, filling the lower lung lobes with oxygen."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Feeling intense heart-pounding nervousness before a big school stage speech at {at}."
+        ],
+        "question": "How can {name} use breathwork to regain composure?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Practice slow diaphragmatic belly breathing: inhale through nose 4s, expand belly, exhale slowly 4s",
+            "note": "Activates parasympathetic nervous system calming.",
+            "weight": 45,
+            "critical": true,
+            "keys": "belly breathing|diaphragmatic breathing|inhale 4s|exhale slowly"
+          },
+          {
+            "point": "Feel the heart rate steady and shoulder muscles relax with each long exhalation",
+            "note": "Restores physiological homeostasis.",
+            "weight": 35,
+            "critical": true,
+            "keys": "heart rate steadies|relax shoulders|calm focus"
+          },
+          {
+            "point": "Remind yourself that nervousness is just energy that can be channeled into focused performance",
+            "note": "Positive cognitive reframing.",
+            "weight": 20,
+            "critical": false,
+            "keys": "channel energy|focus|composure"
+          }
+        ],
+        "dangerous": [
+          "breathe in rapid panic gasps",
+          "hold breath until dizzy",
+          "scream in fear"
+        ]
+      },
+      "sources": [
+        {
+          "name": "All India Institute of Medical Sciences (Integrative Medicine Guidelines)",
+          "url": "https://aiims.edu"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-016",
+      "agentId": "stride",
+      "subtopic": "Active transit",
+      "title": "Active commuting: Walking and cycling to school safely",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Students who walk or cycle to school demonstrate higher cardiovascular fitness and classroom attention.",
+        "Active commuting builds independent road sense, reduces family fuel costs, and cuts school gate traffic jams."
+      ],
+      "do": [
+        "Walk or cycle to school using pedestrian footpaths, designated cycle lanes, or quiet residential lanes",
+        "Form a 'Walking School Bus' or cycle group with neighborhood classmates for mutual fun and safety",
+        "Wear a strapped helmet when cycling and attach front/rear reflectors for early morning visibility"
+      ],
+      "dont": [
+        "Never weave in and out of heavy highway traffic on a bicycle",
+        "Never ride a cycle with broken brakes or loose handlebars"
+      ],
+      "myths": [
+        {
+          "statement": "Cycling to school is only for kids whose families cannot afford a motorcycle.",
+          "answer": "myth",
+          "truth": "Cycling is the premier modern global eco-friendly health habit embraced by students and leaders worldwide."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What essential safety gear should you always wear when cycling to school?",
+          "options": [
+            "Sunglasses only",
+            "A properly fitted, securely strapped bicycle helmet and bright clothing",
+            "Heavy boots",
+            "Large cape"
+          ],
+          "correct": 1,
+          "explanation": "A strapped bicycle helmet protects the skull and brain from traumatic impact during falls."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Living 1.5 km away from school at {at}, {name} considers cycling instead of taking a motorized auto."
+        ],
+        "question": "How can {name} make active cycling commuting safe and joyful?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Wear an ISI-approved bicycle helmet securely strapped on every single ride",
+            "note": "Vital protective cranial armor.",
+            "weight": 45,
+            "critical": true,
+            "keys": "wear helmet|strap helmet|cycle safety"
+          },
+          {
+            "point": "Check cycle brakes, tire pressure, and ensure front and rear reflectors are clean",
+            "note": "Ensures mechanical roadworthiness.",
+            "weight": 35,
+            "critical": true,
+            "keys": "check brakes|tire pressure|reflectors"
+          },
+          {
+            "point": "Ride defensively, obey traffic signals, and signal turns clearly with hand gestures",
+            "note": "Practices predictable road citizenship.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ride defensively|hand signals|obey signals"
+          }
+        ],
+        "dangerous": [
+          "cycle without brakes",
+          "ride against traffic at night with no lights",
+          "perform stunts on main road"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Urban Transport Policy Guidelines",
+          "url": "https://mohua.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-017",
+      "agentId": "stride",
+      "subtopic": "Bodyweight",
+      "title": "Zero-equipment home fitness: Squats, push-ups and jumping jacks",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Bodyweight calisthenics build functional muscular strength, tendon resilience, and joint mobility.",
+        "You do NOT need expensive gym memberships, dumbbells, or machines to build a strong, capable body."
+      ],
+      "do": [
+        "Incorporate simple bodyweight exercises: bodyweight squats, wall/knee push-ups, jumping jacks, and planks",
+        "Focus on clean, controlled form rather than rushing through sloppy repetitions",
+        "Create fun home fitness challenges with family: how many gentle squats or jumping jacks during commercial breaks"
+      ],
+      "dont": [
+        "Never lift heavy unmonitored weights at home without certified coach supervision",
+        "Never sacrifice exercise posture just to show off high repetition numbers"
+      ],
+      "myths": [
+        {
+          "statement": "You cannot build real physical fitness unless you buy expensive gym memberships and heavy weights.",
+          "answer": "myth",
+          "truth": "Calisthenics using your own bodyweight builds exceptional functional athletic strength naturally."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most important element when performing bodyweight exercises like squats or push-ups?",
+          "options": [
+            "Rushing as fast as possible",
+            "Maintaining correct, controlled form and steady breathing",
+            "Holding your breath",
+            "Wearing fancy shoes"
+          ],
+          "correct": 1,
+          "explanation": "Proper biomechanical form protects joints and maximizes muscular benefit."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Stuck at home on a rainy day at {at}, {name} wants to do a quick 15-minute bodyweight fitness session."
+        ],
+        "question": "What balanced routine should {name} follow?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Perform a circuit of bodyweight squats, jumping jacks, knee push-ups, and a 20-second plank",
+            "note": "Engages all major compound muscle groups.",
+            "weight": 45,
+            "critical": true,
+            "keys": "bodyweight squats|push ups|jumping jacks|plank|calisthenics"
+          },
+          {
+            "point": "Focus on smooth, controlled form and breathe steadily without holding breath",
+            "note": "Protects joints and ensures muscle oxygenation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "controlled form|steady breathing|proper posture"
+          },
+          {
+            "point": "Celebrate movement and strength with family for positive energy",
+            "note": "Promotes joyful fitness lifestyle.",
+            "weight": 20,
+            "critical": false,
+            "keys": "positive energy|joyful movement"
+          }
+        ],
+        "dangerous": [
+          "do dangerous acrobatics on furniture",
+          "hold breath until fainting",
+          "give up because no gym"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Fit India Movement Guidelines (Sports Authority of India)",
+          "url": "https://fitindia.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIT-018",
+      "agentId": "stride",
+      "subtopic": "Recovery",
+      "title": "The power of rest days: Muscle recovery and injury prevention",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Muscles do NOT grow during training; exercise creates microscopic tears that rebuild stronger during rest.",
+        "Overtraining without adequate recovery causes chronic fatigue, immune breakdown, and stress fractures."
+      ],
+      "do": [
+        "Schedule at least 1 or 2 dedicated rest or light active-recovery days (gentle walks) every week",
+        "Understand that rest, nutritious meals, and quality sleep are 50% of any athletic training equation",
+        "Listen to persistent exhaustion signals: if feeling chronically burned out, take a restorative recovery day"
+      ],
+      "dont": [
+        "Never train at 100% maximum intensity 7 days a week with zero rest",
+        "Never feel guilty about taking a scheduled rest day; rest is when your body grows stronger"
+      ],
+      "myths": [
+        {
+          "statement": "Taking a rest day is a sign of laziness and will instantly make you lose all your fitness.",
+          "answer": "myth",
+          "truth": "Rest days allow glycogen replenishment and muscular tissue rebuilding; they are vital for elite performance."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens to your muscles during rest days and deep nighttime sleep?",
+          "options": [
+            "They disappear",
+            "Microscopic muscle tears repair and rebuild thicker and stronger than before",
+            "They turn to fat",
+            "Nothing"
+          ],
+          "correct": 1,
+          "explanation": "Protein synthesis and cellular tissue repair occur exclusively during periods of rest."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Training hard for athletics at {at}, {name} feels exhausted and guilty about taking a Sunday rest day."
+        ],
+        "question": "What restorative wisdom should {name} embrace?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Understand that rest days are when your body repairs muscles and rebuilds stamina",
+            "note": "Affirms biological necessity of recovery.",
+            "weight": 45,
+            "critical": true,
+            "keys": "rest days rebuild muscles|recovery|repairs tissue"
+          },
+          {
+            "point": "Take an active recovery day: enjoy a gentle walk, stretch, read, and sleep well",
+            "note": "Promotes restorative, guilt-free balance.",
+            "weight": 35,
+            "critical": true,
+            "keys": "gentle walk|sleep well|active recovery"
+          },
+          {
+            "point": "Return to training tomorrow feeling energized, refreshed, and injury-free",
+            "note": "Prevents chronic athletic burnout.",
+            "weight": 20,
+            "critical": false,
+            "keys": "refreshed|prevent burnout"
+          }
+        ],
+        "dangerous": [
+          "punish body with 7-day exhaustion",
+          "feel guilty about resting",
+          "train through extreme fatigue"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Sports Authority of India (Athlete Recovery Protocols)",
+          "url": "https://sportsauthorityofindia.nic.in"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

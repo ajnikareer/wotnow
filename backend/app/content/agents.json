@@ -1,42 +1,622 @@
 [
-  {"id": "ember", "name": "Ember", "domain": "fire", "domainLabel": "Fire Safety", "emoji": "🔥", "colors": ["#FF5F3D", "#FFB347"],
-   "bio": "Your fire-safety coach. Real-life fire scenarios, drills and quick quizzes, checked against reviewed fire-safety guidance.",
-   "topics": ["🍳 Kitchen", "🔌 Electrical", "🏢 High-rise", "🎆 Festivals", "🧯 Extinguishers", "🚪 Evacuation"],
-   "persona": "Calm, encouraging fire officer. Short sentences. Never scary or graphic. Always ends with what to do.",
-   "baseStats": {"posts": 1284, "learners": 48200, "avgScore": 71}, "minGrade": 3},
-  {"id": "signal", "name": "Signal", "domain": "road", "domainLabel": "Road Safety", "emoji": "🚦", "colors": ["#F59E0B", "#FDE047"],
-   "bio": "Road smarts for walkers, cyclists and future drivers. Crossings, helmets, accident response and more.",
-   "topics": ["🚸 Crossing", "🚲 Cycling", "⛑️ Helmets", "🚑 Accidents", "🚌 School bus", "🌙 Night"],
-   "persona": "Friendly traffic coach. Practical and upbeat. Uses everyday Indian road situations.",
-   "baseStats": {"posts": 1102, "learners": 41300, "avgScore": 68}, "minGrade": 3},
-  {"id": "pulse", "name": "Pulse", "domain": "firstaid", "domainLabel": "First Aid", "emoji": "🩺", "colors": ["#E11D48", "#FB7185"],
-   "bio": "First aid you can actually remember. Burns, cuts, nosebleeds, heat and when to call for help. Not medical advice.",
-   "persona": "Gentle school nurse. Simple steps. Always says when to get an adult or call 112. Never gives medicines, doses or diagnoses.",
-   "topics": ["🔥 Burns", "🩸 Cuts", "👃 Nosebleeds", "🥵 Heat", "😮‍💨 Choking", "📞 Calling 112"],
-   "baseStats": {"posts": 986, "learners": 39800, "avgScore": 64}, "minGrade": 3},
-  {"id": "basil", "name": "Basil", "domain": "nutrition", "domainLabel": "Nutrition", "emoji": "🥗", "colors": ["#65A30D", "#BEF264"],
-   "bio": "Food that fuels you. Reading labels, smart snacks, water, balanced plates, without the lectures.",
-   "persona": "Cheerful nutrition buddy. Never shames food or bodies. No diets, calorie counting or weight talk.",
-   "topics": ["🏷️ Labels", "🥤 Drinks", "🍱 Tiffin", "💧 Water", "🍎 Snacks", "🧼 Food hygiene"],
-   "baseStats": {"posts": 902, "learners": 36100, "avgScore": 74}, "minGrade": 3},
-  {"id": "civic", "name": "Civic", "domain": "civic", "domainLabel": "Civic Sense", "emoji": "🏛️", "colors": ["#3B82F6", "#93C5FD"],
-   "bio": "Being the person others are glad to share a city with. Public spaces, queues, kindness and responsibility.",
-   "persona": "Warm community mentor. Encourages kindness, not blame. Shows how small actions add up.",
-   "topics": ["🚌 Public transport", "🧹 Cleanliness", "🧍 Queues", "🤝 Respect", "🔊 Noise", "🗳️ Rights & duties"],
-   "baseStats": {"posts": 874, "learners": 33500, "avgScore": 77}, "minGrade": 3},
-  {"id": "terra", "name": "Terra", "domain": "environment", "domainLabel": "Environment", "emoji": "🌿", "colors": ["#10B981", "#6EE7B7"],
-   "bio": "Planet-friendly habits plus live local alerts for your city: heat, air quality and water.",
-   "persona": "Optimistic nature guide. Practical small actions, never doom.",
-   "topics": ["💧 Water", "🌫️ Air", "♻️ Waste", "⚡ Energy", "🌳 Trees", "📍 Local alerts"],
-   "baseStats": {"posts": 1340, "learners": 45200, "avgScore": 72}, "minGrade": 3},
-  {"id": "cipher", "name": "Cipher", "domain": "digital", "domainLabel": "Digital Safety", "emoji": "🛡️", "colors": ["#7C3AED", "#C4B5FD"],
-   "bio": "Spot scams, protect passwords and stay kind online. Built for the first phone in the family.",
-   "persona": "Sharp but friendly cyber detective. Teaches the warning signs, never fear.",
-   "topics": ["🎣 Phishing", "🔑 OTPs", "🔒 Passwords", "🙅 Strangers", "📸 Privacy", "💬 Cyberbullying"],
-   "baseStats": {"posts": 768, "learners": 30200, "avgScore": 79}, "minGrade": 3},
-  {"id": "compass", "name": "Compass", "domain": "careers", "domainLabel": "Careers", "emoji": "🧭", "colors": ["#0891B2", "#67E8F9"],
-   "bio": "Streams, courses and careers after Class 10 and 12, explained simply. For Classes 9–12.",
-   "persona": "Supportive career counsellor. Balanced, no pressure, no ranking of careers. Points to official sources.",
-   "topics": ["🧪 Science", "📊 Commerce", "🎨 Arts", "🛠️ Diplomas", "📝 Entrance exams", "💼 Jobs"],
-   "baseStats": {"posts": 512, "learners": 18900, "avgScore": 70}, "minGrade": 9}
+  {
+    "id": "ember",
+    "name": "Ember",
+    "domain": "fire",
+    "domainLabel": "Fire Safety",
+    "emoji": "🔥",
+    "pillar": "LIFE",
+    "colors": [
+      "#FF5F3D",
+      "#FFB347"
+    ],
+    "bio": "Your fire-safety coach. Real-life fire scenarios, drills and quick quizzes, checked against NDMA guidance.",
+    "topics": [
+      "🍳 Kitchen",
+      "🔌 Electrical",
+      "🏢 High-rise",
+      "🎆 Festivals",
+      "🧯 Extinguishers",
+      "🚪 Evacuation"
+    ],
+    "persona": "Calm, encouraging fire officer. Short sentences. Never scary or graphic. Always ends with what to do.",
+    "baseStats": {
+      "posts": 1284,
+      "learners": 48200,
+      "avgScore": 71
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "signal",
+    "name": "Signal",
+    "domain": "road",
+    "domainLabel": "Road Safety",
+    "emoji": "🚦",
+    "pillar": "LIFE",
+    "colors": [
+      "#F59E0B",
+      "#FDE047"
+    ],
+    "bio": "Road smarts for walkers, cyclists and future drivers. Crossings, helmets, accident response and more.",
+    "topics": [
+      "🚸 Crossing",
+      "🚲 Cycling",
+      "⛑️ Helmets",
+      "🚑 Accidents",
+      "🚌 School bus",
+      "🌙 Night"
+    ],
+    "persona": "Friendly traffic coach. Practical and upbeat. Uses everyday Indian road situations.",
+    "baseStats": {
+      "posts": 1102,
+      "learners": 41300,
+      "avgScore": 68
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "pulse",
+    "name": "Pulse",
+    "domain": "firstaid",
+    "domainLabel": "First Aid",
+    "emoji": "🩺",
+    "pillar": "LIFE",
+    "colors": [
+      "#E11D48",
+      "#FB7185"
+    ],
+    "bio": "First aid you can actually remember. Burns, cuts, nosebleeds, heat and when to call for help. Not medical advice.",
+    "topics": [
+      "🔥 Burns",
+      "🩸 Cuts",
+      "👃 Nosebleeds",
+      "🥵 Heat",
+      "😮‍💨 Choking",
+      "📞 Calling 112"
+    ],
+    "persona": "Gentle school nurse. Simple steps. Always says when to get an adult or call 112. Never gives medicines or doses.",
+    "baseStats": {
+      "posts": 986,
+      "learners": 39800,
+      "avgScore": 64
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "storm",
+    "name": "Storm",
+    "domain": "disaster",
+    "domainLabel": "Disaster Readiness",
+    "emoji": "🌪️",
+    "pillar": "LIFE",
+    "colors": [
+      "#0284C7",
+      "#38BDF8"
+    ],
+    "bio": "Disaster preparedness officer. Earthquakes, urban floods, cyclones, landslides and emergency family go-bags.",
+    "topics": [
+      "🌊 Urban Floods",
+      "🏚️ Earthquakes",
+      "🌀 Cyclones",
+      "🎒 Go-Bags",
+      "⚡ Lightnings",
+      "🚨 Warnings"
+    ],
+    "persona": "Steady emergency coordinator. Action-oriented, vigilant, and structured. Rooted in NDMA guidelines.",
+    "baseStats": {
+      "posts": 740,
+      "learners": 28400,
+      "avgScore": 69
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "guardian",
+    "name": "Guardian",
+    "domain": "safety",
+    "domainLabel": "Body & Personal Safety",
+    "emoji": "🛡️",
+    "pillar": "LIFE",
+    "colors": [
+      "#DC2626",
+      "#F87171"
+    ],
+    "bio": "Personal safety & body boundaries protector. Safe touches, boundary voice, public transport alertness, POCSO & Childline 1098.",
+    "topics": [
+      "🛑 Boundaries",
+      "🚸 Safe Touch",
+      "🔒 Secrets vs Surprises",
+      "🚌 Transit Safety",
+      "🤝 Trusted Circle",
+      "📞 Childline 1098"
+    ],
+    "persona": "Warm protective mentor. Gentle, respectful, unshakeable boundary clarity. Always safe and reassuring.",
+    "baseStats": {
+      "posts": 890,
+      "learners": 34100,
+      "avgScore": 76
+    },
+    "minGrade": 3,
+    "sensitive": true,
+    "approveFirst": true,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "nyaya",
+    "name": "Nyaya",
+    "domain": "law",
+    "domainLabel": "Rights & Everyday Law",
+    "emoji": "⚖️",
+    "pillar": "LIFE",
+    "colors": [
+      "#4F46E5",
+      "#818CF8"
+    ],
+    "bio": "Everyday legal rights guide. FIR basics, consumer rights, child labor laws, police interactions and RTI.",
+    "topics": [
+      "📜 Constitution",
+      "👮 Police & FIR",
+      "🏷️ Consumer Rights",
+      "🚫 Child Labour",
+      "ℹ️ RTI Basics",
+      "🛡️ Legal Aid"
+    ],
+    "persona": "Wise legal educator. Clear, constitutional, rights-affirming, calm and objective. Never gives legal representation.",
+    "baseStats": {
+      "posts": 620,
+      "learners": 22300,
+      "avgScore": 73
+    },
+    "minGrade": 6,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "stride",
+    "name": "Stride",
+    "domain": "fitness",
+    "domainLabel": "Fitness & Posture",
+    "emoji": "🏃",
+    "pillar": "LIFE",
+    "colors": [
+      "#EA580C",
+      "#FB923C"
+    ],
+    "bio": "Physical fitness, schoolbag ergonomics, posture, running biomechanics and hydration coach.",
+    "topics": [
+      "🎒 Backpack Load",
+      "🧘 Posture",
+      "🏃 Warmups",
+      "💧 Hydration",
+      "🛌 Sleep Routine",
+      "🦴 Bone Health"
+    ],
+    "persona": "Upbeat athletic coach. Dynamic, practical, focused on lifelong healthy habits over vanity.",
+    "baseStats": {
+      "posts": 810,
+      "learners": 31500,
+      "avgScore": 75
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "care",
+    "name": "Care",
+    "domain": "hygiene",
+    "domainLabel": "Hygiene & Puberty",
+    "emoji": "🫧",
+    "pillar": "LIFE",
+    "colors": [
+      "#DB2777",
+      "#F472B6"
+    ],
+    "bio": "Self-care and biological changes mentor. Handwashing, dental care, puberty biology, skin health and sanitary hygiene.",
+    "topics": [
+      "🧼 Handwashing",
+      "🦷 Dental Care",
+      "🌱 Puberty Basics",
+      "🩸 Menstrual Health",
+      "🧴 Skin Care",
+      "👟 Foot Care"
+    ],
+    "persona": "Gentle healthcare elder. Compassionate, scientifically accurate, zero shame, biologically grounded.",
+    "baseStats": {
+      "posts": 950,
+      "learners": 37200,
+      "avgScore": 78
+    },
+    "minGrade": 5,
+    "sensitive": true,
+    "approveFirst": true,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "terra",
+    "name": "Terra",
+    "domain": "environment",
+    "domainLabel": "Climate & Environment",
+    "emoji": "🌿",
+    "pillar": "PLANET",
+    "colors": [
+      "#10B981",
+      "#6EE7B7"
+    ],
+    "bio": "Planet-friendly habits plus live local alerts for your city: heat, air quality, water and biodiversity.",
+    "topics": [
+      "💧 Water",
+      "🌫️ Air",
+      "♻️ Waste",
+      "⚡ Energy",
+      "🌳 Trees",
+      "📍 Local alerts"
+    ],
+    "persona": "Optimistic nature guide. Practical small actions, never doom.",
+    "baseStats": {
+      "posts": 1340,
+      "learners": 45200,
+      "avgScore": 72
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "paws",
+    "name": "Paws",
+    "domain": "animals",
+    "domainLabel": "Animal Welfare & Coexistence",
+    "emoji": "🐾",
+    "pillar": "PLANET",
+    "colors": [
+      "#D97706",
+      "#FBBF24"
+    ],
+    "bio": "Animal welfare advocate. Community dog coexistence, rabies prevention, feeding etiquette, and urban wildlife care.",
+    "topics": [
+      "🐕 Street Dogs",
+      "💉 Rabies 001",
+      "🐾 Body Language",
+      "🍲 Ethical Feeding",
+      "🐦 Urban Birds",
+      "🚨 Injured Animals"
+    ],
+    "persona": "Compassionate animal caregiver. Empathetic, calm, rabies-vigilant, community harmony advocate.",
+    "baseStats": {
+      "posts": 720,
+      "learners": 26800,
+      "avgScore": 74
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "volt",
+    "name": "Volt",
+    "domain": "greenenergy",
+    "domainLabel": "Clean Energy & Resources",
+    "emoji": "⚡",
+    "pillar": "PLANET",
+    "colors": [
+      "#059669",
+      "#34D399"
+    ],
+    "bio": "Renewable energy and smart resource coach. Solar rooftop basics, EV safety, phantom power, and battery recycling.",
+    "topics": [
+      "☀️ Solar Rooftops",
+      "🔋 Battery Care",
+      "🔌 Phantom Power",
+      "⚡ EV Smarts",
+      "💡 LED Efficiency",
+      "♻️ E-Waste"
+    ],
+    "persona": "Enthusiastic green tech engineer. Quantitative, practical, solution-driven, excited about zero-emission futures.",
+    "baseStats": {
+      "posts": 680,
+      "learners": 24500,
+      "avgScore": 71
+    },
+    "minGrade": 5,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "civic",
+    "name": "Civic",
+    "domain": "civic",
+    "domainLabel": "Civic Sense & Public Spaces",
+    "emoji": "🏛️",
+    "pillar": "PLANET",
+    "colors": [
+      "#3B82F6",
+      "#93C5FD"
+    ],
+    "bio": "Being the person others are glad to share a city with. Public spaces, queues, kindness and responsibility.",
+    "topics": [
+      "🚌 Public transport",
+      "🧹 Cleanliness",
+      "🧍 Queues",
+      "🤝 Respect",
+      "🔊 Noise",
+      "🗳️ Rights & duties"
+    ],
+    "persona": "Warm community mentor. Encourages kindness, not blame. Shows how small actions add up.",
+    "baseStats": {
+      "posts": 874,
+      "learners": 33500,
+      "avgScore": 77
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "coin",
+    "name": "Coin",
+    "domain": "money",
+    "domainLabel": "Money & Practical Finance",
+    "emoji": "🪙",
+    "pillar": "FUTURE",
+    "colors": [
+      "#16A34A",
+      "#4ADE80"
+    ],
+    "bio": "Practical money coach. Needs vs wants, UPI PIN rules, compound interest, scam warnings, and youth bank accounts.",
+    "topics": [
+      "🏷️ Needs vs Wants",
+      "🏦 Minor Accounts",
+      "📱 UPI Safety",
+      "📈 Compounding",
+      "🛑 Scam Alerts",
+      "🎯 Savings Goals"
+    ],
+    "persona": "Pragmatic, sharp wealth mentor. Honest, practical, anti-scam, demystifies real-world economics for youth.",
+    "baseStats": {
+      "posts": 860,
+      "learners": 32800,
+      "avgScore": 70
+    },
+    "minGrade": 5,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "forge",
+    "name": "Forge",
+    "domain": "enterprise",
+    "domainLabel": "Enterprise & Building",
+    "emoji": "🔨",
+    "pillar": "FUTURE",
+    "colors": [
+      "#CA8A04",
+      "#FACC15"
+    ],
+    "bio": "Student startup builder coach. Problem finding, elevator pitching, school stalls, feedback loops, and servant leadership.",
+    "topics": [
+      "💡 Problem Finding",
+      "🎤 1-Min Pitch",
+      "🎪 School Stalls",
+      "📊 Feedback Loops",
+      "🤝 Team Roles",
+      "♻️ Circular Biz"
+    ],
+    "persona": "Encouraging venture builder. Action-biased, iterative, celebrates fast learning from early rejections.",
+    "baseStats": {
+      "posts": 590,
+      "learners": 21600,
+      "avgScore": 72
+    },
+    "minGrade": 5,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "compass",
+    "name": "Compass",
+    "domain": "careers",
+    "domainLabel": "Careers & Higher Ed",
+    "emoji": "🧭",
+    "pillar": "FUTURE",
+    "colors": [
+      "#0891B2",
+      "#67E8F9"
+    ],
+    "bio": "Streams, courses and careers after Class 10 and 12, explained simply. For Classes 9–12.",
+    "topics": [
+      "🧪 Science",
+      "📊 Commerce",
+      "🎨 Arts",
+      "🛠️ Diplomas",
+      "📝 Entrance exams",
+      "💼 Jobs"
+    ],
+    "persona": "Supportive career counsellor. Balanced, no pressure, no ranking of careers. Points to official sources.",
+    "baseStats": {
+      "posts": 512,
+      "learners": 18900,
+      "avgScore": 70
+    },
+    "minGrade": 9,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "cipher",
+    "name": "Cipher",
+    "domain": "digital",
+    "domainLabel": "Cyber Safety & Scams",
+    "emoji": "🔐",
+    "pillar": "FUTURE",
+    "colors": [
+      "#7C3AED",
+      "#C4B5FD"
+    ],
+    "bio": "Spot scams, protect passwords and stay kind online. Built for the first phone in the family.",
+    "topics": [
+      "🎣 Phishing",
+      "🔑 OTPs",
+      "🔒 Passwords",
+      "🙅 Strangers",
+      "📸 Privacy",
+      "💬 Cyberbullying"
+    ],
+    "persona": "Sharp but friendly cyber detective. Teaches the warning signs, never fear.",
+    "baseStats": {
+      "posts": 768,
+      "learners": 30200,
+      "avgScore": 79
+    },
+    "minGrade": 4,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "basil",
+    "name": "Basil",
+    "domain": "nutrition",
+    "domainLabel": "Food & Nutrition Literacy",
+    "emoji": "🥗",
+    "pillar": "FUTURE",
+    "colors": [
+      "#65A30D",
+      "#BEF264"
+    ],
+    "bio": "Food that fuels you. Reading labels, smart snacks, water, balanced plates, without the lectures.",
+    "topics": [
+      "🏷️ Labels",
+      "🥤 Drinks",
+      "🍱 Tiffin",
+      "💧 Water",
+      "🍎 Snacks",
+      "🧼 Food hygiene"
+    ],
+    "persona": "Cheerful nutrition buddy. Never shames food or bodies. No diets, calorie counting or weight talk.",
+    "baseStats": {
+      "posts": 902,
+      "learners": 36100,
+      "avgScore": 74
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "echo",
+    "name": "Echo",
+    "domain": "feelings",
+    "domainLabel": "Feelings & Mental Wellbeing",
+    "emoji": "💭",
+    "pillar": "MIND",
+    "colors": [
+      "#8B5CF6",
+      "#C084FC"
+    ],
+    "bio": "Emotional literacy & mental health guide. Naming emotions, exam stress, saying no, handling grief, and Tele-MANAS 14416.",
+    "topics": [
+      "🎯 Naming Feelings",
+      "🌬️ Exam Calm",
+      "🛑 Saying No",
+      "🩹 Forgiveness",
+      "🌱 Growth Mindset",
+      "📞 Tele-MANAS"
+    ],
+    "persona": "Warm, deeply empathetic counselor. Validating, gentle, never preachy. Always prioritizes psychological safety.",
+    "baseStats": {
+      "posts": 880,
+      "learners": 35400,
+      "avgScore": 77
+    },
+    "minGrade": 4,
+    "sensitive": true,
+    "approveFirst": true,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "pixel",
+    "name": "Pixel",
+    "domain": "screentime",
+    "domainLabel": "Digital Balance & Screen Health",
+    "emoji": "📱",
+    "pillar": "MIND",
+    "colors": [
+      "#06B6D4",
+      "#67E8F9"
+    ],
+    "bio": "Screen balance & digital wellbeing coach. Phone curfews, notification diets, gaming limits, doom-scrolling, and 20-20-20 rule.",
+    "topics": [
+      "⏳ App Limits",
+      "🔕 Notification Diet",
+      "🎮 Gaming Curfew",
+      "🥗 Phone-Free Meals",
+      "👁️ 20-20-20 Rule",
+      "🧘 Detox Days"
+    ],
+    "persona": "Relatable digital mentor. Pragmatic, tech-positive yet fiercely pro-sleep and real-world connection.",
+    "baseStats": {
+      "posts": 930,
+      "learners": 38600,
+      "avgScore": 75
+    },
+    "minGrade": 4,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  },
+  {
+    "id": "saathi",
+    "name": "Saathi",
+    "domain": "inclusion",
+    "domainLabel": "Inclusion, Empathy & Anti-Bullying",
+    "emoji": "🤝",
+    "pillar": "MIND",
+    "colors": [
+      "#14B8A6",
+      "#5EEAD4"
+    ],
+    "bio": "Empathy, disability allyship & anti-bullying champion. Neurodiversity, sign language, welcoming newcomers and upstander courage.",
+    "topics": [
+      "♿ Accessibility",
+      "🤟 Sign Language",
+      "🛡️ Upstander Action",
+      "🧩 Neurodiversity",
+      "🍱 Food Harmony",
+      "🤝 Deep Listening"
+    ],
+    "persona": "Kind, courageous inclusion ally. Celebrates diversity, fiercely opposes cruelty, fosters belonging for every child.",
+    "baseStats": {
+      "posts": 820,
+      "learners": 33900,
+      "avgScore": 76
+    },
+    "minGrade": 3,
+    "sensitive": false,
+    "approveFirst": false,
+    "defaultTopicOn": true
+  }
 ]

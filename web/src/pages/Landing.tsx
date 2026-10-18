@@ -78,7 +78,7 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
           </h1>
           <p className="text-[15px] sm:text-[15.5px] text-muted mt-3 max-w-xl leading-relaxed">
             Life doesn’t arrive as textbook questions. When an oil pan catches fire, a friend gets injured, or an online scam strikes, reading passive tips isn’t enough. 
-            On wotnow, 8 specialized AI coaches present real-world situations every day. Students respond in their own words, build instant decision-making instincts, and learn what to do before the real moment comes.
+            On wotnow, 20 specialized AI coaches present real-world situations every day across 4 essential pillars. Students respond in their own words, build instant decision-making instincts, and learn what to do before the real moment comes.
           </p>
           <div className="flex flex-wrap gap-3 mt-5 md:mt-6">
             <button className="btn-grad !px-6 !py-3 !text-[14.5px]" onClick={primary.go}><Icon name={primary.icon} className="w-5 h-5" />{primary.label}</button>
@@ -86,8 +86,8 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
             {inDemo && <button className="btn-ghost !px-5 !py-3 !text-[14.5px]" onClick={() => navigate('/signin')}>Sign in or sign up</button>}
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4 md:mt-5 text-[12px] text-muted">
-            <span className="flex items-center gap-1.5"><Icon name="shield" className="w-3.5 h-3.5 text-ok" />Only experts post</span>
-            <span className="flex items-center gap-1.5"><Icon name="lock" className="w-3.5 h-3.5 text-ok" />No DMs, no strangers</span>
+            <span className="flex items-center gap-1.5"><Icon name="shield" className="w-3.5 h-3.5 text-ok" />20 verified AI mentors</span>
+            <span className="flex items-center gap-1.5"><Icon name="lock" className="w-3.5 h-3.5 text-ok" />No DMs, safe social</span>
             <span className="flex items-center gap-1.5"><Icon name="clock" className="w-3.5 h-3.5 text-ok" />Parent time limits</span>
             <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-3.5 h-3.5 text-brand-violet" />Powered by Gemini</span>
           </div>
@@ -122,52 +122,64 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
         </div>
       </section>
 
-      {/* 3 Pillars Section */}
+      {/* 4 Pillars Section */}
       <section id="pillars" className="max-w-6xl mx-auto px-5 md:px-8 py-14">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="text-xs font-extrabold tracking-widest uppercase text-brand-violet">Prepared for Everything</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">Three pillars school <span className="grad-text">doesn’t teach.</span></h2>
-          <p className="text-muted mt-2 text-[15.5px]">Life doesn’t come with a syllabus. wotnow builds daily decision-making instincts across the three biggest gaps young people face.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">Four pillars school <span className="grad-text">doesn’t teach.</span></h2>
+          <p className="text-muted mt-2 text-[15.5px]">Life doesn’t come with a syllabus. wotnow builds daily decision-making instincts across the four biggest dimensions young people face.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {/* LIFE */}
-          <div className="card p-6 border-line hover:border-brand-violet/40 transition flex flex-col">
-            <div className="w-12 h-12 rounded-2xl bg-brand-violet/15 flex items-center justify-center text-2xl mb-4">🧯</div>
-            <div className="text-xs font-extrabold uppercase tracking-wider text-brand-violet">Pillar 1 · Real Emergencies</div>
-            <h3 className="text-xl font-bold mt-1 text-ink">LIFE: Instincts, not tips</h3>
-            <p className="text-muted text-sm mt-2 leading-relaxed flex-1">
-              Fire safety, medical first response, road rules, civic sense, and cyber security. Practised as active decisions scored by meaning — so students know the specific step they missed before an emergency strikes.
+          <div className="card p-5 border-line hover:border-brand-violet/40 transition flex flex-col">
+            <div className="w-11 h-11 rounded-2xl bg-brand-violet/15 flex items-center justify-center text-2xl mb-3">🧯</div>
+            <div className="text-[11px] font-extrabold uppercase tracking-wider text-brand-violet">Pillar 1 · Emergency & Safety</div>
+            <h3 className="text-lg font-bold mt-1 text-ink">LIFE</h3>
+            <p className="text-muted text-xs sm:text-sm mt-2 leading-relaxed flex-1">
+              Fire safety, first aid, road response, disaster drills, body boundaries, everyday legal rights, and fitness ergonomics.
             </p>
-            <div className="mt-4 pt-3 border-t border-line/60 flex items-center gap-1.5 text-xs text-muted font-medium">
-              Coaches: <span className="font-bold text-ink">Ember, Signal, Pulse, Basil, Civic, Cipher</span>
+            <div className="mt-3 pt-2.5 border-t border-line/60 text-[11px] text-muted">
+              <b>8 Coaches:</b> Ember, Signal, Pulse, Storm, Guardian, Nyaya, Stride, Care
             </div>
           </div>
 
           {/* PLANET */}
-          <div className="card p-6 border-line hover:border-ok/40 transition flex flex-col relative overflow-hidden">
-            <div className="absolute top-3 right-3 text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-ok/15 text-ok border border-ok/30">FLAGSHIP MISSION</div>
-            <div className="w-12 h-12 rounded-2xl bg-ok/15 flex items-center justify-center text-2xl mb-4">🌿</div>
-            <div className="text-xs font-extrabold uppercase tracking-wider text-ok">Pillar 2 · Sustainability</div>
-            <h3 className="text-xl font-bold mt-1 text-ink">PLANET: Daily climate habit</h3>
-            <p className="text-muted text-sm mt-2 leading-relaxed flex-1">
-              Everyday sustainability made personal. Terra brings relatable situations on waste segregation, energy, and water, plus <b>live morning alerts tailored to today's real weather & air quality (AQI) in your city</b>.
+          <div className="card p-5 border-line hover:border-ok/40 transition flex flex-col">
+            <div className="w-11 h-11 rounded-2xl bg-ok/15 flex items-center justify-center text-2xl mb-3">🌿</div>
+            <div className="text-[11px] font-extrabold uppercase tracking-wider text-ok">Pillar 2 · Environment & City</div>
+            <h3 className="text-lg font-bold mt-1 text-ink">PLANET</h3>
+            <p className="text-muted text-xs sm:text-sm mt-2 leading-relaxed flex-1">
+              Everyday sustainability, animal coexistence & rabies care, solar & green tech, civic responsibility and live city alerts.
             </p>
-            <div className="mt-4 pt-3 border-t border-line/60 flex items-center gap-1.5 text-xs text-muted font-medium">
-              Flagship Coach: <span className="font-bold text-ink">Terra (Environmental AI)</span>
+            <div className="mt-3 pt-2.5 border-t border-line/60 text-[11px] text-muted">
+              <b>4 Coaches:</b> Terra, Paws, Volt, Civic
             </div>
           </div>
 
           {/* FUTURE */}
-          <div className="card p-6 border-line hover:border-cyan-400/40 transition flex flex-col">
-            <div className="w-12 h-12 rounded-2xl bg-cyan-400/15 flex items-center justify-center text-2xl mb-4">🧭</div>
-            <div className="text-xs font-extrabold uppercase tracking-wider text-cyan-400">Pillar 3 · Classes 9 to 12</div>
-            <h3 className="text-xl font-bold mt-1 text-ink">FUTURE: Career discovery</h3>
-            <p className="text-muted text-sm mt-2 leading-relaxed flex-1">
-              Over 90% of students make Class 10 and 12 stream decisions without career guidance. Compass introduces real-world streams — tech, climate, design, and vocational careers — through situations, without rigid prescriptions.
+          <div className="card p-5 border-line hover:border-amber-400/40 transition flex flex-col">
+            <div className="w-11 h-11 rounded-2xl bg-amber-400/15 flex items-center justify-center text-2xl mb-3">🪙</div>
+            <div className="text-[11px] font-extrabold uppercase tracking-wider text-amber-500">Pillar 3 · Finance & Career</div>
+            <h3 className="text-lg font-bold mt-1 text-ink">FUTURE</h3>
+            <p className="text-muted text-xs sm:text-sm mt-2 leading-relaxed flex-1">
+              Practical money, UPI safety, enterprise building, cyber defense, career pathways, and nutrition literacy without diets.
             </p>
-            <div className="mt-4 pt-3 border-t border-line/60 flex items-center gap-1.5 text-xs text-muted font-medium">
-              Career Coach: <span className="font-bold text-ink">Compass (Pathfinder AI)</span>
+            <div className="mt-3 pt-2.5 border-t border-line/60 text-[11px] text-muted">
+              <b>5 Coaches:</b> Coin, Forge, Compass, Cipher, Basil
+            </div>
+          </div>
+
+          {/* MIND */}
+          <div className="card p-5 border-line hover:border-cyan-400/40 transition flex flex-col">
+            <div className="w-11 h-11 rounded-2xl bg-cyan-400/15 flex items-center justify-center text-2xl mb-3">🧠</div>
+            <div className="text-[11px] font-extrabold uppercase tracking-wider text-cyan-500">Pillar 4 · Mental & Social</div>
+            <h3 className="text-lg font-bold mt-1 text-ink">MIND</h3>
+            <p className="text-muted text-xs sm:text-sm mt-2 leading-relaxed flex-1">
+              Emotional regulation, exam calm, screen & gaming balance, neurodiversity, sign language, and upstander anti-bullying.
+            </p>
+            <div className="mt-3 pt-2.5 border-t border-line/60 text-[11px] text-muted">
+              <b>3 Coaches:</b> Echo, Pixel, Saathi
             </div>
           </div>
         </div>

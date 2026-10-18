@@ -1,364 +1,1843 @@
 {
- "agentId": "pulse",
- "cards": [
-  {
-   "id": "AID-002",
-   "subtopic": "Burns",
-   "title": "Minor burns",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Cooling a burn under cool running water for about 20 minutes limits the damage.",
-    "Ice, butter and toothpaste can trap heat or damage skin.",
-    "Burns to the face, hands, or large areas need medical help."
-   ],
-   "do": [
-    "Cool the burn under cool (not icy) running water for about 20 minutes",
-    "Remove rings or tight items near the burn, unless stuck",
-    "Cover loosely with cling film or a clean, non-fluffy cloth",
-    "Tell an adult; get medical help for big burns or burns on face or hands"
-   ],
-   "dont": [
-    "No ice, butter, oil or toothpaste",
-    "Don't pop blisters",
-    "Don't use fluffy cotton wool"
-   ],
-   "myths": [
+  "agentId": "pulse",
+  "cards": [
     {
-     "statement": "Putting toothpaste on a burn helps it heal faster.",
-     "answer": "myth",
-     "truth": "Toothpaste can trap heat and irritate the skin. Cool it under running water for about 20 minutes."
+      "id": "AID-002",
+      "subtopic": "Burns",
+      "title": "Minor burns",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Cooling a burn under cool running water for about 20 minutes limits the damage.",
+        "Ice, butter and toothpaste can trap heat or damage skin.",
+        "Burns to the face, hands, or large areas need medical help."
+      ],
+      "do": [
+        "Cool the burn under cool (not icy) running water for about 20 minutes",
+        "Remove rings or tight items near the burn, unless stuck",
+        "Cover loosely with cling film or a clean, non-fluffy cloth",
+        "Tell an adult; get medical help for big burns or burns on face or hands"
+      ],
+      "dont": [
+        "No ice, butter, oil or toothpaste",
+        "Don't pop blisters",
+        "Don't use fluffy cotton wool"
+      ],
+      "myths": [
+        {
+          "statement": "Putting toothpaste on a burn helps it heal faster.",
+          "answer": "myth",
+          "truth": "Toothpaste can trap heat and irritate the skin. Cool it under running water for about 20 minutes."
+        },
+        {
+          "statement": "Holding a small burn under cool running water is the right first step.",
+          "answer": "fact",
+          "truth": "Cool water for about 20 minutes reduces pain and damage."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You touch a hot pan and burn your finger. What first?",
+          "options": [
+            "Rub ice on it",
+            "Cool it under running water",
+            "Put butter on it",
+            "Pop the blister"
+          ],
+          "correct": 1,
+          "explanation": "Cool running water for about 20 minutes is the right first step."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{At}, {name} accidentally touches the hot handle of a pressure cooker and burns their palm. {relation} says 'Quick, put toothpaste on it!'"
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "🍲",
+          "✋",
+          "💧"
+        ],
+        "bubble": "Toothpaste fixes it!",
+        "rubric": [
+          {
+            "point": "Cool it under cool running water for about 20 minutes",
+            "note": "This limits the damage.",
+            "weight": 45,
+            "critical": true,
+            "keys": "water|tap|cool|rinse"
+          },
+          {
+            "point": "No toothpaste, ice or butter",
+            "note": "They can make the burn worse.",
+            "weight": 25,
+            "critical": true,
+            "keys": "(no|not|never|don'?t)[^.]{0,25}(toothpaste|ice|butter|oil)"
+          },
+          {
+            "point": "Cover loosely with a clean cloth or cling film",
+            "note": "Protects the skin.",
+            "weight": 15,
+            "critical": false,
+            "keys": "cover|cling|clean cloth|bandage|dressing"
+          },
+          {
+            "point": "Tell an adult / get medical help if it's big",
+            "note": "Hand burns can need a doctor.",
+            "weight": 15,
+            "critical": false,
+            "keys": "adult|parent|doctor|hospital|nurse|teacher|112"
+          }
+        ],
+        "dangerous": [
+          "(put|apply|use|rub)[^.]{0,15}(toothpaste|ice|butter|oil|ghee)",
+          "pop[^.]{0,10}blister"
+        ],
+        "settings": [
+          "home",
+          "grandparents' house",
+          "hostel"
+        ]
+      },
+      "agentId": "pulse",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
     },
     {
-     "statement": "Holding a small burn under cool running water is the right first step.",
-     "answer": "fact",
-     "truth": "Cool water for about 20 minutes reduces pain and damage."
-    }
-   ],
-   "quiz": [
+      "id": "AID-011",
+      "subtopic": "Nosebleeds",
+      "title": "Nosebleeds",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Leaning forward stops blood running down the throat.",
+        "Pinching the soft part of the nose for 10–15 minutes stops most nosebleeds."
+      ],
+      "do": [
+        "Sit down and lean forward",
+        "Pinch the soft part of the nose for 10–15 minutes without letting go",
+        "Breathe through the mouth",
+        "Get medical help if it lasts more than 20 minutes or followed a head injury"
+      ],
+      "dont": [
+        "Don't tilt the head back",
+        "Don't lie down",
+        "Don't blow the nose right after"
+      ],
+      "myths": [
+        {
+          "statement": "For a nosebleed, tilt your head back.",
+          "answer": "myth",
+          "truth": "Lean forward instead, so blood doesn't run down your throat, and pinch the soft part of the nose."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your friend has a nosebleed. How should they sit?",
+          "options": [
+            "Lie flat",
+            "Lean forward",
+            "Tilt head back",
+            "Stand on one leg"
+          ],
+          "correct": 1,
+          "explanation": "Lean forward and pinch the soft part of the nose for 10–15 minutes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During class {at}, {name}'s friend suddenly gets a nosebleed and looks scared. Someone shouts 'Tilt your head back!'"
+        ],
+        "question": "How should {name} help?",
+        "emojis": [
+          "🩸",
+          "🧑‍🎓",
+          "🏫"
+        ],
+        "bubble": "Tilt your head back!",
+        "rubric": [
+          {
+            "point": "Sit up and lean forward (not back)",
+            "note": "Leaning back makes blood run down the throat.",
+            "weight": 35,
+            "critical": true,
+            "keys": "lean[^.]{0,10}forward|head[^.]{0,10}forward|bend forward|(not|no|don'?t)[^.]{0,15}back"
+          },
+          {
+            "point": "Pinch the soft part of the nose",
+            "note": "Pinch just below the bony part for about 10 minutes.",
+            "weight": 35,
+            "critical": true,
+            "keys": "pinch|press|squeeze"
+          },
+          {
+            "point": "Stay calm and tell a teacher",
+            "note": "An adult can help.",
+            "weight": 15,
+            "critical": false,
+            "keys": "teacher|adult|calm"
+          },
+          {
+            "point": "Get help if it doesn't stop in 20 minutes",
+            "note": "Long or heavy bleeding needs a doctor.",
+            "weight": 15,
+            "critical": false,
+            "keys": "doctor|nurse|minutes|doesn'?t stop|hospital|medical"
+          }
+        ],
+        "dangerous": [
+          "tilt[^.]{0,15}back",
+          "lie (down|flat)"
+        ],
+        "settings": [
+          "school classroom",
+          "tuition class",
+          "coaching centre"
+        ]
+      },
+      "agentId": "pulse",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "You touch a hot pan and burn your finger. What first?",
-     "options": [
-      "Rub ice on it",
-      "Cool it under running water",
-      "Put butter on it",
-      "Pop the blister"
-     ],
-     "correct": 1,
-     "explanation": "Cool running water for about 20 minutes is the right first step."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "{At}, {name} accidentally touches the hot handle of a pressure cooker and burns their palm. {relation} says 'Quick, put toothpaste on it!'"
-    ],
-    "question": "What should {name} do?",
-    "emojis": [
-     "🍲",
-     "✋",
-     "💧"
-    ],
-    "bubble": "Toothpaste fixes it!",
-    "rubric": [
-     {
-      "point": "Cool it under cool running water for about 20 minutes",
-      "note": "This limits the damage.",
-      "weight": 45,
-      "critical": true,
-      "keys": "water|tap|cool|rinse"
-     },
-     {
-      "point": "No toothpaste, ice or butter",
-      "note": "They can make the burn worse.",
-      "weight": 25,
-      "critical": true,
-      "keys": "(no|not|never|don'?t)[^.]{0,25}(toothpaste|ice|butter|oil)"
-     },
-     {
-      "point": "Cover loosely with a clean cloth or cling film",
-      "note": "Protects the skin.",
-      "weight": 15,
-      "critical": false,
-      "keys": "cover|cling|clean cloth|bandage|dressing"
-     },
-     {
-      "point": "Tell an adult / get medical help if it's big",
-      "note": "Hand burns can need a doctor.",
-      "weight": 15,
-      "critical": false,
-      "keys": "adult|parent|doctor|hospital|nurse|teacher|112"
-     }
-    ],
-    "dangerous": [
-     "(put|apply|use|rub)[^.]{0,15}(toothpaste|ice|butter|oil|ghee)",
-     "pop[^.]{0,10}blister"
-    ],
-    "settings": [
-     "home",
-     "grandparents' house",
-     "hostel"
-    ]
-   },
-   "agentId": "pulse",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "AID-011",
-   "subtopic": "Nosebleeds",
-   "title": "Nosebleeds",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Leaning forward stops blood running down the throat.",
-    "Pinching the soft part of the nose for 10–15 minutes stops most nosebleeds."
-   ],
-   "do": [
-    "Sit down and lean forward",
-    "Pinch the soft part of the nose for 10–15 minutes without letting go",
-    "Breathe through the mouth",
-    "Get medical help if it lasts more than 20 minutes or followed a head injury"
-   ],
-   "dont": [
-    "Don't tilt the head back",
-    "Don't lie down",
-    "Don't blow the nose right after"
-   ],
-   "myths": [
+      "id": "AID-008",
+      "subtopic": "Heat illness",
+      "title": "Heat exhaustion and heatstroke",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Heatstroke is an emergency: very hot body, confusion or fainting.",
+        "Thirst, headache, dizziness and heavy sweating are early warning signs."
+      ],
+      "do": [
+        "Move the person to shade or a cool room",
+        "Loosen tight clothing",
+        "Give small sips of water if they're awake",
+        "Cool them with wet cloths and fanning",
+        "Call 112 if they are confused, faint or very hot"
+      ],
+      "dont": [
+        "Don't give fizzy or energy drinks",
+        "Don't leave them alone",
+        "Don't force water if they're drowsy"
+      ],
+      "myths": [
+        {
+          "statement": "If you're not thirsty, you can't be getting dehydrated.",
+          "answer": "myth",
+          "truth": "Thirst comes late. Drink regularly in hot weather and during sport."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A friend feels dizzy and sick after football in the sun. First step?",
+          "options": [
+            "Keep playing",
+            "Move to shade and sip water",
+            "Have an energy drink",
+            "Run home"
+          ],
+          "correct": 1,
+          "explanation": "Cool down in the shade and sip water. Call for help if they get confused or faint."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "It's {time} {at}. After a long race in the sun, {name}'s teammate says they feel dizzy, has a headache and is very red in the face."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "🥵",
+          "☀️",
+          "🏃"
+        ],
+        "bubble": "I'm fine… just dizzy.",
+        "rubric": [
+          {
+            "point": "Move them to shade or a cool place",
+            "note": "Get out of the heat first.",
+            "weight": 30,
+            "critical": true,
+            "keys": "shade|cool (place|room)|indoors|inside|fan|ac\\b"
+          },
+          {
+            "point": "Give sips of water",
+            "note": "Small sips, if they're awake.",
+            "weight": 25,
+            "critical": false,
+            "keys": "water|sip|drink"
+          },
+          {
+            "point": "Cool them down (wet cloth, loosen clothes)",
+            "note": "Cooling the skin helps.",
+            "weight": 20,
+            "critical": false,
+            "keys": "wet|cloth|towel|loosen|splash|cool"
+          },
+          {
+            "point": "Tell an adult / call 112 if confused or fainting",
+            "note": "Heatstroke is an emergency.",
+            "weight": 25,
+            "critical": true,
+            "keys": "adult|teacher|coach|112|ambulance|doctor"
+          }
+        ],
+        "dangerous": [
+          "keep (playing|running)",
+          "energy drink"
+        ],
+        "settings": [
+          "sports ground",
+          "school playground",
+          "park"
+        ],
+        "times": [
+          "a hot afternoon",
+          "lunch break"
+        ]
+      },
+      "agentId": "pulse",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "statement": "For a nosebleed, tilt your head back.",
-     "answer": "myth",
-     "truth": "Lean forward instead, so blood doesn't run down your throat, and pinch the soft part of the nose."
-    }
-   ],
-   "quiz": [
+      "id": "AID-014",
+      "subtopic": "Choking",
+      "title": "Choking: what to do",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "If someone can cough or speak, their airway is only partly blocked.",
+        "If they can't breathe, speak or cough, it is an emergency."
+      ],
+      "do": [
+        "Encourage them to keep coughing if they can",
+        "If they can't breathe or speak, shout for an adult and call 112",
+        "Trained people give back blows and abdominal thrusts"
+      ],
+      "dont": [
+        "Don't put fingers blindly into their mouth",
+        "Don't give water to someone who is choking",
+        "Don't leave them alone"
+      ],
+      "myths": [
+        {
+          "statement": "Giving water helps someone who is choking.",
+          "answer": "myth",
+          "truth": "Water can make it worse. Encourage coughing; if they can't breathe, get help and call 112."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your friend is choking but can still cough loudly. What do you do?",
+          "options": [
+            "Give them water",
+            "Encourage them to keep coughing",
+            "Lay them down",
+            "Leave them alone"
+          ],
+          "correct": 1,
+          "explanation": "Strong coughing is the body's best way to clear the blockage. Stay with them."
+        }
+      ],
+      "scenario": null,
+      "agentId": "pulse",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "Your friend has a nosebleed. How should they sit?",
-     "options": [
-      "Lie flat",
-      "Lean forward",
-      "Tilt head back",
-      "Stand on one leg"
-     ],
-     "correct": 1,
-     "explanation": "Lean forward and pinch the soft part of the nose for 10–15 minutes."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "During class {at}, {name}'s friend suddenly gets a nosebleed and looks scared. Someone shouts 'Tilt your head back!'"
-    ],
-    "question": "How should {name} help?",
-    "emojis": [
-     "🩸",
-     "🧑‍🎓",
-     "🏫"
-    ],
-    "bubble": "Tilt your head back!",
-    "rubric": [
-     {
-      "point": "Sit up and lean forward (not back)",
-      "note": "Leaning back makes blood run down the throat.",
-      "weight": 35,
-      "critical": true,
-      "keys": "lean[^.]{0,10}forward|head[^.]{0,10}forward|bend forward|(not|no|don'?t)[^.]{0,15}back"
-     },
-     {
-      "point": "Pinch the soft part of the nose",
-      "note": "Pinch just below the bony part for about 10 minutes.",
-      "weight": 35,
-      "critical": true,
-      "keys": "pinch|press|squeeze"
-     },
-     {
-      "point": "Stay calm and tell a teacher",
-      "note": "An adult can help.",
-      "weight": 15,
-      "critical": false,
-      "keys": "teacher|adult|calm"
-     },
-     {
-      "point": "Get help if it doesn't stop in 20 minutes",
-      "note": "Long or heavy bleeding needs a doctor.",
-      "weight": 15,
-      "critical": false,
-      "keys": "doctor|nurse|minutes|doesn'?t stop|hospital|medical"
-     }
-    ],
-    "dangerous": [
-     "tilt[^.]{0,15}back",
-     "lie (down|flat)"
-    ],
-    "settings": [
-     "school classroom",
-     "tuition class",
-     "coaching centre"
-    ]
-   },
-   "agentId": "pulse",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "AID-008",
-   "subtopic": "Heat illness",
-   "title": "Heat exhaustion and heatstroke",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Heatstroke is an emergency: very hot body, confusion or fainting.",
-    "Thirst, headache, dizziness and heavy sweating are early warning signs."
-   ],
-   "do": [
-    "Move the person to shade or a cool room",
-    "Loosen tight clothing",
-    "Give small sips of water if they're awake",
-    "Cool them with wet cloths and fanning",
-    "Call 112 if they are confused, faint or very hot"
-   ],
-   "dont": [
-    "Don't give fizzy or energy drinks",
-    "Don't leave them alone",
-    "Don't force water if they're drowsy"
-   ],
-   "myths": [
+      "id": "AID-021",
+      "agentId": "pulse",
+      "subtopic": "Bleeding",
+      "title": "Direct pressure first aid for severe cuts and bleeding",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Continuous firm pressure directly on an open cut stops over 90% of bleeding by enabling clotting.",
+        "Peeling off a blood-soaked bandage rips away developing platelet clots; always layer new cloth on top."
+      ],
+      "do": [
+        "Press firmly on the wound using a clean cloth, sterile gauze, or clean handkerchief",
+        "Maintain continuous pressure for at least 10 minutes without lifting to check",
+        "Elevate the injured limb above heart level if no bone fracture is suspected"
+      ],
+      "dont": [
+        "Never put turmeric powder, mud, coffee or ash on open wounds",
+        "Never remove an embedded object like glass or metal"
+      ],
+      "myths": [
+        {
+          "statement": "Applying turmeric or coffee powder to deep wounds heals them safely.",
+          "answer": "myth",
+          "truth": "Home powders cause horrific wound infections and tissue necrosis. Use clean direct pressure."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A friend cuts their arm deeply on broken glass and blood is flowing. What is the immediate first aid?",
+          "options": [
+            "Pour haldi into it",
+            "Apply firm continuous direct pressure with a clean cloth",
+            "Wash with hot water",
+            "Wave arm in air"
+          ],
+          "correct": 1,
+          "explanation": "Firm direct pressure compresses severed capillaries and allows natural clotting."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the craft room at {at}, a cutter slips and {name}'s friend cuts their hand deeply."
+        ],
+        "question": "What should {name} do right now?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Apply firm direct pressure with a clean cloth or gauze",
+            "note": "Compresses blood vessels to stop bleeding.",
+            "weight": 40,
+            "critical": true,
+            "keys": "direct pressure|press|clean cloth|gauze"
+          },
+          {
+            "point": "If cloth soaks through, add another cloth on top without removing the first",
+            "note": "Preserves newly formed blood clots.",
+            "weight": 30,
+            "critical": true,
+            "keys": "don'?t remove|layer on top|add more cloth"
+          },
+          {
+            "point": "Call teacher/school nurse and seek medical help for stitches/tetanus",
+            "note": "Professional wound closure.",
+            "weight": 30,
+            "critical": false,
+            "keys": "call nurse|teacher|doctor|112"
+          }
+        ],
+        "dangerous": [
+          "haldi|turmeric|coffee",
+          "remove soaked cloth",
+          "wash with hot water"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Red Cross Society First Aid Manual",
+          "url": "https://indianredcross.org"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "If you're not thirsty, you can't be getting dehydrated.",
-     "answer": "myth",
-     "truth": "Thirst comes late. Drink regularly in hot weather and during sport."
-    }
-   ],
-   "quiz": [
+      "id": "AID-022",
+      "agentId": "pulse",
+      "subtopic": "Animal bite",
+      "title": "Dog bite and scratch: Urgent rabies protocol",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Rabies is transmitted via infected animal saliva and is nearly 100% fatal once symptoms appear.",
+        "Washing thoroughly with soap and running water physically washes away virus particles."
+      ],
+      "do": [
+        "Wash wound immediately under running tap water with soap for at least 15 continuous minutes",
+        "Apply an antiseptic solution like povidone iodine after thorough washing",
+        "Visit a medical clinic the same day for anti-rabies vaccination (PEP) and tetanus toxoid"
+      ],
+      "dont": [
+        "Never apply chili powder, lime, oil, or turmeric to animal bites",
+        "Never tie a tight bandage over open animal bite wounds"
+      ],
+      "myths": [
+        {
+          "statement": "A minor scratch from a friendly stray puppy does not need a doctor's visit.",
+          "answer": "myth",
+          "truth": "Any scratch that breaks skin can transmit rabies. Immediate washing and vaccination are mandatory."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the first and most critical step immediately after a dog bite or scratch?",
+          "options": [
+            "Wait 10 days",
+            "Wash under running water with soap for 15 minutes",
+            "Tie a cloth tightly",
+            "Apply mustard oil"
+          ],
+          "correct": 1,
+          "explanation": "Soap dissolves the rabies viral lipid envelope and running water flushes it away."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While playing at {at}, a stray dog bites {name}'s calf, breaking the skin."
+        ],
+        "question": "What must {name} do immediately?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Wash the wound under running tap water with soap for 15 minutes",
+            "note": "Flushes out saliva and inactivates rabies virus.",
+            "weight": 45,
+            "critical": true,
+            "keys": "wash[^.]{0,20}(soap|water)|15 min|running water"
+          },
+          {
+            "point": "Apply antiseptic and do not bandage tightly",
+            "note": "Prevents secondary infection without trapping virus.",
+            "weight": 20,
+            "critical": false,
+            "keys": "antiseptic|betadine|povidone|no tight bandage"
+          },
+          {
+            "point": "Go to a hospital or clinic on the same day for rabies vaccine",
+            "note": "Post-exposure prophylaxis saves lives.",
+            "weight": 35,
+            "critical": true,
+            "keys": "hospital|doctor|rabies vaccine|injection|same day"
+          }
+        ],
+        "dangerous": [
+          "chili powder",
+          "haldi|turmeric",
+          "bandage tightly",
+          "ignore bite"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Centre for Disease Control (NCDC)",
+          "url": "https://ncdc.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "A friend feels dizzy and sick after football in the sun. First step?",
-     "options": [
-      "Keep playing",
-      "Move to shade and sip water",
-      "Have an energy drink",
-      "Run home"
-     ],
-     "correct": 1,
-     "explanation": "Cool down in the shade and sip water. Call for help if they get confused or faint."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "It's {time} {at}. After a long race in the sun, {name}'s teammate says they feel dizzy, has a headache and is very red in the face."
-    ],
-    "question": "What should {name} do?",
-    "emojis": [
-     "🥵",
-     "☀️",
-     "🏃"
-    ],
-    "bubble": "I'm fine… just dizzy.",
-    "rubric": [
-     {
-      "point": "Move them to shade or a cool place",
-      "note": "Get out of the heat first.",
-      "weight": 30,
-      "critical": true,
-      "keys": "shade|cool (place|room)|indoors|inside|fan|ac\\b"
-     },
-     {
-      "point": "Give sips of water",
-      "note": "Small sips, if they're awake.",
-      "weight": 25,
-      "critical": false,
-      "keys": "water|sip|drink"
-     },
-     {
-      "point": "Cool them down (wet cloth, loosen clothes)",
-      "note": "Cooling the skin helps.",
-      "weight": 20,
-      "critical": false,
-      "keys": "wet|cloth|towel|loosen|splash|cool"
-     },
-     {
-      "point": "Tell an adult / call 112 if confused or fainting",
-      "note": "Heatstroke is an emergency.",
-      "weight": 25,
-      "critical": true,
-      "keys": "adult|teacher|coach|112|ambulance|doctor"
-     }
-    ],
-    "dangerous": [
-     "keep (playing|running)",
-     "energy drink"
-    ],
-    "settings": [
-     "sports ground",
-     "school playground",
-     "park"
-    ],
-    "times": [
-     "a hot afternoon",
-     "lunch break"
-    ]
-   },
-   "agentId": "pulse",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "AID-014",
-   "subtopic": "Choking",
-   "title": "Choking: what to do",
-   "bands": [
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "If someone can cough or speak, their airway is only partly blocked.",
-    "If they can't breathe, speak or cough, it is an emergency."
-   ],
-   "do": [
-    "Encourage them to keep coughing if they can",
-    "If they can't breathe or speak, shout for an adult and call 112",
-    "Trained people give back blows and abdominal thrusts"
-   ],
-   "dont": [
-    "Don't put fingers blindly into their mouth",
-    "Don't give water to someone who is choking",
-    "Don't leave them alone"
-   ],
-   "myths": [
+      "id": "AID-023",
+      "agentId": "pulse",
+      "subtopic": "Fainting",
+      "title": "Fainting first aid and the recovery position",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Fainting (syncope) occurs when temporary blood flow to the brain drops.",
+        "Laying the person flat and elevating their feet returns pooled blood to the heart and brain."
+      ],
+      "do": [
+        "Lay the person flat on their back and elevate legs 30 cm (12 inches)",
+        "Loosen tight collars, ties, and belts to aid respiration",
+        "Turn onto side (recovery position) if vomiting or not waking within 1 minute"
+      ],
+      "dont": [
+        "Never force an unconscious person to drink water or eat sugar",
+        "Never make a fainting person stand up quickly"
+      ],
+      "myths": [
+        {
+          "statement": "Splashing cold water into a fainted person's face will wake them up safely.",
+          "answer": "myth",
+          "truth": "Splashing water can cause aspiration into the windpipe and choke an unconscious person."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A student collapses and faints during morning school assembly. What is the correct response?",
+          "options": [
+            "Pour water into mouth",
+            "Lay flat on back and elevate feet 30 cm",
+            "Slap cheeks",
+            "Make them run"
+          ],
+          "correct": 1,
+          "explanation": "Laying flat and raising legs restores blood circulation to the brain."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During school assembly at {at}, a classmate suddenly sways and collapses unconscious onto the floor."
+        ],
+        "question": "What is the proper first aid response for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Lay them flat on their back and elevate their feet/legs",
+            "note": "Promotes venous blood return to brain.",
+            "weight": 40,
+            "critical": true,
+            "keys": "lay flat|raise legs|elevate feet"
+          },
+          {
+            "point": "Loosen tight collar, tie, and ask crowd to step back for fresh air",
+            "note": "Ensures open airway and cool environment.",
+            "weight": 30,
+            "critical": true,
+            "keys": "loosen collar|fresh air|crowd back"
+          },
+          {
+            "point": "Do not force liquids into mouth; call school nurse/doctor",
+            "note": "Prevents choking and aspiration.",
+            "weight": 30,
+            "critical": false,
+            "keys": "no water in mouth|call nurse|doctor"
+          }
+        ],
+        "dangerous": [
+          "pour water into mouth",
+          "slap face",
+          "force to stand up"
+        ]
+      },
+      "sources": [
+        {
+          "name": "World Health Organization Basic First Aid",
+          "url": "https://who.int"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "Giving water helps someone who is choking.",
-     "answer": "myth",
-     "truth": "Water can make it worse. Encourage coughing; if they can't breathe, get help and call 112."
-    }
-   ],
-   "quiz": [
+      "id": "AID-024",
+      "agentId": "pulse",
+      "subtopic": "Sprains",
+      "title": "Treating sprains and strains with the RICE method",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A sprain is a stretched or torn ligament supporting a joint (commonly ankle or wrist).",
+        "Applying direct ice without a cloth barrier can cause frostbite skin burns."
+      ],
+      "do": [
+        "Rest the injured joint immediately—stop playing sports",
+        "Ice the area using a cloth-wrapped cold pack for 15-20 minutes",
+        "Compress lightly with an elastic crepe bandage and Elevate above heart level"
+      ],
+      "dont": [
+        "Never apply hot balms, heat packs or massage during the first 48 hours",
+        "Never wrap an elastic bandage so tightly that toes turn blue or numb"
+      ],
+      "myths": [
+        {
+          "statement": "Massaging a freshly sprained ankle with warm mustard oil speeds recovery.",
+          "answer": "myth",
+          "truth": "Heat and massage increase internal bleeding and joint swelling. Use cold RICE protocol."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the 'I' in the RICE sprain treatment stand for?",
+          "options": [
+            "Ignore",
+            "Ice (wrapped in cloth for 15-20 mins)",
+            "Instant run",
+            "Iodine spray"
+          ],
+          "correct": 1,
+          "explanation": "Ice constricts injured blood vessels, reducing swelling and pain."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a basketball match at {at}, {name}'s friend twists their ankle and falls in pain."
+        ],
+        "question": "How should {name} assist using RICE?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop play and rest the injured ankle completely",
+            "note": "Prevents further ligament tearing.",
+            "weight": 30,
+            "critical": true,
+            "keys": "rest|stop playing|sit down"
+          },
+          {
+            "point": "Apply a cold ice pack wrapped in a towel for 15 minutes",
+            "note": "Reduces swelling and inflammation.",
+            "weight": 40,
+            "critical": true,
+            "keys": "ice|cold pack|wrap in towel"
+          },
+          {
+            "point": "Elevate the ankle on a chair/pillow and seek adult evaluation",
+            "note": "Facilitates fluid drainage away from joint.",
+            "weight": 30,
+            "critical": false,
+            "keys": "elevate|raise ankle|doctor|nurse"
+          }
+        ],
+        "dangerous": [
+          "massage vigorously",
+          "hot balm",
+          "continue playing"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Orthopaedic Association",
+          "url": "https://ioaindia.org"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "Your friend is choking but can still cough loudly. What do you do?",
-     "options": [
-      "Give them water",
-      "Encourage them to keep coughing",
-      "Lay them down",
-      "Leave them alone"
-     ],
-     "correct": 1,
-     "explanation": "Strong coughing is the body's best way to clear the blockage. Stay with them."
+      "id": "AID-025",
+      "agentId": "pulse",
+      "subtopic": "Fractures",
+      "title": "Suspected bone fracture: Splinting and immobilization",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Moving broken bone fragments can sever adjacent nerves, arteries, and muscle tissue.",
+        "Supporting the joint above and below the injury stabilizes the fracture."
+      ],
+      "do": [
+        "Keep the injured limb completely still in the position found",
+        "Support the limb with rolled magazines, cardboard, or a folded towel as a temporary splint",
+        "Call 108 / 112 or get adult transport to an emergency hospital"
+      ],
+      "dont": [
+        "Never attempt to straighten a bent or deformed limb",
+        "Never give food or water in case emergency surgery is needed"
+      ],
+      "myths": [
+        {
+          "statement": "If a broken bone looks bent, you should pull it straight right away.",
+          "answer": "myth",
+          "truth": "Attempting to realign bones without anesthesia causes severe agony and tears blood vessels."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most critical first aid rule for a suspected broken arm?",
+          "options": [
+            "Pull it straight",
+            "Immobilize and support it without moving the bone",
+            "Give a heavy meal",
+            "Massage with oil"
+          ],
+          "correct": 1,
+          "explanation": "Immobilization prevents bone ends from cutting internal nerves and arteries."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student falls from the jungle gym at {at} and holds a visibly deformed, painful forearm."
+        ],
+        "question": "What first aid should {name} provide?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do not move or attempt to straighten the injured arm",
+            "note": "Avoids nerve and vascular damage.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t move|do not straighten|keep still"
+          },
+          {
+            "point": "Support the limb gently with a sling or soft padding",
+            "note": "Stabilizes limb comfortably.",
+            "weight": 30,
+            "critical": true,
+            "keys": "support|sling|padding|cushion"
+          },
+          {
+            "point": "Call the school nurse/108 and keep the student calm",
+            "note": "Arranges professional orthopaedic transport.",
+            "weight": 25,
+            "critical": false,
+            "keys": "call 108|nurse|hospital|adult"
+          }
+        ],
+        "dangerous": [
+          "pull straight",
+          "massage bone",
+          "force to move fingers"
+        ]
+      },
+      "sources": [
+        {
+          "name": "St John Ambulance First Aid Guidelines",
+          "url": "https://stjohn.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-026",
+      "agentId": "pulse",
+      "subtopic": "Snake bite",
+      "title": "Snake bite do's and don'ts: Safe emergency response",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "India's 'Big Four' venomous snakes are the Russell's viper, saw-scaled viper, cobra, and krait.",
+        "Cutting, sucking venom, or tying tight tourniquets causes gangrene and limb amputations."
+      ],
+      "do": [
+        "Keep the victim calm, still, and reassure them (panic accelerates venom circulation)",
+        "Immobilize the bitten limb with a loose splint below heart level",
+        "Transport immediately to a government hospital equipped with Anti-Snake Venom (ASV)"
+      ],
+      "dont": [
+        "Never cut the bite with blades or suck out venom with mouth",
+        "Never tie tight rope tourniquets that stop pulse"
+      ],
+      "myths": [
+        {
+          "statement": "Sucking venom out with your mouth like in movies saves snake bite victims.",
+          "answer": "myth",
+          "truth": "Mouth suction removes zero venom, poisons the rescuer, and introduces deadly mouth bacteria."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the only proven medical cure for a venomous snake bite?",
+          "options": [
+            "Herbal leaf paste",
+            "Anti-Snake Venom (ASV) administered at a hospital",
+            "Cutting the skin",
+            "Drinking milk"
+          ],
+          "correct": 1,
+          "explanation": "Anti-Snake Venom neutralizes circulating venom toxins effectively."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While walking in garden bushes at {at}, {name}'s friend is bitten on the ankle by a snake."
+        ],
+        "question": "What must {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Keep friend completely calm and still without walking",
+            "note": "Muscle contraction pumps venom through lymphatics.",
+            "weight": 40,
+            "critical": true,
+            "keys": "keep calm|still|don'?t walk|sit down"
+          },
+          {
+            "point": "Do not cut, suck venom, or tie tight tourniquets",
+            "note": "Prevents tissue necrosis and gangrene.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no cutting|no sucking|no tourniquet"
+          },
+          {
+            "point": "Rush directly to the nearest hospital with Anti-Snake Venom",
+            "note": "ASV is the sole antidote.",
+            "weight": 25,
+            "critical": false,
+            "keys": "hospital|asv|anti snake venom|doctor"
+          }
+        ],
+        "dangerous": [
+          "cut with blade",
+          "suck venom",
+          "tie tight rope tourniquet"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Health Mission (NHM) Snakebite Protocol",
+          "url": "https://nhm.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-027",
+      "agentId": "pulse",
+      "subtopic": "Insect sting",
+      "title": "Bee, wasp and hornet stings: Safe stinger removal",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A honeybee stinger has an attached venom sac that continues pumping venom for 60 seconds.",
+        "Squeezing a stinger with tweezers or fingers squeezes remaining venom into the skin."
+      ],
+      "do": [
+        "Scrape the stinger out sideways using a fingernail or plastic card edge immediately",
+        "Wash the area with soap and water, then apply a cold ice pack for 10 minutes",
+        "Watch for allergic reactions (facial swelling, throat tightness, breathing trouble) -> 108"
+      ],
+      "dont": [
+        "Never squeeze the venom sac with tweezers",
+        "Never scratch the sting site"
+      ],
+      "myths": [
+        {
+          "statement": "Pulling a bee stinger out with pinchers is the best way to remove it.",
+          "answer": "myth",
+          "truth": "Pinching squeezes the venom sac like a dropper. Scrape it off sideways."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How should you remove a bee stinger embedded in your arm?",
+          "options": [
+            "Pinch firmly with fingers",
+            "Scrape it out sideways with a fingernail or plastic card",
+            "Burn it with match",
+            "Suck it out"
+          ],
+          "correct": 1,
+          "explanation": "Scraping removes the stinger without injecting venom from the attached gland."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A bee stings {name}'s classmate on the hand in the garden at {at}."
+        ],
+        "question": "What is the correct first aid technique?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Scrape the stinger off sideways using a ruler, card or fingernail",
+            "note": "Prevents injecting remaining venom sac contents.",
+            "weight": 40,
+            "critical": true,
+            "keys": "scrape|plastic card|fingernail|sideways"
+          },
+          {
+            "point": "Apply a cold ice pack wrapped in a cloth to soothe swelling",
+            "note": "Reduces localized pain and inflammation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "ice pack|cold cloth|wash soap"
+          },
+          {
+            "point": "Check for signs of severe allergic reaction (anaphylaxis)",
+            "note": "Life-threatening emergencies need 108.",
+            "weight": 25,
+            "critical": false,
+            "keys": "allergic reaction|swelling|breathing|108"
+          }
+        ],
+        "dangerous": [
+          "squeeze venom sac",
+          "burn stinger",
+          "rub with mud"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Academy of Pediatrics (IAP)",
+          "url": "https://iapindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-028",
+      "agentId": "pulse",
+      "subtopic": "Asthma",
+      "title": "Supporting a classmate having an asthma attack",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Asthma causes airway narrowing, wheezing, chest tightness, and shortness of breath.",
+        "Laying an asthma patient flat makes breathing significantly harder."
+      ],
+      "do": [
+        "Help the student sit upright comfortably and stay calm and reassuring",
+        "Help them locate their prescribed rescue inhaler (blue cap) and spacer",
+        "Call the school nurse or 108 if symptoms worsen or inhaler is unavailable"
+      ],
+      "dont": [
+        "Never force an asthmatic person to lie down flat",
+        "Never crowd around them or give random medicines"
+      ],
+      "myths": [
+        {
+          "statement": "During an asthma attack, making the person lie down flat helps them breathe.",
+          "answer": "myth",
+          "truth": "Lying down compresses lung capacity. Sitting upright allows diaphragm expansion."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What position helps a student breathe easiest during an asthma attack?",
+          "options": [
+            "Lying flat on stomach",
+            "Sitting upright leaning slightly forward",
+            "Hanging upside down",
+            "Running"
+          ],
+          "correct": 1,
+          "explanation": "Sitting upright with shoulders relaxed gives lungs the maximum expansion volume."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After running in sports class at {at}, a classmate begins wheezing heavily and gasping for air."
+        ],
+        "question": "How should {name} assist them?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Help them sit upright comfortably and stay calm",
+            "note": "Opens airways and prevents panic hyperventilation.",
+            "weight": 40,
+            "critical": true,
+            "keys": "sit upright|lean forward|stay calm"
+          },
+          {
+            "point": "Help them locate their prescribed inhaler with adult supervision",
+            "note": "Delivers bronchodilator medicine.",
+            "weight": 35,
+            "critical": true,
+            "keys": "inhaler|puffer|spacer|adult"
+          },
+          {
+            "point": "Call the school nurse or teacher immediately",
+            "note": "Ensures medical supervision.",
+            "weight": 25,
+            "critical": false,
+            "keys": "call nurse|teacher|108"
+          }
+        ],
+        "dangerous": [
+          "lay flat on back",
+          "crowd around",
+          "give cold water"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Chest Council of India",
+          "url": "https://chestcouncil.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-029",
+      "agentId": "pulse",
+      "subtopic": "Electric shock",
+      "title": "Electric shock rescue: Safety of the rescuer first",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The human body is an excellent electrical conductor; touching a victim passes current to you.",
+        "Electric current causes muscle spasm (tetany), preventing victims from releasing live wires."
+      ],
+      "do": [
+        "Turn off the main electrical circuit breaker / switch immediately",
+        "If mains cannot be reached, use a dry non-conductive object (wooden broom handle) to separate wire from victim",
+        "Check breathing once separated; call 108 / 112 immediately"
+      ],
+      "dont": [
+        "Never touch an electrocuted person with bare hands while they are connected",
+        "Never use metal, wet wood, or damp cloth to push wires away"
+      ],
+      "myths": [
+        {
+          "statement": "If someone is caught by electric current, pulling their shirt with bare hands is safe.",
+          "answer": "myth",
+          "truth": "Electric current instantly travels through clothing moisture into the rescuer."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What must you do first before touching someone who is touching a live electrical wire?",
+          "options": [
+            "Touch their arm",
+            "Turn off the main power switch or circuit breaker",
+            "Pour water on them",
+            "Put a blanket over them"
+          ],
+          "correct": 1,
+          "explanation": "Always de-energize the circuit first so the rescuer does not get electrocuted."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the laundry area at {at}, {name} sees someone shaking and frozen touching a frayed appliance cord."
+        ],
+        "question": "What is {name}'s immediate action?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT touch the victim with bare hands",
+            "note": "Prevents rescuer electrocution.",
+            "weight": 40,
+            "critical": true,
+            "keys": "do not touch|don'?t touch bare|hands off"
+          },
+          {
+            "point": "Switch off the main power switch or unplug the appliance",
+            "note": "Cuts circuit instantly.",
+            "weight": 40,
+            "critical": true,
+            "keys": "switch off|turn off mains|unplug|breaker"
+          },
+          {
+            "point": "Use dry wooden broom handle if switch is inaccessible, then call 108",
+            "note": "Insulating tool for emergency separation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "dry wood|broom|plastic|call 108"
+          }
+        ],
+        "dangerous": [
+          "touch victim directly",
+          "pour water",
+          "pull with bare hands"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Electricity Authority Safety Norms",
+          "url": "https://cea.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-030",
+      "agentId": "pulse",
+      "subtopic": "Eye injury",
+      "title": "Eye first aid: Chemical splashes and foreign particles",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Rubbing an eye with a speck of dust scratches the sensitive transparent cornea.",
+        "Chemical splashes (detergents, lab acids, lime) require immediate 15-minute continuous flushing."
+      ],
+      "do": [
+        "Flush the eye gently with clean running tap water or saline for 15 minutes for chemicals",
+        "Blink repeatedly in a bowl of clean water to dislodge loose eyelashes or dust",
+        "Cover loosely with a clean paper cup or eye pad and see an ophthalmologist"
+      ],
+      "dont": [
+        "Never rub the eye with fingers, knuckles, or dirty handkerchiefs",
+        "Never attempt to remove an object embedded into the eyeball with needles or tweezers"
+      ],
+      "myths": [
+        {
+          "statement": "Rubbing your eye vigorously removes dust particles quickly.",
+          "answer": "myth",
+          "truth": "Rubbing grinds abrasive particles into the corneal lens, causing permanent scarring."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the first aid for household cleaning liquid splashed into a student's eye?",
+          "options": [
+            "Close eye tightly",
+            "Rinse immediately with clean lukewarm running water for 15 minutes",
+            "Apply eye drops blindly",
+            "Rub with towel"
+          ],
+          "correct": 1,
+          "explanation": "Continuous irrigation flushes chemicals out before chemical burns occur."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the chemistry lab at {at}, liquid cleaning detergent splashes into {name}'s classmate's eye."
+        ],
+        "question": "What must {name} and classmate do immediately?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Rinse eye continuously under running tap water for at least 15 minutes",
+            "note": "Flushes chemical irritant before corneal burning.",
+            "weight": 45,
+            "critical": true,
+            "keys": "flush|rinse|running water|15 min|eye wash"
+          },
+          {
+            "point": "Do not rub the eye with hands or cloth",
+            "note": "Prevents corneal abrasion.",
+            "weight": 30,
+            "critical": true,
+            "keys": "don'?t rub|do not scratch"
+          },
+          {
+            "point": "Inform teacher and consult an eye doctor immediately",
+            "note": "Professional ophthalmic check.",
+            "weight": 25,
+            "critical": false,
+            "keys": "tell teacher|eye doctor|hospital"
+          }
+        ],
+        "dangerous": [
+          "rub eye",
+          "close and wait",
+          "apply random eye drops"
+        ]
+      },
+      "sources": [
+        {
+          "name": "All India Ophthalmological Society (AIOS)",
+          "url": "https://aios.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-031",
+      "agentId": "pulse",
+      "subtopic": "Head injury",
+      "title": "Head bump, concussion signs, and danger symptoms",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A concussion is a traumatic brain injury that affects mental cognitive function.",
+        "Repeated vomiting, confusion, or unequal pupils indicate increasing intracranial pressure."
+      ],
+      "do": [
+        "Rest quietly and apply a cold compress wrapped in cloth to the bump for 15 minutes",
+        "Monitor closely for red-flag symptoms: repeated vomiting, drowsiness, uneven pupils, confusion",
+        "Take to an emergency doctor immediately if red flags appear or if knocked unconscious"
+      ],
+      "dont": [
+        "Never let an athlete return to play sports on the same day after a head blow",
+        "Never ignore a child who cannot remember what happened before the fall"
+      ],
+      "myths": [
+        {
+          "statement": "A child who bumps their head can return to playing cricket immediately if they don't bleed.",
+          "answer": "myth",
+          "truth": "Concussions occur without external bleeding. Rest and monitoring are vital."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following is a dangerous symptom following a head bump?",
+          "options": [
+            "A small superficial skin bump",
+            "Repeated vomiting and extreme drowsiness",
+            "Normal hunger",
+            "Crying for 1 minute then laughing"
+          ],
+          "correct": 1,
+          "explanation": "Repeated vomiting and drowsiness signal internal brain swelling or bleeding."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During PE class at {at}, a classmate collides heads with another player and falls to the ground dizzy."
+        ],
+        "question": "How should {name} and the coach manage this head injury?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop playing immediately and rest quietly",
+            "note": "Prevents secondary impact syndrome.",
+            "weight": 35,
+            "critical": true,
+            "keys": "stop playing|rest|sit down|no sports"
+          },
+          {
+            "point": "Apply a cold compress to the site of impact",
+            "note": "Reduces scalp swelling.",
+            "weight": 25,
+            "critical": false,
+            "keys": "cold compress|ice pack|cloth"
+          },
+          {
+            "point": "Watch for danger signs: vomiting, severe headache, confusion -> hospital",
+            "note": "Indicates serious concussion.",
+            "weight": 40,
+            "critical": true,
+            "keys": "vomiting|confusion|drowsy|doctor|hospital"
+          }
+        ],
+        "dangerous": [
+          "return to game immediately",
+          "ignore dizziness",
+          "shake head"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Journal of Neurotrauma Guidelines",
+          "url": "https://ijnt.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-032",
+      "agentId": "pulse",
+      "subtopic": "Seizures",
+      "title": "Seizure first aid: Protecting without restraining",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Seizures are temporary electrical disturbances in the brain causing involuntary muscle convulsions.",
+        "Putting objects into a seizing person's mouth breaks teeth and blocks their airway."
+      ],
+      "do": [
+        "Clear hard, sharp, or hot objects away from around the seizing person",
+        "Cushion their head with a folded jacket or soft pillow",
+        "Turn onto side (recovery position) once jerking stops to keep airway clear"
+      ],
+      "dont": [
+        "Never put spoons, keys, fingers or cloth into their mouth (they cannot swallow their tongue)",
+        "Never hold down or forcefully restrain seizing arms and legs"
+      ],
+      "myths": [
+        {
+          "statement": "Putting an iron key in a person's hand stops an epileptic seizure.",
+          "answer": "myth",
+          "truth": "Metal keys have zero medical effect on neurological seizures. Keep safe and clear space."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the single most important 'DON'T' during an active epileptic seizure?",
+          "options": [
+            "Cushioning head",
+            "Never force spoons, fingers or keys into their mouth",
+            "Timing the seizure",
+            "Loosening collars"
+          ],
+          "correct": 1,
+          "explanation": "Forcing objects into the mouth breaks teeth and suffocates the person."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student in the classroom at {at} collapses and begins experiencing jerking convulsions."
+        ],
+        "question": "What first aid should {name} provide?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Clear nearby desks, chairs, and sharp items away",
+            "note": "Prevents head and bodily impact injuries.",
+            "weight": 35,
+            "critical": true,
+            "keys": "clear space|move desks|sharp objects"
+          },
+          {
+            "point": "Cushion head with folded clothes and do NOT put anything in mouth",
+            "note": "Protects skull; avoids airway obstruction.",
+            "weight": 40,
+            "critical": true,
+            "keys": "cushion head|nothing in mouth|no spoon|no key"
+          },
+          {
+            "point": "Time the seizure duration and turn to side after jerking stops",
+            "note": "Monitors status and prevents saliva aspiration.",
+            "weight": 25,
+            "critical": false,
+            "keys": "time duration|turn on side|recovery position|call 108"
+          }
+        ],
+        "dangerous": [
+          "put spoon in mouth",
+          "put keys in hand",
+          "restrain arms forcefully"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Epilepsy Association",
+          "url": "https://epilepsyindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-033",
+      "agentId": "pulse",
+      "subtopic": "Water rescue",
+      "title": "Water rescue safety: Reach or throw, don't jump in",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A drowning person panics instinctively and will climb on top of a rescuer, drowning both.",
+        "Over 70% of drowning victims drown within 10 meters of a safe bank or pool edge."
+      ],
+      "do": [
+        "Shout loudly for adult help immediately",
+        "Extend a long stick, tree branch, bamboo pole, or towel while lying flat on the bank (REACH)",
+        "Throw a floating lifebuoy, plastic can, football, or rope (THROW)"
+      ],
+      "dont": [
+        "Never jump into deep water to rescue someone unless trained in life-saving",
+        "Never stand upright on slippery banks while pulling someone"
+      ],
+      "myths": [
+        {
+          "statement": "Jumping into the water is the fastest and best way to save a drowning friend.",
+          "answer": "myth",
+          "truth": "Untrained rescuers are pulled under and drowned by panicked drowning victims."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the golden sequence for non-swimmer water rescue?",
+          "options": [
+            "Jump, swim, pull",
+            "Shout for help, Reach with pole, or Throw floating object",
+            "Dive deep",
+            "Wait and watch"
+          ],
+          "correct": 1,
+          "explanation": "Reach or Throw keeps the rescuer safely dry on the bank while saving the victim."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While near a river bank or pool at {at}, {name} sees someone struggling and splashing in deep water."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Shout loudly for adult help and emergency assistance",
+            "note": "Alerts nearby capable swimmers.",
+            "weight": 35,
+            "critical": true,
+            "keys": "shout for help|call adults|call 112"
+          },
+          {
+            "point": "Reach with a long stick or branch while lying flat on stomach",
+            "note": "Lying flat prevents rescuer being pulled into water.",
+            "weight": 40,
+            "critical": true,
+            "keys": "reach|stick|branch|pole|lie flat"
+          },
+          {
+            "point": "Throw a floating object (can, tire tube, ring, football)",
+            "note": "Provides buoyancy until help arrives.",
+            "weight": 25,
+            "critical": false,
+            "keys": "throw|floating object|buoy|rope"
+          }
+        ],
+        "dangerous": [
+          "jump in water",
+          "swim without training",
+          "stand on slippery edge"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Rashtriya Life Saving Society (RLSS India)",
+          "url": "https://lifesavingindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-034",
+      "agentId": "pulse",
+      "subtopic": "Poisoning",
+      "title": "Accidental chemical or pesticide ingestion first aid",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Swallowed corrosives (toilet cleaner, acid, bleach) burn the throat coming down.",
+        "Inducing vomiting burns the esophagus a second time and can enter lungs (chemical pneumonitis)."
+      ],
+      "do": [
+        "Call 108 / 112 or national poison control helpline immediately",
+        "Identify the substance and keep the bottle/package for doctors",
+        "Rinse mouth with water if corrosive was held in mouth without swallowing"
+      ],
+      "dont": [
+        "Never make the victim vomit (unless specifically told by a poison doctor)",
+        "Never force them to drink raw eggs, salt water, or milk blindly"
+      ],
+      "myths": [
+        {
+          "statement": "Making a person drink concentrated salt water to induce vomiting is standard poison first aid.",
+          "answer": "myth",
+          "truth": "Salt water causes fatal salt poisoning and vomiting burns the esophagus."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "If a child accidentally swallows toilet cleaner, why should you NOT induce vomiting?",
+          "options": [
+            "It wastes cleaner",
+            "The corrosive chemical burns the throat a second time on the way up",
+            "It tastes bad",
+            "It stops hiccups"
+          ],
+          "correct": 1,
+          "explanation": "Corrosives burn tissue twice if vomited, causing catastrophic airway damage."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A young child at {at} accidentally sips from an unmarked bottle containing liquid floor disinfectant."
+        ],
+        "question": "What must {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT induce vomiting or force liquids",
+            "note": "Prevents chemical burns and lung aspiration.",
+            "weight": 40,
+            "critical": true,
+            "keys": "do not induce vomiting|don'?t make vomit|no salt water"
+          },
+          {
+            "point": "Keep the chemical bottle and packaging to show emergency doctors",
+            "note": "Enables doctors to identify exact toxins.",
+            "weight": 35,
+            "critical": true,
+            "keys": "keep bottle|identify chemical|packaging"
+          },
+          {
+            "point": "Call 108 / 112 and rush to hospital emergency immediately",
+            "note": "Emergency gastric decontamination.",
+            "weight": 25,
+            "critical": false,
+            "keys": "call 108|112|hospital|emergency"
+          }
+        ],
+        "dangerous": [
+          "make vomit",
+          "feed raw eggs",
+          "give salt water"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Poisons Information Centre (AIIMS New Delhi)",
+          "url": "https://aiims.edu"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-035",
+      "agentId": "pulse",
+      "subtopic": "Calling 108/112",
+      "title": "Mastering medical emergency calls (108 / 112)",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Emergency dispatchers initiate ambulance sirens while still on the call gathering facts.",
+        "Answering dispatcher questions does NOT delay the ambulance arrival time."
+      ],
+      "do": [
+        "State exact location first with specific nearby landmark (school gate, petrol pump, temple)",
+        "Describe what happened, how many are injured, and if anyone is unconscious",
+        "Follow dispatcher instructions and do not hang up until they tell you to"
+      ],
+      "dont": [
+        "Never hang up in frustration while answering operator questions",
+        "Never make prank calls to 108 / 112 (punishable by law)"
+      ],
+      "myths": [
+        {
+          "statement": "Staying on the phone answering 108 questions delays the ambulance from leaving.",
+          "answer": "myth",
+          "truth": "The nearest ambulance is dispatched immediately; the call gathers preparation data."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is stating a prominent landmark essential when calling 108 for an ambulance in India?",
+          "options": [
+            "To chat",
+            "GPS can be imprecise; landmarks guide drivers directly through crowded streets",
+            "To test the operator",
+            "It is optional"
+          ],
+          "correct": 1,
+          "explanation": "Landmarks prevent ambulances from getting lost in winding Indian colony streets."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "An elderly neighbour collapses at {at} and {name} dials 108."
+        ],
+        "question": "How should {name} deliver the emergency report?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Give exact colony address, gate number, and nearest landmark first",
+            "note": "Allows driver navigation immediately.",
+            "weight": 45,
+            "critical": true,
+            "keys": "address|location|landmark|gate number"
+          },
+          {
+            "point": "State patient's consciousness, breathing status, and age",
+            "note": "Prepares oxygen/defibrillator equipment.",
+            "weight": 35,
+            "critical": true,
+            "keys": "conscious|breathing|condition|age"
+          },
+          {
+            "point": "Stay on the line and unlock the building gate for ambulance crew",
+            "note": "Speeds paramedic entry.",
+            "weight": 20,
+            "critical": false,
+            "keys": "stay on line|open gate|wait for crew"
+          }
+        ],
+        "dangerous": [
+          "hang up abruptly",
+          "give vague city name only",
+          "prank call"
+        ]
+      },
+      "sources": [
+        {
+          "name": "EMRI Green Health Services (108 Ambulance)",
+          "url": "https://emri.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "AID-036",
+      "agentId": "pulse",
+      "subtopic": "First aid kit",
+      "title": "Assembling a student home first-aid kit",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A well-organized first aid kit contains supplies for bleeding, burns, and sprains.",
+        "First aid kits should NEVER contain unprescribed prescription medicines or antibiotics."
+      ],
+      "do": [
+        "Stock sterile gauze pads, adhesive bandages (band-aids), and medical adhesive tape",
+        "Include antiseptic liquid/ointment, blunt-ended safety scissors, and crepe roller bandages",
+        "Keep kit in an accessible, dry, cool place known to all family members"
+      ],
+      "dont": [
+        "Never store loose, expired or unlabeled medicine tablets in a first aid kit",
+        "Never lock the kit so tightly that it cannot be opened in a rush"
+      ],
+      "myths": [
+        {
+          "statement": "A good first aid kit should be packed with leftover antibiotic capsules.",
+          "answer": "myth",
+          "truth": "First aid kits are for immediate trauma care. Unprescribed antibiotics are dangerous."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following belongs in a standard home first-aid kit?",
+          "options": [
+            "Expired pills",
+            "Sterile gauze, adhesive bandages, antiseptic, and scissors",
+            "Candy",
+            "Needles"
+          ],
+          "correct": 1,
+          "explanation": "Clean wound dressing supplies and antiseptic are standard first aid essentials."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s family at {at} is assembling their home first-aid kit."
+        ],
+        "question": "What essential supplies should {name} ensure are packed in the box?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pack sterile gauze pads, band-aids, and roller bandages",
+            "note": "For managing bleeding and bandaging cuts.",
+            "weight": 40,
+            "critical": true,
+            "keys": "gauze|band-aid|bandage|dressing"
+          },
+          {
+            "point": "Include antiseptic lotion, adhesive tape, and clean scissors",
+            "note": "For sanitizing and cutting tape.",
+            "weight": 35,
+            "critical": true,
+            "keys": "antiseptic|tape|scissors"
+          },
+          {
+            "point": "Store in an easily accessible, dry location known to the family",
+            "note": "Ensures immediate access during emergencies.",
+            "weight": 25,
+            "critical": false,
+            "keys": "accessible|dry place|known location"
+          }
+        ],
+        "dangerous": [
+          "pack random loose pills",
+          "lock with secret code",
+          "store in wet bathroom"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Red Cross Society",
+          "url": "https://indianredcross.org"
+        }
+      ],
+      "reviewed": true
     }
-   ],
-   "scenario": null,
-   "agentId": "pulse",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  }
- ]
+  ]
 }

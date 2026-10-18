@@ -106,12 +106,39 @@ export default function Parent() {
               <div className="flex items-center justify-between text-sm"><span className="font-semibold">Quiet hours</span><span className="chip">{s.quietHours}</span></div>
               <label className="flex items-center justify-between text-sm cursor-pointer"><span className="font-semibold">Weekly email report</span>
                 <input type="checkbox" className="w-5 h-5 accent-violet-500" checked={s.weeklyEmail} onChange={e => save({ ...s, weeklyEmail: e.target.checked })} /></label>
-              <div><div className="text-sm font-semibold mb-2">Topics</div>
-                <div className="flex flex-wrap gap-2">{(Object.keys(s.topics) as Domain[]).map(d => {
-                  const a = agentByDomain(d); const on = s.topics[d]
-                  return <button key={d} onClick={() => save({ ...s, topics: { ...s.topics, [d]: !on } })}
-                    className={`chip !py-1.5 transition ${on ? '!border-brand-violet/50 !bg-brand-violet/10 !text-ink' : 'opacity-50'}`}>{a.emoji} {a.domainLabel}</button>
-                })}</div></div>
+              <div>
+                <div className="text-sm font-semibold mb-3">Topic Permissions (20 Domains)</div>
+                <div className="space-y-3">
+                  {[
+                    { title: '❤️ Life & Safety', domains: ['fire', 'road', 'firstaid', 'disaster', 'safety', 'law', 'fitness', 'hygiene'] as Domain[] },
+                    { title: '🌍 Planet & City', domains: ['environment', 'animals', 'greenenergy', 'civic'] as Domain[] },
+                    { title: '🚀 Future & Enterprise', domains: ['money', 'enterprise', 'careers', 'digital', 'nutrition'] as Domain[] },
+                    { title: '🧠 Mind & Wellbeing', domains: ['feelings', 'screentime', 'inclusion'] as Domain[] },
+                  ].map(group => (
+                    <div key={group.title} className="p-2.5 rounded-xl bg-surface2/60 border border-line/40">
+                      <div className="text-[11px] font-bold text-muted uppercase tracking-wider mb-2">{group.title}</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {group.domains.map(d => {
+                          const a = agentByDomain(d)
+                          const on = s.topics[d] ?? true
+                          return (
+                            <button
+                              key={d}
+                              type="button"
+                              onClick={() => save({ ...s, topics: { ...s.topics, [d]: !on } })}
+                              className={`chip !text-xs !py-1 !px-2.5 transition ${
+                                on ? '!border-brand-violet/50 !bg-brand-violet/10 !text-ink font-medium' : 'opacity-40 line-through'
+                              }`}
+                            >
+                              {a.emoji} {a.domainLabel}
+                            </button>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
               <button className="btn-ghost w-full text-bad" onClick={() => toast('In the full app this deletes all of your child’s data.')}>Delete child’s data</button>
             </div>
           </div>

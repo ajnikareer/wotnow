@@ -1,0 +1,1639 @@
+{
+  "agentId": "care",
+  "cards": [
+    {
+      "id": "HYG-001",
+      "agentId": "care",
+      "subtopic": "Hand hygiene",
+      "title": "The 20-second handwashing technique with soap and water",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Washing hands with soap for 20 seconds breaks down viral lipid envelopes and rinses off pathogenic bacteria.",
+        "Soap requires friction across all surfaces (palms, back of hands, between fingers, thumbs, and fingernails)."
+      ],
+      "do": [
+        "Wet hands with clean water, apply soap, and lather vigorously for at least 20 full seconds (hum 'Happy Birthday' twice)",
+        "Scrub all zones: palm to palm, backs of hands, interlaced fingers, thumbs, and fingertips into palms",
+        "Rinse thoroughly under running water and dry with a clean personal towel"
+      ],
+      "dont": [
+        "Never just splash water for 2 seconds without soap and call it 'clean'",
+        "Never wipe clean hands on dirty pants or unwashed shirts"
+      ],
+      "myths": [
+        {
+          "statement": "Splashing hands with plain tap water for 3 seconds removes all germs effectively.",
+          "answer": "myth",
+          "truth": "Plain water cannot break down greasy dirt or viral membranes. Soap friction for 20 seconds is essential."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How long should you rub your hands with soap to ensure complete bacterial and viral removal?",
+          "options": [
+            "2 seconds",
+            "At least 20 continuous seconds",
+            "10 minutes",
+            "Half a second"
+          ],
+          "correct": 1,
+          "explanation": "20 seconds of soap friction physically destroys viral membranes and lifts microbial dirt."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Before eating lunch at {at}, {name} rushes to the washroom sink to clean hands."
+        ],
+        "question": "How should {name} execute proper hand hygiene?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Apply soap and scrub vigorously for 20 seconds across palms, backs, fingers, and nails",
+            "note": "Covers all anatomical hand surfaces thoroughly.",
+            "weight": 45,
+            "critical": true,
+            "keys": "20 seconds|soap and water|between fingers|nails|scrub"
+          },
+          {
+            "point": "Rinse thoroughly under running water to flush away loosened dirt and microbes",
+            "note": "Flushes dislodged germs down the drain.",
+            "weight": 35,
+            "critical": true,
+            "keys": "rinse clean water|running water"
+          },
+          {
+            "point": "Dry hands with a clean dry towel rather than wiping on school uniform",
+            "note": "Prevents instant re-contamination.",
+            "weight": 20,
+            "critical": false,
+            "keys": "clean towel|dry properly"
+          }
+        ],
+        "dangerous": [
+          "quick 2-second splash with no soap",
+          "wipe dirty hands on pants",
+          "eat with unwashed hands"
+        ]
+      },
+      "sources": [
+        {
+          "name": "WHO Guidelines on Hand Hygiene in Health Care and Schools",
+          "url": "https://who.int"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-002",
+      "agentId": "care",
+      "subtopic": "Dental care",
+      "title": "Dental health: Brushing twice daily and tongue cleaning",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Mouth bacteria feed on residual food sugars, producing lactic acid that dissolves protective tooth enamel (cavities).",
+        "Brushing before bed removes overnight plaque acids when saliva flow drops during sleep."
+      ],
+      "do": [
+        "Brush teeth twice daily: once in the morning and once at night before going to bed for 2 full minutes",
+        "Use gentle circular strokes along the gumline with a soft-bristled toothbrush; clean tongue with a tongue cleaner",
+        "Rinse your mouth with clean water after eating sweet, sticky, or starchy foods"
+      ],
+      "dont": [
+        "Never scrub teeth horizontally like a saw with hard bristles (erodes protective enamel and gums)",
+        "Never go to sleep with sweet chocolate or candy coating your teeth"
+      ],
+      "myths": [
+        {
+          "statement": "Brushing your teeth violently hard with a stiff brush cleans them twice as well.",
+          "answer": "myth",
+          "truth": "Hard brushing erodes protective tooth enamel and causes painful receding gum tissue. Use gentle circular motions."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is brushing your teeth at night before bed even more critical than morning brushing?",
+          "options": [
+            "Toothpaste smells nice",
+            "Saliva production drops during sleep, allowing trapped sugar acids to destroy enamel undisturbed all night",
+            "To look clean",
+            "No reason"
+          ],
+          "correct": 1,
+          "explanation": "Night brushing removes food substrates before nocturnal dry mouth allows bacterial acid attacks."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Getting ready for bed at {at}, {name} considers skipping nighttime tooth brushing because of tiredness."
+        ],
+        "question": "What dental habit should {name} uphold?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Spend 2 minutes gently brushing teeth with circular strokes before sleeping",
+            "note": "Removes sugar plaque before nighttime bacterial acid attacks.",
+            "weight": 45,
+            "critical": true,
+            "keys": "brush teeth at night|2 minutes|soft brush|circular strokes"
+          },
+          {
+            "point": "Clean the tongue gently to remove bacterial coating and freshen breath",
+            "note": "Reduces oral microbial load and bad breath.",
+            "weight": 35,
+            "critical": true,
+            "keys": "clean tongue|tongue scraper|rinse mouth"
+          },
+          {
+            "point": "Rinse with water and smile with clean, protected teeth",
+            "note": "Ensures lifelong cavity-free dentition.",
+            "weight": 20,
+            "critical": false,
+            "keys": "rinse with water|dental health"
+          }
+        ],
+        "dangerous": [
+          "sleep with candy in mouth",
+          "skip brushing for days",
+          "scrub teeth violently with wire brush"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Dental Association (Oral Hygiene Guidelines)",
+          "url": "https://ida.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-003",
+      "agentId": "care",
+      "subtopic": "Bathing",
+      "title": "Daily bathing, fresh undergarments and hygiene in humid weather",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Warm, humid climates encourage fungal skin infections (ringworm, athlete's foot) in sweaty skin folds.",
+        "Sweat itself is odorless; body odor is caused by skin bacteria fermenting apocrine sweat secretions."
+      ],
+      "do": [
+        "Bathe daily with water and soap, paying special attention to armpits, groin, neck, and feet",
+        "Change into clean, fresh undergarments and breathable cotton clothes every single day",
+        "Dry skin folds thoroughly with a clean towel before putting on fresh clothes"
+      ],
+      "dont": [
+        "Never re-wear damp, sweaty unwashed undergarments or socks from yesterday",
+        "Never leave damp towels rolled up in a dark corner (breeds mold and mildew)"
+      ],
+      "myths": [
+        {
+          "statement": "Spray perfume or deodorant heavily over unwashed sweaty clothes replaces the need for a daily bath.",
+          "answer": "myth",
+          "truth": "Perfume mixed with stale sweat creates an intensely unpleasant odor and fails to remove skin bacteria."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What type of clothing fabric is healthiest for hot, humid Indian weather?",
+          "options": [
+            "Heavy nylon plastic",
+            "Breathable, natural 100% cotton clothing",
+            "Polyester leather",
+            "Rubber suit"
+          ],
+          "correct": 1,
+          "explanation": "Cotton absorbs sweat and allows cross-ventilation, preventing fungal skin infections."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After an active, sweaty sports session at {at}, {name} prepares to change clothes."
+        ],
+        "question": "What personal hygiene routine keeps skin healthy and fresh?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Take a refreshing bath with soap and water to wash away sweat and bacteria",
+            "note": "Cleanses skin pores and prevents fungal infections.",
+            "weight": 45,
+            "critical": true,
+            "keys": "daily bath|soap and water|wash sweat"
+          },
+          {
+            "point": "Dry skin thoroughly and change into fresh, clean cotton undergarments",
+            "note": "Keeps skin dry and prevents chafing.",
+            "weight": 35,
+            "critical": true,
+            "keys": "dry thoroughly|fresh undergarments|clean cotton clothes"
+          },
+          {
+            "point": "Hang up used damp clothes and towel in sunlight or airy place to dry",
+            "note": "Prevents bacterial and fungal growth on textiles.",
+            "weight": 20,
+            "critical": false,
+            "keys": "dry towel|air clothes|sunlight"
+          }
+        ],
+        "dangerous": [
+          "spray deodorant over dirty sweat",
+          "wear sweaty clothes 3 days in a row",
+          "stay in wet gym gear"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Association of Dermatologists (IADVL Public Education)",
+          "url": "https://iadvl.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-004",
+      "agentId": "care",
+      "subtopic": "Nail care",
+      "title": "Nail hygiene: Trimming straight, clean fingernails and no biting",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The dark crevice beneath long fingernails harbors thousands of fecal bacteria, pinworm eggs, and viruses.",
+        "Biting nails transfers infectious pathogens directly into the mouth and causes painful nail bed infections (paronychia)."
+      ],
+      "do": [
+        "Trim fingernails and toenails regularly using a clean nail clipper, cutting straight across",
+        "Scrub gently under fingernails with soap and water while washing hands",
+        "Keep nails neatly trimmed and smooth with an emery board or file"
+      ],
+      "dont": [
+        "Never bite or chew fingernails or peel off ragged cuticle skin with teeth",
+        "Never share unsterilized nail clippers with people who have fungal nail infections"
+      ],
+      "myths": [
+        {
+          "statement": "Biting your fingernails is a harmless nervous habit that doesn't affect your health.",
+          "answer": "myth",
+          "truth": "Nail biting ingests pinworm eggs, causes oral dental misalignment, and leads to severe bacterial finger infections."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is keeping fingernails short and clean vital before eating food with your hands in India?",
+          "options": [
+            "To look shiny",
+            "Long nails harbor dangerous bacteria and worm eggs that contaminate food eaten with hands",
+            "To type faster",
+            "No reason"
+          ],
+          "correct": 1,
+          "explanation": "Eating with short, clean nails prevents accidental ingestion of trapped bacterial dirt."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Examining their hands at {at}, {name} notices long fingernails with dark dirt trapped underneath."
+        ],
+        "question": "How should {name} practice proper nail hygiene?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Trim fingernails neatly using a clean nail clipper, cutting smoothly straight across",
+            "note": "Removes the primary trap for microbial contamination.",
+            "weight": 45,
+            "critical": true,
+            "keys": "trim nails|clean nail clipper|cut straight across"
+          },
+          {
+            "point": "Scrub gently under nails with soap and a soft brush while washing hands",
+            "note": "Flushes away trapped particulate dirt.",
+            "weight": 35,
+            "critical": true,
+            "keys": "wash under nails|soap|scrub clean"
+          },
+          {
+            "point": "Avoid biting nails or tearing cuticles with teeth",
+            "note": "Stops fecal-oral microbial transmission.",
+            "weight": 20,
+            "critical": false,
+            "keys": "stop nail biting|don'?t bite nails"
+          }
+        ],
+        "dangerous": [
+          "bite nails with teeth",
+          "leave black dirt under nails",
+          "scrape nails with sharp needles"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Health Portal India (Personal Hygiene)",
+          "url": "https://nhp.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-005",
+      "agentId": "care",
+      "subtopic": "Respiratory hygiene",
+      "title": "Respiratory etiquette: The elbow crook cough and tissue disposal",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A single sneeze launches over 40,000 microscopic droplets at speeds up to 160 km/h.",
+        "Coughing into bare palms transfers infectious viruses onto door handles, shared pencils, and bus rails."
+      ],
+      "do": [
+        "Cough or sneeze into the crook of your elbow ('the Dracula cough') if no tissue is available",
+        "Use a clean paper tissue to cover your nose and mouth when sneezing, and discard in a closed dustbin",
+        "Wash hands immediately with soap and water or use sanitizer after blowing your nose"
+      ],
+      "dont": [
+        "Never cough or sneeze openly into classroom air without covering",
+        "Never cough directly into bare palms that touch doorknobs and friends' hands"
+      ],
+      "myths": [
+        {
+          "statement": "Coughing into your bare hands is the polite, standard way to cover your mouth.",
+          "answer": "myth",
+          "truth": "Hands touch desks, food, and doorknobs, rapidly spreading flu and colds to everyone. Cough into your elbow crook."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is sneezing into your elbow crook vastly superior to sneezing into your bare hand?",
+          "options": [
+            "It looks funny",
+            "Your inner elbow rarely touches shared objects like doorknobs, stopping the spread of germs",
+            "It catches sound",
+            "It has no germs"
+          ],
+          "correct": 1,
+          "explanation": "The elbow crook contains droplets without contaminating hands that touch shared surfaces."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In a crowded classroom at {at}, {name} feels a sudden, powerful sneeze coming on."
+        ],
+        "question": "What is the hygienic respiratory response?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Raise your inner elbow crook to cover your mouth and nose tightly as you sneeze",
+            "note": "Blocks respiratory droplets from contaminating hands or air.",
+            "weight": 45,
+            "critical": true,
+            "keys": "elbow crook|sneeze in elbow|cover with elbow"
+          },
+          {
+            "point": "Or use a clean paper tissue and discard it immediately into a waste bin",
+            "note": "Safe hygienic particulate containment.",
+            "weight": 35,
+            "critical": true,
+            "keys": "tissue|dustbin|cover nose and mouth"
+          },
+          {
+            "point": "Wash hands with soap afterwards if hands touched any nasal fluids",
+            "note": "Breaks transmission chains.",
+            "weight": 20,
+            "critical": false,
+            "keys": "wash hands|sanitizer"
+          }
+        ],
+        "dangerous": [
+          "sneeze openly across the classroom",
+          "sneeze into bare palms then touch doorknob",
+          "wipe nose on sleeve"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Health and Family Welfare (Respiratory Hygiene)",
+          "url": "https://mohfw.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-006",
+      "agentId": "care",
+      "subtopic": "Hair care",
+      "title": "Head lice facts: Gentle treatment, no sharing combs and zero shame",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Head lice are tiny wingless insects that crawl; they CANNOT jump, fly, or transmit any diseases.",
+        "Lice infestation has zero connection to personal cleanliness; anyone can catch lice through direct head-to-head contact."
+      ],
+      "do": [
+        "Tell parents calmly if your scalp feels intensely itchy, especially behind ears or at the nape of the neck",
+        "Use a fine-toothed anti-lice comb and gentle medicated anti-lice shampoo recommended by a doctor",
+        "Wash bedsheets, pillowcases, and hats in warm water to prevent re-infestation"
+      ],
+      "dont": [
+        "Never tease or shame a classmate who has head lice (it has nothing to do with cleanliness)",
+        "Never share personal hair combs, brushes, caps, or helmets with others"
+      ],
+      "myths": [
+        {
+          "statement": "Having head lice means a child is dirty and never washes their hair.",
+          "answer": "myth",
+          "truth": "Lice actually prefer clean, healthy hair. Head lice is a common, easily treatable childhood occurrence with zero shame."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do head lice actually travel from one child's hair to another?",
+          "options": [
+            "They fly through the air",
+            "They crawl through direct head-to-head contact or sharing personal caps and combs",
+            "They jump 10 feet",
+            "They swim in pools"
+          ],
+          "correct": 1,
+          "explanation": "Lice have claws for crawling along hair shafts; they cannot jump or fly."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A classmate at {at} is embarrassed because their scalp is itchy and has head lice."
+        ],
+        "question": "How should {name} respond with kindness and scientific clarity?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Reassure the classmate that head lice is very common, easily treated, and NOT caused by being dirty",
+            "note": "Eliminates stigma and peer teasing.",
+            "weight": 45,
+            "critical": true,
+            "keys": "not dirty|very common|easily treated|no shame"
+          },
+          {
+            "point": "Advise consulting parents for a gentle medicated shampoo and fine-toothed nit comb",
+            "note": "Recommends safe, medically approved treatment.",
+            "weight": 35,
+            "critical": true,
+            "keys": "medicated shampoo|fine comb|tell parents"
+          },
+          {
+            "point": "Avoid head-to-head contact and do not share personal combs, caps, or hairbands",
+            "note": "Prevents physical transmission safely.",
+            "weight": 20,
+            "critical": false,
+            "keys": "don'?t share combs|avoid head contact"
+          }
+        ],
+        "dangerous": [
+          "mock and bully the student",
+          "shave student's head forcibly",
+          "spray insect poison on head"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Academy of Pediatrics (Pediculosis Guidelines)",
+          "url": "https://iapindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-007",
+      "agentId": "care",
+      "subtopic": "Sanitation",
+      "title": "School washroom etiquette: Flushing, cleanliness and washing hands",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Unhygienic public washrooms spread urinary tract infections (UTIs) and gastrointestinal bugs.",
+        "Leaving a washroom clean for the next user is a fundamental civic and hygienic responsibility."
+      ],
+      "do": [
+        "Always flush the toilet completely after every use, holding the flush handle until clean water cycles",
+        "Dispose of sanitary pads, tissues, and trash in designated dustbins, NEVER into the toilet bowl (causes choking)",
+        "Wash hands thoroughly with soap and water after every single washroom visit"
+      ],
+      "dont": [
+        "Never stand or squat on Western ceramic toilet seats with dirty shoes (causes catastrophic toilet bowl shattering)",
+        "Never leave toilet seats wet or un-flushed"
+      ],
+      "myths": [
+        {
+          "statement": "Flushing the toilet is unnecessary if you only used it for a short time.",
+          "answer": "myth",
+          "truth": "Leaving unflushed waste breeds foul ammonia odors and attracts flies that transmit gastrointestinal bacteria."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where should used paper towels and sanitary pads always be disposed of in a school washroom?",
+          "options": [
+            "Inside the toilet bowl flush",
+            "In the dedicated covered sanitary waste dustbin",
+            "On the floor",
+            "Out the window"
+          ],
+          "correct": 1,
+          "explanation": "Flushing pads or thick paper chokes sewer plumbing. Always use the dustbin."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Using the school or public washroom at {at}, {name} finishes and prepares to leave."
+        ],
+        "question": "What complete hygiene and civic routine should {name} execute?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Flush the toilet completely and ensure the bowl is spotless for the next person",
+            "note": "Fundamental sanitation etiquette.",
+            "weight": 45,
+            "critical": true,
+            "keys": "flush completely|clean toilet bowl|leave clean"
+          },
+          {
+            "point": "Dispose of all tissues or waste into the closed dustbin, not the flush",
+            "note": "Prevents plumbing blockage.",
+            "weight": 35,
+            "critical": true,
+            "keys": "dustbin|dispose waste in bin|no choking"
+          },
+          {
+            "point": "Wash hands thoroughly with soap and water before returning to class",
+            "note": "Cleanses hands of enteric pathogens.",
+            "weight": 20,
+            "critical": false,
+            "keys": "wash hands with soap|clean hands"
+          }
+        ],
+        "dangerous": [
+          "leave unflushed toilet",
+          "stand on western seat with muddy shoes",
+          "flush sanitary pads down drain"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Swachh Bharat Swachh Vidyalaya Guidelines",
+          "url": "https://dsel.education.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-008",
+      "agentId": "care",
+      "subtopic": "Skin health",
+      "title": "Sun protection in tropical heat: Shade, cotton and hydration",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Ultraviolet (UV) radiation is strongest between 11 AM and 3 PM, causing painful sunburns and cellular damage.",
+        "Wearing wide-brim hats, sunglasses, and breathable clothing shields delicate facial skin naturally."
+      ],
+      "do": [
+        "Seek shade under trees or covered verandahs during intense peak midday sun hours",
+        "Wear a cap or carry an umbrella when walking outside in bright tropical sunlight",
+        "Apply broad-spectrum sunscreen (SPF 30+) on exposed face, neck, and arms before prolonged outdoor sports"
+      ],
+      "dont": [
+        "Never stare directly at the sun (causes irreversible solar retinal burns and blindness)",
+        "Never stay outdoors without drinking water during high UV index days"
+      ],
+      "myths": [
+        {
+          "statement": "You only need sun protection on hot sunny days; cloudy days have zero harmful UV radiation.",
+          "answer": "myth",
+          "truth": "Up to 80% of solar UV rays penetrate cloud cover. Sun protection matters whenever the UV index is moderate to high."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most effective natural way to protect your face and neck from scorching afternoon sun?",
+          "options": [
+            "Running fast",
+            "Wearing a wide-brim hat or cap and staying in shaded areas",
+            "Putting ice in pockets",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "Hats, umbrellas, and natural shade block direct UV photons from damaging skin tissue."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Spending sports day outdoors under bright scorching sunlight at {at}, {name}'s skin begins feeling hot and red."
+        ],
+        "question": "How should {name} protect their skin and health?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Seek shade under canopies or trees whenever not actively competing on the field",
+            "note": "Reduces direct solar radiation exposure.",
+            "weight": 45,
+            "critical": true,
+            "keys": "seek shade|under trees|canopy|avoid direct sun"
+          },
+          {
+            "point": "Wear a cap or hat and apply sunscreen to exposed neck and face",
+            "note": "Shields skin from UV sunburn.",
+            "weight": 35,
+            "critical": true,
+            "keys": "wear cap|sunscreen|hat|protect skin"
+          },
+          {
+            "point": "Drink water regularly to keep skin and body hydrated from within",
+            "note": "Counteracts thermal dehydration.",
+            "weight": 20,
+            "critical": false,
+            "keys": "drink water|hydrate"
+          }
+        ],
+        "dangerous": [
+          "stare directly at sun",
+          "stay in sun without water for 6 hours",
+          "ignore severe sunburn"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Association of Dermatologists Sun Safety Guidelines",
+          "url": "https://iadvl.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-009",
+      "agentId": "care",
+      "subtopic": "Ear safety",
+      "title": "Ear hygiene: Nothing smaller than your elbow in your ear",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Earwax (cerumen) is a healthy, protective substance that traps dust, bacteria, and insects naturally.",
+        "Ears are self-cleaning organs; inserting cotton buds or hairpin objects pushes wax deep against the eardrum."
+      ],
+      "do": [
+        "Remember the golden ENT medical rule: 'Never put anything smaller than your elbow inside your ear'",
+        "Clean only the external outer ear (pinna) with a soft towel after bathing",
+        "Consult an ENT doctor if your ear feels blocked, painful, or has yellowish discharge"
+      ],
+      "dont": [
+        "Never insert cotton ear buds, safety pins, matchsticks, or car keys into your ear canal",
+        "Never pour unverified warm oil or herbal concoctions into ears without medical advice"
+      ],
+      "myths": [
+        {
+          "statement": "Cotton ear buds are designed to be shoved deep inside your ear canal to dig out wax.",
+          "answer": "myth",
+          "truth": "Cotton buds pack wax into hard impactions against the eardrum and risk perforating delicate ear membranes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does earwax actually do inside your ear canal?",
+          "options": [
+            "It is dirty garbage",
+            "It is a protective natural barrier with antimicrobial properties that traps dust and insects",
+            "It blocks sound",
+            "It makes you sick"
+          ],
+          "correct": 1,
+          "explanation": "Earwax lubricates the ear canal and possesses natural antibacterial enzymes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After taking a bath at {at}, {name}'s friend takes a safety pin or cotton bud to dig inside their ear."
+        ],
+        "question": "What urgent ENT safety advice should {name} deliver?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop them immediately: 'Never insert cotton buds, pins, or keys into your ear canal'",
+            "note": "Prevents eardrum perforation and hearing trauma.",
+            "weight": 45,
+            "critical": true,
+            "keys": "never put buds in ear|no pins in ear|eardrum danger"
+          },
+          {
+            "point": "Explain that earwax is natural protection and the ear canal cleans itself outward automatically",
+            "note": "Explains self-cleaning physiological biology.",
+            "weight": 35,
+            "critical": true,
+            "keys": "ear cleans itself|earwax is protective|wax pushes outward"
+          },
+          {
+            "point": "Advise wiping only the outer ear with a clean towel and seeing a doctor if blocked",
+            "note": "Promotes safe external hygiene.",
+            "weight": 20,
+            "critical": false,
+            "keys": "wipe outer ear|see doctor if blocked"
+          }
+        ],
+        "dangerous": [
+          "dig ear with hairpin",
+          "pour hot mustard oil in ear",
+          "push cotton bud deep inside"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Association of Otolaryngologists of India (AOI Ear Care)",
+          "url": "https://aoi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-010",
+      "agentId": "care",
+      "subtopic": "Infection control",
+      "title": "Personal hygiene boundaries: Never sharing towels, bottles and razors",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Damp towels and washcloths harbor fungi, staphylococcus bacteria, and scabies mites.",
+        "Directly sharing drinking bottles mouth-to-mouth transmits glandular fever, throat infections, and cold sores."
+      ],
+      "do": [
+        "Use your own personal towel, toothbrush, hairbrush, and drinking water bottle",
+        "If sharing water with a friend, pour water into their mouth from above without touching bottle lips ('fountain drinking')",
+        "Wash your bath towel and pillowcase weekly in warm soapy water and dry thoroughly in sunlight"
+      ],
+      "dont": [
+        "Never share toothbrushes (transmits bloodborne bacteria through micro-gum bleeds)",
+        "Never use an unfamiliar person's shaving razor, nail clipper, or unwashed towel"
+      ],
+      "myths": [
+        {
+          "statement": "Sharing your personal toothbrush with your best friend is a great sign of close friendship.",
+          "answer": "myth",
+          "truth": "Sharing toothbrushes transfers oral pathogens and bloodborne viruses directly into gum micro-abrasions."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why must you never share personal items like toothbrushes, razors, or wet towels?",
+          "options": [
+            "It wastes soap",
+            "They transfer infectious skin bacteria, bloodborne viruses, and fungal spores between bodies",
+            "It is illegal",
+            "No reason"
+          ],
+          "correct": 1,
+          "explanation": "Personal hygiene items contact body fluids and broken skin, transferring pathogens directly."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At school or sports practice at {at}, a classmate asks to share {name}'s personal towel and drink from their bottle."
+        ],
+        "question": "How can {name} share water safely while maintaining hygiene boundaries?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pour water from above into their mouth without letting their lips touch the bottle rim",
+            "note": "Prevents saliva and oral pathogen cross-contamination.",
+            "weight": 45,
+            "critical": true,
+            "keys": "pour from above|no lip contact|hygienic water sharing"
+          },
+          {
+            "point": "Politely explain that personal bath towels and toothbrushes should never be shared",
+            "note": "Maintains healthy personal hygiene boundaries.",
+            "weight": 35,
+            "critical": true,
+            "keys": "don'?t share towels|personal items|prevent infection"
+          },
+          {
+            "point": "Wash and sanitize your personal water bottle and towel regularly at home",
+            "note": "Maintains personal item cleanliness.",
+            "weight": 20,
+            "critical": false,
+            "keys": "wash bottle|clean towel"
+          }
+        ],
+        "dangerous": [
+          "share toothbrush",
+          "wipe face with friend's sweaty towel",
+          "share lip balm mouth to mouth"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Health Mission (Infection Prevention Guidelines)",
+          "url": "https://nhm.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-011",
+      "agentId": "care",
+      "subtopic": "Vector control",
+      "title": "Mosquito defense: Dengue, malaria and eliminating stagnant water",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Aedes mosquitoes (which transmit Dengue and Chikungunya) bite primarily during early morning and late afternoon.",
+        "Aedes mosquitoes breed in clean, stagnant water inside household flowerpots, air coolers, and discarded plastic cups."
+      ],
+      "do": [
+        "Inspect and empty all stagnant water from air coolers, flowerpot saucers, and terrace tins once every week ('Dry Day')",
+        "Wear light-colored, full-sleeve shirts and full pants when playing outdoors in the evening",
+        "Use mosquito nets while sleeping and apply safe natural mosquito repellent lotion"
+      ],
+      "dont": [
+        "Never allow stagnant water to pool in open drums, old tires, or rooftop overhead tanks",
+        "Never ignore high sudden fever accompanied by severe pain behind the eyes (dengue danger)"
+      ],
+      "myths": [
+        {
+          "statement": "Dengue mosquitoes breed in dirty sewer gutters and only bite in the middle of midnight darkness.",
+          "answer": "myth",
+          "truth": "Aedes dengue mosquitoes breed in CLEAN, fresh stagnant water (coolers, flower vases) and bite during daytime hours."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where do dengue-carrying Aedes mosquitoes commonly breed in urban homes?",
+          "options": [
+            "In hot ovens",
+            "In clean, undisturbed stagnant water in air coolers, flowerpot saucers, and discarded coconut shells",
+            "In dry dustbins",
+            "In books"
+          ],
+          "correct": 1,
+          "explanation": "Aedes lays eggs on the waterline of clean stagnant containers; weekly emptying stops the life cycle."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Observing home surroundings at {at}, {name} notices stagnant water sitting in flowerpot plates and an old cooler."
+        ],
+        "question": "What mosquito control action should {name} take?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Empty and scrub clean all flowerpot saucers, bird baths, and cooler trays immediately",
+            "note": "Destroys mosquito larvae breeding sites completely.",
+            "weight": 45,
+            "critical": true,
+            "keys": "empty stagnant water|clean cooler|dry day|flowerpot saucers"
+          },
+          {
+            "point": "Wear full-sleeve clothing and apply mosquito repellent during morning and evening hours",
+            "note": "Prevents daytime mosquito bites.",
+            "weight": 35,
+            "critical": true,
+            "keys": "full sleeves|repellent|prevent bites"
+          },
+          {
+            "point": "Ensure overhead water tanks are securely covered with tight-fitting lids",
+            "note": "Blocks mosquito entry to water reserves.",
+            "weight": 20,
+            "critical": false,
+            "keys": "cover water tanks|tight lids"
+          }
+        ],
+        "dangerous": [
+          "leave stagnant water for months",
+          "wear shorts in dengue outbreak",
+          "ignore mosquito breeding"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Center for Vector Borne Diseases Control (NCVBDC)",
+          "url": "https://ncvbdc.mohfw.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-012",
+      "agentId": "care",
+      "subtopic": "Illness care",
+      "title": "Sick day care: Resting, staying home and returning safely",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Attending school with an active contagious viral fever spreads infection to dozens of classmates.",
+        "Rest, hydration, and fever monitoring allow your body's immune system to clear infections efficiently."
+      ],
+      "do": [
+        "Stay home from school if you have a fever (above 37.8°C / 100°F), vomiting, or contagious rash",
+        "Rest in bed, drink plenty of fluids (water, soups, ORS, fresh fruit juices), and eat light meals",
+        "Return to school only after being fever-free for at least 24 hours without taking fever-reducing medicines"
+      ],
+      "dont": [
+        "Never force yourself to attend school exams with high burning fever",
+        "Never self-medicate with leftover prescription antibiotics for common viral colds"
+      ],
+      "myths": [
+        {
+          "statement": "Going to school with high fever proves you are a heroic, dedicated student.",
+          "answer": "myth",
+          "truth": "Attending school while sick spreads contagion to peers, delays your own recovery, and risks medical collapse."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "When is it safe to return to school after recovering from a contagious fever?",
+          "options": [
+            "While still shivering with fever",
+            "At least 24 hours after your fever has completely resolved without fever-reducing pills",
+            "In 10 minutes",
+            "Never return"
+          ],
+          "correct": 1,
+          "explanation": "The 24-hour fever-free milestone ensures viral shedding has dropped to safe non-contagious levels."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Waking up with high fever, sore throat, and shivering body at {at}, {name} has a school test."
+        ],
+        "question": "What is the responsible health decision?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stay home, inform the school, and focus on rest, hydration, and medical recovery",
+            "note": "Protects personal health and stops schoolwide viral spread.",
+            "weight": 45,
+            "critical": true,
+            "keys": "stay home|rest in bed|inform school|hydrate"
+          },
+          {
+            "point": "Drink plenty of warm liquids, soups, and consult a doctor with parents",
+            "note": "Supports immune system recovery.",
+            "weight": 35,
+            "critical": true,
+            "keys": "warm liquids|soup|consult doctor"
+          },
+          {
+            "point": "Return to school only after being completely fever-free for at least 24 hours",
+            "note": "Safe, non-contagious return protocol.",
+            "weight": 20,
+            "critical": false,
+            "keys": "fever free 24 hours|safe return"
+          }
+        ],
+        "dangerous": [
+          "go to school with high fever",
+          "take random unprescribed antibiotics",
+          "cough on classmates"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Academy of Pediatrics School Health Guidelines",
+          "url": "https://iapindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-013",
+      "agentId": "care",
+      "subtopic": "Growing up",
+      "title": "Growing up: Normal physical and emotional changes of puberty",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Puberty is the natural biological transition from childhood to young adulthood triggered by hormones.",
+        "Everyone's puberty timeline is completely unique; starting earlier or later than peers is 100% normal."
+      ],
+      "do": [
+        "Understand that bodily changes (growth spurts, voice deepening, body hair, sweat increase) are natural and healthy",
+        "Maintain daily bathing, wear clean cotton clothes, and talk openly with trusted parents, doctors, or counselors",
+        "Treat your own developing body and your classmates' changes with dignity, kindness, and zero teasing"
+      ],
+      "dont": [
+        "Never feel ashamed, scared, or embarrassed about natural biological development",
+        "Never mock or tease classmates whose voices crack or who experience rapid growth spurts"
+      ],
+      "myths": [
+        {
+          "statement": "If your voice cracks or you grow taller later than your friends, there is something medically wrong with you.",
+          "answer": "myth",
+          "truth": "Every human body has an individual biological clock. Puberty variation across ages 10 to 16 is entirely normal."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What biological chemical messengers trigger growth spurts and body changes during puberty?",
+          "options": [
+            "Sugar",
+            "Natural hormones (like testosterone and estrogen) released by the endocrine system",
+            "Vitamins only",
+            "Bile"
+          ],
+          "correct": 1,
+          "explanation": "Hormones orchestrate natural adolescent growth spurts, bone density increase, and maturity."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Experiencing sudden growth spurts, voice changes, or oily skin at {at}, {name} feels confused and self-conscious."
+        ],
+        "question": "What reassuring scientific understanding should {name} remember?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that puberty changes are natural, healthy biological milestones of growing up",
+            "note": "Normalizes adolescent developmental biology.",
+            "weight": 45,
+            "critical": true,
+            "keys": "natural changes|puberty is normal|healthy milestones|growing up"
+          },
+          {
+            "point": "Talk openly with trusted parents, school nurse, or counselor about any questions",
+            "note": "Secures supportive adult guidance.",
+            "weight": 35,
+            "critical": true,
+            "keys": "talk to parents|school nurse|counselor|ask questions"
+          },
+          {
+            "point": "Maintain daily hygiene with gentle bathing and treat developing bodies with respect",
+            "note": "Promotes self-care and dignity.",
+            "weight": 20,
+            "critical": false,
+            "keys": "daily hygiene|respect body"
+          }
+        ],
+        "dangerous": [
+          "feel ashamed of body changes",
+          "mock friends' changing voices",
+          "hide in fear"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Adolescent Health Division (Ministry of Health and Family Welfare - RKSK)",
+          "url": "https://nhm.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-014",
+      "agentId": "care",
+      "subtopic": "Menstrual health",
+      "title": "Menstrual hygiene fundamentals: Normal biology and clean care",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Menstruation is a completely natural, healthy biological process showing that the reproductive system is functional.",
+        "Good menstrual hygiene prevents reproductive tract infections and enables girls to study and play with confidence."
+      ],
+      "do": [
+        "Change sanitary pads every 4 to 6 hours (or clean menstrual cups/reusable cloth pads hygienically)",
+        "Wrap used sanitary pads neatly in newspaper and dispose of them in a covered dustbin (NEVER flush in toilets)",
+        "Maintain daily bathing with clean water and wear clean, dry, breathable cotton underwear"
+      ],
+      "dont": [
+        "Never flush sanitary pads down the toilet (causes catastrophic plumbing blockages)",
+        "Never treat menstruation as 'impure', dirty, or a topic of shame or stigma"
+      ],
+      "myths": [
+        {
+          "statement": "A girl on her period is impure and must sit isolated in a dark corner without touching food.",
+          "answer": "myth",
+          "truth": "Menstruation is a pure, clean, natural biological cycle. Ancient taboos and isolation myths have zero scientific validity."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How often should a sanitary pad be changed to maintain optimal hygiene and prevent bacterial growth?",
+          "options": [
+            "Once every 3 days",
+            "Every 4 to 6 hours (or sooner if heavily soaked)",
+            "Once a week",
+            "Never change"
+          ],
+          "correct": 1,
+          "explanation": "Changing pads every 4-6 hours prevents bacterial multiplication and skin rash."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student in Class 7 at {at} experiences her period at school for the first time and feels panicked."
+        ],
+        "question": "How should {name} and friends respond with compassionate, dignified care?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Reassure her that periods are completely natural, normal, and nothing to feel scared or ashamed of",
+            "note": "Provides immediate emotional comfort and destigmatization.",
+            "weight": 45,
+            "critical": true,
+            "keys": "completely natural|normal biology|no shame|reassure friend"
+          },
+          {
+            "point": "Help her visit the school nurse or female teacher to obtain a clean sanitary pad",
+            "note": "Facilitates access to menstrual hygiene products.",
+            "weight": 35,
+            "critical": true,
+            "keys": "school nurse|clean pad|sanitary product"
+          },
+          {
+            "point": "Wrap used pads in paper and dispose of them in the covered washroom dustbin",
+            "note": "Ensures hygienic disposal practices.",
+            "weight": 20,
+            "critical": false,
+            "keys": "wrap in paper|dispose in dustbin"
+          }
+        ],
+        "dangerous": [
+          "mock or tease the girl",
+          "tell her she is impure",
+          "flush pad in toilet"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Menstrual Hygiene Scheme Guidelines (MoHFW)",
+          "url": "https://nhm.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-015",
+      "agentId": "care",
+      "subtopic": "Body care",
+      "title": "Understanding body odour: Sweat glands, daily washing and clean fabrics",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "During puberty, apocrine sweat glands develop in armpits and groin, producing protein-rich sweat.",
+        "Bacteria naturally living on skin break down this sweat, which creates body odour (BO)."
+      ],
+      "do": [
+        "Wash armpits and body thoroughly with soap and warm water during your daily bath",
+        "Wear freshly washed, clean cotton clothes every day—never re-wear sweaty yesterday shirts",
+        "Use an antiperspirant or gentle deodorant on clean, dry skin after bathing if desired"
+      ],
+      "dont": [
+        "Never mask body odour with heavy sprays of perfume instead of taking a bath",
+        "Never shame or bully classmates about body odour; offer gentle, private advice if asked"
+      ],
+      "myths": [
+        {
+          "statement": "Sweat itself smells naturally disgusting the instant it comes out of your pores.",
+          "answer": "myth",
+          "truth": "Fresh sweat is 100% odorless. Odour only develops hours later when surface skin bacteria ferment the sweat."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What actually causes body odour in armpits during puberty?",
+          "options": [
+            "Eating spicy chips",
+            "Skin bacteria breaking down sweat secreted by apocrine glands",
+            "Dirty water",
+            "Wearing shoes"
+          ],
+          "correct": 1,
+          "explanation": "Bacterial breakdown of organic sweat components produces characteristic body odor."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After gym class at {at}, {name} notices body odour and feels conscious about teammates."
+        ],
+        "question": "What is the effective, scientific personal care solution?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Take a daily bath using soap and water, washing armpits and skin folds thoroughly",
+            "note": "Cleanses away the bacteria that cause body odour.",
+            "weight": 45,
+            "critical": true,
+            "keys": "daily bath|soap and water|wash armpits|body hygiene"
+          },
+          {
+            "point": "Wear clean, freshly laundered cotton clothes every day",
+            "note": "Prevents wearing stale bacterial sweat residue.",
+            "weight": 35,
+            "critical": true,
+            "keys": "clean cotton clothes|fresh clothes|laundered shirt"
+          },
+          {
+            "point": "Use a mild deodorant on clean dry skin rather than spraying heavily over dirty sweat",
+            "note": "Proper post-bath application.",
+            "weight": 20,
+            "critical": false,
+            "keys": "deodorant on clean skin|gentle care"
+          }
+        ],
+        "dangerous": [
+          "spray whole bottle perfume over sweat",
+          "stop bathing for a week",
+          "mock classmates"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Association of Dermatologists (Adolescent Skin Care)",
+          "url": "https://iadvl.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-016",
+      "agentId": "care",
+      "subtopic": "Food containers",
+      "title": "Sanitizing school water bottles, straws and tiffin box gaskets",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Moist rubber gaskets inside tiffin boxes and silicone bottle straws harbor invisible black mold and biofilm.",
+        "Drinking from moldy water bottles causes persistent throat irritation, stomach cramps, and diarrhea."
+      ],
+      "do": [
+        "Wash your school water bottle daily with hot water, liquid soap, and a bottle brush",
+        "Remove rubber sealing rings and silicone straws from tiffin lids weekly to scrub away hidden black mold",
+        "Allow water bottles and tiffins to air-dry completely upside down on a dish rack before closing lids"
+      ],
+      "dont": [
+        "Never leave water sitting in school bottles for 5 days over the weekend",
+        "Never leave leftover food rotting inside closed tiffin boxes in your school bag"
+      ],
+      "myths": [
+        {
+          "statement": "Rinsing your water bottle with plain cold water once a month is enough to keep it clean.",
+          "answer": "myth",
+          "truth": "Saliva backwash and moisture create thick slimy bacterial biofilms inside bottles that only soap scrubbing removes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where does dangerous black mold secretly grow inside school tiffin boxes and sipper bottles?",
+          "options": [
+            "On the outside sticker",
+            "Inside the silicone rubber lid gaskets and straw crevices",
+            "In the bag pocket",
+            "On the spoon handle"
+          ],
+          "correct": 1,
+          "explanation": "Silicone sealing gaskets trap moisture and food grease, forming toxic mold colonies if unwashed."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Opening a school water bottle at {at}, {name} notices a black slimy ring around the rubber lid gasket."
+        ],
+        "question": "How should {name} sanitize this container properly?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Remove the rubber gasket and scrub it thoroughly with hot water, soap, and an old brush",
+            "note": "Removes hazardous fungal mold colonies completely.",
+            "weight": 45,
+            "critical": true,
+            "keys": "remove gasket|scrub with soap|hot water|bottle brush"
+          },
+          {
+            "point": "Wash the bottle inside out with bottle brush and let it air-dry completely",
+            "note": "Ensures complete drying so mold cannot regrow.",
+            "weight": 35,
+            "critical": true,
+            "keys": "wash thoroughly|air dry completely|upside down"
+          },
+          {
+            "point": "Commit to washing school drinking bottles with soap daily after returning home",
+            "note": "Establishes daily hygiene discipline.",
+            "weight": 20,
+            "critical": false,
+            "keys": "wash daily|clean bottles"
+          }
+        ],
+        "dangerous": [
+          "drink from moldy bottle",
+          "scrape mold with dirty fingernail",
+          "ignore black slime"
+        ]
+      },
+      "sources": [
+        {
+          "name": "FSSAI Clean Food and Water Storage Norms",
+          "url": "https://fssai.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-017",
+      "agentId": "care",
+      "subtopic": "Foot health",
+      "title": "Foot hygiene: Washing feet, changing socks and airing sports shoes",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Feet have over 250,000 sweat glands; closed canvas school shoes create dark, warm, humid incubators.",
+        "Athlete's foot is a common fungal infection causing intense itching and peeling between toes."
+      ],
+      "do": [
+        "Wash feet thoroughly with soap and water every day, especially scrubbing between all toes",
+        "Dry your feet completely with a towel before putting on socks and shoes (fungi love moisture)",
+        "Wear clean, fresh cotton socks every day and air out your sports shoes in sunlight or breezy balconies"
+      ],
+      "dont": [
+        "Never wear the same sweaty, damp socks two days in a row",
+        "Never wear damp sports shoes that have not dried out from yesterday's rain"
+      ],
+      "myths": [
+        {
+          "statement": "Smelly shoes are caused by bad luck and have nothing to do with washing feet or socks.",
+          "answer": "myth",
+          "truth": "Smelly feet (bromodosis) are caused by bacteria fermenting trapped foot sweat in unwashed socks."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What simple daily habit eliminates smelly feet and prevents athlete's foot fungus?",
+          "options": [
+            "Wearing plastic bags",
+            "Washing feet with soap, drying thoroughly between toes, and wearing fresh clean cotton socks daily",
+            "Never taking shoes off",
+            "Perfuming shoes"
+          ],
+          "correct": 1,
+          "explanation": "Clean socks and dry inter-toe skin eliminate the humid breeding ground for foot bacteria and fungi."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Taking off sports shoes after school at {at}, {name}'s shoes smell intensely and toes feel damp and itchy."
+        ],
+        "question": "What foot hygiene routine restores comfort?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Wash feet immediately with soap and water, scrubbing and drying thoroughly between toes",
+            "note": "Eliminates odor-causing bacteria and fungi.",
+            "weight": 45,
+            "critical": true,
+            "keys": "wash feet with soap|dry between toes|clean feet"
+          },
+          {
+            "point": "Put damp socks in the laundry and wear a fresh, clean pair of cotton socks tomorrow",
+            "note": "Stops bacterial re-inoculation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "fresh socks daily|clean cotton socks|wash socks"
+          },
+          {
+            "point": "Loosen shoelaces and leave sports shoes outside in an airy, sunny spot to dry out completely",
+            "note": "Solar UV and air circulation eliminate damp shoe odors.",
+            "weight": 20,
+            "critical": false,
+            "keys": "air out shoes|sunny spot|breezy balcony"
+          }
+        ],
+        "dangerous": [
+          "wear same sweaty socks all week",
+          "keep wet shoes inside closed cupboard",
+          "ignore itchy toes"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Journal of Dermatology (Tinea Pedis Prevention)",
+          "url": "https://e-ijd.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "HYG-018",
+      "agentId": "care",
+      "subtopic": "Skin wellness",
+      "title": "Teen skin care fundamentals: Gentle washing, water and no fairness fads",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Adolescent hormones stimulate sebaceous glands, producing excess sebum that clogs pores into pimples (acne).",
+        "Squeezing or popping pimples pushes bacteria deeper into the dermis, causing permanent pitted scars."
+      ],
+      "do": [
+        "Wash your face twice daily with plain water or a mild, gentle soap-free cleanser",
+        "Drink plenty of water and eat fruits and vegetables to keep skin healthy from within",
+        "Consult a certified dermatologist if acne is painful or persistent—treatments exist!"
+      ],
+      "dont": [
+        "Never squeeze, pop, or scratch acne pimples with fingernails (leaves permanent scars)",
+        "Never use harsh chemical fairness bleaching creams (many contain toxic steroids and mercury)"
+      ],
+      "myths": [
+        {
+          "statement": "Skin fairness bleaching creams are safe everyday cosmetics that make you successful in life.",
+          "answer": "myth",
+          "truth": "Fairness creams often contain dangerous steroids that permanently thin skin and damage health. Embrace your natural skin tone with pride."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why must you NEVER squeeze or pop a pimple on your face?",
+          "options": [
+            "It makes you tall",
+            "Popping pushes infection deeper into skin tissues, leading to inflammation and permanent scarring",
+            "It brings rain",
+            "No reason"
+          ],
+          "correct": 1,
+          "explanation": "Popping breaks the follicular wall, spreading infection and leaving permanent pitted hyperpigmentation."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Noticing a new red pimple on their forehead before school at {at}, {name} wants to squeeze and pop it."
+        ],
+        "question": "What scientific skin-care wisdom should {name} follow?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT squeeze, pick, or pop the pimple",
+            "note": "Prevents deep bacterial infection and permanent scarring.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t pop pimple|do not squeeze|leave alone"
+          },
+          {
+            "point": "Wash face gently twice daily with a mild cleanser and keep hands off your face",
+            "note": "Cleans excess sebum without irritating skin barrier.",
+            "weight": 35,
+            "critical": true,
+            "keys": "gentle wash|mild cleanser|hands off face"
+          },
+          {
+            "point": "Take pride in your natural skin tone and reject harmful chemical fairness creams",
+            "note": "Champions healthy self-acceptance and safety.",
+            "weight": 20,
+            "critical": false,
+            "keys": "reject fairness creams|natural skin tone|dermatologist"
+          }
+        ],
+        "dangerous": [
+          "pop pimple with dirty nails",
+          "apply chemical bleach to skin",
+          "scrub face with sandpaper"
+        ]
+      },
+      "sources": [
+        {
+          "name": "IADVL Taskforce Against Steroid Abuse (Skin Safety)",
+          "url": "https://iadvl.org"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

@@ -1,246 +1,1723 @@
 {
- "agentId": "basil",
- "cards": [
-  {
-   "id": "NUT-005",
-   "subtopic": "Hydration",
-   "title": "Staying hydrated",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Plain water is the best drink for everyday hydration.",
-    "You need more water in hot weather and during sport.",
-    "Energy drinks contain caffeine and are not meant for children."
-   ],
-   "do": [
-    "Carry a water bottle",
-    "Sip through the day, not all at once",
-    "Drink more on hot days and after sport"
-   ],
-   "dont": [
-    "Don't use fizzy drinks to quench thirst",
-    "Don't have energy drinks"
-   ],
-   "myths": [
+  "agentId": "basil",
+  "cards": [
     {
-     "statement": "Energy drinks are a good way for kids to recover after sport.",
-     "answer": "myth",
-     "truth": "They have lots of caffeine and sugar. Plain water is best after normal play."
-    }
-   ],
-   "quiz": [
-    {
-     "q": "You just played football for an hour on a hot afternoon. Best drink?",
-     "options": [
-      "A cold fizzy drink",
-      "Plain water (lots of it)",
-      "An energy drink",
-      "Packaged fruit juice"
-     ],
-     "correct": 1,
-     "explanation": "Plain water rehydrates best. Other drinks add a lot of sugar."
-    }
-   ],
-   "scenario": null,
-   "agentId": "basil",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "NUT-010",
-   "subtopic": "Food labels",
-   "title": "Reading food labels",
-   "bands": [
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Ingredients are listed from most to least.",
-    "'No added sugar' doesn't mean no sugar.",
-    "Nutrition values are often given per serving, not per pack."
-   ],
-   "do": [
-    "Check the serving size first",
-    "Look at sugar and salt (sodium)",
-    "Read the first three ingredients",
-    "Check the expiry date"
-   ],
-   "dont": [
-    "Don't trust front-of-pack slogans alone",
-    "Don't assume 'baked' or 'multigrain' means healthy"
-   ],
-   "myths": [
-    {
-     "statement": "A label saying 'no added sugar' means the food has no sugar.",
-     "answer": "myth",
-     "truth": "It can still contain natural sugars, sometimes a lot. Check the sugar line."
+      "id": "NUT-005",
+      "subtopic": "Hydration",
+      "title": "Staying hydrated",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Plain water is the best drink for everyday hydration.",
+        "You need more water in hot weather and during sport.",
+        "Energy drinks contain caffeine and are not meant for children."
+      ],
+      "do": [
+        "Carry a water bottle",
+        "Sip through the day, not all at once",
+        "Drink more on hot days and after sport"
+      ],
+      "dont": [
+        "Don't use fizzy drinks to quench thirst",
+        "Don't have energy drinks"
+      ],
+      "myths": [
+        {
+          "statement": "Energy drinks are a good way for kids to recover after sport.",
+          "answer": "myth",
+          "truth": "They have lots of caffeine and sugar. Plain water is best after normal play."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You just played football for an hour on a hot afternoon. Best drink?",
+          "options": [
+            "A cold fizzy drink",
+            "Plain water (lots of it)",
+            "An energy drink",
+            "Packaged fruit juice"
+          ],
+          "correct": 1,
+          "explanation": "Plain water rehydrates best. Other drinks add a lot of sugar."
+        }
+      ],
+      "scenario": null,
+      "agentId": "basil",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
     },
     {
-     "statement": "Ingredients on a label are listed from the largest amount to the smallest.",
-     "answer": "fact",
-     "truth": "The first ingredient is what the food contains most of."
-    }
-   ],
-   "quiz": [
+      "id": "NUT-010",
+      "subtopic": "Food labels",
+      "title": "Reading food labels",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Ingredients are listed from most to least.",
+        "'No added sugar' doesn't mean no sugar.",
+        "Nutrition values are often given per serving, not per pack."
+      ],
+      "do": [
+        "Check the serving size first",
+        "Look at sugar and salt (sodium)",
+        "Read the first three ingredients",
+        "Check the expiry date"
+      ],
+      "dont": [
+        "Don't trust front-of-pack slogans alone",
+        "Don't assume 'baked' or 'multigrain' means healthy"
+      ],
+      "myths": [
+        {
+          "statement": "A label saying 'no added sugar' means the food has no sugar.",
+          "answer": "myth",
+          "truth": "It can still contain natural sugars, sometimes a lot. Check the sugar line."
+        },
+        {
+          "statement": "Ingredients on a label are listed from the largest amount to the smallest.",
+          "answer": "fact",
+          "truth": "The first ingredient is what the food contains most of."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "On a food label, ingredients are listed…",
+          "options": [
+            "Alphabetically",
+            "From most to least",
+            "Randomly",
+            "By colour"
+          ],
+          "correct": 1,
+          "explanation": "The first ingredients make up most of the product."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{At}, {name} is choosing a snack. One packet says 'Multigrain! Baked!' in big letters, but the label lists sugar and refined flour first. {relation} says the slogan means it's healthy."
+        ],
+        "question": "How should {name} decide which snack is the better choice?",
+        "emojis": [
+          "🏷️",
+          "🍪",
+          "🛒"
+        ],
+        "bubble": "It says multigrain!",
+        "rubric": [
+          {
+            "point": "Read the ingredients list, not the slogan",
+            "note": "Ingredients are listed from most to least.",
+            "weight": 35,
+            "critical": true,
+            "keys": "ingredient|label|back of|read"
+          },
+          {
+            "point": "Check sugar and salt per serving",
+            "note": "These are the key numbers.",
+            "weight": 35,
+            "critical": false,
+            "keys": "sugar|salt|sodium|serving|nutrition"
+          },
+          {
+            "point": "Prefer fruit, nuts or roasted snacks as a better swap",
+            "note": "Whole foods usually win.",
+            "weight": 30,
+            "critical": false,
+            "keys": "fruit|nut|roasted|chana|makhana|homemade|healthier|swap"
+          }
+        ],
+        "dangerous": [],
+        "settings": [
+          "street market",
+          "mall",
+          "school canteen"
+        ]
+      },
+      "agentId": "basil",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "On a food label, ingredients are listed…",
-     "options": [
-      "Alphabetically",
-      "From most to least",
-      "Randomly",
-      "By colour"
-     ],
-     "correct": 1,
-     "explanation": "The first ingredients make up most of the product."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "{At}, {name} is choosing a snack. One packet says 'Multigrain! Baked!' in big letters, but the label lists sugar and refined flour first. {relation} says the slogan means it's healthy."
-    ],
-    "question": "How should {name} decide which snack is the better choice?",
-    "emojis": [
-     "🏷️",
-     "🍪",
-     "🛒"
-    ],
-    "bubble": "It says multigrain!",
-    "rubric": [
-     {
-      "point": "Read the ingredients list, not the slogan",
-      "note": "Ingredients are listed from most to least.",
-      "weight": 35,
-      "critical": true,
-      "keys": "ingredient|label|back of|read"
-     },
-     {
-      "point": "Check sugar and salt per serving",
-      "note": "These are the key numbers.",
-      "weight": 35,
-      "critical": false,
-      "keys": "sugar|salt|sodium|serving|nutrition"
-     },
-     {
-      "point": "Prefer fruit, nuts or roasted snacks as a better swap",
-      "note": "Whole foods usually win.",
-      "weight": 30,
-      "critical": false,
-      "keys": "fruit|nut|roasted|chana|makhana|homemade|healthier|swap"
-     }
-    ],
-    "dangerous": [],
-    "settings": [
-     "street market",
-     "mall",
-     "school canteen"
-    ]
-   },
-   "agentId": "basil",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "NUT-002",
-   "subtopic": "Balanced plate",
-   "title": "A balanced tiffin",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "A balanced meal includes vegetables or fruit, whole grains and a protein.",
-    "Different coloured vegetables give different nutrients."
-   ],
-   "do": [
-    "Fill half the plate with vegetables and fruit",
-    "Add a protein like dal, eggs, paneer, curd or sprouts",
-    "Choose whole grains like roti, brown rice or millets",
-    "Eat a rainbow of colours"
-   ],
-   "dont": [
-    "Don't skip breakfast",
-    "Don't make packaged snacks the main meal"
-   ],
-   "myths": [
+      "id": "NUT-002",
+      "subtopic": "Balanced plate",
+      "title": "A balanced tiffin",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A balanced meal includes vegetables or fruit, whole grains and a protein.",
+        "Different coloured vegetables give different nutrients."
+      ],
+      "do": [
+        "Fill half the plate with vegetables and fruit",
+        "Add a protein like dal, eggs, paneer, curd or sprouts",
+        "Choose whole grains like roti, brown rice or millets",
+        "Eat a rainbow of colours"
+      ],
+      "dont": [
+        "Don't skip breakfast",
+        "Don't make packaged snacks the main meal"
+      ],
+      "myths": [
+        {
+          "statement": "Skipping breakfast helps you concentrate better at school.",
+          "answer": "myth",
+          "truth": "Breakfast gives energy for the morning. Skipping it can make concentrating harder."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which tiffin is the most balanced?",
+          "options": [
+            "Chips and a biscuit packet",
+            "Roti, dal, cucumber and an apple",
+            "Only noodles",
+            "A cold drink and cake"
+          ],
+          "correct": 1,
+          "explanation": "Grain + protein + vegetables + fruit = balanced."
+        }
+      ],
+      "scenario": null,
+      "agentId": "basil",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "statement": "Skipping breakfast helps you concentrate better at school.",
-     "answer": "myth",
-     "truth": "Breakfast gives energy for the morning. Skipping it can make concentrating harder."
-    }
-   ],
-   "quiz": [
+      "id": "NUT-015",
+      "subtopic": "Food hygiene",
+      "title": "Food hygiene",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Washing hands with soap for 20 seconds removes most germs.",
+        "Cooked food left uncovered attracts flies and germs."
+      ],
+      "do": [
+        "Wash hands with soap before eating",
+        "Wash fruits and vegetables",
+        "Keep cooked food covered",
+        "Refrigerate leftovers"
+      ],
+      "dont": [
+        "Don't eat food left uncovered for long",
+        "Don't share half-eaten food or bottles when sick"
+      ],
+      "myths": [
+        {
+          "statement": "Rinsing hands with water alone is as good as washing with soap.",
+          "answer": "myth",
+          "truth": "Soap helps lift germs off the skin. Wash for about 20 seconds."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How long should you wash hands with soap?",
+          "options": [
+            "2 seconds",
+            "About 20 seconds",
+            "5 minutes",
+            "No need"
+          ],
+          "correct": 1,
+          "explanation": "About 20 seconds, the time it takes to hum 'Happy Birthday' twice."
+        }
+      ],
+      "scenario": null,
+      "agentId": "basil",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "Which tiffin is the most balanced?",
-     "options": [
-      "Chips and a biscuit packet",
-      "Roti, dal, cucumber and an apple",
-      "Only noodles",
-      "A cold drink and cake"
-     ],
-     "correct": 1,
-     "explanation": "Grain + protein + vegetables + fruit = balanced."
-    }
-   ],
-   "scenario": null,
-   "agentId": "basil",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "NUT-015",
-   "subtopic": "Food hygiene",
-   "title": "Food hygiene",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Washing hands with soap for 20 seconds removes most germs.",
-    "Cooked food left uncovered attracts flies and germs."
-   ],
-   "do": [
-    "Wash hands with soap before eating",
-    "Wash fruits and vegetables",
-    "Keep cooked food covered",
-    "Refrigerate leftovers"
-   ],
-   "dont": [
-    "Don't eat food left uncovered for long",
-    "Don't share half-eaten food or bottles when sick"
-   ],
-   "myths": [
+      "id": "NUT-021",
+      "agentId": "basil",
+      "subtopic": "Breakfast",
+      "title": "Skipping breakfast impact and quick healthy fuel",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Skipping breakfast leaves blood glucose depleted after a 10-hour nocturnal fast.",
+        "Students who eat breakfast demonstrate higher memory retention and classroom focus."
+      ],
+      "do": [
+        "Eat a balanced morning meal containing complex carbs and protein (poha, idli, eggs, or oatmeal)",
+        "Keep easy backup options ready: a banana, handful of roasted chana, or a boiled egg",
+        "Hydrate with a glass of water before leaving home"
+      ],
+      "dont": [
+        "Never replace breakfast with sugary sodas or packaged cream biscuits",
+        "Never attend morning exams on an empty stomach"
+      ],
+      "myths": [
+        {
+          "statement": "Skipping breakfast helps students stay lean and active.",
+          "answer": "myth",
+          "truth": "Skipping breakfast crashes morning metabolism and causes intense overeating of junk later."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why does eating breakfast improve school exam performance?",
+          "options": [
+            "It makes you sleepy",
+            "It replenishes brain glucose needed for memory, focus, and quick thinking",
+            "It takes up time",
+            "It has no effect"
+          ],
+          "correct": 1,
+          "explanation": "Glucose from wholesome breakfast feeds the brain for alert cognitive performance."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Running late for school at {at}, {name} wants to rush out without eating any breakfast."
+        ],
+        "question": "What should {name} do for quick morning brain fuel?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Grab a quick healthy item like a banana, milk, or roasted chana",
+            "note": "Provides instant glucose and protein.",
+            "weight": 45,
+            "critical": true,
+            "keys": "banana|boiled egg|milk|chana|quick food"
+          },
+          {
+            "point": "Do not skip breakfast entirely before school hours",
+            "note": "Prevents mid-morning fatigue and headaches.",
+            "weight": 35,
+            "critical": true,
+            "keys": "don'?t skip|eat something|morning fuel"
+          },
+          {
+            "point": "Drink a glass of water before heading out",
+            "note": "Ensures morning hydration.",
+            "weight": 20,
+            "critical": false,
+            "keys": "water|hydrate"
+          }
+        ],
+        "dangerous": [
+          "eat nothing",
+          "grab sugary cola",
+          "skip food until lunch"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Institute of Nutrition (ICMR-NIN)",
+          "url": "https://www.nin.res.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "Rinsing hands with water alone is as good as washing with soap.",
-     "answer": "myth",
-     "truth": "Soap helps lift germs off the skin. Wash for about 20 seconds."
-    }
-   ],
-   "quiz": [
+      "id": "NUT-022",
+      "agentId": "basil",
+      "subtopic": "Sugar",
+      "title": "Spotting hidden sugars in malt and 'health' drinks",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Many popular 'brown malt drinks' contain over 50% sugar by weight (sucrose, maltodextrin).",
+        "The WHO recommends keeping free sugars below 25 grams (about 5-6 teaspoons) per day."
+      ],
+      "do": [
+        "Read the nutrition label: ingredients are listed in descending order by weight",
+        "Look for alias names for sugar: sucrose, liquid glucose, maltodextrin, high-fructose syrup",
+        "Enjoy plain milk or flavour with fresh cardamom, cinnamon, or cocoa powder instead"
+      ],
+      "dont": [
+        "Never believe front-of-pack claims like 'Energy Booster' without checking sugar grams",
+        "Never add multiple scoops of sugar to already-sweetened malt powders"
+      ],
+      "myths": [
+        {
+          "statement": "Commercial chocolate malt powders are rich protein supplements for growing kids.",
+          "answer": "myth",
+          "truth": "Most commercial malt mixes are primarily refined sugars and malt extract with minimal protein."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "If 'Sugar' is the first or second ingredient on a food label, what does that mean?",
+          "options": [
+            "It has no sugar",
+            "Sugar makes up the largest proportion of that product",
+            "It is very healthy",
+            "It is organic"
+          ],
+          "correct": 1,
+          "explanation": "Ingredients must be listed in order of weight, from highest to lowest."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the supermarket at {at}, {name} looks at a health drink powder claiming 'Immunity & Growth'."
+        ],
+        "question": "How can {name} verify what is really inside?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Turn to the back panel and check the Ingredients list",
+            "note": "Reveals real composition and order of ingredients.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ingredients list|back panel|label|check grams"
+          },
+          {
+            "point": "Check grams of added sugar per 100g serving",
+            "note": "Identifies hidden sucrose and maltodextrin.",
+            "weight": 35,
+            "critical": true,
+            "keys": "sugar grams|added sugar|maltodextrin"
+          },
+          {
+            "point": "Do not rely solely on bold front-of-pack marketing claims",
+            "note": "Separates marketing from nutritional reality.",
+            "weight": 20,
+            "critical": false,
+            "keys": "don'?t trust claims|front of pack"
+          }
+        ],
+        "dangerous": [
+          "buy based on cartoon actor",
+          "assume healthy without checking",
+          "ignore ingredients"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Food Safety and Standards Authority of India (FSSAI)",
+          "url": "https://fssai.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "How long should you wash hands with soap?",
-     "options": [
-      "2 seconds",
-      "About 20 seconds",
-      "5 minutes",
-      "No need"
-     ],
-     "correct": 1,
-     "explanation": "About 20 seconds, the time it takes to hum 'Happy Birthday' twice."
+      "id": "NUT-023",
+      "agentId": "basil",
+      "subtopic": "Media literacy",
+      "title": "Deconstruct junk food and fast food advertisements",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Food marketers use vibrant cartoon mascots, gaming partnerships, and free toys to target youth.",
+        "Ultra-processed foods are engineered to hit a 'bliss point' of sugar, salt, and fat that bypasses fullness."
+      ],
+      "do": [
+        "Ask: 'What ingredients are they hiding behind this flashy celebration ad?'",
+        "Check the actual nutritional table rather than celebrity endorsement slogans",
+        "Understand that processed snacks are occasional treats, not everyday meal substitutes"
+      ],
+      "dont": [
+        "Never assume a snack is healthy just because a famous cricketer endorses it",
+        "Never replace fresh home-cooked meals with packaged snacks"
+      ],
+      "myths": [
+        {
+          "statement": "Sports stars eat the exact packaged chips and soda they advertise on TV.",
+          "answer": "myth",
+          "truth": "Professional athletes follow strict whole-food nutrition and rarely consume the ultra-processed products they endorse."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do junk food commercials feature energetic gaming and pop music?",
+          "options": [
+            "To teach cooking",
+            "To associate processed snacks with fun and coolness, bypassing nutrition scrutiny",
+            "To help you study",
+            "To save money"
+          ],
+          "correct": 1,
+          "explanation": "Marketing targets emotions so consumers overlook high saturated fat and sodium levels."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A viral TV ad at {at} claims a new crispy chip brand gives you 'Super Energy for Gaming'."
+        ],
+        "question": "How should {name} critically evaluate this claim?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that the ad uses gaming themes to sell ultra-processed carbs",
+            "note": "Deconstructs manipulative advertising techniques.",
+            "weight": 40,
+            "critical": true,
+            "keys": "marketing trick|gaming themes|ad tactic|evaluate"
+          },
+          {
+            "point": "Check the nutrition label for sodium, trans fat, and refined palm oil",
+            "note": "Reveals real nutritional drawbacks.",
+            "weight": 40,
+            "critical": true,
+            "keys": "check label|sodium|palm oil|trans fat"
+          },
+          {
+            "point": "Treat chips as an occasional snack, not everyday study fuel",
+            "note": "Balanced relationship with treats.",
+            "weight": 20,
+            "critical": false,
+            "keys": "occasional|treat|not daily fuel"
+          }
+        ],
+        "dangerous": [
+          "believe chips give superpowers",
+          "eat bags daily",
+          "replace dinner with chips"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Consumer Protection (Misleading Advertisements) Rules",
+          "url": "https://consumeraffairs.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-024",
+      "agentId": "basil",
+      "subtopic": "Sodium",
+      "title": "Sodium and salt in instant noodles and packaged snacks",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A single packet of instant noodles often contains 70% to 100% of a student's daily sodium limit.",
+        "Excess sodium increases blood pressure, strains kidneys, and causes dehydration."
+      ],
+      "do": [
+        "Check sodium mg on the label; ideal daily intake is under 2,000 mg (about 1 teaspoon of salt)",
+        "Use half the tastemaker seasoning packet and add boiled peas, carrots, or egg for balance",
+        "Enjoy instant noodles occasionally rather than as a daily after-school habit"
+      ],
+      "dont": [
+        "Never drink all the leftover salty noodle broth",
+        "Never add extra table salt to pre-seasoned chips and noodles"
+      ],
+      "myths": [
+        {
+          "statement": "Instant noodles are just wheat flour and can be eaten daily for lunch.",
+          "answer": "myth",
+          "truth": "Fried noodles are laden with palm oil, and seasoning packets are concentrated sodium bombs."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How much of your total daily sodium allowance can be in one packet of instant noodles?",
+          "options": [
+            "Almost zero",
+            "Up to 70-100% of your entire recommended daily limit",
+            "5 percent",
+            "Only 1 mg"
+          ],
+          "correct": 1,
+          "explanation": "One tastemaker sachet can exceed the recommended sodium intake for an entire day."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Craving an after-school snack at {at}, {name} prepares a packet of instant noodles."
+        ],
+        "question": "How can {name} make this snack healthier and lower in sodium?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Use half the tastemaker spice packet to cut salt in half",
+            "note": "Significantly reduces sodium overload.",
+            "weight": 45,
+            "critical": true,
+            "keys": "half tastemaker|less spice packet|less salt"
+          },
+          {
+            "point": "Toss in fresh vegetables (carrots, peas, spinach) or a boiled egg",
+            "note": "Adds dietary fiber, vitamins, and protein.",
+            "weight": 35,
+            "critical": true,
+            "keys": "add vegetables|egg|peas|carrots|fiber"
+          },
+          {
+            "point": "Do not drink the remaining salty soup broth",
+            "note": "Avoids consuming dissolved sodium residue.",
+            "weight": 20,
+            "critical": false,
+            "keys": "don'?t drink broth|leave soup"
+          }
+        ],
+        "dangerous": [
+          "add extra salt",
+          "eat 3 packets daily",
+          "drink all salty broth"
+        ]
+      },
+      "sources": [
+        {
+          "name": "ICMR Dietary Guidelines for Indians",
+          "url": "https://www.nin.res.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-025",
+      "agentId": "basil",
+      "subtopic": "Produce",
+      "title": "Eating local and seasonal fruits and vegetables",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Seasonal produce ripens naturally on plants, yielding maximum vitamin C and antioxidant levels.",
+        "Out-of-season produce is kept in cold storage for months and often treated with artificial ripening agents."
+      ],
+      "do": [
+        "Eat seasonal fruits: mangoes/watermelons in summer; guavas/oranges in winter; papayas/bananas year-round",
+        "Choose local Indian fruits like amla, ber, jamun, and pomegranate for affordable rich nutrition",
+        "Wash all fruits thoroughly under running water before peeling or eating"
+      ],
+      "dont": [
+        "Never choose expensive imported apples over fresh local seasonal fruits",
+        "Never skip washing fruits before eating"
+      ],
+      "myths": [
+        {
+          "statement": "Imported fruits with foreign stickers are much healthier than local Indian fruits.",
+          "answer": "myth",
+          "truth": "Local Indian fruits like amla and guava contain 5 times more Vitamin C than imported apples."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is eating an amla (Indian gooseberry) or guava better than an expensive imported kiwi?",
+          "options": [
+            "They have more seeds",
+            "Local amla and guava pack far higher Vitamin C at a fraction of the cost and carbon footprint",
+            "They look bigger",
+            "They have stickers"
+          ],
+          "correct": 1,
+          "explanation": "Amla is one of nature's richest sources of Vitamin C, costing very little."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Shopping for fruit with family at {at}, {name} sees costly imported berries alongside fresh local guavas."
+        ],
+        "question": "Why is picking the local seasonal fruit the smarter choice?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Seasonal local guavas are fresher and richer in Vitamin C and fiber",
+            "note": "Higher nutritional density.",
+            "weight": 45,
+            "critical": true,
+            "keys": "guava|vitamin c|fresher|seasonal|local"
+          },
+          {
+            "point": "Local produce supports nearby farmers and requires minimal transport emissions",
+            "note": "Eco-friendly and sustainable.",
+            "weight": 25,
+            "critical": false,
+            "keys": "local farmers|environment|lower cost"
+          },
+          {
+            "point": "Wash thoroughly with water before eating",
+            "note": "Removes surface dust and handling residue.",
+            "weight": 30,
+            "critical": true,
+            "keys": "wash with water|clean fruit"
+          }
+        ],
+        "dangerous": [
+          "buy imported only for stickers",
+          "never wash fruit",
+          "avoid local fruits"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Agriculture & Farmers Welfare",
+          "url": "https://agricoop.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-026",
+      "agentId": "basil",
+      "subtopic": "Protein",
+      "title": "Powerhouse plant protein: Dal, sprouts, paneer and chana",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Proteins are the building blocks needed for muscle growth, tissue repair, and immune antibodies.",
+        "Combining grains and legumes (like rice + dal or roti + rajma) forms a complete amino acid profile."
+      ],
+      "do": [
+        "Include a protein source in every meal: dal, chana, rajma, paneer, tofu, sprouts, or eggs",
+        "Sprout moong or chana at home to double their vitamin and digestive enzyme content",
+        "Snack on roasted peanuts or chana instead of fried potato chips"
+      ],
+      "dont": [
+        "Never rely solely on plain rice or bread without any lentils or legumes",
+        "Never take unverified gym protein powders without medical advice"
+      ],
+      "myths": [
+        {
+          "statement": "Vegetarian diets cannot provide enough protein for growing school athletes.",
+          "answer": "myth",
+          "truth": "Combining lentils, dairy, nuts, seeds, and sprouts provides abundant, high-quality complete protein."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens when you combine rice with dal or roti with rajma?",
+          "options": [
+            "They cancel each other out",
+            "Their amino acids complement each other to form complete, high-quality protein",
+            "It makes you fat",
+            "It has zero protein"
+          ],
+          "correct": 1,
+          "explanation": "Grain + pulse combinations provide all nine essential amino acids."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s school lunchbox at {at} contains only plain butter noodles."
+        ],
+        "question": "How can {name} upgrade this meal to build strong muscles?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Add protein like paneer cubes, boiled eggs, tofu, or sprouts",
+            "note": "Provides essential amino acids for growth.",
+            "weight": 45,
+            "critical": true,
+            "keys": "paneer|egg|sprouts|dal|chana|protein"
+          },
+          {
+            "point": "Understand that protein keeps you satiated and alert through the afternoon",
+            "note": "Prevents 2 PM classroom slumps.",
+            "weight": 35,
+            "critical": true,
+            "keys": "fullness|energy|muscle repair"
+          },
+          {
+            "point": "Snack on a small cup of roasted peanuts or moong sprouts",
+            "note": "Wholesome natural protein snack.",
+            "weight": 20,
+            "critical": false,
+            "keys": "peanuts|sprouts|roasted chana"
+          }
+        ],
+        "dangerous": [
+          "eat only plain carb noodles",
+          "take bodybuilding supplements",
+          "skip protein entirely"
+        ]
+      },
+      "sources": [
+        {
+          "name": "ICMR National Institute of Nutrition",
+          "url": "https://www.nin.res.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-027",
+      "agentId": "basil",
+      "subtopic": "Iron",
+      "title": "Beating anemia: Iron-rich foods paired with Vitamin C",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Over 50% of Indian schoolchildren and teenagers have mild iron-deficiency anemia.",
+        "Vitamin C dramatically enhances the absorption of non-heme plant iron in the gut."
+      ],
+      "do": [
+        "Eat iron-rich foods: palak (spinach), methi, beetroot, lentils, and jaggery in moderation",
+        "Squeeze fresh lemon juice over your dal and vegetables to boost iron uptake with Vitamin C",
+        "Cook in traditional cast-iron pans to naturally leach safe dietary iron into curries"
+      ],
+      "dont": [
+        "Never drink hot tea or coffee with meals (tannins block iron absorption)",
+        "Never ignore persistent symptoms of unusual fatigue, pale nails, and dizziness"
+      ],
+      "myths": [
+        {
+          "statement": "Drinking a cup of chai right after eating dal and roti is good for digestion.",
+          "answer": "myth",
+          "truth": "Chai tannins bind with dietary iron in your stomach, completely blocking its absorption."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you squeeze onto your dal to help your body absorb plant iron?",
+          "options": [
+            "Warm milk",
+            "Fresh lemon juice (rich in Vitamin C)",
+            "Salty sauce",
+            "Vinegar"
+          ],
+          "correct": 1,
+          "explanation": "Vitamin C converts plant iron into a chemical form easily absorbed by intestinal walls."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During lunch at {at}, {name} notices palak dal on the table."
+        ],
+        "question": "How can {name} maximize iron absorption from this green leafy meal?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Squeeze fresh lemon juice directly over the spinach dal",
+            "note": "Vitamin C triples plant iron absorption.",
+            "weight": 45,
+            "critical": true,
+            "keys": "lemon juice|vitamin c|citrus"
+          },
+          {
+            "point": "Avoid drinking tea or caffeinated beverages right after the meal",
+            "note": "Prevents tannins from binding iron.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no tea|no coffee|avoid chai with food"
+          },
+          {
+            "point": "Include iron-rich foods regularly to prevent fatigue and anemia",
+            "note": "Keeps red blood cell hemoglobin high.",
+            "weight": 20,
+            "critical": false,
+            "keys": "iron rich|prevent anemia|energy"
+          }
+        ],
+        "dangerous": [
+          "drink chai with meal",
+          "throw away greens",
+          "eat without vitamin c"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Anemia Mukt Bharat Guidelines (MoHFW)",
+          "url": "https://anemiamuktibharat.info"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-028",
+      "agentId": "basil",
+      "subtopic": "Allergies",
+      "title": "Food allergies in friends and lunchbox etiquette",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Severe food allergies (nuts, eggs, dairy, shellfish) can trigger life-threatening anaphylaxis in minutes.",
+        "Even microscopic crumbs on shared spoons or lunchbox lids can induce an allergic reaction."
+      ],
+      "do": [
+        "Always ask: 'Does anyone have food allergies?' before sharing homemade snacks",
+        "Never pressure friends to taste unfamiliar dishes if they express hesitation",
+        "Call a teacher and school nurse immediately if a friend experiences hives, lip swelling, or breathing difficulty"
+      ],
+      "dont": [
+        "Never tease or hide allergen ingredients in a friend's lunch as a prank",
+        "Never force a child with allergies to eat shared treats"
+      ],
+      "myths": [
+        {
+          "statement": "If someone is allergic to peanuts, eating a tiny crumb will not hurt them.",
+          "answer": "myth",
+          "truth": "Microscopic allergen traces can trigger severe airway constriction in sensitive individuals."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A friend at your lunch table says they have a severe peanut allergy. What is the respectful rule?",
+          "options": [
+            "Force them to try peanut chikki",
+            "Never share peanut snacks and wash hands after eating",
+            "Tell them it's in their mind",
+            "Hide peanuts in sandwich"
+          ],
+          "correct": 1,
+          "explanation": "Food allergies are serious medical conditions. Respect dietary boundaries completely."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At lunchtime at {at}, {name} opens a box of peanut brittle (chikki) beside a classmate who has a peanut allergy."
+        ],
+        "question": "What is the considerate, safe lunch etiquette for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Ask if having peanuts nearby is safe or eat at a considerate distance",
+            "note": "Prevents accidental airborne or surface contamination.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ask friend|keep distance|don'?t share peanut"
+          },
+          {
+            "point": "Do not share utensils, spoons, or lunchboxes with the allergic friend",
+            "note": "Avoids allergen cross-contact.",
+            "weight": 35,
+            "critical": true,
+            "keys": "don'?t share spoon|no cross contamination"
+          },
+          {
+            "point": "Know the symptoms of allergic reaction (facial swelling, hives, wheezing)",
+            "note": "Enables instant emergency alert.",
+            "weight": 20,
+            "critical": false,
+            "keys": "allergic signs|swelling|tell teacher"
+          }
+        ],
+        "dangerous": [
+          "prank friend with peanut",
+          "force friend to taste",
+          "laugh at allergy"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Food Allergy India Network",
+          "url": "https://allergyfreeindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-029",
+      "agentId": "basil",
+      "subtopic": "Exam fuel",
+      "title": "Exam season brain fuel: Hydration, light meals and energy drinks",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Dehydration of just 2% significantly reduces mathematical calculation speed and attention span.",
+        "High-sugar energy drinks cause a sharp insulin spike followed by an exhausting brain crash."
+      ],
+      "do": [
+        "Drink plain water, coconut water, or buttermilk regularly while studying",
+        "Eat light, frequent meals (fruits, nuts, curd, dal-chawal) to maintain steady glucose",
+        "Avoid heavy, oily deep-fried parathas or bhaturas right before morning exams"
+      ],
+      "dont": [
+        "Never consume high-caffeine energy cans to pull all-nighters",
+        "Never skip water during long study sessions"
+      ],
+      "myths": [
+        {
+          "statement": "Canned energy drinks sharpen student memory for board exams.",
+          "answer": "myth",
+          "truth": "Energy drinks cause heart palpitations, severe anxiety jitters, and a steep cognitive energy crash."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What drink provides the steadiest brain focus without causing jittery crashes during exam week?",
+          "options": [
+            "Commercial energy drink can",
+            "Plain water, chaas (buttermilk) or coconut water",
+            "Three sugary sodas",
+            "Black coffee with extra sugar"
+          ],
+          "correct": 1,
+          "explanation": "Hydration with clean water and electrolytes sustains cerebral circulation without spikes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Studying for important exams at {at}, {name} feels drowsy and considers buying a canned energy drink."
+        ],
+        "question": "What is the wiser, scientifically sound brain-fuel choice?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Drink a glass of water, splash face with cool water, and take a 5-minute stretch break",
+            "note": "Restores oxygen delivery to brain naturally.",
+            "weight": 40,
+            "critical": true,
+            "keys": "drink water|stretch break|hydrate|wash face"
+          },
+          {
+            "point": "Avoid high-caffeine energy drinks that trigger anxiety and crashes",
+            "note": "Protects heart rhythm and focus.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no energy drinks|avoid caffeine cans|no soda"
+          },
+          {
+            "point": "Snack on a handful of almonds, walnuts, or an apple for clean energy",
+            "note": "Supplies steady glucose and omega-3s.",
+            "weight": 25,
+            "critical": false,
+            "keys": "nuts|apple|fruit|wholesome snack"
+          }
+        ],
+        "dangerous": [
+          "drink 2 cans energy drink",
+          "skip water all day",
+          "pull all nighter with coffee"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NIN Nutrition Advice for Students",
+          "url": "https://www.nin.res.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-030",
+      "agentId": "basil",
+      "subtopic": "Mindful eating",
+      "title": "Mindful eating: Chewing slowly and ditching mealtime screens",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "It takes approximately 20 minutes for stomach satiety hormones (leptin) to signal fullness to the brain.",
+        "Eating while watching YouTube or TV distracts the brain, leading to subconscious 30% overeating."
+      ],
+      "do": [
+        "Put phones and tablets away and switch off the television during meals",
+        "Chew each bite thoroughly to help saliva enzymes kickstart carbohydrate digestion",
+        "Pause halfway through your plate and check: 'Am I still genuinely hungry?'"
+      ],
+      "dont": [
+        "Never swallow meals in 3 minutes while glued to a mobile video",
+        "Never force yourself to finish overflowing portions when already comfortably full"
+      ],
+      "myths": [
+        {
+          "statement": "Watching funny reels while eating helps you digest food faster.",
+          "answer": "myth",
+          "truth": "Screen distraction blocks brain fullness signals, leading to overeating and acid indigestion."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why does eating while watching videos cause indigestion and unintended weight gain?",
+          "options": [
+            "Screens emit cold light",
+            "Distraction prevents the brain from sensing fullness signals, causing unmeasured overeating",
+            "Food gets cold",
+            "It has no effect"
+          ],
+          "correct": 1,
+          "explanation": "Mindless eating disconnects the brain from biological hunger and fullness cues."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Sitting down for dinner at {at}, {name} instinctively props a phone against the water glass to watch reels."
+        ],
+        "question": "How should {name} transform this into a healthy mindful meal?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Put the phone away and enjoy dinner with family without screens",
+            "note": "Fosters mindful connection and satiety awareness.",
+            "weight": 40,
+            "critical": true,
+            "keys": "put phone away|no screens|turn off tv"
+          },
+          {
+            "point": "Eat slowly, savoring textures, flavors, and chewing well",
+            "note": "Aids digestive enzyme production.",
+            "weight": 35,
+            "critical": true,
+            "keys": "eat slowly|chew well|savor food"
+          },
+          {
+            "point": "Listen to your stomach and stop eating when pleasantly satisfied",
+            "note": "Prevents uncomfortable bloating.",
+            "weight": 25,
+            "critical": false,
+            "keys": "listen to body|stop when full|satiety"
+          }
+        ],
+        "dangerous": [
+          "stare at reels while eating",
+          "swallow whole without chewing",
+          "eat until bursting"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Centre for Mindful Eating Guidelines",
+          "url": "https://thecenterformindfuleating.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-031",
+      "agentId": "basil",
+      "subtopic": "Festivals",
+      "title": "Healthy balance during festival celebrations and feasts",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Festivals in India bring rich traditional sweets made of ghee, jaggery, milk, and nuts.",
+        "Labeling festive foods as 'evil' creates unhealthy guilt; balance and portion awareness work best."
+      ],
+      "do": [
+        "Enjoy favorite festival sweets mindfully in small portions rather than bingeing",
+        "Prioritize homemade traditional treats over adulterated commercial sweets",
+        "Keep daily water intake high and eat plenty of fresh salad and fruit alongside festive meals"
+      ],
+      "dont": [
+        "Never skip regular meals to 'save room' for a massive binge of sweets",
+        "Never shame yourself or others for enjoying festival foods"
+      ],
+      "myths": [
+        {
+          "statement": "Eating sweets during Diwali or Eid will immediately ruin your health permanently.",
+          "answer": "myth",
+          "truth": "Traditional festive treats enjoyed in moderate portions as part of celebrations are perfectly healthy."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the best way to enjoy festival sweets without feeling sick or sluggish?",
+          "options": [
+            "Eat 20 gulab jamuns in one sitting",
+            "Savor 1-2 pieces mindfully, stay hydrated, and balance with wholesome meals",
+            "Fast all day then binge",
+            "Refuse all family foods angrily"
+          ],
+          "correct": 1,
+          "explanation": "Moderation, hydration, and positive family celebration preserve festive joy and health."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "It's festival day at {at}, and the dining table is filled with laddus, jalebis, and samosas."
+        ],
+        "question": "How can {name} enjoy the festivities while taking good care of their body?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Choose favorite traditional treats and enjoy 1 or 2 pieces mindfully",
+            "note": "Prevents sugar overload while partaking in festivities.",
+            "weight": 40,
+            "critical": true,
+            "keys": "moderate portion|savor sweet|enjoy mindfully"
+          },
+          {
+            "point": "Drink plenty of water and eat regular fiber-rich vegetables",
+            "note": "Prevents sluggishness and dehydration.",
+            "weight": 35,
+            "critical": true,
+            "keys": "drink water|fiber|vegetables|balance"
+          },
+          {
+            "point": "Do not skip normal meals or feel guilty about enjoying family traditions",
+            "note": "Promotes healthy, guilt-free food relationships.",
+            "weight": 25,
+            "critical": false,
+            "keys": "no guilt|eat normal meals|celebrate"
+          }
+        ],
+        "dangerous": [
+          "binge on sweets all day",
+          "skip lunch completely",
+          "punish yourself for eating"
+        ]
+      },
+      "sources": [
+        {
+          "name": "FSSAI Safe and Nutritious Food at Home",
+          "url": "https://fssai.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-032",
+      "agentId": "basil",
+      "subtopic": "Street food",
+      "title": "Street food smarts: Hygiene checks and safe snacking",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Waterborne bacteria (E. coli, Salmonella, Vibrio) cause acute food poisoning and typhoid.",
+        "Uncovered cut fruits (papaya, watermelon) on roadside carts attract flies and vehicle exhaust fumes."
+      ],
+      "do": [
+        "Choose stalls that serve freshly cooked, piping-hot food straight from the tava or kadhai",
+        "Ensure the vendor uses clean RO/filtered water, clean aprons, and covers food containers",
+        "Avoid pre-cut fruit platters or unpasteurized drinks mixed with crushed raw roadside ice"
+      ],
+      "dont": [
+        "Never drink roadside juices made with murky industrial block ice",
+        "Never eat food from stalls with flies buzzing over open ingredients"
+      ],
+      "myths": [
+        {
+          "statement": "Roadside industrial block ice is made from purified RO water.",
+          "answer": "myth",
+          "truth": "Block ice is often manufactured from unpotable water meant for chemical cooling, carrying typhoid microbes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the safest type of street food to eat when snacking outdoors?",
+          "options": [
+            "Pre-cut watermelon slices sitting out in the sun",
+            "Piping hot freshly steamed idlis or freshly fried samosas straight from hot oil",
+            "Open juice made with roadside block ice",
+            "Raw chutney with flies"
+          ],
+          "correct": 1,
+          "explanation": "High cooking heat kills bacteria instantly; freshly prepared hot foods are safest."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Walking through a market at {at}, {name} and friends want to grab a quick street food snack."
+        ],
+        "question": "What safety indicators should {name} check before ordering?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Check that the stall is clean, ingredients are covered, and vendor uses filtered water",
+            "note": "Ensures basic hygienic standards.",
+            "weight": 40,
+            "critical": true,
+            "keys": "clean stall|covered food|filtered water|hygiene"
+          },
+          {
+            "point": "Opt for freshly cooked piping hot dishes rather than pre-cut raw fruits",
+            "note": "Heat destroys dangerous gastrointestinal microbes.",
+            "weight": 40,
+            "critical": true,
+            "keys": "piping hot|freshly cooked|avoid cut fruits"
+          },
+          {
+            "point": "Avoid drinks made with crushed industrial block ice",
+            "note": "Blocks contain non-potable water bacteria.",
+            "weight": 20,
+            "critical": false,
+            "keys": "avoid block ice|no raw ice"
+          }
+        ],
+        "dangerous": [
+          "eat from fly-infested stall",
+          "eat uncovered street fruit",
+          "drink murky road ice"
+        ]
+      },
+      "sources": [
+        {
+          "name": "FSSAI Clean Street Food Hub Initiative",
+          "url": "https://fssai.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-033",
+      "agentId": "basil",
+      "subtopic": "Food safety",
+      "title": "Leftover food safety: Cooling, refrigerating and reheating",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The 'Danger Zone' for bacterial proliferation is between 5°C and 60°C.",
+        "Perishable cooked foods left at warm room temperature for over 2 hours multiply millions of bacteria."
+      ],
+      "do": [
+        "Refrigerate leftover rice, dal, and curries within 2 hours of cooking",
+        "Store leftovers in covered clean containers and consume within 24 to 48 hours",
+        "Reheat leftovers thoroughly until steaming hot (above 74°C) before eating"
+      ],
+      "dont": [
+        "Never leave cooked food sitting out on the counter overnight",
+        "Never reheat the same batch of food multiple times"
+      ],
+      "myths": [
+        {
+          "statement": "Smelling cooked food is an infallible way to tell if it has gone bad.",
+          "answer": "myth",
+          "truth": "Many dangerous pathogenic bacteria (Staphylococcus, Salmonella) produce zero odor or taste changes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Within how many hours must cooked food be refrigerated to stop bacterial growth?",
+          "options": [
+            "24 hours",
+            "Within 2 hours of cooking",
+            "5 days",
+            "Never refrigerate"
+          ],
+          "correct": 1,
+          "explanation": "After 2 hours at room temperature, bacterial populations double every 20 minutes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After dinner at {at}, a large pot of cooked chicken curry or paneer sits on the kitchen stove."
+        ],
+        "question": "How should {name} handle these leftovers safely?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Allow it to cool slightly and place in refrigerator within 2 hours",
+            "note": "Stops bacterial multiplication in the Danger Zone.",
+            "weight": 45,
+            "critical": true,
+            "keys": "refrigerate|within 2 hours|cool and fridge"
+          },
+          {
+            "point": "Store in a covered clean airtight container",
+            "note": "Prevents contamination from fridge odors and moisture.",
+            "weight": 20,
+            "critical": false,
+            "keys": "clean container|airtight|covered"
+          },
+          {
+            "point": "Reheat thoroughly until steaming hot throughout before eating tomorrow",
+            "note": "Kills any surface bacterial spores.",
+            "weight": 35,
+            "critical": true,
+            "keys": "reheat steaming hot|heat thoroughly|hot"
+          }
+        ],
+        "dangerous": [
+          "leave on stove all night",
+          "eat unheated cold leftovers",
+          "sniff test only"
+        ]
+      },
+      "sources": [
+        {
+          "name": "WHO Five Keys to Safer Food",
+          "url": "https://who.int"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-034",
+      "agentId": "basil",
+      "subtopic": "Sustainability",
+      "title": "Reducing plate food waste at home and school",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Food waste rotting in landfills produces methane, a greenhouse gas 28 times more potent than CO2.",
+        "Taking smaller initial portions allows you to take seconds without throwing untouched food in the bin."
+      ],
+      "do": [
+        "Serve smaller first portions on your plate; you can always ask for a second helping",
+        "Pack only the amount of lunch you know you will eat at school",
+        "Transform leftover rotis into healthy poha/rolls and leftover rice into fried rice"
+      ],
+      "dont": [
+        "Never heap mountains of food onto your plate that you cannot finish",
+        "Never throw away whole untouched fruits into the dustbin"
+      ],
+      "myths": [
+        {
+          "statement": "Leaving food on your plate at restaurants shows that you come from a wealthy family.",
+          "answer": "myth",
+          "truth": "Wasting food disrespects farmers' hard labor and exacerbates global environmental damage."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the simplest way to ensure zero food waste from your dinner plate?",
+          "options": [
+            "Take double what you need",
+            "Start with modest portions and take seconds only if still hungry",
+            "Feed it all to pets",
+            "Throw it out quietly"
+          ],
+          "correct": 1,
+          "explanation": "Portion control at serving time prevents untouched food ending up in trash bins."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the school canteen or dining hall at {at}, {name} is serving lunch from the buffet counter."
+        ],
+        "question": "What plate habit ensures {name} leaves zero food waste?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Serve a modest first portion of rice, sabzi, and dal",
+            "note": "Ensures you only take what you can eat.",
+            "weight": 45,
+            "critical": true,
+            "keys": "small portion|modest portion|take less first"
+          },
+          {
+            "point": "Take second helpings only if still genuinely hungry",
+            "note": "Adjusts intake to real hunger without waste.",
+            "weight": 35,
+            "critical": true,
+            "keys": "second helping if hungry|take seconds"
+          },
+          {
+            "point": "Appreciate the farmers, water, and labor that produced the meal",
+            "note": "Builds gratitude and respect for food.",
+            "weight": 20,
+            "critical": false,
+            "keys": "respect food|farmer gratitude|no waste"
+          }
+        ],
+        "dangerous": [
+          "overflow plate with food",
+          "throw half in dustbin",
+          "waste food carelessly"
+        ]
+      },
+      "sources": [
+        {
+          "name": "UNEP Food Waste Index",
+          "url": "https://unep.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-035",
+      "agentId": "basil",
+      "subtopic": "Bone health",
+      "title": "Building strong bones: Calcium, sunlight and Vitamin D",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Human bone density reaches its peak by age 20; adolescence is the critical window for bone building.",
+        "Without Vitamin D synthesized via sunlight, the body can absorb less than 15% of dietary calcium."
+      ],
+      "do": [
+        "Consume calcium sources: curd (dahi), milk, ragi (finger millet), sesame seeds (til), and paneer",
+        "Spend 20-30 minutes outdoors in morning sunlight to allow skin to synthesize Vitamin D naturally",
+        "Engage in weight-bearing play like running, jumping rope, and dancing to strengthen bone matrix"
+      ],
+      "dont": [
+        "Never rely solely on calcium pills without consulting a doctor",
+        "Never spend all daylight hours indoors under artificial white lights"
+      ],
+      "myths": [
+        {
+          "statement": "Only cow's milk contains calcium; non-milk drinkers cannot have strong bones.",
+          "answer": "myth",
+          "truth": "Ragi (finger millet), sesame seeds, tofu, and dark leafy greens pack enormous calcium reserves."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is spending 20-30 minutes in morning outdoor sunlight crucial for your bones?",
+          "options": [
+            "To get a tan",
+            "Sunlight triggers your skin to produce Vitamin D, which absorbs calcium into bones",
+            "To warm clothes",
+            "It does nothing"
+          ],
+          "correct": 1,
+          "explanation": "Vitamin D is synthesized by UVB sunlight and acts as the gatekeeper for bone calcium absorption."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} dislikes drinking plain cow's milk and worries about bone strength at {at}."
+        ],
+        "question": "How can {name} build rock-solid bones through diet and lifestyle?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Eat non-dairy calcium rich foods like ragi, curd, sesame, and paneer",
+            "note": "Supplies essential mineral building blocks.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ragi|curd|sesame|paneer|calcium"
+          },
+          {
+            "point": "Get 20-30 minutes of natural outdoor sunlight daily for Vitamin D",
+            "note": "Activates calcium absorption in gut.",
+            "weight": 35,
+            "critical": true,
+            "keys": "sunlight|outdoor time|vitamin d"
+          },
+          {
+            "point": "Play weight-bearing sports like running, skipping, or football",
+            "note": "Physical impact stimulates bone mineralization.",
+            "weight": 20,
+            "critical": false,
+            "keys": "sports|running|exercise|bone density"
+          }
+        ],
+        "dangerous": [
+          "stay in dark room always",
+          "drink sugary milkshakes only",
+          "ignore bone health"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Society for Bone and Mineral Research (ISBMR)",
+          "url": "https://isbmr.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "NUT-036",
+      "agentId": "basil",
+      "subtopic": "Diet myths",
+      "title": "Busting magic food fads, detox teas and crash diets",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The human liver and kidneys detoxify the bloodstream continuously; no tea or juice 'detoxes' you.",
+        "Severe calorie-restriction crash diets during teenage years stunt growth and damage hormonal health."
+      ],
+      "do": [
+        "Recognize that no single superfood possesses magical healing powers; balance is everything",
+        "Trust whole home-cooked meals over expensive commercial detox supplements",
+        "Fuel your body with diverse food groups: grains, pulses, dairy/alternatives, vegetables, fruits, and healthy fats"
+      ],
+      "dont": [
+        "Never starve yourself on crash juice cleanses or unverified viral diets",
+        "Never eliminate whole food groups without certified medical advice"
+      ],
+      "myths": [
+        {
+          "statement": "Drinking special green detox tea can melt away fat and flush all body toxins in 3 days.",
+          "answer": "myth",
+          "truth": "Detox teas are marketing scams that act as harsh laxatives. Your liver cleans your body naturally."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What organs in your body already perform natural, scientifically proven detoxification 24/7?",
+          "options": [
+            "The stomach and teeth",
+            "Your liver and kidneys",
+            "Your hair and nails",
+            "The gallbladder only"
+          ],
+          "correct": 1,
+          "explanation": "The liver breaks down waste and the kidneys filter blood into urine continuously."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A social media influencer at {at} urges teenagers to skip solid meals and drink an expensive 'Detox Cleanser'."
+        ],
+        "question": "How should {name} react to this fad diet claim?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize it as an unscientific marketing gimmick; the liver and kidneys detoxify naturally",
+            "note": "Rejects harmful commercial diet scams.",
+            "weight": 45,
+            "critical": true,
+            "keys": "marketing gimmick|fad diet|liver and kidneys|unscientific"
+          },
+          {
+            "point": "Eat balanced, wholesome solid meals with plenty of water and fiber",
+            "note": "Provides real sustained nourishment.",
+            "weight": 35,
+            "critical": true,
+            "keys": "balanced meal|whole food|healthy eating"
+          },
+          {
+            "point": "Avoid dangerous crash diets that harm growing teen metabolism",
+            "note": "Protects physical development.",
+            "weight": 20,
+            "critical": false,
+            "keys": "no crash diets|healthy mindset"
+          }
+        ],
+        "dangerous": [
+          "buy the detox tea",
+          "starve for 5 days",
+          "stop eating solid food"
+        ]
+      },
+      "sources": [
+        {
+          "name": "ICMR National Institute of Nutrition",
+          "url": "https://www.nin.res.in"
+        }
+      ],
+      "reviewed": true
     }
-   ],
-   "scenario": null,
-   "agentId": "basil",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  }
- ]
+  ]
 }

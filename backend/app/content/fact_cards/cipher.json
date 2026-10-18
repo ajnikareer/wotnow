@@ -1,318 +1,1790 @@
 {
- "agentId": "cipher",
- "cards": [
-  {
-   "id": "DIG-002",
-   "subtopic": "OTP scams",
-   "title": "Never share an OTP",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "An OTP works like a one-time key to an account.",
-    "Banks, apps and companies never ask you to share an OTP.",
-    "Scammers create urgency, prizes or fear to rush you."
-   ],
-   "do": [
-    "Never share an OTP with anyone",
-    "Close the message or call",
-    "Tell a parent",
-    "Report fraud to 1930 or cybercrime.gov.in"
-   ],
-   "dont": [
-    "Don't share OTPs, even with 'customer care'",
-    "Don't click links in prize messages"
-   ],
-   "myths": [
+  "agentId": "cipher",
+  "cards": [
     {
-     "statement": "It's safe to share an OTP with someone who says they're from your bank.",
-     "answer": "myth",
-     "truth": "Banks never ask for OTPs. Anyone asking is a scammer."
-    }
-   ],
-   "quiz": [
-    {
-     "q": "Someone calls saying they're from a gaming company and asks for the OTP sent to your parent's phone. You…",
-     "options": [
-      "Read it out",
-      "Hang up and tell your parent",
-      "Share half of it",
-      "Ask them to call later"
-     ],
-     "correct": 1,
-     "explanation": "OTPs are never shared. Tell a parent right away."
-    }
-   ],
-   "scams": [
-    {
-     "from": "GameRewards_Official",
-     "text": "🎁 Congrats! You won 10,000 free coins! Enter your parent's phone number and the OTP you receive to claim now. Offer ends in 5 minutes!",
-     "answer": "scam",
-     "explanation": "Scam! Nobody gives free coins for an OTP. Close it and tell an adult."
+      "id": "DIG-002",
+      "subtopic": "OTP scams",
+      "title": "Never share an OTP",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "An OTP works like a one-time key to an account.",
+        "Banks, apps and companies never ask you to share an OTP.",
+        "Scammers create urgency, prizes or fear to rush you."
+      ],
+      "do": [
+        "Never share an OTP with anyone",
+        "Close the message or call",
+        "Tell a parent",
+        "Report fraud to 1930 or cybercrime.gov.in"
+      ],
+      "dont": [
+        "Don't share OTPs, even with 'customer care'",
+        "Don't click links in prize messages"
+      ],
+      "myths": [
+        {
+          "statement": "It's safe to share an OTP with someone who says they're from your bank.",
+          "answer": "myth",
+          "truth": "Banks never ask for OTPs. Anyone asking is a scammer."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Someone calls saying they're from a gaming company and asks for the OTP sent to your parent's phone. You…",
+          "options": [
+            "Read it out",
+            "Hang up and tell your parent",
+            "Share half of it",
+            "Ask them to call later"
+          ],
+          "correct": 1,
+          "explanation": "OTPs are never shared. Tell a parent right away."
+        }
+      ],
+      "scams": [
+        {
+          "from": "GameRewards_Official",
+          "text": "🎁 Congrats! You won 10,000 free coins! Enter your parent's phone number and the OTP you receive to claim now. Offer ends in 5 minutes!",
+          "answer": "scam",
+          "explanation": "Scam! Nobody gives free coins for an OTP. Close it and tell an adult."
+        },
+        {
+          "from": "AX-YOURBNK",
+          "text": "Your OTP for login is 482910. Do NOT share this OTP with anyone. Bank staff will never ask for it.",
+          "answer": "legit",
+          "explanation": "This looks like a genuine OTP message: it warns you not to share it and doesn't ask you to do anything. Only use it if you started the login yourself."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} is playing an online game {at} when a pop-up offers free coins. It asks for the OTP sent to {name}'s mother's phone. {relation} says 'Quick, everyone's doing it!'"
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "🎮",
+          "🔑",
+          "📱"
+        ],
+        "bubble": "Free coins!!",
+        "rubric": [
+          {
+            "point": "Never share the OTP",
+            "note": "An OTP is a key to the account.",
+            "weight": 40,
+            "critical": true,
+            "keys": "(not|no|never|don'?t)[^.]{0,20}(share|give|enter|type)|otp[^.]{0,20}(secret|private)"
+          },
+          {
+            "point": "Close the pop-up / don't click",
+            "note": "Leave the scam page.",
+            "weight": 25,
+            "critical": false,
+            "keys": "close|ignore|block|exit|don'?t click|report"
+          },
+          {
+            "point": "Tell a parent or trusted adult",
+            "note": "Adults can check and report it.",
+            "weight": 35,
+            "critical": false,
+            "keys": "parent|mother|mom|mum|father|dad|adult|tell"
+          }
+        ],
+        "dangerous": [
+          "(share|give|enter|type|send)[^.]{0,15}(the )?otp"
+        ],
+        "settings": [
+          "home",
+          "grandparents' house",
+          "hostel"
+        ]
+      },
+      "agentId": "cipher",
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
     },
     {
-     "from": "AX-YOURBNK",
-     "text": "Your OTP for login is 482910. Do NOT share this OTP with anyone. Bank staff will never ask for it.",
-     "answer": "legit",
-     "explanation": "This looks like a genuine OTP message: it warns you not to share it and doesn't ask you to do anything. Only use it if you started the login yourself."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "{name} is playing an online game {at} when a pop-up offers free coins. It asks for the OTP sent to {name}'s mother's phone. {relation} says 'Quick, everyone's doing it!'"
-    ],
-    "question": "What should {name} do?",
-    "emojis": [
-     "🎮",
-     "🔑",
-     "📱"
-    ],
-    "bubble": "Free coins!!",
-    "rubric": [
-     {
-      "point": "Never share the OTP",
-      "note": "An OTP is a key to the account.",
-      "weight": 40,
-      "critical": true,
-      "keys": "(not|no|never|don'?t)[^.]{0,20}(share|give|enter|type)|otp[^.]{0,20}(secret|private)"
-     },
-     {
-      "point": "Close the pop-up / don't click",
-      "note": "Leave the scam page.",
-      "weight": 25,
-      "critical": false,
-      "keys": "close|ignore|block|exit|don'?t click|report"
-     },
-     {
-      "point": "Tell a parent or trusted adult",
-      "note": "Adults can check and report it.",
-      "weight": 35,
-      "critical": false,
-      "keys": "parent|mother|mom|mum|father|dad|adult|tell"
-     }
-    ],
-    "dangerous": [
-     "(share|give|enter|type|send)[^.]{0,15}(the )?otp"
-    ],
-    "settings": [
-     "home",
-     "grandparents' house",
-     "hostel"
-    ]
-   },
-   "agentId": "cipher",
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "DIG-007",
-   "subtopic": "Bill and KYC scams",
-   "title": "Bill, KYC and prize scams",
-   "bands": [
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Scam messages often come from personal mobile numbers and threaten disconnection or account blocking.",
-    "Official companies ask you to use their official app or website.",
-    "India's cyber fraud helpline is 1930."
-   ],
-   "do": [
-    "Check bills only on the official app or website",
-    "Ask an adult before acting",
-    "Report to 1930 or cybercrime.gov.in"
-   ],
-   "dont": [
-    "Don't call numbers from threatening SMS",
-    "Don't install apps a caller asks you to install"
-   ],
-   "myths": [
-    {
-     "statement": "If a message has your name in it, it must be genuine.",
-     "answer": "myth",
-     "truth": "Scammers often have names from leaked data. Check through official apps."
-    }
-   ],
-   "quiz": [
-    {
-     "q": "Which is a warning sign of a scam message?",
-     "options": [
-      "Urgent threat with a personal phone number",
-      "A message you expected",
-      "An official app notification",
-      "A bill you already paid in the app"
-     ],
-     "correct": 0,
-     "explanation": "Urgency + personal number + threat = classic scam pattern."
-    }
-   ],
-   "scams": [
-    {
-     "from": "+91 98•••• 4417",
-     "text": "Dear customer, your electricity will be disconnected tonight at 9:30 PM as your last bill was not updated. Please call electricity officer immediately on 98•••• 4417.",
-     "answer": "scam",
-     "explanation": "Scam. Electricity companies don't send threats from personal mobile numbers. Check the bill in the official app and report to 1930."
+      "id": "DIG-007",
+      "subtopic": "Bill and KYC scams",
+      "title": "Bill, KYC and prize scams",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Scam messages often come from personal mobile numbers and threaten disconnection or account blocking.",
+        "Official companies ask you to use their official app or website.",
+        "India's cyber fraud helpline is 1930."
+      ],
+      "do": [
+        "Check bills only on the official app or website",
+        "Ask an adult before acting",
+        "Report to 1930 or cybercrime.gov.in"
+      ],
+      "dont": [
+        "Don't call numbers from threatening SMS",
+        "Don't install apps a caller asks you to install"
+      ],
+      "myths": [
+        {
+          "statement": "If a message has your name in it, it must be genuine.",
+          "answer": "myth",
+          "truth": "Scammers often have names from leaked data. Check through official apps."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is a warning sign of a scam message?",
+          "options": [
+            "Urgent threat with a personal phone number",
+            "A message you expected",
+            "An official app notification",
+            "A bill you already paid in the app"
+          ],
+          "correct": 0,
+          "explanation": "Urgency + personal number + threat = classic scam pattern."
+        }
+      ],
+      "scams": [
+        {
+          "from": "+91 98•••• 4417",
+          "text": "Dear customer, your electricity will be disconnected tonight at 9:30 PM as your last bill was not updated. Please call electricity officer immediately on 98•••• 4417.",
+          "answer": "scam",
+          "explanation": "Scam. Electricity companies don't send threats from personal mobile numbers. Check the bill in the official app and report to 1930."
+        },
+        {
+          "from": "VM-KYCUPD",
+          "text": "Your bank KYC expires today! Update now at bit.ly/kyc-upd8 or your account will be BLOCKED within 2 hours.",
+          "answer": "scam",
+          "explanation": "Scam. Short links, threats and deadlines are red flags. Banks ask you to visit the branch or the official app."
+        }
+      ],
+      "scenario": null,
+      "agentId": "cipher",
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
     },
     {
-     "from": "VM-KYCUPD",
-     "text": "Your bank KYC expires today! Update now at bit.ly/kyc-upd8 or your account will be BLOCKED within 2 hours.",
-     "answer": "scam",
-     "explanation": "Scam. Short links, threats and deadlines are red flags. Banks ask you to visit the branch or the official app."
-    }
-   ],
-   "scenario": null,
-   "agentId": "cipher",
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "DIG-010",
-   "subtopic": "Passwords",
-   "title": "Strong passwords",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Long passphrases are harder to guess than short complex passwords.",
-    "Reusing one password means one leak opens every account.",
-    "Two-step verification blocks most account takeovers."
-   ],
-   "do": [
-    "Use a long passphrase",
-    "Use different passwords for important accounts",
-    "Turn on two-step verification"
-   ],
-   "dont": [
-    "Don't share passwords, even with best friends",
-    "Don't use your name or birthday"
-   ],
-   "myths": [
+      "id": "DIG-010",
+      "subtopic": "Passwords",
+      "title": "Strong passwords",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Long passphrases are harder to guess than short complex passwords.",
+        "Reusing one password means one leak opens every account.",
+        "Two-step verification blocks most account takeovers."
+      ],
+      "do": [
+        "Use a long passphrase",
+        "Use different passwords for important accounts",
+        "Turn on two-step verification"
+      ],
+      "dont": [
+        "Don't share passwords, even with best friends",
+        "Don't use your name or birthday"
+      ],
+      "myths": [
+        {
+          "statement": "It's fine to share your password with your best friend.",
+          "answer": "myth",
+          "truth": "Friendships change, and phones get lost. Keep passwords private (parents can help)."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which password is strongest?",
+          "options": [
+            "maya2012",
+            "password123",
+            "purple-tiger-eats-mango-rain",
+            "12345678"
+          ],
+          "correct": 2,
+          "explanation": "Long passphrases of random words are strong and easy to remember."
+        }
+      ],
+      "scams": [],
+      "scenario": null,
+      "agentId": "cipher",
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "statement": "It's fine to share your password with your best friend.",
-     "answer": "myth",
-     "truth": "Friendships change, and phones get lost. Keep passwords private (parents can help)."
-    }
-   ],
-   "quiz": [
+      "id": "DIG-015",
+      "subtopic": "Strangers and privacy",
+      "title": "Strangers and privacy online",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "People online may not be who they say they are.",
+        "School name, address and uniform photos can reveal where you are."
+      ],
+      "do": [
+        "Keep profiles private",
+        "Tell a trusted adult if someone makes you uncomfortable",
+        "Block and report"
+      ],
+      "dont": [
+        "Don't share your address, school or live location",
+        "Never agree to meet an online friend alone"
+      ],
+      "myths": [
+        {
+          "statement": "If someone online knows your favourite game, they must be your age.",
+          "answer": "myth",
+          "truth": "Anyone can pretend. Keep personal details private and tell an adult."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A gaming friend asks which school you go to. You…",
+          "options": [
+            "Tell them",
+            "Don't share, and tell an adult if they keep asking",
+            "Send a photo in uniform",
+            "Share your address"
+          ],
+          "correct": 1,
+          "explanation": "Personal details stay private online."
+        }
+      ],
+      "scams": [],
+      "scenario": {
+        "situations": [
+          "{name} has been chatting with a 'gamer friend' for weeks. Today the friend asks for a photo in school uniform and suggests meeting {at} without telling parents."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "💬",
+          "🙅",
+          "📸"
+        ],
+        "bubble": "Don't tell your parents 😉",
+        "rubric": [
+          {
+            "point": "Don't send photos or personal details",
+            "note": "Uniform photos reveal your school.",
+            "weight": 30,
+            "critical": true,
+            "keys": "(not|no|never|don'?t)[^.]{0,20}(send|share|photo|picture)"
+          },
+          {
+            "point": "Never meet; refuse secrecy",
+            "note": "'Don't tell your parents' is a big warning sign.",
+            "weight": 30,
+            "critical": true,
+            "keys": "(not|no|never|don'?t)[^.]{0,20}(meet|go)|secret"
+          },
+          {
+            "point": "Tell a parent or trusted adult",
+            "note": "Adults can help and report.",
+            "weight": 25,
+            "critical": true,
+            "keys": "parent|adult|teacher|mom|mum|dad|tell"
+          },
+          {
+            "point": "Block and report the account",
+            "note": "Platforms can act on reports.",
+            "weight": 15,
+            "critical": false,
+            "keys": "block|report|1930|cybercrime"
+          }
+        ],
+        "dangerous": [
+          "(send|share)[^.]{0,15}(photo|picture|pic)(?![^.]{0,10}(no|not))",
+          "(go|agree)[^.]{0,10}meet(?![^.]{0,10}(no|not))"
+        ],
+        "settings": [
+          "mall",
+          "park",
+          "street market"
+        ]
+      },
+      "agentId": "cipher",
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "Which password is strongest?",
-     "options": [
-      "maya2012",
-      "password123",
-      "purple-tiger-eats-mango-rain",
-      "12345678"
-     ],
-     "correct": 2,
-     "explanation": "Long passphrases of random words are strong and easy to remember."
-    }
-   ],
-   "scams": [],
-   "scenario": null,
-   "agentId": "cipher",
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "DIG-015",
-   "subtopic": "Strangers and privacy",
-   "title": "Strangers and privacy online",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "People online may not be who they say they are.",
-    "School name, address and uniform photos can reveal where you are."
-   ],
-   "do": [
-    "Keep profiles private",
-    "Tell a trusted adult if someone makes you uncomfortable",
-    "Block and report"
-   ],
-   "dont": [
-    "Don't share your address, school or live location",
-    "Never agree to meet an online friend alone"
-   ],
-   "myths": [
+      "id": "DIG-021",
+      "agentId": "cipher",
+      "subtopic": "UPI safety",
+      "title": "UPI collect-request fraud: PIN is ONLY for paying",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Entering your UPI MPIN ALWAYS deducts money from your bank account; it NEVER receives money.",
+        "Cyber fraudsters send 'Collect Requests' disguised as 'Refunds' or 'Cashback Prize Won'."
+      ],
+      "do": [
+        "Remember the golden rule: You NEVER need to enter your UPI PIN to receive money into your account",
+        "Decline and report any suspicious UPI collect requests received on Google Pay, PhonePe, or Paytm",
+        "Verify the sender's VPA / UPI ID before sending any genuine payment"
+      ],
+      "dont": [
+        "Never enter your 4 or 6-digit UPI PIN when someone promises to send you money",
+        "Never approve an unexpected notification pop-up asking for your PIN"
+      ],
+      "myths": [
+        {
+          "statement": "Entering your UPI PIN is required to verify your identity and receive lottery prize cashback.",
+          "answer": "myth",
+          "truth": "You NEVER enter your UPI PIN to receive money. PIN entry authorizes a debit from your balance."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A buyer on OLX says: 'I have sent you ₹1,000; enter your UPI PIN to accept it.' What is the truth?",
+          "options": [
+            "You must enter PIN to accept",
+            "It is a scam: entering your UPI PIN will instantly transfer ₹1,000 from YOUR bank account to the scammer",
+            "It gives bonus",
+            "It is safe"
+          ],
+          "correct": 1,
+          "explanation": "UPI PIN is an authorization signature for debiting funds. Receiving money is completely automatic."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Selling an old bicycle on an online marketplace at {at}, the buyer sends a UPI link saying: 'Enter your UPI PIN to receive advance payment.'"
+        ],
+        "question": "What should {name} do immediately?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT enter UPI PIN under any circumstances",
+            "note": "Prevents unauthorized financial theft.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t enter pin|no upi pin|never enter pin"
+          },
+          {
+            "point": "Recognize that receiving UPI payments NEVER requires entering a PIN",
+            "note": "Understands core UPI architecture.",
+            "weight": 35,
+            "critical": true,
+            "keys": "receiving never needs pin|scam attempt|fraud"
+          },
+          {
+            "point": "Block the scammer on the app and report their UPI ID as fraud",
+            "note": "Shields other users from fraud.",
+            "weight": 20,
+            "critical": false,
+            "keys": "block scammer|report upi id"
+          }
+        ],
+        "dangerous": [
+          "enter 6-digit pin",
+          "share bank otp",
+          "click approve collect request"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Payments Corporation of India (NPCI) UPI Safety Guidelines",
+          "url": "https://npci.org.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "If someone online knows your favourite game, they must be your age.",
-     "answer": "myth",
-     "truth": "Anyone can pretend. Keep personal details private and tell an adult."
-    }
-   ],
-   "quiz": [
+      "id": "DIG-022",
+      "agentId": "cipher",
+      "subtopic": "Search safety",
+      "title": "Spotting fake customer care helpline numbers on search engines",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Cybercriminals edit Google Maps listings and buy search ads with fake helpline numbers for courier/banks.",
+        "When victims call the fake number, fraudsters ask them to install remote screen-sharing apps."
+      ],
+      "do": [
+        "Find customer care helplines exclusively inside the official verified mobile app or website",
+        "Look for verified domain names ending in official bank URLs, not random blogspot or mobile numbers",
+        "Hang up immediately if an 'agent' asks you to download AnyDesk, TeamViewer, or send ₹5"
+      ],
+      "dont": [
+        "Never google 'courier customer care number' and dial the first random mobile number listed",
+        "Never share account numbers or debit card CVVs with phone callers"
+      ],
+      "myths": [
+        {
+          "statement": "The top phone number displayed on Google search results is always the official certified customer care.",
+          "answer": "myth",
+          "truth": "Fraudsters easily manipulate Google business listings and buy search ads with personal fraud numbers."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where is the only authentic place to find the customer support number for an app like Swiggy, Amazon, or a bank?",
+          "options": [
+            "A random blog on Google",
+            "Inside the official mobile app under the 'Help & Support' section",
+            "In YouTube comments",
+            "On an anonymous flyer"
+          ],
+          "correct": 1,
+          "explanation": "Official in-app help desks connect directly to verified support without search engine manipulation."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A package is delayed at {at}, and {name}'s family wants to search Google for the courier company's toll-free number."
+        ],
+        "question": "What cyber precaution must {name} explain?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do not dial random mobile numbers found in Google search snippets",
+            "note": "Fraudsters post fake phone numbers to scam callers.",
+            "weight": 40,
+            "critical": true,
+            "keys": "don'?t call google search numbers|fake numbers|scam"
+          },
+          {
+            "point": "Look for customer support inside the courier's official app or tracked order page",
+            "note": "Guarantees authentic communication channel.",
+            "weight": 40,
+            "critical": true,
+            "keys": "in-app support|official app|verified website"
+          },
+          {
+            "point": "Never install screen-sharing apps if instructed by a phone caller",
+            "note": "Blocks remote device takeover.",
+            "weight": 20,
+            "critical": false,
+            "keys": "no remote apps|never install anydesk"
+          }
+        ],
+        "dangerous": [
+          "call first 10-digit mobile number found",
+          "give card number to caller",
+          "install remote app"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Cyber Crime Coordination Centre (I4C)",
+          "url": "https://cybercrime.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "A gaming friend asks which school you go to. You…",
-     "options": [
-      "Tell them",
-      "Don't share, and tell an adult if they keep asking",
-      "Send a photo in uniform",
-      "Share your address"
-     ],
-     "correct": 1,
-     "explanation": "Personal details stay private online."
+      "id": "DIG-023",
+      "agentId": "cipher",
+      "subtopic": "QR safety",
+      "title": "QR code scams: 'Scan QR to receive cash rewards'",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Scanning a merchant QR code in a payment app is an action to SEND money from your bank.",
+        "Scammers send QR codes claiming: 'Scan this barcode to get ₹2,000 refund/scholarship credit.'"
+      ],
+      "do": [
+        "Remember: Scanning a QR code is for paying someone, never for receiving money into your wallet",
+        "Only scan QR codes at physical merchant checkouts where YOU are the one making a purchase",
+        "Reject any message with QR codes promising surprise lottery cashback or prize redemptions"
+      ],
+      "dont": [
+        "Never scan an unexpected QR code sent on WhatsApp by an unknown buyer or stranger",
+        "Never approve transaction amounts after scanning a stranger's QR code"
+      ],
+      "myths": [
+        {
+          "statement": "Scanning a QR code sent to your WhatsApp is a safe way to claim a free ₹500 shopping voucher.",
+          "answer": "myth",
+          "truth": "Scanning the code loads a payment debit request that drains money from your linked account."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens when you scan a QR code in a payment app like PhonePe or Google Pay?",
+          "options": [
+            "It scans your face",
+            "It prepares a transaction to SEND money from your bank account to the merchant",
+            "It deposits cash automatically",
+            "It cleans phone"
+          ],
+          "correct": 1,
+          "explanation": "QR codes encode the receiver's bank coordinates; scanning them always initiates an outgoing debit."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A message on WhatsApp at {at} contains a colorful image with a QR code: 'Scan to receive your ₹1,500 government student reward.'"
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT scan the QR code",
+            "note": "Prevents initiating an outgoing payment debit.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t scan|do not scan qr|scam"
+          },
+          {
+            "point": "Recognize that QR codes are used to PAY money, never to receive rewards",
+            "note": "Basic digital payment literacy.",
+            "weight": 35,
+            "critical": true,
+            "keys": "qr is for paying|cannot receive via qr|fraud"
+          },
+          {
+            "point": "Delete the message and warn family members about QR reward scams",
+            "note": "Prevents family members falling victim.",
+            "weight": 20,
+            "critical": false,
+            "keys": "delete message|warn family"
+          }
+        ],
+        "dangerous": [
+          "scan code immediately",
+          "enter bank pin after scan",
+          "forward QR to all classmates"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Reserve Bank of India (RBI Kehta Hai)",
+          "url": "https://rbikehtahai.rbi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-024",
+      "agentId": "cipher",
+      "subtopic": "Employment scams",
+      "title": "Work-from-home and 'Like YouTube videos for ₹5,000' task scams",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Scammers recruit students on Telegram/WhatsApp with offers of ₹50-₹100 for liking YouTube videos.",
+        "After paying small genuine initial sums, they trap victims into investing thousands in 'prepaid crypto tasks.'"
+      ],
+      "do": [
+        "Recognize that legitimate companies never hire students on Telegram to like random social media posts",
+        "Understand the bait-and-switch trap: scammers pay ₹200 initially to build trust before stealing ₹50,000",
+        "Block and report unsolicited job recruitment messages on WhatsApp, Instagram, and Telegram"
+      ],
+      "dont": [
+        "Never pay 'registration fees', 'security deposits', or 'crypto recharge' to unlock earned money",
+        "Never share personal bank account details with anonymous Telegram group admins"
+      ],
+      "myths": [
+        {
+          "statement": "Earning ₹5,000 a day just by liking 10 YouTube videos from your bed is a legitimate part-time job.",
+          "answer": "myth",
+          "truth": "This is an international Ponzi task scam orchestrated by cyber syndicates to lure students."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You are added to a Telegram group promising ₹3,000 daily for reviewing hotels and watching videos. What is this?",
+          "options": [
+            "A great career opportunity",
+            "A well-known cyber task scam designed to steal your savings",
+            "A school project",
+            "Government scheme"
+          ],
+          "correct": 1,
+          "explanation": "Task scams trick victims into sending prepaid deposits that can never be withdrawn."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A stranger on WhatsApp at {at} offers {name}: 'Work from home: Like 5 videos, earn ₹200 instantly, join Telegram.'"
+        ],
+        "question": "What is the only smart response for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize it immediately as a fraudulent task scam and do not engage",
+            "note": "Rejects criminal recruitment pipeline.",
+            "weight": 45,
+            "critical": true,
+            "keys": "task scam|fraud|don'?t engage|fake job"
+          },
+          {
+            "point": "Block the phone number and report the chat on WhatsApp",
+            "note": "Halts further contact attempts.",
+            "weight": 35,
+            "critical": true,
+            "keys": "block number|report spam|report whatsapp"
+          },
+          {
+            "point": "Never send any money or bank details to anonymous online employers",
+            "note": "Protects financial security.",
+            "weight": 20,
+            "critical": false,
+            "keys": "never send money|no deposit"
+          }
+        ],
+        "dangerous": [
+          "join telegram channel",
+          "send ₹1,000 deposit to unlock tasks",
+          "share bank passbook"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Home Affairs Cyber Crime Advisory",
+          "url": "https://cybercrime.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-025",
+      "agentId": "cipher",
+      "subtopic": "Privacy",
+      "title": "Auditing app permissions: Camera, microphone and contact access",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Malicious apps request unnecessary permissions (contacts, SMS, location) to harvest and sell personal data.",
+        "A simple calculator or flashlight app has zero legitimate reason to access your camera or contact book."
+      ],
+      "do": [
+        "Check app permissions during installation: only grant access essential to core app functionality",
+        "Set location and microphone permissions to 'Only while using the app', never 'Allow all the time'",
+        "Regularly audit installed apps in Phone Settings -> Privacy -> Permission Manager"
+      ],
+      "dont": [
+        "Never grant SMS reading permission to unverified utility or gaming apps (steals OTPs)",
+        "Never download apps from unverified third-party APK websites outside official app stores"
+      ],
+      "myths": [
+        {
+          "statement": "Giving all permissions requested by an app is harmless because app stores guarantee 100% safety.",
+          "answer": "myth",
+          "truth": "Apps frequently harvest contact books and background location to sell to predatory advertisers and scammers."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is it suspicious if a basic Offline Calculator app requests permission to read your Contacts and SMS?",
+          "options": [
+            "Calculators need friends",
+            "It has no functional need for contacts; it is likely spyware harvesting data and reading bank OTPs",
+            "It makes calculations faster",
+            "It is normal"
+          ],
+          "correct": 1,
+          "explanation": "Permissions must strictly match functionality. SMS permissions allow malware to read two-factor OTPs."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Installing a free puzzle game on a smartphone at {at}, the app requests access to Contacts, SMS, and Microphone."
+        ],
+        "question": "How should {name} manage these permission requests?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Deny access to SMS, Contacts, and Microphone",
+            "note": "Restricts unnecessary data harvesting.",
+            "weight": 45,
+            "critical": true,
+            "keys": "deny permissions|reject contacts|no sms access"
+          },
+          {
+            "point": "Uninstall the app if it refuses to run without invasive unrelated permissions",
+            "note": "Refuses predatory spyware apps.",
+            "weight": 35,
+            "critical": true,
+            "keys": "uninstall app|suspicious|delete app"
+          },
+          {
+            "point": "Review app permissions regularly in system Settings -> Permission Manager",
+            "note": "Maintains ongoing device privacy.",
+            "weight": 20,
+            "critical": false,
+            "keys": "permission manager|check settings|audit privacy"
+          }
+        ],
+        "dangerous": [
+          "allow all permissions always",
+          "give sms access to game",
+          "download random apks"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CERT-In Mobile Security Advisory",
+          "url": "https://cert-in.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-026",
+      "agentId": "cipher",
+      "subtopic": "Wi-Fi safety",
+      "title": "Public Wi-Fi risks: Packet sniffing and rogue hotspots",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Open public Wi-Fi networks (cafes, railway stations, airports) lack encryption between device and router.",
+        "Hackers on the same unencrypted network can intercept unencrypted data packets ('Man-in-the-Middle')."
+      ],
+      "do": [
+        "Avoid conducting bank transactions, UPI transfers, or entering sensitive passwords on open public Wi-Fi",
+        "Turn off 'Auto-connect to open Wi-Fi networks' in your phone's Wi-Fi settings",
+        "Use cellular mobile data (4G/5G) or a verified Virtual Private Network (VPN) for sensitive tasks"
+      ],
+      "dont": [
+        "Never trust unverified pop-ups on public Wi-Fi asking you to install a 'Security Certificate' or profile",
+        "Never leave Bluetooth and Wi-Fi toggled on when not actively in use"
+      ],
+      "myths": [
+        {
+          "statement": "Free Wi-Fi named 'Railway_Free_Wi-Fi_Official' at a station is guaranteed to be safe and encrypted.",
+          "answer": "myth",
+          "truth": "Anyone can set up a rogue hotspot with a legitimate-sounding name to intercept victim passwords."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you NEVER do while connected to free public Wi-Fi at a shopping mall?",
+          "options": [
+            "Check weather",
+            "Log into your bank account, enter credit card details, or change master passwords",
+            "Read a Wikipedia article",
+            "Listen to music"
+          ],
+          "correct": 1,
+          "explanation": "Financial and password logins should strictly be conducted over secure encrypted cellular networks."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Waiting at a railway station at {at}, {name} connects to free open station Wi-Fi and needs to check school fee payment."
+        ],
+        "question": "What is the cyber-safe protocol for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Disconnect from public Wi-Fi and use personal mobile cellular data for payments",
+            "note": "Cellular networks are securely encrypted.",
+            "weight": 45,
+            "critical": true,
+            "keys": "use mobile data|disconnect public wifi|cellular data"
+          },
+          {
+            "point": "Do not enter banking passwords or debit card credentials over open unencrypted Wi-Fi",
+            "note": "Shields credentials from network sniffers.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no banking on public wifi|no passwords"
+          },
+          {
+            "point": "Turn off 'Auto-connect to open networks' in device settings",
+            "note": "Prevents silent background connections.",
+            "weight": 20,
+            "critical": false,
+            "keys": "turn off auto connect|disable wifi"
+          }
+        ],
+        "dangerous": [
+          "do netbanking on open wifi",
+          "install unknown certificate",
+          "leave wifi open always"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CERT-In Guidelines for Safe Public Wi-Fi Usage",
+          "url": "https://cert-in.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-027",
+      "agentId": "cipher",
+      "subtopic": "Phishing",
+      "title": "Spotting deceptive lookalike phishing URLs and websites",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Phishing sites use typosquatting: subtle misspellings like 'micros0ft.com' or 'sbi-update-kyc.net'.",
+        "The padlock icon (HTTPS) only means the connection is encrypted; it does NOT guarantee the site is honest."
+      ],
+      "do": [
+        "Inspect the domain name carefully: the real address is the text immediately before the final slash (domain.com/)",
+        "Type official addresses directly into the browser address bar rather than clicking SMS links",
+        "Watch out for urgency triggers: 'Account suspended in 2 hours, click to verify now!'"
+      ],
+      "dont": [
+        "Never click login links sent via SMS, WhatsApp, or unsolicited emails",
+        "Never enter passwords on web pages with weird subdomains (like login.google.com.attacker.xyz)"
+      ],
+      "myths": [
+        {
+          "statement": "If a website displays a padlock icon in the browser URL bar, it cannot be a scam website.",
+          "answer": "myth",
+          "truth": "Scammers get free SSL certificates easily. The padlock means encrypted, not authentic."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following URLs is a dangerous fake phishing website trying to imitate State Bank of India?",
+          "options": [
+            "https://onlinesbi.sbi/",
+            "https://sbi-kyc-verification-update.free-web.xyz/login",
+            "https://sbi.co.in",
+            "https://bank.sbi"
+          ],
+          "correct": 1,
+          "explanation": "The deceptive URL uses long hyphenated keywords on a suspicious free web domain."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "An urgent SMS arrives on {name}'s phone at {at}: 'Your account is blocked! Update KYC immediately at http://bank-kyc.net/verify'."
+        ],
+        "question": "What tells {name} this is a phishing scam?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "The URL is not an official bank domain, and banks never send KYC links via SMS",
+            "note": "Identifies fake domain and deceptive protocol.",
+            "weight": 45,
+            "critical": true,
+            "keys": "fake url|not official domain|phishing|banks don'?t text kyc"
+          },
+          {
+            "point": "The message uses artificial urgency to induce panic and hasty action",
+            "note": "Recognizes social engineering tactic.",
+            "weight": 35,
+            "critical": true,
+            "keys": "artificial urgency|panic|pressure"
+          },
+          {
+            "point": "Delete the message and report the sending number to cybercrime reporting channels",
+            "note": "Safe disposal and threat intelligence.",
+            "weight": 20,
+            "critical": false,
+            "keys": "delete sms|report number|1930"
+          }
+        ],
+        "dangerous": [
+          "click link and enter password",
+          "share debit card pin",
+          "forward link to family"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Cyber Security Awareness Guidelines",
+          "url": "https://csk.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-028",
+      "agentId": "cipher",
+      "subtopic": "Remote access",
+      "title": "Screen-sharing app fraud: AnyDesk, TeamViewer and RustDesk",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Screen-sharing apps allow a remote user across the globe to see your screen and control your device.",
+        "Scammers posing as customer care or telecom officers ask victims to read out a 9-digit remote access code."
+      ],
+      "do": [
+        "Never download AnyDesk, TeamViewer, QuickSupport, or RustDesk on instructions from a phone caller",
+        "Remember: Legitimate banks and customer service agents NEVER ask to view your personal phone screen",
+        "If you accidentally installed one, disconnect internet immediately, uninstall the app, and restart device"
+      ],
+      "dont": [
+        "Never read out your screen-sharing 9-digit access code or grant remote permissions to a stranger",
+        "Never log into banking apps while a screen-sharing session is active"
+      ],
+      "myths": [
+        {
+          "statement": "Customer support executives from electricity boards need remote screen access to fix your meter bill.",
+          "answer": "myth",
+          "truth": "Electricity and telecom boards NEVER use AnyDesk. Remote access is 100% utilized to steal banking OTPs."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A caller claiming to be from your telecom provider says you must install 'AnyDesk' to update your 5G SIM. What is this?",
+          "options": [
+            "A routine upgrade",
+            "A dangerous cyber scam: installing it allows the caller to see your screen and steal your passwords",
+            "A fun game",
+            "Speed booster"
+          ],
+          "correct": 1,
+          "explanation": "AnyDesk reveals incoming OTPs and bank screens directly to the criminal."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A caller claiming to be from customer care at {at} tells {name}: 'Download TeamViewer QuickSupport and give me the 9-digit code.'"
+        ],
+        "question": "What must {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Refuse immediately and hang up the call",
+            "note": "Blocks remote takeover before connection.",
+            "weight": 45,
+            "critical": true,
+            "keys": "hang up|refuse|disconnect call"
+          },
+          {
+            "point": "Never install screen-sharing software or share the 9-digit connection code",
+            "note": "Prevents full remote control of smartphone.",
+            "weight": 35,
+            "critical": true,
+            "keys": "never install anydesk|don'?t share code|teamviewer"
+          },
+          {
+            "point": "Warn family members that genuine companies never request remote screen access",
+            "note": "Educates household against fraud.",
+            "weight": 20,
+            "critical": false,
+            "keys": "warn family|genuine companies never ask"
+          }
+        ],
+        "dangerous": [
+          "install teamviewer",
+          "give 9-digit code to caller",
+          "open banking app while sharing"
+        ]
+      },
+      "sources": [
+        {
+          "name": "RBI Cyber Security Framework",
+          "url": "https://rbi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-029",
+      "agentId": "cipher",
+      "subtopic": "Cyberbullying",
+      "title": "Handling cyberbullying: Screenshot, block, report and tell",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Cyberbullying involves harassment, vicious rumours, abusive DMs, or exclusion in online group chats.",
+        "Retaliating with angry insults fuels the bully and can lead to disciplinary action against you."
+      ],
+      "do": [
+        "Do not respond or retaliate with angry messages (bullies seek your emotional reaction)",
+        "Take clear screenshots showing the abusive messages, account handle, and timestamp as evidence",
+        "Block the harasser on the platform, report their account, and tell a trusted adult immediately"
+      ],
+      "dont": [
+        "Never delete the evidence before capturing screenshots",
+        "Never suffer in silence or blame yourself for someone else's abusive behavior"
+      ],
+      "myths": [
+        {
+          "statement": "The best way to deal with an online bully is to insult them back twice as hard in the class group chat.",
+          "answer": "myth",
+          "truth": "Retaliation escalates the abuse cycle, leaves a toxic digital footprint, and solves nothing."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the proven 4-step sequence to handle cyberbullying messages effectively?",
+          "options": [
+            "Cry and delete phone",
+            "Do not reply, Screenshot evidence, Block user, Tell a trusted adult",
+            "Forward to all friends",
+            "Insult their family"
+          ],
+          "correct": 1,
+          "explanation": "Documentation, boundary enforcement, and adult support disempower cyberbullies."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In a school WhatsApp or gaming group at {at}, someone begins posting targeted insults and mocking {name}."
+        ],
+        "question": "How should {name} respond constructively?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do not reply with anger; capture clear screenshots showing messages and sender numbers",
+            "note": "Preserves objective evidence without escalation.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t reply|take screenshots|capture evidence"
+          },
+          {
+            "point": "Block the user on the app and report the bullying to platform moderators",
+            "note": "Cuts communication channel immediately.",
+            "weight": 35,
+            "critical": true,
+            "keys": "block user|report account|report to platform"
+          },
+          {
+            "point": "Share the screenshots with parents or a trusted teacher for school intervention",
+            "note": "Secures institutional support.",
+            "weight": 20,
+            "critical": false,
+            "keys": "tell parent|tell teacher|adult help"
+          }
+        ],
+        "dangerous": [
+          "reply with abusive curses",
+          "delete evidence and suffer silently",
+          "fight in public chat"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Cyber Peace Foundation Youth Safety Guide",
+          "url": "https://cyberpeace.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-030",
+      "agentId": "cipher",
+      "subtopic": "Extortion",
+      "title": "Morphed photos and online extortion: You are not at fault",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Scammers use AI deepfake tools to morph public social media photos and threaten extortion.",
+        "Paying money to extortionists NEVER stops the harassment; it only invites higher extortion demands."
+      ],
+      "do": [
+        "Remember: You are the victim of a crime; this is NEVER your fault and you have nothing to feel ashamed of",
+        "Do not pay any money and do not reply to the blackmailer's threats",
+        "Confide in a parent, teacher, or trusted adult immediately and call the National Cyber Crime Helpline at 1930"
+      ],
+      "dont": [
+        "Never pay blackmailers a single rupee (they will demand more immediately)",
+        "Never panic or self-harm; law enforcement has specialized units to deal with image blackmail"
+      ],
+      "myths": [
+        {
+          "statement": "If an online blackmailer threatens to share a morphed photo, paying them ₹2,000 will make them delete it.",
+          "answer": "myth",
+          "truth": "Blackmailers never delete files after payment; paying proves you can be coerced and leads to relentless extortion."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the official national helpline number for reporting cyber financial fraud and online harassment in India?",
+          "options": [
+            "100",
+            "1930",
+            "101",
+            "108"
+          ],
+          "correct": 1,
+          "explanation": "Dialing 1930 connects directly to the National Cyber Crime Reporting Portal."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A stranger on Instagram at {at} threatens {name} with an AI-morphed image demanding money."
+        ],
+        "question": "What is the vital, life-saving course of action for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT pay any money, do not delete the chat, and stop replying",
+            "note": "Halts extortion cycle immediately.",
+            "weight": 45,
+            "critical": true,
+            "keys": "do not pay|stop replying|don'?t send money"
+          },
+          {
+            "point": "Confide immediately in parents or a trusted school counselor: 'You are the victim, not at fault'",
+            "note": "Removes isolation and fear.",
+            "weight": 35,
+            "critical": true,
+            "keys": "tell parents|trusted adult|not your fault|counselor"
+          },
+          {
+            "point": "Report immediately on the National Cyber Crime Portal (1930 / cybercrime.gov.in)",
+            "note": "Triggers law enforcement action.",
+            "weight": 20,
+            "critical": false,
+            "keys": "call 1930|cybercrime portal|police"
+          }
+        ],
+        "dangerous": [
+          "pay the money secretly",
+          "panic in isolation",
+          "blame yourself"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Cyber Crime Reporting Portal (MHA)",
+          "url": "https://cybercrime.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-031",
+      "agentId": "cipher",
+      "subtopic": "Gaming safety",
+      "title": "Gaming scams: Free skins, robux, and account credential phishing",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Third-party websites promising 'Free V-Bucks/Free Robux/Free BGMI UC' are 100% credential-harvesting phishing scams.",
+        "Downloading cheat engines or game mods often injects hidden keylogger Trojans into your device."
+      ],
+      "do": [
+        "Obtain in-game items exclusively through official game stores with parent supervision",
+        "Never enter your gaming email and password on external websites promising free rewards",
+        "Enable two-factor authentication (2FA) on your Steam, Epic, Discord, and Roblox accounts"
+      ],
+      "dont": [
+        "Never share your gaming account login password with online 'friends' who promise to rank up your profile",
+        "Never download unofficial APK cheats or unauthorized modded game clients"
+      ],
+      "myths": [
+        {
+          "statement": "Websites with names like 'free-robux-generator-2026.net' are official partner reward portals.",
+          "answer": "myth",
+          "truth": "Game developers never partner with free reward generators. These sites exist exclusively to hijack player accounts."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A stranger on Discord offers to give you a rare gaming skin if you give them your login password for 10 minutes. What should you do?",
+          "options": [
+            "Share password happily",
+            "Refuse and never share your password: it is a scam to steal your account permanently",
+            "Share email only",
+            "Send credit card"
+          ],
+          "correct": 1,
+          "explanation": "Never share passwords. Real game developers will never ask for your account password."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While playing an online multiplayer game at {at}, an opponent posts a link in chat: 'Click here for 5,000 free gems and elite skins!'"
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT click the external link or enter any login credentials",
+            "note": "Protects gaming account from being hijacked.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t click|ignore link|fake skins|scam"
+          },
+          {
+            "point": "Recognize that third-party 'free gem generators' are phishing traps",
+            "note": "Understands malicious gaming vectors.",
+            "weight": 35,
+            "critical": true,
+            "keys": "phishing trap|fake generator|harvest passwords"
+          },
+          {
+            "point": "Report the player's account in-game for spamming malicious phishing links",
+            "note": "Protects other community players.",
+            "weight": 20,
+            "critical": false,
+            "keys": "report player|in-game report"
+          }
+        ],
+        "dangerous": [
+          "click link and enter password",
+          "download cheat mod",
+          "share discord token"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CERT-In Online Gaming Advisory",
+          "url": "https://cert-in.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-032",
+      "agentId": "cipher",
+      "subtopic": "Authentication",
+      "title": "Two-Factor Authentication (2FA): The unbreakable digital lock",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Two-Factor Authentication (2FA) requires two pieces of evidence: something you know (password) + something you have (phone/app).",
+        "Even if a hacker discovers or guesses your password, 2FA blocks over 99% of automated account takeovers."
+      ],
+      "do": [
+        "Enable 2-Step Verification on your Google, Instagram, WhatsApp, and gaming accounts",
+        "Use an authenticator app (Google Authenticator, Microsoft Authenticator) instead of SMS OTP where available",
+        "Safely write down offline backup recovery codes and store them in a secure home drawer"
+      ],
+      "dont": [
+        "Never share your 2FA prompt or 6-digit authentication codes with anyone who asks",
+        "Never click 'Yes, it's me' on a phone prompt unless you are actively logging in yourself"
+      ],
+      "myths": [
+        {
+          "statement": "A strong 12-character password is so secure that you never need to turn on 2FA.",
+          "answer": "myth",
+          "truth": "Passwords leak in corporate database breaches. 2FA stops hackers even when your password is leaked."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does Two-Factor Authentication (2FA) do when someone tries to log into your account from another city?",
+          "options": [
+            "It shuts down internet",
+            "It sends a verification prompt to YOUR phone that the hacker cannot access, blocking them",
+            "It changes your photo",
+            "Nothing"
+          ],
+          "correct": 1,
+          "explanation": "2FA adds a physical hardware barrier that remote cybercriminals cannot bypass."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Setting up a new email account for school at {at}, {name} sees an option: 'Turn on 2-Step Verification.'"
+        ],
+        "question": "Why should {name} enable this immediately?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Turn on 2-Step Verification right away to secure the account",
+            "note": "Adds decisive second layer of defense.",
+            "weight": 45,
+            "critical": true,
+            "keys": "turn on 2fa|2-step verification|enable 2fa"
+          },
+          {
+            "point": "Understand that 2FA stops hackers even if they leak or steal your password",
+            "note": "Understands dual authentication benefits.",
+            "weight": 35,
+            "critical": true,
+            "keys": "blocks unauthorized access|second layer|stops hackers"
+          },
+          {
+            "point": "Save backup recovery codes in a safe, offline physical place",
+            "note": "Ensures recovery if phone is lost.",
+            "weight": 20,
+            "critical": false,
+            "keys": "backup codes|recovery codes"
+          }
+        ],
+        "dangerous": [
+          "skip 2fa",
+          "share 2fa code with friends",
+          "click yes on random phone prompts"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Cyber Security Centre Guidelines",
+          "url": "https://ncsc.gov.uk"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-033",
+      "agentId": "cipher",
+      "subtopic": "Device loss",
+      "title": "Lost or stolen smartphone emergency checklist",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Smartphones contain banking access, private family photos, email accounts, and stored passwords.",
+        "Swift emergency action within the first hour prevents fraudsters from siphoning linked bank accounts."
+      ],
+      "do": [
+        "Use Google 'Find My Device' (Android) or Apple 'Find My' (iOS) to remotely lock and locate the phone",
+        "Contact your telecom carrier immediately to block the SIM card (stops scammers from receiving OTPs)",
+        "Log into your Google/Apple accounts on a computer and choose 'Sign out of all sessions'"
+      ],
+      "dont": [
+        "Never delay blocking your SIM card after a phone theft",
+        "Never keep written passwords or bank PINs saved in your phone's plain text notes app"
+      ],
+      "myths": [
+        {
+          "statement": "If your phone is stolen, you only need to look for it next week because screen locks protect everything.",
+          "answer": "myth",
+          "truth": "Criminals swap stolen SIM cards into other phones in minutes to drain bank accounts via UPI."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most urgent step to take within 30 minutes of your smartphone being stolen?",
+          "options": [
+            "Buy new headphones",
+            "Call your telecom provider to block the SIM card and track/lock via Find My Device",
+            "Post on social media",
+            "Wait 3 days"
+          ],
+          "correct": 1,
+          "explanation": "Blocking the SIM stops incoming bank OTPs, preventing unauthorized financial withdrawals."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While traveling back from school at {at}, {name} realizes their smartphone is missing from their bag."
+        ],
+        "question": "What emergency sequence should {name} execute immediately with parents?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Use Google 'Find My Device' / Apple 'Find My' on a family phone to remotely lock the screen",
+            "note": "Secures device access and initiates location tracking.",
+            "weight": 45,
+            "critical": true,
+            "keys": "find my device|remotely lock|track phone"
+          },
+          {
+            "point": "Call the telecom customer care to block the SIM card immediately",
+            "note": "Prevents incoming OTP interception.",
+            "weight": 35,
+            "critical": true,
+            "keys": "block sim card|telecom carrier|stop otps"
+          },
+          {
+            "point": "Change primary passwords and inform bank to freeze mobile UPI access",
+            "note": "Shields linked finances.",
+            "weight": 20,
+            "critical": false,
+            "keys": "change passwords|alert bank|freeze upi"
+          }
+        ],
+        "dangerous": [
+          "wait a week before doing anything",
+          "assume phone is gone and do nothing",
+          "call own phone repeatedly without locking"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Department of Telecommunications CEIR Portal",
+          "url": "https://ceir.sancharsaathi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-034",
+      "agentId": "cipher",
+      "subtopic": "Reputation",
+      "title": "Your permanent digital footprint: Think before posting",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Content shared online can be screenshotted, downloaded, and archived forever in seconds.",
+        "College admission officers and future employers routinely audit applicants' public social media history."
+      ],
+      "do": [
+        "Apply the 'Billboard Test': Would you be comfortable seeing this post on a giant billboard outside your school?",
+        "Keep personal profiles private and only accept follower requests from people you know in real life",
+        "Think for 60 seconds before posting in anger, frustration, or seeking temporary viral attention"
+      ],
+      "dont": [
+        "Never post personal home addresses, school uniforms with logos, or flight boarding passes",
+        "Never post cruel memes, harassment, or humiliating photos of classmates"
+      ],
+      "myths": [
+        {
+          "statement": "Deleting a photo from Instagram 5 minutes after posting deletes it permanently from the internet.",
+          "answer": "myth",
+          "truth": "Automated web scrapers, caches, and viewer screenshots archive content permanently in milliseconds."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the 'Billboard Test' for evaluating social media posts before hitting publish?",
+          "options": [
+            "Testing billboard lighting",
+            "Asking yourself: 'Would I be proud if my parents, teachers, and future employer saw this on a giant billboard?'",
+            "Advertising products",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "The billboard test instantly checks whether content aligns with your long-term reputation and values."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At {at}, {name} is tempted to post an angry, embarrassing rant about a strict teacher on social media."
+        ],
+        "question": "What wise digital citizenship perspective should {name} remember?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Remember that online posts leave a permanent digital footprint that can resurface years later",
+            "note": "Recognizes long-term reputational permanence.",
+            "weight": 45,
+            "critical": true,
+            "keys": "permanent digital footprint|cannot be fully deleted|billboard test"
+          },
+          {
+            "point": "Pause and cool down; do not post impulsive rants or confidential personal grievances online",
+            "note": "Exercises emotional self-regulation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "pause and cool down|don'?t post in anger"
+          },
+          {
+            "point": "Talk through school frustrations privately with parents or trusted friends in person",
+            "note": "Constructive offline resolution.",
+            "weight": 20,
+            "critical": false,
+            "keys": "talk offline|resolve in person"
+          }
+        ],
+        "dangerous": [
+          "post abusive rant publicly",
+          "tag teacher in cruel memes",
+          "post home address"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Internet and Mobile Association of India (IAMAI)",
+          "url": "https://iamai.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-035",
+      "agentId": "cipher",
+      "subtopic": "Financial safety",
+      "title": "Predatory instant loan apps: Blackmail and privacy extortion",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Illegal loan apps attract young users with promises of 'Instant ₹5,000 cash with no credit check'.",
+        "Upon installation, they steal the victim's entire contact book and photo gallery to blackmail families."
+      ],
+      "do": [
+        "Only borrow through RBI-registered Scheduled Commercial Banks or Non-Banking Financial Companies (NBFCs)",
+        "Check the RBI 'whitelist' of approved digital lending apps before ever installing a finance app",
+        "Report harassing loan recovery blackmail to local police cyber cells and the 1930 national helpline"
+      ],
+      "dont": [
+        "Never install unverified Chinese instant loan APKs advertised on social media feeds",
+        "Never grant photo gallery and contact permissions to instant cash apps"
+      ],
+      "myths": [
+        {
+          "statement": "Instant loan apps offering quick ₹2,000 cash without documents are generous charitable services.",
+          "answer": "myth",
+          "truth": "Unregulated loan apps are vicious extortion traps that harvest contacts and threaten victims with extortionate rates."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do illegal instant loan apps demand full access to your phone's Contacts and Photo Gallery?",
+          "options": [
+            "To make friends",
+            "To steal your contacts and photos to harass and blackmail your family and friends for money",
+            "To check battery",
+            "To back up photos"
+          ],
+          "correct": 1,
+          "explanation": "Stolen contact lists are used by recovery syndicates to shame and harass victims' relatives."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A pop-up ad at {at} urges a senior student: 'Get ₹3,000 instant pocket money now, zero documents, instant download.'"
+        ],
+        "question": "What critical safety warning should {name} deliver?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT download or install unregulated instant loan apps",
+            "note": "Evades predatory extortion traps.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t download|predatory loan app|fraud trap"
+          },
+          {
+            "point": "Understand that these apps harvest contacts and gallery photos to blackmail borrowers",
+            "note": "Exposes criminal extortion mechanism.",
+            "weight": 35,
+            "critical": true,
+            "keys": "steals contacts|blackmail|harassment|illegal"
+          },
+          {
+            "point": "Verify that legitimate lending apps must be registered with the Reserve Bank of India",
+            "note": "Follows formal regulatory protections.",
+            "weight": 20,
+            "critical": false,
+            "keys": "rbi approved|legitimate banks only"
+          }
+        ],
+        "dangerous": [
+          "download illegal loan apk",
+          "give access to contacts",
+          "borrow money from strangers online"
+        ]
+      },
+      "sources": [
+        {
+          "name": "RBI Sachet Portal for Unauthorized Entities",
+          "url": "https://sachet.rbi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIG-036",
+      "agentId": "cipher",
+      "subtopic": "Reporting",
+      "title": "Reporting cybercrime: The National Cyber Crime Portal (1930 & cybercrime.gov.in)",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Reporting financial cyber fraud within the 'Golden Hour' (first 2 hours) allows banks to freeze stolen funds in transit.",
+        "The Citizen Financial Cyber Fraud Reporting and Management System (CFCFRMS) has saved over ₹1,000 crore."
+      ],
+      "do": [
+        "Call the National Cyber Crime Helpline number 1930 immediately if money is stolen through online fraud",
+        "File a formal digital complaint on cybercrime.gov.in with transaction IDs, bank statements, and chat logs",
+        "Report cyber threats, stalking, and identity theft promptly without shame or fear"
+      ],
+      "dont": [
+        "Never wait days before reporting online financial theft (stolen funds get laundered quickly)",
+        "Never delete chat logs or SMS transaction alerts before saving screenshots for the police"
+      ],
+      "myths": [
+        {
+          "statement": "Calling 1930 only works for multinational corporations, not individual school students.",
+          "answer": "myth",
+          "truth": "The 1930 helpline serves all Indian citizens, coordinating with local police to freeze fraudulent transactions."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What national government helpline number should you call immediately if victimized by an online financial scam?",
+          "options": [
+            "100",
+            "1930",
+            "108",
+            "112"
+          ],
+          "correct": 1,
+          "explanation": "1930 is the dedicated Indian National Cyber Crime Helpline for immediate financial fraud intervention."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A family member at {at} realizes they accidentally clicked a phishing link and ₹5,000 was debited from their account."
+        ],
+        "question": "What immediate steps should {name} guide them through?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Dial 1930 immediately to report the fraud to the National Cyber Crime Helpline",
+            "note": "Alerts inter-bank system to freeze funds before withdrawal.",
+            "weight": 45,
+            "critical": true,
+            "keys": "call 1930|dial 1930|cyber crime helpline"
+          },
+          {
+            "point": "File an online complaint on cybercrime.gov.in with transaction details and screenshots",
+            "note": "Generates formal police FIR investigation ticket.",
+            "weight": 35,
+            "critical": true,
+            "keys": "cybercrime.gov.in|file complaint|screenshots|transaction id"
+          },
+          {
+            "point": "Call the bank's official emergency toll-free number to freeze the compromised account/card",
+            "note": "Halts further unauthorized debits.",
+            "weight": 20,
+            "critical": false,
+            "keys": "call bank|freeze card|stop debits"
+          }
+        ],
+        "dangerous": [
+          "wait 3 weeks",
+          "delete all bank messages",
+          "do nothing in shame"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Cyber Crime Coordination Centre (MHA)",
+          "url": "https://cybercrime.gov.in"
+        }
+      ],
+      "reviewed": true
     }
-   ],
-   "scams": [],
-   "scenario": {
-    "situations": [
-     "{name} has been chatting with a 'gamer friend' for weeks. Today the friend asks for a photo in school uniform and suggests meeting {at} without telling parents."
-    ],
-    "question": "What should {name} do?",
-    "emojis": [
-     "💬",
-     "🙅",
-     "📸"
-    ],
-    "bubble": "Don't tell your parents 😉",
-    "rubric": [
-     {
-      "point": "Don't send photos or personal details",
-      "note": "Uniform photos reveal your school.",
-      "weight": 30,
-      "critical": true,
-      "keys": "(not|no|never|don'?t)[^.]{0,20}(send|share|photo|picture)"
-     },
-     {
-      "point": "Never meet; refuse secrecy",
-      "note": "'Don't tell your parents' is a big warning sign.",
-      "weight": 30,
-      "critical": true,
-      "keys": "(not|no|never|don'?t)[^.]{0,20}(meet|go)|secret"
-     },
-     {
-      "point": "Tell a parent or trusted adult",
-      "note": "Adults can help and report.",
-      "weight": 25,
-      "critical": true,
-      "keys": "parent|adult|teacher|mom|mum|dad|tell"
-     },
-     {
-      "point": "Block and report the account",
-      "note": "Platforms can act on reports.",
-      "weight": 15,
-      "critical": false,
-      "keys": "block|report|1930|cybercrime"
-     }
-    ],
-    "dangerous": [
-     "(send|share)[^.]{0,15}(photo|picture|pic)(?![^.]{0,10}(no|not))",
-     "(go|agree)[^.]{0,10}meet(?![^.]{0,10}(no|not))"
-    ],
-    "settings": [
-     "mall",
-     "park",
-     "street market"
-    ]
-   },
-   "agentId": "cipher",
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  }
- ]
+  ]
 }

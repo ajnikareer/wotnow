@@ -1,0 +1,1641 @@
+{
+  "agentId": "saathi",
+  "cards": [
+    {
+      "id": "INC-001",
+      "agentId": "saathi",
+      "subtopic": "Accessibility",
+      "title": "Respectful interaction: Classmates with physical disabilities",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A wheelchair, crutch, or white cane is an extension of a person's personal body space; touching or pushing it without permission is a violation.",
+        "Treat classmates with disabilities as complete equals: speak directly to them at eye level, not to their caregiver or companion."
+      ],
+      "do": [
+        "Always ask 'Would you like some assistance?' and wait for their answer before grabbing or pushing a wheelchair",
+        "Sit down on a chair when having a long conversation so you are at comfortable eye level with a wheelchair user",
+        "Keep hallways, ramps, and classroom doorways completely clear of backpacks and desks"
+      ],
+      "dont": [
+        "NEVER lean on, grab, or push someone's wheelchair without their explicit consent",
+        "NEVER talk down to someone with a physical disability as if they are a helpless toddler"
+      ],
+      "myths": [
+        {
+          "statement": "If you see a classmate in a wheelchair, you should immediately grab the handles and push them without asking to be helpful.",
+          "answer": "myth",
+          "truth": "A wheelchair is personal bodily space. Grabbing it without asking is alarming and disrespectful. Always ask permission first."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the polite and respectful protocol before assisting a classmate who uses mobility aids?",
+          "options": [
+            "Grab their crutches and carry them",
+            "Ask politely if they would like assistance, and respect their answer if they say 'No thanks, I've got this'",
+            "Ignore them completely",
+            "Push their wheelchair as fast as possible"
+          ],
+          "correct": 1,
+          "explanation": "Dignity means respecting autonomy: always ask first, listen to their specific preference, and honor their independence."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the school entrance ramp at {at}, {name} sees a classmate in a wheelchair preparing to navigate an incline."
+        ],
+        "question": "How should {name} offer support respectfully?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Walk up, make friendly eye contact, and ask: 'Hi, would you like a hand with the ramp today?'",
+            "note": "Offers assistance politely while respecting bodily autonomy.",
+            "weight": 50,
+            "critical": true,
+            "keys": "ask permission first|friendly eye contact|respect autonomy"
+          },
+          {
+            "point": "Wait for their response and follow their specific directions on how to hold or push the chair",
+            "note": "Follows user's explicit preference.",
+            "weight": 30,
+            "critical": true,
+            "keys": "wait for response|follow directions"
+          },
+          {
+            "point": "Ensure the ramp pathway is clear of discarded water bottles or student bags",
+            "note": "Proactively clears physical accessibility obstacles.",
+            "weight": 20,
+            "critical": false,
+            "keys": "clear pathway|remove obstacles"
+          }
+        ],
+        "dangerous": [
+          "grab wheelchair handles from behind without speaking",
+          "pat classmate on head like a child",
+          "stare awkwardly and walk away"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Department of Empowerment of Persons with Disabilities (DEPwD)",
+          "url": "https://disabilityaffairs.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-002",
+      "agentId": "saathi",
+      "subtopic": "Deaf Culture",
+      "title": "Communicating with Deaf peers: Eye contact, light, and sign basics",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Deaf and hard-of-hearing people communicate through rich visual languages; Indian Sign Language (ISL) is a complete, expressive linguistic system.",
+        "When speaking with someone who lip-reads or signs, facial expressions, clear lighting, and facing them directly are essential."
+      ],
+      "do": [
+        "Tap gently on their shoulder or wave your hand in their field of vision to get their attention politely",
+        "Face the person directly in good lighting so your mouth and facial expressions are clearly visible",
+        "Learn basic Indian Sign Language (ISL) signs for 'Hello', 'Thank you', 'Friend', and 'Help'"
+      ],
+      "dont": [
+        "Never cover your mouth with your hand or turn your back while speaking to someone who lip-reads",
+        "Never shout loudly into the ear of a deaf person; shouting distorts lip shapes and does not help"
+      ],
+      "myths": [
+        {
+          "statement": "Shouting at the top of your lungs into a deaf person's ear helps them understand what you are saying.",
+          "answer": "myth",
+          "truth": "Shouting distorts facial and lip movements and can cause painful acoustic feedback in hearing aids. Speak at normal volume facing them."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the polite way to get the attention of a deaf or hard-of-hearing classmate in a noisy room?",
+          "options": [
+            "Throwing a pencil at their head",
+            "A gentle tap on the shoulder or a friendly wave within their visual field",
+            "Screaming their name repeatedly",
+            "Turning off the room lights violently"
+          ],
+          "correct": 1,
+          "explanation": "Gentle visual or tactile cues respect dignity and establish natural communication without aggression."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During group project discussion in the classroom at {at}, a hard-of-hearing classmate is looking down while another student speaks quickly from across the table."
+        ],
+        "question": "How should {name} facilitate inclusive communication?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Gently wave a hand in their view to signal the discussion is starting and face them directly",
+            "note": "Ensures visual engagement and mutual presence.",
+            "weight": 45,
+            "critical": true,
+            "keys": "gentle wave|face them directly|good lighting"
+          },
+          {
+            "point": "Speak at a natural, steady pace with clear lip movement without exaggerated shouting",
+            "note": "Supports natural lip-reading without distortion.",
+            "weight": 35,
+            "critical": true,
+            "keys": "steady pace|clear lip movement|do not shout"
+          },
+          {
+            "point": "Write down key project decisions and bullet points in a shared notebook so nothing is missed",
+            "note": "Provides accessible visual notes.",
+            "weight": 20,
+            "critical": false,
+            "keys": "write down key points|shared notebook"
+          }
+        ],
+        "dangerous": [
+          "exclude deaf peer from project",
+          "shout directly into their ear",
+          "talk behind their back"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Sign Language Research and Training Centre (ISLRTC)",
+          "url": "https://islrtc.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-003",
+      "agentId": "saathi",
+      "subtopic": "Linguistic Diversity",
+      "title": "Accents and mother tongues: Linguistic diversity is India's strength",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "An accent simply means a person has the brilliance and courage to speak more than one language.",
+        "India is home to over 19,500 spoken mother tongues and dialects; mocking someone's regional pronunciation is ignorant and deeply hurtful."
+      ],
+      "do": [
+        "Appreciate that someone with an accent speaks their mother tongue PLUS another language",
+        "Focus on the content and meaning of what a peer is saying, never mock their phonetics or rhythm",
+        "If you do not understand a word, ask politely: 'Could you please repeat that last sentence?'"
+      ],
+      "dont": [
+        "Never imitate, mock, or exaggerate someone's regional accent for cheap laughs in class",
+        "Never judge someone's intelligence or capability by their fluency in English"
+      ],
+      "myths": [
+        {
+          "statement": "People who speak English with a heavy regional mother-tongue accent are less intelligent and uneducated.",
+          "answer": "myth",
+          "truth": "Accent has zero correlation with intelligence. Many world-renowned scientists and thinkers speak English as their third or fourth language."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does having an accent when speaking English or Hindi genuinely signify?",
+          "options": [
+            "That the person has poor memory",
+            "That the person is multilingual and mastered another rich mother tongue first",
+            "That they need medical treatment",
+            "That they cannot learn"
+          ],
+          "correct": 1,
+          "explanation": "Accents are the melodic footprint of a person's multilingual heritage and cognitive breadth."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A new student from a different state speaks English with a regional inflection at {at}, and two classmates giggle and mock the pronunciation."
+        ],
+        "question": "How should {name} respond?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Step in and say: 'His point was really interesting, let's listen to what he is actually saying'",
+            "note": "Redirects attention to substantive ideas and halts mockery.",
+            "weight": 50,
+            "critical": true,
+            "keys": "listen to his point|halt mockery|stand up for peer"
+          },
+          {
+            "point": "Engage the new student in conversation warmly, asking about their background and experiences",
+            "note": "Builds welcoming interpersonal bridge.",
+            "weight": 30,
+            "critical": true,
+            "keys": "engage warmly|ask about background|inclusive friendship"
+          },
+          {
+            "point": "Remind peers privately that India's diverse mother tongues are a shared cultural treasure",
+            "note": "Educates peers on linguistic respect.",
+            "weight": 20,
+            "critical": false,
+            "keys": "remind peers of linguistic diversity|cultural respect"
+          }
+        ],
+        "dangerous": [
+          "join in mocking the accent",
+          "laugh along to avoid being targeted",
+          "tell new student to stop talking"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Education Policy (NEP) - Multilingualism and Cultural Harmony",
+          "url": "https://education.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-004",
+      "agentId": "saathi",
+      "subtopic": "Hospitality",
+      "title": "The buddy system: Making sure no newcomer sits alone",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Entering a new school where everyone already has established friend groups is one of the most intimidating experiences in childhood.",
+        "A single welcoming gesture—inviting a new peer to sit at your lunch table—can permanently change their school trajectory."
+      ],
+      "do": [
+        "Take initiative: Walk over, introduce yourself, and say 'Hi, welcome to our class, I'm {name}'",
+        "Invite them to sit with you during lunch and guide them to science labs and water coolers",
+        "Introduce the new student to your other friends so their social circle broadens naturally"
+      ],
+      "dont": [
+        "Never stare at new students without saying hello or leave them wandering lost in corridors",
+        "Never treat new classmates as rivals or invaders in your established social circles"
+      ],
+      "myths": [
+        {
+          "statement": "New students prefer being left completely alone in the corner for their first two months to adjust quietly.",
+          "answer": "myth",
+          "truth": "Newcomers feel deep anxiety and isolation. A warm, friendly welcome immediately dispels fear and builds belonging."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the simplest and most powerful way to make a new classmate feel welcome on day one?",
+          "options": [
+            "Stare at their shoes silently",
+            "Invite them to sit at your lunch table and show them where the library and labs are",
+            "Ask them why they left their old school",
+            "Ignore them completely"
+          ],
+          "correct": 1,
+          "explanation": "Sharing lunch and guiding them through physical school logistics creates immediate safety and comfort."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On Monday morning at {at}, a new student stands alone against the corridor wall clutching their books, looking anxious as crowds rush past."
+        ],
+        "question": "How should {name} act as an inclusive peer?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Walk up warmly, introduce yourself, and offer to show them to the homeroom classroom",
+            "note": "Takes proactive welcoming initiative.",
+            "weight": 45,
+            "critical": true,
+            "keys": "walk up warmly|introduce self|show homeroom"
+          },
+          {
+            "point": "Invite them to sit together during recess and introduce them to two other friendly classmates",
+            "note": "Integrates newcomer into peer community.",
+            "weight": 35,
+            "critical": true,
+            "keys": "invite to recess lunch|introduce to friends"
+          },
+          {
+            "point": "Answer their questions about teachers, timetables, and locker locations with patience",
+            "note": "Provides helpful practical orientation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "answer timetable questions|practical orientation"
+          }
+        ],
+        "dangerous": [
+          "walk past without looking",
+          "whisper with friends about their appearance",
+          "prank the new student"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CBSE Adolescent Peer Educator Program",
+          "url": "https://cbse.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-005",
+      "agentId": "saathi",
+      "subtopic": "Gender Equality",
+      "title": "Beyond stereotypes: Human potential has no gender",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Gender stereotypes restrict human potential: boys are pressured to suppress tears, while girls are discouraged from sports, coding, or leadership.",
+        "True equality recognizes that strength, sensitivity, scientific curiosity, empathy, and courage belong equally to all human beings."
+      ],
+      "do": [
+        "Encourage girls in robotics, mathematics, cricket, and public debate leadership",
+        "Support boys in expressing emotions, cooking, artistic dance, and caregiving without mocking them",
+        "Divide classroom duties (cleaning, carrying chairs, technology setup) equally without gender segregation"
+      ],
+      "dont": [
+        "Never say 'You throw like a girl' or 'Boys don't cry'—both phrases enforce harmful myths",
+        "Never assume certain school subjects or careers belong exclusively to one gender"
+      ],
+      "myths": [
+        {
+          "statement": "Boys are biologically wired to be good at math and coding, while girls are biologically wired only for languages and art.",
+          "answer": "myth",
+          "truth": "Cognitive research shows zero innate difference in mathematical or scientific capability between boys and girls. Differences stem from social conditioning."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is telling a crying boy that 'Boys don't cry' psychologically harmful?",
+          "options": [
+            "Because boys have more tears than girls",
+            "Because it teaches boys to bottle up normal human emotions, leading to emotional numbness and aggression",
+            "Because it makes them laugh",
+            "Because boys have no tear ducts"
+          ],
+          "correct": 1,
+          "explanation": "Suppressing emotions harms mental health. Emotional expression is a human trait, not a gender weakness."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the science lab at {at}, a male student laughs when a female classmate volunteers to be team captain for the robotics rover build."
+        ],
+        "question": "How should {name} promote gender inclusion?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Affirm the female classmate's leadership role and support her captaincy based on competence",
+            "note": "Champions merit-based leadership over bias.",
+            "weight": 50,
+            "critical": true,
+            "keys": "support her captaincy|merit over bias|stand against stereotype"
+          },
+          {
+            "point": "Point out that engineering and leadership belong to whoever has the passion and skill, regardless of gender",
+            "note": "Challenges restrictive gender assumptions.",
+            "weight": 30,
+            "critical": true,
+            "keys": "engineering for everyone|passion and skill"
+          },
+          {
+            "point": "Collaborate enthusiastically as a team player under her project direction",
+            "note": "Models equitable, respectful teamwork.",
+            "weight": 20,
+            "critical": false,
+            "keys": "collaborate under her direction|respectful teamwork"
+          }
+        ],
+        "dangerous": [
+          "tell female student to do paperwork instead",
+          "agree that girls cant build robots",
+          "boycott the project"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Women and Child Development - Beti Bachao Beti Padhao",
+          "url": "https://wcd.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-006",
+      "agentId": "saathi",
+      "subtopic": "Upstander",
+      "title": "Crushing body shaming: Defending peers against appearance bullying",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Body shaming targets weight, height, skin complexion, hair texture, or facial features, causing severe lifelong depression and eating disorders.",
+        "Cruel comments disguised as 'just a joke' are bullying; staying silent makes bystanders complicit in the harm."
+      ],
+      "do": [
+        "Call out body shaming in the moment: 'That's not funny, let's not make comments about people's bodies'",
+        "Check in privately with the targeted person: 'Hey, what they said was awful, I don't agree with it at all'",
+        "Compliment peers on their character, wit, kindness, and effort rather than their physical measurements"
+      ],
+      "dont": [
+        "Never join in laughter when someone is mocked for their weight, skin color, or height",
+        "Never give unsolicited advice on dieting, skin lightening, or gym routines to peers"
+      ],
+      "myths": [
+        {
+          "statement": "Making fun of a classmate's weight or dark skin is harmless banter as long as everyone laughs.",
+          "answer": "myth",
+          "truth": "Body shaming inflicts deep emotional trauma and triggers self-loathing and eating disorders. Cruelty is never banter."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most effective way for a bystander to stop appearance-based teasing in a group conversation?",
+          "options": [
+            "Laugh along so you don't get teased next",
+            "Look at the person teasing and say calmly: 'We don't do body comments here, let's talk about something else'",
+            "Film the teasing and post it on social media",
+            "Start teasing the teaser's physical body"
+          ],
+          "correct": 1,
+          "explanation": "Clear, calm social boundaries set by peers extinguish bullying far faster than passive silence."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school courtyard at {at}, a group of students loudly teases a classmate about their weight and height, calling them cruel nicknames."
+        ],
+        "question": "How should {name} act as an upstander?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Speak up clearly to the group: 'Leave them alone, commenting on people's bodies is completely uncool'",
+            "note": "Interrupts bullying behavior directly with moral courage.",
+            "weight": 50,
+            "critical": true,
+            "keys": "speak up clearly|leave them alone|body shaming uncool"
+          },
+          {
+            "point": "Stand beside the targeted classmate and guide them away from the teasing circle",
+            "note": "Provides physical solidarity and safe exit.",
+            "weight": 30,
+            "critical": true,
+            "keys": "stand beside classmate|guide away from circle"
+          },
+          {
+            "point": "Spend the rest of lunch hanging out with them and reporting the bullying to a teacher if it repeats",
+            "note": "Follows up with genuine friendship and institutional safety.",
+            "weight": 20,
+            "critical": false,
+            "keys": "hang out as friends|report persistent bullying"
+          }
+        ],
+        "dangerous": [
+          "join the laughter to fit in",
+          "film the bullying on your phone",
+          "tell the victim they should diet"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Commission for Protection of Child Rights (NCPCR) - Anti-Bullying Guidelines",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-007",
+      "agentId": "saathi",
+      "subtopic": "Human Dignity",
+      "title": "Every job has dignity: Respecting sanitation and domestic workers",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A society is judged by how it treats the people who keep it clean, fed, and running: domestic helpers, sweepers, drivers, and security guards.",
+        "Dignity of labor is a foundational democratic value; ordering workers around with disrespect reflects poorly on your character, not theirs."
+      ],
+      "do": [
+        "Always address service workers, security guards, and domestic staff with polite honorifics (Bhaiya, Didi, Uncle, Aunty)",
+        "Say 'Thank you' and 'Please' when staff hand you clean water, sweep your classroom, or open gates",
+        "Clean up your own spills, return your own cafeteria trays, and never leave humiliating messes for staff"
+      ],
+      "dont": [
+        "Never talk down to domestic helpers or speak to them in commanding, rude tones",
+        "Never litter on school grounds with the arrogant thought: 'The sweeper is paid to clean this'"
+      ],
+      "myths": [
+        {
+          "statement": "Because domestic workers and sweepers are paid wages, you do not need to show them basic politeness or say thank you.",
+          "answer": "myth",
+          "truth": "Wages pay for labor, not for subservience. Dignity, kindness, and courtesy are fundamental human rights due to every worker."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does leaving your trash scattered on a classroom floor because 'sweepers will clean it' demonstrate?",
+          "options": [
+            "High personal wealth",
+            "A total lack of civic responsibility and disrespect for human labor",
+            "Superior education",
+            "Good efficiency"
+          ],
+          "correct": 1,
+          "explanation": "Respecting dignity of labor means minimizing other people's toil through personal accountability."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school cafeteria at {at}, {name} sees a student deliberately spill curry on the floor, laugh, and shout at the cleaning staff: 'Come clean this quickly!'"
+        ],
+        "question": "How should {name} respond with civic dignity?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pick up napkins and help wipe up the spill, apologizing to the cleaning staff member for the classmate's rudeness",
+            "note": "Demonstrates humility and dignity of labor through action.",
+            "weight": 50,
+            "critical": true,
+            "keys": "help wipe up spill|apologize to staff|dignity of labor"
+          },
+          {
+            "point": "Address the rude student firmly: 'Staff members are not your personal servants, treat people with respect'",
+            "note": "Asserts civic and human boundaries against arrogance.",
+            "weight": 30,
+            "critical": true,
+            "keys": "staff not servants|treat with respect|confront arrogance"
+          },
+          {
+            "point": "Thank the cleaning staff member warmly for keeping the cafeteria clean and healthy for all students",
+            "note": "Affirms human dignity and gratitude.",
+            "weight": 20,
+            "critical": false,
+            "keys": "thank cleaning staff warmly|affirm dignity"
+          }
+        ],
+        "dangerous": [
+          "laugh along with the rude student",
+          "kick curry further across floor",
+          "order staff to hurry up"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Labour and Employment - Dignity of Labour Principles",
+          "url": "https://labour.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-008",
+      "agentId": "saathi",
+      "subtopic": "Empathy",
+      "title": "Bridging language gaps: Patience with peers learning a new tongue",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Students moving across states often struggle to express complex thoughts in Hindi or English while their intellect remains razor-sharp.",
+        "Mocking broken grammar or laughing at hesitations silences intelligent peers and creates deep academic trauma."
+      ],
+      "do": [
+        "Give peers full, patient time to finish their sentences without interrupting or finishing their words",
+        "Use simple vocabulary, gestures, or visual diagrams when explaining concepts across language differences",
+        "Encourage and praise their courage in communicating in a second or third language"
+      ],
+      "dont": [
+        "Never laugh at grammatical mistakes or unusual word choices made by non-native speakers",
+        "Never roll your eyes or sigh loudly while someone is searching for a word in class"
+      ],
+      "myths": [
+        {
+          "statement": "If a student struggles to speak English fluently in science class, it means they are incapable of understanding science.",
+          "answer": "myth",
+          "truth": "Language is merely a tool for communication, not a measure of intelligence. Deep scientific concepts exist independently of English fluency."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How should you act when a classmate from another state hesitates while searching for words in English or Hindi?",
+          "options": [
+            "Finish their sentence aggressively for them",
+            "Listen patiently with encouraging body language and give them time to express their thought",
+            "Tell them to sit down",
+            "Laugh at their grammar"
+          ],
+          "correct": 1,
+          "explanation": "Patience and warm non-verbal encouragement create psychological safety for language learners."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During an environmental science seminar at {at}, a student who recently relocated from a rural district struggles to find English words to explain solar irrigation."
+        ],
+        "question": "How should {name} support the presenter?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Listen with attentive, encouraging eye contact, allowing them the time needed to articulate their ideas",
+            "note": "Creates a supportive, patient audience environment.",
+            "weight": 45,
+            "critical": true,
+            "keys": "listen attentively|encouraging eye contact|patient listening"
+          },
+          {
+            "point": "Supportively suggest a technical word if they look to the room for help, without taking over the presentation",
+            "note": "Offers gentle, collaborative assistance.",
+            "weight": 35,
+            "critical": true,
+            "keys": "suggest word gently|collaborative support|do not take over"
+          },
+          {
+            "point": "Applaud enthusiastically for the quality of the solar irrigation concept once the presentation concludes",
+            "note": "Celebrates substantive scientific ideas over linguistic polish.",
+            "weight": 20,
+            "critical": false,
+            "keys": "applaud concept quality|celebrate ideas"
+          }
+        ],
+        "dangerous": [
+          "giggle at grammatical stumbles",
+          "tell teacher to disqualify the speaker",
+          "mimic their pronunciation"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NCERT - Inclusive Education in Indian Classrooms",
+          "url": "https://ncert.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-009",
+      "agentId": "saathi",
+      "subtopic": "Universal Design",
+      "title": "Accessibility for all: Keeping ramps, corridors, and doors open",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Universal design and accessibility are human rights: ramps, wide doors, elevators, and tactile paving allow all citizens full participation.",
+        "Parking bicycles in front of ramps, cluttering corridors, or misusing accessible restrooms creates insurmountable barriers for disabled peers."
+      ],
+      "do": [
+        "Never park bicycles, scooters, or sports gear across wheelchair ramps or curb cuts",
+        "Hold heavy doors open when you see someone using crutches, a wheelchair, or carrying heavy boxes",
+        "Keep accessible restroom stalls available for individuals who genuinely require their grab rails and turning radius"
+      ],
+      "dont": [
+        "Never use accessible wheelchair ramps as skate ramps or obstacle courses",
+        "Never crowd elevator doors when a student with mobility aids is trying to enter"
+      ],
+      "myths": [
+        {
+          "statement": "Accessible ramps are just decorative architectural features that school skate clubs can use for stunts.",
+          "answer": "myth",
+          "truth": "Ramps and tactile paving are vital lifelines that ensure citizens with disabilities can access education, transit, and healthcare."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is it critical to keep yellow tactile paving stones on sidewalks and railway stations completely clear of obstacles?",
+          "options": [
+            "Because they look nice when clean",
+            "Because visually impaired citizens rely on tactile bumps to navigate safely with white canes",
+            "Because they are made of gold",
+            "Because trains park on them"
+          ],
+          "correct": 1,
+          "explanation": "Tactile paving guides visually impaired pedestrians away from hazards; blocking them causes painful collisions."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Outside the school auditorium at {at}, students leave ten bicycles leaning directly against the wheelchair access ramp."
+        ],
+        "question": "How should {name} demonstrate civic accessibility awareness?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Help move the bicycles safely away from the ramp into the designated cycle parking zone",
+            "note": "Removes physical barrier to ensure universal access.",
+            "weight": 50,
+            "critical": true,
+            "keys": "move bicycles away|clear access ramp|designated parking"
+          },
+          {
+            "point": "Remind classmates politely that blocking ramps prevents peers in wheelchairs from entering the auditorium",
+            "note": "Educates peers on disability rights and physical access.",
+            "weight": 30,
+            "critical": true,
+            "keys": "educate classmates|blocking ramps prevents access"
+          },
+          {
+            "point": "Suggest to school administration that clear 'Keep Ramp Clear' signage be painted on the ground",
+            "note": "Proposes long-term infrastructural solution.",
+            "weight": 20,
+            "critical": false,
+            "keys": "suggest keep ramp clear signs|infrastructural fix"
+          }
+        ],
+        "dangerous": [
+          "leave bikes blocking ramp",
+          "add your own bike to the pile",
+          "mock disabled peers for complaining"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Accessible India Campaign (Sugamya Bharat Abhiyan)",
+          "url": "https://accessibleindia.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-010",
+      "agentId": "saathi",
+      "subtopic": "Neurodiversity",
+      "title": "Invisible disabilities: ADHD, Autism, and Dyslexia explained",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Many disabilities are invisible: ADHD, autism, dyslexia, epilepsy, chronic pain, and diabetes do not involve wheelchairs or white canes.",
+        "Neurodiversity recognizes that human brains are wired differently; what looks like 'laziness' or 'acting weird' is often a neurological difference."
+      ],
+      "do": [
+        "Never assume someone is faking difficulty just because 'they look completely normal'",
+        "Be patient if a neurodivergent peer needs instructions written down or avoids noisy, chaotic environments",
+        "Celebrate diverse cognitive strengths: dyslexic thinkers often excel in spatial reasoning, while autistic peers excel in deep focus"
+      ],
+      "dont": [
+        "Never mock a classmate who flaps their hands, rocks, or wears noise-canceling headphones to self-soothe",
+        "Never use diagnostic terms like 'Autistic' or 'ADHD' as casual playground insults"
+      ],
+      "myths": [
+        {
+          "statement": "If someone can walk and talk normally, it is impossible for them to have a genuine disability.",
+          "answer": "myth",
+          "truth": "Over 80% of disabilities are invisible, including learning differences, autoimmune conditions, and sensory processing disorders."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the term 'Neurodiversity' mean?",
+          "options": [
+            "A disease that needs to be cured with pills",
+            "The understanding that brain differences (like autism and ADHD) are natural variations of the human genome, not personal defects",
+            "A computer programming language",
+            "A school for doctors"
+          ],
+          "correct": 1,
+          "explanation": "Neurodiversity views brain differences through the lens of human diversity and strength rather than deficit."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In class at {at}, an autistic student rocks gently in their chair and wears ear-defenders during loud group activities, prompting whispers from peers."
+        ],
+        "question": "How should {name} foster an inclusive environment?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Treat the classmate with warm, respectful normality and normalize sensory regulation tools",
+            "note": "Normalizes neurodivergent accommodations.",
+            "weight": 45,
+            "critical": true,
+            "keys": "treat with respect|normalize ear defenders|sensory regulation"
+          },
+          {
+            "point": "Gently explain to curious peers that loud noise can cause sensory overload and ear defenders help them focus",
+            "note": "Spreads accurate neurodiversity awareness.",
+            "weight": 35,
+            "critical": true,
+            "keys": "explain sensory overload|educate peers|dispel whispers"
+          },
+          {
+            "point": "Include the classmate in project discussions by communicating clearly without chaotic shouting",
+            "note": "Adapts group work for inclusive participation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "clear communication|inclusive group work"
+          }
+        ],
+        "dangerous": [
+          "mock the classmate's rocking",
+          "pull off their ear defenders",
+          "demand they act normal"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Trust for the Welfare of Persons with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities",
+          "url": "https://thenationaltrust.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-011",
+      "agentId": "saathi",
+      "subtopic": "Verbal Respect",
+      "title": "Names and dignity: The deep sting of derogatory nicknames",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Calling someone by a cruel nickname based on their weight, skin shade, caste, region, or disability is verbal violence that erodes self-esteem.",
+        "Even if the person smiles or laughs along awkwardly, inside they often feel humiliated, diminished, and deeply unsafe."
+      ],
+      "do": [
+        "Always address peers by their real, preferred name or an affectionate nickname they genuinely love",
+        "If someone says 'Please don't call me that', stop immediately and permanently—no debate, no excuses",
+        "Notice nervous laughter: victims often smile to avoid escalating conflict, not because they find the nickname funny"
+      ],
+      "dont": [
+        "Never use nicknames that reference someone's body size, glasses, dental braces, or skin tone",
+        "Never justify cruelty with 'It's just an affectionate nickname bro'"
+      ],
+      "myths": [
+        {
+          "statement": "If a classmate smiles when you call them a cruel nickname about their weight, it proves they genuinely enjoy it.",
+          "answer": "myth",
+          "truth": "Smiling is a common appeasement response to survive social humiliation. Forcing cruel labels damages human dignity."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do if you realize a nickname you frequently use makes a classmate feel uncomfortable or sad?",
+          "options": [
+            "Tell them they are too sensitive and keep using it",
+            "Apologize sincerely, stop using the nickname immediately, and address them by their chosen name",
+            "Use it even louder in front of teachers",
+            "Make up a worse nickname"
+          ],
+          "correct": 1,
+          "explanation": "True maturity means respecting other people's dignity and dropping hurtful labels instantly."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the playground at {at}, several boys repeatedly call a classmate 'Chashmish' and 'Mota', while the classmate looks down with a forced, uncomfortable smile."
+        ],
+        "question": "How should {name} intervene constructively?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Ask the classmate privately what they actually prefer to be called and start using their real name consistently",
+            "note": "Validates their true personal identity and dignity.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ask preferred name|use real name consistently|restore dignity"
+          },
+          {
+            "point": "Tell the group firmly: 'Hey guys, call him by his actual name, let's drop the nicknames'",
+            "note": "Sets a clear, respectful peer standard.",
+            "weight": 35,
+            "critical": true,
+            "keys": "call him by real name|drop nicknames|firm boundary"
+          },
+          {
+            "point": "Never join in repeating the derogatory label",
+            "note": "Refuses to amplify verbal bullying.",
+            "weight": 20,
+            "critical": false,
+            "keys": "refuse to repeat nickname|lead by example"
+          }
+        ],
+        "dangerous": [
+          "call him worse names",
+          "tell him to get thicker skin",
+          "laugh along with the bullies"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CBSE Guidelines on Prevention of Bullying in Schools",
+          "url": "https://cbse.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-012",
+      "agentId": "saathi",
+      "subtopic": "Cultural Harmony",
+      "title": "Lunchbox diplomacy: Respecting diverse dietary traditions and foods",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Food is an intimate expression of culture, family heritage, regional agriculture, and religious traditions.",
+        "Making disgusted faces or saying 'Eww, what stinks?' at someone's traditional home-cooked lunch causes deep cultural shame and alienation."
+      ],
+      "do": [
+        "Approach unfamiliar lunch dishes with curiosity rather than disgust: 'That smells aromatic, what dish is that?'",
+        "Respect diverse dietary boundaries (vegetarian, Jain, halal, egg-free, allergies) without mocking or tampering with food",
+        "Practice hygienic sharing: offer food politely without touching someone else's lunchbox with unwashed fingers"
+      ],
+      "dont": [
+        "Never say 'Eww gross!' to someone eating their family's traditional home-cooked meal",
+        "Never trick a vegetarian or religious peer into eating meat, eggs, or ingredients they abstain from"
+      ],
+      "myths": [
+        {
+          "statement": "Tricking a strict vegetarian friend into eating chicken nuggets by lying about the ingredients is a hilarious, harmless prank.",
+          "answer": "myth",
+          "truth": "Deceiving someone about what they eat violates their bodily autonomy, religious beliefs, and can trigger severe allergic reactions."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most respectful attitude toward a classmate's unfamiliar regional lunchbox dish?",
+          "options": [
+            "Screaming that it smells disgusting and running away",
+            "Asking with genuine polite curiosity about what ingredients and spices were used in the dish",
+            "Throwing it in the trash",
+            "Forcing them to eat your food instead"
+          ],
+          "correct": 1,
+          "explanation": "Culinary curiosity celebrates cultural diversity and turns meal breaks into opportunities for shared friendship."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the lunch table at {at}, a student opens a tiffin box with fermented regional bamboo shoots and fish, and classmates make gagging noises."
+        ],
+        "question": "How should {name} model inclusive lunchbox diplomacy?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Shut down the mockery and ask the classmate with curiosity: 'What is this regional specialty called?'",
+            "note": "Models cultural openness and halts humiliation.",
+            "weight": 50,
+            "critical": true,
+            "keys": "shut down mockery|ask with curiosity|cultural openness"
+          },
+          {
+            "point": "Explain to peers that every culture has unique fermented, pickled, or spiced foods that taste delicious",
+            "note": "Broadens cultural understanding through reason.",
+            "weight": 30,
+            "critical": true,
+            "keys": "explain diverse food traditions|educate peers"
+          },
+          {
+            "point": "Ensure the lunch table remains a warm, welcoming space where all food traditions are honored",
+            "note": "Preserves collective harmony and belonging.",
+            "weight": 20,
+            "critical": false,
+            "keys": "warm welcoming lunch table|honor all traditions"
+          }
+        ],
+        "dangerous": [
+          "yell that the food is stinky",
+          "demand they move to another table",
+          "spit on the tiffin box"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ek Bharat Shreshtha Bharat - Cultural Understanding Initiatives",
+          "url": "https://ekbharat.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-013",
+      "agentId": "saathi",
+      "subtopic": "Interfaith Harmony",
+      "title": "Celebrating India's mosaic: Embracing diverse festivals with joy",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "India's cultural genius lies in its pluralism: Diwali, Eid, Christmas, Gurpurab, Onam, Pongal, Bihu, and Chhath Puja reflect shared humanity.",
+        "Participating in or wishing peers joy during their festivals strengthens community fabric and builds broad-minded global citizens."
+      ],
+      "do": [
+        "Wish your classmates joy on their cultural and religious festivals (e.g., 'Eid Mubarak', 'Happy Gurpurab', 'Merry Christmas')",
+        "Learn the meaning and history behind regional festivals: harvest gratitude, victory of truth over darkness, or universal charity",
+        "Share festive sweets (mithai, sewaiyan, plum cake, payasam) with warmth and mutual affection"
+      ],
+      "dont": [
+        "Never insult or belittle another community's sacred rituals, prayer customs, or traditional attire",
+        "Never divide school friendship circles along religious, caste, or regional fault lines"
+      ],
+      "myths": [
+        {
+          "statement": "You are only allowed to learn about or celebrate the specific festivals practiced by your own immediate family.",
+          "answer": "myth",
+          "truth": "India's greatest strength is composite culture. Sharing the joy of our neighbors' festivals enriches our own understanding of humanity."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What shared universal theme unites diverse Indian harvest and light festivals across all regions?",
+          "options": [
+            "Competition over who buys the most plastic",
+            "Gratitude to nature, the triumph of light and justice, and sharing prosperity with community",
+            "Staying angry at neighbors",
+            "Refusing to share sweets"
+          ],
+          "correct": 1,
+          "explanation": "Across every state and faith, Indian festivals celebrate ecological gratitude, light over darkness, and shared community generosity."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school courtyard at {at}, students from diverse backgrounds are talking about upcoming festive holidays (Diwali, Eid, and Christmas)."
+        ],
+        "question": "How can {name} celebrate this cultural mosaic?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Ask friends about their favorite family customs, recipes, and childhood memories during their holidays",
+            "note": "Deepens mutual respect through genuine personal storytelling.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ask about family customs|recipes|shared storytelling"
+          },
+          {
+            "point": "Wish classmates warm greetings on their festive days and share traditional festive treats happily",
+            "note": "Fosters inclusive community celebration.",
+            "weight": 35,
+            "critical": true,
+            "keys": "warm greetings|share festive treats|celebrate together"
+          },
+          {
+            "point": "Appreciate how India's multi-faith heritage makes our classrooms vibrant, colorful, and resilient",
+            "note": "Values pluralism and national harmony.",
+            "weight": 20,
+            "critical": false,
+            "keys": "appreciate multi-faith heritage|national harmony"
+          }
+        ],
+        "dangerous": [
+          "mock religious traditions you dont practice",
+          "refuse to eat sweets from other communities",
+          "argue over which festival is superior"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Culture - Composite Culture of India",
+          "url": "https://indiaculture.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-014",
+      "agentId": "saathi",
+      "subtopic": "Active Listening",
+      "title": "The gift of presence: Listening with your whole heart",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Most people do not listen to understand; they listen only to reply, interrupt, or offer unsolicited advice.",
+        "Active empathetic listening means giving your complete attention, withholding judgment, and letting the other person feel truly heard."
+      ],
+      "do": [
+        "Put away your smartphone, lean slightly forward, and maintain warm eye contact when someone is confiding in you",
+        "Summarize what you hear: 'It sounds like you felt really betrayed when that happened, is that right?'",
+        "Avoid jumping in with immediate advice unless they explicitly ask: 'What do you think I should do?'"
+      ],
+      "dont": [
+        "Never interrupt someone in the middle of their sentence to talk about your own life experiences",
+        "Never dismiss someone's feelings with 'Oh that's nothing, listen to what happened to me!'"
+      ],
+      "myths": [
+        {
+          "statement": "Being a great listener means immediately interrupting with a 10-step plan to solve all their problems.",
+          "answer": "myth",
+          "truth": "People in emotional distress need connection and understanding first, not a lecture. Listening without fixing is the deepest gift."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which conversational response shows authentic empathetic listening?",
+          "options": [
+            "'That's completely your fault'",
+            "'That sounds really overwhelming; I'm so glad you shared that with me, I'm here for you'",
+            "'Whatever, can I tell you my story now?'",
+            "'You should just stop being sad'"
+          ],
+          "correct": 1,
+          "explanation": "Validating feelings and offering presence without judgment creates emotional safety and deep trust."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Sitting under a tree at {at}, a classmate starts opening up about feeling overwhelmed by family financial stress."
+        ],
+        "question": "How should {name} practice active listening?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Put away your phone completely, make gentle eye contact, and listen without interrupting",
+            "note": "Provides undivided, respectful attention.",
+            "weight": 45,
+            "critical": true,
+            "keys": "put phone away|gentle eye contact|do not interrupt"
+          },
+          {
+            "point": "Reflect back their feelings with empathy: 'That must feel really heavy to carry, I'm right here with you'",
+            "note": "Validates emotional experience without judgment.",
+            "weight": 35,
+            "critical": true,
+            "keys": "validate feelings|that sounds heavy|right here with you"
+          },
+          {
+            "point": "Resist the urge to turn the conversation back onto your own life or offer unasked-for financial advice",
+            "note": "Keeps the spotlight on the person in need.",
+            "weight": 20,
+            "critical": false,
+            "keys": "do not make it about yourself|hold space"
+          }
+        ],
+        "dangerous": [
+          "scroll Instagram while they talk",
+          "interrupt to talk about your pocket money",
+          "tell them to just be positive"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NCERT - Life Skills Education and Communication",
+          "url": "https://ncert.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-015",
+      "agentId": "saathi",
+      "subtopic": "Conflict Resolution",
+      "title": "Releasing grudges: The liberating strength of forgiveness",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Holding onto a bitter grudge is like drinking poison and expecting the other person to suffer.",
+        "Forgiveness does not mean accepting ongoing abuse or pretending bad behavior is okay; it means releasing toxic hatred so you can heal."
+      ],
+      "do": [
+        "Distinguish forgiveness from weakness: letting go of rage requires immense inner strength and emotional maturity",
+        "Focus on resolving conflicts using 'I-messages': 'I felt hurt when you broke your promise, can we talk about it?'",
+        "Set healthy boundaries: you can forgive someone while deciding not to be their close partner until trust is rebuilt"
+      ],
+      "dont": [
+        "Never nurse silent revenge fantasies that keep you locked in bitterness and stress",
+        "Never use social exile or group ostracization as a weapon against a classmate who made a mistake"
+      ],
+      "myths": [
+        {
+          "statement": "Forgiving a classmate who hurt you means you must let them treat you like a doormat forever.",
+          "answer": "myth",
+          "truth": "Forgiveness frees your heart from toxic bitterness; boundaries determine how close that person is allowed to get in the future."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the healthiest reason to forgive someone who apologized for hurting you?",
+          "options": [
+            "Because you want them to owe you money",
+            "To liberate your own mind from toxic bitterness, reduce stress, and restore personal peace",
+            "Because teachers forced you to shake hands",
+            "So you can plot revenge later"
+          ],
+          "correct": 1,
+          "explanation": "Forgiveness is an act of self-care that frees your emotional energy from the grip of past hurt."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Following a bitter disagreement over a science fair presentation at {at}, a teammate apologizes sincerely for snapping in anger."
+        ],
+        "question": "How should {name} navigate this conflict resolution?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Accept the apology gracefully, acknowledging that everyone makes mistakes under pressure",
+            "note": "Practices restorative forgiveness and empathy.",
+            "weight": 45,
+            "critical": true,
+            "keys": "accept apology gracefully|acknowledge stress|forgive mistake"
+          },
+          {
+            "point": "Share calmly how the outburst felt so mutual understanding is established before moving forward",
+            "note": "Communicates honest emotional impact constructively.",
+            "weight": 35,
+            "critical": true,
+            "keys": "communicate impact calmly|clear the air"
+          },
+          {
+            "point": "Rebuild the collaborative relationship with clear, fair ground rules for future team meetings",
+            "note": "Establishes healthy future working boundaries.",
+            "weight": 20,
+            "critical": false,
+            "keys": "clear ground rules|rebuild partnership"
+          }
+        ],
+        "dangerous": [
+          "hold a grudge for the rest of the year",
+          "tell everyone in school never to talk to that peer",
+          "demand revenge"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Gandhi Smriti and Darshan Samiti - Non-Violent Communication",
+          "url": "https://gandhismriti.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-016",
+      "agentId": "saathi",
+      "subtopic": "Collaboration",
+      "title": "Inclusive teamwork: Thriving together in mixed-ability groups",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Classrooms bring together diverse strengths: some peers excel in writing, others in visual sketching, math, or oral presentation.",
+        "Inclusive teams do not dump all the work on the highest-scoring student; they structure tasks so every member contributes with pride."
+      ],
+      "do": [
+        "Map team roles to individual talents: visual charts, speech delivery, factual research, and physical building",
+        "Support peers who struggle with specific academic tasks by breaking steps into manageable chunks",
+        "Celebrate the collective victory of the entire team rather than claiming individual dominance"
+      ],
+      "dont": [
+        "Never sideline or exclude a team member who has learning differences or lower exam marks",
+        "Never do all the project work in secret and hand in the project without involving your teammates"
+      ],
+      "myths": [
+        {
+          "statement": "The fastest and best way to complete a group project is for the top student to do 100% of the work while everyone else watches.",
+          "answer": "myth",
+          "truth": "Group projects teach real-world collaborative leadership, delegation, and mutual empowerment—not solo heroism."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the primary responsibility of a student team captain in a mixed-ability group project?",
+          "options": [
+            "To scream at everyone until they obey",
+            "To identify each teammate's unique strength and empower everyone to make a meaningful contribution",
+            "To do the entire project alone overnight",
+            "To take all the stage credit"
+          ],
+          "correct": 1,
+          "explanation": "True leadership unlocks the potential of every team member, ensuring everyone learns and contributes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "For an inter-house social studies exhibition at {at}, {name}'s team includes a peer with dyslexia and a peer who speaks limited English."
+        ],
+        "question": "How should {name} structure the project for inclusive success?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Structure roles around non-textual strengths: 3D model building, interview recordings, and visual map illustrations",
+            "note": "Leverages diverse strengths creatively.",
+            "weight": 50,
+            "critical": true,
+            "keys": "structure around non-textual strengths|3d model|visual illustrations"
+          },
+          {
+            "point": "Collaborate on speech practice patiently, creating supportive cue cards with bullet points",
+            "note": "Provides accessible communication scaffolding.",
+            "weight": 30,
+            "critical": true,
+            "keys": "speech practice|accessible cue cards|patient support"
+          },
+          {
+            "point": "Ensure every team member presents a meaningful section of the display during teacher evaluation",
+            "note": "Guarantees shared dignity and stage presence.",
+            "weight": 20,
+            "critical": false,
+            "keys": "shared presentation|meaningful section for all"
+          }
+        ],
+        "dangerous": [
+          "kick both teammates off the squad",
+          "hide their names from the report",
+          "complain to teacher that team is weak"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NCERT Guidelines on Inclusive Pedagogical Practices",
+          "url": "https://ncert.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-017",
+      "agentId": "saathi",
+      "subtopic": "Civic Service",
+      "title": "Seva and volunteering: Humility in community action",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Volunteering at animal shelters, elder care homes, or community soup kitchens connects us to the larger human family.",
+        "True service (Seva) is performed with humility and respect, never as a self-aggrandizing photo-op for social media likes."
+      ],
+      "do": [
+        "Approach community service with a posture of learning and listening rather than acting like a wealthy savior",
+        "Focus on the real needs of the community: cleaning, serving food, reading books to elders, or sorting relief materials",
+        "Keep mobile phones in your pocket; never take exploitative selfies with vulnerable children or elders"
+      ],
+      "dont": [
+        "Never treat volunteering purely as an empty resume-polishing exercise without genuine compassion",
+        "Never look down on the communities you are serving with pity or condescension"
+      ],
+      "myths": [
+        {
+          "statement": "Taking photos of yourself handing bananas to impoverished children and posting them on Instagram is the definition of true charity.",
+          "answer": "myth",
+          "truth": "Exploitative 'poverty tourism' robs vulnerable people of their human dignity. Authentic service is done with quiet humility and respect."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the traditional Indian concept of 'Seva' (selfless service)?",
+          "options": [
+            "Hiring people to clean your room",
+            "Serving the community selflessly with humility, without expecting personal fame, wealth, or social media applause",
+            "Running for political office",
+            "Giving away expired canned food"
+          ],
+          "correct": 1,
+          "explanation": "Authentic Seva dissolves human ego and builds deep solidarity with all living beings."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a weekend volunteer drive at {at}, {name}'s group helps serve meals at a community night shelter. A peer pulls out a phone to film shelter residents eating."
+        ],
+        "question": "How should {name} guide the ethical standard of the team?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely ask the teammate to put the phone away, explaining that people in shelters deserve dignity and privacy",
+            "note": "Protects human dignity and opposes exploitative media.",
+            "weight": 50,
+            "critical": true,
+            "keys": "put phone away|protect privacy|human dignity"
+          },
+          {
+            "point": "Remind the team that true community service focuses on compassionate action rather than social media clout",
+            "note": "Reframes volunteering around authentic values.",
+            "weight": 30,
+            "critical": true,
+            "keys": "focus on service not clout|humble service"
+          },
+          {
+            "point": "Serve food with warm smiles, eye contact, and genuine humility",
+            "note": "Embodies authentic Seva.",
+            "weight": 20,
+            "critical": false,
+            "keys": "serve with warmth and humility|respectful presence"
+          }
+        ],
+        "dangerous": [
+          "pose for selfies with residents while holding food",
+          "post photos online with pitying captions",
+          "refuse to serve food"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Service Scheme (NSS) - Ministry of Youth Affairs and Sports",
+          "url": "https://nss.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "INC-018",
+      "agentId": "saathi",
+      "subtopic": "Upstander",
+      "title": "The power of the upstander: Standing united against prejudice",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Prejudice and discrimination thrive when good people stand by silently and do nothing.",
+        "An 'Upstander' is someone who recognizes injustice, speaks up safely, supports the victim, and refuses to let hatred become normal."
+      ],
+      "do": [
+        "Use the 4 Ds of intervention: Direct (speak up), Distract (interrupt with a question), Delegate (get help), Delay (support victim after)",
+        "Stand physically beside the targeted peer so they know they are not alone against the crowd",
+        "Report hate speech, casteist slurs, and religious discrimination to school leaders and parents immediately"
+      ],
+      "dont": [
+        "Never be a silent bystander whose silence gives permission to bigots and bullies",
+        "Never put your own physical life in extreme danger; use distraction or get adult intervention when violence threatens"
+      ],
+      "myths": [
+        {
+          "statement": "If you see a classmate being targeted with hate slurs, staying silent is the best way to remain neutral and fair.",
+          "answer": "myth",
+          "truth": "Silence always helps the oppressor, never the victim. Staying neutral in situations of injustice means siding with the bully."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following describes an effective 'Distraction' tactic to interrupt bullying without physical confrontation?",
+          "options": [
+            "Joining in the insults",
+            "Walking up to the targeted peer and asking: 'Hey, our science teacher is looking for you in Lab 2, can you come now?'",
+            "Throwing rocks at the bullies",
+            "Laughing loudly"
+          ],
+          "correct": 1,
+          "explanation": "Distraction interrupts the harassment dynamic cleanly, giving the victim a safe exit without escalating violence."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school bus at {at}, older students corner a younger student from a minority community, hurling discriminatory slurs and threats."
+        ],
+        "question": "How should {name} act as an upstander?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Use the Delegate strategy: alert the bus conductor and driver immediately that bullying is happening",
+            "note": "Delegates intervention to authority figures for immediate safety.",
+            "weight": 45,
+            "critical": true,
+            "keys": "alert bus driver and conductor|delegate intervention|immediate safety"
+          },
+          {
+            "point": "Walk over, sit beside the younger student, and say: 'Hey, sit with me up front, you are safe here'",
+            "note": "Provides immediate physical solidarity and protective presence.",
+            "weight": 35,
+            "critical": true,
+            "keys": "sit beside student|you are safe here|protective solidarity"
+          },
+          {
+            "point": "Report the specific discriminatory incident to school administration the following morning",
+            "note": "Holds perpetrators accountable through official channels.",
+            "weight": 20,
+            "critical": false,
+            "keys": "report to school administration|hold accountable"
+          }
+        ],
+        "dangerous": [
+          "join in chanting hate slurs",
+          "look down at phone pretending not to notice",
+          "encourage the bullies"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NCPCR - Framework on Eliminating Discrimination in Educational Institutions",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

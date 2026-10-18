@@ -1,143 +1,1680 @@
 {
- "agentId": "compass",
- "cards": [
-  {
-   "id": "CAR-001",
-   "subtopic": "Streams after Class 10",
-   "title": "Choosing a stream after Class 10",
-   "bands": [
-    "senior"
-   ],
-   "facts": [
-    "The main streams are Science (PCM or PCB), Commerce and Humanities/Arts; vocational subjects are also available.",
-    "Many careers are open from more than one stream.",
-    "Interest and aptitude predict success better than what friends choose."
-   ],
-   "do": [
-    "List subjects you enjoy and do well in",
-    "Talk to a school counsellor and people working in fields you like",
-    "Take an aptitude or interest test"
-   ],
-   "dont": [
-    "Don't choose only because friends did",
-    "Don't assume one stream is 'better' than others"
-   ],
-   "myths": [
+  "agentId": "compass",
+  "cards": [
     {
-     "statement": "Only Science students can have successful careers.",
-     "answer": "myth",
-     "truth": "Commerce and Humanities lead to careers like CA, law, design, psychology, economics, journalism and more."
-    }
-   ],
-   "quiz": [
+      "id": "CAR-001",
+      "subtopic": "Streams after Class 10",
+      "title": "Choosing a stream after Class 10",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "The main streams are Science (PCM or PCB), Commerce and Humanities/Arts; vocational subjects are also available.",
+        "Many careers are open from more than one stream.",
+        "Interest and aptitude predict success better than what friends choose."
+      ],
+      "do": [
+        "List subjects you enjoy and do well in",
+        "Talk to a school counsellor and people working in fields you like",
+        "Take an aptitude or interest test"
+      ],
+      "dont": [
+        "Don't choose only because friends did",
+        "Don't assume one stream is 'better' than others"
+      ],
+      "myths": [
+        {
+          "statement": "Only Science students can have successful careers.",
+          "answer": "myth",
+          "truth": "Commerce and Humanities lead to careers like CA, law, design, psychology, economics, journalism and more."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What's the best basis for choosing a stream?",
+          "options": [
+            "What friends choose",
+            "Your interests and strengths",
+            "What's most popular",
+            "Random choice"
+          ],
+          "correct": 1,
+          "explanation": "Interests and aptitude, plus good advice, lead to better choices."
+        }
+      ],
+      "scenario": null,
+      "agentId": "compass",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "What's the best basis for choosing a stream?",
-     "options": [
-      "What friends choose",
-      "Your interests and strengths",
-      "What's most popular",
-      "Random choice"
-     ],
-     "correct": 1,
-     "explanation": "Interests and aptitude, plus good advice, lead to better choices."
-    }
-   ],
-   "scenario": null,
-   "agentId": "compass",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "CAR-005",
-   "subtopic": "Diplomas and ITI",
-   "title": "Diplomas and ITI courses",
-   "bands": [
-    "senior"
-   ],
-   "facts": [
-    "Polytechnic diplomas can be started after Class 10 and usually take 3 years.",
-    "Diploma holders can often join an engineering degree directly in the second year (lateral entry).",
-    "ITIs offer skill-based trade courses such as electrician, fitter and mechanic."
-   ],
-   "do": [
-    "Explore polytechnic and ITI options in your state",
-    "Check lateral-entry rules for degree courses"
-   ],
-   "dont": [
-    "Don't see diplomas as a 'lesser' option"
-   ],
-   "myths": [
+      "id": "CAR-005",
+      "subtopic": "Diplomas and ITI",
+      "title": "Diplomas and ITI courses",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Polytechnic diplomas can be started after Class 10 and usually take 3 years.",
+        "Diploma holders can often join an engineering degree directly in the second year (lateral entry).",
+        "ITIs offer skill-based trade courses such as electrician, fitter and mechanic."
+      ],
+      "do": [
+        "Explore polytechnic and ITI options in your state",
+        "Check lateral-entry rules for degree courses"
+      ],
+      "dont": [
+        "Don't see diplomas as a 'lesser' option"
+      ],
+      "myths": [
+        {
+          "statement": "After a diploma, you can never do an engineering degree.",
+          "answer": "myth",
+          "truth": "Many states allow lateral entry into the second year of a B.Tech/B.E. after a diploma."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "After a 3-year engineering diploma, many students can join a B.Tech in…",
+          "options": [
+            "1st year only",
+            "2nd year (lateral entry)",
+            "Final year",
+            "Never"
+          ],
+          "correct": 1,
+          "explanation": "Lateral entry lets diploma holders join the second year in many states."
+        }
+      ],
+      "scenario": null,
+      "agentId": "compass",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "statement": "After a diploma, you can never do an engineering degree.",
-     "answer": "myth",
-     "truth": "Many states allow lateral entry into the second year of a B.Tech/B.E. after a diploma."
-    }
-   ],
-   "quiz": [
+      "id": "CAR-010",
+      "subtopic": "Entrance exams",
+      "title": "Key entrance exams",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "JEE Main is for engineering admissions; NEET-UG is for medical (MBBS/BDS) admissions.",
+        "CUET-UG is used for admission to many central and other universities.",
+        "CLAT is for national law universities; NID and NIFT have their own design entrance tests.",
+        "Official information is published on the exam websites, e.g. nta.ac.in."
+      ],
+      "do": [
+        "Check official exam websites for dates and eligibility",
+        "Plan preparation early in Class 11"
+      ],
+      "dont": [
+        "Don't rely only on social media rumours about exams"
+      ],
+      "myths": [
+        {
+          "statement": "CUET is only for engineering colleges.",
+          "answer": "myth",
+          "truth": "CUET-UG is used for admission to many universities across arts, science and commerce programmes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which exam is used for medical (MBBS) admissions in India?",
+          "options": [
+            "JEE Main",
+            "NEET-UG",
+            "CLAT",
+            "CUET-UG"
+          ],
+          "correct": 1,
+          "explanation": "NEET-UG is the national entrance test for MBBS/BDS admissions."
+        }
+      ],
+      "scenario": null,
+      "agentId": "compass",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "After a 3-year engineering diploma, many students can join a B.Tech in…",
-     "options": [
-      "1st year only",
-      "2nd year (lateral entry)",
-      "Final year",
-      "Never"
-     ],
-     "correct": 1,
-     "explanation": "Lateral entry lets diploma holders join the second year in many states."
-    }
-   ],
-   "scenario": null,
-   "agentId": "compass",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "CAR-010",
-   "subtopic": "Entrance exams",
-   "title": "Key entrance exams",
-   "bands": [
-    "senior"
-   ],
-   "facts": [
-    "JEE Main is for engineering admissions; NEET-UG is for medical (MBBS/BDS) admissions.",
-    "CUET-UG is used for admission to many central and other universities.",
-    "CLAT is for national law universities; NID and NIFT have their own design entrance tests.",
-    "Official information is published on the exam websites, e.g. nta.ac.in."
-   ],
-   "do": [
-    "Check official exam websites for dates and eligibility",
-    "Plan preparation early in Class 11"
-   ],
-   "dont": [
-    "Don't rely only on social media rumours about exams"
-   ],
-   "myths": [
+      "id": "CAR-021",
+      "agentId": "compass",
+      "subtopic": "Engineering",
+      "title": "Day in the life: Software Engineer and technologist",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Software engineering is about creative problem-solving and logic, not just writing syntax.",
+        "Engineers spend significant time collaborating in team standups, reading architecture docs, and reviewing code."
+      ],
+      "do": [
+        "Focus on building strong fundamentals in mathematics, logic, and computational thinking",
+        "Work on personal mini-projects (building a website, automating a study task, creating a game)",
+        "Explore free platforms like Python tutorials, CS50, and open-source GitHub repositories"
+      ],
+      "dont": [
+        "Never believe that you must be a mathematical genius to learn coding",
+        "Never copy-paste code without understanding the underlying logic"
+      ],
+      "myths": [
+        {
+          "statement": "Software engineers work alone in dark rooms staring at green matrix code without speaking to anyone.",
+          "answer": "myth",
+          "truth": "Modern software engineering is highly collaborative, requiring teamwork, user empathy, and clear communication."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What foundational skill is most important for a career in software technology?",
+          "options": [
+            "Typing 100 words per minute",
+            "Logical problem solving, curiosity, and structured thinking",
+            "Memorizing whole textbooks",
+            "Buying expensive monitors"
+          ],
+          "correct": 1,
+          "explanation": "Problem decomposition and algorithmic logic form the core of computer science."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A Class 10 student at {at} wants to explore whether software engineering is the right fit."
+        ],
+        "question": "How can {name} evaluate and explore this career pathway?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Start building small hands-on projects with Python, HTML, or Scratch",
+            "note": "Validates practical interest through active building.",
+            "weight": 45,
+            "critical": true,
+            "keys": "build projects|learn python|scratch|hands-on"
+          },
+          {
+            "point": "Recognize that collaboration, communication, and debugging resilience matter as much as coding",
+            "note": "Provides realistic daily work picture.",
+            "weight": 35,
+            "critical": true,
+            "keys": "problem solving|teamwork|logic|communication"
+          },
+          {
+            "point": "Explore streams with Mathematics after Class 10 (Science or Commerce with Math)",
+            "note": "Ensures academic eligibility for tech degrees.",
+            "weight": 20,
+            "critical": false,
+            "keys": "mathematics stream|pcm|eligibility"
+          }
+        ],
+        "dangerous": [
+          "memorize coding books without touching a computer",
+          "assume coding is impossible",
+          "pay lakhs for fake courses"
+        ]
+      },
+      "sources": [
+        {
+          "name": "All India Council for Technical Education (AICTE)",
+          "url": "https://aicte-india.org"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "CUET is only for engineering colleges.",
-     "answer": "myth",
-     "truth": "CUET-UG is used for admission to many universities across arts, science and commerce programmes."
-    }
-   ],
-   "quiz": [
+      "id": "CAR-022",
+      "agentId": "compass",
+      "subtopic": "Healthcare",
+      "title": "Day in the life: Doctor, nurse and healthcare professionals",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Healthcare careers require deep biological science knowledge paired with profound human empathy.",
+        "Pathways extend beyond MBBS to Nursing, Physiotherapy, Pharmacy, Radiology, and Medical Research."
+      ],
+      "do": [
+        "Study Physics, Chemistry, and Biology (PCB) in Classes 11 and 12",
+        "Develop emotional resilience, patient active listening, and calmness under pressure",
+        "Explore allied healthcare fields: clinical psychology, biomechanics, biomedical tech, and public health"
+      ],
+      "dont": [
+        "Never choose medicine solely because of parental or social prestige pressure",
+        "Never underestimate the dedication, long hours, and rigorous years of residency required"
+      ],
+      "myths": [
+        {
+          "statement": "The only respectable and successful career in healthcare is becoming an MBBS surgeon.",
+          "answer": "myth",
+          "truth": "Modern healthcare relies equally on nurse specialists, biomedical engineers, radiographers, and pharmacologists."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What academic stream subject combination is required in Class 11-12 for medical entrance exams like NEET?",
+          "options": [
+            "Arts with History",
+            "Physics, Chemistry, and Biology (PCB)",
+            "Commerce with Accounts",
+            "Vocational Carpentry"
+          ],
+          "correct": 1,
+          "explanation": "NEET eligibility mandates studying Physics, Chemistry, and Biology/Biotechnology in senior secondary."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} is passionate about helping sick people but is unsure about the MBBS journey."
+        ],
+        "question": "How should {name} help them explore healthcare broadly?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that healthcare includes vital fields like Nursing, Physiotherapy, Pharmacy, and Biotechnology",
+            "note": "Broadens perspective beyond single entrance exams.",
+            "weight": 45,
+            "critical": true,
+            "keys": "nursing|physiotherapy|pharmacy|biotech|allied health"
+          },
+          {
+            "point": "Discuss the daily reality: empathy, shift work, continuous learning, and patient care",
+            "note": "Gives balanced, realistic picture of medical life.",
+            "weight": 35,
+            "critical": true,
+            "keys": "empathy|patient care|long hours|dedication"
+          },
+          {
+            "point": "Prepare strong fundamentals in PCB while exploring volunteer hospital internships",
+            "note": "Combines study with experiential exposure.",
+            "weight": 20,
+            "critical": false,
+            "keys": "pcb stream|hospital exposure"
+          }
+        ],
+        "dangerous": [
+          "force into MBBS blindly",
+          "rank careers by social status",
+          "claim non-doctors are useless"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Medical Commission (NMC)",
+          "url": "https://nmc.org.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "Which exam is used for medical (MBBS) admissions in India?",
-     "options": [
-      "JEE Main",
-      "NEET-UG",
-      "CLAT",
-      "CUET-UG"
-     ],
-     "correct": 1,
-     "explanation": "NEET-UG is the national entrance test for MBBS/BDS admissions."
+      "id": "CAR-023",
+      "agentId": "compass",
+      "subtopic": "Design",
+      "title": "Day in the life: Product and UI/UX Designer",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Design is how something works and solves human problems, not just pretty decoration.",
+        "UI/UX designers conduct user interviews, sketch wireframes, and design intuitive digital experiences."
+      ],
+      "do": [
+        "Cultivate visual curiosity, user empathy, and problem observation in everyday life",
+        "Build a diverse design portfolio showcasing how you solved a real problem (sketches, prototypes)",
+        "Prepare for design entrance exams: UCEED (IITs), NID DAT, and NIFT"
+      ],
+      "dont": [
+        "Never think you cannot be a designer because you can't paint realistic oil portraits",
+        "Never design interfaces without interviewing real users about their difficulties"
+      ],
+      "myths": [
+        {
+          "statement": "Design is purely an art career for people who failed at science and commerce.",
+          "answer": "myth",
+          "truth": "Product and UX design combine cognitive psychology, technology, data analytics, and ergonomics."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which premier Indian institutions offer Bachelor of Design (B.Des) programs via UCEED?",
+          "options": [
+            "Medical colleges",
+            "Indian Institutes of Technology (IIT Bombay, IIT Delhi, IIT Guwahati)",
+            "Police academies",
+            "Law schools"
+          ],
+          "correct": 1,
+          "explanation": "UCEED is the national entrance examination for B.Des programs across leading IITs and design institutes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A Class 11 student at {at} loves both technology and drawing and wonders about career paths."
+        ],
+        "question": "How can {name} introduce them to User Experience (UX) design?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that UX designers build intuitive interfaces that make apps easy for everyone to use",
+            "note": "Connects technology with visual empathy.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ux design|user experience|interfaces|apps"
+          },
+          {
+            "point": "Encourage them to build a portfolio of wireframes, problem solutions, and sketches",
+            "note": "Portfolio-based evaluation is key to design admissions.",
+            "weight": 35,
+            "critical": true,
+            "keys": "portfolio|sketches|prototypes|problem solving"
+          },
+          {
+            "point": "Explore entrance exams like UCEED and NID DAT open to students from any stream",
+            "note": "Stream flexibility in design careers.",
+            "weight": 20,
+            "critical": false,
+            "keys": "uceed|nid|open to any stream"
+          }
+        ],
+        "dangerous": [
+          "say drawing has no jobs",
+          "force them to abandon creative interests",
+          "claim only artists design"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Institute of Design (NID)",
+          "url": "https://nid.edu"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-024",
+      "agentId": "compass",
+      "subtopic": "Finance",
+      "title": "Day in the life: Chartered Accountant and Financial Analyst",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Chartered Accountants (CAs) manage taxation, financial audits, corporate strategy, and forensic accounting.",
+        "The Institute of Chartered Accountants of India (ICAI) oversees the rigorous three-stage CA qualification."
+      ],
+      "do": [
+        "Build rock-solid foundations in accountancy, business economics, and commercial law",
+        "Develop sharp analytical attention to detail, numerical integrity, and ethical responsibility",
+        "Register for the ICAI CA Foundation examination after appearing for Class 12 board exams"
+      ],
+      "dont": [
+        "Never assume CA is only about calculating routine math sums on a calculator",
+        "Never compromise on financial ethics and corporate audit transparency"
+      ],
+      "myths": [
+        {
+          "statement": "You must have studied Commerce in Class 11-12 to register for the CA Foundation exam.",
+          "answer": "myth",
+          "truth": "Students from ANY stream (Science, Commerce, or Arts) can appear for the ICAI CA Foundation exam."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which statutory professional body regulates the Chartered Accountancy profession in India?",
+          "options": [
+            "UGC",
+            "The Institute of Chartered Accountants of India (ICAI)",
+            "SEBI only",
+            "NITI Aayog"
+          ],
+          "correct": 1,
+          "explanation": "ICAI is established under an Act of Parliament to regulate the CA profession."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} enjoys numbers, business case studies, and corporate analysis."
+        ],
+        "question": "How should {name} structure their career exploration for Chartered Accountancy?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain the three-stage pathway: CA Foundation, CA Intermediate, and Articleship/Final",
+            "note": "Maps clear professional milestone roadmap.",
+            "weight": 45,
+            "critical": true,
+            "keys": "ca foundation|intermediate|articleship|final|icai"
+          },
+          {
+            "point": "Highlight the diverse career roles: forensic auditor, tax advisor, CFO, or financial analyst",
+            "note": "Reveals versatile corporate pathways.",
+            "weight": 35,
+            "critical": true,
+            "keys": "financial analyst|auditor|cfo|advisory"
+          },
+          {
+            "point": "Emphasize that discipline, analytical rigor, and ethics are paramount",
+            "note": "Sets realistic expectations for dedication.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ethics|discipline|hard work"
+          }
+        ],
+        "dangerous": [
+          "claim CA is impossible",
+          "discourage commerce students",
+          "say accounting is obsolete"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Institute of Chartered Accountants of India (ICAI)",
+          "url": "https://icai.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-025",
+      "agentId": "compass",
+      "subtopic": "Law",
+      "title": "Day in the life: Lawyer, legal advocate and corporate counsel",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Law is the framework that safeguards fundamental rights, contracts, justice, and social democracy.",
+        "Modern legal practice spans litigation, corporate mergers, intellectual property, and environmental law."
+      ],
+      "do": [
+        "Cultivate extensive reading habits, critical reasoning, and objective argument construction",
+        "Prepare for national law entrance exams like the Common Law Admission Test (CLAT) for National Law Universities (NLUs)",
+        "Participate in school debating, Model United Nations (MUN), and moot court simulations"
+      ],
+      "dont": [
+        "Never assume courtroom litigation is identical to dramatic Bollywood movie scenes",
+        "Never rely on emotion over documented constitutional case law and evidence"
+      ],
+      "myths": [
+        {
+          "statement": "To become a corporate lawyer, you must study science in school.",
+          "answer": "myth",
+          "truth": "Law entrance exams (CLAT) test English, Current Affairs, Legal Reasoning, and Logical Reasoning, open to all streams."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What entrance exam provides admission to the premier National Law Universities (NLUs) in India?",
+          "options": [
+            "JEE Main",
+            "Common Law Admission Test (CLAT)",
+            "NEET",
+            "CAT"
+          ],
+          "correct": 1,
+          "explanation": "CLAT is the centralized entrance examination for 5-year integrated BA LLB / BBA LLB programs at 24 NLUs."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student passionate about justice, constitutional rights, and public speaking at {at} asks about law."
+        ],
+        "question": "How can {name} guide their legal career roadmap?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Introduce the 5-year integrated law degree (BA LLB/BBA LLB) via entrance exams like CLAT",
+            "note": "Clear academic entry point after Class 12.",
+            "weight": 45,
+            "critical": true,
+            "keys": "clat|nlu|ba llb|integrated law|5 year degree"
+          },
+          {
+            "point": "Discuss varied career paths: court litigation, corporate law, public policy, and judicial services",
+            "note": "Broadens perspective across diverse legal sectors.",
+            "weight": 35,
+            "critical": true,
+            "keys": "corporate law|litigation|judiciary|policy"
+          },
+          {
+            "point": "Encourage deep reading of newspapers, editorial analysis, and critical logical argumentation",
+            "note": "Builds foundational skills early.",
+            "weight": 20,
+            "critical": false,
+            "keys": "critical reading|arguments|logic|current affairs"
+          }
+        ],
+        "dangerous": [
+          "say lawyers only argue in court",
+          "discourage girls from law",
+          "claim law needs no reading"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Bar Council of India (BCI)",
+          "url": "https://barcouncilofindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-026",
+      "agentId": "compass",
+      "subtopic": "Data & AI",
+      "title": "Day in the life: Data Analyst and Artificial Intelligence practitioner",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Data analysts find actionable trends in massive datasets; AI engineers build predictive machine learning models.",
+        "Core disciplines combine statistics, linear algebra, Python programming, and domain business knowledge."
+      ],
+      "do": [
+        "Build a strong foundation in high school statistics, probability, and linear algebra",
+        "Learn Python libraries: Pandas for data manipulation, Matplotlib for charts, and Scikit-learn for models",
+        "Explore public open data repositories (like Kaggle or Government Data Portal data.gov.in)"
+      ],
+      "dont": [
+        "Never treat AI as a magic black box without understanding the underlying math and data bias",
+        "Never use uncleaned, unverified data to draw definitive statistical conclusions"
+      ],
+      "myths": [
+        {
+          "statement": "You need a supercomputer to start learning data analytics and artificial intelligence.",
+          "answer": "myth",
+          "truth": "Free cloud platforms like Google Colab let students train machine learning models on basic laptops."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What branch of mathematics forms the absolute core foundation of data science and machine learning?",
+          "options": [
+            "Ancient geometry",
+            "Statistics, probability, and linear algebra",
+            "Trigonometry only",
+            "Calculus only"
+          ],
+          "correct": 1,
+          "explanation": "Machine learning models are fundamentally statistical optimization algorithms."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A Class 11 student at {at} wants to pursue Artificial Intelligence and Data Science."
+        ],
+        "question": "What practical, grounded advice should {name} share?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Strengthen school mathematics, especially statistics, probability, and functions",
+            "note": "Mathematical foundations enable deep AI comprehension.",
+            "weight": 45,
+            "critical": true,
+            "keys": "statistics|probability|maths foundation|linear algebra"
+          },
+          {
+            "point": "Start learning Python programming and explore datasets on Google Colab or Kaggle",
+            "note": "Hands-on data exploration experience.",
+            "weight": 35,
+            "critical": true,
+            "keys": "python|kaggle|google colab|machine learning"
+          },
+          {
+            "point": "Understand that ethical AI requires eliminating data bias and respecting user privacy",
+            "note": "Instills responsible technology principles.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ai ethics|privacy|bias"
+          }
+        ],
+        "dangerous": [
+          "believe AI needs no math",
+          "buy expensive crypto courses",
+          "assume AI replaces thinking"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Association of Software and Service Companies (NASSCOM FutureSkills)",
+          "url": "https://futureskillsprime.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-027",
+      "agentId": "compass",
+      "subtopic": "Education",
+      "title": "Day in the life: Teacher, professor and education mentor",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Educators shape the intellectual foundations of the next generation of scientists, leaders, and artists.",
+        "Modern teaching combines subject expertise, learning psychology, curriculum design, and ed-tech tools."
+      ],
+      "do": [
+        "Pursue bachelor's degrees in your passion subject, followed by B.Ed (for schools) or Master's/PhD (for universities)",
+        "Qualify eligibility exams: CTET/STET (for school teachers) or UGC NET (for college professorships)",
+        "Develop patience, inspiring public communication, and student-centered mentoring empathy"
+      ],
+      "dont": [
+        "Never view teaching as a fallback option when other jobs fail; it is a foundational calling",
+        "Never stop learning new pedagogy methods and modern digital classroom tools"
+      ],
+      "myths": [
+        {
+          "statement": "School teachers only work 4 hours a day and have zero work outside the classroom.",
+          "answer": "myth",
+          "truth": "Dedicated teachers spend countless hours preparing lessons, evaluating feedback, and mentoring students."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What national eligibility test is required to teach in central government schools (like Kendriya Vidyalayas)?",
+          "options": [
+            "CAT",
+            "Central Teacher Eligibility Test (CTET)",
+            "GATE",
+            "NEET"
+          ],
+          "correct": 1,
+          "explanation": "CTET conducted by CBSE certifies teachers for Classes 1 to 8 across central schools."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} loves explaining difficult science concepts to peers and wants to become a teacher."
+        ],
+        "question": "How can {name} validate and plan this rewarding career path?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Guide them through the pathway: Bachelor's degree in science, followed by B.Ed and CTET",
+            "note": "Clear educational certification steps.",
+            "weight": 45,
+            "critical": true,
+            "keys": "b.ed|ctet|ugc net|teaching pathway"
+          },
+          {
+            "point": "Encourage them to practice mentoring younger students and designing simple study notes",
+            "note": "Builds pedagogical craft early.",
+            "weight": 35,
+            "critical": true,
+            "keys": "practice teaching|mentoring|lesson design"
+          },
+          {
+            "point": "Highlight diverse modern roles: school educator, university professor, curriculum writer, ed-tech designer",
+            "note": "Shows broad educational landscape.",
+            "weight": 20,
+            "critical": false,
+            "keys": "curriculum design|professorship|edtech"
+          }
+        ],
+        "dangerous": [
+          "mock teaching as a career",
+          "claim teaching needs no skills",
+          "discourage passion for education"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Council for Teacher Education (NCTE)",
+          "url": "https://ncte.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-028",
+      "agentId": "compass",
+      "subtopic": "Public service",
+      "title": "Serving the nation: Armed Forces (NDA/CDS) and Civil Services (UPSC)",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "The Armed Forces (Army, Navy, Air Force) offer leadership, discipline, adventure, and patriotic duty.",
+        "The Union Public Service Commission (UPSC) selects civil servants (IAS, IPS, IFS) for national governance."
+      ],
+      "do": [
+        "Apply for the National Defence Academy (NDA) entrance exam conducted by UPSC after Class 12 (now open to women)",
+        "Maintain high physical fitness (running, pull-ups, stamina) alongside mental general awareness for the SSB interview",
+        "For Civil Services (IAS/IPS), complete any graduation degree and build vast general studies knowledge"
+      ],
+      "dont": [
+        "Never believe that civil services or defence exams require joining expensive coaching mafias",
+        "Never neglect physical fitness and sports if aiming for the armed forces"
+      ],
+      "myths": [
+        {
+          "statement": "Women cannot join the combat wings of the Indian Armed Forces or appear for the NDA exam.",
+          "answer": "myth",
+          "truth": "Following landmark Supreme Court rulings, women cadets now train at NDA and serve as combat officers across Army, Navy, and Air Force."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "When can students appear for the National Defence Academy (NDA) entrance examination?",
+          "options": [
+            "Only after Master's degree",
+            "While appearing in Class 12 or immediately after passing Class 12",
+            "At age 30",
+            "In Class 8"
+          ],
+          "correct": 1,
+          "explanation": "The NDA exam is conducted twice yearly by UPSC for 16.5 to 19.5 year old Class 12 students."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} dreams of wearing the uniform and serving the nation in the Armed Forces."
+        ],
+        "question": "What roadmap should {name} outline?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Prepare for the NDA entrance examination (Mathematics and General Ability) during Class 12",
+            "note": "Timely entrance exam milestone.",
+            "weight": 45,
+            "critical": true,
+            "keys": "nda entrance exam|upsc nda|class 12|maths and gat"
+          },
+          {
+            "point": "Maintain rigorous physical conditioning and prepare for the 5-day SSB interview process",
+            "note": "Crucial holistic selection matrix.",
+            "weight": 35,
+            "critical": true,
+            "keys": "physical fitness|ssb interview|officer qualities"
+          },
+          {
+            "point": "Note that both young women and men are eligible for officer commissions via NDA",
+            "note": "Highlights gender-inclusive defence pathways.",
+            "weight": 20,
+            "critical": false,
+            "keys": "open to women and men|equal opportunity"
+          }
+        ],
+        "dangerous": [
+          "ignore physical fitness completely",
+          "pay bribes to fake recruiting agents",
+          "assume defence is only for boys"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Union Public Service Commission (UPSC NDA Portal)",
+          "url": "https://upsc.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-029",
+      "agentId": "compass",
+      "subtopic": "Agritech",
+      "title": "Modern Agriculture: Agritech, soil science and smart farming",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Modern agriculture merges satellite data, drone spraying, genetic crop breeding, and supply-chain logistics.",
+        "ICAR oversees agricultural universities offering B.Sc. (Hons) Agriculture and Food Technology."
+      ],
+      "do": [
+        "Explore agricultural entrance exams: ICAR AIEEA for national agricultural university admissions",
+        "Study subjects like plant genetics, hydroponics, precision drip irrigation, and post-harvest preservation",
+        "Look into entrepreneurship opportunities: organic export, agritech startups, and cold-storage supply chains"
+      ],
+      "dont": [
+        "Never view farming through outdated lenses; modern agriculture is a high-tech multibillion-dollar industry",
+        "Never assume agricultural science has no global corporate career avenues"
+      ],
+      "myths": [
+        {
+          "statement": "A degree in Agriculture only prepares students to do manual ploughing in fields.",
+          "answer": "myth",
+          "truth": "Agricultural graduates work as agronomists, drone specialists, commodity analysts, and food processing scientists."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which premier national body coordinates agricultural education and research across Indian universities?",
+          "options": [
+            "Medical Council",
+            "Indian Council of Agricultural Research (ICAR)",
+            "CBSE",
+            "SEBI"
+          ],
+          "correct": 1,
+          "explanation": "ICAR is the apex national body coordinating agricultural research and higher education."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student from a farming family at {at} wants to modernize their family's agriculture."
+        ],
+        "question": "How can {name} guide their higher education pathway?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explore B.Sc. (Hons) Agriculture or Agricultural Engineering through ICAR AIEEA entrance exams",
+            "note": "Formal professional agriscience degree.",
+            "weight": 45,
+            "critical": true,
+            "keys": "b.sc agriculture|icar|agritech|agricultural engineering"
+          },
+          {
+            "point": "Highlight exciting modern domains: precision drone farming, soil chemistry, hydroponics, and seed biotech",
+            "note": "Opens tech-driven agriculture horizon.",
+            "weight": 35,
+            "critical": true,
+            "keys": "drone farming|hydroponics|soil science|biotech"
+          },
+          {
+            "point": "Discuss agritech entrepreneurship: direct farm-to-consumer supply chains and export markets",
+            "note": "Fosters rural wealth creation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "agritech startups|supply chain|entrepreneurship"
+          }
+        ],
+        "dangerous": [
+          "mock farming backgrounds",
+          "tell them to abandon agriculture entirely",
+          "claim agriculture has no future"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Council of Agricultural Research (ICAR)",
+          "url": "https://icar.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-030",
+      "agentId": "compass",
+      "subtopic": "Sports",
+      "title": "Careers in Sports: Athletes, coaching, physiotherapy and sports management",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The sports industry has exploded beyond professional athletes to sports science, analytics, and leagues.",
+        "Sports science professionals support athletes with biomechanics, nutrition, and injury rehabilitation."
+      ],
+      "do": [
+        "Pursue specialized degrees: B.Sc. Sports Science, Sports Physiotherapy, or Sports Management",
+        "Look into coaching diplomas from the National Institute of Sports (NIS Patiala / SAI)",
+        "Gain experience with sports journalism, event management, and sports video analytics"
+      ],
+      "dont": [
+        "Never assume that if you don't become a national cricket player, you cannot work in sports",
+        "Never neglect academic qualifications while training in competitive athletics"
+      ],
+      "myths": [
+        {
+          "statement": "If you don't play for Team India, there are zero jobs available in the sports sector.",
+          "answer": "myth",
+          "truth": "IPL teams, academies, and brands employ thousands of sports physios, performance analysts, and league managers."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which premier institute under the Sports Authority of India (SAI) trains certified sports coaches?",
+          "options": [
+            "IIT Delhi",
+            "Netaji Subhas National Institute of Sports (NIS Patiala)",
+            "AIIMS",
+            "IIM Ahmedabad"
+          ],
+          "correct": 1,
+          "explanation": "NIS Patiala is Asia's largest sports institute, producing India's top certified Olympic and national coaches."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} loves sports deeply but knows making the national team is statistically challenging."
+        ],
+        "question": "What diverse sports industry careers can {name} introduce?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explore high-demand allied fields: Sports Physiotherapy, Sports Nutrition, and Strength & Conditioning",
+            "note": "Leverages athletic passion with medical science.",
+            "weight": 45,
+            "critical": true,
+            "keys": "sports physiotherapy|sports science|nutrition|coaching"
+          },
+          {
+            "point": "Look into modern business avenues: Sports Management, Tournament Operations, and Sports Analytics",
+            "note": "Massive growth in league operations.",
+            "weight": 35,
+            "critical": true,
+            "keys": "sports management|analytics|league operations"
+          },
+          {
+            "point": "Check degree programs under the Sports Authority of India and sports universities",
+            "note": "Legitimate academic degrees.",
+            "weight": 20,
+            "critical": false,
+            "keys": "sports authority of india|sai|nis patiala"
+          }
+        ],
+        "dangerous": [
+          "say sports is a waste of life",
+          "claim only cricket exists",
+          "tell them to give up sports"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Sports Authority of India (SAI)",
+          "url": "https://sportsauthorityofindia.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-031",
+      "agentId": "compass",
+      "subtopic": "Media",
+      "title": "Day in the life: Journalist, content creator and documentary filmmaker",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Journalism is the 'Fourth Pillar' of democracy, holding power accountable and informing citizens.",
+        "Modern media blends investigative writing, podcasting, data journalism, and video editing."
+      ],
+      "do": [
+        "Cultivate voracious reading habits, ethical fact-checking, and strong written storytelling",
+        "Pursue degrees in Journalism, Mass Communication, or Film Studies (IIMC, Jamia, FTII)",
+        "Start writing articles for school magazines, local newsletters, or producing audio-video mini-documentaries"
+      ],
+      "dont": [
+        "Never report unverified WhatsApp forwards or sensational rumors as news",
+        "Never compromise on journalistic truth and neutral verification for cheap viral clicks"
+      ],
+      "myths": [
+        {
+          "statement": "Journalism is just screaming loudly on sensational television debate panels.",
+          "answer": "myth",
+          "truth": "True journalism is deep investigative research, ground reporting, and presenting verified facts calmly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What premier national institute under the Ministry of I&B trains elite journalists in India?",
+          "options": [
+            "NIFT",
+            "Indian Institute of Mass Communication (IIMC)",
+            "National Law School",
+            "IIT Bombay"
+          ],
+          "correct": 1,
+          "explanation": "IIMC is India's premier government institution for post-graduate mass communication and journalism."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} loves writing, questioning community issues, and making documentary videos."
+        ],
+        "question": "How should {name} structure their media and journalism exploration?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Build strong writing and critical fact-checking habits across school publications and blogs",
+            "note": "Creates demonstrable writing portfolio.",
+            "weight": 45,
+            "critical": true,
+            "keys": "fact checking|writing portfolio|school magazine|blog"
+          },
+          {
+            "point": "Explore degree programs in Mass Communication, Media Studies, and Film Making (e.g. IIMC)",
+            "note": "Formal journalistic education credentials.",
+            "weight": 35,
+            "critical": true,
+            "keys": "mass communication|iimc|journalism degree"
+          },
+          {
+            "point": "Emphasize ethical responsibility: fighting fake news, verifying sources, and speaking truth",
+            "note": "Instills core Fourth Estate ethics.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ethics|fight fake news|verify sources"
+          }
+        ],
+        "dangerous": [
+          "teach them to make fake news",
+          "say journalism is dead",
+          "encourage clickbait gossip"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Institute of Mass Communication (IIMC)",
+          "url": "https://iimc.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-032",
+      "agentId": "compass",
+      "subtopic": "Scholarships",
+      "title": "National scholarship portals: Legitimate schemes vs fake fee scams",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Government and institutional scholarships fund school and university fees for deserving students.",
+        "Legitimate scholarship schemes NEVER charge application fees or ask for processing deposits."
+      ],
+      "do": [
+        "Apply for government scholarships exclusively through the official National Scholarship Portal (scholarships.gov.in)",
+        "Explore central and state merit-cum-means schemes, PM-YASASVI, and NMMS for school students",
+        "Keep verified documents ready: Aadhaar, income certificate, school bonafide, and student bank passbook"
+      ],
+      "dont": [
+        "Never pay money to private agents claiming to 'guarantee' a scholarship approval",
+        "Never share OTPs or banking PINs with unverified scholarship websites"
+      ],
+      "myths": [
+        {
+          "statement": "If a scholarship portal asks for a ₹500 'verification processing fee', it is a standard government requirement.",
+          "answer": "myth",
+          "truth": "Official Indian government scholarships are 100% free. Any site asking for payment is a cyber scam."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the single official central government web portal for all Indian student scholarships?",
+          "options": [
+            "scholarship-free-money.xyz",
+            "National Scholarship Portal (scholarships.gov.in)",
+            "cash-grant.net",
+            "lottery.com"
+          ],
+          "correct": 1,
+          "explanation": "The National Scholarship Portal (NSP) is the unified government window for central and state schemes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student's family at {at} wants financial assistance for higher schooling but worries about fake scams."
+        ],
+        "question": "How can {name} guide them safely?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Direct them strictly to the official National Scholarship Portal (scholarships.gov.in)",
+            "note": "Authentic government portal with direct bank benefit transfer.",
+            "weight": 45,
+            "critical": true,
+            "keys": "scholarships.gov.in|national scholarship portal|official scheme"
+          },
+          {
+            "point": "Warn them that legitimate government scholarships NEVER charge any application fee",
+            "note": "Shields family from scam agents.",
+            "weight": 35,
+            "critical": true,
+            "keys": "never pay fees|free application|no scam agents"
+          },
+          {
+            "point": "Help them assemble authentic documents: income certificate, marksheet, and Aadhaar-linked account",
+            "note": "Prepares application readiness.",
+            "weight": 20,
+            "critical": false,
+            "keys": "documents ready|aadhaar linked|bonafide"
+          }
+        ],
+        "dangerous": [
+          "pay ₹1,000 to internet cafe agent",
+          "apply on random telegram link",
+          "share bank netbanking password"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Scholarship Portal (Ministry of Electronics and IT)",
+          "url": "https://scholarships.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-033",
+      "agentId": "compass",
+      "subtopic": "Vocational",
+      "title": "Vocational skilling: ITI, polytechnic diplomas and practical trades",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Skill-based technical trades (electrician, CNC machinist, solar technician) offer high employability.",
+        "Polytechnic diplomas allow direct lateral entry into the 2nd year of B.Tech engineering degrees."
+      ],
+      "do": [
+        "Explore Industrial Training Institutes (ITIs) and Polytechnic Diplomas after Class 10",
+        "Gain hands-on practical skills aligned with the National Skills Qualification Framework (NSQF)",
+        "Look into emerging vocational trades: drone pilot licensing, EV mechanic, and renewable tech installation"
+      ],
+      "dont": [
+        "Never look down upon vocational technical education compared to traditional general degrees",
+        "Never enroll in uncertified private training institutes without DGT / NCVT affiliation"
+      ],
+      "myths": [
+        {
+          "statement": "Students who attend ITI or Polytechnic institutes cannot go to college or get high-paying jobs.",
+          "answer": "myth",
+          "truth": "Skilled technicians earn excellent salaries, launch manufacturing businesses, or take lateral entry into engineering degrees."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What official government certification ensures an ITI trade course is nationally recognized?",
+          "options": [
+            "A printed card",
+            "National Council for Vocational Training (NCVT / DGT) certification",
+            "A local shop stamp",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "NCVT certification ensures trade qualifications are recognized by government and multinational industries."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A Class 10 student at {at} prefers hands-on mechanical building over memorizing abstract textbooks."
+        ],
+        "question": "How can {name} present vocational education proudly?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that Polytechnic Diplomas and ITIs provide rapid, high-demand practical technical skills",
+            "note": "Validates practical hands-on learning.",
+            "weight": 45,
+            "critical": true,
+            "keys": "polytechnic diploma|iti|technical skills|hands-on"
+          },
+          {
+            "point": "Highlight the lateral entry pathway: diploma graduates can enter 2nd year B.Tech directly",
+            "note": "Demonstrates upward academic mobility.",
+            "weight": 35,
+            "critical": true,
+            "keys": "lateral entry b.tech|degree pathways|mobility"
+          },
+          {
+            "point": "Emphasize high-growth future trades like Electric Vehicle (EV) maintenance and solar installation",
+            "note": "Connects to emerging industry demand.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ev technician|solar energy|nsqf"
+          }
+        ],
+        "dangerous": [
+          "mock vocational education",
+          "say only doctors succeed",
+          "force into unwanted rote learning"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Directorate General of Training (DGT - Ministry of Skill Development)",
+          "url": "https://dgt.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-034",
+      "agentId": "compass",
+      "subtopic": "Extracurriculars",
+      "title": "Building a real profile: Projects, volunteering and student initiatives",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Colleges, scholarship committees, and employers look for initiative, grit, and real-world impact.",
+        "Building a working prototype or leading a community literacy drive outshines empty test scores."
+      ],
+      "do": [
+        "Initiate or join school clubs: coding club, eco-club, robotics, debate society, or literary circle",
+        "Volunteer for verified community causes: teaching younger kids, animal shelter care, or park cleanups",
+        "Document your projects in a simple portfolio or blog showing what you learned and solved"
+      ],
+      "dont": [
+        "Never participate in activities just to collect fake participation certificates",
+        "Never plagiarize someone else's project work and claim it as your own"
+      ],
+      "myths": [
+        {
+          "statement": "Only students with 99% board marks get selected for top university scholarships and internships.",
+          "answer": "myth",
+          "truth": "Top universities practice holistic review, prioritizing student leadership, curiosity, and tangible projects."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What makes a student project stand out on a college scholarship application?",
+          "options": [
+            "Using gold glitter",
+            "Solving a genuine community problem with documented effort, reflection, and impact",
+            "Buying a readymade project online",
+            "Copying Wikipedia"
+          ],
+          "correct": 1,
+          "explanation": "Authentic problem-solving demonstrates maturity, leadership, and intellectual curiosity."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A Class 11 student at {at} wants to build an impressive profile for future college applications."
+        ],
+        "question": "What impactful roadmap should {name} recommend?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pick a genuine real-world problem and build a mini-project (e.g. school compost bin, app, or reading drive)",
+            "note": "Shows initiative and tangible execution.",
+            "weight": 45,
+            "critical": true,
+            "keys": "real world project|initiative|community impact|portfolio"
+          },
+          {
+            "point": "Lead school club activities or volunteer with local verified community groups",
+            "note": "Demonstrates teamwork and leadership.",
+            "weight": 35,
+            "critical": true,
+            "keys": "volunteer|school clubs|leadership|teamwork"
+          },
+          {
+            "point": "Reflect on learning and document the journey honestly in a student portfolio",
+            "note": "Communicates personal growth authentically.",
+            "weight": 20,
+            "critical": false,
+            "keys": "document journey|portfolio|reflection"
+          }
+        ],
+        "dangerous": [
+          "buy fake certificates online",
+          "plagiarize projects",
+          "focus solely on memorization"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Youth Policy (Ministry of Youth Affairs and Sports)",
+          "url": "https://yas.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-035",
+      "agentId": "compass",
+      "subtopic": "Accreditation",
+      "title": "Spotting fake colleges, unaccredited degrees and fraudulent agents",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Enrolling in an unrecognized institution results in worthless degrees ineligible for jobs or government exams.",
+        "The University Grants Commission (UGC) and AICTE publish yearly public lists of fake and unaccredited universities."
+      ],
+      "do": [
+        "Check university accreditation status on the official UGC website (ugc.ac.in) before applying",
+        "Verify technical and engineering college approvals on the AICTE portal (aicte-india.org)",
+        "Beware of glossy brochures promising '100% Guaranteed Foreign Placement' with zero entrance requirements"
+      ],
+      "dont": [
+        "Never pay non-refundable admissions fees to unregistered educational consultancies or agents",
+        "Never take admission in an institute listed on the UGC Fake University Warning List"
+      ],
+      "myths": [
+        {
+          "statement": "If a college has a fancy multi-story glass building and celebrity ads, its degrees are automatically recognized.",
+          "answer": "myth",
+          "truth": "Physical architecture does not equal legal accreditation. Always verify statutory UGC/AICTE approval."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which statutory government body maintains the official public list of recognized universities and fake colleges in India?",
+          "options": [
+            "Department of Transport",
+            "University Grants Commission (UGC)",
+            "Postal Service",
+            "Tourism Board"
+          ],
+          "correct": 1,
+          "explanation": "UGC is the statutory authority maintaining the official list of recognized central, state, and private universities."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A glossy brochure at {at} promises: 'Instant B.Tech Degree in 1 year, no exams needed, apply now!'"
+        ],
+        "question": "What critical red flags does {name} point out?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "B.Tech degrees cannot be completed in 1 year; this is a fraudulent fake degree scam",
+            "note": "Recognizes impossible academic claims.",
+            "weight": 45,
+            "critical": true,
+            "keys": "fraudulent fake college|impossible claims|scam degree"
+          },
+          {
+            "point": "Check the institution's legal approval status on the official UGC and AICTE websites",
+            "note": "Verifies formal statutory accreditation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "check ugc list|aicte approval|verify college"
+          },
+          {
+            "point": "Warn peers never to pay money to unaccredited institutions that sell worthless certificates",
+            "note": "Shields peers from financial and career loss.",
+            "weight": 20,
+            "critical": false,
+            "keys": "warn peers|worthless certificate|no jobs"
+          }
+        ],
+        "dangerous": [
+          "pay the fee for instant degree",
+          "believe fake promises blindly",
+          "ignore ugc warnings"
+        ]
+      },
+      "sources": [
+        {
+          "name": "University Grants Commission (UGC List of Fake Universities)",
+          "url": "https://ugc.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-036",
+      "agentId": "compass",
+      "subtopic": "Flexibility",
+      "title": "Stream pressure and changing pathways: It is okay to pivot",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Many students realize their selected Class 11 stream (Science/Commerce/Arts) does not align with their passions.",
+        "The National Education Policy (NEP 2020) encourages multidisciplinary flexibility across subjects."
+      ],
+      "do": [
+        "Recognize that discovering what you DO NOT like is valuable progress toward finding your true calling",
+        "Consult a certified school career counselor to assess transferable skills and bridge courses",
+        "Remember that undergraduate admissions (law, design, management, humanities) are open to all streams"
+      ],
+      "dont": [
+        "Never consider yourself a failure because a chosen stream feels unfulfilling",
+        "Never suffer in severe silent misery without speaking to parents and counselors"
+      ],
+      "myths": [
+        {
+          "statement": "If you choose Science in Class 11, you must become an engineer or your life is over.",
+          "answer": "myth",
+          "truth": "Thousands of science students pivot successfully to design, law, management, writing, civil services, and entrepreneurship."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the National Education Policy (NEP) promote regarding secondary education streams?",
+          "options": [
+            "Strict separation forever",
+            "Multidisciplinary flexibility, eliminating rigid boundaries between arts and sciences",
+            "Closing colleges",
+            "Single subject only"
+          ],
+          "correct": 1,
+          "explanation": "NEP promotes cross-disciplinary learning, allowing students to study physics with music or economics with history."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A Class 12 student at {at} feels completely exhausted by engineering coaching and dreams of business and design."
+        ],
+        "question": "What reassuring guidance should {name} provide?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Assure them that changing career directions is normal, common, and completely okay",
+            "note": "Relieves psychological burnout and guilt.",
+            "weight": 45,
+            "critical": true,
+            "keys": "it'?s okay to change|normal to pivot|no failure"
+          },
+          {
+            "point": "Explain that entrance exams for design (UCEED), law (CLAT), and management are open to all streams",
+            "note": "Shows viable alternative pathways.",
+            "weight": 35,
+            "critical": true,
+            "keys": "open to all streams|clat|design|business|cuet"
+          },
+          {
+            "point": "Encourage an honest, constructive dialogue with family about their true strengths and goals",
+            "note": "Facilitates supportive family resolution.",
+            "weight": 20,
+            "critical": false,
+            "keys": "talk to parents|career counselor|strengths"
+          }
+        ],
+        "dangerous": [
+          "tell them they are a failure",
+          "force them to suffer in silence",
+          "give up on higher education"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Education Policy (NEP 2020)",
+          "url": "https://dsel.education.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "CAR-037",
+      "agentId": "compass",
+      "subtopic": "Family dialogue",
+      "title": "Constructive career conversations with parents",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Parents worry primarily about their children's future financial security, career stability, and happiness.",
+        "Presenting well-researched career pathways, college options, and job outlooks dispels parental anxiety."
+      ],
+      "do": [
+        "Prepare for the conversation: research top accredited colleges, admission criteria, and alumni career outcomes",
+        "Acknowledge their concern: 'I know you want me to be secure, here is how this field offers real careers'",
+        "Schedule a calm, dedicated discussion time without angry shouting or defensive arguments"
+      ],
+      "dont": [
+        "Never scream: 'You are ruining my life!' during a heated argument",
+        "Never demand approval for an unconventional career without having done basic research on it"
+      ],
+      "myths": [
+        {
+          "statement": "Parents who suggest traditional engineering or medicine only want to control and punish their children.",
+          "answer": "myth",
+          "truth": "Parents recommend traditional paths because they represent proven financial stability in their experience."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most persuasive way to present an unconventional career goal (like animation or sports) to parents?",
+          "options": [
+            "Slamming the door",
+            "Presenting a clear, researched plan showing accredited colleges, realistic costs, and career opportunities",
+            "Refusing to eat dinner",
+            "Ignoring them"
+          ],
+          "correct": 1,
+          "explanation": "Preparation and researched facts demonstrate maturity, turning parental anxiety into proud support."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} wants to pursue Psychology or Culinary Arts, but parents insist on engineering coaching."
+        ],
+        "question": "How should {name} structure a mature family conversation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Prepare a structured presentation showing top universities, curriculum, and diverse job roles",
+            "note": "Substitutes vague dreams with concrete research.",
+            "weight": 45,
+            "critical": true,
+            "keys": "research plan|top colleges|career outlook|presentation"
+          },
+          {
+            "point": "Acknowledge parental love and financial security concerns with respect and empathy",
+            "note": "Validates emotional motivation of parents.",
+            "weight": 35,
+            "critical": true,
+            "keys": "respect concerns|calm conversation|empathy"
+          },
+          {
+            "point": "Invite a school career counselor or neutral industry professional to join the discussion",
+            "note": "Provides trusted external expert perspective.",
+            "weight": 20,
+            "critical": false,
+            "keys": "counselor|neutral expert|family discussion"
+          }
+        ],
+        "dangerous": [
+          "scream and throw tantrums",
+          "secretly drop out of school",
+          "mock parents' knowledge"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CBSE Career Guidance Guidelines",
+          "url": "https://cbse.gov.in"
+        }
+      ],
+      "reviewed": true
     }
-   ],
-   "scenario": null,
-   "agentId": "compass",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  }
- ]
+  ]
 }

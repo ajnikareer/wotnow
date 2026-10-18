@@ -1,0 +1,1641 @@
+{
+  "agentId": "storm",
+  "cards": [
+    {
+      "id": "DIS-001",
+      "agentId": "storm",
+      "subtopic": "Earthquake",
+      "title": "Earthquake indoors: Drop, Cover, and Hold On",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Falling debris, collapsing ceiling plaster, and shattering glass cause most earthquake injuries.",
+        "Taking shelter under sturdy furniture protects your vital head, neck, and torso."
+      ],
+      "do": [
+        "DROP onto your hands and knees immediately to prevent being knocked over",
+        "COVER your head and neck under a sturdy table, desk, or bed",
+        "HOLD ON to the furniture leg until the ground stops shaking"
+      ],
+      "dont": [
+        "Never run outside during active shaking (falling building tiles and glass will strike you)",
+        "Never use elevators during or immediately after an earthquake"
+      ],
+      "myths": [
+        {
+          "statement": "Standing in a doorway is the safest spot during an indoor earthquake.",
+          "answer": "myth",
+          "truth": "Modern door frames are not reinforced and doors swinging violently crush fingers. Drop, cover, and hold under a desk."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the internationally proven emergency response when ground shaking starts indoors?",
+          "options": [
+            "Run into the corridor",
+            "Drop, Cover, and Hold On under a sturdy desk",
+            "Stand near glass windows",
+            "Take the elevator"
+          ],
+          "correct": 1,
+          "explanation": "Dropping low under sturdy desks protects vital organs from falling masonry and glass."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the classroom or home at {at}, violent earthquake tremors begin rattling the room."
+        ],
+        "question": "What should {name} do immediately?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Drop immediately under a sturdy desk or table",
+            "note": "Prevents being thrown down and protects from ceiling debris.",
+            "weight": 45,
+            "critical": true,
+            "keys": "drop|under desk|table|cover"
+          },
+          {
+            "point": "Hold onto the desk legs and cover head and neck with arms",
+            "note": "Keeps shield in place as furniture shifts.",
+            "weight": 35,
+            "critical": true,
+            "keys": "hold on|cover head|protect neck"
+          },
+          {
+            "point": "Stay indoors away from windows until shaking ceases completely",
+            "note": "Escaping mid-shake is when most injuries occur.",
+            "weight": 20,
+            "critical": false,
+            "keys": "stay indoors|away from windows|wait for shaking to stop"
+          }
+        ],
+        "dangerous": [
+          "run down stairs during shaking",
+          "use elevator",
+          "stand near glass"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Disaster Management Authority (NDMA)",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-002",
+      "agentId": "storm",
+      "subtopic": "Earthquake",
+      "title": "Earthquake outdoors: Finding open space",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Outside buildings, the greatest hazards are falling glass facades, signage, brick cornices, and electric poles.",
+        "The 'danger zone' extends directly outwards from exterior building walls."
+      ],
+      "do": [
+        "Move quickly to an open clearing away from buildings, streetlights, and power cables",
+        "Drop to the ground and cover your head until shaking stops",
+        "If in a vehicle, have the driver pull over safely away from overpasses and bridges"
+      ],
+      "dont": [
+        "Never shelter directly under building balconies, awnings, or billboards",
+        "Never touch fallen overhead electric cables"
+      ],
+      "myths": [
+        {
+          "statement": "Standing right next to the outer wall of a tall building protects you during an earthquake.",
+          "answer": "myth",
+          "truth": "Exterior walls shed glass, air conditioners, and concrete slabs first. Move into open clearings."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "When an earthquake strikes while you are walking outdoors on a street, where should you head?",
+          "options": [
+            "Under a large glass billboard",
+            "Into an open ground or wide space away from buildings and power poles",
+            "Into an underground basement",
+            "Under a tree"
+          ],
+          "correct": 1,
+          "explanation": "Open spaces away from falling overhead architecture are the safest outdoor refuge zones."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Walking in a market street at {at}, the ground shakes violently and streetlamps sway."
+        ],
+        "question": "How should {name} seek safety?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Move away from building walls, hoardings, and electric poles into an open area",
+            "note": "Evades falling architectural debris.",
+            "weight": 45,
+            "critical": true,
+            "keys": "open space|away from buildings|clear area|no poles"
+          },
+          {
+            "point": "Drop to the ground and protect your head with your bag or hands",
+            "note": "Prevents falling and shields skull.",
+            "weight": 35,
+            "critical": true,
+            "keys": "drop|protect head|cover with bag"
+          },
+          {
+            "point": "Stay alert to moving vehicles and stay away from elevated flyovers",
+            "note": "Overpasses suffer structural resonance.",
+            "weight": 20,
+            "critical": false,
+            "keys": "away from flyovers|alert"
+          }
+        ],
+        "dangerous": [
+          "stand under glass facade",
+          "touch electric poles",
+          "run into collapsing shops"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA Earthquake Safety Guidelines",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-003",
+      "agentId": "storm",
+      "subtopic": "Aftermath",
+      "title": "Post-earthquake evacuation: Gas, aftershocks and stairs",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Earthquakes sever underground gas lines and weaken building support pillars.",
+        "Aftershocks can occur minutes, hours, or days later, collapsing already-damaged structures."
+      ],
+      "do": [
+        "Evacuate using stairwells calmly once shaking stops; never use elevators",
+        "Check for gas leaks: if you smell gas, open windows, do not touch switches, and evacuate outside",
+        "Expect aftershocks and be prepared to Drop, Cover, and Hold on again"
+      ],
+      "dont": [
+        "Never light matches, candles, or lighters after an earthquake",
+        "Never re-enter a visibly cracked building until certified safe by structural engineers"
+      ],
+      "myths": [
+        {
+          "statement": "Using the elevator right after an earthquake is safe if power is working.",
+          "answer": "myth",
+          "truth": "Elevator shafts warp during quakes and aftershocks will trap you inside in total darkness. Take stairs."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why must you never strike a match or lighter after an earthquake?",
+          "options": [
+            "It wastes matches",
+            "Broken underground gas pipes can cause an instant explosion",
+            "It attracts rain",
+            "No reason"
+          ],
+          "correct": 1,
+          "explanation": "Gas leaks are widespread post-quake; any spark causes devastating fires."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "The ground stops shaking at {at}. {name}'s family needs to evacuate their multi-story building."
+        ],
+        "question": "What evacuation protocol should {name} ensure?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Take the stairs calmly in single file; never use the elevator",
+            "note": "Prevents getting trapped in damaged elevator shafts.",
+            "weight": 45,
+            "critical": true,
+            "keys": "stairs|no elevator|stairwell|walk calm"
+          },
+          {
+            "point": "Do not switch on lights or strike matches in case of broken gas lines",
+            "note": "Prevents gas explosions.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no matches|no lighters|check gas smell"
+          },
+          {
+            "point": "Assemble at the outdoor neighborhood open ground and prepare for aftershocks",
+            "note": "Safe congregation point.",
+            "weight": 20,
+            "critical": false,
+            "keys": "open ground|assembly point|aftershocks"
+          }
+        ],
+        "dangerous": [
+          "take the lift",
+          "light candle to see in dark",
+          "run back inside damaged flat"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA Post-Disaster Protocol",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-004",
+      "agentId": "storm",
+      "subtopic": "Floods",
+      "title": "Home flood evacuation: Moving high and cutting power",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Just 15 cm (6 inches) of fast-moving floodwater can knock a person off their feet.",
+        "Rising floodwaters reaching wall sockets electrocute entire flooded ground floors."
+      ],
+      "do": [
+        "Switch off main electrical circuit breakers and close the cylinder gas regulator before evacuating",
+        "Move to upper floors or higher ground with your emergency go-bag",
+        "Follow official disaster warnings and evacuate early before water cuts off road exits"
+      ],
+      "dont": [
+        "Never walk, swim, or drive through moving floodwaters ('Turn Around, Don't Drown')",
+        "Never touch electrical equipment while standing in water"
+      ],
+      "myths": [
+        {
+          "statement": "If floodwater looks only ankle-deep, it is completely safe to walk across the street.",
+          "answer": "myth",
+          "truth": "Ankle-deep rushing water possesses enormous kinetic force and hides open manholes and live electrical cables."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the vital electrical action before water enters your home?",
+          "options": [
+            "Turn on all lights",
+            "Turn off the main electrical circuit breaker (MCB) immediately",
+            "Plug in appliances",
+            "Nothing"
+          ],
+          "correct": 1,
+          "explanation": "Cutting mains power prevents waterlogged house electrocution."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Monsoon rains cause river water to rise rapidly near {name}'s home at {at}."
+        ],
+        "question": "What should {name} and family do before water enters the ground floor?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Switch off the main electrical power breaker and turn off gas regulator",
+            "note": "Eliminates electrocution and gas fire risks.",
+            "weight": 45,
+            "critical": true,
+            "keys": "switch off mains|cut power|breaker|gas off"
+          },
+          {
+            "point": "Move essential documents, medications, and family to higher floors or relief shelter",
+            "note": "Preserves life and vital papers.",
+            "weight": 35,
+            "critical": true,
+            "keys": "higher floors|higher ground|evacuate|shelter"
+          },
+          {
+            "point": "Do not wade through rushing brown floodwater outside",
+            "note": "Prevents drowning and missing drain falls.",
+            "weight": 20,
+            "critical": false,
+            "keys": "don'?t wade|avoid floodwater"
+          }
+        ],
+        "dangerous": [
+          "walk into rushing currents",
+          "leave electrical mains on",
+          "ignore evacuation alerts"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Water Commission (CWC)",
+          "url": "https://cwc.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-005",
+      "agentId": "storm",
+      "subtopic": "Cyclones",
+      "title": "Cyclone alert readiness: Securing home and tracking alerts",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Tropical cyclones produce destructive winds over 150 km/h, storm surges, and torrential downpours.",
+        "Unsecured tin roofs, loose metal sheets, and tree branches turn into deadly high-speed projectiles."
+      ],
+      "do": [
+        "Secure or bring indoors all loose outdoor objects, flowerpots, and tin sheets",
+        "Tape large window panes diagonally with duct tape to prevent flying glass shards",
+        "Tune into official All India Radio / IMD weather bulletins on a battery-powered radio or phone"
+      ],
+      "dont": [
+        "Never step outside during the calm 'eye of the storm' (destructive reverse winds resume abruptly)",
+        "Never believe unverified WhatsApp cyclone forward rumors"
+      ],
+      "myths": [
+        {
+          "statement": "When the wind suddenly goes completely calm during a cyclone, the storm is officially over.",
+          "answer": "myth",
+          "truth": "This is the 'eye of the cyclone'. The other half of the eyewall with violent opposite winds will strike shortly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens when the calm 'eye' of a tropical cyclone passes directly overhead?",
+          "options": [
+            "The storm is 100% finished",
+            "Winds drop temporarily, but ferocious opposite-direction winds will strike within minutes",
+            "Sunshine forever",
+            "It turns into snow"
+          ],
+          "correct": 1,
+          "explanation": "The eye is surrounded by the destructive eyewall; remain indoors."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A Red Alert cyclone warning is issued for {name}'s coastal district at {at}."
+        ],
+        "question": "How should {name} prepare the home?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Secure loose outdoor objects, metal sheets, and board or tape windows",
+            "note": "Stops objects turning into lethal flying missiles.",
+            "weight": 45,
+            "critical": true,
+            "keys": "secure loose objects|tape windows|shut shutters"
+          },
+          {
+            "point": "Keep emergency drinking water, battery torches, and a radio ready",
+            "note": "Essential for expected multi-day power outages.",
+            "weight": 35,
+            "critical": true,
+            "keys": "emergency water|torches|battery radio|power outage"
+          },
+          {
+            "point": "Stay indoors in the strongest central room away from windows until all-clear is given",
+            "note": "Protects from roof and window failures.",
+            "weight": 20,
+            "critical": false,
+            "keys": "stay indoors|central room|away from windows"
+          }
+        ],
+        "dangerous": [
+          "go to the beach to see waves",
+          "step outside during the calm eye",
+          "leave tin sheets loose"
+        ]
+      },
+      "sources": [
+        {
+          "name": "India Meteorological Department (IMD Cyclone Warning)",
+          "url": "https://mausam.imd.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-006",
+      "agentId": "storm",
+      "subtopic": "Lightning",
+      "title": "Lightning storm safety: The 30-30 rule and outdoor crouching",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A lightning bolt carries over 300 million volts of electricity and is hotter than the surface of the sun.",
+        "Tall solitary trees and open metal poles act as natural lightning rods; standing under them is lethal."
+      ],
+      "do": [
+        "Follow the 30-30 Rule: If time between lightning flash and thunder is under 30 seconds, get indoors immediately",
+        "Stay inside a fully enclosed building or metal-roofed car until 30 minutes after the last thunderclap",
+        "If caught in an open field, crouch low on the balls of your feet with heels touching ('lightning crouch')"
+      ],
+      "dont": [
+        "Never shelter under isolated tall trees or tin-roofed sheds in open fields",
+        "Never lie flat on the wet ground (ground currents conduct through your whole body)"
+      ],
+      "myths": [
+        {
+          "statement": "Standing under a tall solitary tree during a thunderstorm keeps you dry and safe.",
+          "answer": "myth",
+          "truth": "Lightning hits the highest point; current blasts down the trunk and jumps to nearby people (side flash)."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the safest body posture if caught in an open meadow with zero indoor shelter during lightning?",
+          "options": [
+            "Lie flat on your stomach",
+            "Crouch low on balls of feet, tuck head, with heels touching together",
+            "Climb a tree",
+            "Hold metal umbrella high"
+          ],
+          "correct": 1,
+          "explanation": "Crouching minimizes height and touching heels lets current loop through feet without crossing the heart."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A sudden thunderstorm with frequent lightning strikes erupts while {name} is in a sports field at {at}."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Immediately seek shelter inside a sturdy building or closed vehicle",
+            "note": "Safest Faraday cage and structural protection.",
+            "weight": 45,
+            "critical": true,
+            "keys": "seek shelter|indoor building|sturdy building|closed car"
+          },
+          {
+            "point": "Do not shelter under isolated tall trees or touch metal fences",
+            "note": "Eliminates side-flash and ground current paths.",
+            "weight": 35,
+            "critical": true,
+            "keys": "no tall trees|no metal fences|avoid poles"
+          },
+          {
+            "point": "If trapped in the open, crouch low on balls of feet without lying flat",
+            "note": "Minimizes ground contact area.",
+            "weight": 20,
+            "critical": false,
+            "keys": "lightning crouch|balls of feet|crouch low"
+          }
+        ],
+        "dangerous": [
+          "stand under tallest tree",
+          "hold metal umbrella high",
+          "lie flat in mud puddle"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA Lightning Safety Guidelines",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-007",
+      "agentId": "storm",
+      "subtopic": "Heatwave",
+      "title": "Heatwave survival: Hydration, ORS and timing activities",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Heatstroke occurs when internal body temperature exceeds 40°C, causing brain and organ shutdown.",
+        "Drinking plain water alone is insufficient during heavy sweating; electrolytes (salts) must be replenished."
+      ],
+      "do": [
+        "Drink plenty of water, ORS (Oral Rehydration Salts), lassi, chaas, and lemon water regularly",
+        "Schedule essential outdoor chores before 10 AM or after 5 PM, avoiding peak afternoon sun",
+        "Wear loose, light-colored cotton clothing and cover your head with a damp cloth or wide-brim hat"
+      ],
+      "dont": [
+        "Never leave children or pets locked inside parked cars (temperatures reach fatal 60°C in 15 mins)",
+        "Never do strenuous outdoor sports during afternoon red heat alert hours"
+      ],
+      "myths": [
+        {
+          "statement": "You only need to drink water when you feel extremely thirsty during a heatwave.",
+          "answer": "myth",
+          "truth": "Thirst is a delayed symptom; by the time you feel parched, your body is already clinically dehydrated."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you drink alongside water during severe 44°C summer heatwaves?",
+          "options": [
+            "Hot black coffee",
+            "Electrolyte fluids like ORS, buttermilk (chaas), and lemon water with salt",
+            "Sugary sodas only",
+            "Vinegar"
+          ],
+          "correct": 1,
+          "explanation": "Electrolytes replace sodium and potassium lost through sweat, preventing heat cramps and stroke."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "The thermometer reads 45°C during an official Heatwave Alert at {at}."
+        ],
+        "question": "How should {name} structure their day?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stay indoors in shaded, ventilated spaces during peak hours (12 PM to 4 PM)",
+            "note": "Avoids direct thermal solar radiation.",
+            "weight": 40,
+            "critical": true,
+            "keys": "stay indoors|avoid peak sun|12 to 4 pm|shade"
+          },
+          {
+            "point": "Hydrate continuously with water, ORS, and homemade cooling drinks (aam panna, chaas)",
+            "note": "Maintains cellular electrolyte balance.",
+            "weight": 40,
+            "critical": true,
+            "keys": "hydrate|ors|chaas|water|electrolytes"
+          },
+          {
+            "point": "Wear loose, breathable cotton clothes and cover head if stepping out",
+            "note": "Prevents sunburn and solar heat absorption.",
+            "weight": 20,
+            "critical": false,
+            "keys": "cotton clothes|cover head|light colors"
+          }
+        ],
+        "dangerous": [
+          "play football at 2 pm",
+          "lock pet in closed car",
+          "drink ice soda only"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA National Heatwave Action Plan",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-008",
+      "agentId": "storm",
+      "subtopic": "Cold wave",
+      "title": "Cold wave survival: Layering and carbon monoxide danger",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Burning coal angithis, charcoal braziers, or wood in closed bedrooms releases lethal Carbon Monoxide (CO).",
+        "Carbon Monoxide is an invisible, odorless, tasteless gas that silently suffocates sleeping families."
+      ],
+      "do": [
+        "Wear multiple loose, warm layers (thermal inners, woolens, windbreaker) instead of one heavy coat",
+        "Ensure active cross-ventilation (leave windows slightly cracked) if using heating appliances",
+        "Cover head, neck, hands, and feet (warm cap, muffler, woolen socks) where body heat radiates fastest"
+      ],
+      "dont": [
+        "Never sleep in an airtight closed room with a burning coal angithi or unvented gas heater",
+        "Never ignore symptoms of hypothermia: uncontrollable shivering, slurred speech, and extreme drowsiness"
+      ],
+      "myths": [
+        {
+          "statement": "Sleeping with a burning charcoal angithi in an airtight bedroom keeps the family warm and completely safe.",
+          "answer": "myth",
+          "truth": "Airtight coal burning produces lethal carbon monoxide, causing hundreds of fatal winter asphyxiations yearly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is it deadly to burn a coal angithi or wood brazier inside a tightly sealed bedroom with all windows closed?",
+          "options": [
+            "It gets too bright",
+            "Incomplete combustion generates invisible, odorless Carbon Monoxide gas that kills in sleep",
+            "It makes room cold",
+            "It wastes wood"
+          ],
+          "correct": 1,
+          "explanation": "Carbon monoxide binds to hemoglobin 200 times stronger than oxygen, causing painless suffocation."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During freezing winter temperatures at {at}, relatives want to bring a glowing charcoal angithi into a closed bedroom."
+        ],
+        "question": "What life-saving intervention must {name} make?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that burning charcoal in an enclosed room generates lethal Carbon Monoxide gas",
+            "note": "Warns against invisible asphyxiation hazard.",
+            "weight": 45,
+            "critical": true,
+            "keys": "carbon monoxide|deadly gas|odorless|suffocation|angithi danger"
+          },
+          {
+            "point": "Insist on keeping windows cracked for fresh air ventilation if any heater is used",
+            "note": "Maintains essential oxygen exchange.",
+            "weight": 35,
+            "critical": true,
+            "keys": "ventilation|keep window open|fresh air"
+          },
+          {
+            "point": "Use extra woolen blankets and multiple clothing layers for warmth instead of open coal",
+            "note": "Safe thermal management.",
+            "weight": 20,
+            "critical": false,
+            "keys": "extra blankets|layers|woolens"
+          }
+        ],
+        "dangerous": [
+          "seal all windows with burning coal",
+          "sleep beside unventilated angithi",
+          "ignore headache"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA Cold Wave Guidelines",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-009",
+      "agentId": "storm",
+      "subtopic": "Landslides",
+      "title": "Hillside landslides: Warning signs and safe evacuation",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Prolonged torrential monsoon rains saturate mountain soil, causing catastrophic mud and boulder slides.",
+        "Warning signs include tilted trees, cracks opening on slopes, jammed doors, and sudden muddy stream surges."
+      ],
+      "do": [
+        "Evacuate immediately to designated ridge shelters if you observe widening soil cracks on hillside slopes",
+        "Stay alert during continuous heavy hill rainfall and listen for rumbling sounds like locomotives",
+        "Avoid building or camping near steep slopes, drainage ravines, and mountain stream channels"
+      ],
+      "dont": [
+        "Never stay in valley bottoms directly in the path of a potential mudflow",
+        "Never drive across road sections with falling rocks or fresh mudslides"
+      ],
+      "myths": [
+        {
+          "statement": "Landslides strike instantly with zero prior warning signs on the hillside.",
+          "answer": "myth",
+          "truth": "Landslides give multiple advance warnings: tilting telephone poles, new ground cracks, and muddy springs."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following is an early physical warning sign of an impending hillside landslide?",
+          "options": [
+            "Singing birds",
+            "Trees and electric poles tilting sideways and new cracks appearing in masonry walls",
+            "Dry soil",
+            "Clear sky"
+          ],
+          "correct": 1,
+          "explanation": "Soil creep tilts rooted poles and trees days before complete slope failure."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On a vacation or trip in a hilly region at {at}, continuous heavy rains cause new cracks to appear in the lodge's slope."
+        ],
+        "question": "What should {name} and guests do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Alert adults and evacuate uphill to stable ridge ground away from the slope",
+            "note": "Moves out of downward mud avalanche trajectory.",
+            "weight": 45,
+            "critical": true,
+            "keys": "evacuate|stable ground|ridge|away from slope"
+          },
+          {
+            "point": "Listen for ominous deep rumbling sounds or sudden muddying of clear streams",
+            "note": "Signals active debris flow initiation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "rumbling sound|muddy stream|warning signs"
+          },
+          {
+            "point": "Report slope movement to local administration and disaster helplines",
+            "note": "Alerts emergency response.",
+            "weight": 20,
+            "critical": false,
+            "keys": "report to police|local administration|112"
+          }
+        ],
+        "dangerous": [
+          "hide in basement at bottom of hill",
+          "ignore ground cracks",
+          "camp beside steep ravine"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Geological Survey of India (GSI Landslide Division)",
+          "url": "https://gsi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-010",
+      "agentId": "storm",
+      "subtopic": "Tsunami",
+      "title": "Coastal tsunami warning signs: Sea withdrawal and high ground",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Undersea earthquakes displace massive water columns, generating tsunami wave trains over 800 km/h.",
+        "Nature's primary visual tsunami warning is a dramatic, sudden retreat of ocean water exposing the seabed."
+      ],
+      "do": [
+        "If you feel a strong coastal earthquake or see the sea suddenly pull back, run inland and uphill immediately",
+        "Climb to elevated ground at least 30 meters above sea level, or to the 4th floor of a reinforced concrete building",
+        "Stay on high ground for several hours: tsunamis arrive as a series of multiple waves over hours"
+      ],
+      "dont": [
+        "Never run down to the beach to collect stranded fish or look at the exposed seabed",
+        "Never wait for an official siren if natural warning signs (quake, sea retreat) occur"
+      ],
+      "myths": [
+        {
+          "statement": "A tsunami is just one big wave; once the first wave recedes, it is safe to return to the beach.",
+          "answer": "myth",
+          "truth": "Tsunamis are a series of wave crests; the second or third wave is frequently much larger than the first."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You are on a beach when the ocean water suddenly pulls back hundreds of meters, exposing stranded shells. What do you do?",
+          "options": [
+            "Run out onto the wet sand to collect shells",
+            "Turn around immediately and sprint inland to high ground",
+            "Take photos",
+            "Jump into the ocean"
+          ],
+          "correct": 1,
+          "explanation": "Sudden sea withdrawal is the definitive sign of a massive incoming tsunami wave crest. Run inland."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While visiting a coastal beach at {at}, {name} notices the ocean water pulling back rapidly into the horizon."
+        ],
+        "question": "What urgent action must {name} initiate?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Shout to companions and run inland toward high ground immediately",
+            "note": "Minutes count before wave arrival.",
+            "weight": 45,
+            "critical": true,
+            "keys": "run inland|high ground|sprint away from beach"
+          },
+          {
+            "point": "Do not pause to collect belongings, take videos, or gather stranded marine life",
+            "note": "Any delay is fatal.",
+            "weight": 35,
+            "critical": true,
+            "keys": "don'?t collect fish|no photos|drop belongings"
+          },
+          {
+            "point": "Remain on elevated ground for hours until disaster authorities issue official all-clear",
+            "note": "Tsunamis strike in successive waves.",
+            "weight": 20,
+            "critical": false,
+            "keys": "stay on high ground|multiple waves"
+          }
+        ],
+        "dangerous": [
+          "walk toward exposed seabed",
+          "wait for official announcement on beach",
+          "stay on shore"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian National Centre for Ocean Information Services (INCOIS)",
+          "url": "https://incois.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-011",
+      "agentId": "storm",
+      "subtopic": "Emergency kit",
+      "title": "Assembling a family Emergency Go-Bag (72-hour survival kit)",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "During major disasters, municipal electricity, tap water, and cellular networks can stay down for 72 hours.",
+        "A pre-packed, waterproof Go-Bag ensures your family can evacuate in under 60 seconds."
+      ],
+      "do": [
+        "Pack essential documents (Aadhaar, property papers, insurance) sealed inside waterproof plastic ziplocks",
+        "Include battery torches, spare batteries, a loud emergency whistle, and a portable battery power bank",
+        "Pack water bottles, water purification tablets, dry non-perishable rations (chana, biscuits), and a first aid kit"
+      ],
+      "dont": [
+        "Never overload the Go-Bag so heavily that a student cannot easily carry it while running",
+        "Never forget critical daily prescription medicines required by family elders"
+      ],
+      "myths": [
+        {
+          "statement": "A disaster Emergency Go-Bag is only needed in movies and war zones.",
+          "answer": "myth",
+          "truth": "Floods, earthquakes, and cyclones strike Indian cities with zero warning; a Go-Bag saves lives every year."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most critical item to keep inside waterproof bags within your emergency kit?",
+          "options": [
+            "Heavy textbooks",
+            "Vital personal identification documents, medical papers, and emergency contact list",
+            "Video game console",
+            "Extra shoes"
+          ],
+          "correct": 1,
+          "explanation": "Waterproof document storage protects legal identity and allows rapid post-disaster insurance and relief."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s family at {at} is preparing their 72-hour disaster Emergency Go-Bag."
+        ],
+        "question": "What core items should {name} ensure are packed inside?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Store key family documents and emergency cash in sealed waterproof pouches",
+            "note": "Protects vital identity and emergency finances.",
+            "weight": 40,
+            "critical": true,
+            "keys": "waterproof documents|aadhaar|emergency cash"
+          },
+          {
+            "point": "Pack a battery-powered torch, emergency whistle, and portable phone power bank",
+            "note": "Provides light, signaling, and communication.",
+            "weight": 35,
+            "critical": true,
+            "keys": "torch|whistle|power bank|batteries"
+          },
+          {
+            "point": "Include dry ready-to-eat food, water purification tablets, and basic first aid",
+            "note": "Ensures 72 hours of self-sustained survival.",
+            "weight": 25,
+            "critical": false,
+            "keys": "first aid|water purification|dry rations"
+          }
+        ],
+        "dangerous": [
+          "pack heavy television set",
+          "leave documents loose in rain",
+          "pack perishable cooked curry"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA Emergency Kit Checklist",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-012",
+      "agentId": "storm",
+      "subtopic": "Family plan",
+      "title": "Family disaster communication plan: Emergency contacts and meeting spots",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Local mobile cell towers crash during disasters due to power cuts and massive calling congestion.",
+        "Out-of-state long-distance SMS text messages frequently pass through when local voice calls fail."
+      ],
+      "do": [
+        "Designate an out-of-city relative (Aunt/Uncle in another state) as the central family check-in contact",
+        "Memorize your parents' mobile phone numbers by heart rather than relying on phone memory",
+        "Agree on two fixed family meeting points: one right outside your home, and one outside the neighborhood"
+      ],
+      "dont": [
+        "Never clog emergency networks with continuous long phone calls; send short SMS check-in texts",
+        "Never leave an agreed evacuation meeting point without leaving a written note"
+      ],
+      "myths": [
+        {
+          "statement": "In a major earthquake, you will easily be able to video call your parents on mobile phones.",
+          "answer": "myth",
+          "truth": "Local cellular towers fail instantly during major disasters. Plan offline meeting spots and out-of-state SMS."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why should your family designate an out-of-state relative as your emergency disaster check-in contact?",
+          "options": [
+            "They have more free time",
+            "Local city lines get jam-packed, while long-distance text routing through other states stays operational",
+            "To share recipes",
+            "It is mandatory by law"
+          ],
+          "correct": 1,
+          "explanation": "An out-of-area contact acts as a central communication bridge when local networks fail."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Planning family disaster readiness at {at}, {name} discusses emergency communication."
+        ],
+        "question": "What key plan should {name} establish?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Memorize two primary parent phone numbers and designate an out-of-state family contact",
+            "note": "Ensures communication when local lines fail.",
+            "weight": 45,
+            "critical": true,
+            "keys": "memorize phone numbers|out of town contact|central contact"
+          },
+          {
+            "point": "Agree on two specific physical meeting spots (one local, one outside neighborhood)",
+            "note": "Enables reunification if separated.",
+            "weight": 35,
+            "critical": true,
+            "keys": "meeting spots|reunification point|neighborhood spot"
+          },
+          {
+            "point": "Use short SMS text messages instead of continuous voice calls during network congestion",
+            "note": "Conserves scarce network bandwidth.",
+            "weight": 20,
+            "critical": false,
+            "keys": "short sms|text over call|conserve battery"
+          }
+        ],
+        "dangerous": [
+          "rely 100% on battery phone memory",
+          "have no meeting spot",
+          "panic and wander aimlessly"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Disaster Management Authority (Disaster Preparedness)",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-013",
+      "agentId": "storm",
+      "subtopic": "Alerts",
+      "title": "Official disaster alerts vs viral WhatsApp panic rumors",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Viral social media forwards spread fabricated dam-burst warnings, false death tolls, and fake dates.",
+        "The National Disaster Management Authority (NDMA) and IMD publish verified color-coded alerts (Yellow, Orange, Red)."
+      ],
+      "do": [
+        "Rely exclusively on verified government sources: NDMA (sachet.ndma.gov.in), IMD, and District Collector handles",
+        "Check the 'Sachet' National Disaster Alert Portal app on your smartphone for localized warnings",
+        "Verify sensational forward claims against official press releases before forwarding to family groups"
+      ],
+      "dont": [
+        "Never forward unverified voice notes claiming 'a massive dam has collapsed' or 'super-cyclone incoming'",
+        "Never share outdated disaster photos from previous years as current news"
+      ],
+      "myths": [
+        {
+          "statement": "Forwarding every alarming disaster audio clip on WhatsApp helps warn your family just in case.",
+          "answer": "myth",
+          "truth": "Panic rumors cause stampedes, choke emergency helplines, and prevent real relief from reaching victims."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the official disaster early warning portal and mobile app developed by NDMA India?",
+          "options": [
+            "TikTok",
+            "SACHET (sachet.ndma.gov.in)",
+            "WhatsApp rumors",
+            "Snapchat"
+          ],
+          "correct": 1,
+          "explanation": "SACHET is the Government of India's integrated early warning platform providing real-time regional alerts."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A scary audio clip spreads on family WhatsApp at {at} claiming an earthquake will strike the city at 4 PM."
+        ],
+        "question": "How should {name} debunk this panic rumor?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that science CANNOT predict exact earthquake times; the forward is a fabricated hoax",
+            "note": "Dispels scientifically impossible rumors.",
+            "weight": 45,
+            "critical": true,
+            "keys": "earthquakes cannot be predicted|fake forward|hoax|debunk"
+          },
+          {
+            "point": "Cross-check alerts on the official NDMA SACHET portal or IMD official handles",
+            "note": "Directs to verified scientific sources.",
+            "weight": 35,
+            "critical": true,
+            "keys": "sachet portal|ndma|imd|official source"
+          },
+          {
+            "point": "Ask family members to delete the forward and not share panic in society groups",
+            "note": "Stops the viral chain of panic.",
+            "weight": 20,
+            "critical": false,
+            "keys": "don'?t forward|delete hoax|calm family"
+          }
+        ],
+        "dangerous": [
+          "forward to 10 school groups",
+          "panic and sleep in garden",
+          "believe unverified audio note"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Disaster Alert Portal (SACHET - NDMA)",
+          "url": "https://sachet.ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-014",
+      "agentId": "storm",
+      "subtopic": "Monsoon structural",
+      "title": "Dilapidated walls and old building collapses in monsoon",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Heavy monsoon rains saturate lime mortar and soil foundations, causing sudden boundary wall collapses.",
+        "Over 60% of monsoon structural fatalities occur when pedestrians walk beside waterlogged old walls."
+      ],
+      "do": [
+        "Walk in the center of lanes, keeping a wide 3-meter safety margin away from old boundary walls",
+        "Avoid taking shelter from rain under decaying concrete awnings, balconies, or leaning brick fences",
+        "Report dangerously tilted or water-seeping walls to your local municipal ward office"
+      ],
+      "dont": [
+        "Never lean your bicycle or stand directly against waterlogged masonry walls during downpours",
+        "Never ignore fresh cracks or bulging in boundary walls"
+      ],
+      "myths": [
+        {
+          "statement": "Standing right under a cracked building balcony keeps you dry from monsoon rain safely.",
+          "answer": "myth",
+          "truth": "Waterlogged concrete balconies collapse without warning under the weight of accumulated rainwater."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is it dangerous to walk right beside ancient boundary walls during heavy monsoon rain?",
+          "options": [
+            "Walls are cold",
+            "Saturated rainwater destabilizes old foundations, causing sudden wall collapses onto pedestrians",
+            "Moss stains clothes",
+            "No danger"
+          ],
+          "correct": 1,
+          "explanation": "Water absorption weakens mortar bonds, causing heavy masonry walls to topple outward."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Walking home in torrential rain at {at}, {name} sees classmates sheltering under an ancient crumbling boundary wall."
+        ],
+        "question": "What should {name} urgently advise?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Move away from the wall and maintain a wide standoff safety distance",
+            "note": "Prevents being crushed by sudden structural failure.",
+            "weight": 45,
+            "critical": true,
+            "keys": "move away from wall|keep distance|standoff distance"
+          },
+          {
+            "point": "Explain that waterlogged brick foundations can collapse outward with zero warning",
+            "note": "Communicates mechanical monsoon risk.",
+            "weight": 35,
+            "critical": true,
+            "keys": "waterlogged wall|collapse hazard|decaying brick"
+          },
+          {
+            "point": "Seek shelter inside a sturdy, modern shop or permanent concrete structure",
+            "note": "Identifies safe shelter.",
+            "weight": 20,
+            "critical": false,
+            "keys": "sturdy shelter|permanent building"
+          }
+        ],
+        "dangerous": [
+          "lean against crumbling wall",
+          "climb cracked fence",
+          "sit under cracked balcony"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Building Materials and Technology Promotion Council (BMTPC)",
+          "url": "https://bmtpc.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-015",
+      "agentId": "storm",
+      "subtopic": "Electrocution",
+      "title": "Submerged electric wires and step potential in floodwaters",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Fallen live overhead power lines electrify surrounding pooled water for dozens of meters.",
+        "'Step potential' occurs when voltage differences between your two feet create a lethal shock loop."
+      ],
+      "do": [
+        "Treat all standing rainwater around electric poles, transformers, or fallen wires as live and lethal",
+        "If you feel a tingling sensation in your feet while walking, stop immediately, keep feet together, and bunny-hop away",
+        "Alert local electricity distribution officials and police immediately to shut off power to the sector"
+      ],
+      "dont": [
+        "Never walk or cycle through pooled water near leaning electric poles or dangling cables",
+        "Never touch metal gates, lampposts, or signboards submerged in water"
+      ],
+      "myths": [
+        {
+          "statement": "Waterlogged puddles around electric transformers are harmless unless you touch the metal pole directly.",
+          "answer": "myth",
+          "truth": "Current leaks directly into pooled water, creating lethal electrical gradients across the surface."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do if your legs feel a sudden electric tingling sensation in shallow floodwater?",
+          "options": [
+            "Take giant long strides",
+            "Keep feet tightly together and bunny-hop or shuffle away without lifting feet apart",
+            "Lie down in water",
+            "Run fast"
+          ],
+          "correct": 1,
+          "explanation": "Keeping feet together eliminates the voltage difference ('step potential') across your body."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After a severe storm at {at}, a heavy tree branch has snapped a high-voltage wire into a large water puddle."
+        ],
+        "question": "How should {name} react?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stay at least 15 meters away and do not step into the waterlogged area",
+            "note": "Maintains safe electrical clearance distance.",
+            "weight": 45,
+            "critical": true,
+            "keys": "stay away|15 meters|don'?t step in water|live wire"
+          },
+          {
+            "point": "Warn other pedestrians and cyclists loudly to stay back",
+            "note": "Prevents bystander electrocution.",
+            "weight": 35,
+            "critical": true,
+            "keys": "warn pedestrians|shout warning|keep back"
+          },
+          {
+            "point": "Call the electricity emergency complaint number and police 112 immediately",
+            "note": "Ensures grid technicians de-energize the feeder.",
+            "weight": 20,
+            "critical": false,
+            "keys": "call electricity board|call 112|report wire"
+          }
+        ],
+        "dangerous": [
+          "touch the wire with a stick",
+          "walk through the puddle",
+          "pick up live cable"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Electricity Authority (Measures Relating to Safety)",
+          "url": "https://cea.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-016",
+      "agentId": "storm",
+      "subtopic": "Water safety",
+      "title": "Safe drinking water after floods: Boiling and chlorine tablets",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Floodwaters submerge municipal pipelines, mixing sewage, animal carcasses, and cholera bacteria into drinking wells.",
+        "Consuming unpurified floodwater triggers deadly epidemics of cholera, typhoid, and hepatitis A."
+      ],
+      "do": [
+        "Boil all drinking water vigorously at a rolling boil for at least 1 to 3 continuous minutes",
+        "Use Halazone / chlorine water purification tablets according to packaging instructions if boiling is impossible",
+        "Store purified drinking water in narrow-mouthed, clean containers with secure lids"
+      ],
+      "dont": [
+        "Never drink clear-looking tap water after a flood without boiling (pathogens are invisible)",
+        "Never wash dishes, fruit, or brush teeth with contaminated floodwater"
+      ],
+      "myths": [
+        {
+          "statement": "If floodwater from a well looks crystal clear, it is completely pure and safe to drink without boiling.",
+          "answer": "myth",
+          "truth": "Deadly pathogens like cholera and typhoid bacteria are microscopic and thrive in clear-looking water."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How long must drinking water be kept at a vigorous rolling boil to sterilize post-flood water?",
+          "options": [
+            "5 seconds",
+            "At least 1 to 3 minutes of continuous rolling boiling",
+            "1 hour",
+            "Just warm it"
+          ],
+          "correct": 1,
+          "explanation": "1-3 minutes of vigorous rolling boiling kills all vegetative bacteria, viruses, and amoebic cysts."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Following heavy river floods at {at}, the municipal tap water runs with a strange smell."
+        ],
+        "question": "What water purification protocol must {name} implement at home?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Bring all drinking water to a continuous rolling boil for at least 1-3 minutes",
+            "note": "Thermal sterilization destroys waterborne pathogens.",
+            "weight": 45,
+            "critical": true,
+            "keys": "boil water|rolling boil|1 to 3 minutes"
+          },
+          {
+            "point": "Use chlorine disinfection tablets if gas or electricity for boiling is unavailable",
+            "note": "Chemical disinfection alternative.",
+            "weight": 35,
+            "critical": true,
+            "keys": "chlorine tablets|halazone|water purification"
+          },
+          {
+            "point": "Keep purified water covered in clean containers; do not drink raw tap water",
+            "note": "Prevents secondary contamination.",
+            "weight": 20,
+            "critical": false,
+            "keys": "covered container|no raw tap water"
+          }
+        ],
+        "dangerous": [
+          "drink directly from flood tap",
+          "filter through cloth only",
+          "drink flood puddle water"
+        ]
+      },
+      "sources": [
+        {
+          "name": "WHO Guidelines for Drinking-water Quality in Emergencies",
+          "url": "https://who.int"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-017",
+      "agentId": "storm",
+      "subtopic": "Inclusive evacuation",
+      "title": "Community solidarity: Assisting elderly and disabled neighbors",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Elderly citizens, persons with mobility challenges, and toddlers face severe evacuation barriers.",
+        "A resilient community checks on vulnerable households within the first 15 minutes of a disaster alert."
+      ],
+      "do": [
+        "Check on elderly or disabled neighbors during evacuation alerts to ensure they have heard the warning",
+        "Help carry essential medications, walking canes, and emergency bags for senior citizens",
+        "Assist them along safe evacuation routes calmly without rushing or creating panic"
+      ],
+      "dont": [
+        "Never leave elderly neighbors behind in ground-floor flood zones without verification",
+        "Never shout or cause hysteria that triggers cardiac distress in vulnerable seniors"
+      ],
+      "myths": [
+        {
+          "statement": "During disaster evacuation, you should only care about yourself and ignore elderly neighbors.",
+          "answer": "myth",
+          "truth": "Community mutual aid is what saves lives during disasters before government rescue boats arrive."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most compassionate civic action during a neighborhood evacuation warning?",
+          "options": [
+            "Run away silently",
+            "Knock on elderly or disabled neighbors' doors to ensure they know and offer evacuation help",
+            "Lock your gate",
+            "Watch from window"
+          ],
+          "correct": 1,
+          "explanation": "Checking on vulnerable neighbors ensures nobody is left trapped in flood or fire zones."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A cyclone or flood evacuation alert sounds in the neighborhood at {at}."
+        ],
+        "question": "How should {name} demonstrate community leadership?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Check on elderly or disabled neighbors living nearby to confirm they are evacuating safely",
+            "note": "Ensures vulnerable individuals are accounted for.",
+            "weight": 45,
+            "critical": true,
+            "keys": "check on elderly|assist neighbors|disabled neighbors|evacuation help"
+          },
+          {
+            "point": "Help them pack vital prescription medicines, walking aids, and identity cards",
+            "note": "Secures critical life-support supplies.",
+            "weight": 35,
+            "critical": true,
+            "keys": "pack medicines|assist canes|help carry"
+          },
+          {
+            "point": "Guide them calmly to the community relief center or high-ground assembly point",
+            "note": "Safe transit support.",
+            "weight": 20,
+            "critical": false,
+            "keys": "guide to shelter|community center|calm"
+          }
+        ],
+        "dangerous": [
+          "ignore calling neighbors",
+          "spread panic screams",
+          "block neighbors' exit"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA Community Based Disaster Risk Management (CBDRM)",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "DIS-018",
+      "agentId": "storm",
+      "subtopic": "Drills",
+      "title": "School disaster evacuation drills: Discipline beats panic",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Historical disaster analyses show that stairwell stampedes cause 4 times more injuries than building damage.",
+        "Regular disaster drills build muscle memory, allowing students to evacuate calmly on instinct."
+      ],
+      "do": [
+        "Take school disaster drills seriously as realistic life-saving training, not playtime",
+        "Follow teacher directions instantly, walk briskly in single file, and maintain total silence",
+        "Keep hands free: do not hold hands across the staircase or stop to pick up dropped pens"
+      ],
+      "dont": [
+        "Never run, push, scream, or shove on school staircases during an evacuation drill",
+        "Never joke or make false alarm screams that trigger panic stampedes"
+      ],
+      "myths": [
+        {
+          "statement": "School disaster drills are boring wastes of class time that will never be used in real life.",
+          "answer": "myth",
+          "truth": "Schools that practice regular drills achieve 100% casualty-free evacuations during real earthquakes and fires."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the single most critical behavioral rule when evacuating school staircases during a drill?",
+          "options": [
+            "Run as fast as you can",
+            "Walk calmly in single file, no pushing, no running, and maintain silence",
+            "Shout loudly",
+            "Slide down banister"
+          ],
+          "correct": 1,
+          "explanation": "Orderly walking in single file prevents deadly crowd crushes and tripping on stairwells."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A disaster evacuation siren rings across the school campus at {at}."
+        ],
+        "question": "How should {name} and classmates conduct themselves?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Walk briskly in orderly single file without running or pushing",
+            "note": "Eliminates stairwell crush risks.",
+            "weight": 45,
+            "critical": true,
+            "keys": "single file|walk calmly|no running|no pushing"
+          },
+          {
+            "point": "Maintain silence so teachers' emergency instructions can be heard by all",
+            "note": "Ensures auditory command flow.",
+            "weight": 35,
+            "critical": true,
+            "keys": "maintain silence|listen to teacher|quiet"
+          },
+          {
+            "point": "Assemble at the designated outdoor school sports ground for roll-call headcount",
+            "note": "Verifies all students are safely accounted for.",
+            "weight": 20,
+            "critical": false,
+            "keys": "assembly ground|sports field|roll call|headcount"
+          }
+        ],
+        "dangerous": [
+          "run screaming on stairs",
+          "push younger kids down",
+          "stop to tie shoelaces on stairs"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National School Safety Policy Guidelines (NDMA)",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

@@ -1,446 +1,1911 @@
 {
- "agentId": "ember",
- "cards": [
-  {
-   "id": "FIRE-012",
-   "subtopic": "Kitchen fires",
-   "title": "Kitchen oil fires",
-   "bands": [
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Water on burning oil turns instantly to steam and throws burning oil into the air (a fireball).",
-    "Fire needs heat, fuel and oxygen. Covering the pan cuts off oxygen.",
-    "A covered pan should stay covered until it has completely cooled."
-   ],
-   "do": [
-    "Turn off the stove or gas if you can reach it safely",
-    "Slide a metal lid or baking tray over the pan",
-    "Use a damp (wrung-out) towel if there is no lid",
-    "Get everyone out, close the kitchen door and call 101 or 112 if the fire spreads"
-   ],
-   "dont": [
-    "Never pour water on burning oil",
-    "Don't carry the burning pan outside",
-    "Don't throw flour on it, it can flare up"
-   ],
-   "myths": [
+  "agentId": "ember",
+  "cards": [
     {
-     "statement": "Water can put out any kind of fire.",
-     "answer": "myth",
-     "truth": "Water makes oil and electrical fires much worse. Smother oil fires, and cut the power for electrical ones."
+      "id": "FIRE-012",
+      "subtopic": "Kitchen fires",
+      "title": "Kitchen oil fires",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Water on burning oil turns instantly to steam and throws burning oil into the air (a fireball).",
+        "Fire needs heat, fuel and oxygen. Covering the pan cuts off oxygen.",
+        "A covered pan should stay covered until it has completely cooled."
+      ],
+      "do": [
+        "Turn off the stove or gas if you can reach it safely",
+        "Slide a metal lid or baking tray over the pan",
+        "Use a damp (wrung-out) towel if there is no lid",
+        "Get everyone out, close the kitchen door and call 101 or 112 if the fire spreads"
+      ],
+      "dont": [
+        "Never pour water on burning oil",
+        "Don't carry the burning pan outside",
+        "Don't throw flour on it, it can flare up"
+      ],
+      "myths": [
+        {
+          "statement": "Water can put out any kind of fire.",
+          "answer": "myth",
+          "truth": "Water makes oil and electrical fires much worse. Smother oil fires, and cut the power for electrical ones."
+        },
+        {
+          "statement": "Covering a burning pan with a metal lid can put the fire out.",
+          "answer": "fact",
+          "truth": "A lid cuts off oxygen. Keep it on until the pan cools down."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Oil in a pan catches fire. What's the safest first move?",
+          "options": [
+            "Pour water on it",
+            "Cover it with a metal lid",
+            "Carry it outside",
+            "Fan the flames"
+          ],
+          "correct": 1,
+          "explanation": "A lid cuts off oxygen. Water causes a dangerous fireball."
+        },
+        {
+          "q": "After covering a burning pan, when can you lift the lid?",
+          "options": [
+            "Right away",
+            "After 10 seconds",
+            "Only when the pan has fully cooled",
+            "When the smoke is white"
+          ],
+          "correct": 2,
+          "explanation": "Lifting it early lets oxygen back in, and hot oil can reignite."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "It's {time}. {name} is frying snacks when the oil in the pan suddenly catches fire. Flames reach up toward the chimney hood, and {relation} runs in with a mug of water.",
+          "{name} is helping make pakoras {at}. The oil overheats and bursts into flames. Someone shouts 'Get water!'"
+        ],
+        "question": "What should {name} do, right now?",
+        "emojis": [
+          "🔥",
+          "🍳",
+          "🧒"
+        ],
+        "bubble": "Should I throw water?!",
+        "rubric": [
+          {
+            "point": "Stop anyone from using water",
+            "note": "Water on burning oil causes a fireball.",
+            "weight": 30,
+            "critical": true,
+            "keys": "(no|not|never|don'?t|stop)[^.]{0,30}water|water[^.]{0,25}(no|not|never|dangerous|fireball)"
+          },
+          {
+            "point": "Turn off the heat source",
+            "note": "Switching off the gas stops the fire getting fuel.",
+            "weight": 20,
+            "critical": false,
+            "keys": "(turn|switch|shut)[^.]{0,15}(off|gas|stove|knob|burner)|(gas|stove|burner)[^.]{0,10}off"
+          },
+          {
+            "point": "Cover the pan with a metal lid or damp cloth",
+            "note": "Covering it cuts off oxygen. The fastest way to put out a small oil fire.",
+            "weight": 30,
+            "critical": true,
+            "keys": "\\blid\\b|cover|damp (cloth|towel)|wet (cloth|towel)|smother|baking tray"
+          },
+          {
+            "point": "Get out and call for help if it spreads",
+            "note": "Leave, close the door, call 101 (fire) or 112.",
+            "weight": 20,
+            "critical": false,
+            "keys": "\\b101\\b|\\b112\\b|fire ?(brigade|service|department)|call|get out|leave|evacuat|adult|parent"
+          }
+        ],
+        "dangerous": [
+          "(throw|pour|use|put|splash)[^.]{0,15}water",
+          "carry[^.]{0,25}(pan|outside)",
+          "\\bflour\\b",
+          "\\bsugar\\b"
+        ],
+        "settings": [
+          "home",
+          "grandparents' house"
+        ],
+        "times": [
+          "8 PM",
+          "late evening",
+          "a Sunday morning"
+        ]
+      },
+      "agentId": "ember",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
     },
     {
-     "statement": "Covering a burning pan with a metal lid can put the fire out.",
-     "answer": "fact",
-     "truth": "A lid cuts off oxygen. Keep it on until the pan cools down."
-    }
-   ],
-   "quiz": [
-    {
-     "q": "Oil in a pan catches fire. What's the safest first move?",
-     "options": [
-      "Pour water on it",
-      "Cover it with a metal lid",
-      "Carry it outside",
-      "Fan the flames"
-     ],
-     "correct": 1,
-     "explanation": "A lid cuts off oxygen. Water causes a dangerous fireball."
+      "id": "FIRE-003",
+      "subtopic": "Escaping a building fire",
+      "title": "Getting out of a building fire",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Smoke rises, so the cleanest air is near the floor.",
+        "Lifts can stop or open onto a smoky floor during a fire.",
+        "Closed doors slow down fire and smoke."
+      ],
+      "do": [
+        "Shout 'Fire!' to warn others",
+        "Use the stairs, never the lift",
+        "Stay low under smoke",
+        "Feel doors with the back of your hand before opening",
+        "Close doors behind you",
+        "Go to the assembly point and stay there",
+        "Call 101 or 112 once you're safe"
+      ],
+      "dont": [
+        "Don't use the lift",
+        "Don't stop to collect belongings",
+        "Never go back inside"
+      ],
+      "myths": [
+        {
+          "statement": "If there's a fire in your building, take the lift. It's the fastest way out.",
+          "answer": "myth",
+          "truth": "Lifts can stop working or open onto a smoky floor. Always use the stairs."
+        },
+        {
+          "statement": "In a smoky room, crawling low helps you breathe cleaner air.",
+          "answer": "fact",
+          "truth": "Smoke and heat rise, so the air near the floor is cleaner."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "The fire alarm rings in your apartment building. How do you go down?",
+          "options": [
+            "Lift",
+            "Stairs",
+            "Wait on the balcony",
+            "Go up to the roof first"
+          ],
+          "correct": 1,
+          "explanation": "Stairs are the safe way out. Lifts can fail in a fire."
+        },
+        {
+          "q": "Before opening a door during a fire, you should…",
+          "options": [
+            "Kick it open",
+            "Feel it with the back of your hand",
+            "Open it quickly",
+            "Pour water on it"
+          ],
+          "correct": 1,
+          "explanation": "A hot door means fire on the other side. Use another way out."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} is {at}, on the 6th floor, when the fire alarm goes off and the corridor starts filling with grey smoke. {relation} heads straight for the lift.",
+          "It's {time}. {name} smells smoke and hears the alarm {at}. The door to the stairwell is closed, and people are shouting."
+        ],
+        "question": "What should {name} do to get out safely?",
+        "emojis": [
+          "🏢",
+          "💨",
+          "🚪"
+        ],
+        "bubble": "Let's take the lift!",
+        "rubric": [
+          {
+            "point": "Use the stairs, not the lift",
+            "note": "Lifts can stop or open onto a smoky floor.",
+            "weight": 30,
+            "critical": true,
+            "keys": "stair|(not|no|never|don'?t|avoid)[^.]{0,15}(lift|elevator)"
+          },
+          {
+            "point": "Stay low under the smoke",
+            "note": "Cleaner air is near the floor.",
+            "weight": 25,
+            "critical": false,
+            "keys": "\\blow\\b|crawl|bend|duck|floor"
+          },
+          {
+            "point": "Check doors for heat and close doors behind",
+            "note": "Hot door = fire behind it. Closed doors slow the fire.",
+            "weight": 20,
+            "critical": false,
+            "keys": "door|back of (the|your) hand|feel"
+          },
+          {
+            "point": "Get out, go to the assembly point, call 101/112",
+            "note": "Stay out once you're out.",
+            "weight": 25,
+            "critical": false,
+            "keys": "assembly|outside|get out|\\b101\\b|\\b112\\b|call|alarm|warn|shout"
+          }
+        ],
+        "dangerous": [
+          "(take|use|go (in|to))[^.]{0,10}(the )?(lift|elevator)",
+          "go back (in|inside)",
+          "hide (under|in)"
+        ],
+        "settings": [
+          "apartment building",
+          "hostel",
+          "tuition class",
+          "coaching centre"
+        ]
+      },
+      "agentId": "ember",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
     },
     {
-     "q": "After covering a burning pan, when can you lift the lid?",
-     "options": [
-      "Right away",
-      "After 10 seconds",
-      "Only when the pan has fully cooled",
-      "When the smoke is white"
-     ],
-     "correct": 2,
-     "explanation": "Lifting it early lets oxygen back in, and hot oil can reignite."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "It's {time}. {name} is frying snacks when the oil in the pan suddenly catches fire. Flames reach up toward the chimney hood, and {relation} runs in with a mug of water.",
-     "{name} is helping make pakoras {at}. The oil overheats and bursts into flames. Someone shouts 'Get water!'"
-    ],
-    "question": "What should {name} do, right now?",
-    "emojis": [
-     "🔥",
-     "🍳",
-     "🧒"
-    ],
-    "bubble": "Should I throw water?!",
-    "rubric": [
-     {
-      "point": "Stop anyone from using water",
-      "note": "Water on burning oil causes a fireball.",
-      "weight": 30,
-      "critical": true,
-      "keys": "(no|not|never|don'?t|stop)[^.]{0,30}water|water[^.]{0,25}(no|not|never|dangerous|fireball)"
-     },
-     {
-      "point": "Turn off the heat source",
-      "note": "Switching off the gas stops the fire getting fuel.",
-      "weight": 20,
-      "critical": false,
-      "keys": "(turn|switch|shut)[^.]{0,15}(off|gas|stove|knob|burner)|(gas|stove|burner)[^.]{0,10}off"
-     },
-     {
-      "point": "Cover the pan with a metal lid or damp cloth",
-      "note": "Covering it cuts off oxygen. The fastest way to put out a small oil fire.",
-      "weight": 30,
-      "critical": true,
-      "keys": "\\blid\\b|cover|damp (cloth|towel)|wet (cloth|towel)|smother|baking tray"
-     },
-     {
-      "point": "Get out and call for help if it spreads",
-      "note": "Leave, close the door, call 101 (fire) or 112.",
-      "weight": 20,
-      "critical": false,
-      "keys": "\\b101\\b|\\b112\\b|fire ?(brigade|service|department)|call|get out|leave|evacuat|adult|parent"
-     }
-    ],
-    "dangerous": [
-     "(throw|pour|use|put|splash)[^.]{0,15}water",
-     "carry[^.]{0,25}(pan|outside)",
-     "\\bflour\\b",
-     "\\bsugar\\b"
-    ],
-    "settings": [
-     "home",
-     "grandparents' house"
-    ],
-    "times": [
-     "8 PM",
-     "late evening",
-     "a Sunday morning"
-    ]
-   },
-   "agentId": "ember",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "FIRE-003",
-   "subtopic": "Escaping a building fire",
-   "title": "Getting out of a building fire",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Smoke rises, so the cleanest air is near the floor.",
-    "Lifts can stop or open onto a smoky floor during a fire.",
-    "Closed doors slow down fire and smoke."
-   ],
-   "do": [
-    "Shout 'Fire!' to warn others",
-    "Use the stairs, never the lift",
-    "Stay low under smoke",
-    "Feel doors with the back of your hand before opening",
-    "Close doors behind you",
-    "Go to the assembly point and stay there",
-    "Call 101 or 112 once you're safe"
-   ],
-   "dont": [
-    "Don't use the lift",
-    "Don't stop to collect belongings",
-    "Never go back inside"
-   ],
-   "myths": [
-    {
-     "statement": "If there's a fire in your building, take the lift. It's the fastest way out.",
-     "answer": "myth",
-     "truth": "Lifts can stop working or open onto a smoky floor. Always use the stairs."
+      "id": "FIRE-007",
+      "subtopic": "Electrical fires",
+      "title": "Electrical fires and sockets",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Water conducts electricity, so it can cause electric shock on an electrical fire.",
+        "Overloaded sockets and damaged wires are a common cause of home fires.",
+        "Dry powder (ABC) or CO2 extinguishers are suitable for electrical fires."
+      ],
+      "do": [
+        "Switch off power at the main switch if it's safe",
+        "Tell an adult immediately",
+        "Get out and call 101 or 112 if it grows",
+        "Report burning smells and sparking sockets"
+      ],
+      "dont": [
+        "Never throw water on an electrical fire",
+        "Don't plug many heavy appliances into one socket",
+        "Don't touch a sparking socket"
+      ],
+      "myths": [
+        {
+          "statement": "It's fine to use water on a burning TV as long as you're quick.",
+          "answer": "myth",
+          "truth": "Water conducts electricity. Cut the power first and use the right extinguisher, or get out."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A phone charger starts sparking and smoking. First step?",
+          "options": [
+            "Pour water on it",
+            "Switch off the power if safe and tell an adult",
+            "Pull the wire with wet hands",
+            "Ignore it"
+          ],
+          "correct": 1,
+          "explanation": "Cutting the power removes the danger. Never use water."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} is studying {at} when the extension board under the desk starts sparking and a thin line of smoke rises. {relation} grabs a bottle of water."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "🔌",
+          "⚡",
+          "💨"
+        ],
+        "bubble": "Splash water on it!",
+        "rubric": [
+          {
+            "point": "Don't use water on an electrical fire",
+            "note": "Water conducts electricity.",
+            "weight": 30,
+            "critical": true,
+            "keys": "(no|not|never|don'?t|stop)[^.]{0,25}water"
+          },
+          {
+            "point": "Switch off power at the main switch if safe",
+            "note": "Cutting power removes the source.",
+            "weight": 30,
+            "critical": true,
+            "keys": "(switch|turn|cut)[^.]{0,15}(off|power|main|mcb|electric)|unplug|mains"
+          },
+          {
+            "point": "Tell an adult and get out / call 101 or 112 if it grows",
+            "note": "Don't fight a growing fire.",
+            "weight": 25,
+            "critical": false,
+            "keys": "adult|parent|\\b101\\b|\\b112\\b|call|get out|leave"
+          },
+          {
+            "point": "Use a suitable extinguisher only if trained",
+            "note": "ABC dry powder or CO2 are suitable for electrical fires.",
+            "weight": 15,
+            "critical": false,
+            "keys": "extinguisher|co2|dry powder|sand"
+          }
+        ],
+        "dangerous": [
+          "(throw|pour|use|splash)[^.]{0,15}water",
+          "touch[^.]{0,15}(socket|wire)"
+        ],
+        "settings": [
+          "home",
+          "hostel",
+          "grandparents' house"
+        ]
+      },
+      "agentId": "ember",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
     },
     {
-     "statement": "In a smoky room, crawling low helps you breathe cleaner air.",
-     "answer": "fact",
-     "truth": "Smoke and heat rise, so the air near the floor is cleaner."
-    }
-   ],
-   "quiz": [
-    {
-     "q": "The fire alarm rings in your apartment building. How do you go down?",
-     "options": [
-      "Lift",
-      "Stairs",
-      "Wait on the balcony",
-      "Go up to the roof first"
-     ],
-     "correct": 1,
-     "explanation": "Stairs are the safe way out. Lifts can fail in a fire."
+      "id": "FIRE-015",
+      "subtopic": "Festival safety",
+      "title": "Diyas and firecrackers",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Most festival burns happen to hands, face and eyes.",
+        "Synthetic clothes can melt onto skin; cotton is safer.",
+        "A cracker that didn't go off can still explode later."
+      ],
+      "do": [
+        "Only use crackers with an adult watching",
+        "Keep a bucket of water and sand nearby",
+        "Light at arm's length and step back",
+        "Wear cotton clothes and closed shoes",
+        "Keep diyas away from curtains and loose clothes"
+      ],
+      "dont": [
+        "Never relight a cracker that didn't go off",
+        "Don't hold crackers in your hand",
+        "Don't burst crackers indoors or near vehicles"
+      ],
+      "myths": [
+        {
+          "statement": "If a cracker doesn't go off, it's safe to walk up and light it again.",
+          "answer": "myth",
+          "truth": "A dud can explode without warning. Wait, then soak it in water."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should be kept nearby when bursting crackers?",
+          "options": [
+            "A fan",
+            "A bucket of water and sand",
+            "Extra crackers",
+            "Perfume"
+          ],
+          "correct": 1,
+          "explanation": "Water and sand help with small fires and duds."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "It's Diwali night. {At}, a cracker {name} lit doesn't go off. {relation} says 'Go check it and light it again!'"
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "🎆",
+          "🧨",
+          "✨"
+        ],
+        "bubble": "Just light it again!",
+        "rubric": [
+          {
+            "point": "Don't go near or relight the dud",
+            "note": "It can still explode.",
+            "weight": 40,
+            "critical": true,
+            "keys": "(no|not|never|don'?t)[^.]{0,20}(relight|light it|go near|touch)|wait|stay (away|back)"
+          },
+          {
+            "point": "Wait, then soak it in a bucket of water",
+            "note": "Water makes it safe.",
+            "weight": 30,
+            "critical": false,
+            "keys": "water|bucket|soak|sand"
+          },
+          {
+            "point": "Make sure an adult is supervising",
+            "note": "Crackers need adult supervision.",
+            "weight": 30,
+            "critical": false,
+            "keys": "adult|parent|grown|supervis"
+          }
+        ],
+        "dangerous": [
+          "(relight|light it again|pick it up|go (and )?check)(?![^.]{0,5}(no|not))"
+        ],
+        "settings": [
+          "housing society event",
+          "festival ground",
+          "home"
+        ]
+      },
+      "agentId": "ember",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
     },
     {
-     "q": "Before opening a door during a fire, you should…",
-     "options": [
-      "Kick it open",
-      "Feel it with the back of your hand",
-      "Open it quickly",
-      "Pour water on it"
-     ],
-     "correct": 1,
-     "explanation": "A hot door means fire on the other side. Use another way out."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "{name} is {at}, on the 6th floor, when the fire alarm goes off and the corridor starts filling with grey smoke. {relation} heads straight for the lift.",
-     "It's {time}. {name} smells smoke and hears the alarm {at}. The door to the stairwell is closed, and people are shouting."
-    ],
-    "question": "What should {name} do to get out safely?",
-    "emojis": [
-     "🏢",
-     "💨",
-     "🚪"
-    ],
-    "bubble": "Let's take the lift!",
-    "rubric": [
-     {
-      "point": "Use the stairs, not the lift",
-      "note": "Lifts can stop or open onto a smoky floor.",
-      "weight": 30,
-      "critical": true,
-      "keys": "stair|(not|no|never|don'?t|avoid)[^.]{0,15}(lift|elevator)"
-     },
-     {
-      "point": "Stay low under the smoke",
-      "note": "Cleaner air is near the floor.",
-      "weight": 25,
-      "critical": false,
-      "keys": "\\blow\\b|crawl|bend|duck|floor"
-     },
-     {
-      "point": "Check doors for heat and close doors behind",
-      "note": "Hot door = fire behind it. Closed doors slow the fire.",
-      "weight": 20,
-      "critical": false,
-      "keys": "door|back of (the|your) hand|feel"
-     },
-     {
-      "point": "Get out, go to the assembly point, call 101/112",
-      "note": "Stay out once you're out.",
-      "weight": 25,
-      "critical": false,
-      "keys": "assembly|outside|get out|\\b101\\b|\\b112\\b|call|alarm|warn|shout"
-     }
-    ],
-    "dangerous": [
-     "(take|use|go (in|to))[^.]{0,10}(the )?(lift|elevator)",
-     "go back (in|inside)",
-     "hide (under|in)"
-    ],
-    "settings": [
-     "apartment building",
-     "hostel",
-     "tuition class",
-     "coaching centre"
-    ]
-   },
-   "agentId": "ember",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "FIRE-007",
-   "subtopic": "Electrical fires",
-   "title": "Electrical fires and sockets",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Water conducts electricity, so it can cause electric shock on an electrical fire.",
-    "Overloaded sockets and damaged wires are a common cause of home fires.",
-    "Dry powder (ABC) or CO2 extinguishers are suitable for electrical fires."
-   ],
-   "do": [
-    "Switch off power at the main switch if it's safe",
-    "Tell an adult immediately",
-    "Get out and call 101 or 112 if it grows",
-    "Report burning smells and sparking sockets"
-   ],
-   "dont": [
-    "Never throw water on an electrical fire",
-    "Don't plug many heavy appliances into one socket",
-    "Don't touch a sparking socket"
-   ],
-   "myths": [
+      "id": "FIRE-021",
+      "agentId": "ember",
+      "subtopic": "Gas leak",
+      "title": "LPG cylinder leak smell in kitchen",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "LPG has ethyl mercaptan added so even tiny leaks smell like rotten eggs.",
+        "Flipping an electric switch creates a microscopic spark that can ignite accumulated gas."
+      ],
+      "do": [
+        "Open all doors and windows to disperse the gas",
+        "Turn off cylinder regulator if safe",
+        "Leave the house and call 1906 / 112 from outside"
+      ],
+      "dont": [
+        "Never turn electrical switches on or off",
+        "Never light matches or candles"
+      ],
+      "myths": [
+        {
+          "statement": "Turning on an exhaust fan helps clear LPG gas quickly.",
+          "answer": "myth",
+          "truth": "Exhaust switches create electrical sparks that ignite gas. Open windows manually."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You smell LPG gas in the kitchen. What is the safest first action?",
+          "options": [
+            "Turn on exhaust fan",
+            "Open windows and do not touch switches",
+            "Light a match to find the leak",
+            "Spray water"
+          ],
+          "correct": 1,
+          "explanation": "Electrical switches cause sparks. Open windows naturally and never touch switches."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At {time}, {name} walks into the kitchen at {at} and smells strong LPG gas near the stove."
+        ],
+        "question": "What should {name} do right now?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do not touch electrical switches or flames",
+            "note": "Sparks cause instant gas explosions.",
+            "weight": 35,
+            "critical": true,
+            "keys": "(no|not|never|don'?t)[^.]{0,25}(switch|light|flame|exhaust|spark)"
+          },
+          {
+            "point": "Open doors and windows for ventilation",
+            "note": "Lets heavy LPG gas disperse outside.",
+            "weight": 35,
+            "critical": true,
+            "keys": "open[^.]{0,20}(window|door)"
+          },
+          {
+            "point": "Turn off regulator and evacuate outside",
+            "note": "Cuts fuel and keeps family safe.",
+            "weight": 30,
+            "critical": false,
+            "keys": "(turn|shut|close)[^.]{0,15}(regulator|valve)|(leave|evacuat|outside)"
+          }
+        ],
+        "dangerous": [
+          "(turn|switch)[^.]{0,10}on",
+          "exhaust fan",
+          "match",
+          "lighter"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Oil LPG Safety",
+          "url": "https://iocl.com"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "It's fine to use water on a burning TV as long as you're quick.",
-     "answer": "myth",
-     "truth": "Water conducts electricity. Cut the power first and use the right extinguisher, or get out."
-    }
-   ],
-   "quiz": [
+      "id": "FIRE-022",
+      "agentId": "ember",
+      "subtopic": "Personal fire",
+      "title": "Clothes catch fire: Stop, Drop and Roll",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Running feeds oxygen to burning clothes, making flames spread much faster.",
+        "Rolling on the ground smothers flames by depriving them of air."
+      ],
+      "do": [
+        "Stop moving immediately without running",
+        "Drop to the ground and cover face with hands",
+        "Roll back and forth until flames extinguish"
+      ],
+      "dont": [
+        "Never run when clothes are burning",
+        "Don't peel off clothes stuck to burned skin"
+      ],
+      "myths": [
+        {
+          "statement": "If clothes catch fire, running to a bathroom is the best response.",
+          "answer": "myth",
+          "truth": "Running creates air currents that fan the flames. Stop, Drop and Roll immediately."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the first thing to do if your clothes catch fire?",
+          "options": [
+            "Run for help",
+            "Stop, drop to the ground, and roll",
+            "Fan the flames with a towel",
+            "Take off your shoes"
+          ],
+          "correct": 1,
+          "explanation": "Stop, Drop, and Roll cuts off oxygen and extinguishes flames quickly."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a festival at {at}, a spark touches {name}'s sleeve and the fabric catches fire."
+        ],
+        "question": "What must {name} do immediately?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop moving immediately without running",
+            "note": "Running fans flames with oxygen.",
+            "weight": 35,
+            "critical": true,
+            "keys": "stop|don'?t run|never run"
+          },
+          {
+            "point": "Drop to ground and protect face",
+            "note": "Keeps flames away from airway.",
+            "weight": 35,
+            "critical": true,
+            "keys": "drop|ground|cover face"
+          },
+          {
+            "point": "Roll back and forth to smother fire",
+            "note": "Smothers the fire against earth.",
+            "weight": 30,
+            "critical": true,
+            "keys": "roll|smother"
+          }
+        ],
+        "dangerous": [
+          "run[^.]{0,15}(away|fast|water)",
+          "fan"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NFPA Fire Safety Guide",
+          "url": "https://nfpa.org"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "A phone charger starts sparking and smoking. First step?",
-     "options": [
-      "Pour water on it",
-      "Switch off the power if safe and tell an adult",
-      "Pull the wire with wet hands",
-      "Ignore it"
-     ],
-     "correct": 1,
-     "explanation": "Cutting the power removes the danger. Never use water."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "{name} is studying {at} when the extension board under the desk starts sparking and a thin line of smoke rises. {relation} grabs a bottle of water."
-    ],
-    "question": "What should {name} do?",
-    "emojis": [
-     "🔌",
-     "⚡",
-     "💨"
-    ],
-    "bubble": "Splash water on it!",
-    "rubric": [
-     {
-      "point": "Don't use water on an electrical fire",
-      "note": "Water conducts electricity.",
-      "weight": 30,
-      "critical": true,
-      "keys": "(no|not|never|don'?t|stop)[^.]{0,25}water"
-     },
-     {
-      "point": "Switch off power at the main switch if safe",
-      "note": "Cutting power removes the source.",
-      "weight": 30,
-      "critical": true,
-      "keys": "(switch|turn|cut)[^.]{0,15}(off|power|main|mcb|electric)|unplug|mains"
-     },
-     {
-      "point": "Tell an adult and get out / call 101 or 112 if it grows",
-      "note": "Don't fight a growing fire.",
-      "weight": 25,
-      "critical": false,
-      "keys": "adult|parent|\\b101\\b|\\b112\\b|call|get out|leave"
-     },
-     {
-      "point": "Use a suitable extinguisher only if trained",
-      "note": "ABC dry powder or CO2 are suitable for electrical fires.",
-      "weight": 15,
-      "critical": false,
-      "keys": "extinguisher|co2|dry powder|sand"
-     }
-    ],
-    "dangerous": [
-     "(throw|pour|use|splash)[^.]{0,15}water",
-     "touch[^.]{0,15}(socket|wire)"
-    ],
-    "settings": [
-     "home",
-     "hostel",
-     "grandparents' house"
-    ]
-   },
-   "agentId": "ember",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "FIRE-015",
-   "subtopic": "Festival safety",
-   "title": "Diyas and firecrackers",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Most festival burns happen to hands, face and eyes.",
-    "Synthetic clothes can melt onto skin; cotton is safer.",
-    "A cracker that didn't go off can still explode later."
-   ],
-   "do": [
-    "Only use crackers with an adult watching",
-    "Keep a bucket of water and sand nearby",
-    "Light at arm's length and step back",
-    "Wear cotton clothes and closed shoes",
-    "Keep diyas away from curtains and loose clothes"
-   ],
-   "dont": [
-    "Never relight a cracker that didn't go off",
-    "Don't hold crackers in your hand",
-    "Don't burst crackers indoors or near vehicles"
-   ],
-   "myths": [
+      "id": "FIRE-023",
+      "agentId": "ember",
+      "subtopic": "Extinguishers",
+      "title": "Operating a fire extinguisher: PASS method",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Fire extinguishers are only meant for small incipient fires smaller than a dustbin.",
+        "PASS stands for Pull pin, Aim low, Squeeze handle, Sweep side-to-side."
+      ],
+      "do": [
+        "Ensure you have a clear escape exit behind you",
+        "Pull the pin, aim at the base of the fire",
+        "Squeeze handle and sweep side to side"
+      ],
+      "dont": [
+        "Never aim at the top flames",
+        "Never corner yourself without an exit"
+      ],
+      "myths": [
+        {
+          "statement": "You should aim the fire extinguisher directly at the top of the flames.",
+          "answer": "myth",
+          "truth": "Aiming at flames wastes the agent. Aim low at the fuel base."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does the 'A' in the PASS technique stand for?",
+          "options": [
+            "Aim at base of fire",
+            "Ask for help",
+            "Attack immediately",
+            "Always spray high"
+          ],
+          "correct": 0,
+          "explanation": "A stands for Aim low at the base of the fire where fuel is burning."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school lab at {at}, a waste basket catches fire. An adult brings an extinguisher."
+        ],
+        "question": "How should the extinguisher be operated?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pull the safety pin",
+            "note": "Unlocks the squeeze trigger.",
+            "weight": 30,
+            "critical": false,
+            "keys": "pull|pin|seal"
+          },
+          {
+            "point": "Aim low at the base of the fire",
+            "note": "Targets the fuel source.",
+            "weight": 35,
+            "critical": true,
+            "keys": "aim[^.]{0,15}base|low"
+          },
+          {
+            "point": "Squeeze handle and sweep side to side",
+            "note": "Covers the entire fire surface.",
+            "weight": 35,
+            "critical": true,
+            "keys": "squeeze|sweep"
+          }
+        ],
+        "dangerous": [
+          "aim (high|top|flames)",
+          "block exit"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Delhi Fire Service Guidelines",
+          "url": "https://delhifireservice.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "If a cracker doesn't go off, it's safe to walk up and light it again.",
-     "answer": "myth",
-     "truth": "A dud can explode without warning. Wait, then soak it in water."
-    }
-   ],
-   "quiz": [
+      "id": "FIRE-024",
+      "agentId": "ember",
+      "subtopic": "Evacuation",
+      "title": "Testing closed doors during a fire",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Opening a hot door can cause a backdraft or let toxic smoke rush in.",
+        "Use the back of your hand to feel the door and knob so you don't burn your palm."
+      ],
+      "do": [
+        "Feel door and handle with the back of your hand",
+        "If warm, keep closed and seek another exit",
+        "Seal door cracks with cloth if trapped"
+      ],
+      "dont": [
+        "Never open a warm or hot door",
+        "Never touch door with open palm"
+      ],
+      "myths": [
+        {
+          "statement": "Peeking open a hot door slightly is safe to check the fire.",
+          "answer": "myth",
+          "truth": "Opening even a crack allows superheated smoke and gas to flash over into the room."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How should you test a closed room door during a fire alarm?",
+          "options": [
+            "Turn knob quickly",
+            "Feel door and knob with back of hand",
+            "Kick door",
+            "Smell keyhole"
+          ],
+          "correct": 1,
+          "explanation": "Touch with back of hand. If warm, keep closed to block flames."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A fire alarm sounds at {at}. {name} reaches the bedroom door to exit into the hallway."
+        ],
+        "question": "What must {name} do before opening the door?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Touch door and knob with back of hand",
+            "note": "Detects heat safely without burning palm.",
+            "weight": 40,
+            "critical": true,
+            "keys": "back of (the )?hand|feel|touch"
+          },
+          {
+            "point": "Keep door shut if warm or hot",
+            "note": "Blocks fire and lethal gases.",
+            "weight": 35,
+            "critical": true,
+            "keys": "(if hot|if warm)[^.]{0,25}(don'?t open|keep closed|seal)"
+          },
+          {
+            "point": "Use alternate window escape or signal for rescue",
+            "note": "Prevents smoke inhalation.",
+            "weight": 25,
+            "critical": false,
+            "keys": "alternate|window|signal|call"
+          }
+        ],
+        "dangerous": [
+          "open[^.]{0,15}immediately",
+          "kick door"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA Fire Safety Advisory",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "What should be kept nearby when bursting crackers?",
-     "options": [
-      "A fan",
-      "A bucket of water and sand",
-      "Extra crackers",
-      "Perfume"
-     ],
-     "correct": 1,
-     "explanation": "Water and sand help with small fires and duds."
+      "id": "FIRE-025",
+      "agentId": "ember",
+      "subtopic": "Smoke",
+      "title": "Smoke inhalation and crawling low",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Smoke and toxic gases rise; cleaner, cooler air remains 30 to 60 cm above the floor.",
+        "Most fire casualties result from toxic smoke inhalation rather than direct burns."
+      ],
+      "do": [
+        "Drop to hands and knees immediately",
+        "Crawl low under smoke toward the nearest exit",
+        "Cover nose and mouth with a damp cloth if possible"
+      ],
+      "dont": [
+        "Never walk upright through thick smoke",
+        "Don't stop to collect belongings"
+      ],
+      "myths": [
+        {
+          "statement": "Holding your breath while walking tall lets you escape smoke safely.",
+          "answer": "myth",
+          "truth": "One breath of toxic smoke can cause unconsciousness. Stay low where air is clean."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where is the cleanest air located in a smoke-filled room?",
+          "options": [
+            "Near the ceiling",
+            "Near the floor (crawling low)",
+            "In the exact middle",
+            "Near windows only"
+          ],
+          "correct": 1,
+          "explanation": "Heat and smoke rise, leaving a layer of breathable air near the floor."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Thick dark smoke begins filling the hallway at {at} during an emergency."
+        ],
+        "question": "How should {name} move through the smoke to escape?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Drop down and crawl low on hands and knees",
+            "note": "Avoids breathing rising toxic fumes.",
+            "weight": 40,
+            "critical": true,
+            "keys": "crawl low|hands and knees|stay low|floor"
+          },
+          {
+            "point": "Cover nose and mouth with a cloth",
+            "note": "Filters particulate matter.",
+            "weight": 25,
+            "critical": false,
+            "keys": "cover[^.]{0,15}(nose|mouth|cloth)"
+          },
+          {
+            "point": "Head continuously toward the nearest exit",
+            "note": "Escapes before oxygen drops.",
+            "weight": 35,
+            "critical": true,
+            "keys": "exit|door|escape|outside"
+          }
+        ],
+        "dangerous": [
+          "stand tall",
+          "walk upright",
+          "run upright"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Red Cross Fire First Aid",
+          "url": "https://indianredcross.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-026",
+      "agentId": "ember",
+      "subtopic": "Trapped",
+      "title": "Surviving trapped in a room during fire",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Sealing gaps prevents smoke from suffocating occupants trapped inside.",
+        "Hanging a bright cloth from a window signals firefighters to your location."
+      ],
+      "do": [
+        "Close door tightly and seal bottom cracks with wet cloth",
+        "Open window slightly for fresh air if no smoke outside",
+        "Call 112 / 101 and wave bright cloth from window"
+      ],
+      "dont": [
+        "Never jump from high floors",
+        "Never break windows if smoke is outside"
+      ],
+      "myths": [
+        {
+          "statement": "Breaking bedroom windows is always the best move if trapped by fire.",
+          "answer": "myth",
+          "truth": "If outside has smoke or flames, breaking glass draws fire inside. Signal without breaking."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "If trapped in a room by hallway fire, what should you seal door cracks with?",
+          "options": [
+            "Plastic sheets",
+            "Wet towels or clothes",
+            "Cardboard boxes",
+            "Dry newspaper"
+          ],
+          "correct": 1,
+          "explanation": "Wet towels or cloth block smoke from penetrating under the door."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Flames in the corridor block {name}'s exit from the room at {at}."
+        ],
+        "question": "What should {name} do to stay safe until rescued?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Close door and seal cracks with wet cloth",
+            "note": "Blocks smoke from entering room.",
+            "weight": 40,
+            "critical": true,
+            "keys": "close door|seal|wet cloth|towel"
+          },
+          {
+            "point": "Call 112 / 101 and report exact room location",
+            "note": "Directs rescue teams immediately.",
+            "weight": 30,
+            "critical": true,
+            "keys": "call (112|101|emergency)|phone"
+          },
+          {
+            "point": "Signal from the window with a cloth or flashlight",
+            "note": "Alerts rescuers without jumping.",
+            "weight": 30,
+            "critical": false,
+            "keys": "signal|window|wave|cloth"
+          }
+        ],
+        "dangerous": [
+          "jump from (high|balcony|window)",
+          "open door into fire"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA High-Rise Guidelines",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-027",
+      "agentId": "ember",
+      "subtopic": "School drill",
+      "title": "School fire drills and assembly points",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Panic and stampedes cause more injuries during evacuations than flames.",
+        "School assembly grounds ensure teachers can conduct headcount roll calls."
+      ],
+      "do": [
+        "Follow teacher instructions and walk briskly without pushing",
+        "Leave heavy backpacks and bags behind",
+        "Assemble quietly at the designated muster ground for roll call"
+      ],
+      "dont": [
+        "Never run, push or scream during evacuation",
+        "Never return inside for bags, phones or homework"
+      ],
+      "myths": [
+        {
+          "statement": "During a fire alarm, grabbing your school bag is fine if it takes 5 seconds.",
+          "answer": "myth",
+          "truth": "Every second counts in fire evacuation. Leave bags; save lives."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most important rule when leaving the classroom during a fire drill?",
+          "options": [
+            "Run as fast as you can",
+            "Walk calmly in line without pushing",
+            "Carry all books",
+            "Hide in bathroom"
+          ],
+          "correct": 1,
+          "explanation": "Orderly walking prevents fatal stairwell crushes and stampedes."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "The fire alarm rings loudly across the school building at {at}."
+        ],
+        "question": "How should {name} and classmates exit the classroom?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Leave all bags and personal items behind",
+            "note": "Speeds up evacuation.",
+            "weight": 30,
+            "critical": true,
+            "keys": "leave bag|no bag|belongings"
+          },
+          {
+            "point": "Walk calmly in single file without running or shoving",
+            "note": "Prevents stampede on stairs.",
+            "weight": 35,
+            "critical": true,
+            "keys": "walk|don'?t run|calm|no push"
+          },
+          {
+            "point": "Assemble at the designated outdoor sports ground for headcount",
+            "note": "Ensures nobody is missing.",
+            "weight": 35,
+            "critical": true,
+            "keys": "assembly point|ground|roll call|headcount"
+          }
+        ],
+        "dangerous": [
+          "run fast",
+          "push",
+          "go back for (bag|phone)"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Education School Safety Manual",
+          "url": "https://dsel.education.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-028",
+      "agentId": "ember",
+      "subtopic": "Child safety",
+      "title": "Matches and lighters away from young kids",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Young children perceive lighters and matchsticks as toys rather than hazards.",
+        "Most residential fires sparked by children occur in bedrooms and closets."
+      ],
+      "do": [
+        "Store matches, lighters, and pooja materials in high locked cupboards",
+        "Teach younger siblings that fire tools are adults-only tools",
+        "Hand any stray matchbox found on floor to an adult immediately"
+      ],
+      "dont": [
+        "Never leave lighters on low coffee tables or beds",
+        "Never let children play with diyas or sparklers"
+      ],
+      "myths": [
+        {
+          "statement": "Giving an empty lighter to a toddler as a toy is harmless.",
+          "answer": "myth",
+          "truth": "Empty lighters still spark and teach dangerous mimicking habits."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where should matchboxes and lighters always be stored at home?",
+          "options": [
+            "On living room coffee table",
+            "In a high, locked cabinet out of reach of children",
+            "In the toy basket",
+            "Under the bed"
+          ],
+          "correct": 1,
+          "explanation": "Storing out of children's reach prevents accidental house fires."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At home at {at}, {name} sees their 4-year-old cousin playing with a lighter on the sofa."
+        ],
+        "question": "What should {name} do right away?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Gently take the lighter away from the child",
+            "note": "Removes immediate ignition hazard.",
+            "weight": 40,
+            "critical": true,
+            "keys": "take away|remove lighter"
+          },
+          {
+            "point": "Hand it to a parent or adult immediately",
+            "note": "Ensures adult supervision.",
+            "weight": 35,
+            "critical": true,
+            "keys": "give adult|tell parent|hand to adult"
+          },
+          {
+            "point": "Store it in a high secure cabinet",
+            "note": "Prevents access by children.",
+            "weight": 25,
+            "critical": false,
+            "keys": "high place|cupboard|cabinet|out of reach"
+          }
+        ],
+        "dangerous": [
+          "let child play",
+          "strike lighter"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Home Safety Council of India",
+          "url": "https://homesafety.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-029",
+      "agentId": "ember",
+      "subtopic": "Home hazards",
+      "title": "Mosquito coils, candles, and agarbatti",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A glowing mosquito coil tip reaches over 500°C and can ignite paper or curtains easily.",
+        "Leaving candles or coils burning while asleep causes nocturnal house fires."
+      ],
+      "do": [
+        "Keep coils on sturdy metal stands inside deep metal plates",
+        "Keep candles at least 1 meter away from curtains, beds, and books",
+        "Extinguish all burning coils and candles before going to sleep"
+      ],
+      "dont": [
+        "Never place coils directly on cardboard, plastic or carpets",
+        "Never leave lit candles unattended in empty rooms"
+      ],
+      "myths": [
+        {
+          "statement": "Mosquito coils burn at low temperatures and cannot ignite fabric.",
+          "answer": "myth",
+          "truth": "Coil embers burn at 500°C and easily set mattresses and bedsheets on fire."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should always be placed under a mosquito coil stand?",
+          "options": [
+            "Cardboard",
+            "A wide metal or ceramic plate",
+            "Newspaper",
+            "Plastic lid"
+          ],
+          "correct": 1,
+          "explanation": "Metal or ceramic plates catch falling hot ash safely without burning."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At bedtime at {at}, {name} notices an agarbatti burning right beside blowing window curtains."
+        ],
+        "question": "What action should {name} take?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Move the incense far away from curtains and fabric",
+            "note": "Eliminates contact with flammable cloth.",
+            "weight": 40,
+            "critical": true,
+            "keys": "move away|distance|away from curtain"
+          },
+          {
+            "point": "Place on heatproof ceramic or metal holder",
+            "note": "Safely contains hot falling ash.",
+            "weight": 25,
+            "critical": false,
+            "keys": "metal plate|stand|ceramic"
+          },
+          {
+            "point": "Extinguish if nobody is in the room or before sleeping",
+            "note": "Prevents unattended fires.",
+            "weight": 35,
+            "critical": true,
+            "keys": "extinguish|put out|before sleep"
+          }
+        ],
+        "dangerous": [
+          "leave near curtain",
+          "ignore"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Bureau of Indian Standards (BIS)",
+          "url": "https://bis.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-030",
+      "agentId": "ember",
+      "subtopic": "Electrical",
+      "title": "Socket overloading and extension board safety",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Plugging multiple heating appliances into one strip exceeds wire amp ratings.",
+        "Overloaded circuits heat up inside walls, causing hidden attic and wall fires."
+      ],
+      "do": [
+        "Plug high-power devices (heaters, irons, geysers) directly into dedicated wall sockets",
+        "Check extension cords for frayed insulation or melting smells",
+        "Unplug chargers and boards when not in active use"
+      ],
+      "dont": [
+        "Never plug multiple extension boards into each other (daisy chaining)",
+        "Never run power cords under rugs or doorways"
+      ],
+      "myths": [
+        {
+          "statement": "You can plug an iron, microwave, and kettle into one strip if it has enough holes.",
+          "answer": "myth",
+          "truth": "Current draw will exceed the cord's rating, melting plastic and causing fires."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is it dangerous to plug a room heater into a cheap power strip?",
+          "options": [
+            "It wastes electricity",
+            "Heaters draw heavy current that can melt the strip and ignite fire",
+            "It damages the room",
+            "It makes heater too hot"
+          ],
+          "correct": 1,
+          "explanation": "High-wattage appliances draw heavy currents that overheat thin extension wires."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the study room at {at}, {name} sees an iron, room heater, and laptop plugged into a single cheap multi-plug adapter that feels hot."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Switch off and unplug high-draw appliances immediately",
+            "note": "Stops current overload before melting occurs.",
+            "weight": 40,
+            "critical": true,
+            "keys": "switch off|unplug|turn off"
+          },
+          {
+            "point": "Do not touch burning or melted plastic with bare hands",
+            "note": "Prevents electrical burns.",
+            "weight": 20,
+            "critical": false,
+            "keys": "careful|don'?t touch bare"
+          },
+          {
+            "point": "Inform parents and connect heater directly to 15A wall socket",
+            "note": "Uses properly rated wiring.",
+            "weight": 40,
+            "critical": true,
+            "keys": "wall socket|15a|tell parent|adult"
+          }
+        ],
+        "dangerous": [
+          "plug more devices",
+          "ignore hot plug"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Electricity Authority (Safety Regulations)",
+          "url": "https://cea.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-031",
+      "agentId": "ember",
+      "subtopic": "Gadgets",
+      "title": "Overheating phone and power bank charging",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Lithium-ion batteries can enter thermal runaway if punctured, crushed or overheated.",
+        "Charging phones under pillows traps heat, preventing natural dissipation."
+      ],
+      "do": [
+        "Charge phones on hard, flat, ventilated surfaces like tables",
+        "Stop using and safely dispose of any swollen or bulging battery",
+        "Unplug chargers once the device reaches full charge"
+      ],
+      "dont": [
+        "Never charge phones under pillows or on mattresses overnight",
+        "Never use cheap uncertified replacement chargers"
+      ],
+      "myths": [
+        {
+          "statement": "Charging your phone under a soft pillow is completely safe.",
+          "answer": "myth",
+          "truth": "Pillows trap charging heat, leading to battery swelling and explosion."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do if your power bank feels unusually hot and swollen?",
+          "options": [
+            "Put it in freezer",
+            "Stop using and charging it immediately; move to fire-safe area",
+            "Press the bulge down",
+            "Shake it"
+          ],
+          "correct": 1,
+          "explanation": "Swollen batteries can burst into flame. Discontinue use immediately."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At night at {at}, {name} finds their phone charging tucked under their sleeping pillow, feeling burning hot."
+        ],
+        "question": "What is the safest move for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Unplug the charger from the wall socket",
+            "note": "Cuts power supply to battery.",
+            "weight": 35,
+            "critical": true,
+            "keys": "unplug|disconnect|switch off"
+          },
+          {
+            "point": "Move phone off bed onto a hard, non-flammable desk",
+            "note": "Allows phone to dissipate heat safely.",
+            "weight": 35,
+            "critical": true,
+            "keys": "move off bed|table|desk|hard surface"
+          },
+          {
+            "point": "Never sleep with phone under pillow or bedding",
+            "note": "Prevents thermal runaway.",
+            "weight": 30,
+            "critical": false,
+            "keys": "never under pillow|ventilated"
+          }
+        ],
+        "dangerous": [
+          "leave under pillow",
+          "put in water"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CERT-In Device Safety Advisory",
+          "url": "https://cert-in.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-032",
+      "agentId": "ember",
+      "subtopic": "Vehicles",
+      "title": "Vehicle fire evacuation in cars and buses",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Vehicle fires spread rapidly due to fuel, oil, upholstery, and electrical wires.",
+        "Smoke and toxic fumes fill a closed vehicle cabin in under 60 seconds."
+      ],
+      "do": [
+        "Alert driver and passengers calmly to pull over safely",
+        "Evacuate everyone immediately and move at least 30 meters away",
+        "Call 112 / 101 from a safe distance outside"
+      ],
+      "dont": [
+        "Never return inside a burning car for bags or valuables",
+        "Never stand downwind of vehicle smoke"
+      ],
+      "myths": [
+        {
+          "statement": "If a car catches fire, you should open the bonnet wide to blow it out.",
+          "answer": "myth",
+          "truth": "Opening the bonnet lets in massive oxygen, creating an immediate fireball."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "If smoke begins billowing from a school bus bonnet, what should students do?",
+          "options": [
+            "Stay seated and wait",
+            "Evacuate calmly through doors and move 30 meters away",
+            "Open the engine bonnet",
+            "Collect heavy school bags"
+          ],
+          "correct": 1,
+          "explanation": "Evacuate quickly and maintain safe standoff distance in case of fuel tank rupture."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While traveling in a vehicle at {at}, {name} notices acrid electrical smoke pouring from under the dashboard."
+        ],
+        "question": "What should {name} and passengers do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Instruct driver to stop vehicle and turn off ignition",
+            "note": "Cuts fuel pump and electrical flow.",
+            "weight": 35,
+            "critical": true,
+            "keys": "stop vehicle|pull over|turn off engine"
+          },
+          {
+            "point": "Evacuate all passengers immediately without gathering luggage",
+            "note": "Saves lives before toxic fumes accumulate.",
+            "weight": 35,
+            "critical": true,
+            "keys": "evacuate|get out|leave bags|exit"
+          },
+          {
+            "point": "Move at least 30 meters upwind and call 112",
+            "note": "Keeps safe distance from fuel explosion.",
+            "weight": 30,
+            "critical": false,
+            "keys": "safe distance|30 meters|call 112"
+          }
+        ],
+        "dangerous": [
+          "go back for luggage",
+          "open bonnet into flames"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Road Transport and Highways",
+          "url": "https://morth.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-033",
+      "agentId": "ember",
+      "subtopic": "Outdoors",
+      "title": "Bonfire and garden leaf burning safety",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Burning dry leaves releases toxic fine particulate matter and risks runaway fires.",
+        "Unattended bonfires can be reignited hours later by sudden wind gusts."
+      ],
+      "do": [
+        "Clear a 3-meter safety ring of bare dirt around any fire pit",
+        "Keep a bucket of water or sand right next to the campfire",
+        "Drown the coals completely with water and stir until cold before leaving"
+      ],
+      "dont": [
+        "Never burn plastic, rubber or treated wood",
+        "Never walk away from an active campfire"
+      ],
+      "myths": [
+        {
+          "statement": "If a campfire stops showing flames, it is safe to leave without water.",
+          "answer": "myth",
+          "truth": "Deep embers retain heat for over 24 hours. Drown with water until cool to touch."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you ensure a campfire is completely extinguished before leaving?",
+          "options": [
+            "Cover it with dry leaves",
+            "Pour water, stir ashes, and feel that coals are cold",
+            "Blow on it",
+            "Walk away"
+          ],
+          "correct": 1,
+          "explanation": "Drown, stir, and check temperature to ensure no hidden hot embers remain."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After an outdoor camping activity at {at}, the campfire is smoking but flames are gone."
+        ],
+        "question": "How should {name} and team properly extinguish the pit?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Drench all embers thoroughly with water",
+            "note": "Cools down deep glowing coals.",
+            "weight": 35,
+            "critical": true,
+            "keys": "water|drench|pour"
+          },
+          {
+            "point": "Stir the ashes with a stick and add more water",
+            "note": "Exposes hidden coals to water.",
+            "weight": 35,
+            "critical": true,
+            "keys": "stir|mix ashes"
+          },
+          {
+            "point": "Confirm ashes are completely cold to the touch",
+            "note": "Ensures zero rekindling risk.",
+            "weight": 30,
+            "critical": false,
+            "keys": "cold|cool|touch"
+          }
+        ],
+        "dangerous": [
+          "leave smoking embers",
+          "cover with dry grass"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Environment, Forest and Climate Change",
+          "url": "https://moef.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-034",
+      "agentId": "ember",
+      "subtopic": "Wildfire",
+      "title": "Grass and forest fire on hiking trails",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Wildfires move uphill much faster than downhill because rising heat pre-warms slope vegetation.",
+        "Shifting wind directions can rapidly trap hikers in steep valleys."
+      ],
+      "do": [
+        "Move downhill and downwind toward natural fire breaks like rivers or wide roads",
+        "Stay in cleared areas with sparse vegetation",
+        "Call forest helpline or 112 with exact trail landmarks"
+      ],
+      "dont": [
+        "Never try to outrun a fire heading uphill",
+        "Never hide inside narrow ravines or caves"
+      ],
+      "myths": [
+        {
+          "statement": "When escaping a forest fire on a mountain, running uphill is safer.",
+          "answer": "myth",
+          "truth": "Flames race uphill twice as fast as downhill. Always escape downhill and sideways."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why is it dangerous to run uphill when escaping a forest fire?",
+          "options": [
+            "You get tired",
+            "Heat and flames travel uphill significantly faster",
+            "Wild animals are there",
+            "Phone signal drops"
+          ],
+          "correct": 1,
+          "explanation": "Rising convective heat pre-heats uphill brush, causing fires to explode upward."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While on a hillside trek at {at}, {name} spots a fast-moving brush fire advancing up the slope."
+        ],
+        "question": "Which direction should {name} evacuate?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Move downhill and sideways toward cleared terrain",
+            "note": "Fire races uphill; downhill provides escape time.",
+            "weight": 40,
+            "critical": true,
+            "keys": "downhill|sideways|away from slope"
+          },
+          {
+            "point": "Avoid narrow ravines and dense dry thickets",
+            "note": "Ravines act as natural chimneys for fire.",
+            "weight": 30,
+            "critical": true,
+            "keys": "avoid ravine|open area|bare ground"
+          },
+          {
+            "point": "Alert trek leader and call emergency services 112",
+            "note": "Coordinates forest rescue.",
+            "weight": 30,
+            "critical": false,
+            "keys": "call 112|alert leader|forest staff"
+          }
+        ],
+        "dangerous": [
+          "run uphill",
+          "climb higher"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Forest Survey of India Wildfire Guidelines",
+          "url": "https://fsi.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-035",
+      "agentId": "ember",
+      "subtopic": "Family plan",
+      "title": "Creating a home fire escape plan",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Families have as little as two minutes to escape safely once a smoke alarm sounds.",
+        "Having a designated meeting spot outside ensures everyone is accounted for quickly."
+      ],
+      "do": [
+        "Map two exit paths (door and window) from every bedroom",
+        "Designate a fixed meeting spot outside (e.g. big tree or park gate)",
+        "Practise the escape drill with family twice a year"
+      ],
+      "dont": [
+        "Never use lifts or elevators during any building fire",
+        "Never search for pets or toys during evacuation"
+      ],
+      "myths": [
+        {
+          "statement": "During a house fire, everyone should gather in the living room first.",
+          "answer": "myth",
+          "truth": "Gathering indoors risks getting trapped. Everyone must escape outside to the meeting spot."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most crucial part of a family fire escape plan?",
+          "options": [
+            "Buying expensive ladders",
+            "Having two ways out of every room and a fixed outdoor meeting point",
+            "Writing long essays",
+            "Keeping windows locked"
+          ],
+          "correct": 1,
+          "explanation": "Two exits and an outside meeting spot prevent people being trapped inside."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s family at {at} is creating their yearly home fire safety plan."
+        ],
+        "question": "What key elements must {name} include in the family plan?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Identify two exit routes from every room",
+            "note": "Ensures backup if main door is blocked.",
+            "weight": 35,
+            "critical": true,
+            "keys": "two exits|two ways|door and window"
+          },
+          {
+            "point": "Pick a fixed outdoor meeting spot outside the building",
+            "note": "Enables instant headcount.",
+            "weight": 35,
+            "critical": true,
+            "keys": "outdoor meeting point|outside spot|tree|gate"
+          },
+          {
+            "point": "Never take elevators; always take stairways",
+            "note": "Prevents getting trapped in elevator shafts.",
+            "weight": 30,
+            "critical": false,
+            "keys": "no elevator|stairs|staircase"
+          }
+        ],
+        "dangerous": [
+          "use elevator",
+          "meet inside house"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NDMA Home Safety Campaign",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FIRE-036",
+      "agentId": "ember",
+      "subtopic": "Aftermath",
+      "title": "Safety rules for re-entering a fire-affected building",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Burned structures suffer hidden beam weaknesses, gas pockets, and toxic ash.",
+        "Smoldering embers inside wall cavities can reignite hours after flames are doused."
+      ],
+      "do": [
+        "Wait until the fire department officially declares the structure safe",
+        "Wear sturdy closed shoes and a particulate mask when re-entering",
+        "Have an electrician inspect house wiring before restoring power"
+      ],
+      "dont": [
+        "Never enter a burned building without fire officer permission",
+        "Never use damaged switches or gas valves"
+      ],
+      "myths": [
+        {
+          "statement": "Once flames are out, families can move back into the house immediately.",
+          "answer": "myth",
+          "truth": "Structural weakness, carbon monoxide, and damaged wiring present deadly post-fire hazards."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Who must grant permission before anyone re-enters a house after a fire?",
+          "options": [
+            "The building watchman",
+            "The Fire Department or municipal safety engineer",
+            "The neighbours",
+            "Anyone who is brave"
+          ],
+          "correct": 1,
+          "explanation": "Only fire officials can verify structural stability and absence of toxic gases."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A fire at {at} was extinguished by firefighters an hour ago. {name}'s friend wants to run inside to grab their laptop."
+        ],
+        "question": "What should {name} advise?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do not enter until fire officers declare it safe",
+            "note": "Prevents collapse and smoke asphyxiation.",
+            "weight": 40,
+            "critical": true,
+            "keys": "don'?t enter|wait for fire department|officials"
+          },
+          {
+            "point": "Beware of structural collapse and live fallen wires",
+            "note": "Hidden dangers remain active.",
+            "weight": 35,
+            "critical": true,
+            "keys": "structural collapse|weak floor|live wire"
+          },
+          {
+            "point": "Do not flip electrical mains back on without inspection",
+            "note": "Avoids electrical flashovers.",
+            "weight": 25,
+            "critical": false,
+            "keys": "no electricity|certified electrician|inspect"
+          }
+        ],
+        "dangerous": [
+          "run inside right away",
+          "climb in window"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Delhi Fire Service Public Notice",
+          "url": "https://delhifireservice.gov.in"
+        }
+      ],
+      "reviewed": true
     }
-   ],
-   "scenario": {
-    "situations": [
-     "It's Diwali night. {At}, a cracker {name} lit doesn't go off. {relation} says 'Go check it and light it again!'"
-    ],
-    "question": "What should {name} do?",
-    "emojis": [
-     "🎆",
-     "🧨",
-     "✨"
-    ],
-    "bubble": "Just light it again!",
-    "rubric": [
-     {
-      "point": "Don't go near or relight the dud",
-      "note": "It can still explode.",
-      "weight": 40,
-      "critical": true,
-      "keys": "(no|not|never|don'?t)[^.]{0,20}(relight|light it|go near|touch)|wait|stay (away|back)"
-     },
-     {
-      "point": "Wait, then soak it in a bucket of water",
-      "note": "Water makes it safe.",
-      "weight": 30,
-      "critical": false,
-      "keys": "water|bucket|soak|sand"
-     },
-     {
-      "point": "Make sure an adult is supervising",
-      "note": "Crackers need adult supervision.",
-      "weight": 30,
-      "critical": false,
-      "keys": "adult|parent|grown|supervis"
-     }
-    ],
-    "dangerous": [
-     "(relight|light it again|pick it up|go (and )?check)(?![^.]{0,5}(no|not))"
-    ],
-    "settings": [
-     "housing society event",
-     "festival ground",
-     "home"
-    ]
-   },
-   "agentId": "ember",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  }
- ]
+  ]
 }

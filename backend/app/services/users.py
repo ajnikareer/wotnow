@@ -14,24 +14,42 @@ from . import clock
 USERS = "users"
 PUBLIC = ("id", "nickname", "avatar", "grade", "band", "city", "country", "school", "className", "xp", "level", "levelName",
           "nextLevelXp", "streak", "answers", "avgScore", "skills", "badges", "follows")
-ALL_DOMAINS = ["fire", "road", "firstaid", "nutrition", "civic", "environment", "digital", "careers"]
+ALL_DOMAINS = [
+    # LIFE
+    "fire", "road", "firstaid", "disaster", "safety", "law", "fitness", "hygiene",
+    # PLANET
+    "environment", "animals", "greenenergy", "civic",
+    # FUTURE
+    "money", "enterprise", "careers", "digital", "nutrition",
+    # MIND
+    "feelings", "screentime", "inclusion",
+]
 DEMO_SCHOOL = "Sunrise Public School"   # new demo users join the seeded school so leaderboards are populated
 
 BADGES = [
     ("first", "✨", "First Answer", lambda u: u["answers"] >= 1),
     ("streak7", "🔥", "7-Day Streak", lambda u: u.get("bestStreak", 0) >= 7),
     ("fire", "🧯", "Fire Ready", lambda u: u["skills"].get("fire", 0) >= 80),
-    ("road", "🚑", "Road Rescuer", lambda u: u["skills"].get("road", 0) >= 80),
+    ("road", "🚦", "Road Rescuer", lambda u: u["skills"].get("road", 0) >= 80),
+    ("aid", "🩹", "First Responder", lambda u: u["skills"].get("firstaid", 0) >= 80),
+    ("disaster", "🌪️", "Storm Ready", lambda u: u["skills"].get("disaster", 0) >= 80),
+    ("safety", "🛡️", "Safety Guardian", lambda u: u["skills"].get("safety", 0) >= 80),
+    ("law", "⚖️", "Legal Eagle", lambda u: u["skills"].get("law", 0) >= 80),
     ("scam", "🕵️", "Scam Spotter", lambda u: u["counts"].get("scamCorrect", 0) >= 3),
     ("fast", "⚡", "Fastest Finger", lambda u: u["counts"].get("quizBest", 0) >= 60),
     ("green", "🌱", "Green Week", lambda u: u["counts"].get("checkins", 0) >= 5),
-    ("aid", "🩹", "First Responder", lambda u: u["skills"].get("firstaid", 0) >= 80),
+    ("money", "🪙", "Money Master", lambda u: u["skills"].get("money", 0) >= 80),
+    ("mind", "🧠", "Mindful Hero", lambda u: u["skills"].get("feelings", 0) >= 80),
+    ("paws", "🐾", "Animal Ally", lambda u: u["skills"].get("animals", 0) >= 80),
 ]
 
 
 def default_settings(grade: int) -> dict:
-    return {"dailyLimit": 30, "quietHours": "", "weeklyEmail": True,
-            "topics": {d: (d != "careers" or grade >= 9) for d in ALL_DOMAINS}}
+    topics = {}
+    for a in C.agents():
+        d = a["domain"]
+        topics[d] = a["minGrade"] <= grade and a.get("defaultTopicOn", True)
+    return {"dailyLimit": 30, "quietHours": "", "weeklyEmail": True, "topics": topics}
 
 
 def auto_class(grade: int) -> str:

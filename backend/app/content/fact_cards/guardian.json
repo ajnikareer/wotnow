@@ -1,0 +1,1641 @@
+{
+  "agentId": "guardian",
+  "cards": [
+    {
+      "id": "SAFE-001",
+      "agentId": "guardian",
+      "subtopic": "Body safety",
+      "title": "My body belongs to me: Safe touch and the Swimsuit Rule",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Your body belongs exclusively to you; nobody has the right to touch you in a way that makes you feel uneasy.",
+        "The areas covered by a traditional swimsuit (chest, between legs, and bottom) are private parts."
+      ],
+      "do": [
+        "Remember: Private parts are private; nobody should touch them except doctors or parents keeping you clean/healthy",
+        "Say a loud, firm 'NO!' if anyone tries to touch your private parts or asks you to touch theirs",
+        "Get away immediately and tell a trusted adult on your safety list right away"
+      ],
+      "dont": [
+        "Never keep unsafe touch a secret, even if the person tells you it's a game",
+        "Never feel guilty or blame yourself; you did nothing wrong"
+      ],
+      "myths": [
+        {
+          "statement": "If someone you know well touches you uncomfortably, you must stay quiet because they are an adult.",
+          "answer": "myth",
+          "truth": "Rules of safe touch apply to everyone: strangers, relatives, neighbors, and teachers alike. Speak up."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What are private parts on your body according to the universal Swimsuit Rule?",
+          "options": [
+            "Hands and elbows",
+            "Parts covered by a swimsuit: chest, between legs, and bottom",
+            "Ears and nose",
+            "Knees only"
+          ],
+          "correct": 1,
+          "explanation": "Swimsuit areas are strictly private. Nobody should touch them inappropriately."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At {at}, an adult makes {name} feel uneasy and uncomfortable by trying to touch under clothing."
+        ],
+        "question": "What must {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Say 'NO!' loudly and firmly and move away immediately",
+            "note": "Asserts clear bodily boundaries without hesitation.",
+            "weight": 45,
+            "critical": true,
+            "keys": "say no|firm no|move away|run away"
+          },
+          {
+            "point": "Go straight to a trusted adult on your safety list and tell them everything",
+            "note": "Breaks silence and secures immediate protection.",
+            "weight": 40,
+            "critical": true,
+            "keys": "tell trusted adult|tell parent|tell teacher|report"
+          },
+          {
+            "point": "Remember that this is NEVER your fault and you have nothing to feel ashamed of",
+            "note": "Affirms self-worth and removes victim-blaming.",
+            "weight": 15,
+            "critical": false,
+            "keys": "not your fault|no shame|body belongs to you"
+          }
+        ],
+        "dangerous": [
+          "keep it a secret",
+          "blame yourself",
+          "stay silent in fear"
+        ]
+      },
+      "sources": [
+        {
+          "name": "POCSO Act Awareness Guidelines (NCPCR)",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-002",
+      "agentId": "guardian",
+      "subtopic": "Secrets",
+      "title": "Secrets vs surprises: Good surprises vs unsafe secrets",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A good surprise (like a birthday gift or party) is temporary, happy, and will soon be shared openly with everyone.",
+        "An unsafe secret makes you feel worried, guilty, or scared in your tummy, and someone tells you never to tell parents."
+      ],
+      "do": [
+        "Tell a trusted adult immediately if someone says: 'Keep this a secret from your parents'",
+        "Know the difference: Surprises bring happy smiles; unsafe secrets feel heavy and scary",
+        "Remember: No safe adult will ever ask a child to keep secrets from their mother or father"
+      ],
+      "dont": [
+        "Never promise to keep a secret that makes you feel uneasy or uncomfortable",
+        "Never keep a secret about someone touching you or showing inappropriate pictures"
+      ],
+      "myths": [
+        {
+          "statement": "Keeping a secret that makes you feel scared is fine if an adult tells you you will get a reward.",
+          "answer": "myth",
+          "truth": "Adults who ask children to keep secrets from parents are crossing safety boundaries. Always tell parents."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How can you tell the difference between a good surprise and an unsafe secret?",
+          "options": [
+            "Surprises are written on paper",
+            "Surprises are temporary, happy, and shared soon; unsafe secrets make you feel scared and tell you to hide from parents",
+            "Secrets are always fun",
+            "There is no difference"
+          ],
+          "correct": 1,
+          "explanation": "Safe surprises end in open happy celebrations; unsafe secrets cause fear and isolation."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At {at}, an older acquaintance gives {name} an expensive gift and says: 'This is our special secret, don't tell your parents.'"
+        ],
+        "question": "How should {name} respond?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that safe adults do not ask children to keep secrets from parents",
+            "note": "Identifies deceptive grooming tactics.",
+            "weight": 45,
+            "critical": true,
+            "keys": "no secrets from parents|unsafe secret|grooming"
+          },
+          {
+            "point": "Tell parents or a trusted adult about the gift and the secret request immediately",
+            "note": "Brings transparency and adult oversight.",
+            "weight": 40,
+            "critical": true,
+            "keys": "tell parents|tell trusted adult|show gift"
+          },
+          {
+            "point": "Understand that you will not get into trouble for reporting an unsafe secret",
+            "note": "Relieves anxiety about speaking up.",
+            "weight": 15,
+            "critical": false,
+            "keys": "won'?t get in trouble|be honest"
+          }
+        ],
+        "dangerous": [
+          "hide gift under bed secretly",
+          "promise to never tell parents",
+          "keep the secret"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Childline India Foundation (Secrets & Surprises)",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-003",
+      "agentId": "guardian",
+      "subtopic": "Support network",
+      "title": "My 5 Trusted Adults: Building your safety circle",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A 'Trusted Adult' is someone who listens carefully, believes you, respects boundaries, and takes action to protect you.",
+        "Having a pre-identified list of 5 trusted adults ensures you always know whom to turn to in distress."
+      ],
+      "do": [
+        "Identify 5 adults you feel safe with (e.g. Mother, Father, School Counselor, Grandmother, Aunt, Favorite Teacher)",
+        "Make sure at least one of your 5 trusted adults is outside your immediate home (like a teacher or doctor)",
+        "If the first adult on your list does not listen or seems busy, go to the second adult immediately"
+      ],
+      "dont": [
+        "Never keep worries locked inside just because one adult didn't understand the first time",
+        "Never choose a trusted adult who makes you feel uncomfortable or tells you to hide things"
+      ],
+      "myths": [
+        {
+          "statement": "If you tell one adult about a problem and they don't help, you must give up and suffer silently.",
+          "answer": "myth",
+          "truth": "Adults can be distracted. Keep telling the next trusted adult on your list until someone takes action."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most important quality of a 'Trusted Adult' on your safety list?",
+          "options": [
+            "They give you lots of candy",
+            "They listen without judging, believe you, make you feel safe, and help solve problems",
+            "They have a fancy car",
+            "They let you skip school"
+          ],
+          "correct": 1,
+          "explanation": "Trusted adults provide emotional security, objective guidance, and active protection."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} is creating their personal 'Safety Hand' (5 Trusted Adults list) at {at}."
+        ],
+        "question": "How should {name} select their trusted adults?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Choose 5 adults who listen patiently, believe you, and respect your feelings",
+            "note": "Builds a reliable, empathetic safety network.",
+            "weight": 45,
+            "critical": true,
+            "keys": "listen patiently|believe you|respect feelings|trusted adult"
+          },
+          {
+            "point": "Include at least one person from school or community (like a favorite teacher or counselor)",
+            "note": "Ensures external support channels.",
+            "weight": 35,
+            "critical": true,
+            "keys": "include teacher|school counselor|external adult"
+          },
+          {
+            "point": "Remember to keep telling the next adult on your list until someone listens and helps",
+            "note": "Persistence ensures safety resolution.",
+            "weight": 20,
+            "critical": false,
+            "keys": "keep telling|next adult|don'?t give up"
+          }
+        ],
+        "dangerous": [
+          "choose strangers online",
+          "pick someone who tells you to keep secrets",
+          "have zero trusted adults"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Kailash Satyarthi Children's Foundation",
+          "url": "https://satyarthi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-004",
+      "agentId": "guardian",
+      "subtopic": "Strangers",
+      "title": "The stranger at the school gate: Lifts, candies and pets",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Tricking children with puppies, candy, or claiming 'Your mother sent me to pick you up' is a classic lure.",
+        "Parents will ALWAYS inform school authorities or provide the pre-agreed family Safe Word if someone else picks you up."
+      ],
+      "do": [
+        "Step back at least 5 big steps (two arm-lengths) away from unfamiliar cars or strangers calling to you",
+        "Say firmly: 'No thank you, I will wait with my teacher inside the school gate'",
+        "Walk straight back into the school building and inform the security guard, principal, or teacher"
+      ],
+      "dont": [
+        "Never accept lifts, snacks, chocolates, or money from unfamiliar adults",
+        "Never get into a car or auto with someone unless your parents personally verified it with you"
+      ],
+      "myths": [
+        {
+          "statement": "If a stranger at the school gate knows your nickname, that means your parents sent them to take you home.",
+          "answer": "myth",
+          "truth": "Strangers can easily overhear your friends calling your name or read your school bag tag. Never go with them."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An unfamiliar person in a car outside school says: 'Your mother is unwell, hop in quickly so I can take you to her.' What do you do?",
+          "options": [
+            "Get into the car immediately",
+            "Do NOT get in; run back inside the school gate and tell the teacher or security guard immediately",
+            "Ask for candy",
+            "Walk with them"
+          ],
+          "correct": 1,
+          "explanation": "Never enter an unfamiliar car. Always verify through school teachers and direct phone contact with parents."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Waiting outside school at {at}, an unfamiliar adult approaches {name}: 'Your dad asked me to pick you up today, come with me.'"
+        ],
+        "question": "What is the only safe protocol for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Do NOT go with the stranger and step back away from their vehicle",
+            "note": "Avoids abduction and physical grab range.",
+            "weight": 45,
+            "critical": true,
+            "keys": "do not go|step back|refuse lift|stay away"
+          },
+          {
+            "point": "Ask for the pre-agreed secret family 'Safe Word' or go back inside school to verify",
+            "note": "Verifies parental authorization.",
+            "weight": 35,
+            "critical": true,
+            "keys": "safe word|verify with teacher|call parents"
+          },
+          {
+            "point": "Stay inside the school gate with teachers or security guards until parents arrive",
+            "note": "Secures safe adult custody.",
+            "weight": 20,
+            "critical": false,
+            "keys": "stay inside school|security guard|wait with teacher"
+          }
+        ],
+        "dangerous": [
+          "get into stranger's car",
+          "walk away with stranger",
+          "believe them without checking"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Delhi Commission for Protection of Child Rights (DCPCR)",
+          "url": "https://dcpcr.delhi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-005",
+      "agentId": "guardian",
+      "subtopic": "Street awareness",
+      "title": "Feeling followed on the street: Crossing, shops and shouting",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Walking with confident posture, head held high, and scanning surroundings discourages opportunistic stalkers.",
+        "Heading into a brightly lit public shop or family-filled store instantly eliminates solitary vulnerability."
+      ],
+      "do": [
+        "Cross the road deliberately to see if the person crosses too, confirming your suspicion",
+        "Do not go home to an empty house; walk immediately into a busy, well-lit public store, bank, or restaurant",
+        "Approach the shopkeeper or security guard clearly: 'I think I am being followed, please help me call my parents'"
+      ],
+      "dont": [
+        "Never walk into empty alleys, dark shortcuts, or deserted park pathways when feeling followed",
+        "Never hesitate to shout loudly: 'STOP! Leave me alone!' if someone approaches too closely"
+      ],
+      "myths": [
+        {
+          "statement": "If someone is following you, walking into a dark quiet shortcut helps you sneak away faster.",
+          "answer": "myth",
+          "truth": "Dark deserted alleys trap you without bystanders. Always head toward busy, well-lit crowds and shops."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do immediately if you realize a stranger on foot or on a scooter is following you?",
+          "options": [
+            "Walk into a dark empty alley",
+            "Head straight into a busy open shop, pharmacy, or bank with staff and call parents",
+            "Look down at phone",
+            "Stop and wait"
+          ],
+          "correct": 1,
+          "explanation": "Entering a public business provides immediate adult witnesses, CCTV coverage, and telephone access."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Walking back from tuition at {at}, {name} notices an unfamiliar person matching their pace for three blocks."
+        ],
+        "question": "What proactive safety moves should {name} make?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Cross to the other side of the road to confirm if they are tracking your path",
+            "note": "Tests and confirms suspicious intent.",
+            "weight": 35,
+            "critical": true,
+            "keys": "cross road|check if following|confirm"
+          },
+          {
+            "point": "Walk directly into the nearest busy shop, medical store, or family restaurant",
+            "note": "Places yourself in a safe, populated, well-lit environment.",
+            "weight": 45,
+            "critical": true,
+            "keys": "busy shop|store|restaurant|crowd"
+          },
+          {
+            "point": "Ask the shopkeeper to help you call your parents or dial police 112",
+            "note": "Activates immediate community and police protection.",
+            "weight": 20,
+            "critical": false,
+            "keys": "call parents|call 112|ask shopkeeper"
+          }
+        ],
+        "dangerous": [
+          "run into dark deserted lane",
+          "go to empty house alone",
+          "confront stranger alone"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Commission for Women (NCW Safety Guidelines)",
+          "url": "https://ncw.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-006",
+      "agentId": "guardian",
+      "subtopic": "Home security",
+      "title": "Home alone safety: Locked doors and phone rules",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Doors must remain deadbolted from the inside when staying home alone.",
+        "Telling callers or strangers at the door 'I am home alone' advertises vulnerability."
+      ],
+      "do": [
+        "Keep the main entrance door and security latch firmly locked at all times",
+        "Look through the door peephole or window before responding to any doorbell",
+        "If a delivery or repairperson arrives, tell them through the closed door: 'My parents are busy, please leave the package outside'"
+      ],
+      "dont": [
+        "Never open the door to delivery partners, salespeople, or unfamiliar technicians when home alone",
+        "Never tell telephone callers or post on social media: 'Home alone today!'"
+      ],
+      "myths": [
+        {
+          "statement": "If a delivery person brings a parcel for your parents while you are home alone, opening the door wide is polite.",
+          "answer": "myth",
+          "truth": "Never open the door to anyone when home alone. Ask them to leave the parcel outside or return later."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you say through a locked door if a delivery person knocks while you are home alone?",
+          "options": [
+            "I am home alone, come in",
+            "My parents are busy right now; please leave the parcel at the door or come back later",
+            "Open door wide",
+            "Cry loudly"
+          ],
+          "correct": 1,
+          "explanation": "Saying 'parents are busy' signals adult presence in the house without opening the lock."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Staying home alone for an hour at {at}, the doorbell rings and an unfamiliar courier asks {name} to open the door."
+        ],
+        "question": "How should {name} manage this safely?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Keep the door firmly locked and do NOT open it",
+            "note": "Maintains impenetrable physical barrier.",
+            "weight": 45,
+            "critical": true,
+            "keys": "keep door locked|do not open|stay locked"
+          },
+          {
+            "point": "Speak through the closed door: 'My parents are busy, please leave the parcel outside'",
+            "note": "Gives impression of adult presence indoors.",
+            "weight": 40,
+            "critical": true,
+            "keys": "parents are busy|leave outside|come back later"
+          },
+          {
+            "point": "Call or text parents to inform them about the delivery knock",
+            "note": "Keeps parents informed in real time.",
+            "weight": 15,
+            "critical": false,
+            "keys": "text parents|call family"
+          }
+        ],
+        "dangerous": [
+          "open door wide",
+          "invite courier inside for water",
+          "say nobody is home but me"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Bureau of Police Research and Development (BPRD Home Safety)",
+          "url": "https://bprd.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-007",
+      "agentId": "guardian",
+      "subtopic": "Family security",
+      "title": "Family secret Safe Word: The verification code",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A family 'Safe Word' is a secret code known exclusively to you and your parents.",
+        "If an emergency occurs and parents must send someone else to collect you, that person MUST know the Safe Word."
+      ],
+      "do": [
+        "Choose a fun, memorable family secret word (e.g. 'BlueMango' or 'FlyingPanda') that you never share with friends",
+        "If an adult approaches saying 'Your parents sent me', demand: 'What is our family Safe Word?'",
+        "If the person cannot state the exact Safe Word, refuse to move and run to school teachers or security"
+      ],
+      "dont": [
+        "Never tell your family Safe Word to classmates, neighbours, or on social media",
+        "Never accept any explanation ('Your parents forgot to tell me the word') as an excuse"
+      ],
+      "myths": [
+        {
+          "statement": "A family safe word should be an easy word like your pet's name that everyone in school knows.",
+          "answer": "myth",
+          "truth": "The safe word must be a private, unique family secret that no outsider could ever guess."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What must an adult sent by your parents say before you agree to go with them in an emergency?",
+          "options": [
+            "They show chocolate",
+            "They must state your secret family 'Safe Word' accurately",
+            "They tell a funny joke",
+            "They promise a toy"
+          ],
+          "correct": 1,
+          "explanation": "The Safe Word proves direct, verified parental authorization."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At {at}, an acquaintance approaches {name} saying: 'Your mother asked me to pick you up, hurry.'"
+        ],
+        "question": "What verification question must {name} ask?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Ask: 'What is our family secret Safe Word?'",
+            "note": "Tests for authentic parental authorization.",
+            "weight": 45,
+            "critical": true,
+            "keys": "safe word|what is the safe word|secret code"
+          },
+          {
+            "point": "If they do not know the exact word, refuse to go and step away immediately",
+            "note": "Decisive boundary enforcement.",
+            "weight": 40,
+            "critical": true,
+            "keys": "refuse to go|step away|do not leave"
+          },
+          {
+            "point": "Notify school authorities or call parents directly to verify",
+            "note": "Confirms emergency status.",
+            "weight": 15,
+            "critical": false,
+            "keys": "call parents|verify with school"
+          }
+        ],
+        "dangerous": [
+          "go with them without checking",
+          "tell them the safe word yourself",
+          "hop in car"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Center for Missing and Exploited Children Safety Rules",
+          "url": "https://missingkids.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-008",
+      "agentId": "guardian",
+      "subtopic": "Crowds",
+      "title": "Lost in a crowded market or festival: Safe helpers",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Crowded fairs, railway stations, and melas can separate children from parents in seconds.",
+        "Wandering around searching in panic increases distance; finding designated uniform helpers is safest."
+      ],
+      "do": [
+        "Stop walking immediately—stay near where you last saw family ('Freeze and stay in a safe spot')",
+        "Look for Safe Helpers: police officers, railway ticket examiners, security guards, or a mother with children",
+        "Recite your parents' mobile phone numbers clearly to the official helper and ask them to announce over public loudspeakers"
+      ],
+      "dont": [
+        "Never leave the building or festival ground with a stranger who offers to 'drive you home'",
+        "Never hide in dark corners or panic and wander into busy road traffic"
+      ],
+      "myths": [
+        {
+          "statement": "If you get lost in a massive crowd, running around searching every stall is the best way to find parents.",
+          "answer": "myth",
+          "truth": "Running makes you miss each other. Stay in one open, safe spot and approach a uniformed helper."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Who is the safest person to approach for help if you get lost in a shopping mall or crowded festival?",
+          "options": [
+            "A stranger sitting in a car outside",
+            "A uniformed security guard, information desk executive, or a police officer",
+            "Someone hiding in an alley",
+            "Nobody"
+          ],
+          "correct": 1,
+          "explanation": "Uniformed personnel and customer help desks have public address loudspeaker systems to page parents."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In a bustling festival fair at {at}, {name} turns around and realizes parents are nowhere in sight."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop wandering and look for a uniformed police officer, security guard, or information counter",
+            "note": "Connects to official public assistance.",
+            "weight": 45,
+            "critical": true,
+            "keys": "uniformed police|security guard|information desk|safe helper"
+          },
+          {
+            "point": "Provide parents' memorized mobile phone numbers clearly to the official helper",
+            "note": "Enables direct phone contact with family.",
+            "weight": 40,
+            "critical": true,
+            "keys": "phone number|call parents|contact details"
+          },
+          {
+            "point": "Do not leave the festival venue with any stranger offering a private lift",
+            "note": "Prevents abduction outside secured zone.",
+            "weight": 15,
+            "critical": false,
+            "keys": "do not leave with stranger|stay in venue"
+          }
+        ],
+        "dangerous": [
+          "leave festival ground alone",
+          "accept lift from stranger",
+          "hide in dark alley and cry"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Commission for Protection of Child Rights (NCPCR)",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-009",
+      "agentId": "guardian",
+      "subtopic": "Online safety",
+      "title": "Spotting online grooming: Flattery, gifts and secrecy",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Online predators spend weeks building trust through excessive flattery, gaming gifts, and shared 'secrets'.",
+        "Grooming follows a pattern: isolating the young person from parents, requesting photos, and shifting to private apps."
+      ],
+      "do": [
+        "Be on high alert if an online acquaintance showers you with gaming gifts (Robux, skins) or says: 'Only I understand you'",
+        "Recognize the red flag when an online friend insists: 'Don't tell your parents we chat' or asks to move to Snapchat/Discord DMs",
+        "Take screenshots, block the user, and show the conversation to a trusted adult immediately"
+      ],
+      "dont": [
+        "Never send private photos, video call strangers without clothing, or reveal personal school locations",
+        "Never agree to meet an online-only acquaintance in person in the physical world"
+      ],
+      "myths": [
+        {
+          "statement": "An online friend from an overseas gaming group who sends you gifts and asks for personal photos is just being friendly.",
+          "answer": "myth",
+          "truth": "Requesting personal photos or asking children to hide chats from parents is textbook predatory grooming."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a major red-flag sign of online grooming in gaming and social media chats?",
+          "options": [
+            "Sharing game strategies",
+            "Asking you to keep your chats a secret from parents and asking for private photos",
+            "Congratulating on a win",
+            "Playing a match"
+          ],
+          "correct": 1,
+          "explanation": "Demands for secrecy and requests for personal photos indicate malicious predatory behavior."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "An older gamer in an online community at {at} sends {name} gifts and texts: 'You are so special, don't tell your parents we chat, send me a private photo.'"
+        ],
+        "question": "What is the urgent safety response for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize this immediately as predatory online grooming and do NOT send any photos",
+            "note": "Identifies dangerous grooming pattern.",
+            "weight": 45,
+            "critical": true,
+            "keys": "grooming|red flag|do not send photos|predatory"
+          },
+          {
+            "point": "Block the user immediately and preserve screenshots of the messages",
+            "note": "Captures forensic evidence while cutting contact.",
+            "weight": 40,
+            "critical": true,
+            "keys": "block user|screenshot messages|cut contact"
+          },
+          {
+            "point": "Show the conversation to parents or report on Childline 1098 / cybercrime portal",
+            "note": "Activates protective adult intervention.",
+            "weight": 15,
+            "critical": false,
+            "keys": "tell parents|call 1098|cybercrime report"
+          }
+        ],
+        "dangerous": [
+          "send private photos secretly",
+          "keep chat secret from parents",
+          "agree to meet in person alone"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CERT-In Child Online Safety Advisory",
+          "url": "https://cert-in.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-010",
+      "agentId": "guardian",
+      "subtopic": "Boundaries",
+      "title": "Handling uncomfortable comments: Saying NO and telling",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "You have the constitutional and moral right to bodily integrity, personal dignity, and emotional respect.",
+        "Uncomfortable comments about your body or personal space from anyone (peers or adults) are unacceptable."
+      ],
+      "do": [
+        "Use a firm, loud voice with eye contact: 'Stop! I do not like that comment, do not say that to me'",
+        "Walk away with your head held high to a populated, safe area",
+        "Report the incident to a parent, teacher, or trusted adult: remember that telling is NOT 'snitching'"
+      ],
+      "dont": [
+        "Never laugh along or smile nervously when someone makes an inappropriate comment about your body",
+        "Never keep uncomfortable encounters bottled up inside"
+      ],
+      "myths": [
+        {
+          "statement": "If an adult makes an uncomfortable remark about your body, you must smile and stay quiet to be polite.",
+          "answer": "myth",
+          "truth": "Politeness never requires tolerating boundary violations. You have the right to assert boundaries firmly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the difference between 'snitching' and 'reporting' an uncomfortable safety incident?",
+          "options": [
+            "They are the same",
+            "Snitching is trying to get someone in petty trouble; reporting is protecting yourself or others from harm",
+            "Reporting is bad",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "Reporting safety violations is an act of courage that protects the entire community."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At {at}, an older person makes an inappropriate, creepy comment about {name}'s appearance that feels deeply wrong."
+        ],
+        "question": "How should {name} react?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Say firmly: 'Stop, do not speak to me like that' and walk away immediately",
+            "note": "Sets clear assertive personal boundary.",
+            "weight": 45,
+            "critical": true,
+            "keys": "say stop|firm boundary|walk away|don'?t speak like that"
+          },
+          {
+            "point": "Tell a trusted adult, parent, or school counselor what happened right away",
+            "note": "Secures supportive adult intervention.",
+            "weight": 40,
+            "critical": true,
+            "keys": "tell trusted adult|tell parent|counselor|report"
+          },
+          {
+            "point": "Understand that you have the right to feel safe and respected at all times",
+            "note": "Validates emotional boundary rights.",
+            "weight": 15,
+            "critical": false,
+            "keys": "right to respect|feel safe|not your fault"
+          }
+        ],
+        "dangerous": [
+          "smile and pretend it's fine",
+          "stay silent and cry in room",
+          "blame your clothing"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Commission for Protection of Child Rights",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-011",
+      "agentId": "guardian",
+      "subtopic": "Anti-bullying",
+      "title": "Dealing with school bullying: Adults have a duty to act",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Bullying is repetitive, aggressive behavior involving an imbalance of power (physical, verbal, or social).",
+        "Under CBSE and state school education rules, schools are legally mandated to have Anti-Bullying Committees."
+      ],
+      "do": [
+        "Tell the bully firmly once: 'Stop, leave me alone' in a calm, confident voice, then walk away",
+        "Report every bullying incident to your class teacher, principal, school counselor, or parents with specific dates",
+        "Stay in groups of friendly classmates during recess, corridors, and bus rides (bullies target isolated students)"
+      ],
+      "dont": [
+        "Never believe the cruel insults bullies say about you (bullying reflects the bully's insecurity, not your worth)",
+        "Never resort to dangerous physical violence that can get you hurt or suspended"
+      ],
+      "myths": [
+        {
+          "statement": "Being bullied in school is just a normal character-building ritual that every student must endure quietly.",
+          "answer": "myth",
+          "truth": "Bullying causes severe psychological trauma and is strictly illegal under school safety regulations."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Under CBSE guidelines, what committee must every school maintain to protect students from harassment?",
+          "options": [
+            "Sports team",
+            "Anti-Bullying and Child Protection Committee",
+            "Canteen committee",
+            "Debate club"
+          ],
+          "correct": 1,
+          "explanation": "Schools are legally required to maintain anti-bullying committees to resolve harassment complaints."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A group of students at {at} repeatedly pushes, insults, and steals {name}'s lunchbox during recess."
+        ],
+        "question": "What is the constructive, empowered response for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Report the repeated bullying formally to the class teacher, school counselor, or principal",
+            "note": "Activates school disciplinary protection mechanisms.",
+            "weight": 45,
+            "critical": true,
+            "keys": "tell teacher|counselor|report bullying|principal"
+          },
+          {
+            "point": "Confide in parents so they can write an official note to the school administration",
+            "note": "Secures family backing and formal institutional records.",
+            "weight": 35,
+            "critical": true,
+            "keys": "tell parents|official note|family support"
+          },
+          {
+            "point": "Remember that you are worthy, valued, and bullying is NEVER your fault",
+            "note": "Protects mental resilience and self-esteem.",
+            "weight": 20,
+            "critical": false,
+            "keys": "not your fault|valued|worthy"
+          }
+        ],
+        "dangerous": [
+          "suffer silently every day",
+          "skip school permanently",
+          "bring weapons to school"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CBSE School Safety and Anti-Bullying Directives",
+          "url": "https://cbse.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-012",
+      "agentId": "guardian",
+      "subtopic": "Environment safety",
+      "title": "Avoiding unsafe isolated spots: Stairwells, basements and abandoned areas",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Over 80% of peer bullying and predatory harassment occurs in unmonitored, isolated 'blind spots'.",
+        "Empty basements, deserted terraces, and isolated washrooms lack adult oversight and CCTV coverage."
+      ],
+      "do": [
+        "Always use buddy pairs: take a trusted classmate along when visiting distant school washrooms or supply rooms",
+        "Stick to well-lit, populated corridors and active campus areas during recess and after-school hours",
+        "If you must walk through a quiet stairwell, walk purposefully with head up and stay observant"
+      ],
+      "dont": [
+        "Never hang out in dark, deserted school basements, abandoned sports sheds, or rooftop terraces",
+        "Never agree to follow an acquaintance into an empty, isolated room to 'see a secret'"
+      ],
+      "myths": [
+        {
+          "statement": "Hanging out in dark abandoned campus buildings alone is completely safe if you are brave.",
+          "answer": "myth",
+          "truth": "Isolated unmonitored zones lack emergency exits, witnesses, and immediate adult assistance."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the 'Buddy System' rule for visiting distant school areas like sports sheds or quiet washrooms?",
+          "options": [
+            "Go alone in dark",
+            "Always take a trusted friend along so you are never isolated in unmonitored spaces",
+            "Hide in closets",
+            "Never wash hands"
+          ],
+          "correct": 1,
+          "explanation": "The buddy system ensures mutual safety, immediate assistance, and deterrence against harassment."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During free period at {at}, an older student invites {name} to an empty, deserted basement storeroom."
+        ],
+        "question": "How should {name} respond?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely refuse to enter isolated unmonitored areas and stay in public corridors",
+            "note": "Eliminates situational vulnerability.",
+            "weight": 45,
+            "critical": true,
+            "keys": "refuse|stay in public|avoid isolated basement|stay in light"
+          },
+          {
+            "point": "Recognize that isolated unmonitored spaces represent common safety risk zones",
+            "note": "Understands environmental crime prevention.",
+            "weight": 35,
+            "critical": true,
+            "keys": "isolated spaces|safety risk|stay near people"
+          },
+          {
+            "point": "Use the buddy system and stick to active, populated areas of the campus",
+            "note": "Practices peer safety habits.",
+            "weight": 20,
+            "critical": false,
+            "keys": "buddy system|populated areas"
+          }
+        ],
+        "dangerous": [
+          "follow into dark basement alone",
+          "hide in deserted shed",
+          "ignore intuitive warning feelings"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Institute of Public Cooperation and Child Development (NIPCCD)",
+          "url": "https://nipccd.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-013",
+      "agentId": "guardian",
+      "subtopic": "Autonomy",
+      "title": "Saying NO to familiar adults: Bodily autonomy and consent",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Most child boundary violations are committed by people known to the child (relatives, tutors, neighbors).",
+        "Children are never obligated to endure uncomfortable physical affection (forced hugs, tickling, sitting on laps)."
+      ],
+      "do": [
+        "Understand that respect does not require surrendering your bodily comfort: a warm 'Namaste' or handshake is completely polite",
+        "Say firmly: 'I prefer not to hug right now, namaste!' if forced into uncomfortable physical contact",
+        "Tell your parents if a relative, neighbor, or tutor touches you in a way that feels awkward or wrong"
+      ],
+      "dont": [
+        "Never force yourself to sit on an adult's lap if it makes you feel uneasy",
+        "Never believe an adult who says: 'If you loved your uncle/tutor, you would let me touch you'"
+      ],
+      "myths": [
+        {
+          "statement": "Children must always allow relatives and family friends to kiss and hug them even if they feel uncomfortable.",
+          "answer": "myth",
+          "truth": "Bodily autonomy begins in childhood. You have the total right to choose respectful non-physical greetings."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a polite, culturally respectful alternative to an uncomfortable hug from a visiting relative?",
+          "options": [
+            "Running away screaming",
+            "A warm smile, folded hands 'Namaste', or a polite handshake",
+            "Insulting them loudly",
+            "Pinching them"
+          ],
+          "correct": 1,
+          "explanation": "Namaste is an ancient, respectful Indian greeting that maintains healthy physical boundaries."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At a family gathering at {at}, an adult relative insists {name} sit on their lap, which makes {name} feel uneasy."
+        ],
+        "question": "How can {name} uphold their bodily boundaries respectfully?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Step back politely and say: 'I prefer to sit on this chair, namaste Uncle'",
+            "note": "Asserts bodily comfort with poise and respect.",
+            "weight": 45,
+            "critical": true,
+            "keys": "sit on chair|prefer not to|namaste|step back"
+          },
+          {
+            "point": "Remember that you have the complete right to decide who touches your body",
+            "note": "Reinforces core bodily autonomy.",
+            "weight": 35,
+            "critical": true,
+            "keys": "bodily autonomy|right to choose|my body"
+          },
+          {
+            "point": "Tell your parents privately if any relative's behavior continues to feel uncomfortable",
+            "note": "Brings parental protection.",
+            "weight": 20,
+            "critical": false,
+            "keys": "tell parents privately|report discomfort"
+          }
+        ],
+        "dangerous": [
+          "endure uncomfortable touch in silence",
+          "blame yourself for feeling uneasy",
+          "let boundaries be violated"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Women and Child Development Guidelines",
+          "url": "https://wcd.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-014",
+      "agentId": "guardian",
+      "subtopic": "Emergency data",
+      "title": "Memorizing vital safety info: Phone numbers and home address",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Smartphones run out of battery, get lost, or break during real-world crises.",
+        "A child who has memorized two parental phone numbers can be safely reunited within 15 minutes."
+      ],
+      "do": [
+        "Memorize your mother's and father's 10-digit mobile phone numbers by heart through daily rhythm practice",
+        "Know your full home address clearly: Flat/House number, building name, road, colony, and city",
+        "Know your school's full name and your blood group if possible"
+      ],
+      "dont": [
+        "Never rely 100% on phone contacts list without knowing numbers in your head",
+        "Never write your phone number and home address in large visible letters on the outside of your backpack"
+      ],
+      "myths": [
+        {
+          "statement": "Memorizing phone numbers is obsolete in the 21st century because smartphones store everything.",
+          "answer": "myth",
+          "truth": "If your phone battery dies or is lost, you are helpless unless parent numbers are memorized in your mind."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What two pieces of personal information should every student know by heart from memory?",
+          "options": [
+            "Their high score in video games",
+            "At least two parental 10-digit phone numbers and their full home address",
+            "The names of 50 actors",
+            "WiFi passwords"
+          ],
+          "correct": 1,
+          "explanation": "Parent phone numbers and home address are foundational life-saving safety coordinates."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a school trip at {at}, {name}'s mobile phone battery dies completely and {name} gets separated."
+        ],
+        "question": "How does {name}'s mental preparation save the day?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recite mother's or father's 10-digit mobile number from memory to the police or station master",
+            "note": "Enables instant direct telephone reconnection.",
+            "weight": 45,
+            "critical": true,
+            "keys": "recite phone number|memorized number|call mother|call father"
+          },
+          {
+            "point": "State full home address, colony, and school name clearly",
+            "note": "Provides complete geographical identification.",
+            "weight": 35,
+            "critical": true,
+            "keys": "full address|colony name|school name"
+          },
+          {
+            "point": "Approach a uniformed officer or customer help desk calmly",
+            "note": "Secures official safe transit.",
+            "weight": 20,
+            "critical": false,
+            "keys": "uniformed officer|help desk|stay calm"
+          }
+        ],
+        "dangerous": [
+          "panic because phone battery is dead",
+          "give up and wander into streets",
+          "follow strangers"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Commission for Protection of Child Rights Guidelines",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-015",
+      "agentId": "guardian",
+      "subtopic": "Helplines",
+      "title": "Emergency helplines: Child Helpline 1098 and Police 112",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "1098 is India's 24/7, free, emergency phone outreach service for children in need of care and protection.",
+        "Calls to 1098 and 112 can be made from ANY landline or mobile phone even with zero balance and no SIM."
+      ],
+      "do": [
+        "Dial 1098 if you or another child is facing abuse, child labor, child marriage, or extreme distress",
+        "Dial 112 for immediate all-in-one emergency response (Police, Fire, and Ambulance)",
+        "Speak clearly and state your city, location, and what emergency help you need"
+      ],
+      "dont": [
+        "Never make prank or prank joke calls to 1098 or 112 (it blocks lines for children in real danger)",
+        "Never fear that calling 1098 will get you into trouble; it is a safe child-friendly service"
+      ],
+      "myths": [
+        {
+          "statement": "You need a mobile recharge and positive balance to call emergency helplines like 112 or 1098.",
+          "answer": "myth",
+          "truth": "Emergency calls to 112 and 1098 are legally mandated to connect free of cost from all telecom networks."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the official nationwide emergency helpline number dedicated exclusively to children in India?",
+          "options": [
+            "100",
+            "1098 (Childline)",
+            "101",
+            "108"
+          ],
+          "correct": 1,
+          "explanation": "1098 operates 24/7 across India under the Ministry of Women and Child Development."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} learns that a classmate is being subjected to severe physical harm and needs help."
+        ],
+        "question": "What confidential emergency action can be taken?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Call Child Helpline 1098 or Police 112 to report the situation safely",
+            "note": "Triggers professional child protection rescue.",
+            "weight": 45,
+            "critical": true,
+            "keys": "call 1098|childline|dial 112|report distress"
+          },
+          {
+            "point": "Provide the location, school, or residential details clearly to the counselor",
+            "note": "Enables Child Welfare Committee (CWC) outreach.",
+            "weight": 35,
+            "critical": true,
+            "keys": "provide location|details|counselor|clear report"
+          },
+          {
+            "point": "Understand that calls to 1098 are confidential, free, and protected by law",
+            "note": "Removes fear of retribution.",
+            "weight": 20,
+            "critical": false,
+            "keys": "confidential|free call|protected"
+          }
+        ],
+        "dangerous": [
+          "make prank calls to 1098",
+          "ignore child in danger",
+          "post on social media without reporting"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Women and Child Development (Childline 1098)",
+          "url": "https://wcd.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-016",
+      "agentId": "guardian",
+      "subtopic": "Peer support",
+      "title": "Supporting a friend who confides in you about an unsafe situation",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Children experiencing abuse or boundary violations often confide in a best friend before any adult.",
+        "A supportive peer listens without judgment, validates their pain, and helps connect them to safe adults."
+      ],
+      "do": [
+        "Listen calmly, believe them completely, and say: 'Thank you for telling me, I believe you, it is not your fault'",
+        "Gently explain: 'I care about your safety too much to keep this secret. Let's talk to our school counselor together'",
+        "Go with them to hold their hand while speaking to a trusted teacher or parent"
+      ],
+      "dont": [
+        "Never promise to keep a secret that involves someone hurting your friend or them hurting themselves",
+        "Never judge, mock, or share your friend's sensitive secret with other classmates as gossip"
+      ],
+      "myths": [
+        {
+          "statement": "If a friend tells you someone is hurting them at home, keeping their secret forever is true friendship loyalty.",
+          "answer": "myth",
+          "truth": "True friendship protects lives. Harm and abuse must never be kept secret. Tell a trusted adult."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most supportive thing to say when a friend confides that someone touched them inappropriately?",
+          "options": [
+            "Why didn't you stop them?",
+            "I believe you, it is NOT your fault, and I am here to help you get safe adult support",
+            "You must have done something wrong",
+            "Tell everyone in school"
+          ],
+          "correct": 1,
+          "explanation": "Believing the victim and affirming zero blame relieves guilt and enables healing."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During lunch break at {at}, a close classmate breaks down in tears and confides about an unsafe touch incident."
+        ],
+        "question": "How should {name} support their friend?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Listen with deep empathy, believe them completely, and reassure: 'It is not your fault'",
+            "note": "Provides essential emotional safety.",
+            "weight": 45,
+            "critical": true,
+            "keys": "i believe you|not your fault|listen with empathy"
+          },
+          {
+            "point": "Encourage and accompany them to speak with the school counselor or trusted teacher",
+            "note": "Bridges the child to professional protection.",
+            "weight": 40,
+            "critical": true,
+            "keys": "school counselor|trusted teacher|tell together|support"
+          },
+          {
+            "point": "Do not gossip or spread their confidential story across class group chats",
+            "note": "Maintains sacred personal confidentiality.",
+            "weight": 15,
+            "critical": false,
+            "keys": "no gossip|confidential|respect privacy"
+          }
+        ],
+        "dangerous": [
+          "blame the friend",
+          "spread rumor on whatsapp",
+          "promise to keep abuse a secret forever"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NCPCR Guidelines on Peer Support in Child Protection",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-017",
+      "agentId": "guardian",
+      "subtopic": "Transit safety",
+      "title": "Safe travel in cabs and autos: Live location and safety checks",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Traveling independently in app-based cabs or auto-rickshaws requires simple routine verification habits.",
+        "Live location sharing allows parents to track your vehicle's GPS route in real time on a digital map."
+      ],
+      "do": [
+        "Verify the vehicle license plate, driver name, and car model against your app booking screen before getting in",
+        "Share your trip live location with your parents on WhatsApp or through the cab app's safety feature",
+        "Check that the rear interior door child-lock is not engaged, so you can open the door from the inside anytime"
+      ],
+      "dont": [
+        "Never board a cab or auto if the driver has an unauthorized stranger sitting in the front passenger seat",
+        "Never get into a cab whose license plate does not match the app details"
+      ],
+      "myths": [
+        {
+          "statement": "It is rude to check the license plate number of a taxi before getting inside.",
+          "answer": "myth",
+          "truth": "Verifying license plates against your booking screen is a basic, universal personal safety rule."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What safety feature on your smartphone should you activate when traveling alone in an auto or cab?",
+          "options": [
+            "Play loud games",
+            "Share your 'Live Location' with your parents on WhatsApp or through the transit app",
+            "Turn on airplane mode",
+            "Turn off GPS"
+          ],
+          "correct": 1,
+          "explanation": "Live location sharing gives parents real-time GPS tracking of your vehicle's speed and route."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} needs to take an auto-rickshaw or app cab home from tuition at {at}."
+        ],
+        "question": "What safety routine should {name} follow?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Verify the vehicle license plate number against the booking screen before boarding",
+            "note": "Guarantees you enter the authorized vehicle.",
+            "weight": 40,
+            "critical": true,
+            "keys": "check number plate|verify driver|license plate"
+          },
+          {
+            "point": "Share live trip location on WhatsApp with parents immediately upon starting the ride",
+            "note": "Enables real-time parental journey tracking.",
+            "weight": 40,
+            "critical": true,
+            "keys": "share live location|parents track|whatsapp location"
+          },
+          {
+            "point": "Sit directly behind the driver (not in front) and ensure you can open the door from inside",
+            "note": "Maintains strategic exit capability.",
+            "weight": 20,
+            "critical": false,
+            "keys": "sit behind driver|check door opens"
+          }
+        ],
+        "dangerous": [
+          "board vehicle with wrong number plate",
+          "turn off phone GPS",
+          "accept ride with stranger in passenger seat"
+        ]
+      },
+      "sources": [
+        {
+          "name": "MoRTH Guidelines for Passenger Safety in Commercial Transport",
+          "url": "https://morth.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "SAFE-018",
+      "agentId": "guardian",
+      "subtopic": "Intuition",
+      "title": "Trusting your gut feeling: That uneasy knot in your stomach",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Your brain processes millions of subconscious sensory cues (body language, tone, micro-expressions) instantly.",
+        "An unexplained feeling of dread, goosebumps, or an uneasy knot in your stomach is your internal alarm bell."
+      ],
+      "do": [
+        "Trust your instincts: If a person, place, or situation feels 'weird' or 'wrong', treat it as a valid danger signal",
+        "You do not need to justify or explain why you feel unsafe before removing yourself from a situation",
+        "Make an excuse ('My mom is calling me right now') and leave the room or area immediately"
+      ],
+      "dont": [
+        "Never ignore an intuitive warning feeling just to appear 'polite' or 'cool'",
+        "Never stay in a situation that makes your tummy turn just because everyone else is staying"
+      ],
+      "myths": [
+        {
+          "statement": "A gut feeling of uneasiness is just silly childish imagination that should be ignored.",
+          "answer": "myth",
+          "truth": "Intuition is your brain's evolved survival radar detecting subtle danger cues. Always honor your instincts."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do if an unfamiliar situation or person gives you an intense uneasy feeling in your stomach?",
+          "options": [
+            "Force yourself to stay and laugh",
+            "Trust your gut instinct, create an excuse, and leave for a safe place immediately",
+            "Ignore the feeling",
+            "Close your eyes"
+          ],
+          "correct": 1,
+          "explanation": "Honoring your intuition keeps you steps ahead of danger before a threat escalates."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Visiting an acquaintance's home or gathering at {at}, {name} gets an intense uneasy 'gut feeling' that something is off."
+        ],
+        "question": "How should {name} honor their internal alarm?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Trust the uneasy instinct and prioritize personal safety without worrying about being polite",
+            "note": "Validates subconscious biological radar.",
+            "weight": 45,
+            "critical": true,
+            "keys": "trust gut feeling|instincts|prioritize safety"
+          },
+          {
+            "point": "Make a calm, quick exit excuse ('I must head home now, my parent is waiting') and leave",
+            "note": "Facilitates safe, non-confrontational departure.",
+            "weight": 35,
+            "critical": true,
+            "keys": "make excuse and leave|exit immediately|walk away"
+          },
+          {
+            "point": "Rejoin trusted friends or parents in a well-lit, populated environment",
+            "note": "Restores physical safety.",
+            "weight": 20,
+            "critical": false,
+            "keys": "rejoin parents|safe environment"
+          }
+        ],
+        "dangerous": [
+          "ignore gut feeling to look cool",
+          "stay in uncomfortable room",
+          "tell yourself you are silly"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Child Protection Guidelines on Situational Awareness",
+          "url": "https://ncpcr.gov.in"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

@@ -1,242 +1,1719 @@
 {
- "agentId": "terra",
- "cards": [
-  {
-   "id": "ENV-001",
-   "subtopic": "Saving water",
-   "title": "Saving water at home",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "A running tap can waste several litres a minute.",
-    "RO purifiers reject a lot of water that can be reused for mopping or plants.",
-    "A bucket bath usually uses far less water than a shower."
-   ],
-   "do": [
-    "Turn off the tap while brushing",
-    "Reuse RO reject water for mopping or plants",
-    "Report or fix leaks",
-    "Water plants early in the morning"
-   ],
-   "dont": [
-    "Don't leave taps running",
-    "Don't wash vehicles with a running hose"
-   ],
-   "myths": [
+  "agentId": "terra",
+  "cards": [
     {
-     "statement": "A small dripping tap wastes too little water to matter.",
-     "answer": "myth",
-     "truth": "Drips add up to thousands of litres a year. Fix or report it."
-    }
-   ],
-   "quiz": [
+      "id": "ENV-001",
+      "subtopic": "Saving water",
+      "title": "Saving water at home",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A running tap can waste several litres a minute.",
+        "RO purifiers reject a lot of water that can be reused for mopping or plants.",
+        "A bucket bath usually uses far less water than a shower."
+      ],
+      "do": [
+        "Turn off the tap while brushing",
+        "Reuse RO reject water for mopping or plants",
+        "Report or fix leaks",
+        "Water plants early in the morning"
+      ],
+      "dont": [
+        "Don't leave taps running",
+        "Don't wash vehicles with a running hose"
+      ],
+      "myths": [
+        {
+          "statement": "A small dripping tap wastes too little water to matter.",
+          "answer": "myth",
+          "truth": "Drips add up to thousands of litres a year. Fix or report it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which saves the most water every day?",
+          "options": [
+            "Leaving the tap on while brushing",
+            "Turning the tap off while brushing",
+            "Washing the car with a hose",
+            "Long showers"
+          ],
+          "correct": 1,
+          "explanation": "Small daily habits save a lot over a year."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "It's a dry summer in {name}'s city and water comes only twice a day. {At}, {relation} is washing a scooter with a hose that's been running for 20 minutes."
+        ],
+        "question": "What could {name} suggest?",
+        "emojis": [
+          "💧",
+          "🚿",
+          "🛵"
+        ],
+        "bubble": "It's just water…",
+        "rubric": [
+          {
+            "point": "Use a bucket instead of a running hose",
+            "note": "A bucket uses a fraction of the water.",
+            "weight": 40,
+            "critical": true,
+            "keys": "bucket|mug|turn off|close the (tap|hose)|stop the hose"
+          },
+          {
+            "point": "Explain the water shortage kindly",
+            "note": "Kind reasons convince people.",
+            "weight": 30,
+            "critical": false,
+            "keys": "shortage|save|scarce|dry|waste|explain|politely"
+          },
+          {
+            "point": "Reuse water (e.g. RO reject) where possible",
+            "note": "Reuse stretches supply.",
+            "weight": 30,
+            "critical": false,
+            "keys": "reuse|ro|plants|mop|recycle"
+          }
+        ],
+        "dangerous": [],
+        "settings": [
+          "apartment building",
+          "home"
+        ]
+      },
+      "agentId": "terra",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "Which saves the most water every day?",
-     "options": [
-      "Leaving the tap on while brushing",
-      "Turning the tap off while brushing",
-      "Washing the car with a hose",
-      "Long showers"
-     ],
-     "correct": 1,
-     "explanation": "Small daily habits save a lot over a year."
-    }
-   ],
-   "scenario": {
-    "situations": [
-     "It's a dry summer in {name}'s city and water comes only twice a day. {At}, {relation} is washing a scooter with a hose that's been running for 20 minutes."
-    ],
-    "question": "What could {name} suggest?",
-    "emojis": [
-     "💧",
-     "🚿",
-     "🛵"
-    ],
-    "bubble": "It's just water…",
-    "rubric": [
-     {
-      "point": "Use a bucket instead of a running hose",
-      "note": "A bucket uses a fraction of the water.",
-      "weight": 40,
-      "critical": true,
-      "keys": "bucket|mug|turn off|close the (tap|hose)|stop the hose"
-     },
-     {
-      "point": "Explain the water shortage kindly",
-      "note": "Kind reasons convince people.",
-      "weight": 30,
-      "critical": false,
-      "keys": "shortage|save|scarce|dry|waste|explain|politely"
-     },
-     {
-      "point": "Reuse water (e.g. RO reject) where possible",
-      "note": "Reuse stretches supply.",
-      "weight": 30,
-      "critical": false,
-      "keys": "reuse|ro|plants|mop|recycle"
-     }
-    ],
-    "dangerous": [],
-    "settings": [
-     "apartment building",
-     "home"
-    ]
-   },
-   "agentId": "terra",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "ENV-004",
-   "subtopic": "Heat and air quality",
-   "title": "Heat and air quality days",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "On high-AQI days, hard outdoor exercise means breathing in more pollution.",
-    "Burning leaves and waste adds smoke directly to the air.",
-    "The hottest part of the day is usually around noon to 3 PM."
-   ],
-   "do": [
-    "Check the AQI before outdoor sport",
-    "Carry water on hot days",
-    "Avoid hard exercise outdoors when AQI is high",
-    "Share rides or use public transport"
-   ],
-   "dont": [
-    "Don't burn leaves or waste",
-    "Don't do hard outdoor exercise at midday in a heatwave"
-   ],
-   "myths": [
+      "id": "ENV-004",
+      "subtopic": "Heat and air quality",
+      "title": "Heat and air quality days",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "On high-AQI days, hard outdoor exercise means breathing in more pollution.",
+        "Burning leaves and waste adds smoke directly to the air.",
+        "The hottest part of the day is usually around noon to 3 PM."
+      ],
+      "do": [
+        "Check the AQI before outdoor sport",
+        "Carry water on hot days",
+        "Avoid hard exercise outdoors when AQI is high",
+        "Share rides or use public transport"
+      ],
+      "dont": [
+        "Don't burn leaves or waste",
+        "Don't do hard outdoor exercise at midday in a heatwave"
+      ],
+      "myths": [
+        {
+          "statement": "If the sky looks clear, the air quality must be good.",
+          "answer": "myth",
+          "truth": "Fine particles (PM2.5) are invisible. Check the AQI."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "The AQI is 210 today. What's the best choice for sports practice?",
+          "options": [
+            "Long run outdoors",
+            "Move practice indoors or make it light",
+            "Practise near traffic",
+            "Burn leaves to clear the air"
+          ],
+          "correct": 1,
+          "explanation": "High AQI means more pollution in your lungs during hard exercise."
+        }
+      ],
+      "scenario": null,
+      "agentId": "terra",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "statement": "If the sky looks clear, the air quality must be good.",
-     "answer": "myth",
-     "truth": "Fine particles (PM2.5) are invisible. Check the AQI."
-    }
-   ],
-   "quiz": [
+      "id": "ENV-007",
+      "subtopic": "Waste segregation",
+      "title": "Wet, dry and hazardous waste",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Wet waste (food, peels) can be composted.",
+        "Batteries and e-waste contain harmful chemicals and need special disposal.",
+        "Burning plastic releases toxic fumes."
+      ],
+      "do": [
+        "Separate wet, dry and hazardous waste",
+        "Compost food scraps if possible",
+        "Give e-waste and batteries to collection points"
+      ],
+      "dont": [
+        "Don't burn plastic",
+        "Don't throw batteries in the regular bin"
+      ],
+      "myths": [
+        {
+          "statement": "Old batteries can go in the kitchen bin with everything else.",
+          "answer": "myth",
+          "truth": "Batteries are hazardous waste. Use e-waste or battery collection points."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where do banana peels go?",
+          "options": [
+            "Dry waste",
+            "Wet waste / compost",
+            "E-waste",
+            "Burn them"
+          ],
+          "correct": 1,
+          "explanation": "Food scraps are wet waste and can be composted."
+        }
+      ],
+      "scenario": null,
+      "agentId": "terra",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "q": "The AQI is 210 today. What's the best choice for sports practice?",
-     "options": [
-      "Long run outdoors",
-      "Move practice indoors or make it light",
-      "Practise near traffic",
-      "Burn leaves to clear the air"
-     ],
-     "correct": 1,
-     "explanation": "High AQI means more pollution in your lungs during hard exercise."
-    }
-   ],
-   "scenario": null,
-   "agentId": "terra",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "ENV-007",
-   "subtopic": "Waste segregation",
-   "title": "Wet, dry and hazardous waste",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Wet waste (food, peels) can be composted.",
-    "Batteries and e-waste contain harmful chemicals and need special disposal.",
-    "Burning plastic releases toxic fumes."
-   ],
-   "do": [
-    "Separate wet, dry and hazardous waste",
-    "Compost food scraps if possible",
-    "Give e-waste and batteries to collection points"
-   ],
-   "dont": [
-    "Don't burn plastic",
-    "Don't throw batteries in the regular bin"
-   ],
-   "myths": [
+      "id": "ENV-010",
+      "subtopic": "Saving energy",
+      "title": "Saving energy at home",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Setting the AC to 24–26°C saves a lot of electricity compared with 18–20°C.",
+        "Chargers and devices on standby still use some power."
+      ],
+      "do": [
+        "Switch off lights and fans when leaving a room",
+        "Set AC to 24–26°C",
+        "Use daylight when possible",
+        "Unplug chargers when done"
+      ],
+      "dont": [
+        "Don't leave the TV on standby all night",
+        "Don't open the fridge door for long"
+      ],
+      "myths": [
+        {
+          "statement": "Setting the AC to 16°C cools the room faster.",
+          "answer": "myth",
+          "truth": "It cools at the same speed, just longer and colder, using more power. 24–26°C is efficient."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which AC setting is the most energy-efficient for comfort?",
+          "options": [
+            "16°C",
+            "18°C",
+            "24–26°C",
+            "Fan off, AC on 16°C"
+          ],
+          "correct": 2,
+          "explanation": "24–26°C is comfortable and saves electricity."
+        }
+      ],
+      "scenario": null,
+      "agentId": "terra",
+      "scams": [],
+      "reviewed": false,
+      "reviewNote": "Drafted from widely published guidance. Needs expert review before launch.",
+      "sources": [
+        {
+          "name": "National Guidelines & Safety Standards",
+          "url": "https://india.gov.in"
+        }
+      ]
+    },
     {
-     "statement": "Old batteries can go in the kitchen bin with everything else.",
-     "answer": "myth",
-     "truth": "Batteries are hazardous waste. Use e-waste or battery collection points."
-    }
-   ],
-   "quiz": [
+      "id": "ENV-021",
+      "agentId": "terra",
+      "subtopic": "Plastic",
+      "title": "Phasing out single-use plastic: Bags, bottles and cutlery",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Single-use plastic takes over 450 years to fragment into toxic microscopic plastic particles.",
+        "India produces over 3.4 million tonnes of plastic waste annually, choking drainage and marine life."
+      ],
+      "do": [
+        "Keep a foldable cloth bag inside your school backpack for unexpected purchases",
+        "Carry a reusable steel or copper water bottle instead of buying single-use plastic bottles",
+        "Refuse plastic straws, spoons, and disposable plastic carry bags politely: 'I brought my own'"
+      ],
+      "dont": [
+        "Never burn plastic waste in the open (releases carcinogenic dioxins and furans)",
+        "Never throw plastic packets into gutters or open plots"
+      ],
+      "myths": [
+        {
+          "statement": "Thin plastic carry bags dissolve quickly in sunlight and soil.",
+          "answer": "myth",
+          "truth": "Plastics never biodegrade; they merely fragment into toxic microplastics that enter our drinking water and food."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the simplest daily habit to stop plastic waste at the market?",
+          "options": [
+            "Ask for three plastic bags",
+            "Carry your own washable cloth tote bag and steel bottle",
+            "Throw plastic in bushes",
+            "Burn plastic"
+          ],
+          "correct": 1,
+          "explanation": "Carrying a reusable bag eliminates hundreds of single-use plastic bags per person every year."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the neighborhood grocery shop at {at}, the vendor offers {name} three thin black plastic carry bags."
+        ],
+        "question": "What eco-friendly action should {name} take?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely refuse the plastic bags: 'No thank you, I have a cloth bag'",
+            "note": "Cuts single-use plastic at source.",
+            "weight": 45,
+            "critical": true,
+            "keys": "refuse plastic|use cloth bag|brought my own"
+          },
+          {
+            "point": "Use a reusable cloth tote or backpack to pack items",
+            "note": "Durable, washable, zero-waste carrier.",
+            "weight": 35,
+            "critical": true,
+            "keys": "cloth tote|backpack|reusable bag"
+          },
+          {
+            "point": "Explain gently to peers why single-use plastics choke city drains",
+            "note": "Spreads environmental awareness.",
+            "weight": 20,
+            "critical": false,
+            "keys": "educate peers|choke drains|microplastics"
+          }
+        ],
+        "dangerous": [
+          "take 5 plastic bags",
+          "dump plastic on road",
+          "burn plastic in garden"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Plastic Waste Management Rules (MoEFCC)",
+          "url": "https://moef.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "Where do banana peels go?",
-     "options": [
-      "Dry waste",
-      "Wet waste / compost",
-      "E-waste",
-      "Burn them"
-     ],
-     "correct": 1,
-     "explanation": "Food scraps are wet waste and can be composted."
-    }
-   ],
-   "scenario": null,
-   "agentId": "terra",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  },
-  {
-   "id": "ENV-010",
-   "subtopic": "Saving energy",
-   "title": "Saving energy at home",
-   "bands": [
-    "junior",
-    "middle",
-    "senior"
-   ],
-   "facts": [
-    "Setting the AC to 24–26°C saves a lot of electricity compared with 18–20°C.",
-    "Chargers and devices on standby still use some power."
-   ],
-   "do": [
-    "Switch off lights and fans when leaving a room",
-    "Set AC to 24–26°C",
-    "Use daylight when possible",
-    "Unplug chargers when done"
-   ],
-   "dont": [
-    "Don't leave the TV on standby all night",
-    "Don't open the fridge door for long"
-   ],
-   "myths": [
+      "id": "ENV-022",
+      "agentId": "terra",
+      "subtopic": "E-waste",
+      "title": "Safe disposal of electronic waste (e-waste) and old batteries",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Discarded electronics contain toxic heavy metals: lead, mercury, cadmium, and arsenic.",
+        "Tossing batteries into common garbage contaminates local municipal soil and groundwater aquifers."
+      ],
+      "do": [
+        "Deposit old mobile phones, chargers, and wires at authorized e-waste collection bins",
+        "Look for certified take-back programs at electronics retail stores and schools",
+        "Store swollen or leaking batteries in a fire-safe container before dropping at recycling centers"
+      ],
+      "dont": [
+        "Never throw discarded gadgets, wires, or batteries into normal household dustbins",
+        "Never dismantle or break open old cathode ray tubes or lithium-ion batteries"
+      ],
+      "myths": [
+        {
+          "statement": "Old mobile phones thrown into landfills safely rust away like iron nails.",
+          "answer": "myth",
+          "truth": "Batteries and circuit boards leach lethal heavy metals like cadmium and lead into drinking wells."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where should you deposit broken earphones, old tablets, and dead batteries?",
+          "options": [
+            "In the wet compost bin",
+            "At an authorized e-waste collection center or brand take-back bin",
+            "In the street gutter",
+            "Burn them in backyard"
+          ],
+          "correct": 1,
+          "explanation": "Certified e-waste recyclers dismantle electronics in vacuum-sealed facilities to recover gold and copper safely."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Cleaning out a study desk drawer at {at}, {name} finds three dead mobile batteries and tangled broken chargers."
+        ],
+        "question": "What is the ecologically responsible way to discard them?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Collect them in a box and take them to an authorized e-waste drop-off bin",
+            "note": "Prevents hazardous heavy metal soil contamination.",
+            "weight": 45,
+            "critical": true,
+            "keys": "e-waste bin|authorized recycler|collection center"
+          },
+          {
+            "point": "Do not throw electronics into daily municipal garbage dustbins",
+            "note": "Protects waste pickers from toxic exposure.",
+            "weight": 35,
+            "critical": true,
+            "keys": "don'?t throw in trash|no daily dustbin"
+          },
+          {
+            "point": "Check if local electronics stores or schools have e-waste drives",
+            "note": "Convenient authorized disposal.",
+            "weight": 20,
+            "critical": false,
+            "keys": "take back drive|school e-waste"
+          }
+        ],
+        "dangerous": [
+          "throw in wet waste",
+          "burn with dry leaves",
+          "bury in garden soil"
+        ]
+      },
+      "sources": [
+        {
+          "name": "E-Waste (Management) Rules (CPCB)",
+          "url": "https://cpcb.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "statement": "Setting the AC to 16°C cools the room faster.",
-     "answer": "myth",
-     "truth": "It cools at the same speed, just longer and colder, using more power. 24–26°C is efficient."
-    }
-   ],
-   "quiz": [
+      "id": "ENV-023",
+      "agentId": "terra",
+      "subtopic": "Composting",
+      "title": "Kitchen wet waste composting: Turning peels into black gold",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Over 50% of urban household waste is organic wet waste (fruit peels, vegetable stalks, tea leaves).",
+        "When organic matter rots under plastic in landfills without oxygen, it generates methane, a potent greenhouse gas."
+      ],
+      "do": [
+        "Segregate wet green waste (fruit peels, vegetable scraps, coffee grounds, eggshells)",
+        "Mix greens with dry brown waste (dry leaves, shredded cardboard, sawdust) in a ventilated pot",
+        "Turn the compost pile once a week to let aerobic bacteria create rich, odor-free garden soil"
+      ],
+      "dont": [
+        "Never add plastic wrappers, foil, dairy, cooked oils, or meat bones to basic home compost",
+        "Never let the compost pile become waterlogged and smelly"
+      ],
+      "myths": [
+        {
+          "statement": "Composting at home always produces terrible foul smells and attracts thousands of flies.",
+          "answer": "myth",
+          "truth": "A balanced compost pile with proper brown leaves and aeration smells like fresh forest soil."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What two types of waste must be balanced in a home compost bin to keep it healthy?",
+          "options": [
+            "Plastic and glass",
+            "Nitrogen-rich 'Greens' (kitchen peels) and Carbon-rich 'Browns' (dry leaves, cardboard)",
+            "Batteries and paper",
+            "Metal and sand"
+          ],
+          "correct": 1,
+          "explanation": "A 1:2 ratio of wet green peels to dry brown leaves creates ideal aerobic decomposition."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At home at {at}, {name} notices daily vegetable cuttings and banana peels being thrown into the trash bin."
+        ],
+        "question": "How can {name} start simple kitchen waste composting?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Collect fruit and vegetable peels in a separate 'Wet Waste' bin",
+            "note": "Separates organic compostables at source.",
+            "weight": 40,
+            "critical": true,
+            "keys": "separate wet waste|peels|organic"
+          },
+          {
+            "point": "Layer the wet peels with dry garden leaves or crushed paper in a terracotta pot",
+            "note": "Maintains optimal carbon-nitrogen balance.",
+            "weight": 40,
+            "critical": true,
+            "keys": "layer dry leaves|browns|aeration|terracotta"
+          },
+          {
+            "point": "Harvest rich dark organic compost in 60-90 days for house plants",
+            "note": "Produces free nutrient-rich natural fertilizer.",
+            "weight": 20,
+            "critical": false,
+            "keys": "harvest compost|soil|plants"
+          }
+        ],
+        "dangerous": [
+          "throw plastic wrappers in compost",
+          "dump peels in street gutter",
+          "burn peels"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Swachh Bharat Mission Solid Waste Management Rules",
+          "url": "https://swachhbharaturban.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
     {
-     "q": "Which AC setting is the most energy-efficient for comfort?",
-     "options": [
-      "16°C",
-      "18°C",
-      "24–26°C",
-      "Fan off, AC on 16°C"
-     ],
-     "correct": 2,
-     "explanation": "24–26°C is comfortable and saves electricity."
+      "id": "ENV-024",
+      "agentId": "terra",
+      "subtopic": "Trees",
+      "title": "Planting and caring for native shade trees (Neem, Peepal, Jamun)",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Native Indian trees (Neem, Peepal, Banyan, Jamun) support hundreds of local birds and pollinators.",
+        "Exotic trees (like Eucalyptus and Conocarpus) deplete groundwater and provide zero food for native biodiversity."
+      ],
+      "do": [
+        "Plant indigenous native species adapted to local rainfall: Neem, Amla, Jamun, Peepal, Amaltas",
+        "Water newly planted saplings deeply twice a week during their first two summers",
+        "Protect young saplings with bamboo tree guards against grazing goats and cattle"
+      ],
+      "dont": [
+        "Never plant invasive water-guzzling exotic species near groundwater wells",
+        "Never plant trees and abandon them without water in peak summer"
+      ],
+      "myths": [
+        {
+          "statement": "Planting any tree anywhere helps the environment equally, even exotic ornamental species.",
+          "answer": "myth",
+          "truth": "Exotic monocultures destroy local bird nesting ecosystems. Always plant native indigenous species."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why are native Indian trees like Neem and Jamun far superior to exotic ornamental trees?",
+          "options": [
+            "They have funny names",
+            "They conserve groundwater, provide fruits for local birds, and thrive in Indian heat",
+            "They grow in 2 hours",
+            "They need no sun"
+          ],
+          "correct": 1,
+          "explanation": "Native trees have evolved with Indian soil, supporting bees, birds, and natural groundwater retention."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a school plantation drive at {at}, {name} is selecting saplings for the campus grounds."
+        ],
+        "question": "What wise ecological choices should {name} make?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Choose native Indian tree saplings like Neem, Jamun, Peepal, or Amaltas",
+            "note": "Thrives naturally and feeds local urban wildlife.",
+            "weight": 45,
+            "critical": true,
+            "keys": "native trees|neem|jamun|peepal|amaltas"
+          },
+          {
+            "point": "Commit to regular watering and weeding for the sapling's first two years",
+            "note": "Ensures high sapling survival rates.",
+            "weight": 35,
+            "critical": true,
+            "keys": "water sapling|regular care|tree guard"
+          },
+          {
+            "point": "Mulch around the base with dry leaves to retain soil moisture",
+            "note": "Prevents evaporation under hot sun.",
+            "weight": 20,
+            "critical": false,
+            "keys": "mulch|retain moisture"
+          }
+        ],
+        "dangerous": [
+          "plant invasive eucalyptus",
+          "abandon sapling without water",
+          "snap branches"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Afforestation and Eco-Development Board",
+          "url": "https://moef.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-025",
+      "agentId": "terra",
+      "subtopic": "Air quality",
+      "title": "Stubble and dry leaf burning: Toxic air and soil degradation",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Burning crop residue or dry leaves releases dense clouds of carbon monoxide, PM2.5, and black carbon.",
+        "Ground fires incinerate beneficial earthworms, mycorrhizal fungi, and organic soil carbon."
+      ],
+      "do": [
+        "Compost dry leaves and autumn garden clippings instead of lighting them on fire",
+        "Advocate for happy-seeders, bio-decomposers, and mulching instead of open crop stubble burning",
+        "Report open garbage or leaf burning fires to municipal pollution ward helplines"
+      ],
+      "dont": [
+        "Never light fires to clear backyard dry leaves or park trimmings",
+        "Never burn municipal trash or plastic in roadside piles"
+      ],
+      "myths": [
+        {
+          "statement": "Burning dry leaves in winter is a harmless way to clear colony gardens and get warm.",
+          "answer": "myth",
+          "truth": "Leaf burning releases hazardous carcinogenic smoke directly into children's and elders' breathing zones."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens to the soil when garden leaves or crop stubble are burned on the ground?",
+          "options": [
+            "Soil becomes richer",
+            "Intense heat kills beneficial earthworms, microbes, and destroys soil moisture",
+            "It turns to gold",
+            "Nothing"
+          ],
+          "correct": 1,
+          "explanation": "Fire sterilizes topsoil, destroying organic nitrogen and beneficial microbial life."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the neighborhood park at {at}, a gardener is sweeping dry leaves into a pile and preparing to light a match."
+        ],
+        "question": "How should {name} intervene respectfully?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely request the gardener not to burn the leaves: 'Burning releases toxic smoke into our lungs'",
+            "note": "Directly addresses airborne health hazard.",
+            "weight": 45,
+            "critical": true,
+            "keys": "don'?t burn|smoke hurts lungs|polite request"
+          },
+          {
+            "point": "Suggest composting the leaves in a park pit to create free natural plant manure",
+            "note": "Provides a constructive ecological alternative.",
+            "weight": 35,
+            "critical": true,
+            "keys": "compost leaves|leaf mulch|make manure"
+          },
+          {
+            "point": "Remind that open burning in cities is prohibited by the National Green Tribunal (NGT)",
+            "note": "Points to legal pollution regulations.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ngt ban|illegal burning|clean air"
+          }
+        ],
+        "dangerous": [
+          "help light the fire",
+          "throw plastic into the fire",
+          "ignore toxic smoke"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Commission for Air Quality Management (CAQM)",
+          "url": "https://caqm.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-026",
+      "agentId": "terra",
+      "subtopic": "Water drains",
+      "title": "Preventing urban waterlogging: Stormwater drains vs garbage",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Stormwater drains are designed solely to channel monsoon rainwater away into natural water bodies.",
+        "Plastic bags, gutkha packets, and construction debris clog drain grates, creating flash urban floods."
+      ],
+      "do": [
+        "Keep street stormwater drain grates clean and free of discarded snack packets",
+        "Dispose of household garbage exclusively via door-to-door municipal collection vans",
+        "Report choked colony drains to the municipal corporation before monsoon season begins"
+      ],
+      "dont": [
+        "Never sweep street dust, leaves, or plastic wrappers into storm drain openings",
+        "Never dump construction debris (malba) into roadside storm gutters"
+      ],
+      "myths": [
+        {
+          "statement": "Stormwater drains are underground trash shoots that automatically wash garbage away.",
+          "answer": "myth",
+          "truth": "Solid waste accumulates at culvert bends, completely choking stormwater flow and flooding roads."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do Indian cities experience sudden knee-deep road flooding after only 30 minutes of rain?",
+          "options": [
+            "Rain is too heavy",
+            "Stormwater drains are choked with single-use plastics, silt, and dumped garbage",
+            "Roads are made of sponge",
+            "Tides are high"
+          ],
+          "correct": 1,
+          "explanation": "Blocked drain gratings prevent heavy runoff from entering drainage networks."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Walking past a colony storm drain grating at {at}, {name} sees it choked with discarded plastic wrappers."
+        ],
+        "question": "What proactive civic actions prevent monsoon waterlogging?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Clear surface plastic wrappers away from the drain grate with a stick or gloves",
+            "note": "Restores immediate rainwater drainage entry.",
+            "weight": 45,
+            "critical": true,
+            "keys": "clear grate|remove plastic|unblock drain"
+          },
+          {
+            "point": "Throw discarded wrappers into the nearest dry waste bin",
+            "note": "Permanent waste containment.",
+            "weight": 20,
+            "critical": false,
+            "keys": "dustbin|dry waste"
+          },
+          {
+            "point": "Educate neighbours never to use storm drains as trash cans",
+            "note": "Prevents systemic colony flooding.",
+            "weight": 35,
+            "critical": true,
+            "keys": "don'?t dump in drains|rainwater only"
+          }
+        ],
+        "dangerous": [
+          "sweep more trash into drain",
+          "dump concrete in drain",
+          "ignore blocked grate"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Disaster Management Authority (Urban Flooding)",
+          "url": "https://ndma.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-027",
+      "agentId": "terra",
+      "subtopic": "Water table",
+      "title": "Rooftop rainwater harvesting: Recharging groundwater",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Concrete roads and paved yards prevent rainwater from percolating into underground aquifers.",
+        "A 100 sq meter rooftop in a city with 800mm annual rain can harvest over 60,000 litres of clean water."
+      ],
+      "do": [
+        "Filter rooftop rainwater through sand and gravel layers to recharge colony borewells",
+        "Store harvested rainwater in clean underground tanks for gardening and toilet flushing",
+        "Keep rooftop catchments clean and inspect first-flush pipe diverters before monsoon"
+      ],
+      "dont": [
+        "Never let pristine rooftop monsoon rain run off into dirty sewage gutters",
+        "Never connect sewage lines into groundwater recharge pits"
+      ],
+      "myths": [
+        {
+          "statement": "Rainwater harvesting is only useful for huge rural farms, not city apartment buildings.",
+          "answer": "myth",
+          "truth": "Urban rooftop rainwater harvesting directly recharges dry borewells and prevents city floods."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens when rainwater from building rooftops is routed into groundwater recharge pits?",
+          "options": [
+            "It gets lost",
+            "It recharges depleted subterranean water tables and revives drying wells",
+            "It turns salty",
+            "It causes earthquakes"
+          ],
+          "correct": 1,
+          "explanation": "Percolation pits channel clean rainwater deep into permeable soil layers, raising the water table."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name}'s school or residential building at {at} experiences dry borewells every summer."
+        ],
+        "question": "How can rooftop rainwater harvesting solve this water crisis?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Channel clean rooftop rainwater into a filtration chamber and percolation recharge pit",
+            "note": "Directly restores underground aquifer reserves.",
+            "weight": 45,
+            "critical": true,
+            "keys": "rooftop rainwater|recharge pit|groundwater|filter"
+          },
+          {
+            "point": "Use first-flush diverters to wash away initial roof dust and debris",
+            "note": "Ensures only clean rainwater enters recharge wells.",
+            "weight": 35,
+            "critical": true,
+            "keys": "first flush|filter sand|clean water"
+          },
+          {
+            "point": "Save thousands of litres of water for secondary non-potable uses",
+            "note": "Reduces tanker dependence.",
+            "weight": 20,
+            "critical": false,
+            "keys": "save water|reduce tanker reliance"
+          }
+        ],
+        "dangerous": [
+          "let all rain wash into sewage",
+          "pave entire garden with concrete",
+          "pump dirty sewage in well"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Ground Water Board (CGWB)",
+          "url": "https://cgwb.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-028",
+      "agentId": "terra",
+      "subtopic": "Forests",
+      "title": "Saving paper: Using both sides, digital notes and recycling",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Producing 1 tonne of virgin paper consumes approximately 17 mature trees and 26,000 litres of water.",
+        "Using both sides of every notebook page cuts individual classroom paper footprint by 50%."
+      ],
+      "do": [
+        "Use every single page of your school notebooks from top margin to bottom margin",
+        "Bind leftover blank pages from old school notebooks into rough work practice pads",
+        "Donate used textbooks to junior students or school book banks for multi-year reuse"
+      ],
+      "dont": [
+        "Never tear out blank notebook pages to make paper planes or doodles",
+        "Never throw whole paper notebooks into the wet garbage bin"
+      ],
+      "myths": [
+        {
+          "statement": "Tearing out pages from school notebooks doesn't hurt trees because paper comes from shops.",
+          "answer": "myth",
+          "truth": "Every sheet of virgin paper represents felled pulp trees, heavy water consumption, and bleaching chemicals."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the best way to reuse notebooks with 20-30 blank leftover pages at the end of the school year?",
+          "options": [
+            "Throw them in trash",
+            "Carefully bind the blank sheets together to create a rough practice notebook",
+            "Burn them",
+            "Scribble on all of them"
+          ],
+          "correct": 1,
+          "explanation": "Binding unused blank pages creates free rough pads and saves trees from being cut."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the end of the school term at {at}, {name} has three half-filled notebooks with 40 clean blank pages each."
+        ],
+        "question": "What is the eco-friendly way to use these pages?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Tear out or bind the unused pages together to make a rough work pad for homework",
+            "note": "Maximizes paper utility to the last sheet.",
+            "weight": 45,
+            "critical": true,
+            "keys": "reuse blank pages|make rough pad|bind pages"
+          },
+          {
+            "point": "Pass on clean textbooks to junior classmates through a book bank",
+            "note": "Extends textbook lifespan across multiple students.",
+            "weight": 35,
+            "critical": true,
+            "keys": "donate textbooks|junior students|book bank"
+          },
+          {
+            "point": "Send completely filled pages to certified paper recycling vendors",
+            "note": "Recycled pulp saves trees and water.",
+            "weight": 20,
+            "critical": false,
+            "keys": "recycle paper|kabadiwala"
+          }
+        ],
+        "dangerous": [
+          "dump notebooks in garbage bin",
+          "burn paper in yard",
+          "waste clean sheets"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Green Corps (MoEFCC)",
+          "url": "https://moef.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-029",
+      "agentId": "terra",
+      "subtopic": "Circular economy",
+      "title": "Repair and reuse culture: Fixing before throwing away",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Modern 'throwaway culture' drives excessive resource mining, industrial manufacturing, and waste heaps.",
+        "Repairing shoes, stitching bags, and replacing appliance parts supports local repair artisans and saves money."
+      ],
+      "do": [
+        "Take torn school backpacks or broken umbrella ribs to local cobblers and tailors for repair",
+        "Upgrade or repair computer RAM/storage before buying a completely new device",
+        "Organize a toy, game, or book swap meet with friends instead of buying new items"
+      ],
+      "dont": [
+        "Never throw away repairable gadgets or bags just to buy the latest trendy model",
+        "Never treat items as disposable after minor tears or scuffs"
+      ],
+      "myths": [
+        {
+          "statement": "Buying a brand-new backpack every school year is necessary even if your old bag only has a stuck zipper.",
+          "answer": "myth",
+          "truth": "A local tailor can replace a zipper slider for ₹20 in 5 minutes, saving thousands of rupees and manufacturing waste."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most sustainable option when a zipper gets stuck on your favourite school bag?",
+          "options": [
+            "Throw bag in trash",
+            "Take it to a local tailor or cobbler to replace the zipper runner",
+            "Buy 3 new bags",
+            "Tear the bag"
+          ],
+          "correct": 1,
+          "explanation": "Repairing items honors craftspeople, saves family money, and prevents landfill waste."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "The zipper on {name}'s sturdy school backpack splits open at {at}."
+        ],
+        "question": "How does {name} practice circular economy thinking?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Visit a local neighborhood tailor or bag repair artisan to fix the zipper slider",
+            "note": "Extends product lifespan by years for minimal cost.",
+            "weight": 45,
+            "critical": true,
+            "keys": "repair zipper|tailor|cobbler|fix bag"
+          },
+          {
+            "point": "Understand that repairing items conserves raw materials and fossil energy",
+            "note": "Cultivates sustainability mindset.",
+            "weight": 35,
+            "critical": true,
+            "keys": "save resources|repair culture|not throwaway"
+          },
+          {
+            "point": "Wash and maintain the backpack to keep it fresh for another school term",
+            "note": "Responsible care of personal belongings.",
+            "weight": 20,
+            "critical": false,
+            "keys": "wash and maintain|reuse bag"
+          }
+        ],
+        "dangerous": [
+          "throw bag in trash immediately",
+          "demand an expensive new bag",
+          "cut the bag"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Mission LiFE (Lifestyle for Environment)",
+          "url": "https://missionlife-moefcc.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-030",
+      "agentId": "terra",
+      "subtopic": "Air quality",
+      "title": "Switching off vehicle engines at red traffic lights",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Idling a car engine for over 10 seconds consumes more fuel than restarting the engine.",
+        "Vehicle exhaust at idling intersections creates concentrated toxic plumes of benzene and PM2.5 at children's eye level."
+      ],
+      "do": [
+        "Ask family drivers to switch off the engine at traffic signals with countdown timers over 15 seconds",
+        "Turn off vehicles while waiting outside school pick-up gates or railway crossings",
+        "Walking or cycling for short neighborhood errands under 1 km saves fuel and emissions"
+      ],
+      "dont": [
+        "Never leave car air-conditioners running while idling parked for 20 minutes outside shops",
+        "Never rev engines aggressively while waiting at red lights"
+      ],
+      "myths": [
+        {
+          "statement": "Stopping and restarting your car engine at red lights damages the starter motor and wastes more petrol.",
+          "answer": "myth",
+          "truth": "Modern vehicle starters are designed for thousands of cycles; idling for 10 seconds wastes far more fuel."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "At what traffic signal countdown time is it scientifically proven to save fuel by switching off the engine?",
+          "options": [
+            "Only if red light is 1 hour",
+            "If the red light timer is longer than 15-20 seconds",
+            "Never switch off",
+            "Only at night"
+          ],
+          "correct": 1,
+          "explanation": "Switching off at signals over 15 seconds cuts tailpipe emissions and saves litres of fuel monthly."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Waiting in a car or auto at a 90-second red light signal at {at}, the engine is idling noisily."
+        ],
+        "question": "What polite green tip can {name} share with the driver?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely suggest: 'Uncle/Papa, the light is 90 seconds, switching off the engine saves fuel and air'",
+            "note": "Saves fuel and cuts street-level emissions.",
+            "weight": 45,
+            "critical": true,
+            "keys": "switch off engine|red light|save fuel|clean air"
+          },
+          {
+            "point": "Explain that restarting modern vehicles uses less fuel than 10 seconds of idling",
+            "note": "Debunks outdated mechanical myths.",
+            "weight": 35,
+            "critical": true,
+            "keys": "less fuel than idling|restart safe"
+          },
+          {
+            "point": "Notice how turning off the engine reduces noise and vibration inside the vehicle",
+            "note": "Improves cabin comfort.",
+            "weight": 20,
+            "critical": false,
+            "keys": "reduce noise|less pollution"
+          }
+        ],
+        "dangerous": [
+          "encourage revving engine",
+          "leave engine running for 30 minutes",
+          "honk continuously"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Petroleum Conservation Research Association (PCRA)",
+          "url": "https://pcra.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-031",
+      "agentId": "terra",
+      "subtopic": "Urban wildlife",
+      "title": "Summer water bowls for urban birds and street animals",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Urbanization, asphalt, and concrete drain covers eliminate natural puddles and drinking ponds for city birds.",
+        "During scorching Indian summers (40°C+), hundreds of sparrows, pigeons, and squirrels die of dehydration."
+      ],
+      "do": [
+        "Place wide, shallow terracotta clay bowls filled with fresh water on balconies, terraces, and gardens",
+        "Keep water bowls in the shade to prevent water from becoming burning hot under midday sun",
+        "Wash and refill the bowl daily with clean water to prevent mosquito larvae from breeding"
+      ],
+      "dont": [
+        "Never leave dirty, stagnant green slime water in bowls (breeds dengue mosquitoes)",
+        "Never use deep slick plastic buckets where small birds can fall in and drown"
+      ],
+      "myths": [
+        {
+          "statement": "Leaving a water bowl outside once a month is enough for birds in May.",
+          "answer": "myth",
+          "truth": "Shallow water evaporates in hours during peak summer. Daily cleaning and refilling are vital."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What material is best for an outdoor bird water bowl?",
+          "options": [
+            "Deep metal bucket",
+            "A wide, shallow unglazed terracotta clay dish (keeps water naturally cool)",
+            "Glass bottle",
+            "Black plastic bag"
+          ],
+          "correct": 1,
+          "explanation": "Porous terracotta allows gentle evaporation, keeping water refreshingly cool for birds."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During intense May summer heat at {at}, {name} sees panting sparrows and squirrels on the balcony railing."
+        ],
+        "question": "How can {name} provide immediate life-saving relief?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Set out a wide, shallow clay saucer filled with fresh water in a shady spot",
+            "note": "Quenches dehydration safely without drowning hazard.",
+            "weight": 45,
+            "critical": true,
+            "keys": "water bowl|terracotta dish|shade|shallow water"
+          },
+          {
+            "point": "Wash and replace the water daily to keep it hygienic and mosquito-free",
+            "note": "Prevents dengue and bacterial buildup.",
+            "weight": 35,
+            "critical": true,
+            "keys": "clean daily|refill fresh water|no mosquitoes"
+          },
+          {
+            "point": "Scatter a few grains of millets, rice, or seeds nearby",
+            "note": "Provides safe summer nourishment.",
+            "weight": 20,
+            "critical": false,
+            "keys": "grains|seeds|bird food"
+          }
+        ],
+        "dangerous": [
+          "put boiling hot water",
+          "use deep bucket where birds drown",
+          "ignore thirsty birds"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Bombay Natural History Society (BNHS)",
+          "url": "https://bnhs.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-032",
+      "agentId": "terra",
+      "subtopic": "Wildlife",
+      "title": "Noise pollution impact on urban birds, pets and nocturnal wildlife",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Birds use acoustic song frequencies for territory defense, mating calls, and predator danger alarms.",
+        "Urban traffic rumble and festive firecrackers force songbirds to shout, disorienting their navigation."
+      ],
+      "do": [
+        "Keep festival celebrations green with lights and flowers instead of deafening explosive crackers",
+        "Keep household pets indoors in a quiet, sheltered room with closed curtains during loud celebrations",
+        "Support city silence zones around bird sanctuaries, zoological parks, and forested urban ridges"
+      ],
+      "dont": [
+        "Never burst loud firecrackers near trees, nesting colonies, or animal shelters",
+        "Never play blaring DJ music in eco-sensitive zones or national parks"
+      ],
+      "myths": [
+        {
+          "statement": "Street birds and stray animals do not mind loud chemical firecrackers at all.",
+          "answer": "myth",
+          "truth": "Dogs hear acoustic frequencies 4 times higher than humans; explosions cause severe panic, tremors, and cardiac arrest."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do birds abandon city gardens exposed to continuous loud construction and traffic noise?",
+          "options": [
+            "They get bored",
+            "Noise masks their mating calls, alarm songs, and acoustic predator alerts",
+            "They dislike music",
+            "They sleep all day"
+          ],
+          "correct": 1,
+          "explanation": "Acoustic masking prevents avian communication, forcing bird populations to flee noisy cities."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During festival night at {at}, neighbours are preparing to burst high-decibel aerial firecrackers near park trees."
+        ],
+        "question": "What compassionate wildlife awareness can {name} champion?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Celebrate with beautiful earthen diyas, lanterns, and sweets instead of loud crackers",
+            "note": "Eco-friendly, pollution-free celebration.",
+            "weight": 45,
+            "critical": true,
+            "keys": "diyas|lanterns|no loud crackers|green celebration"
+          },
+          {
+            "point": "Explain that loud acoustic blasts cause terror and disorientation in nesting birds and pets",
+            "note": "Builds empathy for non-human urban residents.",
+            "weight": 35,
+            "critical": true,
+            "keys": "protect pets|scared birds|noise distress"
+          },
+          {
+            "point": "Provide a quiet, safe corner inside for frightened domestic pets during celebrations",
+            "note": "Ensures domestic animal safety.",
+            "weight": 20,
+            "critical": false,
+            "keys": "shelter pets|quiet room"
+          }
+        ],
+        "dangerous": [
+          "tie crackers to animal tails",
+          "burst loudest bombs near trees",
+          "laugh at frightened pets"
+        ]
+      },
+      "sources": [
+        {
+          "name": "World Wide Fund for Nature (WWF India)",
+          "url": "https://wwfindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-033",
+      "agentId": "terra",
+      "subtopic": "AQI",
+      "title": "Understanding the Air Quality Index (AQI) and protecting lungs",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The AQI measures 8 major pollutants, with fine PM2.5 (particles 30 times thinner than hair) being the most lethal.",
+        "When AQI exceeds 300 ('Severe'), breathing outdoor air for a day equals smoking 15-20 cigarettes."
+      ],
+      "do": [
+        "Check your city's daily AQI on government apps (Sameer app by CPCB) before outdoor morning sports",
+        "Wear an authentic, well-fitted N95 or FFP2 particulate mask when AQI enters 'Very Poor' (300+) levels",
+        "Shift strenuous aerobic sports indoors during severe smog inversion episodes"
+      ],
+      "dont": [
+        "Never rely on thin cloth handkerchiefs or surgical masks (they filter 0% of micro PM2.5 particles)",
+        "Never do heavy outdoor sprint workouts in dense winter smog"
+      ],
+      "myths": [
+        {
+          "statement": "Wrapping a cotton handkerchief around your mouth blocks all dangerous air pollution.",
+          "answer": "myth",
+          "truth": "Cotton cloth weaves have pore gaps thousands of times larger than PM2.5 particles. Only certified N95 masks filter them."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What official government mobile app provides real-time AQI readings for Indian cities?",
+          "options": [
+            "Instagram",
+            "SAMEER App by the Central Pollution Control Board (CPCB)",
+            "Candy Crush",
+            "Amazon"
+          ],
+          "correct": 1,
+          "explanation": "The SAMEER app provides hour-by-hour air quality monitoring from CPCB observation towers across India."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On a cold winter morning at {at}, the city AQI reads 380 ('Severe / Hazardous') on the weather app."
+        ],
+        "question": "How should {name} adjust daily activities to safeguard lung health?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Wear a certified, snug-fitting N95 mask if stepping outdoors",
+            "note": "Filters sub-micron fine particulate matter (PM2.5).",
+            "weight": 45,
+            "critical": true,
+            "keys": "n95 mask|well fitted mask|filter pm2.5"
+          },
+          {
+            "point": "Reschedule heavy outdoor running or football to indoor light stretches",
+            "note": "Prevents deep inhalation of toxic smog.",
+            "weight": 35,
+            "critical": true,
+            "keys": "indoor exercise|avoid heavy outdoor sports|severe aqi"
+          },
+          {
+            "point": "Check the CPCB SAMEER app daily to monitor air quality trends",
+            "note": "Evidence-based health choices.",
+            "weight": 20,
+            "critical": false,
+            "keys": "check aqi|sameer app|cpcb"
+          }
+        ],
+        "dangerous": [
+          "run 10 km in heavy smog",
+          "wear thin cloth kerchief",
+          "ignore 380 aqi"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CPCB National Air Quality Index Portal",
+          "url": "https://app.cpcbccr.com"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-034",
+      "agentId": "terra",
+      "subtopic": "Climate",
+      "title": "Climate change explained simply: Greenhouse gases and solutions",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Burning coal, oil, and gas releases excess CO2, which forms an atmospheric blanket trapping solar heat.",
+        "Global warming intensifies extreme weather events in India: erratic monsoons, heatwaves, and glacier retreats."
+      ],
+      "do": [
+        "Understand that individual conservation + renewable energy transitions are essential solutions",
+        "Conserve electricity at home (switch off lights/fans) to cut thermal coal power demand",
+        "Opt for walking, cycling, and public electric buses to lower transport carbon emissions"
+      ],
+      "dont": [
+        "Never fall into climate doomism: positive youth action drives systemic green policies",
+        "Never waste resources thinking 'my tiny action doesn't matter'"
+      ],
+      "myths": [
+        {
+          "statement": "Climate change is a fictional theory that only affects polar bears in the Arctic.",
+          "answer": "myth",
+          "truth": "Climate change directly triggers 48°C Indian city heatwaves, crop failures, and flash floods."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What primary human activity drives accelerated global climate change?",
+          "options": [
+            "Planting flowers",
+            "Burning fossil fuels (coal, petroleum, natural gas) releasing greenhouse gases",
+            "Drinking water",
+            "Painting houses"
+          ],
+          "correct": 1,
+          "explanation": "Fossil fuel combustion releases billions of tonnes of greenhouse gases into the atmosphere."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Discussing global climate change in science class at {at}, {name} wonders how young people can make an impact."
+        ],
+        "question": "What constructive understanding should {name} embrace?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that burning fossil fuels traps heat in the atmosphere, warming the planet",
+            "note": "Understands scientific root mechanism.",
+            "weight": 40,
+            "critical": true,
+            "keys": "greenhouse effect|fossil fuels|carbon emissions"
+          },
+          {
+            "point": "Adopt active daily climate habits: saving electricity, cycling, and minimizing waste",
+            "note": "Translates knowledge into personal lifestyle.",
+            "weight": 40,
+            "critical": true,
+            "keys": "save electricity|walk cycle|reduce waste|lifestyle"
+          },
+          {
+            "point": "Advocate for clean solar energy and tree conservation in school and community",
+            "note": "Champions collective civic solutions.",
+            "weight": 20,
+            "critical": false,
+            "keys": "solar energy|advocate|plant trees"
+          }
+        ],
+        "dangerous": [
+          "claim climate change is fake",
+          "waste electricity recklessly",
+          "give up in despair"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Intergovernmental Panel on Climate Change (IPCC) Youth Guide",
+          "url": "https://ipcc.ch"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-035",
+      "agentId": "terra",
+      "subtopic": "Green festivals",
+      "title": "Celebrating festivals green: Clay idols, herbal colors and zero plastic",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Plaster of Paris (PoP) idols painted with chemical paints contain lead and mercury, poisoning rivers.",
+        "Natural clay (shadu mati) idols dissolve completely in water within 48 hours without polluting ecosystems."
+      ],
+      "do": [
+        "Choose eco-friendly unbaked clay or seed-embedded idols that dissolve safely at home in a bucket",
+        "Use natural plant colors for Holi: turmeric, beetroot, arrowroot, and marigold petals",
+        "Decorate homes using traditional reusable brass diyas, marigold flowers, and cloth bunting instead of plastic strings"
+      ],
+      "dont": [
+        "Never immerse chemical Plaster of Paris idols into natural lakes or rivers",
+        "Never use toxic metallic chemical colors (silver, copper) during Holi"
+      ],
+      "myths": [
+        {
+          "statement": "Plaster of Paris (PoP) dissolves harmlessly in rivers just like natural river clay.",
+          "answer": "myth",
+          "truth": "PoP takes months to dissolve, forming a toxic insoluble sludge that suffocates aquatic fish."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why are natural clay (Shadu Mati) idols vastly superior to Plaster of Paris (PoP) statues?",
+          "options": [
+            "They are heavier",
+            "Natural clay dissolves completely in water without releasing toxic lead or chemical sludge",
+            "They are made of plastic",
+            "They shine like neon"
+          ],
+          "correct": 1,
+          "explanation": "Pure clay returns to nature organically without poisoning municipal water supply sources."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Preparing for festival celebrations at {at}, {name}'s family goes to select an idol."
+        ],
+        "question": "What sustainable choice should {name} encourage?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Choose a pure unbaked clay (shadu mati) idol painted with non-toxic natural colors",
+            "note": "Safeguards water bodies from chemical poisoning.",
+            "weight": 45,
+            "critical": true,
+            "keys": "clay idol|shadu mati|eco friendly|natural color"
+          },
+          {
+            "point": "Perform immersion at home in a bucket or dedicated municipal artificial tank",
+            "note": "Prevents choking natural lakes and rivers.",
+            "weight": 35,
+            "critical": true,
+            "keys": "home immersion|artificial tank|bucket immersion"
+          },
+          {
+            "point": "Decorate with fresh flowers and reusable earthen lamps instead of single-use plastic",
+            "note": "Leaves zero plastic footprint.",
+            "weight": 20,
+            "critical": false,
+            "keys": "fresh flowers|earthen diyas|no plastic"
+          }
+        ],
+        "dangerous": [
+          "buy huge painted pop statue",
+          "dump chemical idol in drinking river",
+          "use toxic chemical paints"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CPCB Guidelines on Eco-Friendly Idol Immersion",
+          "url": "https://cpcb.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "ENV-036",
+      "agentId": "terra",
+      "subtopic": "Biodiversity",
+      "title": "Neighborhood nature: Observing local birds, trees and pollinators",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Even dense Indian concrete cities support hundreds of resilient species: sunbirds, dragonflies, and bees.",
+        "Spending regular time observing nature reduces student anxiety and builds deep environmental empathy."
+      ],
+      "do": [
+        "Take a 20-minute silent 'Biodiversity Walk' once a week in your local park or colony lane",
+        "Keep a pocket nature journal to sketch leaves, record bird calls, and note flowering dates",
+        "Leave undisturbed green patches of wildflowers in gardens for pollinator honeybees and butterflies"
+      ],
+      "dont": [
+        "Never throw stones at birds or destroy spider webs outdoors",
+        "Never spray toxic chemical insecticides on flowering garden plants"
+      ],
+      "myths": [
+        {
+          "statement": "Cities have zero biodiversity; you must visit deep national forest reserves to see living nature.",
+          "answer": "myth",
+          "truth": "Indian city trees host tailorbirds, bulObjective, barbets, honeybees, and diverse pollinator ecosystems."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the ecological term for observing and recording living species in your immediate neighborhood?",
+          "options": [
+            "Astronomy",
+            "Citizen Science & Urban Biodiversity Observation",
+            "Speed walking",
+            "Architecture"
+          ],
+          "correct": 1,
+          "explanation": "Citizen science empowers everyday students to document local species and preserve urban nature."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On a Sunday morning at {at}, {name} decides to explore the neighborhood park with a notebook."
+        ],
+        "question": "How can {name} conduct a rewarding urban biodiversity walk?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Quietly observe and note common birds (sunbirds, mynas, pigeons) and flowering trees",
+            "note": "Develops keen ecological observation skills.",
+            "weight": 45,
+            "critical": true,
+            "keys": "observe birds|trees|nature journal|biodiversity"
+          },
+          {
+            "point": "Avoid disturbing nests, breaking branches, or trampling pollinator flowerbeds",
+            "note": "Practices ethical, respectful nature exploration.",
+            "weight": 35,
+            "critical": true,
+            "keys": "respect wildlife|no harm|gentle exploration"
+          },
+          {
+            "point": "Share discoveries with classmates to build collective enthusiasm for urban conservation",
+            "note": "Fosters grassroots environmental care.",
+            "weight": 20,
+            "critical": false,
+            "keys": "share with friends|nature walk"
+          }
+        ],
+        "dangerous": [
+          "throw rocks at bird nests",
+          "pluck all flowers",
+          "trample insect habitats"
+        ]
+      },
+      "sources": [
+        {
+          "name": "India Biodiversity Portal",
+          "url": "https://indiabiodiversity.org"
+        }
+      ],
+      "reviewed": true
     }
-   ],
-   "scenario": null,
-   "agentId": "terra",
-   "scams": [],
-   "reviewed": false,
-   "reviewNote": "Drafted from widely published guidance. Needs expert review before launch."
-  }
- ]
+  ]
 }

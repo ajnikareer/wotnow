@@ -1,0 +1,1631 @@
+{
+  "agentId": "nyaya",
+  "cards": [
+    {
+      "id": "LAW-001",
+      "agentId": "nyaya",
+      "subtopic": "Education rights",
+      "title": "Right to Education (RTE Act): Free, compulsory schooling (Ages 6-14)",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Article 21A of the Indian Constitution makes free and compulsory education a Fundamental Right.",
+        "Under the RTE Act 2009, schools cannot deny admission, charge capitation fees, or expel kids aged 6-14."
+      ],
+      "do": [
+        "Know that every child in India aged 6 to 14 has the legal constitutional right to attend school",
+        "Under Section 12(1)(c), private unassisted schools must reserve 25% of entry-level seats for disadvantaged children",
+        "Physical punishment, mental harassment, and screening interviews of children are strictly illegal"
+      ],
+      "dont": [
+        "Never believe that children from poor families have no legal right to go to school",
+        "Never tolerate corporal punishment (beating, canning) in classrooms"
+      ],
+      "myths": [
+        {
+          "statement": "Private schools can legally beat students with sticks for not doing homework.",
+          "answer": "myth",
+          "truth": "Corporal punishment is strictly illegal under Section 17 of the RTE Act and punishable by law."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Under Article 21A of the Indian Constitution, education is a fundamental right for which age group?",
+          "options": [
+            "Only college students",
+            "Children between the ages of 6 and 14 years",
+            "Only age 18+",
+            "Adults only"
+          ],
+          "correct": 1,
+          "explanation": "The 86th Constitutional Amendment guarantees free, compulsory education for children aged 6 to 14."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In a neighborhood at {at}, a 10-year-old child is forced to work in a garage instead of going to school."
+        ],
+        "question": "What legal constitutional right protects this child?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "The Right to Education (RTE) Act guarantees free, compulsory schooling for ages 6 to 14",
+            "note": "Constitutional fundamental entitlement under Article 21A.",
+            "weight": 45,
+            "critical": true,
+            "keys": "right to education|rte act|article 21a|free schooling"
+          },
+          {
+            "point": "Corporal punishment and denying school admission are illegal offenses under Indian law",
+            "note": "Affirms legal ban on child deprivation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "illegal to deny schooling|no child labor|punishable"
+          },
+          {
+            "point": "Report child educational deprivation to local education officers or Childline 1098",
+            "note": "Activates legal remediation channels.",
+            "weight": 20,
+            "critical": false,
+            "keys": "call 1098|report to education department"
+          }
+        ],
+        "dangerous": [
+          "say schooling is only for rich kids",
+          "support child working in garage",
+          "ignore fundamental rights"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Right to Education Act 2009 (Ministry of Education)",
+          "url": "https://dsel.education.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-002",
+      "agentId": "nyaya",
+      "subtopic": "Child protection",
+      "title": "Child Labour Prohibition Act: Why it is illegal and how to report",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The Child Labour (Prohibition and Regulation) Amendment Act bans employment of children under 14 in all occupations.",
+        "Employing adolescents (aged 14-18) in hazardous occupations (mines, chemical factories, fireworks) is a serious crime."
+      ],
+      "do": [
+        "Recognize that employing children under 14 in roadside dhabas, tea stalls, or homes is illegal",
+        "Understand that child labour deprives young people of their childhood, health, and constitutional education",
+        "Report child labour confidentially by calling Childline 1098 or using the PENCiL portal (pencil.gov.in)"
+      ],
+      "dont": [
+        "Never employ child domestic helpers at home or patronize businesses that exploit young kids",
+        "Never ignore young children working in brick kilns, fireworks factories, or hotels"
+      ],
+      "myths": [
+        {
+          "statement": "Hiring a 12-year-old child to wash dishes at a roadside tea stall is completely legal in India.",
+          "answer": "myth",
+          "truth": "Employing any child under 14 years in commercial work is a criminal offense punishable with jail time."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What official government web portal enables citizens to report child labour violations across India?",
+          "options": [
+            "Amazon",
+            "PENCiL Portal (Platform for Effective Enforcement for No Child Labour)",
+            "Twitter",
+            "Cricket board"
+          ],
+          "correct": 1,
+          "explanation": "The PENCiL portal integrates central and district task forces to rescue and rehabilitate child labourers."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At an eatery at {at}, {name} sees an 11-year-old child working long hours cleaning tables instead of attending school."
+        ],
+        "question": "What is the responsible legal civic response?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that employing children under 14 is a criminal offense under the Child Labour Act",
+            "note": "Understands statutory labor prohibition.",
+            "weight": 45,
+            "critical": true,
+            "keys": "child labour act|illegal under 14|criminal offense"
+          },
+          {
+            "point": "Report the violation confidentially to Child Helpline 1098 or on pencil.gov.in",
+            "note": "Initiates child rescue and rehabilitation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "call 1098|pencil portal|report confidentially"
+          },
+          {
+            "point": "Advocate that every child belongs in a school classroom, not behind a commercial dishwashing sink",
+            "note": "Affirms dignity and educational equity.",
+            "weight": 20,
+            "critical": false,
+            "keys": "belongs in school|rehabilitation"
+          }
+        ],
+        "dangerous": [
+          "hire child to wash car",
+          "ignore child exploitation",
+          "scold the working child"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Labour and Employment (PENCiL Portal)",
+          "url": "https://pencil.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-003",
+      "agentId": "nyaya",
+      "subtopic": "Consumer rights",
+      "title": "Consumer Protection Act: Maximum Retail Price (MRP) and bills",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Under the Consumer Protection Act 2019, charging even 1 rupee above the printed MRP is strictly illegal.",
+        "Consumers have the legal right to receive a proper bill/cash memo for every commercial transaction."
+      ],
+      "do": [
+        "Always check the printed Maximum Retail Price (MRP) inclusive of all taxes before paying",
+        "Demand a tax invoice or cash memo; without a bill, you cannot claim warranty or file consumer court complaints",
+        "File consumer complaints against overcharging or defective goods on the National Consumer Helpline (1915)"
+      ],
+      "dont": [
+        "Never pay 'refrigerator cooling charges' or extra fees above the printed MRP on cold drinks",
+        "Never buy goods with scratched off, pasted over, or tampered MRP labels"
+      ],
+      "myths": [
+        {
+          "statement": "Shopkeepers have the legal right to charge ₹5 extra for chilled soft drinks because of electricity costs.",
+          "answer": "myth",
+          "truth": "The Supreme Court and Consumer Protection Act rule that MRP includes all taxes and refrigeration costs."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the toll-free National Consumer Helpline (NCH) number to report overcharging above MRP?",
+          "options": [
+            "100",
+            "1915",
+            "101",
+            "108"
+          ],
+          "correct": 1,
+          "explanation": "Dialing 1915 connects directly to the Department of Consumer Affairs National Consumer Helpline."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Buying a cold water bottle at {at}, the shopkeeper demands ₹25, while the printed MRP reads ₹20."
+        ],
+        "question": "How should {name} exercise consumer rights?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Point out the printed MRP: 'The law states you cannot charge above the printed Maximum Retail Price'",
+            "note": "Asserts statutory consumer rights firmly.",
+            "weight": 45,
+            "critical": true,
+            "keys": "cannot charge above mrp|printed price|consumer law"
+          },
+          {
+            "point": "Insist on paying only the legal printed MRP of ₹20 and demand a receipt/bill",
+            "note": "Enforces legal transaction price.",
+            "weight": 35,
+            "critical": true,
+            "keys": "pay printed mrp|demand bill|cash memo"
+          },
+          {
+            "point": "Report persistent overcharging merchants to the National Consumer Helpline at 1915",
+            "note": "Utilizes official consumer redressal.",
+            "weight": 20,
+            "critical": false,
+            "keys": "call 1915|national consumer helpline"
+          }
+        ],
+        "dangerous": [
+          "pay ₹10 extra happily",
+          "accept tampered price label",
+          "threaten shopkeeper with violence"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Department of Consumer Affairs (National Consumer Helpline)",
+          "url": "https://consumerhelpline.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-004",
+      "agentId": "nyaya",
+      "subtopic": "Criminal law",
+      "title": "What is an FIR: First Information Report and Zero FIR",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "A First Information Report (FIR) is the written document prepared by police upon receiving information of a cognizable crime.",
+        "Under Indian law, a 'Zero FIR' can be filed at ANY police station regardless of where the crime occurred."
+      ],
+      "do": [
+        "Know that police are legally mandated under Section 154 CrPC to register an FIR for cognizable offenses",
+        "A complainant has the legal right to receive a free physical copy of the registered FIR immediately",
+        "Read the recorded statement carefully before signing to ensure your words are accurately documented"
+      ],
+      "dont": [
+        "Never pay money or bribes to register an FIR (FIR registration is completely free by law)",
+        "Never sign a blank sheet of paper at a police station"
+      ],
+      "myths": [
+        {
+          "statement": "A police station can turn you away and refuse to file an FIR because the crime happened in another town.",
+          "answer": "myth",
+          "truth": "Under the 'Zero FIR' ruling, ANY police station must register the complaint and transfer it to the relevant station."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a 'Zero FIR' under Indian criminal jurisprudence?",
+          "options": [
+            "A fake FIR",
+            "An FIR that can be registered at ANY police station irrespective of territorial jurisdiction",
+            "An online game",
+            "A zero-rupee fine"
+          ],
+          "correct": 1,
+          "explanation": "Zero FIR ensures swift investigation without jurisdictional delays in emergencies."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A theft or assault occurs at {at}, and {name}'s family goes to the police station to report it."
+        ],
+        "question": "What core legal knowledge empowers {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Understand that police must register an FIR for cognizable crimes and provide a free copy",
+            "note": "Enforces Section 154 CrPC entitlements.",
+            "weight": 45,
+            "critical": true,
+            "keys": "register fir|free copy of fir|cognizable offense"
+          },
+          {
+            "point": "Know that if outside home jurisdiction, a 'Zero FIR' must be accepted anywhere",
+            "note": "Leverages Zero FIR mandate.",
+            "weight": 35,
+            "critical": true,
+            "keys": "zero fir|any police station|jurisdiction"
+          },
+          {
+            "point": "Verify that the recorded statement matches your exact verbal account before signing",
+            "note": "Ensures documentary integrity.",
+            "weight": 20,
+            "critical": false,
+            "keys": "read before signing|accurate account"
+          }
+        ],
+        "dangerous": [
+          "pay bribe for fir",
+          "sign blank paper",
+          "accept refusal without asking for zero fir"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Bureau of Police Research and Development (Citizen Legal Guide)",
+          "url": "https://bprd.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-005",
+      "agentId": "nyaya",
+      "subtopic": "Child protection",
+      "title": "The POCSO Act: Robust legal shield against child abuse",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The Protection of Children from Sexual Offences (POCSO) Act 2012 protects all persons below 18 from abuse.",
+        "The POCSO law is gender-neutral, protecting both boys and girls with child-friendly court procedures."
+      ],
+      "do": [
+        "Know that POCSO treats anyone below 18 years as a child entitled to maximum legal protection",
+        "Reporting is mandatory: any adult, doctor, or teacher who knows of abuse must report it or face imprisonment",
+        "Special POCSO courts ensure the child does not see the accused during court testimony"
+      ],
+      "dont": [
+        "Never believe that the law only protects girls; boys are equally protected under POCSO",
+        "Never reveal the identity, name, or school of a child victim in media or public chats (punishable offense)"
+      ],
+      "myths": [
+        {
+          "statement": "The POCSO Act only applies to protect female children, not male children.",
+          "answer": "myth",
+          "truth": "The POCSO Act is 100% gender-neutral; boys, girls, and transgender children receive identical legal protections."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the maximum age limit defining a 'child' under the POCSO Act 2012?",
+          "options": [
+            "14 years",
+            "Any person below 18 years of age",
+            "21 years",
+            "12 years"
+          ],
+          "correct": 1,
+          "explanation": "POCSO universally defines a child as any individual who has not completed 18 years of age."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Discussing legal safety in civics class at {at}, students ask about how Indian law protects minors."
+        ],
+        "question": "What key legal facts should {name} share?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "The POCSO Act is a powerful, gender-neutral law protecting all children below 18 years",
+            "note": "Explains statutory scope and universality.",
+            "weight": 45,
+            "critical": true,
+            "keys": "pocso act|gender neutral|below 18|legal shield"
+          },
+          {
+            "point": "Mandatory reporting requires adults and institutions to report abuse to police or Childline",
+            "note": "Ensures institutional accountability.",
+            "weight": 35,
+            "critical": true,
+            "keys": "mandatory reporting|adult duty|special courts"
+          },
+          {
+            "point": "The identity and name of a child victim can NEVER be published publicly by law",
+            "note": "Protects victim confidentiality under Section 23.",
+            "weight": 20,
+            "critical": false,
+            "keys": "identity protected|confidentiality"
+          }
+        ],
+        "dangerous": [
+          "claim boys have no rights",
+          "publish victim names online",
+          "ignore abuse laws"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Law and Justice (POCSO Act 2012)",
+          "url": "https://legislative.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-006",
+      "agentId": "nyaya",
+      "subtopic": "Transparency",
+      "title": "Right to Information (RTI Act): Holding public offices accountable",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "The Right to Information (RTI) Act 2005 empowers any Indian citizen to question government decisions.",
+        "Public Information Officers (PIOs) are legally mandated to reply with certified records within 30 days."
+      ],
+      "do": [
+        "File an RTI request online at rtionline.gov.in with a nominal ₹10 fee to inspect public project records",
+        "Use RTI to inspect road repair budgets, school mid-day meal funds, or municipal park contracts",
+        "Appeal to the Central/State Information Commission if an office fails to reply within 30 days"
+      ],
+      "dont": [
+        "Never use RTI for private disputes; it applies strictly to public government authorities",
+        "Never feel intimidated: RTI is a celebrated democratic transparency tool for all citizens"
+      ],
+      "myths": [
+        {
+          "statement": "Only certified journalists and lawyers have the legal right to file RTI applications.",
+          "answer": "myth",
+          "truth": "Every single citizen of India has the constitutional right to file an RTI to inspect government records."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Within how many days is a Public Information Officer (PIO) legally required to respond to an RTI request?",
+          "options": [
+            "1 year",
+            "Within 30 days of receiving the application",
+            "5 days",
+            "Never"
+          ],
+          "correct": 1,
+          "explanation": "The RTI Act mandates a strict 30-day timeline (48 hours if concerning life and liberty)."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A road outside school at {at} was supposedly repaired last month but broke apart in 3 days."
+        ],
+        "question": "How can {name} and their family use the RTI Act constructively?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "File an RTI query on rtionline.gov.in to obtain the sanctioned budget, contractor name, and work audit",
+            "note": "Extracts public administrative records.",
+            "weight": 45,
+            "critical": true,
+            "keys": "file rti|inspect records|road budget|contractor details"
+          },
+          {
+            "point": "Know that public authorities are legally bound to respond within 30 days",
+            "note": "Enforces statutory time-bound compliance.",
+            "weight": 35,
+            "critical": true,
+            "keys": "30 days response|public information officer|transparency"
+          },
+          {
+            "point": "Use certified government documents to hold local ward engineers accountable",
+            "note": "Promotes active citizen democratic oversight.",
+            "weight": 20,
+            "critical": false,
+            "keys": "civic accountability|governance"
+          }
+        ],
+        "dangerous": [
+          "bribe officials for info",
+          "smash road in anger",
+          "assume citizens have no rights"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Department of Personnel and Training (RTI Online Portal)",
+          "url": "https://rtionline.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-007",
+      "agentId": "nyaya",
+      "subtopic": "Identity privacy",
+      "title": "Protecting your Aadhaar and personal data: Masked Aadhaar",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Your 12-digit Aadhaar number is a unique national identity linked to banking and mobile telecom accounts.",
+        "Sharing unmasked Aadhaar photocopies carelessly exposes you to identity impersonation and SIM swap fraud."
+      ],
+      "do": [
+        "Download and use 'Masked Aadhaar' (which displays only the last 4 digits: XXXX-XXXX-1234) from myaadhaar.uidai.gov.in",
+        "Cross out the photocopy with two parallel lines and write the specific purpose (e.g. 'For SIM activation only')",
+        "Lock your Aadhaar biometrics using the official mAadhaar mobile app when not actively visiting verification centers"
+      ],
+      "dont": [
+        "Never share your 6-digit Aadhaar OTP with anyone claiming to be a verification executive",
+        "Never leave photocopies of your Aadhaar card lying around internet cafes"
+      ],
+      "myths": [
+        {
+          "statement": "Hotels and cinema halls have the absolute legal right to demand your original unmasked Aadhaar card copy.",
+          "answer": "myth",
+          "truth": "UIDAI explicitly clarifies that Masked Aadhaar is legally valid everywhere, and private entities cannot compel unmasked copies."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a 'Masked Aadhaar' downloaded from the official UIDAI portal?",
+          "options": [
+            "A fake Aadhaar",
+            "An official copy where the first 8 digits are hidden as XXXX-XXXX, displaying only the last 4 digits",
+            "An Aadhaar with a mask picture",
+            "A broken card"
+          ],
+          "correct": 1,
+          "explanation": "Masked Aadhaar protects privacy by concealing the first 8 digits while remaining 100% legally valid."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Checking into a hotel or registering at a coaching institute at {at}, the clerk demands a photocopy of Aadhaar."
+        ],
+        "question": "What privacy safeguard should {name} apply?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Provide a 'Masked Aadhaar' photocopy where the first 8 digits are concealed",
+            "note": "Prevents unauthorized identity harvesting.",
+            "weight": 45,
+            "critical": true,
+            "keys": "masked aadhaar|hide first 8 digits|last 4 digits"
+          },
+          {
+            "point": "Cross the photocopy and clearly write: 'Submitted strictly for [Purpose] only'",
+            "note": "Prevents document misuse for other contracts.",
+            "weight": 35,
+            "critical": true,
+            "keys": "cross photocopy|write purpose|watermark"
+          },
+          {
+            "point": "Never share the Aadhaar OTP with anyone under any circumstances",
+            "note": "Secures identity verification channel.",
+            "weight": 20,
+            "critical": false,
+            "keys": "never share aadhaar otp|lock biometrics"
+          }
+        ],
+        "dangerous": [
+          "give unmasked copy to stranger",
+          "share aadhaar otp on call",
+          "leave card at cyber cafe"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Unique Identification Authority of India (UIDAI)",
+          "url": "https://uidai.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-008",
+      "agentId": "nyaya",
+      "subtopic": "Traffic law",
+      "title": "Juvenile driving laws: Heavy penalties under Section 199A MV Act",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Under Section 199A of the amended Motor Vehicles Act, vehicle owners face 3 years imprisonment if a minor drives.",
+        "The vehicle's registration is cancelled for 1 year, and the minor cannot get a driving license until age 25."
+      ],
+      "do": [
+        "Understand that underage driving carries a ₹25,000 fine on parents and possible juvenile home detention",
+        "Wait until age 18 to obtain a permanent driving license (age 16 for gearless 50cc with parental consent)",
+        "Use cycles, walking, or public transport until reaching legal licensing age"
+      ],
+      "dont": [
+        "Never borrow your parents' car or scooter without having a valid driving license",
+        "Never give into peer pressure urging you to show off driving skills outside school"
+      ],
+      "myths": [
+        {
+          "statement": "If a 15-year-old drives a motorcycle and causes an accident, police cannot touch them because they are a minor.",
+          "answer": "myth",
+          "truth": "Under MV Act Section 199A, parents face 3 years jail, ₹25,000 fine, and the minor faces juvenile justice trial."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the legal penalty on parents/vehicle owners under Section 199A if a minor is caught driving?",
+          "options": [
+            "A ₹50 fine",
+            "Up to ₹25,000 fine, 3 years imprisonment, and cancellation of vehicle registration for 1 year",
+            "A warning letter",
+            "No penalty"
+          ],
+          "correct": 1,
+          "explanation": "Stringent MV Act amendments hold vehicle owners criminally liable for allowing underage driving."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Friends at {at} tease a 15-year-old for not taking their father's car out on the highway."
+        ],
+        "question": "How should {name} explain the severe legal reality?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that Section 199A MV Act imposes a ₹25,000 fine and up to 3 years jail on parents",
+            "note": "Cites exact statutory criminal liability.",
+            "weight": 45,
+            "critical": true,
+            "keys": "mv act section 199a|jail for parents|25000 fine|illegal"
+          },
+          {
+            "point": "State that the minor will be barred from getting a driving license until age 25",
+            "note": "Highlights long-term personal consequences.",
+            "weight": 35,
+            "critical": true,
+            "keys": "barred until 25|no license until 25"
+          },
+          {
+            "point": "Take pride in obeying the law and choose safe cycling or walking",
+            "note": "Champions responsible juvenile citizenship.",
+            "weight": 20,
+            "critical": false,
+            "keys": "obey traffic law|cycle|walk"
+          }
+        ],
+        "dangerous": [
+          "encourage joyriding",
+          "claim minors face no law",
+          "steal car keys"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Road Transport and Highways (Motor Vehicles Act)",
+          "url": "https://morth.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-009",
+      "agentId": "nyaya",
+      "subtopic": "Participation",
+      "title": "Right to be heard at school: Student councils and grievance boxes",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Article 12 of the UN Convention on the Rights of the Child guarantees youth the right to express views freely.",
+        "School grievance boxes and elected student councils provide structured channels to voice campus concerns."
+      ],
+      "do": [
+        "Use your school's student council or anonymous suggestion/grievance box to raise constructive concerns",
+        "Advocate for campus improvements: clean drinking water, clean toilets, library books, and sports gear",
+        "Present feedback respectfully with facts, practical solutions, and collective student support"
+      ],
+      "dont": [
+        "Never use grievance boxes to post anonymous personal insults or defamatory rumors about teachers",
+        "Never remain silent about unhygienic washrooms or broken safety equipment"
+      ],
+      "myths": [
+        {
+          "statement": "Students are children and have zero right to express opinions about school facilities.",
+          "answer": "myth",
+          "truth": "Modern educational jurisprudence recognizes students as primary stakeholders with the legal right to be heard."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What international human rights treaty guarantees children the right to express their views on matters affecting them?",
+          "options": [
+            "Trade Agreement",
+            "UN Convention on the Rights of the Child (UNCRC Article 12)",
+            "Postal Code",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "UNCRC Article 12 establishes that children's views must be given due weight in all matters affecting them."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Students at {at} notice that the school science lab lacks basic safety goggles and washroom taps are broken."
+        ],
+        "question": "How should {name} channel this student voice legally and constructively?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Draft a respectful, factual petition through the elected Student Council or Grievance Box",
+            "note": "Utilizes established institutional democratic channels.",
+            "weight": 45,
+            "critical": true,
+            "keys": "student council|grievance box|respectful petition|factual"
+          },
+          {
+            "point": "Highlight the safety implications: students need working washroom hygiene and eye protection",
+            "note": "Frames request around student safety and rights.",
+            "weight": 35,
+            "critical": true,
+            "keys": "safety implications|hygiene rights|lab safety"
+          },
+          {
+            "point": "Engage with the school principal collaboratively to improve campus infrastructure",
+            "note": "Fosters positive civic negotiation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "collaborate with principal|constructive solution"
+          }
+        ],
+        "dangerous": [
+          "vandalize school property",
+          "post abusive memes online",
+          "stay silent forever"
+        ]
+      },
+      "sources": [
+        {
+          "name": "UN Convention on the Rights of the Child (Article 12)",
+          "url": "https://unicef.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-010",
+      "agentId": "nyaya",
+      "subtopic": "Inclusion law",
+      "title": "Rights of Persons with Disabilities (RPWD Act 2016): Equal access",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The RPWD Act 2016 recognizes 21 disabilities and mandates barrier-free accessibility in all public buildings.",
+        "Discrimination against persons with disabilities is punishable with imprisonment under Indian law."
+      ],
+      "do": [
+        "Advocate for ramps, braille signage, and accessible washrooms in schools, metro stations, and public parks",
+        "Understand that inclusive education is a legal right: no school can deny admission based on disability",
+        "Treat disabled peers with equality, dignity, and natural inclusion without pity or condescension"
+      ],
+      "dont": [
+        "Never park bicycles or store clutter blocking wheelchair ramps or tactile pavings",
+        "Never mock, imitate, or use derogatory slurs against people with disabilities"
+      ],
+      "myths": [
+        {
+          "statement": "Wheelchair ramps in schools are optional luxury decorations that schools can skip.",
+          "answer": "myth",
+          "truth": "Barrier-free accessibility ramps and accessible washrooms are mandatory legal requirements under the RPWD Act."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How many disabilities are officially recognized under the Rights of Persons with Disabilities (RPWD) Act 2016?",
+          "options": [
+            "Only 2",
+            "21 benchmark disabilities",
+            "100",
+            "5"
+          ],
+          "correct": 1,
+          "explanation": "The 2016 Act expanded recognized disabilities from 7 to 21, including autism, intellectual disability, and locomotor disability."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student using a wheelchair seeks admission at a school at {at}, but the administration claims they have no ramp."
+        ],
+        "question": "What legal mandate protects the student?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "The RPWD Act 2016 legally mandates all schools to provide barrier-free accessible infrastructure",
+            "note": "Enforces statutory accessibility mandate.",
+            "weight": 45,
+            "critical": true,
+            "keys": "rpwd act 2016|accessible infrastructure|mandatory ramps|equal rights"
+          },
+          {
+            "point": "Denying school admission on the grounds of disability violates constitutional equality and the law",
+            "note": "Illegal educational discrimination.",
+            "weight": 35,
+            "critical": true,
+            "keys": "cannot deny admission|inclusive education|equality"
+          },
+          {
+            "point": "The school must construct ramps and accessible facilities to accommodate all learners",
+            "note": "Obligates reasonable accommodation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "construct ramps|reasonable accommodation"
+          }
+        ],
+        "dangerous": [
+          "support turning the student away",
+          "block the ramp with bicycles",
+          "mock wheelchair users"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Department of Empowerment of Persons with Disabilities (MSJE)",
+          "url": "https://disabilityaffairs.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-011",
+      "agentId": "nyaya",
+      "subtopic": "Constitutional equality",
+      "title": "Article 15: No discrimination on grounds of religion, race, caste or sex",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Article 15 of the Indian Constitution strictly prohibits discrimination in access to public shops, wells, and parks.",
+        "Equality is a fundamental pillar: every Indian citizen stands equal before the law."
+      ],
+      "do": [
+        "Treat every classmate with equal respect regardless of their family background, language, religion, or caste",
+        "Ensure public spaces like colony playgrounds, water coolers, and sports fields are open to everyone",
+        "Celebrate India's rich cultural diversity as a source of national strength and unity"
+      ],
+      "dont": [
+        "Never exclude a classmate from games or study groups based on their caste, community, or mother tongue",
+        "Never practice or tolerate untouchability or social segregation (punishable under Article 17)"
+      ],
+      "myths": [
+        {
+          "statement": "Colony sports grounds can legally ban children of domestic workers from playing on the grass.",
+          "answer": "myth",
+          "truth": "Article 15 explicitly forbids discrimination in public places, parks, and wells against any citizen."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which article of the Indian Constitution prohibits discrimination against any citizen on grounds of religion, race, caste, sex, or place of birth?",
+          "options": [
+            "Article 1",
+            "Article 15",
+            "Article 370",
+            "Article 50"
+          ],
+          "correct": 1,
+          "explanation": "Article 15 is the cornerstone of non-discrimination and fundamental democratic equality in India."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In a residential colony playground at {at}, someone tries to stop a maintenance worker's child from playing football."
+        ],
+        "question": "How does {name} uphold constitutional values?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Point out that public parks and playgrounds belong equally to all children under Article 15",
+            "note": "Champions constitutional non-discrimination.",
+            "weight": 45,
+            "critical": true,
+            "keys": "article 15|equal access|public playground belongs to all"
+          },
+          {
+            "point": "Invite the child into the football match warmly and pass them the ball",
+            "note": "Practices everyday constitutional equality.",
+            "weight": 35,
+            "critical": true,
+            "keys": "invite to play|pass the ball|inclusive play"
+          },
+          {
+            "point": "Stand firmly against caste, class, or community prejudice in your neighborhood",
+            "note": "Rejects illegal social segregation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "no discrimination|equality|reject prejudice"
+          }
+        ],
+        "dangerous": [
+          "tell the child to leave",
+          "support playground discrimination",
+          "mock the child's clothes"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Constitution of India (Fundamental Rights - Article 15)",
+          "url": "https://legislative.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-012",
+      "agentId": "nyaya",
+      "subtopic": "Cyber law",
+      "title": "Information Technology Act: What is illegal on the internet",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The Information Technology (IT) Act 2000 governs digital crimes, data privacy, and online fraud.",
+        "Creating fake social media profiles (Section 66D) or hacking accounts (Section 66) carries up to 3 years imprisonment."
+      ],
+      "do": [
+        "Know that online actions leave IP address digital trails that law enforcement cyber cells trace easily",
+        "Understand that creating fake impersonation profiles or sending offensive abusive messages is a crime",
+        "Respect intellectual property: do not distribute pirated software, cracked games, or copyrighted media"
+      ],
+      "dont": [
+        "Never create fake social media accounts pretending to be your classmates or teachers",
+        "Never hack into a friend's email, Instagram, or gaming account 'as a joke'"
+      ],
+      "myths": [
+        {
+          "statement": "Creating a fake Instagram account of your school principal to post funny jokes is harmless and legal.",
+          "answer": "myth",
+          "truth": "Identity impersonation and transmitting offensive messages are punishable crimes under Sections 66C and 66D of the IT Act."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What law in India penalizes identity theft, hacking, and online financial cheating?",
+          "options": [
+            "Motor Vehicle Code",
+            "The Information Technology (IT) Act 2000",
+            "Forest Act",
+            "Railway Act"
+          ],
+          "correct": 1,
+          "explanation": "The IT Act 2000 provides the comprehensive legal framework for investigating and penalizing cyber offenses."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A student at {at} creates a fake social media handle using a classmate's photo to post rude pranks."
+        ],
+        "question": "What legal warning should {name} deliver?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that online impersonation and identity theft are punishable crimes under Section 66D IT Act",
+            "note": "Cites statutory cybercrime liability.",
+            "weight": 45,
+            "critical": true,
+            "keys": "section 66d|it act|identity theft|cybercrime|punishable"
+          },
+          {
+            "point": "Remind them that cyber police trace IP addresses and digital footprints back to personal devices",
+            "note": "Dispels illusion of internet anonymity.",
+            "weight": 35,
+            "critical": true,
+            "keys": "ip address traced|cyber police|digital footprints"
+          },
+          {
+            "point": "Insist they delete the fake profile immediately and apologize to the classmate",
+            "note": "Facilitates immediate restorative remediation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "delete fake profile|apologize|stop harassment"
+          }
+        ],
+        "dangerous": [
+          "encourage fake profile pranks",
+          "help hack classmate's account",
+          "claim online has no laws"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Electronics and Information Technology (IT Act)",
+          "url": "https://meity.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-013",
+      "agentId": "nyaya",
+      "subtopic": "Lost documents",
+      "title": "Lost official documents (Aadhaar, marksheet, passport): Online police report",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Lost government IDs can be misused by criminals for unauthorized SIM cards or bank loans.",
+        "Filing a 'Lost Document Report' online with state police creates a legal shield proving you did not commit subsequent fraud."
+      ],
+      "do": [
+        "File a 'Lost Article / Document Report' online immediately on your State Police citizen portal",
+        "Download and print the official digitally signed Lost Report receipt (LDR) with its unique reference number",
+        "Apply for duplicate marksheets through official board portals (e.g. CBSE Pariksha Sangam) using the police report"
+      ],
+      "dont": [
+        "Never ignore a lost Aadhaar, PAN card, or board marksheet hoping it will magically turn up",
+        "Never pay unofficial touts to obtain duplicate government documents"
+      ],
+      "myths": [
+        {
+          "statement": "If you lose your original Class 10 marksheet, you can never get another copy in your lifetime.",
+          "answer": "myth",
+          "truth": "Central and state boards provide official duplicate marksheets online through verified police lost report receipts."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why must you file a police 'Lost Article Report' immediately after losing an identity card or marksheet?",
+          "options": [
+            "To pay fines",
+            "It provides legal proof that you lost the document, protecting you if a criminal misuses it",
+            "To get a reward",
+            "None"
+          ],
+          "correct": 1,
+          "explanation": "A police lost report creates an official timestamped legal barrier protecting against identity theft."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While traveling at {at}, {name} loses an official school marksheet and Aadhaar card."
+        ],
+        "question": "What is the correct, structured legal procedure?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "File an online 'Lost Property / Document Report' on the State Police citizen portal",
+            "note": "Establishes immediate legal record of loss.",
+            "weight": 45,
+            "critical": true,
+            "keys": "online lost report|state police portal|lost document report"
+          },
+          {
+            "point": "Download the official digital police receipt as legal proof of loss",
+            "note": "Documentary evidence for duplicate reissue.",
+            "weight": 35,
+            "critical": true,
+            "keys": "download receipt|police receipt|proof of loss"
+          },
+          {
+            "point": "Apply for duplicate documents through the official board portal (CBSE/State Board) and UIDAI",
+            "note": "Lawful replacement process.",
+            "weight": 20,
+            "critical": false,
+            "keys": "apply duplicate|cbse portal|uidai reissue"
+          }
+        ],
+        "dangerous": [
+          "do nothing and panic",
+          "pay touts for fake marksheet",
+          "ignore lost aadhaar"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Crime Records Bureau (Citizen Services)",
+          "url": "https://ncrb.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-014",
+      "agentId": "nyaya",
+      "subtopic": "Child protection",
+      "title": "Child marriage is illegal: The Prohibition of Child Marriage Act",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Under the Prohibition of Child Marriage Act (PCMA), marriage below age 18 for girls and 21 for boys is illegal.",
+        "Anyone who performs, conducts, directs, or abets a child marriage faces rigorous imprisonment and non-bailable arrest."
+      ],
+      "do": [
+        "Know that child marriage destroys education, health, and childhood, and is strictly prohibited by law",
+        "Know that Child Marriage Prohibition Officers (CMPO), police, and Childline 1098 intervene to stop illegal weddings",
+        "Report any impending child marriage secretly and confidentially to Childline 1098 or local police 112"
+      ],
+      "dont": [
+        "Never attend or support a wedding where the bride or groom is a minor child",
+        "Never believe that 'family traditions' overrule the statutory criminal law of India"
+      ],
+      "myths": [
+        {
+          "statement": "If parents arrange a wedding for a 15-year-old girl with community approval, the law cannot stop it.",
+          "answer": "myth",
+          "truth": "Child marriage is a cognizable, non-bailable offense. Police and Child Welfare Committees halt weddings instantly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the statutory legal age of marriage in India under current law?",
+          "options": [
+            "12 for girls, 14 for boys",
+            "Minimum 18 years for females and 21 years for males",
+            "Any age with parent consent",
+            "10 years"
+          ],
+          "correct": 1,
+          "explanation": "Statutory law mandates minimum 18 for women and 21 for men to protect physical and emotional maturity."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A 15-year-old student at {at} is being secretly pulled out of school by family for an arranged child marriage."
+        ],
+        "question": "What urgent legal protection can be mobilized?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Report immediately to Child Helpline 1098, the school principal, or local police 112",
+            "note": "Mobilizes emergency Child Welfare Committee (CWC) legal stay orders.",
+            "weight": 45,
+            "critical": true,
+            "keys": "call 1098|childline|call 112|report child marriage"
+          },
+          {
+            "point": "Explain that the Prohibition of Child Marriage Act makes child marriage a non-bailable criminal offense",
+            "note": "Understands statutory criminal prohibition.",
+            "weight": 35,
+            "critical": true,
+            "keys": "pcma act|non-bailable|illegal offense|jail for organizers"
+          },
+          {
+            "point": "Ensure the reporting is handled confidentially to protect the young student's safety",
+            "note": "Shields child from retaliatory pressure.",
+            "weight": 20,
+            "critical": false,
+            "keys": "confidential reporting|protect student"
+          }
+        ],
+        "dangerous": [
+          "attend the child wedding",
+          "encourage early marriage",
+          "claim tradition beats law"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Women and Child Development (PCMA)",
+          "url": "https://wcd.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-015",
+      "agentId": "nyaya",
+      "subtopic": "Legal aid",
+      "title": "National Legal Services Authority (NALSA): Free legal aid for all children",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Article 39A of the Indian Constitution directs the state to provide free legal aid to ensure equal justice.",
+        "Under Section 12 of the Legal Services Authorities Act, ALL children, women, and disadvantaged citizens get 100% free lawyers."
+      ],
+      "do": [
+        "Know that children, women, SC/ST citizens, and economically weaker individuals are legally entitled to free lawyers",
+        "Access free legal assistance through District Legal Services Authorities (DLSA) in every district court",
+        "Call the National Legal Services Authority toll-free helpline at 15100 for guidance"
+      ],
+      "dont": [
+        "Never assume justice is only for the wealthy who can afford expensive private advocates",
+        "Never pay fees to a designated Legal Aid panel advocate (their services are fully funded by the state)"
+      ],
+      "myths": [
+        {
+          "statement": "Hiring a lawyer in India always requires paying lakhs of rupees, meaning poor families can never go to court.",
+          "answer": "myth",
+          "truth": "Under NALSA, the government appoints experienced panel lawyers completely free of cost for eligible citizens."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What national helpline number provides free legal guidance under NALSA in India?",
+          "options": [
+            "100",
+            "15100",
+            "101",
+            "108"
+          ],
+          "correct": 1,
+          "explanation": "Dialing 15100 connects directly to the National Legal Services Authority free legal consultation desk."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A vulnerable family at {at} faces illegal eviction but has zero money to afford private court lawyers."
+        ],
+        "question": "How can {name} connect them to justice?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Inform them about free legal aid provided by the District Legal Services Authority (DLSA) under NALSA",
+            "note": "Directs to statutory free legal aid mechanisms.",
+            "weight": 45,
+            "critical": true,
+            "keys": "nalsa|dlsa|free legal aid|district court legal services"
+          },
+          {
+            "point": "Call the national legal aid helpline at 15100 for immediate advice",
+            "note": "Accesses free government legal counseling.",
+            "weight": 35,
+            "critical": true,
+            "keys": "call 15100|national legal helpline|free lawyer"
+          },
+          {
+            "point": "Explain that children and vulnerable citizens are guaranteed free court representation under Article 39A",
+            "note": "Constitutional right to equal justice.",
+            "weight": 20,
+            "critical": false,
+            "keys": "article 39a|equal justice|free representation"
+          }
+        ],
+        "dangerous": [
+          "tell them justice is impossible",
+          "pay loan sharks for lawyer fees",
+          "give up without legal aid"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Legal Services Authority (NALSA)",
+          "url": "https://nalsa.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-016",
+      "agentId": "nyaya",
+      "subtopic": "Child justice",
+      "title": "Child Welfare Committees (CWC) and juvenile justice protections",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Every district in India has a statutory Child Welfare Committee (CWC) acting as a judicial bench for children.",
+        "The Juvenile Justice (Care and Protection of Children) Act ensures children are rehabilitated, not criminalized."
+      ],
+      "do": [
+        "Understand that CWCs have the authority of a judicial magistrate to order shelter, medical care, and rehabilitation",
+        "Special Juvenile Police Units (SJPU) in every police station operate in plain clothes to keep interactions child-friendly",
+        "Any child found lost, abandoned, or subjected to abuse is produced before the CWC for legal protection"
+      ],
+      "dont": [
+        "Never treat juvenile justice as punitive; the law focuses on care, protection, and social reintegration",
+        "Never publish photos or names of children involved in juvenile proceedings"
+      ],
+      "myths": [
+        {
+          "statement": "Police can put children into regular adult prison cells alongside adult convicts.",
+          "answer": "myth",
+          "truth": "The Juvenile Justice Act strictly prohibits placing children in adult jails; they receive counseling in observation homes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What statutory district body holds judicial powers to protect children in need of care and rehabilitation?",
+          "options": [
+            "Panchayat only",
+            "Child Welfare Committee (CWC)",
+            "Municipal tax office",
+            "Traffic court"
+          ],
+          "correct": 1,
+          "explanation": "CWCs function as the bench of magistrates under the JJ Act for children requiring care and protection."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Discussing child safety mechanisms at {at}, students ask who makes legal decisions for rescued street children."
+        ],
+        "question": "What institutional framework should {name} explain?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that the statutory Child Welfare Committee (CWC) acts as a judicial authority for child protection",
+            "note": "Explains core JJ Act governance framework.",
+            "weight": 45,
+            "critical": true,
+            "keys": "child welfare committee|cwc|judicial authority|rehabilitation"
+          },
+          {
+            "point": "State that Special Juvenile Police Units (SJPU) handle children gently in plain clothes",
+            "note": "Highlights child-friendly police standards.",
+            "weight": 35,
+            "critical": true,
+            "keys": "sjpu|plain clothes police|child friendly"
+          },
+          {
+            "point": "Emphasize that the law aims to rehabilitate and educate vulnerable children, not punish them",
+            "note": "Understands restorative child justice.",
+            "weight": 20,
+            "critical": false,
+            "keys": "rehabilitation|education|care and protection"
+          }
+        ],
+        "dangerous": [
+          "advocate throwing kids in adult jails",
+          "ignore child welfare committees",
+          "condemn street children"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Juvenile Justice (Care and Protection of Children) Act",
+          "url": "https://wcd.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-017",
+      "agentId": "nyaya",
+      "subtopic": "Transport rights",
+      "title": "Passenger rights: Rail cancellations, delays and passenger charter",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Indian Railways and the Directorate General of Civil Aviation (DGCA) maintain formal passenger charters.",
+        "Passengers have statutory rights to ticket refunds, meals during extended delays, and emergency grievance redressal."
+      ],
+      "do": [
+        "Use the 'RailMadad' app or helpline 139 for real-time medical aid, security assistance, or cleanliness complaints on trains",
+        "Claim full TDR refunds if a train is delayed by more than 3 hours and you choose not to travel",
+        "Know that airlines must provide free meals/refreshments for delays over 2 to 4 hours under DGCA passenger charter"
+      ],
+      "dont": [
+        "Never travel without a valid ticket or valid government identity proof",
+        "Never pay extra unauthorized cash to railway pantry staff above the printed menu price list"
+      ],
+      "myths": [
+        {
+          "statement": "If a train pantry vendor charges ₹50 extra for a meal, passengers have zero rights to complain.",
+          "answer": "myth",
+          "truth": "RailMadad (139) takes swift disciplinary action against pantry vendors overcharging above approved IRCTC rates."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the official unified helpline number and mobile app for Indian Railway passenger grievances?",
+          "options": [
+            "100",
+            "139 (RailMadad)",
+            "101",
+            "108"
+          ],
+          "correct": 1,
+          "explanation": "Dialing 139 or using the RailMadad app connects directly to the railway grievance cell for immediate action."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Traveling on a long-distance train at {at}, the coach air conditioning fails and pantry staff overcharge for water."
+        ],
+        "question": "How should {name} exercise statutory passenger rights?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "File an instant complaint on the RailMadad app or call 139 with the PNR number",
+            "note": "Triggers immediate on-board railway officer intervention.",
+            "weight": 45,
+            "critical": true,
+            "keys": "railmadad|call 139|pnr number|file complaint"
+          },
+          {
+            "point": "Check the official IRCTC menu price list and refuse to pay unauthorized extra charges",
+            "note": "Asserts approved tariff rights.",
+            "weight": 35,
+            "critical": true,
+            "keys": "irctc approved rates|refuse extra charges|official price list"
+          },
+          {
+            "point": "Know that passengers have clear rights to cleanliness, safety, and grievance resolution",
+            "note": "Understands passenger service charter.",
+            "weight": 20,
+            "critical": false,
+            "keys": "passenger rights|service charter"
+          }
+        ],
+        "dangerous": [
+          "pay double price silently",
+          "smash train windows",
+          "ignore railmadad portal"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Railways Passenger Charter (RailMadad)",
+          "url": "https://railmadad.indianrailways.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "LAW-018",
+      "agentId": "nyaya",
+      "subtopic": "Citizenship",
+      "title": "Fundamental Duties (Article 51A): The citizen's moral compass",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Rights and duties are two sides of the same coin; democracy cannot survive if citizens demand rights while abandoning duties.",
+        "Article 51A of the Indian Constitution lists 11 Fundamental Duties expected of every responsible citizen."
+      ],
+      "do": [
+        "Abide by the Constitution, respect the National Flag and National Anthem (Article 51A(a))",
+        "Protect and improve the natural environment, including forests, lakes, rivers, and wildlife (Article 51A(g))",
+        "Develop scientific temper, humanism, and the spirit of inquiry and reform (Article 51A(h))"
+      ],
+      "dont": [
+        "Never destroy or vandalize public property (Article 51A(i) mandates abjuring violence and protecting public assets)",
+        "Never treat civic responsibility as someone else's job"
+      ],
+      "myths": [
+        {
+          "statement": "The Constitution of India only gives citizens free rights and asks for zero duties in return.",
+          "answer": "myth",
+          "truth": "Part IVA (Article 51A) establishes 11 Fundamental Duties essential for national harmony and progress."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which Fundamental Duty under Article 51A(h) encourages students to question superstitions and explore science?",
+          "options": [
+            "Duty to pay tax",
+            "Duty to develop scientific temper, humanism, and the spirit of inquiry and reform",
+            "Duty to build roads",
+            "Duty to swim"
+          ],
+          "correct": 1,
+          "explanation": "Developing a 'scientific temper' is a unique, celebrated constitutional duty in the Indian Constitution."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In school assembly at {at}, {name} discusses what makes a great, responsible Indian citizen."
+        ],
+        "question": "What constitutional wisdom should {name} embody?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Balance democratic rights with active fulfillment of Fundamental Duties under Article 51A",
+            "note": "Connects rights with civic responsibility.",
+            "weight": 45,
+            "critical": true,
+            "keys": "fundamental duties|article 51a|civic responsibility|balance rights"
+          },
+          {
+            "point": "Fulfill duties by protecting public property, conserving wildlife, and respecting the National Flag",
+            "note": "Concrete everyday duty execution.",
+            "weight": 35,
+            "critical": true,
+            "keys": "protect public property|conserve environment|respect flag"
+          },
+          {
+            "point": "Cultivate a scientific temper, questioning blind superstitions and seeking evidence-based truth",
+            "note": "Champions Article 51A(h) scientific inquiry.",
+            "weight": 20,
+            "critical": false,
+            "keys": "scientific temper|spirit of inquiry|evidence"
+          }
+        ],
+        "dangerous": [
+          "vandalize public buses",
+          "claim duties don'?t matter",
+          "promote blind superstition"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Constitution of India (Part IVA - Fundamental Duties)",
+          "url": "https://legislative.gov.in"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

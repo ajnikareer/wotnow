@@ -1,0 +1,1637 @@
+{
+  "agentId": "echo",
+  "cards": [
+    {
+      "id": "FEEL-001",
+      "agentId": "echo",
+      "subtopic": "Emotional Literacy",
+      "title": "Naming your emotions: The feelings wheel",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Psychologist Dan Siegel coined 'Name it to tame it': labeling an emotion activates the brain's prefrontal cortex, reducing amygdala reactivity.",
+        "Vague labels like 'bad' or 'weird' keep distress fuzzy; identifying 'lonely', 'overwhelmed', or 'envious' leads to targeted solutions."
+      ],
+      "do": [
+        "Use an emotion wheel or mood chart to identify the precise sub-emotion you are experiencing",
+        "Acknowledge feelings without judgment: 'I am noticing a sensation of envy in my chest'",
+        "Remember that emotions are temporary brain signals, not permanent personal identities"
+      ],
+      "dont": [
+        "Never suppress or bottle up painful feelings hoping they will magically vanish",
+        "Never shame yourself for experiencing normal human feelings like jealousy or fear"
+      ],
+      "myths": [
+        {
+          "statement": "Mentally strong people never feel sad, anxious, jealous, or overwhelmed.",
+          "answer": "myth",
+          "truth": "Emotional strength is not feeling numb; it is having the self-awareness to recognize painful emotions and process them healthily."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens in your brain when you accurately name a strong, distressing emotion?",
+          "options": [
+            "Your brain shuts down completely",
+            "The logical prefrontal cortex activates, helping calm down the amygdala alarm center",
+            "Your heart rate doubles instantly",
+            "Emotions get permanently stuck in your head"
+          ],
+          "correct": 1,
+          "explanation": "Labeling emotions ('naming to tame') dampens autonomic nervous arousal and restores cognitive clarity."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After receiving lower marks than expected at {at}, {name} feels a tight heaviness in their stomach and snaps angrily at a sibling."
+        ],
+        "question": "How should {name} process this emotional state constructively?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pause and identify the underlying emotion: disappointment and embarrassment rather than pure anger",
+            "note": "Practices accurate emotional labeling.",
+            "weight": 45,
+            "critical": true,
+            "keys": "name disappointment|underlying emotion|name it to tame it"
+          },
+          {
+            "point": "Acknowledge that feeling sad or disappointed after hard work is completely valid and normal",
+            "note": "Validates emotional experience without judgment.",
+            "weight": 35,
+            "critical": true,
+            "keys": "validate feeling|normal human response|self compassion"
+          },
+          {
+            "point": "Apologize to the sibling and take three slow, calming breaths",
+            "note": "Takes relational responsibility and resets physiology.",
+            "weight": 20,
+            "critical": false,
+            "keys": "apologize to sibling|calming breaths"
+          }
+        ],
+        "dangerous": [
+          "scream and throw textbooks",
+          "bottle up emotions and pretend everything is perfect",
+          "punish self through starvation"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Institute of Mental Health and Neurosciences (NIMHANS)",
+          "url": "https://nimhans.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-002",
+      "agentId": "echo",
+      "subtopic": "Anxiety Management",
+      "title": "Taming exam anxiety: The 5-4-3-2-1 grounding technique",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Exam anxiety triggers a fight-or-flight adrenal surge that reduces working memory and makes your mind feel blank.",
+        "Physical grounding (5-4-3-2-1 sensory check) and 4-7-8 rhythmic breathing physically downshift the nervous system within 90 seconds."
+      ],
+      "do": [
+        "Practice 5-4-3-2-1: Name 5 things you see, 4 things you can touch, 3 sounds you hear, 2 things you smell, 1 thing you taste",
+        "Inhale through your nose for 4 seconds, hold for 7 seconds, exhale slowly through pursed lips for 8 seconds",
+        "Remind yourself: 'An exam measures my preparation on a few questions today, not my entire worth as a human'"
+      ],
+      "dont": [
+        "Never hyperventilate with shallow chest breathing when panic surges",
+        "Never stay up all night drinking caffeine before a morning examination"
+      ],
+      "myths": [
+        {
+          "statement": "If your mind goes blank in an exam hall, it means you have forgotten everything and are doomed to fail.",
+          "answer": "myth",
+          "truth": "A blank mind is temporary cortisol-induced working memory vasoconstriction. Calming your breath restores memory access within 2 minutes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the immediate physiological goal of using the 5-4-3-2-1 grounding technique?",
+          "options": [
+            "To memorize 5 math formulas simultaneously",
+            "To pull sensory attention back into the present moment and deactivate the fight-or-flight panic cycle",
+            "To fall into deep sleep during the test",
+            "To test your eyesight"
+          ],
+          "correct": 1,
+          "explanation": "Grounding breaks catastrophic mental loops by reconnecting your attention with immediate physical reality."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Inside the exam hall at {at}, {name} flips open the question paper, feels their heart hammering at 140 bpm, and feels completely blank."
+        ],
+        "question": "What should {name} do in the first 2 minutes?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Put the pen down, close eyes, and take three deliberate 4-7-8 slow breaths into the belly",
+            "note": "Physiologically calms autonomic nervous arousal.",
+            "weight": 45,
+            "critical": true,
+            "keys": "4-7-8 breathing|slow belly breaths|put pen down"
+          },
+          {
+            "point": "Use the 5-4-3-2-1 grounding technique to reconnect with the physical desk and surroundings",
+            "note": "Deactivates panic cascade through present-moment sensory focus.",
+            "weight": 35,
+            "critical": true,
+            "keys": "5-4-3-2-1 grounding|feel desk|anchor in room"
+          },
+          {
+            "point": "Scan the paper for the single easiest question you recognize and solve that first to rebuild momentum",
+            "note": "Restores cognitive confidence through small wins.",
+            "weight": 20,
+            "critical": false,
+            "keys": "find easiest question first|rebuild momentum"
+          }
+        ],
+        "dangerous": [
+          "tear up question paper",
+          "run out of the hall screaming",
+          "give up and leave paper blank"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Tele-MANAS (Mental Health Helpline 14416) - MoHFW",
+          "url": "https://telemanas.mohfw.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-003",
+      "agentId": "echo",
+      "subtopic": "Boundaries",
+      "title": "Saying 'No' with kindness: Healthy boundaries protect you",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Saying 'yes' to everyone else often means saying 'no' to your own mental health, sleep, and core duties.",
+        "A boundary is not an attack or rejection of the other person; it is a clear statement of what you can and cannot do."
+      ],
+      "do": [
+        "Use clear, polite phrases: 'I can't take that on right now, but thank you for thinking of me'",
+        "Deliver your refusal without long, fabricated excuses; simple clarity commands respect",
+        "Notice if you say 'yes' purely out of fear that people will stop liking you"
+      ],
+      "dont": [
+        "Never apologize excessively for protecting your study hours or rest",
+        "Never agree to do a classmate's homework out of fear of being cast out of the group"
+      ],
+      "myths": [
+        {
+          "statement": "Being a kind and caring friend means you must agree to every single request anyone asks of you.",
+          "answer": "myth",
+          "truth": "Compulsive agreeableness is people-pleasing, not kindness. Healthy relationships require mutual boundaries and honest limits."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following is the most mature way to decline an unmanageable favor from a friend?",
+          "options": [
+            "Make up an elaborate lie about a fake doctor appointment",
+            "State calmly: 'I'd love to help, but I'm booked with exam revision this evening, so I can't join'",
+            "Ignore their calls for three weeks",
+            "Yell at them for being selfish"
+          ],
+          "correct": 1,
+          "explanation": "Honest, prompt, and calm boundaries preserve self-respect and friendship without deception."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A popular classmate at {at} demands that {name} write their complete history essay project by tomorrow morning."
+        ],
+        "question": "How should {name} assert this personal boundary?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Say clearly and calmly: 'No, I cannot write your project for you, but I can share the library book links'",
+            "note": "Sets a firm ethical boundary with helpful alternative.",
+            "weight": 50,
+            "critical": true,
+            "keys": "refuse to write essay|say no clearly|set firm boundary"
+          },
+          {
+            "point": "Recognize that true friendship is never conditional on completing someone else's academic work",
+            "note": "Rejects manipulative social coercion.",
+            "weight": 30,
+            "critical": true,
+            "keys": "friendship not conditional on homework|reject pressure"
+          },
+          {
+            "point": "Seek advice from a teacher or parent if the classmate uses bullying or threats",
+            "note": "Escalates extortion safely to trusted adults.",
+            "weight": 20,
+            "critical": false,
+            "keys": "tell teacher if threatened|seek adult support"
+          }
+        ],
+        "dangerous": [
+          "stay up all night writing peer's essay",
+          "do homework out of fear",
+          "insult classmate on group chat"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NIMHANS Child & Adolescent Mental Health Services",
+          "url": "https://nimhans.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-004",
+      "agentId": "echo",
+      "subtopic": "Relationship Repair",
+      "title": "The 4-part genuine apology: Repairing damaged trust",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A fake apology says 'I am sorry IF you felt hurt'; a genuine apology takes full ownership: 'I was wrong, I hurt you, and I will fix it.'",
+        "The four parts of an authentic apology: Own the specific action, Acknowledge the impact, Make amends, and Change the behavior."
+      ],
+      "do": [
+        "Say explicitly: 'I was wrong to share your secret; I broke your trust and made you feel exposed'",
+        "Ask sincerely: 'What can I do to help make this right between us?'",
+        "Give the hurt person space and time to forgive you without demanding immediate smiles"
+      ],
+      "dont": [
+        "Never attach defensive justifications: 'I am sorry, BUT you provoked me first'",
+        "Never expect someone to trust you instantly just because you said the word 'sorry'"
+      ],
+      "myths": [
+        {
+          "statement": "Adding the word 'BUT' in an apology ('I'm sorry, BUT you started it') makes the apology more balanced and fair.",
+          "answer": "myth",
+          "truth": "Using 'but' instantly cancels out the apology, shifting blame back onto the victim and deepening emotional damage."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What makes an apology genuinely restorative and mature?",
+          "options": [
+            "Blaming someone else for your actions",
+            "Taking clear responsibility for specific harm, expressing remorse, and offering concrete restitution",
+            "Buying expensive candy to bribe them",
+            "Posting a vague status on social media"
+          ],
+          "correct": 1,
+          "explanation": "Authentic apologies focus entirely on acknowledging harm, taking responsibility, and changing future conduct."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school corridor at {at}, {name} repeated a humiliating rumor about a friend to get laughs from a group of classmates."
+        ],
+        "question": "How should {name} deliver a sincere restorative apology?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Approach the friend privately and take unconditional ownership of the betrayal without excuses",
+            "note": "Delivers direct personal accountability.",
+            "weight": 45,
+            "critical": true,
+            "keys": "take full ownership|private apology|no excuses"
+          },
+          {
+            "point": "Acknowledge the specific emotional hurt and humiliation caused by repeating the rumor",
+            "note": "Validates the victim's pain with empathy.",
+            "weight": 35,
+            "critical": true,
+            "keys": "acknowledge emotional hurt|rumor impact|validate pain"
+          },
+          {
+            "point": "Publicly correct the false rumor in front of the same peer group where it was spoken",
+            "note": "Makes active public restitution to restore dignity.",
+            "weight": 20,
+            "critical": false,
+            "keys": "correct rumor publicly|active restitution"
+          }
+        ],
+        "dangerous": [
+          "say 'it was just a joke bro'",
+          "blame the classmate who originally started the rumor",
+          "pretend it never happened"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CBSE School Counseling Guidelines - Restorative Practices",
+          "url": "https://cbse.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-005",
+      "agentId": "echo",
+      "subtopic": "Social Rejection",
+      "title": "Coping with exclusion: You are not defined by someone's clique",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Social exclusion activates the same anterior cingulate cortex pain pathways in the brain as physical bodily injury.",
+        "Being excluded by a school clique is usually about group insecurity and conformity, not an indictment of your worth as a person."
+      ],
+      "do": [
+        "Remind yourself: 'Their choice to exclude me reflects their group dynamics, not my value as a human'",
+        "Direct your energy toward cultivating one or two authentic, kind individual friendships rather than chasing popular cliques",
+        "Engage in passion-driven clubs (music, robotics, sports, art) where connection forms around shared interests"
+      ],
+      "dont": [
+        "Never change your core ethical values or mock others just to win acceptance from an exclusive clique",
+        "Never isolate yourself entirely or conclude that nobody in the world will ever like you"
+      ],
+      "myths": [
+        {
+          "statement": "If a popular group of classmates doesn't invite you to sit at their table, it proves you are inherently unlikable.",
+          "answer": "myth",
+          "truth": "Clique behavior thrives on artificial exclusion to manufacture status. Your worth is completely independent of their group dynamics."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "When dealing with painful social exclusion at school, what is the most constructive response?",
+          "options": [
+            "Beg them to let you hang out with them",
+            "Seek out genuine shared-interest clubs and invest in individual friendships based on mutual kindness",
+            "Spread hateful gossip about everyone in the clique",
+            "Stop eating lunch entirely"
+          ],
+          "correct": 1,
+          "explanation": "Focusing on genuine shared interests and quality individual relationships builds lasting social resilience."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At lunch break at {at}, {name} sees classmates whispering and laughing while hiding their phones, deliberately leaving {name} out of an outing."
+        ],
+        "question": "How should {name} navigate this painful moment?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Acknowledge the sting of exclusion without internalizing it as a personal defect",
+            "note": "Practices emotional regulation and self-worth protection.",
+            "weight": 45,
+            "critical": true,
+            "keys": "acknowledge pain|do not internalize defect|protect self worth"
+          },
+          {
+            "point": "Step away from the clique and sit with someone else or join a library activity",
+            "note": "Chooses healthy social alternatives over begging for inclusion.",
+            "weight": 35,
+            "critical": true,
+            "keys": "step away from clique|find kind peers|join library group"
+          },
+          {
+            "point": "Talk through the feelings with a trusted sibling, parent, or school counselor",
+            "note": "Processes social distress with supportive adults.",
+            "weight": 20,
+            "critical": false,
+            "keys": "talk to trusted adult|process distress"
+          }
+        ],
+        "dangerous": [
+          "plead with the group to accept you",
+          "throw food at their table",
+          "post passive-aggressive rants online"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Mental Health Programme - Adolescent Life Skills",
+          "url": "https://mohfw.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-006",
+      "agentId": "echo",
+      "subtopic": "Peer Support",
+      "title": "Being there for a friend: Compassionate listening over quick fixes",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "When friends are in deep sorrow or distress, they don't need cliches like 'everything happens for a reason'; they need non-judgmental presence.",
+        "Distinguish everyday teenage sadness from mental health crises; never promise to keep secrets about self-harm or suicide."
+      ],
+      "do": [
+        "Sit with them, listen actively, and say: 'I hear how heavy this feels for you; you are not alone'",
+        "Offer practical micro-support: walking together, sharing class notes, or getting a glass of water",
+        "If a friend mentions self-harm, hopelessness, or giving up on life, tell a trusted adult immediately"
+      ],
+      "dont": [
+        "Never dismiss their pain with toxic positivity like 'just smile and cheer up!'",
+        "NEVER promise to keep a secret when a friend's physical life or safety is at risk"
+      ],
+      "myths": [
+        {
+          "statement": "If a distressed friend asks you to promise never to tell anyone about their self-harm plans, you must keep that secret no matter what.",
+          "answer": "myth",
+          "truth": "Life safety overrides all secrecy promises. True friendship means breaking confidence to save a friend's life by notifying adults."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most supportive thing to say when a friend breaks down crying over family troubles?",
+          "options": [
+            "'Stop crying, it's not a big deal'",
+            "'I am here with you, take all the time you need, and I'm listening'",
+            "'My problems are way worse than yours'",
+            "'You should just smile more'"
+          ],
+          "correct": 1,
+          "explanation": "Validating presence and active listening provide safety and comfort without judgment or unsolicited advice."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Sitting on the bench at {at}, a close friend confides that they feel hopeless, overwhelmed by family conflict, and want to end their pain."
+        ],
+        "question": "How should {name} respond with care and responsibility?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Listen with deep empathy and stay physically present with the friend",
+            "note": "Provides immediate compassionate emotional anchoring.",
+            "weight": 40,
+            "critical": true,
+            "keys": "deep empathy|stay present|do not leave alone"
+          },
+          {
+            "point": "Clearly explain that you care about their life too much to keep thoughts of harm a secret",
+            "note": "Establishes vital safety boundary.",
+            "weight": 35,
+            "critical": true,
+            "keys": "refuse to keep self harm secret|care too much"
+          },
+          {
+            "point": "Guide the friend directly to the school counselor or call the Tele-MANAS helpline 14416 together",
+            "note": "Connects crisis situation with professional mental health care.",
+            "weight": 25,
+            "critical": false,
+            "keys": "school counselor|call tele-manas 14416"
+          }
+        ],
+        "dangerous": [
+          "promise to keep suicidal thoughts secret",
+          "mock friend for being dramatic",
+          "leave friend alone in isolated spot"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Tele-MANAS Toll Free 24/7 Mental Health Helpline (14416)",
+          "url": "https://telemanas.mohfw.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-007",
+      "agentId": "echo",
+      "subtopic": "Emotional Regulation",
+      "title": "Cooling the fire: Managing anger before saying things you regret",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Anger is a secondary emotion that usually masks underlying hurt, fear, frustration, or perceived injustice.",
+        "When angry, your brain releases adrenaline that impairs logical judgment; taking a mandatory cooling break prevents catastrophic blowups."
+      ],
+      "do": [
+        "Recognize physical anger cues: clenched fists, racing pulse, hot neck, or shallow breathing",
+        "Enforce the 10-second rule: count slowly from 1 to 10 or drink a cold glass of water before replying",
+        "Step away physically: 'I am too angry to talk fairly right now; I will talk when I cool down'"
+      ],
+      "dont": [
+        "Never send text messages, post online comments, or make major decisions while enraged",
+        "Never resort to physical aggression, breaking items, or screaming insults"
+      ],
+      "myths": [
+        {
+          "statement": "Venting anger by punching walls, screaming, and smashing plates helps you get rid of anger safely.",
+          "answer": "myth",
+          "truth": "Research shows physical aggressive venting rehearses and amplifies anger pathways. Slow breathing and physical stepping away extinguish it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What physiological action is scientifically proven to de-escalate acute anger rapidly?",
+          "options": [
+            "Screaming at the top of your lungs into a pillow",
+            "Slow diaphragmatic exhalations and physical cold water face washing",
+            "Punching a door",
+            "Writing an angry email immediately"
+          ],
+          "correct": 1,
+          "explanation": "Slow exhalations trigger the vagus nerve and parasympathetic system, reducing heart rate and blood pressure."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a heated football dispute on the playground at {at}, an opponent shoves {name} and insults {name}'s family."
+        ],
+        "question": "How should {name} handle the surge of intense anger?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Step back, take deep diaphragmatic breaths, and refuse to engage in physical violence",
+            "note": "De-escalates physical conflict through emotional discipline.",
+            "weight": 45,
+            "critical": true,
+            "keys": "step back|deep breaths|refuse physical fight"
+          },
+          {
+            "point": "Tell the referee or sports teacher clearly about the foul play rather than retaliating",
+            "note": "Uses official grievance systems over street fighting.",
+            "weight": 35,
+            "critical": true,
+            "keys": "report to referee or teacher|do not retaliate"
+          },
+          {
+            "point": "Allow bodily adrenaline to subside before discussing the dispute with the opponent",
+            "note": "Waits for cognitive prefrontal recovery.",
+            "weight": 20,
+            "critical": false,
+            "keys": "let adrenaline subside|cool down before talking"
+          }
+        ],
+        "dangerous": [
+          "punch the opponent in the face",
+          "start a massive gang brawl",
+          "post violent threats online"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NIMHANS Adolescent Anger Management Guide",
+          "url": "https://nimhans.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-008",
+      "agentId": "echo",
+      "subtopic": "Digital Wellbeing",
+      "title": "The comparison trap: Highlight reels vs real life",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Comparing your messy behind-the-scenes life to other people's curated, filtered social media highlight reels creates chronic depression and envy.",
+        "Social media algorithms intentionally amplify envy and luxury flexes because outrage and desire drive longer screen time."
+      ],
+      "do": [
+        "Remind yourself: 'Nobody posts their failed exams, family fights, or morning acne on Instagram'",
+        "Mute or unfollow accounts that consistently leave you feeling inadequate, ugly, or poor",
+        "Spend time celebrating your real-world achievements: books read, sports played, and genuine friendships"
+      ],
+      "dont": [
+        "Never measure your beauty or worth by the number of likes, hearts, or views on a photo",
+        "Never buy items you cannot afford just to photograph them for social media clout"
+      ],
+      "myths": [
+        {
+          "statement": "People whose social media profiles show luxury vacations, flawless skin, and constant parties live genuinely perfect lives.",
+          "answer": "myth",
+          "truth": "Social feeds are carefully curated stage performances. Influencers often experience severe anxiety, loneliness, and financial strain behind the camera."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why does scrolling through luxury vacation photos on social media frequently make teenagers feel depressed?",
+          "options": [
+            "Because phones emit radiation that causes sadness",
+            "Because you are comparing your unfiltered everyday reality to someone else's top 1% staged highlight reel",
+            "Because vacations are bad for health",
+            "Because phones are too heavy"
+          ],
+          "correct": 1,
+          "explanation": "Comparing your private struggles to another person's public best moments creates an artificial, toxic illusion of personal deficiency."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Late at night in bed at {at}, {name} scrolls through classmates' beach holiday stories and feels a deep ache of inadequacy and sadness."
+        ],
+        "question": "What is the healthiest mental shift for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that social media stories are selective highlights and turn off the device",
+            "note": "Breaks the comparison spiral through reality testing.",
+            "weight": 50,
+            "critical": true,
+            "keys": "recognize selective highlights|turn off phone|stop scrolling"
+          },
+          {
+            "point": "Unfollow or mute accounts that trigger persistent feelings of envy and inadequacy",
+            "note": "Curates a protective digital environment.",
+            "weight": 30,
+            "critical": true,
+            "keys": "mute envy triggering accounts|digital boundary"
+          },
+          {
+            "point": "Write down three specific blessings or accomplishments in your own everyday life",
+            "note": "Practices grounded gratitude.",
+            "weight": 20,
+            "critical": false,
+            "keys": "three blessings|grounded gratitude"
+          }
+        ],
+        "dangerous": [
+          "stay up all night stewing in jealousy",
+          "beg parents to take out loans for luxury trips",
+          "post fake staged photos to compete"
+        ]
+      },
+      "sources": [
+        {
+          "name": "UNICEF - Digital Parenting and Mental Health",
+          "url": "https://unicef.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-009",
+      "agentId": "echo",
+      "subtopic": "Communication",
+      "title": "Disagreeing with grace: Attack the argument, not the person",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Two smart, kind people can look at the same facts and come to completely different conclusions; disagreement is normal in society.",
+        "Attacking a person's intelligence, character, or family (ad hominem) destroys dialogue; focusing on evidence builds shared wisdom."
+      ],
+      "do": [
+        "Listen to understand the other person's perspective rather than listening merely to formulate your counter-attack",
+        "Use phrases like: 'I see your point about X, but what about the evidence on Y?'",
+        "Separate someone's ideas from their character: you can reject an idea while fully respecting the human holding it"
+      ],
+      "dont": [
+        "Never resort to name-calling, sarcastic mocking, or shouting over someone to win a debate",
+        "Never turn an intellectual or political difference into a lifelong personal grudge"
+      ],
+      "myths": [
+        {
+          "statement": "If you truly believe you are right in a debate, it is fully justified to insult the other person's intelligence.",
+          "answer": "myth",
+          "truth": "Insults are the weapon of someone who has run out of solid reasoning. Respectful logic and evidence persuade; personal attacks alienate."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What distinguishes a constructive debate from a destructive argument?",
+          "options": [
+            "Using louder vocal volume than your opponent",
+            "Focusing on facts and logic while treating the other person with dignity and respect",
+            "Insulting their family background",
+            "Interrupting them every two seconds"
+          ],
+          "correct": 1,
+          "explanation": "Constructive debate examines evidence objectively without degrading human relationships."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "In the school debate club at {at}, an opponent presents an argument that {name} strongly disagrees with."
+        ],
+        "question": "How should {name} structure the rebuttal?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Acknowledge the opponent's core premise respectfully before presenting counter-evidence",
+            "note": "Practices intellectual charity and respectful debate.",
+            "weight": 45,
+            "critical": true,
+            "keys": "acknowledge premise|present counter evidence|respectful rebuttal"
+          },
+          {
+            "point": "Address the factual data and reasoning directly without mocking the opponent personally",
+            "note": "Avoids ad hominem attacks.",
+            "weight": 35,
+            "critical": true,
+            "keys": "address data and reasoning|no personal insults"
+          },
+          {
+            "point": "Keep tone calm and modulated to allow the merits of the argument to speak for themselves",
+            "note": "Demonstrates emotional maturity.",
+            "weight": 20,
+            "critical": false,
+            "keys": "calm tone|modulated voice"
+          }
+        ],
+        "dangerous": [
+          "call opponent stupid",
+          "scream until the timer expires",
+          "refuse to shake hands after debate"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Curriculum Framework - Life Skills & Critical Thinking",
+          "url": "https://ncert.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-010",
+      "agentId": "echo",
+      "subtopic": "Help Seeking",
+      "title": "Building your safety circle: Identifying trusted adults",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Every young person encounters problems too heavy to carry alone—bullying, family distress, abuse, or deep depression.",
+        "A trusted adult is someone who listens without mocking, protects your physical safety, respects boundaries, and takes constructive action."
+      ],
+      "do": [
+        "Identify at least 3 trusted adults in different settings: one at home, one at school (teacher/counselor), and one in the community (doctor/relative)",
+        "Practice reaching out: 'I am dealing with something really difficult and I need your guidance'",
+        "Save national safety helpline numbers (Childline 1098, Tele-MANAS 14416) in your contacts"
+      ],
+      "dont": [
+        "Never suffer in silent isolation believing that nobody cares or that you deserve to suffer",
+        "Never trust an adult who demands that you keep dark, abusive, or uncomfortable physical secrets"
+      ],
+      "myths": [
+        {
+          "statement": "Going to a teacher or counselor for help with heavy emotional problems is a sign of personal weakness.",
+          "answer": "myth",
+          "truth": "Asking for help when overwhelmed is the highest form of courage and wisdom. No human is equipped to solve every crisis alone."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following qualities indicates an adult is genuinely trustworthy to confide in?",
+          "options": [
+            "They ask you to keep secret meetings hidden from your parents",
+            "They listen patiently without mockery, respect your dignity, and prioritize your safety",
+            "They gossip about other students' problems",
+            "They dismiss your feelings as stupid"
+          ],
+          "correct": 1,
+          "explanation": "Trustworthy adults maintain safety, active listening, healthy boundaries, and mature responsibility."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Facing overwhelming anxiety and family conflict at home at {at}, {name} feels trapped and doesn't know who to turn to."
+        ],
+        "question": "How should {name} seek appropriate support?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Reach out to a trusted school counselor, favorite teacher, or school nurse during recess",
+            "note": "Accesses accessible institutional support channels.",
+            "weight": 45,
+            "critical": true,
+            "keys": "reach out to counselor|trusted teacher|school nurse"
+          },
+          {
+            "point": "State clearly: 'I am feeling overwhelmed and need help finding a safe way forward'",
+            "note": "Articulates distress clearly.",
+            "weight": 35,
+            "critical": true,
+            "keys": "state overwhelmed clearly|ask for help"
+          },
+          {
+            "point": "Know that if school adults are unavailable, national helplines like Tele-MANAS (14416) offer free support",
+            "note": "Leverages national crisis helplines.",
+            "weight": 20,
+            "critical": false,
+            "keys": "tele-manas 14416|childline 1098"
+          }
+        ],
+        "dangerous": [
+          "keep suffering in silence",
+          "turn to unverified strangers on internet chat rooms",
+          "run away from home"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Childline India 1098 - Ministry of Women and Child Development",
+          "url": "https://childlineindia.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-011",
+      "agentId": "echo",
+      "subtopic": "Adaptation",
+      "title": "Starting fresh: Navigating a new school or city transition",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Relocating to a new school or city triggers culture shock, grief for old friendships, and feelings of social disorientation.",
+        "It takes an average of 3 to 6 months for a new environment to feel familiar; early loneliness is completely normal and temporary."
+      ],
+      "do": [
+        "Give yourself permission to feel awkward; transitioning into new routines takes time",
+        "Take initiative with low-pressure moves: smile, ask for directions, or offer to carry sports equipment",
+        "Join at least one co-curricular club (choir, chess, sports, art) to connect over structured activities"
+      ],
+      "dont": [
+        "Never isolate yourself in corners with headphones on during every recess break",
+        "Never compare the new school unfavorably in front of new classmates ('my old city was 100x better')"
+      ],
+      "myths": [
+        {
+          "statement": "If you don't make three best friends on your very first day at a new school, you will be an outcast forever.",
+          "answer": "myth",
+          "truth": "Deep friendships take months of repeated proximity and shared experiences to develop. Give yourself time to settle in."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the single most effective way to begin making friends when transferring to a new school?",
+          "options": [
+            "Bragging about how much cooler your old school was",
+            "Joining a school club or sports team where students collaborate around a shared activity",
+            "Sitting alone with a hoodie over your eyes",
+            "Insulting the teachers"
+          ],
+          "correct": 1,
+          "explanation": "Co-curricular clubs provide structured shared tasks where casual conversations spark friendships naturally."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "On their first week at a new school in a new city at {at}, {name} sits alone in the cafeteria feeling deeply homesick and awkward."
+        ],
+        "question": "How should {name} navigate this transition?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that early loneliness is a universal transition phase that eases over months",
+            "note": "Normalizes transitional adaptation timeline.",
+            "weight": 40,
+            "critical": true,
+            "keys": "transition takes time|homesick is normal|be patient"
+          },
+          {
+            "point": "Sign up for a sports team, science club, or drama group to meet peers naturally",
+            "note": "Engages in structured social environments.",
+            "weight": 40,
+            "critical": true,
+            "keys": "join sports or club|meet peers naturally"
+          },
+          {
+            "point": "Ask a classmate a simple question about school homework or cafeteria menus to break the ice",
+            "note": "Takes small, low-risk relational steps.",
+            "weight": 20,
+            "critical": false,
+            "keys": "ask simple question|break ice|small step"
+          }
+        ],
+        "dangerous": [
+          "refuse to speak to anyone",
+          "complain loudly that the new city is terrible",
+          "skip school repeatedly"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NCERT Guidelines on Guidance & Counseling for School Students",
+          "url": "https://ncert.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-012",
+      "agentId": "echo",
+      "subtopic": "Grief & Healing",
+      "title": "Grief and loss: Walking through bereavement with patience",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Losing a beloved grandparent, parent, sibling, or pet triggers waves of sorrow, numbness, anger, and deep yearning.",
+        "Grief does not follow a neat straight line; it comes in unpredictable waves that gradually become more manageable over time."
+      ],
+      "do": [
+        "Allow yourself to cry and express sorrow without feeling embarrassed or weak",
+        "Create a memory box, photo album, or journal preserving fond memories and lessons from your loved one",
+        "Maintain basic physical routines: eat regular meals, drink water, and get fresh air even when sad"
+      ],
+      "dont": [
+        "Never tell yourself 'I should be over this by now'; there is no statutory timeline for grief",
+        "Never bottle up painful emotions or pretend you don't care to look 'tough'"
+      ],
+      "myths": [
+        {
+          "statement": "Properly grieving means crying for exactly one week, after which you should never feel sad about the person again.",
+          "answer": "myth",
+          "truth": "Grief comes in waves over years. You never 'get over' losing someone deeply loved; you learn to grow around the loss."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the healthiest mindset when dealing with the painful loss of a loved one or family pet?",
+          "options": [
+            "Force yourself to never mention their name again",
+            "Allow feelings of sadness to surface without shame, while leaning on family support and fond memories",
+            "Blame yourself for their death",
+            "Lock yourself in a dark room for a year"
+          ],
+          "correct": 1,
+          "explanation": "Patience, gentle self-care, and shared remembrance allow the heart to heal without suppression."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Following the passing of a beloved grandparent at {at}, {name} feels sudden bursts of tears during class and struggles to concentrate on schoolwork."
+        ],
+        "question": "How should {name} handle this season of bereavement?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Allow the tears to flow and explain to a kind teacher that you are currently grieving a family loss",
+            "note": "Communicates bereavement needs to educators.",
+            "weight": 45,
+            "critical": true,
+            "keys": "allow tears|tell teacher about loss|express sorrow"
+          },
+          {
+            "point": "Share memories and feelings openly with family members rather than isolating in secret",
+            "note": "Leans on shared familial support.",
+            "weight": 35,
+            "critical": true,
+            "keys": "share memories with family|talk openly"
+          },
+          {
+            "point": "Engage in a quiet reflective remembrance like planting a tree or creating a memory scrapbook",
+            "note": "Channels grief into meaningful tribute.",
+            "weight": 20,
+            "critical": false,
+            "keys": "plant tree|memory scrapbook|meaningful tribute"
+          }
+        ],
+        "dangerous": [
+          "punish yourself for feeling sad",
+          "pretend nothing happened",
+          "turn to substance abuse"
+        ]
+      },
+      "sources": [
+        {
+          "name": "NIMHANS Bereavement and Grief Support Resources",
+          "url": "https://nimhans.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-013",
+      "agentId": "echo",
+      "subtopic": "Growth Mindset",
+      "title": "The power of 'YET': Transforming fear of failure into growth",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Stanford psychologist Carol Dweck demonstrated that a 'Fixed Mindset' views ability as static, while a 'Growth Mindset' views intelligence as a muscle.",
+        "Adding the word 'YET' ('I don't understand quadratic equations YET') rewires the brain from defeat into constructive learning mode."
+      ],
+      "do": [
+        "Replace 'I can't do this' with 'I haven't mastered this yet'",
+        "Treat mistakes as diagnostic data showing exactly where your understanding needs reinforcement",
+        "Focus praise and self-talk on effort, strategy, and perseverance rather than innate 'genius'"
+      ],
+      "dont": [
+        "Never avoid challenging subjects or sports competitions purely out of fear of looking foolish",
+        "Never attach your core human worth to an exam score or competition rank"
+      ],
+      "myths": [
+        {
+          "statement": "If you fail a mathematics test, it proves that your brain simply lacks the innate DNA for math.",
+          "answer": "myth",
+          "truth": "The brain possesses neuroplasticity; struggling through hard problems literally builds new neural synapses and mathematical ability."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What simple three-letter word transforms a defeatist statement into an empowering growth mindset?",
+          "options": [
+            "NOT",
+            "YET",
+            "WHY",
+            "NOW"
+          ],
+          "correct": 1,
+          "explanation": "'Yet' acknowledges current challenge while emphasizing that mastery develops through practice over time."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After scoring 35% on a class physics test at {at}, {name} throws down the paper declaring: 'I am terrible at physics, I give up.'"
+        ],
+        "question": "How can {name} reframe this setback with a growth mindset?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Reframe the thought: 'I don't understand these mechanics concepts YET, but I can improve with practice'",
+            "note": "Applies the neuroplastic growth mindset filter.",
+            "weight": 45,
+            "critical": true,
+            "keys": "power of yet|not understood yet|effort and practice"
+          },
+          {
+            "point": "Review the marked paper to identify specific concept gaps and error patterns",
+            "note": "Uses test as diagnostic learning data.",
+            "weight": 35,
+            "critical": true,
+            "keys": "analyze specific errors|concept gaps|diagnostic data"
+          },
+          {
+            "point": "Seek targeted help from a teacher or peer to practice 5 similar problem types",
+            "note": "Executes concrete corrective action.",
+            "weight": 20,
+            "critical": false,
+            "keys": "seek targeted help|practice 5 problems"
+          }
+        ],
+        "dangerous": [
+          "rip up physics textbook",
+          "conclude you are born stupid",
+          "stop attending science classes"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Mindset Works - Dr. Carol Dweck Research Foundation",
+          "url": "https://mindsetworks.com"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-014",
+      "agentId": "echo",
+      "subtopic": "Positive Psychology",
+      "title": "Rewiring the negativity bias: The 3 Good Things exercise",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The human brain evolved a natural 'negativity bias' that magnifies threats and forgets everyday blessings and safety.",
+        "Spending 2 minutes writing down '3 Good Things' every evening physically rewires neural pathways, boosting optimism and sleep quality."
+      ],
+      "do": [
+        "Write down 3 specific things that went well today before going to bed, no matter how small",
+        "Note why each good thing happened ('I had a warm samosa because Mom thought of me')",
+        "Express spontaneous verbal appreciation to people who help you (parents, conductors, sweepers)"
+      ],
+      "dont": [
+        "Never dismiss small joys (a cool breeze, a funny joke) as trivial or unworthy of gratitude",
+        "Never use gratitude to toxicly invalidate genuine pain; gratitude complements problem solving"
+      ],
+      "myths": [
+        {
+          "statement": "Practicing gratitude means pretending that bad things never happen and ignoring all life problems.",
+          "answer": "myth",
+          "truth": "Gratitude doesn't ignore hardship; it balances brain chemistry so you don't overlook daily goodness while solving life challenges."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the proven neurological benefit of writing down 3 good things each evening?",
+          "options": [
+            "It makes you forget everything you learned",
+            "It counteracts evolutionary negativity bias and strengthens positive neural pathways",
+            "It makes you sleep 18 hours straight",
+            "It cures all viral infections"
+          ],
+          "correct": 1,
+          "explanation": "Systematic gratitude practice trains the brain to notice resources, kindness, and beauty rather than only threats."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the end of a tiring, stressful school day at {at}, {name} feels drained, grumpy, and convinced that the whole day was a disaster."
+        ],
+        "question": "How can {name} reset their mental state before sleeping?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Spend 3 minutes noting three concrete things that were positive during the day",
+            "note": "Exercises positive cognitive reframing.",
+            "weight": 45,
+            "critical": true,
+            "keys": "three good things|concrete positive moments|evening reset"
+          },
+          {
+            "point": "Reflect on the simple daily privileges often taken for granted: clean drinking water, a comfortable bed, family presence",
+            "note": "Cultivates perspective and emotional grounding.",
+            "weight": 35,
+            "critical": true,
+            "keys": "reflect on blessings|clean water|warm bed|perspective"
+          },
+          {
+            "point": "Notice how this gentle practice reduces nighttime anxiety and tension",
+            "note": "Recognizes positive emotional shifts.",
+            "weight": 20,
+            "critical": false,
+            "keys": "reduces tension|calm before sleep"
+          }
+        ],
+        "dangerous": [
+          "scroll angry comments on social media before bed",
+          "complain bitterly to siblings",
+          "stew in resentment"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Greater Good Science Center - UC Berkeley Gratitude Studies",
+          "url": "https://greatergood.berkeley.edu"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-015",
+      "agentId": "echo",
+      "subtopic": "Self-Perception",
+      "title": "Body neutrality: Valuing what your body DOES over how it LOOKS",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Commercial advertising, cinema, and social media airbrushing create impossible beauty standards that trigger body dysmorphia.",
+        "Body neutrality moves beyond forced praise: instead of obsessing over whether your body is 'pretty', appreciate what your body enables you to DO."
+      ],
+      "do": [
+        "Thank your legs for running, your lungs for breathing, and your hands for drawing or playing music",
+        "Remember that fashion models and celebrities use heavy makeup, professional lighting, and AI filters",
+        "Wear comfortable clothing that fits your current body comfortably rather than squeezing into painful sizes"
+      ],
+      "dont": [
+        "Never skip meals or adopt extreme starvation diets to look like an internet influencer",
+        "Never make unsolicited comments on someone else's weight, skin shade, height, or facial features"
+      ],
+      "myths": [
+        {
+          "statement": "Having visible acne, stretch marks, body hair, or skin pores is a medical defect that means you are dirty.",
+          "answer": "myth",
+          "truth": "Pores, textures, and body hair are universal biological traits. Airbrushed social media pictures erase normal human biology with digital software."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the core philosophy of 'Body Neutrality'?",
+          "options": [
+            "Constantly staring in the mirror reciting that you are the most gorgeous person alive",
+            "Appreciating your body as an incredible instrument for living, learning, and feeling rather than an ornament for display",
+            "Ignoring your body's need for food and water",
+            "Wearing plastic bags to hide yourself"
+          ],
+          "correct": 1,
+          "explanation": "Body neutrality frees young people from appearance obsession by focusing on functional health and capability."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Looking in the mirror at {at}, {name} feels miserable about emerging facial acne and wants to skip a school presentation."
+        ],
+        "question": "How should {name} reframe this self-conscious moment?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that adolescent acne is a natural hormonal phase experienced by nearly all teenagers",
+            "note": "Normalizes common developmental biology.",
+            "weight": 45,
+            "critical": true,
+            "keys": "acne is natural hormonal phase|universal among teens|normalize"
+          },
+          {
+            "point": "Shift focus to the valuable ideas in the presentation rather than facial aesthetics",
+            "note": "Prioritizes intellectual competence over appearance.",
+            "weight": 35,
+            "critical": true,
+            "keys": "focus on presentation ideas|competence over ornament"
+          },
+          {
+            "point": "Remember that classmates are thinking about their own insecurities rather than scrutinizing your skin",
+            "note": "Dispel the spotlight effect.",
+            "weight": 20,
+            "critical": false,
+            "keys": "dispel spotlight effect|others not scrutinizing"
+          }
+        ],
+        "dangerous": [
+          "apply harsh bleaching chemicals to face",
+          "skip school presentation out of shame",
+          "refuse to leave the bedroom"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Indian Association of Dermatologists, Venereologists and Leprologists (IADVL)",
+          "url": "https://iadvl.org"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-016",
+      "agentId": "echo",
+      "subtopic": "Digital Dynamics",
+      "title": "Exiting group chat drama: Preserving peace over flame wars",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Class WhatsApp and Discord groups frequently devolve into late-night gossip, meme mocking, exclusion, and aggressive flame wars.",
+        "Getting drawn into typing frantic counter-attacks late at night drains emotional energy and creates permanent screenshot evidence."
+      ],
+      "do": [
+        "Mute high-drama group chats for 8 hours or 1 year so notifications do not disrupt your peace",
+        "Step back and ask: 'Will this argument matter in 1 month? Is typing a reply making anyone kinder?'",
+        "Exit toxic group chats cleanly or speak to the group admin privately about basic civility rules"
+      ],
+      "dont": [
+        "Never forward cruel memes or screenshots targeting a classmate to other chat groups",
+        "Never post personal secrets or intimate feelings into large peer group chats"
+      ],
+      "myths": [
+        {
+          "statement": "If someone insults you in a class group chat, you must immediately insult them back with ten memes to protect your honor.",
+          "answer": "myth",
+          "truth": "Escalating flame wars gives trolls exactly the spectacle they desire. Muting, documenting violations, or walking away displays true strength."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most mature response when a class WhatsApp group erupts into malicious bullying against a classmate?",
+          "options": [
+            "Add funny laughing emojis to stay on the bullies' good side",
+            "Refuse to participate in the mockery, support the targeted classmate privately, and report the abuse to a teacher",
+            "Forward the screenshots to 20 other groups",
+            "Insult everyone's parents"
+          ],
+          "correct": 1,
+          "explanation": "Refusing complicity, offering private empathy to the victim, and alerting adults stops bullying cycles without feeding drama."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At 10:30 PM at {at}, a class chat group erupts into a toxic argument where classmates exchange abusive voice notes and insults."
+        ],
+        "question": "How should {name} protect their peace of mind?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Resist the urge to jump into the late-night flame war and mute the group chat notifications",
+            "note": "Exercises healthy digital self-containment.",
+            "weight": 45,
+            "critical": true,
+            "keys": "do not join flame war|mute group notifications|protect peace"
+          },
+          {
+            "point": "Reach out privately to anyone being targeted with a kind message of solidarity",
+            "note": "Offers safe, empathetic 1-on-1 allyship.",
+            "weight": 35,
+            "critical": true,
+            "keys": "private solidarity message|check on victim"
+          },
+          {
+            "point": "Put the phone in another room to protect sleep and report severe cyberbullying to school tomorrow",
+            "note": "Safeguards rest and utilizes institutional safety channels.",
+            "weight": 20,
+            "critical": false,
+            "keys": "put phone away|sleep peacefully|report severe abuse"
+          }
+        ],
+        "dangerous": [
+          "type abusive voice notes in rage",
+          "forward drama to viral meme pages",
+          "stay awake until 3 AM arguing"
+        ]
+      },
+      "sources": [
+        {
+          "name": "CERT-In Cyber Swachhta Kendra - Guidelines for Youth",
+          "url": "https://cyberswachhtakendra.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-017",
+      "agentId": "echo",
+      "subtopic": "Family Communication",
+      "title": "Talking to parents: Bridging the mental health conversation gap",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Many traditional parents dismiss emotional distress as 'just laziness' or 'too much mobile phone' because they grew up without mental health language.",
+        "Approaching parents with vulnerability, specific symptoms, and patience bridges generational divides far better than angry shouting."
+      ],
+      "do": [
+        "Choose a calm, quiet moment when parents are not stressed from work or chores to initiate the conversation",
+        "Use 'I-statements': 'Mom/Dad, I have been feeling constantly exhausted and anxious for three weeks, and I need guidance'",
+        "Frame mental health like physical health: 'Just like we see a doctor for high fever, I think speaking to a counselor would help me'"
+      ],
+      "dont": [
+        "Never begin a sensitive emotional conversation during the middle of a screaming argument",
+        "Never dismiss parents as unloving simply because they initially struggle to understand clinical depression"
+      ],
+      "myths": [
+        {
+          "statement": "If parents say 'just do yoga and study harder', it proves they completely hate you and you can never talk to them.",
+          "answer": "myth",
+          "truth": "Parents often respond with yoga/study out of genuine care filtered through limited past knowledge. Patient education bridges the gap."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How should you phrase a request to see a counselor when speaking to traditional parents?",
+          "options": [
+            "'You ruined my life and I hate this house!'",
+            "'I have been struggling with persistent anxiety that is affecting my studies and sleep; could we consult a counselor together?'",
+            "'Give me 50,000 rupees for therapy right now'",
+            "'I am never taking another exam'"
+          ],
+          "correct": 1,
+          "explanation": "Connecting emotional support to physical health, academic performance, and mutual partnership reassures parents and unlocks support."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At home at {at}, {name} has been feeling persistent dread and sadness for a month and wants to ask parents to consult a counselor."
+        ],
+        "question": "How should {name} structure this conversation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Pick a quiet evening moment and express vulnerability using calm 'I feel' statements",
+            "note": "Chooses optimal timing and non-defensive framing.",
+            "weight": 45,
+            "critical": true,
+            "keys": "calm evening moment|I feel statements|vulnerability"
+          },
+          {
+            "point": "Explain specific physical impacts: difficulty sleeping, racing heart, and trouble concentrating on studies",
+            "note": "Anchors distress in tangible, relatable symptoms.",
+            "weight": 35,
+            "critical": true,
+            "keys": "concrete symptoms|trouble sleeping|concentration issues"
+          },
+          {
+            "point": "Suggest speaking together with a school counselor or family doctor as an accessible first step",
+            "note": "Provides low-barrier, reassuring professional entry point.",
+            "weight": 20,
+            "critical": false,
+            "keys": "school counselor first step|consult family doctor"
+          }
+        ],
+        "dangerous": [
+          "scream during dinner that parents are toxic",
+          "bottle it up until a complete breakdown",
+          "run away"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Tele-MANAS Guidelines for Adolescent-Parent Communication",
+          "url": "https://telemanas.mohfw.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "FEEL-018",
+      "agentId": "echo",
+      "subtopic": "Biological Foundations",
+      "title": "Sleep and emotional stability: Your brain's nightly wash cycle",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "During deep REM and slow-wave sleep, the brain's glymphatic system cleans out toxic metabolic waste and emotionally recalibrates the amygdala.",
+        "Chronic sleep deprivation of under 7 hours produces emotional volatility, irritability, and depressive symptoms identical to clinical mood disorders."
+      ],
+      "do": [
+        "Aim for 8 to 9 hours of uninterrupted sleep every night as a non-negotiable mental health foundation",
+        "Keep bedroom dark and cool, and stop looking at blue-light screens at least 45 minutes before sleep",
+        "Maintain consistent sleep and wake times even on weekends to synchronize your circadian rhythm"
+      ],
+      "dont": [
+        "Never sacrifice sleep as a badge of honor to prove how hard you study",
+        "Never consume caffeinated energy drinks or coffee in the late afternoon or evening"
+      ],
+      "myths": [
+        {
+          "statement": "Sleeping only 4 hours a night is a sign of high ambition and supreme mental discipline.",
+          "answer": "myth",
+          "truth": "Chronic sleep deprivation damages IQ, destroys working memory, impairs emotional control, and triggers long-term mental health breakdowns."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What happens to your emotional regulation centers when you are severely sleep-deprived?",
+          "options": [
+            "They become 10 times stronger and calmer",
+            "The emotional amygdala becomes hyper-reactive while the prefrontal logical control center disconnects",
+            "You become immune to sadness",
+            "Nothing changes"
+          ],
+          "correct": 1,
+          "explanation": "Sleep deprivation uncouples prefrontal regulatory control, making you prone to sudden crying, rage, and anxiety."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "Preparing for unit tests at {at}, {name} sleeps only 4 hours for four consecutive nights and finds themselves bursting into tears over small mistakes."
+        ],
+        "question": "What is the most urgent intervention {name} needs?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that the emotional breakdown is a direct biological symptom of severe sleep debt",
+            "note": "Identifies physiological root cause of mood instability.",
+            "weight": 45,
+            "critical": true,
+            "keys": "recognize sleep debt symptom|biological root cause"
+          },
+          {
+            "point": "Prioritize getting 8 to 9 hours of solid recovery sleep tonight before doing any more revision",
+            "note": "Restores essential neurological regulation.",
+            "weight": 35,
+            "critical": true,
+            "keys": "prioritize 8 to 9 hours sleep|stop late studying"
+          },
+          {
+            "point": "Power down mobile screens and create a dark, quiet sleep environment",
+            "note": "Optimizes melatonin production and restorative sleep.",
+            "weight": 20,
+            "critical": false,
+            "keys": "turn off screens|dark quiet room"
+          }
+        ],
+        "dangerous": [
+          "drink three cans of energy drink to stay up later",
+          "assume you have gone permanently crazy",
+          "skip school completely"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Sleep Foundation - Adolescent Sleep Health Guidelines",
+          "url": "https://sleepfoundation.org"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

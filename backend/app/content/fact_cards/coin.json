@@ -1,0 +1,1631 @@
+{
+  "agentId": "coin",
+  "cards": [
+    {
+      "id": "MON-001",
+      "agentId": "coin",
+      "subtopic": "Budgeting",
+      "title": "Needs vs Wants: The golden financial filter",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "A 'need' is essential for survival, health, and basic education; a 'want' is a desire that can be delayed or skipped.",
+        "Distinguishing between needs and wants is the single most important habit for avoiding lifelong debt."
+      ],
+      "do": [
+        "Pause 24 hours before buying non-essential items to curb impulse spending",
+        "Ask yourself: 'What happens if I do not buy this today?'",
+        "Cover food, books, and essential bus fare before spending on snacks or merchandise"
+      ],
+      "dont": [
+        "Never label temporary peer cravings as urgent life needs",
+        "Never spend emergency savings on entertainment or trendy clothing"
+      ],
+      "myths": [
+        {
+          "statement": "If you desire something intensely, that automatically turns it into a financial need.",
+          "answer": "myth",
+          "truth": "Emotional intensity does not change necessity. Needs sustain life and daily function; wants are upgrades."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following is genuinely classified as a 'need' for a school student?",
+          "options": [
+            "A limited-edition gaming skin",
+            "Prescription spectacles or standard school uniform",
+            "Brand-new trendy sneakers when current shoes fit well",
+            "Eating out at a fast-food cafe every afternoon"
+          ],
+          "correct": 1,
+          "explanation": "Medical items, nutrition, and essential school requirements are basic needs; luxury brand upgrades are wants."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While shopping with friends at {at}, {name} sees a stylish imported jacket on discount that everyone praises, but {name} only has pocket money saved for upcoming textbook purchases."
+        ],
+        "question": "How should {name} decide whether to purchase it?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Prioritize necessary school textbooks as a core need over the jacket",
+            "note": "Ensures essential obligations are fulfilled without financial distress.",
+            "weight": 45,
+            "critical": true,
+            "keys": "prioritize needs|textbooks first|essential over luxury"
+          },
+          {
+            "point": "Implement a 24-hour cooling-off period to evaluate true value",
+            "note": "Stops instant peer-pressure impulse buying.",
+            "weight": 35,
+            "critical": true,
+            "keys": "pause 24 hours|cooling off|evaluate impulse"
+          },
+          {
+            "point": "Recognize the jacket as a temporary want that can be saved for later",
+            "note": "Demonstrates clear financial self-control.",
+            "weight": 20,
+            "critical": false,
+            "keys": "want not need|save for it later|delay gratification"
+          }
+        ],
+        "dangerous": [
+          "borrow money to buy immediately",
+          "spend book money on jacket",
+          "give into peer pressure"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Reserve Bank of India - Financial Education",
+          "url": "https://rbi.org.in/financialeducation"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-002",
+      "agentId": "coin",
+      "subtopic": "Savings",
+      "title": "Budgeting your money: The 50/30/20 bucket method",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "The 50/30/20 rule splits income: 50% for necessities, 30% for personal wants/fun, and 20% for future savings.",
+        "Budgeting does not mean depriving yourself of fun; it ensures you enjoy today while securing tomorrow."
+      ],
+      "do": [
+        "Divide any received allowance or gift money into three distinct jars or envelopes",
+        "Always deposit the 20% savings first ('pay yourself first')",
+        "Track total expenses in a pocket notebook or mobile ledger at least once a week"
+      ],
+      "dont": [
+        "Never spend 100% of money received on the day you receive it",
+        "Never dip into the savings bucket for impulsive weekend outings"
+      ],
+      "myths": [
+        {
+          "statement": "Budgeting means you are never allowed to spend money on entertainment or fun.",
+          "answer": "myth",
+          "truth": "A healthy budget explicitly reserves 30% for guilt-free fun so you don't burn out or binge spend."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "According to the 50/30/20 budgeting rule, what proportion of allowance should be directed to future savings?",
+          "options": [
+            "0%",
+            "5%",
+            "At least 20%",
+            "90%"
+          ],
+          "correct": 2,
+          "explanation": "Allocating 20% toward long-term savings builds an emergency cushion and teaches compound wealth."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} receives 500 rupees as monthly pocket money at {at}. Friends urge {name} to spend it all immediately on milkshakes and video games."
+        ],
+        "question": "How should {name} allocate this money systematically?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Set aside at least 100 rupees (20%) immediately into a savings jar",
+            "note": "Secures the savings component before any spending occurs.",
+            "weight": 45,
+            "critical": true,
+            "keys": "save 20%|100 rupees|pay yourself first"
+          },
+          {
+            "point": "Allocate 50% for actual requirements like stationery and bus fare",
+            "note": "Covers recurring necessary expenses responsibly.",
+            "weight": 35,
+            "critical": true,
+            "keys": "stationery|bus fare|50% needs"
+          },
+          {
+            "point": "Allow a planned portion for social fun without exceeding the budget",
+            "note": "Enjoys treats responsibly within limits.",
+            "weight": 20,
+            "critical": false,
+            "keys": "budgeted fun|enjoy within limits|30% wants"
+          }
+        ],
+        "dangerous": [
+          "spend all 500 on day one",
+          "borrow when money runs out",
+          "skip savings entirely"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Centre for Financial Education (NCFE)",
+          "url": "https://ncfe.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-003",
+      "agentId": "coin",
+      "subtopic": "Smart Shopping",
+      "title": "Unit pricing: Spotting deceptive supermarket packaging",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Bigger boxes or family packs are not always cheaper; manufacturers sometimes price larger volumes higher per gram.",
+        "Unit pricing measures cost per standard metric (e.g., price per 100g or per liter), exposing true costs."
+      ],
+      "do": [
+        "Calculate the price per 100g or per piece before assuming the 'jumbo pack' is a discount",
+        "Look at the lowest and highest shelves in grocery aisles where cheaper unpromoted brands sit",
+        "Check expiry and manufacturing dates before buying bulk perishables"
+      ],
+      "dont": [
+        "Never trust flashy 'Buy 2 Get 1 Free' stickers without comparing single-pack unit costs",
+        "Never purchase excess perishable groceries just because of a bulk offer"
+      ],
+      "myths": [
+        {
+          "statement": "Larger package sizes are always guaranteed to be cheaper per gram than small packs.",
+          "answer": "myth",
+          "truth": "Retailers frequently exploit this assumption; unit price calculations regularly reveal smaller packs are cheaper."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How do you determine which brand of cereal or detergent offers the genuinely lowest price?",
+          "options": [
+            "Check which box has the brightest cartoon character",
+            "Calculate the price per 100 grams or millilitres",
+            "Pick whichever box says 'Special Value Pack'",
+            "Buy whichever is placed at eye level"
+          ],
+          "correct": 1,
+          "explanation": "Comparing price per standard unit (gram/ml) reveals exact mathematical value regardless of box size."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At the grocery store at {at}, {name} sees Brand A selling 200g of biscuits for Rs 40 (Rs 20/100g) and a 'Giant Saver Pack' of 350g for Rs 84 (Rs 24/100g)."
+        ],
+        "question": "Which option should {name} choose and why?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Calculate price per 100g and discover the smaller pack is cheaper per unit",
+            "note": "Performs objective unit price comparison.",
+            "weight": 50,
+            "critical": true,
+            "keys": "calculate unit price|per 100g|smaller pack cheaper"
+          },
+          {
+            "point": "Reject the deceptive 'Giant Saver' claim",
+            "note": "Identifies deceptive retail marketing tactics.",
+            "weight": 30,
+            "critical": true,
+            "keys": "reject giant saver label|marketing trick"
+          },
+          {
+            "point": "Check the expiry date on the shelf items before completing payment",
+            "note": "Validates product shelf life.",
+            "weight": 20,
+            "critical": false,
+            "keys": "check expiry date|fresh stock"
+          }
+        ],
+        "dangerous": [
+          "blindly buy giant pack assuming cheaper",
+          "ignore unit pricing",
+          "assume marketing labels never mislead"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Department of Consumer Affairs, Government of India",
+          "url": "https://consumeraffairs.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-004",
+      "agentId": "coin",
+      "subtopic": "Consumer Rights",
+      "title": "MRP laws and bill verification: Never overpay",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Maximum Retail Price (MRP) is the legal ceiling in India; charging even one rupee above MRP is a punishable offense under Legal Metrology laws.",
+        "Billing errors, duplicate scans, and unapplied promotional discounts occur regularly at checkout counters."
+      ],
+      "do": [
+        "Always check the printed MRP on packaged bottles and snacks before handing over money",
+        "Review itemized printed bills line-by-line before leaving the store premises",
+        "Report vendors who charge extra for 'chilling' cold drinks to the National Consumer Helpline (1915)"
+      ],
+      "dont": [
+        "Never accept hand-written overcharges above the printed MRP",
+        "Never leave a store without collecting a printed tax invoice or cash receipt"
+      ],
+      "myths": [
+        {
+          "statement": "Shopkeepers have legal permission to charge extra 5 rupees above MRP for keeping drinks in their refrigerator.",
+          "answer": "myth",
+          "truth": "Under the Legal Metrology Act, MRP is all-inclusive of cooling, storage, and taxes. Overcharging is illegal."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should you do if a vendor demands 5 rupees extra above the printed MRP for a cold bottle of juice?",
+          "options": [
+            "Quietly pay whatever they demand",
+            "Point out the printed MRP and refuse to pay extra cooling charges",
+            "Threaten physical violence",
+            "Throw the bottle on the counter"
+          ],
+          "correct": 1,
+          "explanation": "By Indian law, MRP includes all taxes and retailer margins; cooling is an overhead cost the shopkeeper cannot charge extra for."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At a tourist bus stand kiosk at {at}, {name} is handed a bottle of water with MRP Rs 20, but the shopkeeper insists on Rs 25 citing 'refrigeration fees'."
+        ],
+        "question": "How should {name} handle this consumer situation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely point out the printed MRP of Rs 20 and state cooling fees are legally included",
+            "note": "Asserts legal consumer rights calmly.",
+            "weight": 45,
+            "critical": true,
+            "keys": "printed mrp 20|cooling fee illegal|legal metrology"
+          },
+          {
+            "point": "Decline to purchase and find an authorized vendor if the seller insists on overcharging",
+            "note": "Refuses to reward illicit retail extortion.",
+            "weight": 35,
+            "critical": true,
+            "keys": "refuse to pay extra|find honest vendor"
+          },
+          {
+            "point": "Know that consumer complaints can be registered on National Consumer Helpline 1915",
+            "note": "Utilizes official redressal mechanisms.",
+            "weight": 20,
+            "critical": false,
+            "keys": "helpline 1915|consumer forum"
+          }
+        ],
+        "dangerous": [
+          "pay the illegal markup without checking",
+          "engage in shouting match",
+          "take goods without paying"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Consumer Helpline (NCH)",
+          "url": "https://consumerhelpline.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-005",
+      "agentId": "coin",
+      "subtopic": "Digital Finance",
+      "title": "UPI PIN safety: Enter PIN only to SEND money",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Your UPI PIN (4 or 6 digits) is an authorization key to transfer money OUT of your bank account.",
+        "Receiving money via UPI, Google Pay, PhonePe, or Paytm NEVER requires entering your PIN, scanning a QR code, or clicking an approval link."
+      ],
+      "do": [
+        "Remember the golden rule: UPI PIN is ONLY entered when debited/paying, NEVER to receive funds",
+        "Immediately decline any caller or buyer who asks you to 'enter PIN to collect cash prize'",
+        "Check the beneficiary account name on the confirmation screen before hitting submit"
+      ],
+      "dont": [
+        "NEVER enter your UPI PIN on forms sent via SMS, WhatsApp, or OLX chats",
+        "NEVER share your banking OTP or UPI PIN with bank managers or tech support"
+      ],
+      "myths": [
+        {
+          "statement": "You must enter your UPI PIN to authenticate receiving cashback or money transfers from a buyer.",
+          "answer": "myth",
+          "truth": "Receiving money is completely automatic and requires zero PIN entries. If prompted for a PIN, money is leaving your account."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A buyer on an online marketplace offers to pay you Rs 500 and sends a QR code saying 'Scan and enter PIN to receive payment'. What is happening?",
+          "options": [
+            "It is a safe standard transaction",
+            "It is an advance payment feature",
+            "It is a scam designed to drain Rs 500 from your account",
+            "It verifies your identity"
+          ],
+          "correct": 2,
+          "explanation": "Scanning a QR code and entering a PIN always debits funds from your account, never credits it."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} is selling an old bicycle on an online portal. A buyer at {at} claims to have sent Rs 2,000 and messages: 'Accept request and enter your UPI PIN to claim money.'"
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Refuse to enter the UPI PIN, recognizing that receiving money never requires a PIN",
+            "note": "Demonstrates core digital banking awareness.",
+            "weight": 50,
+            "critical": true,
+            "keys": "never enter pin to receive|refuse request|scam attempt"
+          },
+          {
+            "point": "Check account balance directly in the official banking app without clicking chat links",
+            "note": "Verifies funds through secure independent channels.",
+            "weight": 30,
+            "critical": true,
+            "keys": "check banking app directly|do not click links"
+          },
+          {
+            "point": "Block and report the fraudulent buyer profile immediately",
+            "note": "Prevents further exploitation of community members.",
+            "weight": 20,
+            "critical": false,
+            "keys": "block and report scammer|cybercrime report"
+          }
+        ],
+        "dangerous": [
+          "enter pin to test if money arrives",
+          "share banking otp",
+          "scan unverified qr code"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Reserve Bank of India - Sachet Portal",
+          "url": "https://sachet.rbi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-006",
+      "agentId": "coin",
+      "subtopic": "Banking",
+      "title": "Minor savings accounts: Opening your first bank account",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Indian banks allow minors above age 10 to operate independent savings bank accounts (like SBI Pehla Kadam) with debit cards and checkbooks.",
+        "Holding a real bank account transitions youth from cash dependency to structured digital financial literacy."
+      ],
+      "do": [
+        "Keep your physical debit card, CVV number, and ATM PIN strictly confidential",
+        "Memorize your 4-digit ATM PIN and never write it down on the card surface or slip",
+        "Check monthly bank passbook statements to verify account balance and interest earned"
+      ],
+      "dont": [
+        "Never let friends or strangers punch your ATM PIN on keypad screens",
+        "Never throw away ATM transaction slips without tearing them into tiny shreds"
+      ],
+      "myths": [
+        {
+          "statement": "Minors in India are legally forbidden from holding bank accounts or using ATM debit cards.",
+          "answer": "myth",
+          "truth": "Minors aged 10+ can operate savings accounts independently under RBI guidelines to cultivate financial discipline."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where is the safest place to record your newly issued ATM debit card PIN?",
+          "options": [
+            "Written on the back of the debit card with permanent marker",
+            "Stored in your head through memorization only",
+            "Posted on your study desk whiteboard",
+            "Shared in a family WhatsApp group"
+          ],
+          "correct": 1,
+          "explanation": "ATM PINs must only be memorized. Writing it down invites unauthorized physical withdrawals if the card is misplaced."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} receives their first teenage debit card from their bank branch at {at}. A classmate asks to borrow the card to check how it works."
+        ],
+        "question": "How should {name} safeguard the new banking card?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Firmly refuse to hand over the debit card or disclose the secret PIN",
+            "note": "Establishes strict personal boundary around banking credentials.",
+            "weight": 50,
+            "critical": true,
+            "keys": "refuse to lend card|keep pin secret|memorize pin"
+          },
+          {
+            "point": "Memorize the PIN and scratch or cover the 3-digit CVV on the back",
+            "note": "Prevents unauthorized merchant card transactions.",
+            "weight": 30,
+            "critical": true,
+            "keys": "scratch cvv|keep secure|safe storage"
+          },
+          {
+            "point": "Review monthly passbook statements with parents to track deposits",
+            "note": "Practices ongoing account reconciliation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "review passbook|track statements"
+          }
+        ],
+        "dangerous": [
+          "lend debit card to friends",
+          "write pin on debit card",
+          "post card photo on social media"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Reserve Bank of India Guidelines for Minor Accounts",
+          "url": "https://rbi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-007",
+      "agentId": "coin",
+      "subtopic": "Investing",
+      "title": "Compound interest: Earning interest on your interest",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Albert Einstein famously called compound interest the 'eighth wonder of the world': you earn returns on your initial principal AND on accumulated returns.",
+        "Time in the market is vastly more powerful than timing the market; starting at age 14 creates exponential growth compared to starting at age 30."
+      ],
+      "do": [
+        "Start investing small amounts (even Rs 100/month via Recurring Deposit or PPF) as early as possible",
+        "Let your investments grow undisturbed over years rather than withdrawing small profits prematurely",
+        "Understand the Rule of 72: divide 72 by annual interest rate to find years needed to double money"
+      ],
+      "dont": [
+        "Never delay saving until your late twenties assuming small amounts don't matter",
+        "Never confuse high-risk gambling with long-term compound investing"
+      ],
+      "myths": [
+        {
+          "statement": "To build substantial wealth through compounding, you must start with hundreds of thousands of rupees.",
+          "answer": "myth",
+          "truth": "Compound growth relies on TIME and consistency, not large starting sums. Rs 500 invested monthly over decades creates massive wealth."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "If an investment pays an 8% annual return, roughly how many years will it take to double your money according to the Rule of 72?",
+          "options": [
+            "2 years",
+            "9 years (72 divided by 8)",
+            "20 years",
+            "72 years"
+          ],
+          "correct": 1,
+          "explanation": "The Rule of 72 states 72 / 8 = 9 years to double your initial capital automatically."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} at {at} receives Rs 2,000 birthday gift. Option A is spending it on trendy branded sneakers; Option B is depositing it in a long-term compound savings bond."
+        ],
+        "question": "How should {name} evaluate this financial crossroads?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that early compounding allows small deposits to multiply exponentially over time",
+            "note": "Understands exponential compounding trajectory.",
+            "weight": 45,
+            "critical": true,
+            "keys": "early compounding|exponential growth|rule of 72"
+          },
+          {
+            "point": "Calculate how leaving money untouched over years builds financial freedom",
+            "note": "Appreciates patient delayed gratification.",
+            "weight": 35,
+            "critical": true,
+            "keys": "leave untouched|builds future cushion|patience"
+          },
+          {
+            "point": "Choose to invest the majority while keeping a modest sum for a small celebratory treat",
+            "note": "Strikes healthy balance between present reward and future security.",
+            "weight": 20,
+            "critical": false,
+            "keys": "split balance|invest majority|small treat"
+          }
+        ],
+        "dangerous": [
+          "blow all money on temporary shoes",
+          "dismiss small savings as useless",
+          "borrow more to buy luxury goods"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Securities and Exchange Board of India (SEBI) - Investor Education",
+          "url": "https://investor.sebi.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-008",
+      "agentId": "coin",
+      "subtopic": "Debt & Borrowing",
+      "title": "Borrowing and lending: Preserving friendship and solvency",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Informal loans between friends and peers cause severe social anxiety, broken friendships, and awkward school dynamics.",
+        "Borrowing money for non-essential lifestyle wants creates toxic habits before adult life even begins."
+      ],
+      "do": [
+        "Never borrow money to buy luxury items, treats, or impressionable outfits",
+        "If you must borrow for an emergency (like fare), set an exact repayment deadline and pay early",
+        "Only lend amounts you can afford to lose without destroying the friendship"
+      ],
+      "dont": [
+        "Never shy away from asking for your own money back when a promised deadline passes",
+        "Never guarantee or take loans on behalf of another student"
+      ],
+      "myths": [
+        {
+          "statement": "Borrowing small amounts from peers every week to fund snacks is completely harmless.",
+          "answer": "myth",
+          "truth": "Casual borrowing creates dependency, damages social trust, and blinds youth to their true spending habits."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the healthiest rule regarding lending money to classmates?",
+          "options": [
+            "Lend your entire monthly allowance without asking when they will return it",
+            "Only lend small amounts you can comfortably afford not to get back, with clear repayment terms",
+            "Charge 50% weekly interest",
+            "Lend secretly without telling your parents"
+          ],
+          "correct": 1,
+          "explanation": "Clear agreements and conservative limits protect both personal finances and personal relationships."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A close classmate at {at} asks {name} to lend Rs 300 to buy a video game, promising to repay 'sometime next month', but has an unpaid past debt."
+        ],
+        "question": "How should {name} navigate this friendship situation?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Politely decline the loan, explaining that personal money is budgeted for other commitments",
+            "note": "Sets clear boundaries without aggression.",
+            "weight": 45,
+            "critical": true,
+            "keys": "politely decline|budgeted elsewhere|firm boundary"
+          },
+          {
+            "point": "Remind the friend calmly about the previous unsettled amount",
+            "note": "Holds friends accountable to past commitments.",
+            "weight": 35,
+            "critical": true,
+            "keys": "previous unsettled balance|clear accountability"
+          },
+          {
+            "point": "Suggest free alternative games or ways they can earn the money directly",
+            "note": "Offers constructive support without funding debt.",
+            "weight": 20,
+            "critical": false,
+            "keys": "suggest free alternatives|constructive support"
+          }
+        ],
+        "dangerous": [
+          "lend money out of social guilt",
+          "fight violently over old loans",
+          "steal family cash to lend"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Institute of Securities Markets (NISM)",
+          "url": "https://nism.ac.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-009",
+      "agentId": "coin",
+      "subtopic": "Scam Awareness",
+      "title": "Pyramid schemes & fake returns: If it's too good to be true, it's fake",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "No legitimate financial instrument guarantees 20%, 50%, or 100% returns in days or weeks; bank savings yield ~3-7% annually.",
+        "Multi-level marketing (MLM) and Telegram crypto bots recruit students by displaying fake rented supercars and fake screenshots."
+      ],
+      "do": [
+        "Remember: High guaranteed returns with zero risk ALWAYS indicate an illegal Ponzi scam",
+        "Verify financial firms on official SEBI or RBI directories before trusting claims",
+        "Warn peers when a club or senior asks for 'entry fee' to recruit downlines"
+      ],
+      "dont": [
+        "NEVER invest money into Telegram trading signals or Instagram 'fund doubling' groups",
+        "NEVER recruit friends into schemes that pay commissions purely for enrolling new members"
+      ],
+      "myths": [
+        {
+          "statement": "If a senior shows real bank account balance screenshots proving they doubled money in 3 days, the app must be genuine.",
+          "answer": "myth",
+          "truth": "Balance screenshots are easily fabricated with inspect element or dummy apps to bait gullible recruits."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the universal hallmark of a fraudulent pyramid or Ponzi scheme?",
+          "options": [
+            "Regulated by SEBI and audited annually",
+            "Promises guaranteed astronomical returns with no risk and rewards recruiting friends",
+            "Provides printed tax invoices for all transactions",
+            "Requires years of patient disciplined compounding"
+          ],
+          "correct": 1,
+          "explanation": "Guaranteed rapid profits paired with pressure to recruit friends is the textbook definition of an illegal pyramid scheme."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A senior student invites {name} to a cafe at {at}, presenting an app: 'Deposit Rs 1,000 today, get Rs 2,000 next Monday, plus Rs 500 for every junior you sign up!'"
+        ],
+        "question": "How should {name} respond?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Identify this immediately as an illegal Ponzi / pyramid scheme and refuse to participate",
+            "note": "Recognizes predatory recruitment structure.",
+            "weight": 50,
+            "critical": true,
+            "keys": "ponzi scheme|pyramid scam|refuse to join"
+          },
+          {
+            "point": "Refuse to recruit classmates or risk personal savings",
+            "note": "Protects peer community from financial harm.",
+            "weight": 30,
+            "critical": true,
+            "keys": "refuse to recruit peers|protect savings"
+          },
+          {
+            "point": "Report the recruiting activity to school authorities or the RBI Sachet portal",
+            "note": "Takes civic action to stop exploitation.",
+            "weight": 20,
+            "critical": false,
+            "keys": "report to school|rbi sachet portal"
+          }
+        ],
+        "dangerous": [
+          "invest savings to test app",
+          "convince best friends to join for bonus",
+          "borrow money to invest"
+        ]
+      },
+      "sources": [
+        {
+          "name": "RBI Sachet Portal against Illegal Deposit Schemes",
+          "url": "https://sachet.rbi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-010",
+      "agentId": "coin",
+      "subtopic": "Digital Literacy",
+      "title": "Dark patterns: Deceptive tricks in shopping apps",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Dark patterns are user-interface tricks designed to manipulate you into spending money, such as fake countdown timers and stealth subscriptions.",
+        "The Ministry of Consumer Affairs has legally prohibited 13 deceptive dark patterns in Indian e-commerce."
+      ],
+      "do": [
+        "Look out for pre-ticked checkboxes adding travel insurance, charity donations, or subscriptions",
+        "Ignore flashing 'Only 2 items left at this price!' banners designed to induce synthetic panic",
+        "Always check the final checkout total before clicking the final 'Pay' button"
+      ],
+      "dont": [
+        "Never make purchases in an emotional state of artificial scarcity",
+        "Never save credit/debit card credentials on casual gaming or shopping websites"
+      ],
+      "myths": [
+        {
+          "statement": "Websites display 'Only 1 left in stock!' purely as a helpful public service to alert shoppers.",
+          "answer": "myth",
+          "truth": "E-commerce apps regularly code artificial countdown clocks and stock counters to trigger impulse purchases via urgency."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following is an example of an illegal e-commerce 'dark pattern'?",
+          "options": [
+            "Displaying accurate dimensions of a backpack in centimeters",
+            "Pre-ticking a paid magazine subscription box during checkout without your consent",
+            "Showing clear return policies",
+            "Offering customer service phone numbers"
+          ],
+          "correct": 1,
+          "explanation": "Sneaking paid items into your cart via pre-ticked checkboxes is a banned dark pattern known as 'sneak into basket'."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While ordering a book online at {at}, {name} notices the checkout bill increased by Rs 99 due to an auto-checked 'VIP Delivery Pass'."
+        ],
+        "question": "What action should {name} take?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Spot the pre-checked dark pattern box and uncheck it to remove the unwanted fee",
+            "note": "Demonstrates vigilance against interface tricks.",
+            "weight": 50,
+            "critical": true,
+            "keys": "uncheck hidden box|remove dark pattern|verify bill total"
+          },
+          {
+            "point": "Carefully review every line item before approving digital payment",
+            "note": "Practices thorough checkout audit.",
+            "weight": 30,
+            "critical": true,
+            "keys": "review line items|check final total"
+          },
+          {
+            "point": "Complain to the platform or Consumer Helpline if hidden fees cannot be deselected",
+            "note": "Uses consumer protection remedies.",
+            "weight": 20,
+            "critical": false,
+            "keys": "report hidden charges|consumer helpline"
+          }
+        ],
+        "dangerous": [
+          "click pay without checking total",
+          "assume added charge is mandatory government tax",
+          "save card details on untrusted site"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Central Consumer Protection Authority (CCPA) - Dark Patterns Guidelines",
+          "url": "https://consumeraffairs.nic.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-011",
+      "agentId": "coin",
+      "subtopic": "Earning",
+      "title": "Earning your first rupee: Providing genuine value",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Money is earned by solving problems and delivering genuine value to people, not through luck or wishing.",
+        "Young people can build legitimate income through skills like tutoring juniors, coding basic websites, pet sitting, or crafting."
+      ],
+      "do": [
+        "Identify a real skill you possess (e.g., maths tutoring, digital art, gardening) that others need",
+        "Agree on scope of work, timeline, and fair compensation upfront before starting a task",
+        "Deliver high-quality work punctually to build personal reputation and word-of-mouth trust"
+      ],
+      "dont": [
+        "Never take on freelance work that violates child labor protections or interferes with school attendance",
+        "Never misrepresent your qualifications or plagiarize client work"
+      ],
+      "myths": [
+        {
+          "statement": "Making money online as a teenager only happens through viral dance videos or gaming streams.",
+          "answer": "myth",
+          "truth": "Most sustainable freelance income comes from practical micro-skills like design, tutoring, transcription, and neighborhood assistance."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the fundamental basis of legitimate economic earnings?",
+          "options": [
+            "Convincing people through deception",
+            "Solving a real problem and providing genuine value to others",
+            "Hoping for lottery windfalls",
+            "Borrowing without intent to repay"
+          ],
+          "correct": 1,
+          "explanation": "All enduring commerce is an exchange of value: helping someone save time, learn a skill, or solve a practical problem."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During school summer holidays at {at}, {name} wants to earn money legitimately to purchase a computer course."
+        ],
+        "question": "What is the most constructive approach for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Offer structured academic tutoring to neighborhood primary students in weak subjects",
+            "note": "Builds service based on genuine competence.",
+            "weight": 45,
+            "critical": true,
+            "keys": "offer tutoring|teach juniors|solve academic problem"
+          },
+          {
+            "point": "Define clear hourly rates and obtain parental approval before commencing",
+            "note": "Maintains transparency and safety.",
+            "weight": 35,
+            "critical": true,
+            "keys": "set clear rate|parental approval|schedule"
+          },
+          {
+            "point": "Deliver every tutoring session punctually with prepared notes and patience",
+            "note": "Builds sterling reputation and reliability.",
+            "weight": 20,
+            "critical": false,
+            "keys": "punctual delivery|high quality work"
+          }
+        ],
+        "dangerous": [
+          "join get-rich-quick telegram channels",
+          "neglect studies for odd jobs",
+          "charge money for homework copying"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Skill Development and Entrepreneurship",
+          "url": "https://msde.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-012",
+      "agentId": "coin",
+      "subtopic": "Saving Strategy",
+      "title": "Handling festival and shagun cash: Avoid the windfall trap",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Windfall cash (Diwali shagun, Eid eidi, birthday envelopes) triggers a mental accounting bias where we treat it as 'free money' to squander.",
+        "Treating gift cash with the same discipline as earned income accelerates savings goals by years."
+      ],
+      "do": [
+        "Deposit at least 50% of any festival gift cash directly into long-term savings or an RD",
+        "Use a modest 25% for a meaningful personal celebration or sharing with family",
+        "Keep a personal ledger noting who gifted what so you cultivate genuine gratitude"
+      ],
+      "dont": [
+        "Never rush to the market within an hour of receiving gift money to spend it on impulse toys",
+        "Never brag about gift amounts to peers or compare shagun envelopes"
+      ],
+      "myths": [
+        {
+          "statement": "Money received as a birthday or festival gift does not count as real money and should be spent instantly.",
+          "answer": "myth",
+          "truth": "Gift cash has identical purchasing power to hard-earned salary; squandering it wastes prime compounding opportunities."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the smartest financial habit when receiving festival cash from grandparents?",
+          "options": [
+            "Spend 100% immediately on firecrackers and candy",
+            "Allocate a significant portion to your savings fund while reserving a small portion for a treat",
+            "Hide it in a textbook and forget about it for 10 years",
+            "Hand it to strangers"
+          ],
+          "correct": 1,
+          "explanation": "Splitting windfall cash balances present celebration with meaningful asset accumulation."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "After family celebrations at {at}, {name} receives Rs 3,000 in cash envelopes from relatives."
+        ],
+        "question": "How should {name} allocate this windfall?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Allocate at least Rs 1,500 - Rs 2,000 into a bank deposit or designated savings goal",
+            "note": "Captures windfall for meaningful future utility.",
+            "weight": 45,
+            "critical": true,
+            "keys": "save 50% or more|deposit in bank|long term goal"
+          },
+          {
+            "point": "Reserve a planned portion for a thoughtful personal book, game, or family treat",
+            "note": "Enjoys celebration mindfully without guilt.",
+            "weight": 35,
+            "critical": true,
+            "keys": "budgeted treat|meaningful celebration"
+          },
+          {
+            "point": "Thank each relative warmly with handwritten gratitude notes",
+            "note": "Cultivates interpersonal respect and humility.",
+            "weight": 20,
+            "critical": false,
+            "keys": "thank relatives|cultivate gratitude"
+          }
+        ],
+        "dangerous": [
+          "squander all 3000 in one afternoon",
+          "boast about cash to friends",
+          "gamble on arcade machines"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Centre for Financial Education",
+          "url": "https://ncfe.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-013",
+      "agentId": "coin",
+      "subtopic": "Macroeconomics",
+      "title": "Inflation: Why 100 rupees buys less over time",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Inflation is the general increase in prices over time, which reduces the purchasing power of your money.",
+        "If inflation is 6% per year, an item that costs Rs 100 today will cost Rs 106 next year; cash hidden in a drawer loses value every day."
+      ],
+      "do": [
+        "Understand that money sitting in physical cash loses purchasing power every year",
+        "Look for savings instruments (like PPF or mutual funds via parents) that beat inflation rates",
+        "Calculate real returns: Nominal interest rate minus inflation rate equals real wealth growth"
+      ],
+      "dont": [
+        "Never assume money kept in a piggy bank remains 'safe' from purchasing power erosion",
+        "Never ignore inflation when planning multi-year savings goals like college education"
+      ],
+      "myths": [
+        {
+          "statement": "Keeping paper currency notes hidden under your mattress is the safest way to preserve your family's wealth.",
+          "answer": "myth",
+          "truth": "While physical notes won't disappear, inflation steadily eats away what those notes can buy. In 15 years, their real purchasing value drops by half."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "If a chocolate bar costs Rs 50 today and annual inflation is 6%, what will happen to the price in future years?",
+          "options": [
+            "It will become free",
+            "The price will gradually increase over time",
+            "The price will decrease to Rs 10",
+            "Inflation has no effect on goods"
+          ],
+          "correct": 1,
+          "explanation": "Inflation causes the general price level of goods and services to increase over time."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At home at {at}, {name} considers keeping Rs 5,000 cash in a secret metal box for five years versus depositing it into an interest-bearing bank account."
+        ],
+        "question": "How should {name} reason through this decision?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Recognize that inflation will erode the purchasing power of idle paper cash over five years",
+            "note": "Understands real purchasing power loss.",
+            "weight": 50,
+            "critical": true,
+            "keys": "inflation erodes cash|purchasing power drops|idle cash loses value"
+          },
+          {
+            "point": "Choose an interest-bearing bank deposit to earn returns that offset price rises",
+            "note": "Selects productive financial vehicles.",
+            "weight": 30,
+            "critical": true,
+            "keys": "bank deposit earns interest|beat inflation"
+          },
+          {
+            "point": "Learn to calculate real return by comparing interest rates against inflation",
+            "note": "Applies quantitative financial logic.",
+            "weight": 20,
+            "critical": false,
+            "keys": "real return|nominal rate minus inflation"
+          }
+        ],
+        "dangerous": [
+          "hide money under mattress forever",
+          "ignore inflation completely",
+          "assume bank interest is a scam"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Reserve Bank of India - Inflation Metrics",
+          "url": "https://rbi.org.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-014",
+      "agentId": "coin",
+      "subtopic": "Risk Protection",
+      "title": "Insurance basics: Protecting against financial catastrophe",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Insurance is a collective safety net where many people pay small regular premiums to protect against rare but devastating financial disasters.",
+        "Without health and life insurance, a single hospital emergency can wipe out an entire family's life savings and force them into predatory debt."
+      ],
+      "do": [
+        "Understand that insurance is protection against catastrophic risk, not an investment to make you rich",
+        "Know the difference: Health insurance pays hospital bills; Term life insurance protects family if an earning parent passes away",
+        "Check that vehicle third-party insurance is always active before driving"
+      ],
+      "dont": [
+        "Never view insurance premiums as 'wasted money' just because no disaster happened this year",
+        "Never hide medical pre-existing conditions when filling insurance declaration forms"
+      ],
+      "myths": [
+        {
+          "statement": "Buying health insurance is a complete waste of money if you stay healthy and don't visit a hospital.",
+          "answer": "myth",
+          "truth": "Insurance is peace of mind against catastrophic bankruptcy. You pay a small fee so a unexpected critical illness does not ruin your family."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the primary fundamental purpose of health and life insurance?",
+          "options": [
+            "To make you a stock market millionaire overnight",
+            "To protect individuals and families from catastrophic financial ruin during unforeseen emergencies",
+            "To avoid paying all municipal taxes",
+            "To borrow money without interest"
+          ],
+          "correct": 1,
+          "explanation": "Insurance pools risk to ensure unexpected medical shocks or accidents do not plunge households into poverty."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "During a family discussion at {at}, a relative suggests canceling family health insurance to save Rs 15,000 annual premium."
+        ],
+        "question": "How can {name} explain the importance of insurance retention?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Explain that an unexpected surgery or hospital stay can cost lakhs and wipe out savings",
+            "note": "Articulates catastrophic risk mitigation.",
+            "weight": 50,
+            "critical": true,
+            "keys": "hospital emergency costs lakhs|wipes out savings|protect family"
+          },
+          {
+            "point": "Clarify that insurance is a risk shield rather than a profit-making scheme",
+            "note": "Differentiates protection from investment.",
+            "weight": 30,
+            "critical": true,
+            "keys": "risk shield not profit|peace of mind"
+          },
+          {
+            "point": "Recommend comparing policy features rather than eliminating essential coverage",
+            "note": "Suggests constructive optimization.",
+            "weight": 20,
+            "critical": false,
+            "keys": "compare policies|maintain basic coverage"
+          }
+        ],
+        "dangerous": [
+          "cancel insurance to buy gadgets",
+          "assume young people never get sick",
+          "hide medical facts"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Insurance Regulatory and Development Authority of India (IRDAI)",
+          "url": "https://irdai.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-015",
+      "agentId": "coin",
+      "subtopic": "Work & Salary",
+      "title": "Decoding a pay slip: Gross salary vs In-hand pay",
+      "bands": [
+        "senior"
+      ],
+      "facts": [
+        "Gross salary is the total compensation promised; Net salary (in-hand) is what actually enters your bank account after mandatory deductions.",
+        "Deductions include Employee Provident Fund (EPF for retirement), Professional Tax, and Income Tax (TDS)."
+      ],
+      "do": [
+        "Understand that a job offering 'Rs 50,000 CTC' will not deliver Rs 50,000 cash into your account each month",
+        "Learn what EPF (Provident Fund) is: a mandatory retirement nest-egg where your employer matches your contribution",
+        "Check that your Permanent Account Number (PAN) is correctly linked to tax deductions"
+      ],
+      "dont": [
+        "Never sign an employment contract without examining the itemized CTC breakdown",
+        "Never ignore tax planning until the final month of the financial year"
+      ],
+      "myths": [
+        {
+          "statement": "If a job offer letter states a salary of Rs 60,000 per month, exactly Rs 60,000 will be transferred to your bank account.",
+          "answer": "myth",
+          "truth": "Gross salary undergoes statutory deductions like PF, income tax, and health insurance; net in-hand is always lower."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the crucial difference between 'Gross Salary' and 'Net Salary' on an employee pay slip?",
+          "options": [
+            "There is no difference",
+            "Gross is total compensation before deductions; Net is the actual amount credited to your bank account",
+            "Gross is paid in cash, Net in coupons",
+            "Net is always double the gross amount"
+          ],
+          "correct": 1,
+          "explanation": "Net salary equals Gross salary minus statutory taxes, provident fund contributions, and insurance deductions."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "A young family member at {at} receives their first job offer letter boasting 'Rs 40,000 monthly CTC' but the bank transfer is Rs 33,500."
+        ],
+        "question": "How can {name} help them understand their pay slip breakdown?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Review the pay slip to identify deductions like EPF retirement savings and income tax",
+            "note": "Analyzes itemized pay stub deductions.",
+            "weight": 45,
+            "critical": true,
+            "keys": "review deductions|provident fund epf|income tax tds"
+          },
+          {
+            "point": "Explain that EPF deduction is not lost money, but a forced savings asset matched by the employer",
+            "note": "Clarifies long-term retirement value.",
+            "weight": 35,
+            "critical": true,
+            "keys": "epf is personal retirement asset|matched by employer"
+          },
+          {
+            "point": "Help verify that the Employer PAN and UAN numbers are accurately recorded",
+            "note": "Ensures compliance and record accuracy.",
+            "weight": 20,
+            "critical": false,
+            "keys": "check uan number|verify pan"
+          }
+        ],
+        "dangerous": [
+          "accuse company of wage theft without reading slip",
+          "ignore retirement contributions",
+          "refuse to pay statutory taxes"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Employees' Provident Fund Organisation (EPFO)",
+          "url": "https://epfindia.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-016",
+      "agentId": "coin",
+      "subtopic": "Social Dynamics",
+      "title": "Peer pressure spending: Confidence without designer labels",
+      "bands": [
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Many teenagers go broke trying to impress classmates with expensive sneakers, branded cafes, and designer stationery.",
+        "True personal security and self-worth come from competence, character, and kindness—not clothing logos."
+      ],
+      "do": [
+        "Practice saying comfortably: 'That's out of my budget right now, but let's hang out in the park'",
+        "Recognize that genuine friends respect your financial honesty; only shallow peers judge your clothing brands",
+        "Calculate how many hours of work or study an expensive luxury item costs before buying"
+      ],
+      "dont": [
+        "Never steal, borrow recklessly, or lie to your parents to keep up with wealthy peers' spending",
+        "Never look down on classmates who carry simple cloth bags or homemade lunchboxes"
+      ],
+      "myths": [
+        {
+          "statement": "Wearing expensive designer brands is the only proven way to earn genuine respect and popularity in school.",
+          "answer": "myth",
+          "truth": "Brand obsession signals insecurity. Real leadership, warmth, athletic or artistic skill, and wit command far greater respect."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most emotionally mature response when friends suggest an expensive cafe you cannot afford?",
+          "options": [
+            "Lie that you already ate, then secretly borrow money",
+            "Confidently state: 'That place is outside my budget, how about we grab street chai or hang in the library?'",
+            "Insult your friends for being rich",
+            "Steal money from your parents' wallet"
+          ],
+          "correct": 1,
+          "explanation": "Owning your budget with calm confidence earns peer respect and prevents toxic debt traps."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "At school at {at}, {name}'s friend group plans a weekend outing to an upscale restaurant with Rs 1,000 per head cover charge, which exceeds {name}'s allowance."
+        ],
+        "question": "What is the best course of action for {name}?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "State calmly and without shame that the restaurant exceeds your current budget",
+            "note": "Practices authentic boundary assertion.",
+            "weight": 45,
+            "critical": true,
+            "keys": "outside my budget|honest boundary|no shame"
+          },
+          {
+            "point": "Propose an affordable alternative or offer to join them afterwards for a walk in the park",
+            "note": "Preserves social connection constructively.",
+            "weight": 35,
+            "critical": true,
+            "keys": "propose alternative|join for walk|affordable spot"
+          },
+          {
+            "point": "Refuse to pressure parents into funding non-essential luxury outings",
+            "note": "Protects family financial wellbeing.",
+            "weight": 20,
+            "critical": false,
+            "keys": "do not pressure parents|protect family budget"
+          }
+        ],
+        "dangerous": [
+          "borrow cash to fake wealth",
+          "lie and make up fake illnesses",
+          "steal from family"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Mental Health Programme - Life Skills Education",
+          "url": "https://mohfw.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-017",
+      "agentId": "coin",
+      "subtopic": "Digital Spending",
+      "title": "In-app gaming traps: Microtransactions and loot boxes",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Free-to-play mobile games are engineered by behavioral psychologists to trigger dopamine loops and loot-box gambling addictions.",
+        "Microtransactions of 'just Rs 49' accumulate into thousands of rupees drained from linked parental cards within days."
+      ],
+      "do": [
+        "Never link your parent's UPI or credit card directly to Google Play or Apple App Store without biometric confirmation",
+        "Understand that virtual weapon skins and character outfits have zero real-world resale value",
+        "Set a hard monthly cap of Rs 0 on randomized loot boxes, treating them as gambling mechanisms"
+      ],
+      "dont": [
+        "NEVER secretly use a parent's phone to authorize gaming purchases",
+        "NEVER fall for third-party websites promising 'free diamonds' or 'unlimited game coins' in exchange for account logins"
+      ],
+      "myths": [
+        {
+          "statement": "Loot boxes in mobile games are completely harmless games of skill.",
+          "answer": "myth",
+          "truth": "Loot boxes employ variable-ratio reinforcement schedules identical to slot machines, creating addictive spending spirals."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do mobile games convert real currency into virtual gems, diamonds, or coins before you purchase items?",
+          "options": [
+            "To comply with international space law",
+            "To psychologically detach you from the feeling of spending real rupee money",
+            "Because banks cannot process rupees",
+            "To give away free bonuses"
+          ],
+          "correct": 1,
+          "explanation": "Virtual tokens obscure real-world monetary value, making gamers spend far more impulsively."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "While playing a mobile battle-royale game at {at}, {name} is tempted to spend Rs 799 on a limited-time legendary weapon skin using a parent's pre-linked payment profile."
+        ],
+        "question": "What should {name} do?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Stop and recognize that virtual game skins deliver zero real-world value and will be obsolete in months",
+            "note": "Critically evaluates virtual asset utility.",
+            "weight": 45,
+            "critical": true,
+            "keys": "virtual skin has zero value|game trap|resist urge"
+          },
+          {
+            "point": "Always ask explicit parental permission before making any digital purchase",
+            "note": "Practices transparency with guardians.",
+            "weight": 35,
+            "critical": true,
+            "keys": "parental consent|ask permission first"
+          },
+          {
+            "point": "Advise removing saved payment methods to avoid accidental one-click debits",
+            "note": "Eliminates frictionless spending risks.",
+            "weight": 20,
+            "critical": false,
+            "keys": "remove saved card|disable one click pay"
+          }
+        ],
+        "dangerous": [
+          "secretly click purchase hoping parents wont notice",
+          "steal otp from parent phone",
+          "visit shady gem generator sites"
+        ]
+      },
+      "sources": [
+        {
+          "name": "Ministry of Electronics and Information Technology (MeitY) - Online Gaming Rules",
+          "url": "https://meity.gov.in"
+        }
+      ],
+      "reviewed": true
+    },
+    {
+      "id": "MON-018",
+      "agentId": "coin",
+      "subtopic": "Goal Setting",
+      "title": "SMART financial goals: Turning dreams into savings plans",
+      "bands": [
+        "junior",
+        "middle",
+        "senior"
+      ],
+      "facts": [
+        "Vague goals like 'I want to save money' fail; SMART financial goals (Specific, Measurable, Achievable, Relevant, Time-bound) succeed.",
+        "Breaking a Rs 2,400 bicycle repair target into Rs 200 saved per month over 12 months makes huge goals easily achievable."
+      ],
+      "do": [
+        "Write down the exact item, total cost, target date, and required weekly savings amount",
+        "Create a visual progress tracker (thermometer chart or checklist) on your study desk",
+        "Celebrate reaching 25%, 50%, and 75% milestones without spending the accumulated corpus"
+      ],
+      "dont": [
+        "Never leave your savings goals abstract without a written number and deadline",
+        "Never abandon a goal just because an unexpected expense slowed your progress by two weeks"
+      ],
+      "myths": [
+        {
+          "statement": "Writing down your savings goals makes no measurable difference to whether you achieve them.",
+          "answer": "myth",
+          "truth": "Studies in behavioral economics show written, visual goal tracking increases savings completion rates by over 40%"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of the following represents a properly structured 'SMART' financial goal?",
+          "options": [
+            "'I want to be rich someday'",
+            "'I will save Rs 300 every month for 6 months to buy a Rs 1,800 science telescope by December'",
+            "'I will stop spending money forever'",
+            "'I hope someone gifts me a computer'"
+          ],
+          "correct": 1,
+          "explanation": "It includes a specific item, exact target amount, defined monthly saving rate, and a clear deadline."
+        }
+      ],
+      "scenario": {
+        "situations": [
+          "{name} dreams of buying a Rs 1,200 scientific calculator for class 11 at {at} in four months."
+        ],
+        "question": "How should {name} organize this savings plan?",
+        "emojis": [
+          "📌",
+          "⚡",
+          "🧒"
+        ],
+        "bubble": "What is the safest move right now?",
+        "rubric": [
+          {
+            "point": "Calculate the required rate: Rs 1,200 divided by 4 months equals Rs 300 per month (Rs 75/week)",
+            "note": "Applies quantitative milestone planning.",
+            "weight": 50,
+            "critical": true,
+            "keys": "divide 1200 by 4 months|300 per month|75 per week"
+          },
+          {
+            "point": "Set up a dedicated physical envelope or digital sub-wallet labeled 'Calculator Fund'",
+            "note": "Creates dedicated purpose-driven bucket.",
+            "weight": 30,
+            "critical": true,
+            "keys": "dedicated envelope|calculator fund|visual tracker"
+          },
+          {
+            "point": "Track progress weekly in a notebook to ensure discipline until the goal is achieved",
+            "note": "Maintains ongoing accountability.",
+            "weight": 20,
+            "critical": false,
+            "keys": "track weekly progress|maintain discipline"
+          }
+        ],
+        "dangerous": [
+          "wait until exam day and borrow money",
+          "give up because 1200 feels too big",
+          "spend savings halfway on snacks"
+        ]
+      },
+      "sources": [
+        {
+          "name": "National Centre for Financial Education - SMART Goals Workbook",
+          "url": "https://ncfe.org.in"
+        }
+      ],
+      "reviewed": true
+    }
+  ]
+}

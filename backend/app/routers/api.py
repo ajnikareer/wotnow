@@ -69,7 +69,7 @@ def _agent_public(a: dict) -> dict:
     live = [p for p in db.query(POSTS, agentId=a["id"]) if p.get("status") == "live"]
     real_users = [u for u in db.query("users") if not u.get("id", "").startswith("seed-") and not u.get("id", "").startswith("demo-")]
     learners = sum(1 for u in real_users if a["id"] in u.get("follows", []))
-    return {k: a[k] for k in ("id", "name", "domain", "domainLabel", "emoji", "colors", "bio", "topics")} | {
+    return {k: a[k] for k in ("id", "name", "domain", "domainLabel", "emoji", "colors", "bio", "topics", "pillar", "minGrade", "sensitive", "approveFirst") if k in a} | {
         "stats": {
             "posts": len(live),
             "learners": learners,
