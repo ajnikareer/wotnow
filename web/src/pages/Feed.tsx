@@ -114,7 +114,7 @@ export default function Feed() {
     <AppShell>
       <div className="max-w-[640px] mx-auto">
         {/* Feed Tabs: New Feeds and Learned */}
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex items-center gap-2 mb-3">
           <div className="flex items-center gap-2" role="tablist">
             {TABS.map(([t, l]) => {
               const active = tab === t
@@ -124,7 +124,7 @@ export default function Feed() {
                   role="tab"
                   aria-selected={active}
                   onClick={() => choose(t)}
-                  className={`px-4 py-2 rounded-full text-sm font-bold transition inline-flex items-center gap-1.5 border whitespace-nowrap shrink-0 ${
+                  className={`px-3.5 py-1.5 rounded-full text-[13px] font-bold transition inline-flex items-center gap-1.5 border whitespace-nowrap shrink-0 ${
                     active
                       ? 'border-brand-violet/60 bg-brand-violet/10 text-ink shadow-[0_0_12px_rgba(139,92,246,0.2)]'
                       : 'border-transparent text-muted hover:text-ink hover:bg-surface2/60'
@@ -132,14 +132,14 @@ export default function Feed() {
                 >
                   {t === 'today' ? '✨ ' : '🎓 '}{l}
                   {t === 'today' && todayCount != null && todayCount > 0 && (
-                    <span className={`px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none ${
+                    <span className={`px-1.5 py-0.5 rounded-full text-[10px] font-extrabold leading-none ${
                       active ? 'bg-brand-violet/25 text-ink' : 'bg-surface3 text-muted'
                     }`}>
                       {todayCount}
                     </span>
                   )}
                   {t === 'learned' && tab === 'learned' && visiblePosts.length > 0 && (
-                    <span className="px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none bg-brand-violet/25 text-ink">
+                    <span className="px-1.5 py-0.5 rounded-full text-[10px] font-extrabold leading-none bg-brand-violet/25 text-ink">
                       {visiblePosts.length}
                     </span>
                   )}
@@ -152,19 +152,19 @@ export default function Feed() {
         <NewPostsBanner count={fresh} onClick={refresh} />
 
         {/* Stories / Expert Shortcuts */}
-        <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4 mb-4 border-b border-line">
+        <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2.5 mb-3.5 border-b border-line">
           {AGENTS.map(a => (
-            <Link key={a.id} to={`/experts/${a.id}`} className="flex flex-col items-center gap-1.5 shrink-0 group">
+            <Link key={a.id} to={`/experts/${a.id}`} className="flex flex-col items-center gap-1 shrink-0 group">
               <div className="group-hover:scale-105 transition">
-                <AgentAvatar agent={a} size={56} ring seen={seen.has(a.id)} />
+                <AgentAvatar agent={a} size={42} ring seen={seen.has(a.id)} />
               </div>
-              <span className="text-[11.5px] text-muted font-medium">{a.name}</span>
+              <span className="text-[11px] text-muted font-medium">{a.name}</span>
             </Link>
           ))}
         </div>
 
         {/* Post Feed */}
-        <div className="space-y-4">
+        <div className="space-y-3.5">
           {loading && !data && [0, 1, 2].map(i => <PostSkeleton key={i} />)}
           {error && (
             <EmptyState

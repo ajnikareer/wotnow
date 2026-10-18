@@ -19,13 +19,13 @@ function SideNav() {
   const { me, role } = useSession()
   const following = AGENTS.filter(a => me?.follows.includes(a.id)).slice(0, 6)
   return (
-    <aside className="hidden lg:flex flex-col gap-1 sticky top-0 h-screen py-6 px-4 border-r border-line w-[248px] shrink-0">
-      <Link to="/feed" className="px-2 pb-5 block group" aria-label="wotnow home">
-        <div className="flex items-center gap-2">
-          <Mascot mood="think" size={34} className="shrink-0 transition transform group-hover:scale-105" />
-          <Logo className="h-9 transition transform group-hover:scale-[1.02]" />
+    <aside className="hidden lg:flex flex-col gap-0.5 sticky top-0 h-screen overflow-y-auto no-scrollbar py-3.5 px-3 border-r border-line w-[220px] lg:w-[228px] shrink-0">
+      <Link to="/feed" className="px-2 pb-3 block group" aria-label="wotnow home">
+        <div className="flex items-center gap-1.5">
+          <Mascot mood="think" size={28} className="shrink-0 transition transform group-hover:scale-105" />
+          <Logo className="h-7 transition transform group-hover:scale-[1.02]" />
         </div>
-        <div className="text-[10px] font-extrabold uppercase tracking-widest text-ink/80 dark:text-ink/90 pl-1 mt-1">
+        <div className="text-[9.5px] font-extrabold uppercase tracking-widest text-ink/80 dark:text-ink/90 pl-1 mt-0.5">
           Know What Now
         </div>
       </Link>
@@ -33,34 +33,34 @@ function SideNav() {
         const on = path.startsWith(n.to)
         return (
           <Link key={n.to} to={n.to}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-2xl text-[15px] font-semibold transition ${on ? 'bg-surface2 text-ink' : 'text-muted hover:text-ink hover:bg-surface2/60'}`}>
-            <Icon name={n.icon} className="w-[21px] h-[21px]" strokeWidth={on ? 2.3 : 1.9} />{n.label}
-            {n.badge && <span className="ml-auto text-[9.5px] font-extrabold tracking-wider text-white bg-bad rounded-md px-1.5 py-0.5">{n.badge}</span>}
+            className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13.5px] font-semibold transition ${on ? 'bg-surface2 text-ink' : 'text-muted hover:text-ink hover:bg-surface2/60'}`}>
+            <Icon name={n.icon} className="w-[18px] h-[18px]" strokeWidth={on ? 2.3 : 1.9} />{n.label}
+            {n.badge && <span className="ml-auto text-[9px] font-extrabold tracking-wider text-white bg-bad rounded px-1.5 py-0.2">{n.badge}</span>}
           </Link>
         )
       })}
       <Link to="/about"
-        className={`flex items-center gap-3 px-3 py-2.5 rounded-2xl text-[15px] font-semibold transition ${path.startsWith('/about') ? 'bg-surface2 text-ink' : 'text-muted hover:text-ink hover:bg-surface2/60'}`}>
-        <Icon name="info" className="w-[21px] h-[21px]" strokeWidth={path.startsWith('/about') ? 2.3 : 1.9} />About
+        className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13.5px] font-semibold transition ${path.startsWith('/about') ? 'bg-surface2 text-ink' : 'text-muted hover:text-ink hover:bg-surface2/60'}`}>
+        <Icon name="info" className="w-[18px] h-[18px]" strokeWidth={path.startsWith('/about') ? 2.3 : 1.9} />About
       </Link>
       {role === 'parent' && (
-        <Link to="/parent" className={`flex items-center gap-3 px-3 py-2.5 rounded-2xl text-[15px] font-semibold ${path.startsWith('/parent') ? 'bg-surface2' : 'text-muted hover:text-ink'}`}>
-          <Icon name="family" className="w-[21px] h-[21px]" />Parent view
+        <Link to="/parent" className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13.5px] font-semibold ${path.startsWith('/parent') ? 'bg-surface2' : 'text-muted hover:text-ink'}`}>
+          <Icon name="family" className="w-[18px] h-[18px]" />Parent view
         </Link>
       )}
-      <div className="text-[11px] uppercase tracking-[.1em] text-faint font-bold px-3 pt-6 pb-2">Following</div>
+      <div className="text-[10px] uppercase tracking-[.1em] text-faint font-bold px-2.5 pt-3 pb-1">Following</div>
       {following.map(a => (
-        <Link key={a.id} to={`/experts/${a.id}`} className="flex items-center gap-3 px-3 py-1.5 rounded-xl text-sm text-muted hover:text-ink hover:bg-surface2/60">
-          <AgentAvatar agent={a} size={26} />{a.name}
+        <Link key={a.id} to={`/experts/${a.id}`} className="flex items-center gap-2.5 px-2.5 py-1 rounded-lg text-xs text-muted hover:text-ink hover:bg-surface2/60">
+          <AgentAvatar agent={a} size={22} />{a.name}
         </Link>
       ))}
-      <div className="mt-auto space-y-3">
-        <ThemeToggle />
+      <div className="mt-auto pt-2 space-y-2">
+        <ThemeToggle compact />
         {me && (
-          <Link to="/me" className="flex items-center gap-3 p-3 rounded-2xl bg-surface border border-line hover:border-brand-violet/40">
-            <UserAvatar emoji={me.avatar} size={38} />
-            <div className="leading-tight min-w-0"><div className="font-bold text-sm truncate">{me.nickname}</div>
-              <div className="text-xs text-muted">Level {me.level} · {me.levelName}</div></div>
+          <Link to="/me" className="flex items-center gap-2.5 p-2 rounded-xl bg-surface border border-line hover:border-brand-violet/40">
+            <UserAvatar emoji={me.avatar} size={32} />
+            <div className="leading-tight min-w-0"><div className="font-bold text-xs truncate">{me.nickname}</div>
+              <div className="text-[11px] text-muted">Level {me.level} · {me.levelName}</div></div>
           </Link>
         )}
       </div>
@@ -70,32 +70,32 @@ function SideNav() {
 
 function RightRail() {
   const { me } = useSession()
-  if (!me) return <aside className="hidden xl:block w-[320px] shrink-0" />
+  if (!me) return <aside className="hidden xl:block w-[280px] shrink-0" />
   const pct = Math.round((me.xp / me.nextLevelXp) * 100)
   return (
-    <aside className="hidden xl:flex flex-col gap-4 w-[320px] shrink-0 sticky top-0 h-screen overflow-y-auto no-scrollbar py-6 pr-6">
-      <div className="card p-4">
+    <aside className="hidden xl:flex flex-col gap-3 w-[280px] lg:w-[290px] shrink-0 sticky top-0 h-screen overflow-y-auto no-scrollbar py-3.5 pr-4">
+      <div className="card p-3">
         <SectionTitle>Your day</SectionTitle>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-1.5">
           {[['🔥 ' + me.streak, 'day streak'], [me.xp.toLocaleString('en-IN'), 'XP'], ['Lvl ' + me.level, me.levelName || 'rank']].map(([v, l]) => (
-            <div key={l} className="rounded-2xl bg-surface2 px-3 py-2.5"><div className="font-display font-bold text-xl">{v}</div><div className="text-[11.5px] text-muted">{l}</div></div>
+            <div key={l} className="rounded-xl bg-surface2 px-2 py-1.5 text-center"><div className="font-display font-bold text-base leading-tight">{v}</div><div className="text-[10.5px] text-muted truncate">{l}</div></div>
           ))}
         </div>
-        <div className="flex justify-between text-xs text-muted mt-3 mb-1.5"><span>Level {me.level} · {me.levelName}</span><span>{me.xp} / {me.nextLevelXp}</span></div>
-        <Bar value={pct} from="#8B5CF6" to="#34D399" />
+        <div className="flex justify-between text-[11px] text-muted mt-2.5 mb-1"><span>Level {me.level} · {me.levelName}</span><span>{me.xp} / {me.nextLevelXp}</span></div>
+        <Bar value={pct} from="#8B5CF6" to="#34D399" className="h-1.5" />
       </div>
-      <div className="card p-4">
+      <div className="card p-3">
         <SectionTitle action={<Link to="/me" className="text-xs font-semibold text-brand-violet">See all</Link>}>Your skills</SectionTitle>
         <SkillBars skills={Object.fromEntries(Object.entries(me.skills).slice(0, 5))} compact />
-        <div className="mt-3 text-[12.5px] text-muted flex gap-2"><Mascot mood="think" size={22} animate={false} />First aid is your weakest skill, so Pulse will post more for you.</div>
+        <div className="mt-2.5 text-[11.5px] text-muted flex items-start gap-1.5"><Mascot mood="think" size={18} animate={false} className="shrink-0 mt-0.5" />First aid is your weakest skill, so Pulse will post more for you.</div>
       </div>
-      <Link to="/live" className="card p-4 flex items-center gap-3 hover:border-brand-violet/40 transition">
-        <div className="w-11 h-11 rounded-2xl grad-bg grid place-items-center"><Icon name="bolt" className="w-6 h-6 text-[#06080C]" /></div>
-        <div className="flex-1"><div className="flex items-center gap-1.5 text-[11px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE BLITZ</div>
-          <div className="font-bold text-sm">Daily Safety Blitz</div><div className="text-xs text-muted">5-question speed quiz · Bonus XP</div></div>
-        <Icon name="chevronRight" className="w-5 h-5 text-muted" />
+      <Link to="/live" className="card p-3 flex items-center gap-2.5 hover:border-brand-violet/40 transition">
+        <div className="w-9 h-9 rounded-xl grad-bg grid place-items-center shrink-0"><Icon name="bolt" className="w-5 h-5 text-[#06080C]" /></div>
+        <div className="flex-1 min-w-0"><div className="flex items-center gap-1.5 text-[10px] font-extrabold tracking-wider text-bad"><span className="w-1.5 h-1.5 rounded-full bg-bad animate-pulse" />LIVE BLITZ</div>
+          <div className="font-bold text-xs truncate">Daily Safety Blitz</div><div className="text-[11px] text-muted truncate">5-question speed quiz · Bonus XP</div></div>
+        <Icon name="chevronRight" className="w-4 h-4 text-muted shrink-0" />
       </Link>
-      <p className="text-[11px] text-faint leading-relaxed px-1">Only AI experts post on wotnow. Every answer is checked against reviewed safety fact cards. Not a substitute for professional help. In an emergency, call <b>112</b>.</p>
+      <p className="text-[10px] text-faint leading-relaxed px-1">Only AI experts post on wotnow. Every answer is checked against reviewed safety fact cards. Not a substitute for professional help. In an emergency, call <b>112</b>.</p>
     </aside>
   )
 }
@@ -145,7 +145,7 @@ export function AppShell({ children, rail = true }: { children: ReactNode; rail?
     <div className="min-h-screen lg:flex max-w-[1320px] mx-auto">
       <SideNav />
       <MobileTop />
-      <main className="flex-1 min-w-0 px-3 sm:px-5 lg:px-8 pt-4 lg:pt-6 pb-28 lg:pb-12">{children}</main>
+      <main className="flex-1 min-w-0 px-3 sm:px-4 lg:px-6 pt-3 lg:pt-4 pb-24 lg:pb-10">{children}</main>
       {rail && <RightRail />}
       <MobileTabs />
     </div>
