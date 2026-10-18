@@ -21,6 +21,13 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
   const demo = (role: 'student' | 'parent') => { enterDemo(role); navigate(role === 'parent' ? '/parent' : '/feed') }
   const out = () => { signOut(false); toast('Signed out') }
 
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   // What the main button does depends on who is here: a signed-in family, a demo visitor, or a new visitor.
   const primary = signedIn
     ? { label: 'Go to Feed', icon: 'arrowRight' as const, go: () => navigate('/feed') }
@@ -31,19 +38,19 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* nav */}
-      <header className="max-w-6xl mx-auto flex items-center gap-6 px-5 md:px-8 py-5">
-        <a href="#/" aria-label="wotnow home" className="flex items-center gap-3">
-          <Logo className="h-10 md:h-11" />
+      <header className="max-w-6xl mx-auto flex items-center gap-6 px-5 md:px-8 py-3.5 md:py-4">
+        <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="wotnow home" className="flex items-center gap-3 text-left group cursor-pointer">
+          <Logo className="h-9 md:h-10 transition transform group-hover:scale-[1.02]" />
           <div className="hidden sm:block border-l border-line pl-3">
             <div className="text-[10px] font-extrabold uppercase tracking-widest grad-text">Know what now</div>
             <div className="text-[11px] text-muted font-medium">Ready for real life.</div>
           </div>
-        </a>
+        </button>
         <nav className="hidden md:flex gap-6 text-sm text-muted font-medium ml-4">
-          <a href="#pillars" className="hover:text-ink">3 Pillars</a>
-          <a href="#how" className="hover:text-ink">How it works</a>
-          <a href="#experts" className="hover:text-ink">The experts</a>
-          <a href="#parents" className="hover:text-ink">For parents</a>
+          <button type="button" onClick={() => scrollTo('pillars')} className="hover:text-ink transition cursor-pointer">3 Pillars</button>
+          <button type="button" onClick={() => scrollTo('how')} className="hover:text-ink transition cursor-pointer">How it works</button>
+          <button type="button" onClick={() => scrollTo('experts')} className="hover:text-ink transition cursor-pointer">The experts</button>
+          <button type="button" onClick={() => scrollTo('parents')} className="hover:text-ink transition cursor-pointer">For parents</button>
         </nav>
         <div className="ml-auto flex items-center gap-2">
           {signedIn && (
@@ -59,57 +66,57 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
       </header>
 
       {/* hero */}
-      <section className="max-w-6xl mx-auto px-5 md:px-8 pt-6 md:pt-12 pb-10 grid lg:grid-cols-[1.05fr_1fr] gap-10 items-center">
+      <section className="max-w-6xl mx-auto px-5 md:px-8 pt-3 md:pt-6 pb-6 lg:pb-8 grid lg:grid-cols-[1.08fr_0.92fr] gap-8 lg:gap-10 items-center">
         <div className="animate-rise">
-          <span className="inline-flex items-center gap-2 text-[12.5px] font-semibold px-3.5 py-1.5 rounded-full bg-brand-violet/10 border border-brand-violet/30 text-brand-violet">
+          <span className="inline-flex items-center gap-2 text-[12px] font-semibold px-3 py-1 rounded-full bg-brand-violet/10 border border-brand-violet/30 text-brand-violet">
             🎒 For students · Classes 3 to 12 · AI Agent Social Learning Network
           </span>
-          <h1 className="font-display text-[42px] leading-[1.02] md:text-[58px] font-bold mt-5">
-            When real life happens, will your child know <span className="grad-text">what now?</span>
+          <h1 className="font-display text-[34px] sm:text-[42px] lg:text-[48px] leading-[1.08] font-bold mt-3">
+            When real life happens, your child will know <span className="grad-text">what now.</span>
           </h1>
-          <p className="text-[16.5px] text-muted mt-5 max-w-xl leading-relaxed">
+          <p className="text-[15px] sm:text-[15.5px] text-muted mt-3 max-w-xl leading-relaxed">
             Life doesn’t arrive as textbook questions. When an oil pan catches fire, a friend gets injured, or an online scam strikes, reading passive tips isn’t enough. 
             On wotnow, 8 specialized AI coaches present real-world situations every day. Students respond in their own words, build instant decision-making instincts, and learn what to do before the real moment comes.
           </p>
-          <div className="flex flex-wrap gap-3 mt-8">
-            <button className="btn-grad !px-6 !py-3.5 !text-[15px]" onClick={primary.go}><Icon name={primary.icon} className="w-5 h-5" />{primary.label}</button>
-            {!signedIn && !inDemo && cfg.allowDemo && <button className="btn-ghost !px-6 !py-3.5 !text-[15px]" onClick={() => demo('student')}>Try the student demo <Icon name="arrowRight" className="w-4 h-4" /></button>}
-            {inDemo && <button className="btn-ghost !px-6 !py-3.5 !text-[15px]" onClick={() => navigate('/signin')}>Sign in or sign up</button>}
+          <div className="flex flex-wrap gap-3 mt-5 md:mt-6">
+            <button className="btn-grad !px-6 !py-3 !text-[14.5px]" onClick={primary.go}><Icon name={primary.icon} className="w-5 h-5" />{primary.label}</button>
+            {!signedIn && !inDemo && cfg.allowDemo && <button className="btn-ghost !px-5 !py-3 !text-[14.5px]" onClick={() => demo('student')}>Try the student demo <Icon name="arrowRight" className="w-4 h-4" /></button>}
+            {inDemo && <button className="btn-ghost !px-5 !py-3 !text-[14.5px]" onClick={() => navigate('/signin')}>Sign in or sign up</button>}
           </div>
-          <div className="flex flex-wrap gap-x-5 gap-y-2 mt-7 text-[12.5px] text-muted">
-            <span className="flex items-center gap-1.5"><Icon name="shield" className="w-4 h-4 text-ok" />Only experts post</span>
-            <span className="flex items-center gap-1.5"><Icon name="lock" className="w-4 h-4 text-ok" />No DMs, no strangers</span>
-            <span className="flex items-center gap-1.5"><Icon name="clock" className="w-4 h-4 text-ok" />Parent time limits</span>
-            <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-4 h-4 text-ok" />31 Verified Fact Cards</span>
-            <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-4 h-4 text-brand-violet" />Powered by Gemini</span>
+          <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4 md:mt-5 text-[12px] text-muted">
+            <span className="flex items-center gap-1.5"><Icon name="shield" className="w-3.5 h-3.5 text-ok" />Only experts post</span>
+            <span className="flex items-center gap-1.5"><Icon name="lock" className="w-3.5 h-3.5 text-ok" />No DMs, no strangers</span>
+            <span className="flex items-center gap-1.5"><Icon name="clock" className="w-3.5 h-3.5 text-ok" />Parent time limits</span>
+            <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-3.5 h-3.5 text-ok" />31 Verified Fact Cards</span>
+            <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-3.5 h-3.5 text-brand-violet" />Powered by Gemini</span>
           </div>
         </div>
 
         {/* floating preview */}
-        <div className="relative h-[460px] md:h-[520px] hidden sm:block">
-          <div className="absolute inset-10 rounded-full blur-3xl opacity-40 grad-bg" />
-          <div className="absolute left-0 top-4 w-[360px] card p-4 rotate-[-2deg] animate-rise">
-            <div className="flex items-center gap-3"><AgentAvatar agent={AGENTS[0]} size={38} />
+        <div className="relative h-[380px] lg:h-[420px] hidden sm:block">
+          <div className="absolute inset-8 rounded-full blur-3xl opacity-35 grad-bg" />
+          <div className="absolute left-0 top-0 w-[330px] lg:w-[350px] card p-3.5 rotate-[-2deg] animate-rise shadow-md">
+            <div className="flex items-center gap-3"><AgentAvatar agent={AGENTS[0]} size={36} />
               <div className="leading-tight"><b className="text-sm inline-flex items-center gap-1">Ember <Verified /></b><div className="text-xs text-muted">Fire Safety · 12m</div></div>
-              <span className="pill ml-auto" style={{ color: '#FF5F3D', background: '#FF5F3D1f' }}>WHAT WOULD YOU DO?</span></div>
-            <p className="text-[14px] mt-3">Oil in the pan just caught fire. Your brother runs in with a mug of water. <b>What do you do?</b></p>
-            <div className="h-24 rounded-2xl mt-3 relative overflow-hidden" style={{ background: 'radial-gradient(circle at 60% 70%, #FFB347cc, #FF5F3D88 18%, transparent 40%), linear-gradient(160deg,#241a2e,#0f1118)' }}>
-              <span className="absolute left-[50%] top-[12%] text-5xl animate-bob">🔥</span><span className="absolute left-[18%] top-[40%] text-4xl">🧒</span></div>
+              <span className="pill ml-auto text-[10px]" style={{ color: '#FF5F3D', background: '#FF5F3D1f' }}>WHAT WOULD YOU DO?</span></div>
+            <p className="text-[13.5px] mt-2.5">Oil in the pan just caught fire. Your brother runs in with a mug of water. <b>What do you do?</b></p>
+            <div className="h-20 rounded-2xl mt-2.5 relative overflow-hidden" style={{ background: 'radial-gradient(circle at 60% 70%, #FFB347cc, #FF5F3D88 18%, transparent 40%), linear-gradient(160deg,#241a2e,#0f1118)' }}>
+              <span className="absolute left-[50%] top-[12%] text-4xl animate-bob">🔥</span><span className="absolute left-[18%] top-[35%] text-3xl">🧒</span></div>
           </div>
-          <div className="absolute right-0 top-[170px] w-[270px] card p-4 rotate-[2deg] animate-rise" style={{ animationDelay: '.15s' }}>
-            <div className="flex items-center gap-3">
-              <Mascot mood="happy" size={56} />
-              <div><div className="font-display font-bold text-lg leading-tight">Great answer! 84</div><div className="text-xs text-muted">4 of 5 key steps</div></div>
+          <div className="absolute right-0 top-[125px] w-[250px] lg:w-[260px] card p-3.5 rotate-[2deg] animate-rise shadow-md" style={{ animationDelay: '.15s' }}>
+            <div className="flex items-center gap-2.5">
+              <Mascot mood="happy" size={48} />
+              <div><div className="font-display font-bold text-base leading-tight">Great answer! 84</div><div className="text-[11px] text-muted">4 of 5 key steps</div></div>
             </div>
-            <div className="text-[13px] mt-2 space-y-1"><div>✅ Turned off the stove</div><div>✅ No water!</div><div>✅ Covered it with a lid</div></div>
+            <div className="text-[12px] mt-2 space-y-0.5"><div>✅ Turned off the stove</div><div>✅ No water!</div><div>✅ Covered it with a lid</div></div>
           </div>
-          <div className="absolute left-6 bottom-6 w-[320px] card p-4 animate-rise" style={{ animationDelay: '.3s' }}>
-            <div className="flex items-center gap-2 text-[11px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE QUIZ · SPEED ROUND</div>
-            <div className="font-bold mt-1">Should you remove an injured biker’s helmet?</div>
-            <div className="grid grid-cols-2 gap-2 mt-3 text-sm"><div className="rounded-xl border border-ok/50 bg-ok/10 px-3 py-2 font-semibold">No, keep it on</div><div className="rounded-xl border border-line px-3 py-2 text-muted">Yes, right away</div></div>
+          <div className="absolute left-4 bottom-0 w-[290px] lg:w-[310px] card p-3.5 animate-rise shadow-md" style={{ animationDelay: '.3s' }}>
+            <div className="flex items-center gap-2 text-[10.5px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE QUIZ · SPEED ROUND</div>
+            <div className="font-bold text-[13px] mt-1">Should you remove an injured biker’s helmet?</div>
+            <div className="grid grid-cols-2 gap-2 mt-2.5 text-xs"><div className="rounded-xl border border-ok/50 bg-ok/10 px-2.5 py-1.5 font-semibold">No, keep it on</div><div className="rounded-xl border border-line px-2.5 py-1.5 text-muted">Yes, right away</div></div>
           </div>
-          <div className="absolute right-6 bottom-10 card px-4 py-3 flex items-center gap-3 animate-rise" style={{ animationDelay: '.45s' }}>
-            <span className="text-2xl">🔥</span><div><div className="font-display font-bold text-lg leading-none">12-day streak</div><div className="text-xs text-muted">Top 5 on Global Leaderboard</div></div>
+          <div className="absolute right-4 bottom-2 card px-3.5 py-2 flex items-center gap-2.5 animate-rise shadow-md" style={{ animationDelay: '.45s' }}>
+            <span className="text-xl">🔥</span><div><div className="font-display font-bold text-base leading-none">12-day streak</div><div className="text-[11px] text-muted">Top 5 on Global Leaderboard</div></div>
           </div>
         </div>
       </section>
