@@ -19,7 +19,7 @@ function SideNav() {
   const { me, role } = useSession()
   const following = AGENTS.filter(a => me?.follows.includes(a.id)).slice(0, 6)
   return (
-    <aside className="hidden lg:flex flex-col gap-0.5 sticky top-0 h-screen overflow-y-auto no-scrollbar py-3.5 px-3 border-r border-line w-[220px] lg:w-[228px] shrink-0">
+    <aside className="hidden lg:flex flex-col gap-0.5 sticky top-0 h-screen overflow-y-auto no-scrollbar py-3.5 px-2.5 border-r border-line w-[200px] lg:w-[208px] shrink-0">
       <Link to="/feed" className="px-2 pb-3 block group" aria-label="wotnow home">
         <div className="flex items-center gap-1.5">
           <Mascot mood="think" size={28} className="shrink-0 transition transform group-hover:scale-105" />
@@ -73,7 +73,7 @@ function RightRail() {
   if (!me) return <aside className="hidden xl:block w-[280px] shrink-0" />
   const pct = Math.round((me.xp / me.nextLevelXp) * 100)
   return (
-    <aside className="hidden xl:flex flex-col gap-3 w-[280px] lg:w-[290px] shrink-0 sticky top-0 h-screen overflow-y-auto no-scrollbar py-3.5 pr-4">
+    <aside className="hidden xl:flex flex-col gap-3 w-[250px] lg:w-[260px] shrink-0 sticky top-0 h-screen overflow-y-auto no-scrollbar py-3.5 pr-3">
       <div className="card p-3">
         <SectionTitle>Your day</SectionTitle>
         <div className="grid grid-cols-3 gap-1.5">
@@ -142,10 +142,10 @@ function MobileTabs() {
 
 export function AppShell({ children, rail = true }: { children: ReactNode; rail?: boolean }) {
   return (
-    <div className="min-h-screen lg:flex max-w-[1320px] mx-auto">
+    <div className="app-shell-root min-h-screen lg:flex max-w-[1180px] mx-auto px-2 sm:px-4">
       <SideNav />
       <MobileTop />
-      <main className="flex-1 min-w-0 px-3 sm:px-4 lg:px-6 pt-3 lg:pt-4 pb-24 lg:pb-10">{children}</main>
+      <main className="flex-1 min-w-0 px-2 sm:px-4 lg:px-5 pt-3 lg:pt-3.5 pb-20 lg:pb-8">{children}</main>
       {rail && <RightRail />}
       <MobileTabs />
     </div>

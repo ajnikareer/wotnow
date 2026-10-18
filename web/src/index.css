@@ -33,6 +33,11 @@
   html {
     -webkit-tap-highlight-color: transparent;
   }
+  @media (min-width: 1024px) {
+    .app-shell-root {
+      zoom: 0.88;
+    }
+  }
   body {
     @apply bg-bg text-ink font-sans antialiased;
     font-feature-settings: "ss01", "cv11";
