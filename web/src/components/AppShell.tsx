@@ -21,10 +21,12 @@ function SideNav() {
   return (
     <aside className="hidden lg:flex flex-col gap-1 sticky top-0 h-screen py-6 px-4 border-r border-line w-[248px] shrink-0">
       <Link to="/feed" className="px-2 pb-5 block group" aria-label="wotnow home">
-        <Logo className="h-11 transition transform group-hover:scale-[1.02]" />
-        <div className="mt-2 pl-0.5">
-          <div className="text-[10px] font-extrabold uppercase tracking-widest grad-text">Know what now</div>
-          <div className="text-[11px] text-muted font-medium leading-tight">Ready for real life.</div>
+        <div className="flex items-center gap-2">
+          <Mascot mood="think" size={34} className="shrink-0 transition transform group-hover:scale-105" />
+          <Logo className="h-9 transition transform group-hover:scale-[1.02]" />
+        </div>
+        <div className="text-[10px] font-extrabold uppercase tracking-widest text-ink/80 dark:text-ink/90 pl-1 mt-1">
+          Know What Now
         </div>
       </Link>
       {NAV.map(n => {
@@ -102,11 +104,9 @@ function MobileTop() {
   return (
     <header className="lg:hidden sticky top-0 z-30 bg-bg/80 backdrop-blur-xl border-b border-line">
       <div className="flex items-center gap-2 px-4 h-14">
-        <Link to="/feed" aria-label="wotnow home" className="flex items-center gap-2">
-          <Logo className="h-8" />
-          <span className="hidden sm:inline-block text-[10px] font-extrabold text-muted border-l border-line pl-2 uppercase tracking-widest grad-text">
-            Know what now
-          </span>
+        <Link to="/feed" aria-label="wotnow home" className="flex items-center gap-1.5">
+          <Mascot mood="think" size={26} className="shrink-0" />
+          <Logo className="h-7" />
         </Link>
         <div className="ml-auto flex items-center gap-1.5">
           <Link to="/about" className="chip text-xs font-semibold text-muted hover:text-ink flex items-center gap-1">

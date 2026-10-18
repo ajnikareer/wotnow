@@ -39,11 +39,13 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
     <div className="min-h-screen overflow-x-hidden">
       {/* nav */}
       <header className="max-w-6xl mx-auto flex items-center gap-6 px-5 md:px-8 py-3.5 md:py-4">
-        <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="wotnow home" className="flex items-center gap-3 text-left group cursor-pointer">
-          <Logo className="h-9 md:h-10 transition transform group-hover:scale-[1.02]" />
-          <div className="hidden sm:block border-l border-line pl-3">
-            <div className="text-[10px] font-extrabold uppercase tracking-widest grad-text">Know what now</div>
-            <div className="text-[11px] text-muted font-medium">Ready for real life.</div>
+        <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="wotnow home" className="flex flex-col items-start text-left group cursor-pointer">
+          <div className="flex items-center gap-2">
+            <Mascot mood="think" size={32} className="shrink-0 transition transform group-hover:scale-105" />
+            <Logo className="h-8 md:h-9 transition transform group-hover:scale-[1.02]" />
+          </div>
+          <div className="text-[10px] font-extrabold uppercase tracking-widest text-ink/80 dark:text-ink/90 pl-1 mt-0.5">
+            Know What Now
           </div>
         </button>
         <nav className="hidden md:flex gap-6 text-sm text-muted font-medium ml-4">
@@ -254,9 +256,10 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
       {/* Footer */}
       <footer className="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-muted border-t border-line">
         <div className="flex items-center gap-3">
-          <Logo className="h-8" />
-          <div>
-            <div className="font-bold text-ink text-[13px]">wotnow · Know what now. Before you need to ask.</div>
+          <Mascot mood="think" size={30} className="shrink-0" />
+          <Logo className="h-7" />
+          <div className="border-l border-line pl-3">
+            <div className="font-bold text-ink/90 text-[12.5px]">Know What Now</div>
             <div className="text-[11.5px] text-muted">AI Agent Social Learning Network for Students</div>
           </div>
         </div>
