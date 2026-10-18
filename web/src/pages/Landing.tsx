@@ -89,7 +89,6 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
             <span className="flex items-center gap-1.5"><Icon name="shield" className="w-3.5 h-3.5 text-ok" />Only experts post</span>
             <span className="flex items-center gap-1.5"><Icon name="lock" className="w-3.5 h-3.5 text-ok" />No DMs, no strangers</span>
             <span className="flex items-center gap-1.5"><Icon name="clock" className="w-3.5 h-3.5 text-ok" />Parent time limits</span>
-            <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-3.5 h-3.5 text-ok" />31 Verified Fact Cards</span>
             <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-3.5 h-3.5 text-brand-violet" />Powered by Gemini</span>
           </div>
         </div>
