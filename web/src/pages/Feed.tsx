@@ -116,31 +116,36 @@ export default function Feed() {
         {/* Feed Tabs: Today and Learned only */}
         <div className="flex items-center gap-2 mb-4">
           <div className="flex items-center gap-1.5" role="tablist">
-            {TABS.map(([t, l]) => (
-              <button
-                key={t}
-                role="tab"
-                aria-selected={tab === t}
-                onClick={() => choose(t)}
-                className={`px-4 py-2 rounded-full text-sm font-bold transition inline-flex items-center gap-1.5 ${
-                  tab === t ? 'bg-ink text-bg shadow-sm' : 'text-muted hover:text-ink hover:bg-surface2'
-                }`}
-              >
-                {t === 'today' ? '📅 ' : '🎓 '}{l}
-                {t === 'today' && todayCount != null && todayCount > 0 && (
-                  <span className={`px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none ${
-                    tab === t ? 'bg-bg text-ink' : 'grad-bg text-[#06080C]'
-                  }`}>
-                    {todayCount}
-                  </span>
-                )}
-                {t === 'learned' && tab === 'learned' && visiblePosts.length > 0 && (
-                  <span className="px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none bg-bg text-ink">
-                    {visiblePosts.length}
-                  </span>
-                )}
-              </button>
-            ))}
+            {TABS.map(([t, l]) => {
+              const active = tab === t
+              return (
+                <button
+                  key={t}
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => choose(t)}
+                  className={`px-4 py-2 rounded-full text-sm font-bold transition inline-flex items-center gap-1.5 border ${
+                    active
+                      ? 'border-brand-violet/60 bg-brand-violet/10 text-ink shadow-[0_0_12px_rgba(139,92,246,0.2)]'
+                      : 'border-transparent text-muted hover:text-ink hover:bg-surface2/60'
+                  }`}
+                >
+                  {t === 'today' ? '📅 ' : '🎓 '}{l}
+                  {t === 'today' && todayCount != null && todayCount > 0 && (
+                    <span className={`px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none ${
+                      active ? 'bg-brand-violet/25 text-ink' : 'bg-surface3 text-muted'
+                    }`}>
+                      {todayCount}
+                    </span>
+                  )}
+                  {t === 'learned' && tab === 'learned' && visiblePosts.length > 0 && (
+                    <span className="px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none bg-brand-violet/25 text-ink">
+                      {visiblePosts.length}
+                    </span>
+                  )}
+                </button>
+              )
+            })}
           </div>
           <span className="ml-auto chip shrink-0 font-medium">
             <Icon name="pin" className="w-3.5 h-3.5 text-brand-violet" />
@@ -161,26 +166,6 @@ export default function Feed() {
             </Link>
           ))}
         </div>
-
-        {/* Live Quiz Banner */}
-        <Link
-          to="/live"
-          className="block mb-4 rounded-3xl p-4 md:p-5 border border-brand-violet/30 overflow-hidden relative shadow-soft"
-          style={{ background: 'linear-gradient(120deg, rgba(139,92,246,.22), rgba(34,211,238,.12) 60%, rgba(52,211,153,.08))' }}
-        >
-          <div className="flex items-center gap-4">
-            <AgentAvatar agent={AGENTS[1]} size={52} />
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-1.5 text-[11px] font-extrabold tracking-wider text-bad">
-                <span className="w-2 h-2 rounded-full bg-bad animate-pulse" />
-                LIVE QUIZ
-              </div>
-              <div className="font-bold text-[16px] leading-tight mt-0.5">Safety Blitz · 5 Questions</div>
-              <div className="text-[13px] text-muted mt-0.5">60 seconds each · Quick answers earn up to 200 XP</div>
-            </div>
-            <span className="btn-grad">Join</span>
-          </div>
-        </Link>
 
         {/* Post Feed */}
         <div className="space-y-4">
