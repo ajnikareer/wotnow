@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Logo } from '../../components/Brand'
+import { Logo, Mascot } from '../../components/Brand'
 import { ThemeToggle } from '../../components/ui'
 import { admin, AdminAuthError, adminToken, setAdminToken } from '../../lib/adminApi'
 import { Link } from '../../lib/router'

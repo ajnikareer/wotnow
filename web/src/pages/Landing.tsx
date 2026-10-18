@@ -4,7 +4,7 @@ import { Icon } from '../components/Icon'
 import { AgentAvatar, ThemeToggle, Verified } from '../components/ui'
 import { authApi, type AuthConfig } from '../lib/api'
 import { AGENTS } from '../mocks/data'
-import { navigate } from '../lib/router'
+import { Link, navigate } from '../lib/router'
 import { useSession } from '../lib/session'
 import { useToast } from '../lib/toast'
 
