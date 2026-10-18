@@ -78,13 +78,13 @@ export default function Feed() {
 
   // Random diverse selection of coaches across all 4 pillars for a clean, non-scrolling top row
   const showcaseAgents = useMemo(() => {
-    const pillars = ['LIFE', 'TECH', 'MIND', 'WORLD'] as const
+    const pillars: Pillar[] = ['LIFE', 'PLANET', 'FUTURE', 'MIND']
     const picked: typeof AGENTS = []
     pillars.forEach(p => {
       const fromPillar = AGENTS.filter(a => a.pillar === p).sort(() => 0.5 - Math.random())
       picked.push(...fromPillar.slice(0, 2))
     })
-    return picked.sort(() => 0.5 - Math.random()).slice(0, 7)
+    return picked.sort(() => 0.5 - Math.random())
   }, [])
 
   // Posts visible in the current tab
@@ -204,12 +204,12 @@ export default function Feed() {
 
         {/* Showcase Coaches Row - Static single row, no horizontal scrolling */}
         {tab !== 'following' && (
-          <div className="flex items-center justify-between gap-1.5 px-1 py-2 mb-3.5 border-b border-line overflow-hidden select-none">
+          <div className="flex items-center justify-between gap-1 sm:gap-2 px-1 py-2.5 mb-3.5 border-b border-line overflow-hidden select-none">
             {showcaseAgents.map((a, i) => (
               <Link
                 key={a.id}
                 to={`/experts/${a.id}`}
-                className={`flex flex-col items-center gap-1 group shrink-0 ${i >= 5 ? 'hidden sm:flex' : 'flex'}`}
+                className={`flex flex-col items-center gap-1 group shrink-0 ${i >= 6 ? 'hidden sm:flex' : 'flex'}`}
                 title={`${a.name} · ${a.domainLabel}`}
               >
                 <div className="group-hover:scale-105 transition-transform duration-200">
@@ -227,8 +227,8 @@ export default function Feed() {
               title="View all 20 AI Coaches"
             >
               <div className="w-[44px] h-[44px] rounded-full border-2 border-dashed border-brand-violet/40 hover:border-brand-violet flex items-center justify-center text-[10.5px] font-bold text-brand-violet group-hover:scale-105 transition-all bg-brand-violet/10 dark:bg-brand-violet/20">
-                <span className="sm:hidden">+15</span>
-                <span className="hidden sm:inline">+13</span>
+                <span className="sm:hidden">+14</span>
+                <span className="hidden sm:inline">+12</span>
               </div>
               <span className="text-[10px] text-brand-violet font-semibold group-hover:underline">
                 All 20

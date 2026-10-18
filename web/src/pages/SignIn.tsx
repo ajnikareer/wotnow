@@ -32,7 +32,16 @@ export function SignInView({ cfg, err, busy, expired, email, name, setEmail, set
   const nothing = !!cfg && !cfg.googleEnabled && !cfg.devLogin
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex items-center px-5 py-4 max-w-3xl w-full mx-auto"><a href="#/"><Logo className="h-6.5" /></a><div className="ml-auto"><ThemeToggle compact /></div></header>
+      <header className="flex items-center px-5 py-4 max-w-3xl w-full mx-auto">
+        <a href="#/" className="flex items-center gap-2 group" aria-label="wotnow home">
+          <Mascot mood="think" size={32} className="shrink-0 transition transform group-hover:scale-105" />
+          <div className="flex flex-col">
+            <Logo className="h-5.5 transition transform group-hover:scale-[1.02]" />
+            <span className="text-[8.5px] font-black uppercase tracking-[0.22em] text-brand-violet pl-0.5 mt-0.5">Know What Now</span>
+          </div>
+        </a>
+        <div className="ml-auto"><ThemeToggle compact /></div>
+      </header>
       <div className="flex-1 grid place-items-center px-5 pb-16">
         <div className="card p-8 md:p-10 max-w-md w-full text-center animate-rise">
           <Mascot mood="look" size={84} className="mx-auto" />

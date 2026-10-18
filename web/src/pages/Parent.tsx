@@ -31,7 +31,14 @@ export default function Parent() {
     <div className="min-h-screen">
       <header className="sticky top-0 z-30 bg-bg/80 backdrop-blur-xl border-b border-line">
         <div className="max-w-6xl mx-auto flex items-center gap-3 px-4 md:px-6 h-16">
-          <Logo className="h-6.5" /><span className="chip !bg-brand-violet/10 !border-brand-violet/30 !text-brand-violet font-bold">Parent</span>
+          <Link to="/" className="flex items-center gap-2 group mr-2" aria-label="wotnow home">
+            <Mascot mood="think" size={30} className="shrink-0 transition transform group-hover:scale-105" />
+            <div className="flex flex-col">
+              <Logo className="h-5 transition transform group-hover:scale-[1.02]" />
+              <span className="text-[8px] font-black uppercase tracking-widest text-brand-violet pl-0.5">Know What Now</span>
+            </div>
+          </Link>
+          <span className="chip !bg-brand-violet/10 !border-brand-violet/30 !text-brand-violet font-bold">Parent</span>
           <div className="ml-auto flex items-center gap-2">
             <Link to="/feed" className="btn-ghost hidden sm:inline-flex">See child’s feed</Link><ThemeToggle compact />
             <button className="btn-ghost !p-2.5" aria-label="Sign out" onClick={() => { signOut(); navigate('/') }}><Icon name="logout" className="w-4 h-4" /></button>

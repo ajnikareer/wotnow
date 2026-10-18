@@ -214,7 +214,13 @@ export function FamilyView(p: FamilyViewProps) {
   return (
     <div className="min-h-screen">
       <header className="max-w-3xl mx-auto flex items-center gap-3 px-5 py-4">
-        <a href="#/"><Logo className="h-6.5" /></a>
+        <a href="#/" className="flex items-center gap-2 group" aria-label="wotnow home">
+          <Mascot mood="think" size={30} className="shrink-0 transition transform group-hover:scale-105" />
+          <div className="flex flex-col">
+            <Logo className="h-5 transition transform group-hover:scale-[1.02]" />
+            <span className="text-[8px] font-black uppercase tracking-widest text-brand-violet pl-0.5">Know What Now</span>
+          </div>
+        </a>
         <div className="ml-auto flex items-center gap-2">
           {acc?.isAdmin && <Link to="/admin" className="btn-ghost">Admin</Link>}
           <ThemeToggle compact />

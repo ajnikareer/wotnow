@@ -41,10 +41,10 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
       <header className="max-w-6xl mx-auto flex items-center gap-6 px-5 md:px-8 py-3.5 md:py-4">
         <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="wotnow home" className="flex flex-col items-start text-left group cursor-pointer">
           <div className="flex items-center gap-2">
-            <Mascot mood="think" size={24} className="shrink-0 transition transform group-hover:scale-105" />
+            <Mascot mood="think" size={32} className="shrink-0 transition transform group-hover:scale-105" />
             <Logo className="h-5.5 md:h-6 transition transform group-hover:scale-[1.02]" />
           </div>
-          <div className="text-[8.5px] font-black uppercase tracking-[0.22em] bg-gradient-to-r from-brand-violet via-brand-cyan to-brand-mint bg-clip-text text-transparent pl-0.5 mt-0.5">
+          <div className="text-[8.5px] font-black uppercase tracking-[0.22em] text-brand-violet pl-0.5 mt-1">
             Know What Now
           </div>
         </button>

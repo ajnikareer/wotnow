@@ -15,12 +15,13 @@ const GRAD_BG = (id: string) => (
     <stop offset="1" stopColor="#34D399" stopOpacity="0.06" />
   </linearGradient>
 )
-const S = { fill: 'none', stroke: 'currentColor', strokeWidth: 18, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
+const BRAND_COLOR = '#8B5CF6'
+const S = { fill: 'none', stroke: BRAND_COLOR, strokeWidth: 18, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
 
-function LogoEye({ cx, id }: { cx: number; id: string }) {
+function LogoEye({ cx }: { cx: number }) {
   return (
     <g>
-      <circle cx={cx} cy={75} r={28} fill="#fff" stroke={`url(#lg${id})`} strokeWidth={7} />
+      <circle cx={cx} cy={75} r={28} fill="#fff" stroke={BRAND_COLOR} strokeWidth={6.5} />
       <circle cx={cx + 7} cy={67} r={11.5} fill="#141824" />
       <circle cx={cx + 12} cy={63} r={3.5} fill="#22D3EE" />
       <circle cx={cx + 5} cy={70} r={2} fill="#fff" />
@@ -28,21 +29,16 @@ function LogoEye({ cx, id }: { cx: number; id: string }) {
   )
 }
 
-/** Primary logo: clean gradient wotnow lettering with cute eyes as the o's. */
+/** Primary logo: clean single brand-violet wotnow lettering matching the mascot emoji. */
 export function Logo({ className = 'h-5.5' }: { className?: string }) {
-  const id = useId().replace(/:/g, '')
-  const s = { fill: 'none', stroke: `url(#lg${id})`, strokeWidth: 18, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
   return (
     <svg viewBox="-10 20 440 90" className={`${className} filter drop-shadow-[0_2px_8px_rgba(139,92,246,0.18)]`} role="img" aria-label="wotnow">
-      <defs>
-        {GRAD('lg' + id)}
-      </defs>
-      <path d="M0 50 L15 100 L29 64 L43 100 L58 50" {...s} />
-      <LogoEye cx={109} id={id} />
-      <path d="M174 30 V86 Q174 100 189 100 M160 52 H190" {...s} />
-      <path d="M216 100 V50 M216 74 Q216 50 238 50 Q260 50 260 74 V100" {...s} />
-      <LogoEye cx={311} id={id} />
-      <path d="M362 50 L377 100 L391 64 L405 100 L420 50" {...s} />
+      <path d="M0 50 L15 100 L29 64 L43 100 L58 50" {...S} />
+      <LogoEye cx={109} />
+      <path d="M174 30 V86 Q174 100 189 100 M160 52 H190" {...S} />
+      <path d="M216 100 V50 M216 74 Q216 50 238 50 Q260 50 260 74 V100" {...S} />
+      <LogoEye cx={311} />
+      <path d="M362 50 L377 100 L391 64 L405 100 L420 50" {...S} />
     </svg>
   )
 }
