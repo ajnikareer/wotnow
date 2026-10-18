@@ -100,8 +100,13 @@ def from_card(combo: dict, used_texts: set[str] | None = None) -> Optional[dict]
         items = [m for m in card["myths"] if f'“{m["statement"]}”' not in used_texts] or card["myths"]
         m = items[v % len(items)]
         p = _base(combo, kind, card["title"], [card["id"]], "cards")
-        p.update(body="Lots of people believe this. Do you?", statement=f'“{m["statement"]}”', answerKey=m["answer"],
-                 explanation=("Myth! " if m["answer"] == "myth" else "Fact! ") + m["truth"])
+        st = m["statement"].strip()
+        is_q = st.endswith("?") or st.lower().startswith(("should", "can", "is", "do", "does", "would", "could", "are"))
+        body = "Quick question:" if is_q else "True or false?"
+        if "myth" in st.lower() or "believe" in st.lower():
+            body = "Lots of people believe this. Do you?"
+        p.update(body=body, statement=f'“{st}”', answerKey=m["answer"],
+                 explanation=m["truth"])
         p["bands"] = card["bands"]
         return p
     if kind == "scam_legit" and card.get("scams"):

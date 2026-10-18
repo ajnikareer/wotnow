@@ -15,8 +15,55 @@ const TYPE_LABEL: Record<Post['type'], string> = {
   scenario: 'WHAT WOULD YOU DO?', poll: 'POLL', myth_fact: 'MYTH OR FACT', scam_legit: 'SCAM OR LEGIT?', local_alert: 'LOCAL ALERT',
 }
 
+export function getBinaryConfig(post: Post) {
+  if (post.options && post.options.length === 2) {
+    return {
+      typeLabel: 'QUICK CHECK',
+      intro: post.body || 'Quick check:',
+      options: post.options.map(o => ({ id: o.id, label: o.text })),
+    }
+  }
+
+  const text = (post.statement || post.question || post.body || '').trim()
+  const isQuestion = text.endsWith('?') || /^(should|is|can|do|does|would|could|are|will|have|has)\b/i.test(text.replace(/^[“"']/, ''))
+  const isMyth = /myth|belief|folklore|old wives|rumour|rumor/i.test(text) || /lots of people believe/i.test(post.body || '')
+
+  if (isQuestion) {
+    return {
+      typeLabel: 'YES OR NO?',
+      intro: post.body === 'Lots of people believe this. Do you?' ? 'Quick question:' : (post.body || 'Quick question:'),
+      options: [
+        { id: 'myth', label: '❌ No' },
+        { id: 'fact', label: '✅ Yes' },
+      ],
+    }
+  }
+
+  if (isMyth) {
+    return {
+      typeLabel: 'MYTH OR FACT?',
+      intro: post.body || 'Lots of people believe this. Do you?',
+      options: [
+        { id: 'myth', label: '❌ Myth' },
+        { id: 'fact', label: '✅ Fact' },
+      ],
+    }
+  }
+
+  // Statements default naturally to True or False
+  return {
+    typeLabel: 'TRUE OR FALSE?',
+    intro: post.body === 'Lots of people believe this. Do you?' ? 'True or false?' : (post.body || 'True or false?'),
+    options: [
+      { id: 'myth', label: '❌ False' },
+      { id: 'fact', label: '✅ True' },
+    ],
+  }
+}
+
 export function PostHeader({ post }: { post: Post }) {
   const a = agentOf(post.agentId)
+  const typeLabel = post.type === 'myth_fact' ? getBinaryConfig(post).typeLabel : TYPE_LABEL[post.type]
   return (
     <div className="flex items-center gap-3">
       <Link to={`/experts/${a.id}`}><AgentAvatar agent={a} size={42} /></Link>
@@ -29,7 +76,7 @@ export function PostHeader({ post }: { post: Post }) {
           {post.city && <><span>·</span><Icon name="pin" className="w-3.5 h-3.5" />{post.city}</>}
         </div>
       </div>
-      <span className="pill ml-auto shrink-0" style={{ color: a.colors[0], background: `${a.colors[0]}1f` }}>{TYPE_LABEL[post.type]}</span>
+      <span className="pill ml-auto shrink-0" style={{ color: a.colors[0], background: `${a.colors[0]}1f` }}>{typeLabel}</span>
     </div>
   )
 }
@@ -153,12 +200,17 @@ function PollBody({ post, onResult, onComplete }: { post: Post; onResult: (s: Ca
 
 function BinaryBody({ post, kind, onResult, onComplete }: { post: Post; kind: 'myth_fact' | 'scam_legit'; onResult: (s: CardState) => void; onComplete?: (data: PointsModalData) => void }) {
   const { res, vote, busy } = useVote(post, onResult, onComplete)
-  const opts = kind === 'myth_fact'
-    ? [{ id: 'myth', label: '❌ Myth' }, { id: 'fact', label: '✅ Fact' }]
-    : [{ id: 'scam', label: '🚩 Scam' }, { id: 'legit', label: '✅ Legit' }]
+  const cfg = kind === 'myth_fact'
+    ? getBinaryConfig(post)
+    : {
+        typeLabel: 'SCAM OR LEGIT?',
+        intro: post.body,
+        options: [{ id: 'scam', label: '🚩 Scam' }, { id: 'legit', label: '✅ Legit' }],
+      }
+  const opts = cfg.options
   return (
     <>
-      <p className="mt-3 text-[15px] text-ink/90">{post.body}</p>
+      <p className="mt-3 text-[15px] text-ink/90">{cfg.intro}</p>
       {kind === 'myth_fact' ? (
         <div className="mt-3 rounded-2xl p-5 md:p-6 font-display text-[21px] md:text-[23px] font-semibold leading-snug grad-soft border border-line">{post.statement}</div>
       ) : (

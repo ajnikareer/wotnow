@@ -23,7 +23,7 @@ Return JSON matching the schema exactly."""
 TASK = {
     "scenario": "Write ONE 'What would you do?' scenario. Build 3-5 rubric items whose weights sum to 100; every item must cite a card id from FACT CARDS. List dangerous actions a learner might wrongly suggest.",
     "poll": "Write ONE multiple-choice poll with exactly 4 options and one clearly best answer from the fact cards. Make wrong options common real-life mistakes.",
-    "myth_fact": "Write ONE myth-or-fact statement that many people believe or doubt. Answer must be 'myth' or 'fact' per the cards.",
+    "myth_fact": "Write ONE quick-check item: either a True/False statement, a Yes/No question, or a Myth/Fact misconception from the cards. Answer must be 'myth' (No/False/Myth) or 'fact' (Yes/True/Fact) per the cards.",
     "scam_legit": "Write ONE realistic message (SMS, pop-up or chat) and say whether it is a 'scam' or 'legit', per the cards. Never include real brand names, real phone numbers or working links; mask numbers with •.",
 }
 
