@@ -24,39 +24,48 @@ export function getBinaryConfig(post: Post) {
     }
   }
 
-  const text = (post.statement || post.question || post.body || '').trim()
-  const isQuestion = text.endsWith('?') || /^(should|is|can|do|does|would|could|are|will|have|has)\b/i.test(text.replace(/^[“"']/, ''))
-  const isMyth = /myth|belief|folklore|old wives|rumour|rumor/i.test(text) || /lots of people believe/i.test(post.body || '')
+  const rawStatement = (post.statement || '').trim()
+  const cleanStatement = rawStatement.replace(/^[“"']+|[”"']+$/g, '').trim()
+  const rawBody = (post.body || '').trim()
+
+  // 1. Is it a direct question?
+  const isQuestion = cleanStatement.endsWith('?') ||
+    Boolean(post.question && post.question.endsWith('?')) ||
+    /^(should|is|can|do|does|would|could|are|will|have|has)\b/i.test(cleanStatement)
 
   if (isQuestion) {
     return {
       typeLabel: 'YES OR NO?',
-      intro: post.body === 'Lots of people believe this. Do you?' ? 'Quick question:' : (post.body || 'Quick question:'),
+      intro: (!rawBody || /lots of people believe/i.test(rawBody)) ? 'Quick question:' : rawBody,
       options: [
-        { id: 'myth', label: '❌ No' },
         { id: 'fact', label: '✅ Yes' },
+        { id: 'myth', label: '❌ No' },
       ],
     }
   }
+
+  // 2. Is it specifically framed as folklore / rumour / superstition / myth?
+  const isMyth = /\b(myth|folklore|old wives'?\s*tale|rumour|rumor|superstition|legend)\b/i.test(cleanStatement) ||
+    /\b(myth or fact|fact or myth)\b/i.test(rawBody)
 
   if (isMyth) {
     return {
       typeLabel: 'MYTH OR FACT?',
-      intro: post.body || 'Lots of people believe this. Do you?',
+      intro: rawBody || 'Myth or fact?',
       options: [
-        { id: 'myth', label: '❌ Myth' },
         { id: 'fact', label: '✅ Fact' },
+        { id: 'myth', label: '❌ Myth' },
       ],
     }
   }
 
-  // Statements default naturally to True or False
+  // 3. Standard claims and safety rules naturally format as TRUE OR FALSE
   return {
     typeLabel: 'TRUE OR FALSE?',
-    intro: post.body === 'Lots of people believe this. Do you?' ? 'True or false?' : (post.body || 'True or false?'),
+    intro: (!rawBody || /lots of people believe/i.test(rawBody)) ? 'True or false?' : rawBody,
     options: [
-      { id: 'myth', label: '❌ False' },
       { id: 'fact', label: '✅ True' },
+      { id: 'myth', label: '❌ False' },
     ],
   }
 }
@@ -160,10 +169,19 @@ function useVote(post: Post, onResult?: (s: CardState) => void, onComplete?: (da
   return { res, vote, busy }
 }
 
-function Explanation({ res }: { res: VoteResult }) {
+function Explanation({ res, post }: { res: VoteResult; post?: Post }) {
+  let exp = res.explanation || ''
+  if (post && post.type === 'myth_fact') {
+    const cfg = getBinaryConfig(post)
+    if (cfg.typeLabel === 'TRUE OR FALSE?') {
+      exp = exp.replace(/^Myth!\s*/i, 'False! ').replace(/^Fact!\s*/i, 'True! ')
+    } else if (cfg.typeLabel === 'YES OR NO?') {
+      exp = exp.replace(/^Myth!\s*/i, 'No! ').replace(/^Fact!\s*/i, 'Yes! ')
+    }
+  }
   return (
     <div className={`mt-2.5 p-3 rounded-xl text-[13px] leading-relaxed animate-rise border ${res.isCorrect ? 'bg-ok/10 border-ok/25' : 'bg-warn/10 border-warn/25'}`}>
-      <b>{res.isCorrect ? '✅ You got it.' : '💡 Here’s the thing.'}</b> {res.explanation}
+      <b>{res.isCorrect ? '✅ You got it.' : '💡 Here’s the thing.'}</b> {exp}
     </div>
   )
 }
@@ -192,7 +210,7 @@ function PollBody({ post, onResult, onComplete }: { post: Post; onResult: (s: Ca
           )
         })}
       </div>
-      {res && <Explanation res={res} />}
+      {res && <Explanation res={res} post={post} />}
       <Meta post={post} extra={res ? undefined : 'Tap to vote'} />
     </>
   )
@@ -220,21 +238,22 @@ function BinaryBody({ post, kind, onResult, onComplete }: { post: Post; kind: 'm
         </div>
       )}
       <div className="grid grid-cols-2 gap-2 mt-2.5">
-        {opts.map((o, i) => {
+        {opts.map((o) => {
           const correct = res && o.id === res.correct
           const mine = res && o.id === res.choice
+          const isAffirmative = o.id === 'fact' || o.id === 'legit'
           return (
             <button key={o.id} disabled={!!res || busy} onClick={() => vote(o.id)}
               className={`rounded-xl py-2.5 font-bold text-sm border transition active:scale-[.98]
                 ${res ? (correct ? 'bg-ok/15 border-ok/50 text-ok' : 'opacity-50 border-line') :
-                  i === 0 ? 'border-bad/30 bg-bad/[.06] text-bad hover:bg-bad/10' : 'border-ok/30 bg-ok/[.06] text-ok hover:bg-ok/10'}
+                  isAffirmative ? 'border-ok/30 bg-ok/[.06] text-ok hover:bg-ok/10' : 'border-bad/30 bg-bad/[.06] text-bad hover:bg-bad/10'}
                 ${mine && !correct ? 'animate-shake' : ''}`}>
               {o.label}{res && <span className="ml-2 font-bold opacity-80">{res.distribution[o.id]}%</span>}
             </button>
           )
         })}
       </div>
-      {res && <Explanation res={res} />}
+      {res && <Explanation res={res} post={post} />}
       <Meta post={post} />
     </>
   )
