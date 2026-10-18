@@ -55,13 +55,13 @@ export default function Experts() {
                 onClick={() => setActivePillar(tab.key)}
                 className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition flex items-center gap-1.5 ${
                   isSelected
-                    ? 'bg-brand text-white shadow-md shadow-brand/25 scale-[1.02]'
-                    : 'bg-surface hover:bg-surface-hover text-muted hover:text-ink border border-line'
+                    ? 'bg-brand-violet text-white shadow-md shadow-brand-violet/25 scale-[1.02]'
+                    : 'bg-surface2/80 hover:bg-surface2 text-muted hover:text-ink border border-line'
                 }`}
               >
                 <span>{tab.emoji}</span>
                 <span>{tab.label}</span>
-                <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${isSelected ? 'bg-white/20 text-white' : 'bg-surface-hover text-muted'}`}>
+                <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${isSelected ? 'bg-white/25 text-white' : 'bg-surface3 text-muted'}`}>
                   {count}
                 </span>
               </button>

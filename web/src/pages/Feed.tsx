@@ -21,11 +21,18 @@ const TABS: [FeedTab, string][] = [
 
 const PILLARS: { key: 'ALL' | Pillar; label: string; emoji: string }[] = [
   { key: 'ALL', label: 'All 20', emoji: '🌟' },
-  { key: 'LIFE', label: 'Life', emoji: '❤️' },
-  { key: 'PLANET', label: 'Planet', emoji: '🌍' },
-  { key: 'FUTURE', label: 'Future', emoji: '🚀' },
-  { key: 'MIND', label: 'Mind', emoji: '🧠' },
+  { key: 'LIFE', label: 'Life & Safety', emoji: '❤️' },
+  { key: 'PLANET', label: 'Planet & City', emoji: '🌍' },
+  { key: 'FUTURE', label: 'Future & Enterprise', emoji: '🚀' },
+  { key: 'MIND', label: 'Mind & Wellbeing', emoji: '🧠' },
 ]
+
+const PILLAR_COLORS: Record<Pillar, { text: string; bg: string; border: string }> = {
+  LIFE: { text: 'text-brand-violet', bg: 'bg-brand-violet/10', border: 'border-brand-violet/20' },
+  PLANET: { text: 'text-ok', bg: 'bg-ok/10', border: 'border-ok/20' },
+  FUTURE: { text: 'text-amber-500', bg: 'bg-amber-500/10', border: 'border-amber-500/20' },
+  MIND: { text: 'text-cyan-500', bg: 'bg-cyan-500/10', border: 'border-cyan-500/20' },
+}
 
 /** Floating pill that appears when experts have posted since the feed was loaded. */
 export function NewPostsBanner({ count, onClick }: { count: number; onClick: () => void }) {
@@ -44,14 +51,16 @@ export default function Feed() {
   const picked = useRef(false)
   const { me, setMe } = useSession()
   const toast = useToast()
-  const { data, loading, error, reload } = useAsync(() => loadFeed(tab), [tab])
+  const { data, loading, error, reload } = useAsync(
+    () => (tab === 'following' ? Promise.resolve([]) : loadFeed(tab)),
+    [tab]
+  )
   const [fresh, setFresh] = useState(0)
   const [todayCount, setTodayCount] = useState<number | null>(null)
   const [completedIds, setCompletedIds] = useState<Set<string>>(new Set())
   const [fadingIds, setFadingIds] = useState<Set<string>>(new Set())
   const [pointsModalData, setPointsModalData] = useState<PointsModalData | null>(null)
   const [pillarFilter, setPillarFilter] = useState<'ALL' | Pillar>('ALL')
-  const seen = new Set(['civic', 'cipher', 'compass'])
 
   const choose = (t: FeedTab) => { picked.current = true; setTab(t) }
 
@@ -76,8 +85,7 @@ export default function Feed() {
     if (tab === 'learned') {
       return data.filter(p => p.state === 'done' || p.state === 'retry' || p.my != null || completedIds.has(p.id))
     }
-    // following tab
-    return data.filter(p => !completedIds.has(p.id))
+    return []
   }, [data, tab, completedIds])
 
   // Count of done items in today's dataset
@@ -99,7 +107,7 @@ export default function Feed() {
 
   useEffect(() => { setFresh(0) }, [data, tab])
   useEffect(() => {
-    if (!newest) return
+    if (!newest || tab === 'following') return
     let stop = false
     const check = async () => {
       if (document.hidden) return
@@ -137,9 +145,9 @@ export default function Feed() {
 
   return (
     <AppShell>
-      <div className="max-w-[580px] mx-auto">
+      <div className="max-w-[620px] mx-auto">
         {/* Feed Tabs: New Feeds, Learned, and Following */}
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-4">
           <div className="flex items-center gap-2" role="tablist">
             {TABS.map(([t, l]) => {
               const active = tab === t
@@ -183,172 +191,163 @@ export default function Feed() {
 
         <NewPostsBanner count={fresh} onClick={refresh} />
 
-        {/* Stories / Expert Shortcuts */}
-        <div className="flex gap-2.5 overflow-x-auto no-scrollbar pb-2 mb-3 border-b border-line">
-          {AGENTS.map(a => (
-            <Link key={a.id} to={`/experts/${a.id}`} className="flex flex-col items-center gap-1 shrink-0 group">
-              <div className="group-hover:scale-105 transition">
-                <AgentAvatar agent={a} size={36} ring seen={seen.has(a.id)} />
+        {/* Following Tab - Single List of All 20 Experts */}
+        {tab === 'following' ? (
+          <div className="space-y-3 animate-rise">
+            <div className="card p-4 border-line">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                  <h2 className="text-base font-bold flex items-center gap-2 text-ink">
+                    <span>👥</span> All 20 Specialized AI Coaches
+                  </h2>
+                  <p className="text-xs text-muted mt-0.5">
+                    Toggle follow to customize whose lessons appear in your feed.
+                  </p>
+                </div>
+                <div className="flex items-center gap-1.5 text-xs font-bold px-2.5 py-1 rounded-full bg-brand-violet/15 text-brand-violet w-fit shrink-0">
+                  <span>✓</span> {me?.follows?.length ?? 0} of 20 Followed
+                </div>
               </div>
-              <span className="text-[10px] text-muted font-medium">{a.name}</span>
-            </Link>
-          ))}
-          <button
-            type="button"
-            onClick={() => choose('following')}
-            className="flex flex-col items-center gap-1 shrink-0 group cursor-pointer"
-            title="View all 20 AI Coaches"
-          >
-            <div className="w-[36px] h-[36px] rounded-full border border-dashed border-brand-violet/60 flex items-center justify-center text-[11px] font-extrabold text-brand-violet group-hover:scale-105 transition bg-brand-violet/10">
-              +20
-            </div>
-            <span className="text-[10px] text-brand-violet font-semibold">All 20</span>
-          </button>
-        </div>
 
-        {/* Following Tab - All 20 Coaches Directory */}
-        {tab === 'following' && (
-          <div className="card p-3.5 mb-3.5 border-line animate-rise">
-            <div className="flex items-center justify-between gap-2 mb-2">
-              <div>
-                <h2 className="text-sm font-bold flex items-center gap-1.5 text-ink">
-                  <span>👥</span> All 20 Specialized Coaches
-                </h2>
-                <p className="text-[11px] text-muted">
-                  Follow your favorite coaches across the 4 pillars to personalize your feed.
-                </p>
-              </div>
-              <span className="text-[10.5px] font-bold px-2 py-0.5 rounded-full bg-brand-violet/15 text-brand-violet shrink-0">
-                {me?.follows?.length ?? 0} followed
-              </span>
-            </div>
-
-            {/* Pillar Filter Tabs */}
-            <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
-              {PILLARS.map(p => {
-                const count = p.key === 'ALL' ? AGENTS.length : AGENTS.filter(a => a.pillar === p.key).length
-                const active = pillarFilter === p.key
-                return (
-                  <button
-                    key={p.key}
-                    type="button"
-                    onClick={() => setPillarFilter(p.key)}
-                    className={`px-2.5 py-1 rounded-full text-[11px] font-semibold shrink-0 transition flex items-center gap-1 ${
-                      active
-                        ? 'bg-brand-violet text-white shadow-sm'
-                        : 'bg-surface2 text-muted hover:text-ink'
-                    }`}
-                  >
-                    <span>{p.emoji}</span>
-                    <span>{p.label}</span>
-                    <span className="text-[9.5px] opacity-75">({count})</span>
-                  </button>
-                )
-              })}
-            </div>
-
-            {/* Coaches Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2.5 max-h-[340px] overflow-y-auto pr-1">
-              {filteredAgents.map(a => {
-                const isFollowing = !!me?.follows?.includes(a.id)
-                return (
-                  <div key={a.id} className="p-2 rounded-xl bg-surface2/60 border border-line flex items-center gap-2 hover:border-brand-violet/40 transition">
-                    <Link to={`/experts/${a.id}`} className="shrink-0">
-                      <AgentAvatar agent={a} size={32} ring />
-                    </Link>
-                    <div className="min-w-0 flex-1">
-                      <Link to={`/experts/${a.id}`} className="font-bold text-xs truncate flex items-center gap-1 hover:underline">
-                        {a.name} <Verified />
-                      </Link>
-                      <div className="text-[10.5px] text-muted truncate">{a.domainLabel}</div>
-                    </div>
+              {/* Pillar Filter Tabs */}
+              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-3 mt-3 border-t border-line">
+                {PILLARS.map(p => {
+                  const count = p.key === 'ALL' ? AGENTS.length : AGENTS.filter(a => a.pillar === p.key).length
+                  const active = pillarFilter === p.key
+                  return (
                     <button
+                      key={p.key}
                       type="button"
-                      onClick={() => toggleFollow(a.id, a.name)}
-                      className={`shrink-0 px-2 py-1 rounded-lg text-[10px] font-bold transition ${
-                        isFollowing
-                          ? 'bg-surface3 text-muted hover:bg-bad/15 hover:text-bad'
-                          : 'btn-grad !py-0.5 !px-2 !text-[10px]'
+                      onClick={() => setPillarFilter(p.key)}
+                      className={`px-3 py-1 rounded-full text-xs font-semibold shrink-0 transition flex items-center gap-1.5 ${
+                        active
+                          ? 'bg-brand-violet text-white shadow-sm'
+                          : 'bg-surface2 text-muted hover:text-ink'
                       }`}
                     >
-                      {isFollowing ? 'Following' : '+ Follow'}
+                      <span>{p.emoji}</span>
+                      <span>{p.label}</span>
+                      <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${active ? 'bg-white/25 text-white' : 'bg-surface3 text-muted'}`}>
+                        {count}
+                      </span>
                     </button>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* List of Experts */}
+            <div className="space-y-2.5">
+              {filteredAgents.map(a => {
+                const isFollowing = !!me?.follows?.includes(a.id)
+                const pillarStyle = PILLAR_COLORS[a.pillar] || PILLAR_COLORS.LIFE
+                return (
+                  <div
+                    key={a.id}
+                    className="card p-3.5 border-line hover:border-brand-violet/40 transition flex items-center gap-3.5"
+                  >
+                    <Link to={`/experts/${a.id}`} className="shrink-0 group">
+                      <div className="group-hover:scale-105 transition">
+                        <AgentAvatar agent={a} size={44} ring />
+                      </div>
+                    </Link>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2">
+                        <Link to={`/experts/${a.id}`} className="font-bold text-sm text-ink truncate hover:underline flex items-center gap-1">
+                          {a.name} <Verified />
+                        </Link>
+                        <span className={`text-[9.5px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full border ${pillarStyle.bg} ${pillarStyle.text} ${pillarStyle.border}`}>
+                          {a.pillar}
+                        </span>
+                      </div>
+                      <div className="text-xs font-semibold text-ink/80 mt-0.5 truncate">{a.domainLabel}</div>
+                      <p className="text-[11.5px] text-muted line-clamp-1 mt-0.5 leading-snug">
+                        {a.persona}
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-end gap-1.5 shrink-0">
+                      <button
+                        type="button"
+                        onClick={() => toggleFollow(a.id, a.name)}
+                        className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1 ${
+                          isFollowing
+                            ? 'bg-surface2 text-muted hover:bg-bad/10 hover:text-bad border border-line'
+                            : 'btn-grad !py-1.5 !px-3 !text-xs shadow-sm'
+                        }`}
+                      >
+                        {isFollowing ? (
+                          <><span>✓</span> Following</>
+                        ) : (
+                          <><span>+</span> Follow</>
+                        )}
+                      </button>
+                      <Link
+                        to={`/experts/${a.id}`}
+                        className="text-[10.5px] text-muted hover:text-ink font-semibold"
+                      >
+                        View profile →
+                      </Link>
+                    </div>
                   </div>
                 )
               })}
             </div>
           </div>
+        ) : (
+          /* Post Feed for New Feeds and Learned */
+          <div className="space-y-3.5">
+            {loading && !data && [0, 1, 2].map(i => <PostSkeleton key={i} />)}
+            {error && (
+              <EmptyState
+                title="Couldn’t load the feed"
+                text={error}
+                action={<button className="btn-ghost" onClick={reload}>Try again</button>}
+              />
+            )}
+
+            {data && visiblePosts.length === 0 && (
+              tab === 'today' ? (
+                <EmptyState
+                  title={doneCount > 0 ? "You're all caught up! 🎉" : "No new feeds right now"}
+                  text={
+                    doneCount > 0
+                      ? "Great job! You completed all current safety activities. All your completed answers and learnings are saved in the Learned tab."
+                      : "The experts post through the day. Check back soon, or view your learning portfolio in the Learned tab."
+                  }
+                  action={<button className="btn-grad" onClick={() => choose('learned')}>View Learned</button>}
+                />
+              ) : (
+                <EmptyState
+                  title="No learned topics yet 📚"
+                  text="Complete safety scenarios and participate in quick challenges in New Feeds to build your learning portfolio."
+                  action={<button className="btn-grad" onClick={() => choose('today')}>Explore New Feeds</button>}
+                />
+              )
+            )}
+
+            {visiblePosts.map(p => {
+              const isFading = fadingIds.has(p.id)
+              return (
+                <div
+                  key={p.id}
+                  className={`transition-all duration-500 transform ${
+                    isFading ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
+                  }`}
+                >
+                  <PostCard post={p} onComplete={handleCardComplete} />
+                </div>
+              )
+            })}
+
+            {data && visiblePosts.length > 0 && (
+              <p className="text-center text-xs text-muted py-5">
+                {tab === 'today'
+                  ? '🎉 You’re all caught up for now. New posts arrive through the day.'
+                  : '🎓 End of your learned activities.'}
+              </p>
+            )}
+          </div>
         )}
-
-        {/* Post Feed */}
-        <div className="space-y-3.5">
-          {tab === 'following' && (
-            <div className="flex items-center justify-between mb-1 px-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-muted">
-                Feed from coaches you follow ({visiblePosts.length})
-              </span>
-            </div>
-          )}
-
-          {loading && !data && [0, 1, 2].map(i => <PostSkeleton key={i} />)}
-          {error && (
-            <EmptyState
-              title="Couldn’t load the feed"
-              text={error}
-              action={<button className="btn-ghost" onClick={reload}>Try again</button>}
-            />
-          )}
-
-          {data && visiblePosts.length === 0 && (
-            tab === 'today' ? (
-              <EmptyState
-                title={doneCount > 0 ? "You're all caught up! 🎉" : "No new feeds right now"}
-                text={
-                  doneCount > 0
-                    ? `Great job! You completed all current safety activities. All your completed answers and learnings are saved in the Learned tab.`
-                    : "The experts post through the day. Check back soon, or view your learning portfolio in the Learned tab."
-                }
-                action={<button className="btn-grad" onClick={() => choose('learned')}>View Learned</button>}
-              />
-            ) : tab === 'learned' ? (
-              <EmptyState
-                title="No learned topics yet 📚"
-                text="Complete safety scenarios and participate in quick challenges in New Feeds to build your learning portfolio."
-                action={<button className="btn-grad" onClick={() => choose('today')}>Explore New Feeds</button>}
-              />
-            ) : (
-              <EmptyState
-                title="No posts from followed coaches yet 👥"
-                text={me?.follows?.length ? "The coaches you follow haven't posted new items yet today. Explore New Feeds or follow more coaches above." : "Follow any coach in the list above to see their real-life situations and challenges in this tab."}
-                action={<button className="btn-grad" onClick={() => choose('today')}>Explore New Feeds</button>}
-              />
-            )
-          )}
-
-          {visiblePosts.map(p => {
-            const isFading = fadingIds.has(p.id)
-            return (
-              <div
-                key={p.id}
-                className={`transition-all duration-500 transform ${
-                  isFading ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
-                }`}
-              >
-                <PostCard post={p} onComplete={handleCardComplete} />
-              </div>
-            )
-          })}
-
-          {data && visiblePosts.length > 0 && (
-            <p className="text-center text-xs text-muted py-5">
-              {tab === 'today'
-                ? '🎉 You’re all caught up for now. New posts arrive through the day.'
-                : tab === 'learned'
-                  ? '🎓 End of your learned activities.'
-                  : '👥 End of followed coaches feed.'}
-            </p>
-          )}
-        </div>
       </div>
 
       <PointsModal

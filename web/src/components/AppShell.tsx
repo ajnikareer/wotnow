@@ -142,10 +142,10 @@ function MobileTabs() {
 
 export function AppShell({ children, rail = true }: { children: ReactNode; rail?: boolean }) {
   return (
-    <div className="app-shell-root min-h-screen lg:flex max-w-[1180px] mx-auto px-2 sm:px-4">
+    <div className="min-h-screen lg:flex max-w-[1240px] mx-auto px-3 sm:px-5">
       <SideNav />
       <MobileTop />
-      <main className="flex-1 min-w-0 px-2 sm:px-4 lg:px-5 pt-3 lg:pt-3.5 pb-20 lg:pb-8">{children}</main>
+      <main className="flex-1 min-w-0 px-3 sm:px-5 lg:px-6 pt-3.5 pb-20 lg:pb-10">{children}</main>
       {rail && <RightRail />}
       <MobileTabs />
     </div>

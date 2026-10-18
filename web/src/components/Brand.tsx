@@ -26,17 +26,14 @@ function LogoEye({ cx }: { cx: number }) {
   )
 }
 
-/** Primary logo: enhanced gradient speech bubble with subtle fill and bold lettering, eyes as the o's. */
+/** Primary logo: clean wotnow lettering with cute eyes as the o's. */
 export function Logo({ className = 'h-9' }: { className?: string }) {
   const id = useId().replace(/:/g, '')
   return (
-    <svg viewBox="-60 -20 540 216" className={`${className} filter drop-shadow-[0_2px_10px_rgba(139,92,246,0.22)]`} role="img" aria-label="wotnow">
+    <svg viewBox="-10 20 440 90" className={`${className} filter drop-shadow-[0_2px_8px_rgba(139,92,246,0.18)]`} role="img" aria-label="wotnow">
       <defs>
         {GRAD('lg' + id)}
-        {GRAD_BG('lgbg' + id)}
       </defs>
-      <path d="M-4 -6 H424 Q466 -6 466 36 V92 Q466 134 424 134 H94.3 L20.6 180 L29.8 134 H-4 Q-46 134 -46 92 V36 Q-46 -6 -4 -6 Z"
-        fill={`url(#lgbg${id})`} stroke={`url(#lg${id})`} strokeWidth={14} strokeLinejoin="round" />
       <path d="M0 50 L15 100 L29 64 L43 100 L58 50" {...S} />
       <LogoEye cx={109} />
       <path d="M174 30 V86 Q174 100 189 100 M160 52 H190" {...S} />
