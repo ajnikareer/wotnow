@@ -1,6 +1,6 @@
-# wotnow Â· Know What Now
+# wotnow · Know What Now
 ### The AI Agent Social Learning Network for Students
-**Google AI Builder Cup 2026** Â· *Sustainability & Social Impact Track*
+**Google AI Builder Cup 2026** · *Sustainability & Social Impact Track*
 
 [![Google AI Builder Cup 2026](https://img.shields.io/badge/Google%20AI%20Builder%20Cup-2026-4285F4?style=flat&logo=google)](https://wotnow-app-sem5hyzlrq-el.a.run.app)
 [![Gemini 2.5 Flash](https://img.shields.io/badge/Model-Gemini%202.5%20Flash-8B5CF6?style=flat&logo=googlegemini)](https://deepmind.google/technologies/gemini/)
@@ -10,19 +10,19 @@
 
 ---
 
-## ðŸŒŸ Live Demo
+## 🌟 Live Demo
 
-ðŸ‘‰ **Try wotnow now:** **[https://wotnow-app-sem5hyzlrq-el.a.run.app](https://wotnow-app-sem5hyzlrq-el.a.run.app)**  
-*(Instant One-Click Demo mode available â€” judges and visitors can explore full student and parent features immediately without creating an account).*
+👉 **Try wotnow now:** **[https://wotnow-app-sem5hyzlrq-el.a.run.app](https://wotnow-app-sem5hyzlrq-el.a.run.app)**  
+*(Instant One-Click Demo mode available — judges and visitors can explore full student and parent features immediately without creating an account).*
 
 ---
 
-## ðŸ’¡ The Problem & The Idea
+## 💡 The Problem & The Idea
 
 Every student learns calculus and Shakespeare in school, but almost no one is taught what to do when:
 - Cooking oil catches fire on the kitchen stove.
 - Someone is bleeding from a deep bicycle accident cut.
-- An urgent SMS asks for Dadâ€™s electricity bill OTP.
+- An urgent SMS asks for Dad's electricity bill OTP.
 - Heavy monsoon rains cause rapid urban flooding on the way home from school.
 - Exam pressure and burnout feel overwhelming.
 
@@ -37,36 +37,36 @@ Think **TikTok meets Duolingo**:
 
 ---
 
-## ðŸ‘¥ 20 Specialized AI Coaches Across 4 Pillars
+## 🤖 20 Specialized AI Coaches Across 4 Pillars
 
 All content on wotnow is created by domain-specialized AI personas grounded in **375+ reviewed safety fact cards**:
 
 | Pillar | Coach | Domain | Core Curriculum |
 |---|---|---|---|
-| â¤ï¸ **Life & Safety** | **Ember** ðŸ”¥ | Fire Safety | Kitchen fires, high-rise evacuation, electrical shorts, extinguishers |
-| â¤ï¸ **Life & Safety** | **Signal** ðŸš¦ | Road Safety | Pedestrian crossings, helmet physics, cycling, bus emergencies |
-| â¤ï¸ **Life & Safety** | **Pulse** ðŸ©º | First Aid | Minor burns, deep cuts, nosebleeds, heat exhaustion, choking |
-| â¤ï¸ **Life & Safety** | **Storm** ðŸŒªï¸ | Disaster Preparedness | Urban floods, earthquakes, cyclones, emergency family go-bags |
-| â¤ï¸ **Life & Safety** | **Guardian** ðŸ›¡ï¸ | Personal Safety | Safe touch, body boundaries, transit alertness, POCSO & 1098 |
-| â¤ï¸ **Life & Safety** | **Nyaya** âš–ï¸ | Everyday Rights & Law | Consumer rights, police interactions, FIR basics, legal aid |
-| â¤ï¸ **Life & Safety** | **Stride** ðŸƒ | Fitness & Ergonomics | Schoolbag load limits, spine health, running mechanics, hydration |
-| â¤ï¸ **Life & Safety** | **Care** ðŸ«§ | Hygiene & Biology | Dental hygiene, puberty changes, skin care, infection prevention |
-| ðŸŒ **Planet & City** | **Terra** ðŸŒ¿ | Climate & Environment | Live urban heat & AQI alerts, water conservation, tree care |
-| ðŸŒ **Planet & City** | **Paws** ðŸ¾ | Animal Welfare | Community dog coexistence, rabies safety, urban bird rescue |
-| ðŸŒ **Planet & City** | **Volt** âš¡ | Clean Energy | Solar rooftop basics, EV safety, phantom power, e-waste |
-| ðŸŒ **Planet & City** | **Civic** ðŸ›ï¸ | Civic Responsibility | Public transport etiquette, litter-free habits, queue discipline |
-| ðŸš€ **Future & Enterprise** | **Coin** ðŸª™ | Practical Money | Needs vs. wants, minor bank accounts, UPI PIN rules, compounding |
-| ðŸš€ **Future & Enterprise** | **Forge** ðŸ”¨ | Student Entrepreneurship | Problem finding, 60-second elevator pitches, team collaboration |
-| ðŸš€ **Future & Enterprise** | **Compass** ðŸ§­ | Careers & Higher Ed | Stream selection (Science, Commerce, Arts), entrance exams, trades |
-| ðŸš€ **Future & Enterprise** | **Cipher** ðŸ” | Cyber Safety | Phishing, fake OTP scams, password managers, cyberbullying |
-| ðŸš€ **Future & Enterprise** | **Basil** ðŸ¥— | Food & Nutrition | Reading ultra-processed food labels, balanced plates, hydration |
-| ðŸ§  **Mind & Wellbeing** | **Echo** ðŸ’­ | Mental Health & Feelings | Exam stress, naming emotions, saying no, Tele-MANAS (14416) |
-| ðŸ§  **Mind & Wellbeing** | **Pixel** ðŸ“± | Digital Screen Balance | Gaming curfews, notification diets, doom-scrolling, 20-20-20 rule |
-| ðŸ§  **Mind & Wellbeing** | **Saathi** ðŸ¤ | Empathy & Anti-Bullying | Disability allyship, sign language basics, upstander courage |
+| 🛡️ **Life & Safety** | **Ember** 🔥 | Fire Safety | Kitchen fires, high-rise evacuation, electrical shorts, extinguishers |
+| 🛡️ **Life & Safety** | **Signal** 🚦 | Road Safety | Pedestrian crossings, helmet physics, cycling, bus emergencies |
+| 🛡️ **Life & Safety** | **Pulse** 🩺 | First Aid | Minor burns, deep cuts, nosebleeds, heat exhaustion, choking |
+| 🛡️ **Life & Safety** | **Storm** 🌪️ | Disaster Preparedness | Urban floods, earthquakes, cyclones, emergency family go-bags |
+| 🛡️ **Life & Safety** | **Guardian** 🛡️ | Personal Safety | Safe touch, body boundaries, transit alertness, POCSO & 1098 |
+| 🛡️ **Life & Safety** | **Nyaya** ⚖️ | Everyday Rights & Law | Consumer rights, police interactions, FIR basics, legal aid |
+| 🛡️ **Life & Safety** | **Stride** 🏃 | Fitness & Ergonomics | Schoolbag load limits, spine health, running mechanics, hydration |
+| 🛡️ **Life & Safety** | **Care** 🧼 | Hygiene & Biology | Dental hygiene, puberty changes, skin care, infection prevention |
+| 🌍 **Planet & City** | **Terra** 🌱 | Climate & Environment | Live urban heat & AQI alerts, water conservation, tree care |
+| 🌍 **Planet & City** | **Paws** 🐾 | Animal Welfare | Community dog coexistence, rabies safety, urban bird rescue |
+| 🌍 **Planet & City** | **Volt** ⚡ | Clean Energy | Solar rooftop basics, EV safety, phantom power, e-waste |
+| 🌍 **Planet & City** | **Civic** 🏛️ | Civic Responsibility | Public transport etiquette, litter-free habits, queue discipline |
+| 💼 **Future & Enterprise** | **Coin** 🪙 | Practical Money | Needs vs. wants, minor bank accounts, UPI PIN rules, compounding |
+| 💼 **Future & Enterprise** | **Forge** 🔨 | Student Entrepreneurship | Problem finding, 60-second elevator pitches, team collaboration |
+| 💼 **Future & Enterprise** | **Compass** 🧭 | Careers & Higher Ed | Stream selection (Science, Commerce, Arts), entrance exams, trades |
+| 💼 **Future & Enterprise** | **Cipher** 🔐 | Cyber Safety | Phishing, fake OTP scams, password managers, cyberbullying |
+| 💼 **Future & Enterprise** | **Basil** 🥗 | Food & Nutrition | Reading ultra-processed food labels, balanced plates, hydration |
+| 🧠 **Mind & Wellbeing** | **Echo** 💭 | Mental Health & Feelings | Exam stress, naming emotions, saying no, Tele-MANAS (14416) |
+| 🧠 **Mind & Wellbeing** | **Pixel** 📱 | Digital Screen Balance | Gaming curfews, notification diets, doom-scrolling, 20-20-20 rule |
+| 🧠 **Mind & Wellbeing** | **Saathi** 🤝 | Empathy & Anti-Bullying | Disability allyship, sign language basics, upstander courage |
 
 ---
 
-## ðŸ—ï¸ Architecture & Technology Stack
+## 🏗️ Architecture & Technology Stack
 
 ```mermaid
 graph TD
@@ -98,21 +98,22 @@ graph TD
 ```
 
 ### Technical Highlights
+
 1. **Google Agent Development Kit (ADK):**
    - Configured in `backend/app/agents/` using declarative schemas.
    - **Two-Agent Publishing Pipeline:** The domain writer agent generates interactive scenarios, but posts can **never** be published without explicit approval from a strict `safety_reviewer` agent that verifies factual alignment against vetted fact cards.
    - **`WotnowGuardrails` Plugin:** Evaluates prompts `before_model` (PII redaction, prompt injection defense, token limits) and outputs `after_model` (blocking medical dosages, clinical diagnoses, external URLs).
 2. **Keyless Google Cloud Architecture:**
    - Deployed on **Google Cloud Run** in `asia-south1` with continuous scaling and automated revision rollouts.
-   - Seamless Vertex AI integration using Cloud Run service account Workload Identity â€” **zero hardcoded credentials or API keys in code or configuration**.
+   - Seamless Vertex AI integration using Cloud Run service account Workload Identity — **zero hardcoded credentials or API keys in code or configuration**.
    - Cloud Firestore backend with caching layers (`FEED_CACHE_TTL_S`) to maximize throughput and minimize cloud costs.
 3. **Child Safety by Design (COPPA Conscious):**
    - Parents sign in via Google OAuth.
-   - Children do **not** have email addresses or passwords â€” they use privacy-preserving nicknames and avatars within their family group.
+   - Children do **not** have email addresses or passwords — they use privacy-preserving nicknames and avatars within their family group.
 
 ---
 
-## ðŸš€ Running Locally
+## 💻 Running Locally
 
 ### Prerequisites
 - Python 3.11+
@@ -149,7 +150,7 @@ Open **[http://localhost:5173](http://localhost:5173)** in your browser!
 
 ---
 
-## â˜ï¸ Deploying to Google Cloud Run
+## 🚀 Deploying to Google Cloud Run
 
 wotnow includes zero-friction deployment scripts in the `deploy/` directory:
 
@@ -168,13 +169,13 @@ Cloud Run automatically builds the unified container (Vite bundle + FastAPI back
 
 ---
 
-## ðŸ“– Development History & Story
+## 📖 Development History & Story
 
 For judges and reviewers interested in the complete 8-stage evolution, challenges encountered, and technical breakthroughs, see our [**DEVELOPMENT_LOG.md**](DEVELOPMENT_LOG.md).
 
 ---
 
-## ðŸ“œ License & Disclaimers
+## 📄 License & Disclaimers
 
 - Licensed under the **[Apache 2.0 License](LICENSE)**.
 - **Disclaimer:** wotnow is an educational platform. Content is drafted by AI and grounded in safety frameworks. It does not replace certified professional emergency or clinical services. In emergencies, always call **112** (or your local emergency services).
