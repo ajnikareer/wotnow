@@ -2,12 +2,13 @@
 from __future__ import annotations
 
 import random
+import time
 from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 
-from ..auth import get_uid
+from ..auth import get_optional_uid, get_uid
 from ..config import get_settings
 from ..engine import cards as C
 from ..engine.generator import POSTS
@@ -150,10 +151,49 @@ def _crowd_scores(quiz_id: str) -> list[int]:
 
 
 @router.get("/live/next")
-async def live_next():
+async def live_next(uid: Optional[str] = Depends(get_optional_uid)):
     q = await current_quiz()
-    real = len(get_db().query(f"{QUIZZES}/{q['id']}/results"))
-    return {k: q[k] for k in ("id", "agentId", "title", "questions")} | {"startsIn": 5, "players": real + get_settings().DEMO_CROWD}
+    quiz_id = q["id"]
+    db = get_db()
+    now = time.time()
+
+    # Track presence if user has an active identity (session token or demo student)
+    if uid:
+        try:
+            u = users.get_user(uid)
+            nick = u.get("nickname") or "Learner"
+        except Exception:
+            nick = "Learner"
+        db.put(f"{QUIZZES}/{quiz_id}/presence", uid, {
+            "id": uid,
+            "nickname": nick,
+            "updatedAt": now,
+        })
+
+    # Find all presences active in the last 10 minutes (600 seconds)
+    presences = db.query(f"{QUIZZES}/{quiz_id}/presence")
+    active_presences = [p for p in presences if p.get("updatedAt", 0) > (now - 600)]
+
+    # Also load completed results
+    results = db.query(f"{QUIZZES}/{quiz_id}/results")
+
+    # Build unique active players dictionary
+    active_map: dict[str, str] = {}
+    for p in active_presences:
+        if p.get("id"):
+            active_map[p["id"]] = p.get("nickname") or "Learner"
+    for r in results:
+        if r.get("id"):
+            active_map[r["id"]] = r.get("nickname") or "Learner"
+
+    active_players = list(active_map.values())
+    total_players = max(len(active_map), 1 if uid else 0) + get_settings().DEMO_CROWD
+
+    return {k: q[k] for k in ("id", "agentId", "title", "questions")} | {
+        "startsIn": 5,
+        "players": total_players,
+        "activePlayers": active_players,
+    }
 
 
 @router.post("/live/submit")
@@ -163,17 +203,34 @@ async def live_submit(body: QuizIn, uid: str = Depends(get_uid)):
     if body.quizId and body.quizId != q["id"]:
         q = get_db().get(QUIZZES, body.quizId) or q
     users.enforce_limits(u)
-    score = max(0, min(100, int(body.score)))
+    score = max(0, min(500, int(body.score)))
     db = get_db()
     coll = f"{QUIZZES}/{q['id']}/results"
-    first = db.get(coll, uid) is None
-    db.put(coll, uid, {"id": uid, "score": score, "nickname": u["nickname"]})
-    others = [r["score"] for r in db.query(coll) if r["id"] != uid] + _crowd_scores(q["id"])
+    
+    prev = db.get(coll, uid)
+    first = prev is None
+    prev_score = prev.get("score", 0) if prev else 0
+    new_best = max(score, prev_score)
+    db.put(coll, uid, {"id": uid, "score": new_best, "nickname": u["nickname"]})
+    
+    # Ensure presence is also kept active
+    db.put(f"{QUIZZES}/{q['id']}/presence", uid, {"id": uid, "nickname": u["nickname"], "updatedAt": time.time()})
+    
+    all_results = db.query(coll)
+    others = [r["score"] for r in all_results if r["id"] != uid] + _crowd_scores(q["id"])
     rank = 1 + sum(1 for s in others if s > score)
-    xp = score if first else 0
-    u.setdefault("counts", {})["quizBest"] = max(u["counts"].get("quizBest", 0), score)
+    xp = score if first else max(0, score - prev_score)
+    u.setdefault("counts", {})["quizBest"] = max(u["counts"].get("quizBest", 0), new_best)
     users.record(u, "quiz", xp, extra={"postTitle": q["title"], "agentId": q["agentId"]})
-    return {"rank": rank, "players": len(others) + 1, "xpAwarded": xp}
+    
+    # Accurate total players (all who submitted + active presence)
+    presences = db.query(f"{QUIZZES}/{q['id']}/presence")
+    now = time.time()
+    active_presences = [p for p in presences if p.get("updatedAt", 0) > (now - 600)]
+    all_players = set([r.get("id") for r in all_results if r.get("id")] + [p.get("id") for p in active_presences if p.get("id")])
+    total_players = max(len(all_players), len(others) + 1)
+    
+    return {"rank": rank, "players": total_players, "xpAwarded": xp}
 
 
 # ---------- parent ----------

@@ -69,6 +69,14 @@ async def get_uid(authorization: Optional[str] = Header(default=None), x_demo_us
     raise HTTPException(401, "Sign in required")
 
 
+async def get_optional_uid(authorization: Optional[str] = Header(default=None), x_demo_user: Optional[str] = Header(default=None),
+                           x_child: Optional[str] = Header(default=None)) -> Optional[str]:
+    try:
+        return await get_uid(authorization, x_demo_user, x_child)
+    except HTTPException:
+        return None
+
+
 async def get_account_required(authorization: Optional[str] = Header(default=None)) -> dict:
     acc = session_account(authorization)
     if acc is None:

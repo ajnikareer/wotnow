@@ -98,7 +98,7 @@ export interface LeaderRow { rank: number; nickname: string; avatar: string; xp:
 export interface Leaderboard { scope: 'global' | 'country' | 'city'; rows: LeaderRow[]; me: LeaderRow; teams?: LeaderRow[]; myCity?: string; myCountry?: string; totalLearners?: number }
 
 export interface QuizQuestion { id: string; text: string; options: Option[]; correct: string; explanation: string }
-export interface LiveQuiz { id: string; agentId: string; title: string; startsIn: number; players: number; questions: QuizQuestion[] }
+export interface LiveQuiz { id: string; agentId: string; title: string; startsIn: number; players: number; activePlayers?: string[]; questions: QuizQuestion[] }
 
 export interface ParentSummary {
   child: Pick<Me, 'nickname' | 'avatar' | 'grade' | 'streak' | 'xp' | 'levelName' | 'skills'>
