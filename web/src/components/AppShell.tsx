@@ -17,15 +17,14 @@ const NAV = [
 function SideNav() {
   const { path } = useRoute()
   const { me, role } = useSession()
-  const following = AGENTS.filter(a => me?.follows.includes(a.id)).slice(0, 6)
   return (
     <aside className="hidden lg:flex flex-col gap-0.5 sticky top-0 h-screen overflow-y-auto no-scrollbar py-3.5 px-2.5 border-r border-line w-[200px] lg:w-[208px] shrink-0">
       <Link to="/feed" className="px-2 pb-3 block group" aria-label="wotnow home">
         <div className="flex items-center gap-1.5">
-          <Mascot mood="think" size={28} className="shrink-0 transition transform group-hover:scale-105" />
-          <Logo className="h-7 transition transform group-hover:scale-[1.02]" />
+          <Mascot mood="think" size={24} className="shrink-0 transition transform group-hover:scale-105" />
+          <Logo className="h-5 transition transform group-hover:scale-[1.02]" />
         </div>
-        <div className="text-[9.5px] font-extrabold uppercase tracking-widest text-ink/80 dark:text-ink/90 pl-1 mt-0.5">
+        <div className="text-[8.5px] font-black uppercase tracking-[0.22em] bg-gradient-to-r from-brand-violet via-brand-cyan to-brand-mint bg-clip-text text-transparent pl-0.5 mt-0.5">
           Know What Now
         </div>
       </Link>
@@ -48,12 +47,6 @@ function SideNav() {
           <Icon name="family" className="w-[18px] h-[18px]" />Parent view
         </Link>
       )}
-      <div className="text-[10px] uppercase tracking-[.1em] text-faint font-bold px-2.5 pt-3 pb-1">Following</div>
-      {following.map(a => (
-        <Link key={a.id} to={`/experts/${a.id}`} className="flex items-center gap-2.5 px-2.5 py-1 rounded-lg text-xs text-muted hover:text-ink hover:bg-surface2/60">
-          <AgentAvatar agent={a} size={22} />{a.name}
-        </Link>
-      ))}
       <div className="mt-auto pt-2 space-y-2">
         <ThemeToggle compact />
         {me && (
@@ -105,8 +98,8 @@ function MobileTop() {
     <header className="lg:hidden sticky top-0 z-30 bg-bg/80 backdrop-blur-xl border-b border-line">
       <div className="flex items-center gap-2 px-4 h-14">
         <Link to="/feed" aria-label="wotnow home" className="flex items-center gap-1.5">
-          <Mascot mood="think" size={26} className="shrink-0" />
-          <Logo className="h-7" />
+          <Mascot mood="think" size={24} className="shrink-0" />
+          <Logo className="h-5" />
         </Link>
         <div className="ml-auto flex items-center gap-1.5">
           <Link to="/about" className="chip text-xs font-semibold text-muted hover:text-ink flex items-center gap-1">

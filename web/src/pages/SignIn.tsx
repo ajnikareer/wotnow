@@ -32,7 +32,7 @@ export function SignInView({ cfg, err, busy, expired, email, name, setEmail, set
   const nothing = !!cfg && !cfg.googleEnabled && !cfg.devLogin
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex items-center px-5 py-4 max-w-3xl w-full mx-auto"><a href="#/"><Logo className="h-9" /></a><div className="ml-auto"><ThemeToggle compact /></div></header>
+      <header className="flex items-center px-5 py-4 max-w-3xl w-full mx-auto"><a href="#/"><Logo className="h-6.5" /></a><div className="ml-auto"><ThemeToggle compact /></div></header>
       <div className="flex-1 grid place-items-center px-5 pb-16">
         <div className="card p-8 md:p-10 max-w-md w-full text-center animate-rise">
           <Mascot mood="look" size={84} className="mx-auto" />

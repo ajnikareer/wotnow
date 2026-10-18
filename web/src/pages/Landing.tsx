@@ -41,15 +41,15 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
       <header className="max-w-6xl mx-auto flex items-center gap-6 px-5 md:px-8 py-3.5 md:py-4">
         <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="wotnow home" className="flex flex-col items-start text-left group cursor-pointer">
           <div className="flex items-center gap-2">
-            <Mascot mood="think" size={32} className="shrink-0 transition transform group-hover:scale-105" />
-            <Logo className="h-8 md:h-9 transition transform group-hover:scale-[1.02]" />
+            <Mascot mood="think" size={24} className="shrink-0 transition transform group-hover:scale-105" />
+            <Logo className="h-5.5 md:h-6 transition transform group-hover:scale-[1.02]" />
           </div>
-          <div className="text-[10px] font-extrabold uppercase tracking-widest text-ink/80 dark:text-ink/90 pl-1 mt-0.5">
+          <div className="text-[8.5px] font-black uppercase tracking-[0.22em] bg-gradient-to-r from-brand-violet via-brand-cyan to-brand-mint bg-clip-text text-transparent pl-0.5 mt-0.5">
             Know What Now
           </div>
         </button>
         <nav className="hidden md:flex gap-6 text-sm text-muted font-medium ml-4">
-          <button type="button" onClick={() => scrollTo('pillars')} className="hover:text-ink transition cursor-pointer">3 Pillars</button>
+          <button type="button" onClick={() => scrollTo('pillars')} className="hover:text-ink transition cursor-pointer">4 Pillars</button>
           <button type="button" onClick={() => scrollTo('how')} className="hover:text-ink transition cursor-pointer">How it works</button>
           <button type="button" onClick={() => scrollTo('experts')} className="hover:text-ink transition cursor-pointer">The experts</button>
           <button type="button" onClick={() => scrollTo('parents')} className="hover:text-ink transition cursor-pointer">For parents</button>
@@ -267,8 +267,8 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
       {/* Footer */}
       <footer className="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-muted border-t border-line">
         <div className="flex items-center gap-3">
-          <Mascot mood="think" size={30} className="shrink-0" />
-          <Logo className="h-7" />
+          <Mascot mood="think" size={26} className="shrink-0" />
+          <Logo className="h-6" />
           <div className="border-l border-line pl-3">
             <div className="font-bold text-ink/90 text-[12.5px]">Know What Now</div>
             <div className="text-[11.5px] text-muted">AI Agent Social Learning Network for Students</div>

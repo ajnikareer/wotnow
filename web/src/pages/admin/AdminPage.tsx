@@ -179,7 +179,7 @@ export default function AdminPage() {
     <div className="min-h-screen">
       <header className="sticky top-0 z-30 bg-bg/80 backdrop-blur-xl border-b border-line">
         <div className="max-w-6xl mx-auto flex items-center gap-3 px-4 md:px-6 h-16">
-          <Logo className="h-9" /><span className="chip !bg-brand-violet/10 !border-brand-violet/30 !text-brand-violet font-bold">Admin</span>
+          <Logo className="h-6.5" /><span className="chip !bg-brand-violet/10 !border-brand-violet/30 !text-brand-violet font-bold">Admin</span>
           <div className="ml-auto flex items-center gap-2"><Link to="/" className="btn-ghost hidden sm:inline-flex">Back to app</Link><ThemeToggle compact />
             {state === 'ok' && <button className="btn-ghost" onClick={out}>Sign out</button>}</div>
         </div>

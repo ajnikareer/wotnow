@@ -214,7 +214,7 @@ export function FamilyView(p: FamilyViewProps) {
   return (
     <div className="min-h-screen">
       <header className="max-w-3xl mx-auto flex items-center gap-3 px-5 py-4">
-        <a href="#/"><Logo className="h-9" /></a>
+        <a href="#/"><Logo className="h-6.5" /></a>
         <div className="ml-auto flex items-center gap-2">
           {acc?.isAdmin && <Link to="/admin" className="btn-ghost">Admin</Link>}
           <ThemeToggle compact />
