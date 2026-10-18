@@ -3,51 +3,50 @@ import type { Mood } from '../lib/types'
 
 const GRAD = (id: string) => (
   <linearGradient id={id} gradientUnits="userSpaceOnUse" x1="0" y1="50" x2="420" y2="75">
-    <stop offset="0%" stopColor="#0B2559" />
-    <stop offset="50%" stopColor="#0052FF" />
-    <stop offset="100%" stopColor="#00F0FF" />
+    <stop offset="0%" stopColor="#EA4335" />
+    <stop offset="45%" stopColor="#F97316" />
+    <stop offset="100%" stopColor="#FBBF24" />
   </linearGradient>
 )
 const GRAD_BG = (id: string) => (
   <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stopColor="#0052FF" stopOpacity="0.16" />
-    <stop offset=".55" stopColor="#0066FF" stopOpacity="0.10" />
-    <stop offset="1" stopColor="#00F0FF" stopOpacity="0.08" />
+    <stop offset="0%" stopColor="#EA4335" stopOpacity="0.18" />
+    <stop offset=".55" stopColor="#F97316" stopOpacity="0.12" />
+    <stop offset="1" stopColor="#FBBF24" stopOpacity="0.08" />
   </linearGradient>
 )
-const BRAND_COLOR = '#0052FF'
+const BRAND_COLOR = '#F97316'
 const S = { fill: 'none', stroke: BRAND_COLOR, strokeWidth: 18, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
 
 function LogoEye({ cx }: { cx: number }) {
   return (
     <g>
-      <circle cx={cx} cy={75} r={28} fill="#fff" stroke="#0052FF" strokeWidth={6.5} />
-      <circle cx={cx + 7} cy={67} r={11.5} fill="#0A192F" />
-      <circle cx={cx + 12} cy={63} r={3.5} fill="#00F0FF" />
+      <circle cx={cx} cy={75} r={28} fill="#fff" stroke="#EA580C" strokeWidth={6.5} />
+      <circle cx={cx + 7} cy={67} r={11.5} fill="#1C1917" />
+      <circle cx={cx + 12} cy={63} r={3.5} fill="#F97316" />
       <circle cx={cx + 5} cy={70} r={2} fill="#fff" />
     </g>
   )
 }
 
-/** Primary logo: clean dark blue neon wotnow lettering matching the mascot emoji. */
+/** Primary logo: clean sunset coral/amber wotnow lettering matching the mascot emoji. */
 export function Logo({ className = 'h-5.5' }: { className?: string }) {
   const id = useId().replace(/:/g, '')
   return (
-    <svg viewBox="-10 20 440 90" className={`${className} filter drop-shadow-[0_0_12px_rgba(0,102,255,0.5)] drop-shadow-[0_2px_4px_rgba(11,37,89,0.35)]`} role="img" aria-label="wotnow">
+    <svg viewBox="-10 20 440 90" className={`${className} filter drop-shadow-[0_2px_10px_rgba(249,115,22,0.38)]`} role="img" aria-label="wotnow">
       <defs>
-        <linearGradient id={`neon-blue-${id}`} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#0B2559" />
-          <stop offset="35%" stopColor="#0052FF" />
-          <stop offset="70%" stopColor="#0066FF" />
-          <stop offset="100%" stopColor="#00F0FF" />
+        <linearGradient id={`sunset-${id}`} x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EA4335" />
+          <stop offset="45%" stopColor="#F97316" />
+          <stop offset="100%" stopColor="#FBBF24" />
         </linearGradient>
       </defs>
-      <path d="M0 50 L15 100 L29 64 L43 100 L58 50" fill="none" stroke={`url(#neon-blue-${id})`} strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M0 50 L15 100 L29 64 L43 100 L58 50" fill="none" stroke={`url(#sunset-${id})`} strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" />
       <LogoEye cx={109} />
-      <path d="M174 30 V86 Q174 100 189 100 M160 52 H190" fill="none" stroke={`url(#neon-blue-${id})`} strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M216 100 V50 M216 74 Q216 50 238 50 Q260 50 260 74 V100" fill="none" stroke={`url(#neon-blue-${id})`} strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M174 30 V86 Q174 100 189 100 M160 52 H190" fill="none" stroke={`url(#sunset-${id})`} strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M216 100 V50 M216 74 Q216 50 238 50 Q260 50 260 74 V100" fill="none" stroke={`url(#sunset-${id})`} strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" />
       <LogoEye cx={311} />
-      <path d="M362 50 L377 100 L391 64 L405 100 L420 50" fill="none" stroke={`url(#neon-blue-${id})`} strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M362 50 L377 100 L391 64 L405 100 L420 50" fill="none" stroke={`url(#sunset-${id})`} strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
