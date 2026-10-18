@@ -113,9 +113,9 @@ export default function Feed() {
   return (
     <AppShell>
       <div className="max-w-[640px] mx-auto">
-        {/* Feed Tabs: Today and Learned only */}
+        {/* Feed Tabs: New Feeds and Learned */}
         <div className="flex items-center gap-2 mb-4">
-          <div className="flex items-center gap-1.5" role="tablist">
+          <div className="flex items-center gap-2" role="tablist">
             {TABS.map(([t, l]) => {
               const active = tab === t
               return (
@@ -124,7 +124,7 @@ export default function Feed() {
                   role="tab"
                   aria-selected={active}
                   onClick={() => choose(t)}
-                  className={`px-4 py-2 rounded-full text-sm font-bold transition inline-flex items-center gap-1.5 border ${
+                  className={`px-4 py-2 rounded-full text-sm font-bold transition inline-flex items-center gap-1.5 border whitespace-nowrap shrink-0 ${
                     active
                       ? 'border-brand-violet/60 bg-brand-violet/10 text-ink shadow-[0_0_12px_rgba(139,92,246,0.2)]'
                       : 'border-transparent text-muted hover:text-ink hover:bg-surface2/60'
@@ -147,10 +147,6 @@ export default function Feed() {
               )
             })}
           </div>
-          <span className="ml-auto chip shrink-0 font-medium">
-            <Icon name="pin" className="w-3.5 h-3.5 text-brand-violet" />
-            {me?.city ?? 'Pune'}
-          </span>
         </div>
 
         <NewPostsBanner count={fresh} onClick={refresh} />
