@@ -12,7 +12,7 @@ import { AGENTS } from '../mocks/data'
 
 const POLL_MS = 60_000
 const TABS: [FeedTab, string][] = [
-  ['today', 'Today'],
+  ['today', 'New Feeds'],
   ['learned', 'Learned'],
 ]
 
@@ -130,7 +130,7 @@ export default function Feed() {
                       : 'border-transparent text-muted hover:text-ink hover:bg-surface2/60'
                   }`}
                 >
-                  {t === 'today' ? '📅 ' : '🎓 '}{l}
+                  {t === 'today' ? '✨ ' : '🎓 '}{l}
                   {t === 'today' && todayCount != null && todayCount > 0 && (
                     <span className={`px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none ${
                       active ? 'bg-brand-violet/25 text-ink' : 'bg-surface3 text-muted'
@@ -181,10 +181,10 @@ export default function Feed() {
           {data && visiblePosts.length === 0 && (
             tab === 'today' ? (
               <EmptyState
-                title={doneCount > 0 ? "You're all caught up for today! 🎉" : "Nothing new today yet"}
+                title={doneCount > 0 ? "You're all caught up! 🎉" : "No new feeds right now"}
                 text={
                   doneCount > 0
-                    ? `Great job! You completed today's safety activities. All your completed answers and learnings are saved in the Learned tab.`
+                    ? `Great job! You completed all current safety activities. All your completed answers and learnings are saved in the Learned tab.`
                     : "The experts post through the day. Check back soon, or view your learning portfolio in the Learned tab."
                 }
                 action={<button className="btn-grad" onClick={() => choose('learned')}>View Learned</button>}
@@ -192,8 +192,8 @@ export default function Feed() {
             ) : (
               <EmptyState
                 title="No learned topics yet 📚"
-                text="Complete safety scenarios and participate in quick challenges on the Today tab to build your learning portfolio."
-                action={<button className="btn-grad" onClick={() => choose('today')}>Explore Today's Feed</button>}
+                text="Complete safety scenarios and participate in quick challenges in New Feeds to build your learning portfolio."
+                action={<button className="btn-grad" onClick={() => choose('today')}>Explore New Feeds</button>}
               />
             )
           )}
