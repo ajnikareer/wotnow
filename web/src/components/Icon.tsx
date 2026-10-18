@@ -27,6 +27,8 @@ const P: Record<string, string> = {
   info: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16v-4M12 8h.01',
   plus: 'M12 5v14M5 12h14',
   family: 'M7 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 21v-5a5 5 0 0 1 10 0v5M12 21v-4a5 5 0 0 1 10 0v4',
+  file: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6',
+  external: 'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3',
 }
 export type IconName = keyof typeof P
 export function Icon({ name, className = 'w-5 h-5', strokeWidth = 1.9 }: { name: IconName | string; className?: string; strokeWidth?: number }) {

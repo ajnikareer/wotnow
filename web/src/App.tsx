@@ -18,10 +18,11 @@ import Profile from './pages/Profile'
 import Parent from './pages/Parent'
 import LiveQuiz from './pages/LiveQuiz'
 import AdminPage from './pages/admin/AdminPage'
+import Documentation from './pages/Documentation'
 
 // Pages anyone can open. Everything else needs a signed-in family or the demo; without either, the visitor is sent to sign in.
 // ('start' is the old sign-up form: it forwards to the sign-in page.)
-const PUBLIC = new Set(['', 'start', 'signin', 'family', 'admin', 'about'])
+const PUBLIC = new Set(['', 'start', 'signin', 'family', 'admin', 'about', 'docs', 'documentation'])
 // The app pages show the account strip (who is signed in, switch child, sign out).
 const APP_PAGES = new Set(['feed', 'post', 'experts', 'leaderboard', 'me', 'parent', 'live', 'about'])
 
@@ -55,6 +56,8 @@ function pageFor(page: string, parts: string[]) {
   switch (page) {
     case '': return <Landing />
     case 'about': return <Landing isAboutPage={true} />
+    case 'docs':
+    case 'documentation': return <Documentation />
     case 'start': return <Start />
     case 'signin': return <SignIn />
     case 'family': return <Family />

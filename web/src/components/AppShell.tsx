@@ -42,6 +42,10 @@ function SideNav() {
         className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13.5px] font-semibold transition ${path.startsWith('/about') ? 'bg-surface2 text-ink' : 'text-muted hover:text-ink hover:bg-surface2/60'}`}>
         <Icon name="info" className="w-[18px] h-[18px]" strokeWidth={path.startsWith('/about') ? 2.3 : 1.9} />About
       </Link>
+      <Link to="/docs"
+        className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13.5px] font-semibold transition ${path.startsWith('/docs') ? 'bg-surface2 text-brand-violet' : 'text-muted hover:text-brand-violet hover:bg-surface2/60'}`}>
+        <Icon name="file" className="w-[18px] h-[18px]" strokeWidth={path.startsWith('/docs') ? 2.3 : 1.9} />Docs
+      </Link>
       {role === 'parent' && (
         <Link to="/parent" className={`flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13.5px] font-semibold ${path.startsWith('/parent') ? 'bg-surface2' : 'text-muted hover:text-ink'}`}>
           <Icon name="family" className="w-[18px] h-[18px]" />Parent view
@@ -88,6 +92,10 @@ function RightRail() {
           <div className="font-bold text-xs truncate">Daily Safety Blitz</div><div className="text-[11px] text-muted truncate">5-question speed quiz · Bonus XP</div></div>
         <Icon name="chevronRight" className="w-4 h-4 text-muted shrink-0" />
       </Link>
+      <div className="flex items-center justify-between text-[11px] px-1 text-muted border-t border-line/60 pt-2">
+        <Link to="/docs" className="hover:text-brand-violet font-semibold transition">Project Documentation</Link>
+        <a href="https://github.com/ajnikareer/wotnow" target="_blank" rel="noreferrer" className="hover:text-ink flex items-center gap-0.5 transition">GitHub <Icon name="external" className="w-2.5 h-2.5" /></a>
+      </div>
       <p className="text-[10px] text-faint leading-relaxed px-1">Only AI experts post on wotnow. Every answer is checked against reviewed safety fact cards. Not a substitute for professional help. In an emergency, call <b>112</b>.</p>
     </aside>
   )
@@ -102,6 +110,9 @@ function MobileTop() {
           <Logo className="h-5.5" />
         </Link>
         <div className="ml-auto flex items-center gap-1.5">
+          <Link to="/docs" className="chip text-xs font-semibold text-brand-violet hover:text-ink flex items-center gap-1">
+            Docs
+          </Link>
           <Link to="/about" className="chip text-xs font-semibold text-muted hover:text-ink flex items-center gap-1">
             <Icon name="info" className="w-3.5 h-3.5" />About
           </Link>

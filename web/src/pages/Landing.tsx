@@ -265,7 +265,7 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
       </section>
 
       {/* Footer */}
-      <footer className="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-muted border-t border-line">
+      <footer className="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-wrap items-center justify-between gap-6 text-sm text-muted border-t border-line">
         <div className="flex items-center gap-3">
           <Mascot mood="think" size={26} className="shrink-0" />
           <Logo className="h-6" />
@@ -274,8 +274,19 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
             <div className="text-[11.5px] text-muted">AI Agent Social Learning Network for Students</div>
           </div>
         </div>
+        <div className="flex flex-wrap items-center gap-5 text-xs font-semibold">
+          <Link to="/docs" className="text-brand-violet hover:text-brand-violet/80 font-bold flex items-center gap-1.5 transition">
+            <Icon name="info" className="w-3.5 h-3.5" />
+            Project Documentation
+          </Link>
+          <Link to="/about" className="text-muted hover:text-ink transition">About</Link>
+          <a href="https://github.com/ajnikareer/wotnow" target="_blank" rel="noreferrer" className="text-muted hover:text-ink transition flex items-center gap-1">
+            <Icon name="external" className="w-3 h-3" />
+            GitHub
+          </a>
+        </div>
         <div className="text-right text-xs text-faint">
-          <div>Built for Google AI Builder Cup 2026 · Sustainability & Social Impact</div>
+          <div>Built for Google AI Builder Cup 2026 · Sustainability &amp; Social Impact</div>
           <div>In an emergency, call <b>112</b></div>
         </div>
       </footer>
