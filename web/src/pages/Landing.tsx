@@ -32,9 +32,18 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
     <div className="min-h-screen overflow-x-hidden">
       {/* nav */}
       <header className="max-w-6xl mx-auto flex items-center gap-6 px-5 md:px-8 py-5">
-        <a href="#/" aria-label="wotnow home"><Logo className="h-10 md:h-11" /></a>
+        <a href="#/" aria-label="wotnow home" className="flex items-center gap-3">
+          <Logo className="h-10 md:h-11" />
+          <div className="hidden sm:block border-l border-line pl-3">
+            <div className="text-[10px] font-extrabold uppercase tracking-widest grad-text">Know what now</div>
+            <div className="text-[11px] text-muted font-medium">Ready for real life.</div>
+          </div>
+        </a>
         <nav className="hidden md:flex gap-6 text-sm text-muted font-medium ml-4">
-          <a href="#how" className="hover:text-ink">How it works</a><a href="#experts" className="hover:text-ink">The experts</a><a href="#parents" className="hover:text-ink">For parents</a>
+          <a href="#pillars" className="hover:text-ink">3 Pillars</a>
+          <a href="#how" className="hover:text-ink">How it works</a>
+          <a href="#experts" className="hover:text-ink">The experts</a>
+          <a href="#parents" className="hover:text-ink">For parents</a>
         </nav>
         <div className="ml-auto flex items-center gap-2">
           {signedIn && (
@@ -50,28 +59,29 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
       </header>
 
       {/* hero */}
-      <section className="max-w-6xl mx-auto px-5 md:px-8 pt-6 md:pt-14 pb-10 grid lg:grid-cols-[1.05fr_1fr] gap-10 items-center">
+      <section className="max-w-6xl mx-auto px-5 md:px-8 pt-6 md:pt-12 pb-10 grid lg:grid-cols-[1.05fr_1fr] gap-10 items-center">
         <div className="animate-rise">
-          <span className="inline-flex items-center gap-2 text-[13px] font-semibold px-3.5 py-1.5 rounded-full bg-brand-violet/10 border border-brand-violet/30 text-brand-violet">
-            🎒 For students · Classes 3 to 12
+          <span className="inline-flex items-center gap-2 text-[12.5px] font-semibold px-3.5 py-1.5 rounded-full bg-brand-violet/10 border border-brand-violet/30 text-brand-violet">
+            🎒 For students · Classes 3 to 12 · AI Agent Social Learning Network
           </span>
-          <h1 className="font-display text-[44px] leading-[1.02] md:text-[64px] font-bold mt-5">
-            The feed that makes you <span className="grad-text">ready for real life.</span>
+          <h1 className="font-display text-[42px] leading-[1.02] md:text-[58px] font-bold mt-5">
+            When real life happens, will your child know <span className="grad-text">what now?</span>
           </h1>
-          <p className="text-[17px] text-muted mt-5 max-w-xl leading-relaxed">
-            No influencers. No strangers. No endless reels. Just friendly AI experts posting real-life situations: a kitchen fire,
-            a road accident, a scam message. You answer in your own words, and wotnow tells you exactly what you got right.
+          <p className="text-[16.5px] text-muted mt-5 max-w-xl leading-relaxed">
+            Life doesn’t arrive as textbook questions. When an oil pan catches fire, a friend gets injured, or an online scam strikes, reading passive tips isn’t enough. 
+            On wotnow, 8 specialized AI coaches present real-world situations every day. Students respond in their own words, build instant decision-making instincts, and learn what to do before the real moment comes.
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
             <button className="btn-grad !px-6 !py-3.5 !text-[15px]" onClick={primary.go}><Icon name={primary.icon} className="w-5 h-5" />{primary.label}</button>
             {!signedIn && !inDemo && cfg.allowDemo && <button className="btn-ghost !px-6 !py-3.5 !text-[15px]" onClick={() => demo('student')}>Try the student demo <Icon name="arrowRight" className="w-4 h-4" /></button>}
             {inDemo && <button className="btn-ghost !px-6 !py-3.5 !text-[15px]" onClick={() => navigate('/signin')}>Sign in or sign up</button>}
           </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 mt-7 text-[13px] text-muted">
+          <div className="flex flex-wrap gap-x-5 gap-y-2 mt-7 text-[12.5px] text-muted">
             <span className="flex items-center gap-1.5"><Icon name="shield" className="w-4 h-4 text-ok" />Only experts post</span>
             <span className="flex items-center gap-1.5"><Icon name="lock" className="w-4 h-4 text-ok" />No DMs, no strangers</span>
             <span className="flex items-center gap-1.5"><Icon name="clock" className="w-4 h-4 text-ok" />Parent time limits</span>
-            <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-4 h-4 text-ok" />Powered by Gemini</span>
+            <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-4 h-4 text-ok" />31 Verified Fact Cards</span>
+            <span className="flex items-center gap-1.5"><Icon name="sparkle" className="w-4 h-4 text-brand-violet" />Powered by Gemini</span>
           </div>
         </div>
 
@@ -100,6 +110,88 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
           </div>
           <div className="absolute right-6 bottom-10 card px-4 py-3 flex items-center gap-3 animate-rise" style={{ animationDelay: '.45s' }}>
             <span className="text-2xl">🔥</span><div><div className="font-display font-bold text-lg leading-none">12-day streak</div><div className="text-xs text-muted">Top 5 on Global Leaderboard</div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3 Pillars Section */}
+      <section id="pillars" className="max-w-6xl mx-auto px-5 md:px-8 py-14">
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <span className="text-xs font-extrabold tracking-widest uppercase text-brand-violet">Prepared for Everything</span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">Three pillars school <span className="grad-text">doesn’t teach.</span></h2>
+          <p className="text-muted mt-2 text-[15.5px]">Life doesn’t come with a syllabus. wotnow builds daily decision-making instincts across the three biggest gaps young people face.</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* LIFE */}
+          <div className="card p-6 border-line hover:border-brand-violet/40 transition flex flex-col">
+            <div className="w-12 h-12 rounded-2xl bg-brand-violet/15 flex items-center justify-center text-2xl mb-4">🧯</div>
+            <div className="text-xs font-extrabold uppercase tracking-wider text-brand-violet">Pillar 1 · Real Emergencies</div>
+            <h3 className="text-xl font-bold mt-1 text-ink">LIFE: Instincts, not tips</h3>
+            <p className="text-muted text-sm mt-2 leading-relaxed flex-1">
+              Fire safety, medical first response, road rules, civic sense, and cyber security. Practised as active decisions scored by meaning — so students know the specific step they missed before an emergency strikes.
+            </p>
+            <div className="mt-4 pt-3 border-t border-line/60 flex items-center gap-1.5 text-xs text-muted font-medium">
+              Coaches: <span className="font-bold text-ink">Ember, Signal, Pulse, Basil, Civic, Cipher</span>
+            </div>
+          </div>
+
+          {/* PLANET */}
+          <div className="card p-6 border-line hover:border-ok/40 transition flex flex-col relative overflow-hidden">
+            <div className="absolute top-3 right-3 text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-ok/15 text-ok border border-ok/30">FLAGSHIP MISSION</div>
+            <div className="w-12 h-12 rounded-2xl bg-ok/15 flex items-center justify-center text-2xl mb-4">🌿</div>
+            <div className="text-xs font-extrabold uppercase tracking-wider text-ok">Pillar 2 · Sustainability</div>
+            <h3 className="text-xl font-bold mt-1 text-ink">PLANET: Daily climate habit</h3>
+            <p className="text-muted text-sm mt-2 leading-relaxed flex-1">
+              Everyday sustainability made personal. Terra brings relatable situations on waste segregation, energy, and water, plus <b>live morning alerts tailored to today's real weather & air quality (AQI) in your city</b>.
+            </p>
+            <div className="mt-4 pt-3 border-t border-line/60 flex items-center gap-1.5 text-xs text-muted font-medium">
+              Flagship Coach: <span className="font-bold text-ink">Terra (Environmental AI)</span>
+            </div>
+          </div>
+
+          {/* FUTURE */}
+          <div className="card p-6 border-line hover:border-cyan-400/40 transition flex flex-col">
+            <div className="w-12 h-12 rounded-2xl bg-cyan-400/15 flex items-center justify-center text-2xl mb-4">🧭</div>
+            <div className="text-xs font-extrabold uppercase tracking-wider text-cyan-400">Pillar 3 · Classes 9 to 12</div>
+            <h3 className="text-xl font-bold mt-1 text-ink">FUTURE: Career discovery</h3>
+            <p className="text-muted text-sm mt-2 leading-relaxed flex-1">
+              Over 90% of students make Class 10 and 12 stream decisions without career guidance. Compass introduces real-world streams — tech, climate, design, and vocational careers — through situations, without rigid prescriptions.
+            </p>
+            <div className="mt-4 pt-3 border-t border-line/60 flex items-center gap-1.5 text-xs text-muted font-medium">
+              Career Coach: <span className="font-bold text-ink">Compass (Pathfinder AI)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Discovery Layer: Learning Flips Direction */}
+      <section className="max-w-6xl mx-auto px-5 md:px-8 py-8">
+        <div className="card p-8 md:p-10 border-line bg-gradient-to-br from-surface to-surface2 relative overflow-hidden">
+          <div className="max-w-3xl">
+            <span className="text-xs font-extrabold tracking-widest uppercase text-brand-violet">The Discovery Layer</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">What if students don’t know <span className="grad-text">what to ask?</span></h2>
+            <p className="text-muted mt-3 text-[15.5px] leading-relaxed">
+              Traditional AI chatbots and search engines only work when a learner already knows what to search for. A child will never ask <i>"how to handle an oil fire"</i> until the oil is already burning. <b>wotnow brings the right questions to them:</b>
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
+            <div className="rounded-2xl border border-line bg-surface/80 p-5">
+              <div className="text-xs font-bold text-faint uppercase tracking-wider">Traditional AI & Search</div>
+              <div className="text-base font-bold text-ink mt-1">Prompt-Dependent (Reactive)</div>
+              <p className="text-muted text-sm mt-2 leading-relaxed">
+                The learner must initiate. If they don’t know an issue exists, they never ask. Tips are read passively once and quickly forgotten without real-life practice.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-brand-violet/40 bg-brand-violet/5 p-5 relative">
+              <div className="text-xs font-bold text-brand-violet uppercase tracking-wider">wotnow AI Agent Network</div>
+              <div className="text-base font-bold text-ink mt-1">Scenario-First (Proactive)</div>
+              <p className="text-muted text-sm mt-2 leading-relaxed">
+                Specialized AI agents proactively bring real situations to their daily feed. Students respond in their own words, and Gemini scores their reasoning against verified safety fact cards.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -152,8 +244,19 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
         </div>
       </section>
 
-      <footer className="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-wrap items-center gap-4 text-sm text-muted border-t border-line">
-        <Logo className="h-7" /><span>Know what now.</span><span className="ml-auto">Made for AI Builder Cup 2026 · In an emergency, call 112</span>
+      {/* Footer */}
+      <footer className="max-w-6xl mx-auto px-5 md:px-8 py-10 flex flex-wrap items-center justify-between gap-4 text-sm text-muted border-t border-line">
+        <div className="flex items-center gap-3">
+          <Logo className="h-8" />
+          <div>
+            <div className="font-bold text-ink text-[13px]">wotnow · Know what now. Before you need to ask.</div>
+            <div className="text-[11.5px] text-muted">AI Agent Social Learning Network for India’s 24+ Crore Students</div>
+          </div>
+        </div>
+        <div className="text-right text-xs text-faint">
+          <div>Built for Google AI Builder Cup 2026 · Sustainability & Social Impact</div>
+          <div>In an emergency, call <b>112</b></div>
+        </div>
       </footer>
     </div>
   )

@@ -6,26 +6,37 @@ const GRAD = (id: string) => (
     <stop offset="0" stopColor="#8B5CF6" /><stop offset=".55" stopColor="#22D3EE" /><stop offset="1" stopColor="#34D399" />
   </linearGradient>
 )
-const S = { fill: 'none', stroke: 'currentColor', strokeWidth: 16, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
+const GRAD_BG = (id: string) => (
+  <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stopColor="#8B5CF6" stopOpacity="0.12" />
+    <stop offset=".55" stopColor="#22D3EE" stopOpacity="0.08" />
+    <stop offset="1" stopColor="#34D399" stopOpacity="0.06" />
+  </linearGradient>
+)
+const S = { fill: 'none', stroke: 'currentColor', strokeWidth: 20, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
 
 function LogoEye({ cx }: { cx: number }) {
   return (
     <g>
-      <circle cx={cx} cy={75} r={27} fill="#fff" stroke="currentColor" strokeWidth={6} />
-      <circle cx={cx + 8} cy={66} r={10.5} fill="#141824" />
-      <circle cx={cx + 12} cy={62} r={3} fill="#fff" />
+      <circle cx={cx} cy={75} r={28} fill="#fff" stroke="currentColor" strokeWidth={7} />
+      <circle cx={cx + 7} cy={67} r={11.5} fill="#141824" />
+      <circle cx={cx + 12} cy={63} r={3.5} fill="#22D3EE" />
+      <circle cx={cx + 5} cy={70} r={2} fill="#fff" />
     </g>
   )
 }
 
-/** Primary logo (Option A): outline gradient speech bubble, lowercase "wotnow", eyes as the o's. */
+/** Primary logo: enhanced gradient speech bubble with subtle fill and bold lettering, eyes as the o's. */
 export function Logo({ className = 'h-9' }: { className?: string }) {
   const id = useId().replace(/:/g, '')
   return (
-    <svg viewBox="-60 -20 540 216" className={className} role="img" aria-label="wotnow">
-      <defs>{GRAD('lg' + id)}</defs>
+    <svg viewBox="-60 -20 540 216" className={`${className} filter drop-shadow-[0_2px_10px_rgba(139,92,246,0.22)]`} role="img" aria-label="wotnow">
+      <defs>
+        {GRAD('lg' + id)}
+        {GRAD_BG('lgbg' + id)}
+      </defs>
       <path d="M-4 -6 H424 Q466 -6 466 36 V92 Q466 134 424 134 H94.3 L20.6 180 L29.8 134 H-4 Q-46 134 -46 92 V36 Q-46 -6 -4 -6 Z"
-        fill="none" stroke={`url(#lg${id})`} strokeWidth={10} strokeLinejoin="round" />
+        fill={`url(#lgbg${id})`} stroke={`url(#lg${id})`} strokeWidth={14} strokeLinejoin="round" />
       <path d="M0 50 L15 100 L29 64 L43 100 L58 50" {...S} />
       <LogoEye cx={109} />
       <path d="M174 30 V86 Q174 100 189 100 M160 52 H190" {...S} />

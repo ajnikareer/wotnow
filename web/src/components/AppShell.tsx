@@ -20,7 +20,13 @@ function SideNav() {
   const following = AGENTS.filter(a => me?.follows.includes(a.id)).slice(0, 6)
   return (
     <aside className="hidden lg:flex flex-col gap-1 sticky top-0 h-screen py-6 px-4 border-r border-line w-[248px] shrink-0">
-      <Link to="/feed" className="px-2 pb-5" aria-label="wotnow home"><Logo className="h-11" /></Link>
+      <Link to="/feed" className="px-2 pb-5 block group" aria-label="wotnow home">
+        <Logo className="h-11 transition transform group-hover:scale-[1.02]" />
+        <div className="mt-2 pl-0.5">
+          <div className="text-[10px] font-extrabold uppercase tracking-widest grad-text">Know what now</div>
+          <div className="text-[11px] text-muted font-medium leading-tight">Ready for real life.</div>
+        </div>
+      </Link>
       {NAV.map(n => {
         const on = path.startsWith(n.to)
         return (
@@ -96,7 +102,12 @@ function MobileTop() {
   return (
     <header className="lg:hidden sticky top-0 z-30 bg-bg/80 backdrop-blur-xl border-b border-line">
       <div className="flex items-center gap-2 px-4 h-14">
-        <Link to="/feed" aria-label="wotnow home"><Logo className="h-8" /></Link>
+        <Link to="/feed" aria-label="wotnow home" className="flex items-center gap-2">
+          <Logo className="h-8" />
+          <span className="hidden sm:inline-block text-[10px] font-extrabold text-muted border-l border-line pl-2 uppercase tracking-widest grad-text">
+            Know what now
+          </span>
+        </Link>
         <div className="ml-auto flex items-center gap-1.5">
           <Link to="/about" className="chip text-xs font-semibold text-muted hover:text-ink flex items-center gap-1">
             <Icon name="info" className="w-3.5 h-3.5" />About
