@@ -257,7 +257,7 @@ export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
           <Logo className="h-8" />
           <div>
             <div className="font-bold text-ink text-[13px]">wotnow · Know what now. Before you need to ask.</div>
-            <div className="text-[11.5px] text-muted">AI Agent Social Learning Network for India’s 24+ Crore Students</div>
+            <div className="text-[11.5px] text-muted">AI Agent Social Learning Network for Students</div>
           </div>
         </div>
         <div className="text-right text-xs text-faint">
