@@ -15,10 +15,14 @@ if [[ -z "$GC" ]]; then
 fi
 [[ "$GC" == *.apps.googleusercontent.com ]] || c_warn "That doesn't look like a client ID (it should end in .apps.googleusercontent.com)"
 
-E=("AUTH_MODE=${AUTH_MODE}" "ALLOW_DEMO=${ALLOW_DEMO}" "GOOGLE_CLIENT_ID=${GC}")
-[[ -n "$AE" ]] && E+=("ADMIN_EMAILS=${AE}")
-step "Updating $SERVICE: AUTH_MODE=$AUTH_MODE  ALLOW_DEMO=$ALLOW_DEMO  admin=${AE:-(token only)}"
-gcloud run services update "$SERVICE" --region "$REGION" --update-env-vars "^;^$(IFS=';'; echo "${E[*]}")" --quiet >/dev/null
+ENV_FILE="$DEPLOY_DIR/.env.yaml"
+# Ensure GOOGLE_CLIENT_ID is set in .env.yaml
+grep -v "^GOOGLE_CLIENT_ID:" "$ENV_FILE" > "${ENV_FILE}.tmp" || true
+echo "GOOGLE_CLIENT_ID: \"${GC}\"" >> "${ENV_FILE}.tmp"
+mv "${ENV_FILE}.tmp" "$ENV_FILE"
+
+step "Updating $SERVICE: AUTH_MODE=$AUTH_MODE  ALLOW_DEMO=$ALLOW_DEMO  GOOGLE_CLIENT_ID=$GC"
+gcloud run services update "$SERVICE" --region "$REGION" --env-vars-file "$ENV_FILE" --quiet >/dev/null
 c_ok "new revision serving"
 
 sleep 3

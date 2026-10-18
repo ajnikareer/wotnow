@@ -2,6 +2,7 @@
 # Shared helpers. Sourced by every script.
 set -euo pipefail
 DEPLOY_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+[[ -d "$DEPLOY_DIR/.bin" ]] && export PATH="$DEPLOY_DIR/.bin:$PATH"
 ROOT_DIR="$(cd "$DEPLOY_DIR/.." && pwd)"
 # shellcheck disable=SC1091
 source "$DEPLOY_DIR/config.env"

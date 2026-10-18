@@ -30,7 +30,14 @@
 }
 
 @layer base {
-  html { -webkit-tap-highlight-color: transparent; }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (min-width: 1024px) {
+    html {
+      zoom: 0.9;
+    }
+  }
   body {
     @apply bg-bg text-ink font-sans antialiased;
     font-feature-settings: "ss01", "cv11";
@@ -47,7 +54,7 @@
       radial-gradient(800px 600px at 100% 0%, rgb(34 211 238 / .07), transparent 60%);
     background-attachment: fixed;
   }
-  h1, h2, h3, .font-display { @apply font-display tracking-tight; }
+  h1, h2, h3 { @apply font-display tracking-tight; }
   ::selection { background: rgb(139 92 246 / .3); }
   :focus-visible { outline: 2px solid #8B5CF6; outline-offset: 2px; border-radius: 10px; }
 }

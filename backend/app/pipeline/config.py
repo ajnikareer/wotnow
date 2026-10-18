@@ -16,15 +16,15 @@ def defaults() -> dict:
     return {
         "enabled": True,                    # master switch (also PIPELINE_ENABLED env)
         "paused": False,                    # admin pause button: stop all automatic posting
-        "posts_per_expert_per_day": 1,
-        "active_start": "08:00",            # posts are spread across this window (server timezone)
-        "active_end": "21:00",
+        "posts_per_expert_per_day": 8,
+        "active_start": "06:00",            # posts are spread across this window (server timezone)
+        "active_end": "23:00",
         "experts": {a["id"]: True for a in C.agents()},
         "formats": {f: True for f in FORMATS},
         "approve_first": False,             # True: new posts wait in the review queue ("pending")
         "reviewed_only": False,             # True: experts only use fact cards marked reviewed
-        "max_pending": 30,                  # stop generating when this many posts wait for review
-        "max_per_tick": 1,                  # at most this many posts per scheduler pass (avoids bursts)
+        "max_pending": 60,                  # stop generating when this many posts wait for review
+        "max_per_tick": 2,                  # up to 2 posts per scheduler tick
         "alerts_enabled": True, "alerts_time": "06:30",
         "quizzes_enabled": True, "quiz_times": ["12:45", "19:45"],
         "failure_backoff_min": 20,

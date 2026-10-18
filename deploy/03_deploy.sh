@@ -25,7 +25,13 @@ else
   SECRETS+=",GEMINI_API_KEY=${GEMINI_KEY_SECRET}:latest"
 fi
 is_set MAPS_KEY_SECRET && SECRETS+=",GOOGLE_MAPS_API_KEY=${MAPS_KEY_SECRET}:latest"
-ENV_VARS="$(IFS=';'; echo "${E[*]}")"
+ENV_FILE="$DEPLOY_DIR/.env.yaml"
+rm -f "$ENV_FILE"
+for item in "${E[@]}"; do
+  k="${item%%=*}"
+  v="${item#*=}"
+  printf '%s: "%s"\n' "$k" "$v" >> "$ENV_FILE"
+done
 
 [[ "$ALLOW_PUBLIC" == "true" ]] && ACCESS="--allow-unauthenticated" || ACCESS="--no-allow-unauthenticated"
 if [[ "$RUN_MODE" == "always_on" ]]; then SCALE=(--min-instances 1 --max-instances 1 --no-cpu-throttling)
@@ -40,7 +46,7 @@ gcloud run deploy "$SERVICE" \
   --region "$REGION" \
   --service-account "$RUNTIME_SA" \
   $ACCESS \
-  --set-env-vars "^;^${ENV_VARS}" \
+  --env-vars-file "$ENV_FILE" \
   --set-secrets "$SECRETS" \
   --cpu "$CPU" --memory "$MEMORY" \
   "${SCALE[@]}" \

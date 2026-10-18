@@ -36,7 +36,7 @@ else
 fi
 chk "demo student can't be renamed" "$(code -X POST "${H[@]}" -d '{"nickname":"Hacker"}' "$URL/api/me")" "403"
 chk "demo student can't be deleted" "$(code -X DELETE "${H[@]}" "$URL/api/me")" "403"
-chk "sign-out-everywhere needs a session" "$(code -X POST "$URL/api/auth/logout-all")" "401"
+chk "sign-out-everywhere needs a session" "$(code -X POST -d '' "$URL/api/auth/logout-all")" "401"
 
 step "The student feed"
 FEED="$(curl -s "${H[@]}" "$URL/api/feed")"
@@ -54,9 +54,9 @@ step "Admin console API + content pipeline"
 OV="$(curl -s "${A[@]}" "$URL/api/admin/overview")"
 chk "admin overview (token)" "$OV" '"pipeline"'
 echo "  ℹ $(echo "$OV" | py "'posts: '+str(d['posts']['byStatus'])+' · pipeline: '+('paused' if d['pipeline']['paused'] else 'running' if d['pipeline']['enabled'] else 'disabled')+' · last tick: '+str(d['pipeline']['lastTickAt'])")"
-TK="$(curl -s -X POST -H "X-Jobs-Token: $TOKEN" "$URL/jobs/tick")"
+TK="$(curl -s -X POST -H "X-Jobs-Token: $TOKEN" -d '' "$URL/jobs/tick")"
 chk "scheduler tick runs" "$TK" '"id"'
-PV="$(curl -s -X POST -H "X-Jobs-Token: $TOKEN" "$URL/jobs/preview?agent=ember&kind=scenario")"
+PV="$(curl -s -X POST -H "X-Jobs-Token: $TOKEN" -d '' "$URL/jobs/preview?agent=ember&kind=scenario")"
 chk "content studio preview" "$PV" '"ok":true'
 echo "  ℹ source=$(echo "$PV" | py "d['post']['source']")  dedupe=$(echo "$PV" | py "d['post']['quality']['dedupe']")   (want gemini / embedding)"
 echo "  ℹ title: $(echo "$PV" | py "d['post']['title']")"
@@ -67,7 +67,7 @@ step "Firestore feed index"
 gcloud firestore indexes composite list --format="table(name.basename(),state)" 2>/dev/null | head -5
 
 step "Security"
-chk "jobs reject missing token"   "$(code -X POST "$URL/jobs/tick")" "403"
+chk "jobs reject missing token"   "$(code -X POST -d '' "$URL/jobs/tick")" "403"
 chk "admin rejects missing token" "$(code "$URL/api/admin/overview")" "403"
 HDR="$(curl -sI "$URL/api/health" | tr -d '\r' | tr 'A-Z' 'a-z')"
 chk "nosniff header"              "$HDR" "x-content-type-options: nosniff"

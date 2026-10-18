@@ -8,6 +8,7 @@ import { useToast } from '../lib/toast'
 import { useSession } from '../lib/session'
 import { AgentAvatar, Verified, agentOf } from './ui'
 import { Icon } from './Icon'
+import type { PointsModalData } from './PointsModal'
 import '../styles/neon.css'
 
 const TYPE_LABEL: Record<Post['type'], string> = {
@@ -79,11 +80,11 @@ function ScenarioBody({ post }: { post: Post }) {
 }
 
 /* ---------- Vote-style posts: poll / myth-fact / scam-legit ---------- */
-function useVote(post: Post, onResult?: (s: CardState) => void) {
+function useVote(post: Post, onResult?: (s: CardState) => void, onComplete?: (data: PointsModalData) => void) {
   const [res, setRes] = useState<VoteResult | null>(null)
   const [busy, setBusy] = useState(false)
   const toast = useToast()
-  const { refreshMe } = useSession()
+  const { refreshMe, me } = useSession()
   useEffect(() => { if (post.my?.choice) api.voteResult(post.id).then(setRes) }, [post.id, post.my?.choice])
   const vote = async (c: string) => {
     if (res || busy) return
@@ -91,9 +92,20 @@ function useVote(post: Post, onResult?: (s: CardState) => void) {
     try {
       const r = await api.vote(post.id, c)
       setRes(r)
-      onResult?.(r.isCorrect ? 'done' : 'retry')                    // the border changes colour straight away
-      toast(r.isCorrect ? `✅ Correct! +${r.xpAwarded} XP` : `Good try! +${r.xpAwarded} XP for answering`)
+      const correct = r.isCorrect
+      onResult?.(correct ? 'done' : 'retry')                    // the border changes colour straight away
       refreshMe()
+      if (correct) {
+        onComplete?.({
+          xp: r.xpAwarded || 10,
+          title: 'Correct answer!',
+          subtitle: r.explanation || 'Great safety instincts.',
+          streak: me?.streak,
+          totalXp: (me?.xp ?? 0) + (r.xpAwarded || 10),
+        })
+      } else {
+        toast(`Good try! +${r.xpAwarded} XP for answering`)
+      }
     } finally { setBusy(false) }
   }
   return { res, vote, busy }
@@ -107,8 +119,8 @@ function Explanation({ res }: { res: VoteResult }) {
   )
 }
 
-function PollBody({ post, onResult }: { post: Post; onResult: (s: CardState) => void }) {
-  const { res, vote, busy } = useVote(post, onResult)
+function PollBody({ post, onResult, onComplete }: { post: Post; onResult: (s: CardState) => void; onComplete?: (data: PointsModalData) => void }) {
+  const { res, vote, busy } = useVote(post, onResult, onComplete)
   return (
     <>
       <p className="mt-3 text-[15px] leading-relaxed text-ink/90">{post.body} <strong className="text-ink">{post.question}</strong></p>
@@ -137,8 +149,8 @@ function PollBody({ post, onResult }: { post: Post; onResult: (s: CardState) => 
   )
 }
 
-function BinaryBody({ post, kind, onResult }: { post: Post; kind: 'myth_fact' | 'scam_legit'; onResult: (s: CardState) => void }) {
-  const { res, vote, busy } = useVote(post, onResult)
+function BinaryBody({ post, kind, onResult, onComplete }: { post: Post; kind: 'myth_fact' | 'scam_legit'; onResult: (s: CardState) => void; onComplete?: (data: PointsModalData) => void }) {
+  const { res, vote, busy } = useVote(post, onResult, onComplete)
   const opts = kind === 'myth_fact'
     ? [{ id: 'myth', label: '❌ Myth' }, { id: 'fact', label: '✅ Fact' }]
     : [{ id: 'scam', label: '🚩 Scam' }, { id: 'legit', label: '✅ Legit' }]
@@ -175,10 +187,9 @@ function BinaryBody({ post, kind, onResult }: { post: Post; kind: 'myth_fact' | 
 }
 
 /* ---------- Local alert ---------- */
-function AlertBody({ post, onResult }: { post: Post; onResult: (s: CardState) => void }) {
+function AlertBody({ post, onResult, onComplete }: { post: Post; onResult: (s: CardState) => void; onComplete?: (data: PointsModalData) => void }) {
   const [done, setDone] = useState(!!post.my?.checkedIn)
-  const toast = useToast()
-  const { refreshMe } = useSession()
+  const { refreshMe, me } = useSession()
   return (
     <>
       <p className="mt-3 text-[15px] leading-relaxed"><strong>{post.title}.</strong> <span className="text-ink/90">{post.body}</span></p>
@@ -192,7 +203,19 @@ function AlertBody({ post, onResult }: { post: Post; onResult: (s: CardState) =>
       </div>
       <div className="flex items-center gap-3 mt-3">
         <button disabled={done} className={done ? 'btn-soft' : 'btn-ink'}
-          onClick={async () => { const r = await api.checkin(post.id); setDone(true); onResult('done'); toast(`🌱 Nice! +${r.xpAwarded} XP`); refreshMe() }}>
+          onClick={async () => {
+            const r = await api.checkin(post.id)
+            setDone(true)
+            onResult('done')
+            refreshMe()
+            onComplete?.({
+              xp: r.xpAwarded || 5,
+              title: 'Daily check-in completed!',
+              subtitle: 'You took action on today’s safety alert.',
+              streak: me?.streak,
+              totalXp: (me?.xp ?? 0) + (r.xpAwarded || 5),
+            })
+          }}>
           <Icon name="check" className="w-4 h-4" />{done ? 'You did one today' : 'I’ll do one today'}
         </button>
         <span className="text-[13px] text-muted">{post.stats.responses.toLocaleString('en-IN')} students did one</span>
@@ -201,23 +224,28 @@ function AlertBody({ post, onResult }: { post: Post; onResult: (s: CardState) =>
   )
 }
 
-export function PostCard({ post }: { post: Post }) {
+export function PostCard({ post, onComplete, className = '' }: { post: Post; onComplete?: (postId: string, p: PointsModalData) => void; className?: string }) {
   const isAlert = post.type === 'local_alert'
   // A result produced on this card (a vote, a check-in) is shown at once; the server's state takes over on the next load.
   const [local, setLocal] = useState<CardState | null>(null)
   useEffect(() => { setLocal(null) }, [post.id, (post as any).state])
   const state = stateOf(post, local)
   const label = labelOf(post, state)
+
+  const handleComplete = (data: PointsModalData) => {
+    onComplete?.(post.id, data)
+  }
+
   return (
-    <article className={`card wn-card wn-${state} relative p-4 md:p-5 animate-rise ${isAlert ? 'grad-soft' : ''}`} data-state={state}
+    <article className={`card wn-card wn-${state} relative p-4 md:p-5 animate-rise ${isAlert ? 'grad-soft' : ''} ${className}`} data-state={state}
       onDoubleClick={() => post.type === 'scenario' && navigate(`/post/${post.id}`)}>
       {label && <span key={state} className="wn-tag" aria-label={`Status: ${label}`}>{label}</span>}
       <PostHeader post={post} />
       {post.type === 'scenario' && <ScenarioBody post={post} />}
-      {post.type === 'poll' && <PollBody post={post} onResult={setLocal} />}
-      {post.type === 'myth_fact' && <BinaryBody post={post} kind="myth_fact" onResult={setLocal} />}
-      {post.type === 'scam_legit' && <BinaryBody post={post} kind="scam_legit" onResult={setLocal} />}
-      {isAlert && <AlertBody post={post} onResult={setLocal} />}
+      {post.type === 'poll' && <PollBody post={post} onResult={setLocal} onComplete={handleComplete} />}
+      {post.type === 'myth_fact' && <BinaryBody post={post} kind="myth_fact" onResult={setLocal} onComplete={handleComplete} />}
+      {post.type === 'scam_legit' && <BinaryBody post={post} kind="scam_legit" onResult={setLocal} onComplete={handleComplete} />}
+      {isAlert && <AlertBody post={post} onResult={setLocal} onComplete={handleComplete} />}
     </article>
   )
 }

@@ -171,21 +171,27 @@ export const ME: Me = {
   follows: ['ember', 'signal', 'pulse', 'basil', 'civic', 'terra', 'cipher'],
 }
 
-export const LEADERBOARDS: Record<'class' | 'school' | 'city', Leaderboard> = {
-  class: { scope: 'class', me: { rank: 4, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true },
-    rows: [{ rank: 1, nickname: 'BlueFalcon', avatar: '🦅', xp: 3120 }, { rank: 2, nickname: 'SunnyOtter', avatar: '🦦', xp: 2905 },
-      { rank: 3, nickname: 'MintyTiger', avatar: '🐯', xp: 2610 }, { rank: 4, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true },
-      { rank: 5, nickname: 'QuietPanda', avatar: '🐼', xp: 2010 }, { rank: 6, nickname: 'BraveKoala', avatar: '🐨', xp: 1880 },
-      { rank: 7, nickname: 'ZippyDolphin', avatar: '🐬', xp: 1702 }, { rank: 8, nickname: 'WiseOwl', avatar: '🦉', xp: 1545 }] },
-  school: { scope: 'school', me: { rank: 18, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true },
-    rows: [{ rank: 1, nickname: 'RocketLion', avatar: '🦁', xp: 4980, sub: 'Class 10 A' }, { rank: 2, nickname: 'BlueFalcon', avatar: '🦅', xp: 3120, sub: 'Class 8 B' },
-      { rank: 3, nickname: 'NovaCat', avatar: '🐱', xp: 3050, sub: 'Class 9 C' }, { rank: 4, nickname: 'SunnyOtter', avatar: '🦦', xp: 2905, sub: 'Class 8 B' },
-      { rank: 5, nickname: 'PixelBear', avatar: '🐻', xp: 2870, sub: 'Class 11 A' }],
-    teams: [{ rank: 1, nickname: 'Class 8 B', avatar: '🏆', xp: 18420, me: true }, { rank: 2, nickname: 'Class 10 A', avatar: '🎯', xp: 17110 },
-      { rank: 3, nickname: 'Class 6 C', avatar: '🚀', xp: 15980 }, { rank: 4, nickname: 'Class 9 B', avatar: '⭐', xp: 14205 }] },
-  city: { scope: 'city', me: { rank: 212, nickname: 'Sunrise Public School', avatar: '🏫', xp: 152400, me: true },
-    rows: [{ rank: 1, nickname: 'Green Valley School', avatar: '🏫', xp: 241200 }, { rank: 2, nickname: 'Riverside Academy', avatar: '🏫', xp: 228900 },
-      { rank: 3, nickname: 'Hilltop High', avatar: '🏫', xp: 219400 }, { rank: 4, nickname: 'Lakeview School', avatar: '🏫', xp: 198700 }] },
+export const LEADERBOARDS: Record<'global' | 'country' | 'city', Leaderboard> = {
+  global: { scope: 'global', myCity: 'Pune', myCountry: 'India', totalLearners: 5,
+    me: { rank: 1, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true, sub: 'Pune, India', city: 'Pune', country: 'India' },
+    rows: [
+      { rank: 1, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true, sub: 'Pune, India', city: 'Pune', country: 'India' },
+      { rank: 2, nickname: 'SparkRider', avatar: '⚡', xp: 1980, sub: 'Mumbai, India', city: 'Mumbai', country: 'India' },
+      { rank: 3, nickname: 'SafeNinja', avatar: '🥷', xp: 1650, sub: 'Bengaluru, India', city: 'Bengaluru', country: 'India' },
+      { rank: 4, nickname: 'CityHero', avatar: '🦸', xp: 1420, sub: 'San Francisco, United States', city: 'San Francisco', country: 'United States' },
+    ] },
+  country: { scope: 'country', myCity: 'Pune', myCountry: 'India', totalLearners: 3,
+    me: { rank: 1, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true, sub: 'Pune', city: 'Pune', country: 'India' },
+    rows: [
+      { rank: 1, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true, sub: 'Pune', city: 'Pune', country: 'India' },
+      { rank: 2, nickname: 'SparkRider', avatar: '⚡', xp: 1980, sub: 'Mumbai', city: 'Mumbai', country: 'India' },
+      { rank: 3, nickname: 'SafeNinja', avatar: '🥷', xp: 1650, sub: 'Bengaluru', city: 'Bengaluru', country: 'India' },
+    ] },
+  city: { scope: 'city', myCity: 'Pune', myCountry: 'India', totalLearners: 1,
+    me: { rank: 1, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true, sub: 'Class 8', city: 'Pune', country: 'India' },
+    rows: [
+      { rank: 1, nickname: 'CleverFox', avatar: '🦊', xp: 2340, me: true, sub: 'Class 8', city: 'Pune', country: 'India' },
+    ] },
 }
 
 export const LIVE_QUIZ: LiveQuiz = {

@@ -159,7 +159,7 @@ async def healthz():
 
 
 if INDEX.exists():
-    NO_CACHE = {"Cache-Control": "no-cache"}
+    NO_CACHE = {"Cache-Control": "no-cache, no-store, must-revalidate", "Pragma": "no-cache", "Expires": "0"}
     LONG_CACHE = {"Cache-Control": "public, max-age=31536000, immutable"}
     RESERVED = ("api/", "jobs/", "docs", "redoc", "openapi.json")
 

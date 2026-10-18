@@ -65,7 +65,7 @@ function RightRail() {
       <div className="card p-4">
         <SectionTitle>Your day</SectionTitle>
         <div className="grid grid-cols-3 gap-2">
-          {[['🔥 ' + me.streak, 'day streak'], [me.xp.toLocaleString('en-IN'), 'XP'], ['#4', 'in class']].map(([v, l]) => (
+          {[['🔥 ' + me.streak, 'day streak'], [me.xp.toLocaleString('en-IN'), 'XP'], ['Lvl ' + me.level, me.levelName || 'rank']].map(([v, l]) => (
             <div key={l} className="rounded-2xl bg-surface2 px-3 py-2.5"><div className="font-display font-bold text-xl">{v}</div><div className="text-[11.5px] text-muted">{l}</div></div>
           ))}
         </div>

@@ -126,9 +126,9 @@ async def checkin(post_id: str, uid: str = Depends(get_uid)):
 
 # ---------- leaderboard ----------
 @router.get("/leaderboard")
-async def leaderboard(scope: str = "class", uid: str = Depends(get_uid)):
-    if scope not in ("class", "school", "city"):
-        raise HTTPException(400, "scope must be class|school|city")
+async def leaderboard(scope: str = "global", uid: str = Depends(get_uid)):
+    if scope not in ("global", "country", "city", "class", "school"):
+        raise HTTPException(400, "scope must be global|country|city")
     return lb.board(users.get_user(uid), scope)
 
 

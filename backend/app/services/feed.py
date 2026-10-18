@@ -33,7 +33,7 @@ from . import clock
 
 BAND_ORDER = ("junior", "middle", "senior")
 WINDOW = 150                                   # newest live posts kept in the shared window
-DEFAULT_PINS = ("oil-fire", "scam-power", "drink")   # a scenario, a scam-or-legit and a poll for the demo
+DEFAULT_PINS = ()
 TABS = ("today", "foryou", "near", "following")
 VOTE_TYPES = ("poll", "myth_fact", "scam_legit")
 PASS_SCORE = 50                                # scenario score at which a card turns green (below it: red)
@@ -47,15 +47,12 @@ def invalidate() -> None:
 
 
 def window() -> list[dict]:
-    """Newest live posts + pinned live posts. Treat the returned dicts as read-only."""
+    """Newest live posts. Treat the returned dicts as read-only."""
     db = get_db()
     ttl = get_platform().feed_cache_ttl_s
     if ttl > 0 and _cache["db"] is db and time.time() - _cache["at"] < ttl:
         return _cache["posts"]
-    recent = db.query_ex(POSTS, {"status": "live"}, order_by="createdAt", desc=True, limit=WINDOW)
-    seen = {p["id"] for p in recent}
-    pinned = [p for p in db.query(POSTS, pinned=True) if p.get("status") == "live" and p["id"] not in seen]
-    posts = recent + pinned
+    posts = db.query_ex(POSTS, {"status": "live"}, order_by="createdAt", desc=True, limit=WINDOW)
     _cache.update(db=db, at=time.time(), posts=posts)
     return posts
 
@@ -118,20 +115,20 @@ def visible(u: dict, tab: str = "foryou", agent_id: Optional[str] = None, extra:
         posts = [p for p in posts if p["type"] == "local_alert" or p["agentId"] in ("terra", "civic")]
     elif tab == "today":
         posts = [p for p in posts if posted_today(p, today)]
-    posts.sort(key=lambda p: (is_today_alert(p, today), p.get("createdAt", "")), reverse=True)
+    posts.sort(key=lambda p: p.get("createdAt", ""), reverse=True)
     return posts
 
 
 def select(posts: list[dict], limit: int) -> list[dict]:
-    """The newest `limit` posts, plus any pinned posts that fell off the end."""
-    return posts[:limit] + [p for p in posts[limit:] if p.get("pinned")]
+    """The newest `limit` posts."""
+    return posts[:limit]
 
 
 def latest(u: dict, tab: str = "foryou", since: Optional[str] = None) -> dict:
     """Cheap 'anything new?' check for the web app: newest post time, how many are newer than `since`, and today's post count."""
     posts = visible(u, tab)
     newest = max((p.get("createdAt", "") for p in posts), default=None)
-    n = sum(1 for p in posts if since and p.get("createdAt", "") > since and not p.get("pinned"))
+    n = sum(1 for p in posts if since and p.get("createdAt", "") > since)
     today_count = len(posts) if tab == "today" else len(visible(u, "today"))
     return {"latest": newest, "newCount": n, "todayCount": today_count}
 

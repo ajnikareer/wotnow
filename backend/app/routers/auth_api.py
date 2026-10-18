@@ -30,6 +30,8 @@ class ChildIn(BaseModel):
     avatar: str = Field(default="🦊", max_length=8)
     grade: int = Field(default=8, ge=3, le=12)
     city: str = Field(default="Pune", max_length=40)
+    country: Optional[str] = Field(default="India", max_length=50)
+    follows: Optional[list[str]] = None
 
 
 class ChildPatch(BaseModel):
@@ -37,6 +39,8 @@ class ChildPatch(BaseModel):
     avatar: Optional[str] = Field(default=None, max_length=8)
     grade: Optional[int] = Field(default=None, ge=3, le=12)
     city: Optional[str] = Field(default=None, max_length=40)
+    country: Optional[str] = Field(default=None, max_length=50)
+    follows: Optional[list[str]] = None
 
 
 def _session(acc: dict) -> dict:

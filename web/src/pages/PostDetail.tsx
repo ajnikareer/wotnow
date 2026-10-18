@@ -8,6 +8,7 @@ import { api } from '../lib/api'
 import { useAsync } from '../lib/hooks'
 import { Link, useRoute } from '../lib/router'
 import { useSession } from '../lib/session'
+import { PointsModal, type PointsModalData } from '../components/PointsModal'
 import type { Evaluation, Post } from '../lib/types'
 
 const MAX = 600
@@ -65,11 +66,26 @@ export default function PostDetail() {
   const [phase, setPhase] = useState<'write' | 'thinking' | 'done'>('write')
   const [ev, setEv] = useState<Evaluation>()
   const [err, setErr] = useState<string>()
+  const [pointsModalData, setPointsModalData] = useState<PointsModalData | null>(null)
 
   const submit = async () => {
     if (text.trim().length < 5) return
     setPhase('thinking'); setErr(undefined)
-    try { const r = await api.answer(id, text.trim()); setEv(r); setPhase('done'); refreshMe() }
+    try {
+      const r = await api.answer(id, text.trim())
+      setEv(r)
+      setPhase('done')
+      refreshMe()
+      if ((r.score ?? 0) >= 50) {
+        setPointsModalData({
+          xp: r.xpAwarded || 35,
+          title: 'Scenario solved!',
+          subtitle: `Score: ${r.score}/100 · ${r.rubricSummary || 'Great real-world decision making.'}`,
+          streak: me?.streak,
+          totalXp: (me?.xp ?? 0) + (r.xpAwarded || 35),
+        })
+      }
+    }
     catch (e: any) { setErr(e.message); setPhase('write') }
   }
 
@@ -140,6 +156,7 @@ export default function PostDetail() {
           )
         })()}
       </div>
+      <PointsModal data={pointsModalData} onClose={() => setPointsModalData(null)} />
     </AppShell>
   )
 }

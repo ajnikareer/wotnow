@@ -19,7 +19,7 @@ export default function Profile() {
           <div className="flex items-center gap-4">
             <div className="rounded-full p-[3px] grad-bg"><div className="rounded-full bg-surface p-1"><UserAvatar emoji={me.avatar} size={72} /></div></div>
             <div className="min-w-0"><h1 className="text-2xl md:text-3xl font-bold truncate">{me.nickname}</h1>
-              <div className="text-sm text-muted">{me.className} · {me.city}</div></div>
+              <div className="text-sm text-muted">Class {me.grade} · {me.city}{me.country ? `, ${me.country}` : ''}</div></div>
             <div className="ml-auto text-right hidden sm:block"><div className="font-display text-3xl font-bold grad-text">Level {me.level}</div><div className="text-sm text-muted">{me.levelName}</div></div>
           </div>
           <div className="flex justify-between text-sm text-muted mt-5 mb-1.5"><span>{me.xp.toLocaleString('en-IN')} XP</span><span>{me.nextLevelXp - me.xp} XP to Level {me.level + 1}</span></div>

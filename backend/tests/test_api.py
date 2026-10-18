@@ -12,10 +12,11 @@ def test_root_and_health(client):
 
 def test_me_shape(client):
     me = client.get("/api/me", headers=H).json()
-    for k in ("id", "nickname", "avatar", "grade", "band", "city", "school", "className", "xp", "level", "levelName",
+    for k in ("id", "nickname", "avatar", "grade", "band", "city", "country", "school", "className", "xp", "level", "levelName",
               "nextLevelXp", "streak", "answers", "avgScore", "skills", "badges", "follows"):
         assert k in me, k
     assert me["nickname"] == "CleverFox" and me["level"] == 7 and me["levelName"] == "Prepared" and me["nextLevelXp"] == 3000
+    assert me["country"] == "India"
 
 
 def test_new_user_and_update(client):
@@ -108,12 +109,13 @@ def test_checkin_xp_streak(client):
 
 
 def test_leaderboards(client):
-    c = client.get("/api/leaderboard?scope=class", headers=H).json()
-    assert c["rows"][0]["nickname"] == "BlueFalcon" and c["me"]["me"] and c["me"]["nickname"] == "CleverFox"
-    s = client.get("/api/leaderboard?scope=school", headers=H).json()
-    assert s["teams"] and s["teams"][0]["nickname"] == "Class 8 B"
+    g = client.get("/api/leaderboard?scope=global", headers=H).json()
+    assert g["scope"] == "global" and g["me"]["nickname"] == "CleverFox" and g["myCountry"] == "India"
+    assert all(not r.get("nickname", "").startswith("Learner") for r in g["rows"])
+    cntry = client.get("/api/leaderboard?scope=country", headers=H).json()
+    assert cntry["scope"] == "country" and cntry["me"]["me"] and cntry["myCountry"] == "India"
     city = client.get("/api/leaderboard?scope=city", headers=H).json()
-    assert all(r["avatar"] == "🏫" for r in city["rows"]) and city["me"]["nickname"] == "Sunrise Public School"
+    assert city["scope"] == "city" and city["me"]["me"] and city["myCity"] == "Pune"
 
 
 def test_live_quiz(client):

@@ -91,7 +91,10 @@ export const mockApi = {
     return { xpAwarded: 5 }
   },
 
-  async leaderboard(scope: 'class' | 'school' | 'city'): Promise<Leaderboard> { await wait(250); return LEADERBOARDS[scope] },
+  async leaderboard(scope: 'global' | 'country' | 'city' = 'global'): Promise<Leaderboard> {
+    await wait(250)
+    return LEADERBOARDS[scope] || LEADERBOARDS.global
+  },
   async liveQuiz(): Promise<LiveQuiz> { await wait(200); return LIVE_QUIZ },
   async submitQuiz(score: number): Promise<{ rank: number; players: number; xpAwarded: number }> {
     await wait(600); const xp = score; addXp(xp)

@@ -14,7 +14,7 @@ from .security import account_id_for
 from .settings import get_platform
 
 ACC = "accounts"
-CHILD_FIELDS = ("nickname", "avatar", "grade", "city")
+CHILD_FIELDS = ("nickname", "avatar", "grade", "city", "country", "follows")
 
 
 def _now() -> str:

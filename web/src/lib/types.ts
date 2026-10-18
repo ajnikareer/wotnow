@@ -79,8 +79,9 @@ export interface Me {
   grade: number
   band: Band
   city: string
-  school: string
-  className: string
+  country?: string
+  school?: string
+  className?: string
   xp: number
   level: number
   levelName: string
@@ -93,8 +94,8 @@ export interface Me {
   follows: string[]
 }
 
-export interface LeaderRow { rank: number; nickname: string; avatar: string; xp: number; me?: boolean; sub?: string }
-export interface Leaderboard { scope: 'class' | 'school' | 'city'; rows: LeaderRow[]; me: LeaderRow; teams?: LeaderRow[] }
+export interface LeaderRow { rank: number; nickname: string; avatar: string; xp: number; me?: boolean; sub?: string; city?: string; country?: string }
+export interface Leaderboard { scope: 'global' | 'country' | 'city'; rows: LeaderRow[]; me: LeaderRow; teams?: LeaderRow[]; myCity?: string; myCountry?: string; totalLearners?: number }
 
 export interface QuizQuestion { id: string; text: string; options: Option[]; correct: string; explanation: string }
 export interface LiveQuiz { id: string; agentId: string; title: string; startsIn: number; players: number; questions: QuizQuestion[] }

@@ -12,7 +12,7 @@ from ..store.base import get_db
 from . import clock
 
 USERS = "users"
-PUBLIC = ("id", "nickname", "avatar", "grade", "band", "city", "school", "className", "xp", "level", "levelName",
+PUBLIC = ("id", "nickname", "avatar", "grade", "band", "city", "country", "school", "className", "xp", "level", "levelName",
           "nextLevelXp", "streak", "answers", "avgScore", "skills", "badges", "follows")
 ALL_DOMAINS = ["fire", "road", "firstaid", "nutrition", "civic", "environment", "digital", "careers"]
 DEMO_SCHOOL = "Sunrise Public School"   # new demo users join the seeded school so leaderboards are populated
@@ -40,7 +40,8 @@ def auto_class(grade: int) -> str:
 
 def new_user(uid: str) -> dict:
     grade = 8
-    return {"id": uid, "nickname": "NewLearner", "avatar": "🦊", "grade": grade, "band": C.band_for_grade(grade), "city": "Pune",
+    return {"id": uid, "nickname": "NewLearner", "avatar": "🦊", "grade": grade, "band": C.band_for_grade(grade),
+            "city": "Pune", "country": "India",
             "school": DEMO_SCHOOL, "className": auto_class(grade), "xp": 0, "streak": 0, "bestStreak": 0, "lastActiveDate": None,
             "answers": 0, "scoreSum": 0, "skillHistory": {}, "counts": {},
             "follows": [a["id"] for a in C.agents() if a["minGrade"] <= grade],
@@ -70,13 +71,14 @@ def skills_of(u: dict) -> dict:
 def public(u: dict) -> dict:
     lvl, name, nxt = scoring.level_for(u["xp"])
     view = dict(u)
+    view.setdefault("country", u.get("country") or "India")
     view.update(level=lvl, levelName=name, nextLevelXp=nxt, skills=skills_of(u),
                 avgScore=round(u["scoreSum"] / u["answers"]) if u.get("answers") else 0)
     view["badges"] = [{"id": b, "emoji": e, "name": n, "earned": bool(f(view | {"counts": u.get("counts", {})}))} for b, e, n, f in BADGES]
     return {k: view.get(k) for k in PUBLIC}
 
 
-EDITABLE = {"nickname", "avatar", "grade", "city", "school", "className", "follows"}
+EDITABLE = {"nickname", "avatar", "grade", "city", "country", "school", "className", "follows"}
 
 
 def update_profile(u: dict, patch: dict) -> dict:
@@ -86,6 +88,10 @@ def update_profile(u: dict, patch: dict) -> dict:
             u[k] = v
     if "nickname" in patch:
         u["nickname"] = re.sub(r"[^A-Za-z0-9]", "", str(u["nickname"]))[:16] or "Learner"
+    if "country" in patch and patch["country"]:
+        u["country"] = str(patch["country"]).strip()[:50] or "India"
+    if "city" in patch and patch["city"]:
+        u["city"] = str(patch["city"]).strip()[:40] or "Pune"
     if "grade" in patch:
         u["grade"] = max(3, min(12, int(u["grade"])))
         u["band"] = C.band_for_grade(u["grade"])

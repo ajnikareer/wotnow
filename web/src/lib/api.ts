@@ -41,7 +41,7 @@ export interface AuthConfig {
 export interface Account {
   id: string; email: string; name: string; picture: string; provider: 'google' | 'dev'; isAdmin: boolean; createdAt: string; children: Me[]; maxChildren: number
 }
-export interface NewChild { nickname: string; avatar: string; grade: number; city: string }
+export interface NewChild { nickname: string; avatar: string; grade: number; city: string; country?: string; follows?: string[] }
 export type FeedTab = 'today' | 'foryou' | 'near' | 'following'
 export interface FeedLatest { latest: string | null; newCount: number; todayCount: number }
 export interface SignedIn { token: string; account: Account }
@@ -81,7 +81,7 @@ const liveApi = {
   vote: (id: string, choice: string) => http<VoteResult>(`/posts/${id}/vote`, { method: 'POST', body: body({ choice }) }),
   voteResult: (id: string) => http<VoteResult | null>(`/posts/${id}/vote`),
   checkin: (id: string) => http<{ xpAwarded: number }>(`/posts/${id}/checkin`, { method: 'POST' }),
-  leaderboard: (scope: 'class' | 'school' | 'city') => http<Leaderboard>(`/leaderboard?scope=${scope}`),
+  leaderboard: (scope: 'global' | 'country' | 'city' = 'global') => http<Leaderboard>(`/leaderboard?scope=${scope}`),
   liveQuiz: () => http<LiveQuiz>('/live/next'),
   submitQuiz: (score: number) => http<{ rank: number; players: number; xpAwarded: number }>('/live/submit', { method: 'POST', body: body({ score }) }),
   parent: () => http<ParentSummary>('/parent/summary'),

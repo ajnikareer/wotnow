@@ -24,7 +24,7 @@ from ..engine import cards as C
 from ..engine.generator import POSTS
 from ..pipeline import config as pcfg
 from ..pipeline import scheduler
-from ..services import clock
+from ..services import clock, users
 from ..store.base import get_db
 
 router = APIRouter(prefix="/api/admin", tags=["admin"])
@@ -507,3 +507,17 @@ async def people(actor: str = Depends(require_admin)):
 @router.get("/audit")
 async def get_audit(limit: int = 100, actor: str = Depends(require_admin)):
     return {"audit": audit.recent(max(1, min(limit, 500)))}
+
+
+@router.post("/clean-seed-users")
+async def clean_seed_users(actor: str = Depends(require_admin)):
+    db = get_db()
+    all_users = db.query("users")
+    deleted = []
+    for u in all_users:
+        uid = u.get("id", "")
+        if uid.startswith("seed-") or uid.startswith("demo-") or u.get("source") == "seed":
+            users.delete_user(uid)
+            deleted.append(uid)
+    return {"deletedCount": len(deleted), "deleted": deleted}
+

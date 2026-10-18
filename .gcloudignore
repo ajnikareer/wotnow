@@ -10,3 +10,5 @@ web/.env
 backend/.env
 infra/
 *.tgz
+deploy/.bin/
+deploy/.service_url

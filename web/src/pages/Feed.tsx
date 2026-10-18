@@ -4,6 +4,7 @@ import { PostCard } from '../components/PostCard'
 import { StateLegend } from '../components/StateLegend'
 import { AgentAvatar, EmptyState, PostSkeleton } from '../components/ui'
 import { Icon } from '../components/Icon'
+import { PointsModal, type PointsModalData } from '../components/PointsModal'
 import { feedLatest, loadFeed, type FeedTab } from '../lib/api'
 import { shouldLeaveToday } from '../lib/feedTabs'
 import { useAsync } from '../lib/hooks'
@@ -34,15 +35,38 @@ export default function Feed() {
   const { data, loading, error, reload } = useAsync(() => loadFeed(tab), [tab])
   const [fresh, setFresh] = useState(0)
   const [todayCount, setTodayCount] = useState<number | null>(null)
+  const [completedIds, setCompletedIds] = useState<Set<string>>(new Set())
+  const [fadingIds, setFadingIds] = useState<Set<string>>(new Set())
+  const [pointsModalData, setPointsModalData] = useState<PointsModalData | null>(null)
+  const [showDone, setShowDone] = useState(false)
   const seen = new Set(['civic', 'cipher', 'compass'])
 
   const choose = (t: FeedTab) => { picked.current = true; setTab(t) }
 
+  // Count done items in this tab
+  const doneCount = useMemo(() => {
+    if (!data) return 0
+    return data.filter(p => p.state === 'done' || completedIds.has(p.id)).length
+  }, [data, completedIds])
+
+  // Filter out done posts unless user toggles "Show completed"
+  const visiblePosts = useMemo(() => {
+    if (!data) return []
+    if (showDone) return data
+    return data.filter(p => p.state !== 'done' && !completedIds.has(p.id))
+  }, [data, completedIds, showDone])
+
   // Nothing new today (only the city alert, or nothing at all): start on "For you" instead of an empty page.
   useEffect(() => { if (shouldLeaveToday(tab, picked.current, loading, data)) setTab('foryou') }, [tab, data, loading])
 
-  // The number on the Today tab: from the page itself when it is open, otherwise from the server.
-  useEffect(() => { if (tab === 'today' && data && !loading) setTodayCount(data.length) }, [tab, data, loading])
+  // The number on the Today tab: counts only active (not done) posts
+  useEffect(() => {
+    if (tab === 'today' && data && !loading) {
+      const activeCount = data.filter(p => p.state !== 'done' && !completedIds.has(p.id)).length
+      setTodayCount(activeCount)
+    }
+  }, [tab, data, loading, completedIds])
+
   useEffect(() => { feedLatest('today', '').then(r => { if (r) setTodayCount(r.todayCount) }).catch(() => { /* not signed in yet */ }) }, [])
 
   // The newest post time currently on screen; the poll asks the server how many are newer.
@@ -67,6 +91,22 @@ export default function Feed() {
 
   const refresh = () => { setFresh(0); reload(); window.scrollTo({ top: 0, behavior: 'smooth' }) }
 
+  const handleCardComplete = (postId: string, pdata: PointsModalData) => {
+    setPointsModalData(pdata)
+    setFadingIds(prev => new Set(prev).add(postId))
+    setTimeout(() => {
+      setCompletedIds(prev => new Set(prev).add(postId))
+      setFadingIds(prev => {
+        const next = new Set(prev)
+        next.delete(postId)
+        return next
+      })
+      if (tab === 'today') {
+        setTodayCount(c => Math.max(0, (c ?? 1) - 1))
+      }
+    }, 600)
+  }
+
   return (
     <AppShell>
       <div className="max-w-[640px] mx-auto">
@@ -76,7 +116,7 @@ export default function Feed() {
               <button key={t} role="tab" aria-selected={tab === t} onClick={() => choose(t)}
                 className={`shrink-0 px-4 py-2 rounded-full text-sm font-bold transition inline-flex items-center gap-1.5 ${tab === t ? 'bg-ink text-bg' : 'text-muted hover:text-ink'}`}>
                 {l}
-                {t === 'today' && !!todayCount && (
+                {t === 'today' && todayCount != null && todayCount > 0 && (
                   <span className={`px-1.5 py-0.5 rounded-full text-[10.5px] font-extrabold leading-none ${tab === t ? 'bg-bg text-ink' : 'grad-bg text-[#06080C]'}`}>{todayCount}</span>
                 )}
               </button>
@@ -111,18 +151,45 @@ export default function Feed() {
           </div>
         </Link>
 
-        <StateLegend />
+        <StateLegend
+          doneCount={doneCount}
+          showDone={showDone}
+          onToggleShowDone={() => setShowDone(!showDone)}
+        />
 
         <div className="space-y-4">
           {loading && !data && [0, 1, 2].map(i => <PostSkeleton key={i} />)}
           {error && <EmptyState title="Couldn’t load the feed" text={error} action={<button className="btn-ghost" onClick={reload}>Try again</button>} />}
-          {data?.length === 0 && (tab === 'today'
-            ? <EmptyState title="Nothing new today yet" text="The experts post through the day. Check back soon, or have a look at everything in For you." action={<button className="btn-grad" onClick={() => choose('foryou')}>Go to For you</button>} />
+          {data && visiblePosts.length === 0 && (tab === 'today'
+            ? <EmptyState
+                title={doneCount > 0 ? "You're all caught up for today! 🎉" : "Nothing new today yet"}
+                text={doneCount > 0
+                  ? `Awesome work! You completed today's safety activities. Check out 'For you' to explore more or come back tomorrow.`
+                  : "The experts post through the day. Check back soon, or have a look at everything in For you."}
+                action={<button className="btn-grad" onClick={() => choose('foryou')}>Go to For you</button>}
+              />
             : <EmptyState title="Nothing here yet" text="Follow a few more experts to fill this tab." action={<Link to="/experts" className="btn-grad">Find experts</Link>} />)}
-          {data?.map(p => <PostCard key={p.id} post={p} />)}
-          {data && data.length > 0 && <p className="text-center text-sm text-muted py-6">🎉 You’re all caught up. New posts arrive through the day.</p>}
+          {visiblePosts.map(p => {
+            const isFading = fadingIds.has(p.id)
+            return (
+              <div
+                key={p.id}
+                className={`transition-all duration-500 transform ${
+                  isFading ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'
+                }`}
+              >
+                <PostCard post={p} onComplete={handleCardComplete} />
+              </div>
+            )
+          })}
+          {data && visiblePosts.length > 0 && <p className="text-center text-sm text-muted py-6">🎉 You’re all caught up. New posts arrive through the day.</p>}
         </div>
       </div>
+
+      <PointsModal
+        data={pointsModalData}
+        onClose={() => setPointsModalData(null)}
+      />
     </AppShell>
   )
 }
