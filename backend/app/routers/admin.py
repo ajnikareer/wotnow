@@ -521,3 +521,28 @@ async def clean_seed_users(actor: str = Depends(require_admin)):
             deleted.append(uid)
     return {"deletedCount": len(deleted), "deleted": deleted}
 
+
+@router.post("/clean-post-stats")
+async def clean_post_stats(actor: str = Depends(require_admin)):
+    db = get_db()
+    posts = db.query(POSTS)
+    fixed = 0
+    for p in posts:
+        stats = p.get("stats") or {}
+        changed = False
+        if stats.get("responses", 0) > 50:
+            stats["responses"] = 0
+            p["stats"] = stats
+            changed = True
+        if "voteCounts" in p and any(v > 50 for v in p["voteCounts"].values()):
+            p["voteCounts"] = {k: 0 for k in p["voteCounts"]}
+            changed = True
+        if p.get("pinned"):
+            p.pop("pinned", None)
+            changed = True
+        if changed:
+            db.put(POSTS, p["id"], p)
+            fixed += 1
+    return {"fixedCount": fixed}
+
+

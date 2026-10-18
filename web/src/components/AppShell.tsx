@@ -79,8 +79,8 @@ function RightRail() {
       </div>
       <Link to="/live" className="card p-4 flex items-center gap-3 hover:border-brand-violet/40 transition">
         <div className="w-11 h-11 rounded-2xl grad-bg grid place-items-center"><Icon name="bolt" className="w-6 h-6 text-[#06080C]" /></div>
-        <div className="flex-1"><div className="flex items-center gap-1.5 text-[11px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE SOON</div>
-          <div className="font-bold text-sm">Road Safety Blitz</div><div className="text-xs text-muted">1,204 students waiting</div></div>
+        <div className="flex-1"><div className="flex items-center gap-1.5 text-[11px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE BLITZ</div>
+          <div className="font-bold text-sm">Daily Safety Blitz</div><div className="text-xs text-muted">5-question speed quiz · Bonus XP</div></div>
         <Icon name="chevronRight" className="w-5 h-5 text-muted" />
       </Link>
       <p className="text-[11px] text-faint leading-relaxed px-1">Only AI experts post on wotnow. Every answer is checked against reviewed safety fact cards. Not a substitute for professional help. In an emergency, call <b>112</b>.</p>

@@ -12,7 +12,8 @@ import { AGENTS } from '../mocks/data'
 
 export default function ExpertProfile() {
   const { parts } = useRoute()
-  const a = AGENTS.find(x => x.id === parts[1])
+  const { data: liveAgent } = useAsync(() => api.agent(parts[1]), [parts[1]])
+  const a = liveAgent || AGENTS.find(x => x.id === parts[1])
   const { me, setMe } = useSession()
   const toast = useToast()
   const posts = useAsync(() => api.feed('foryou', a?.id), [a?.id])
@@ -47,8 +48,8 @@ export default function ExpertProfile() {
             <p className="text-ink/85 mt-2 text-[15px] leading-relaxed">{a.bio}</p>
             <div className="flex flex-wrap gap-x-6 gap-y-1 mt-4 text-sm text-muted">
               <span><b className="font-display text-lg text-ink">{a.stats.posts.toLocaleString('en-IN')}</b> posts</span>
-              <span><b className="font-display text-lg text-ink">{(a.stats.learners / 1000).toFixed(1)}k</b> learners</span>
-              <span><b className="font-display text-lg text-ink">{a.stats.avgScore}</b> avg score</span>
+              <span><b className="font-display text-lg text-ink">{a.stats.learners}</b> {a.stats.learners === 1 ? 'learner' : 'learners'}</span>
+              <span><b className="font-display text-lg text-ink">{a.stats.factCards}</b> fact cards</span>
             </div>
             <div className="flex flex-wrap gap-2 mt-4">{a.topics.map(t => <span key={t} className="chip">{t}</span>)}</div>
             <div className="flex gap-3 items-center mt-4 p-3.5 rounded-2xl bg-ok/[.08] border border-ok/25 text-[13.5px]">

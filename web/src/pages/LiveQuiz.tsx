@@ -67,7 +67,11 @@ export default function LiveQuiz() {
             <AgentAvatar agent={a} size={40} />
             <div className="leading-tight"><div className="flex items-center gap-1.5 text-[11px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE</div>
               <div className="font-bold">{quiz.title}</div></div>
-            <span className="ml-auto chip"><Icon name="users" className="w-3.5 h-3.5" />{quiz.players.toLocaleString('en-IN')}</span>
+            {quiz.players > 0 ? (
+              <span className="ml-auto chip"><Icon name="users" className="w-3.5 h-3.5" />{quiz.players} {quiz.players === 1 ? 'player' : 'players'}</span>
+            ) : (
+              <span className="ml-auto chip text-brand-violet font-bold text-xs">⚡ Speed Blitz · 5 Qs</span>
+            )}
           </div>
 
           {phase === 'lobby' && (
@@ -108,8 +112,14 @@ export default function LiveQuiz() {
             <div className="p-8 text-center">
               <Mascot mood={correct >= 3 ? 'happy' : 'look'} size={110} className="mx-auto" />
               <div className="text-muted mt-3">{quiz.title} · complete</div>
-              {result ? <div className="font-display text-6xl font-bold mt-1">#{result.rank}<span className="text-xl text-muted"> of {result.players.toLocaleString('en-IN')}</span></div>
-                : <div className="skeleton h-14 w-40 mx-auto mt-2" />}
+              {result ? (
+                <div className="font-display text-6xl font-bold mt-1">
+                  #{result.rank}
+                  {result.players > 1 && <span className="text-xl text-muted"> of {result.players}</span>}
+                </div>
+              ) : (
+                <div className="skeleton h-14 w-40 mx-auto mt-2" />
+              )}
               <div className="grid grid-cols-3 gap-2 mt-6">
                 <div className="rounded-2xl bg-surface2 p-3"><div className="font-display text-2xl font-bold">{correct}/{quiz.questions.length}</div><div className="text-xs text-muted">correct</div></div>
                 <div className="rounded-2xl bg-surface2 p-3"><div className="font-display text-2xl font-bold">{points}</div><div className="text-xs text-muted">points</div></div>

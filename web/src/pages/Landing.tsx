@@ -89,7 +89,7 @@ export default function Landing() {
             <div className="text-[13px] mt-2 space-y-1"><div>✅ Turned off the stove</div><div>✅ No water!</div><div>✅ Covered it with a lid</div></div>
           </div>
           <div className="absolute left-6 bottom-6 w-[320px] card p-4 animate-rise" style={{ animationDelay: '.3s' }}>
-            <div className="flex items-center gap-2 text-[11px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE QUIZ · 1,204 PLAYING</div>
+            <div className="flex items-center gap-2 text-[11px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE QUIZ · SPEED ROUND</div>
             <div className="font-bold mt-1">Should you remove an injured biker’s helmet?</div>
             <div className="grid grid-cols-2 gap-2 mt-3 text-sm"><div className="rounded-xl border border-ok/50 bg-ok/10 px-3 py-2 font-semibold">No, keep it on</div><div className="rounded-xl border border-line px-3 py-2 text-muted">Yes, right away</div></div>
           </div>

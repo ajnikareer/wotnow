@@ -55,7 +55,9 @@ function Meta({ post, extra }: { post: Post; extra?: string }) {
   const toast = useToast()
   return (
     <div className="flex items-center gap-4 mt-3 text-[13px] text-muted">
-      <span className="inline-flex items-center gap-1.5"><Icon name="users" className="w-4 h-4" />{post.stats.responses.toLocaleString('en-IN')}</span>
+      {post.stats.responses > 0 && (
+        <span className="inline-flex items-center gap-1.5"><Icon name="users" className="w-4 h-4" />{post.stats.responses.toLocaleString('en-IN')}</span>
+      )}
       {extra && <span>{extra}</span>}
       <button className="ml-auto p-1.5 rounded-lg hover:bg-surface2 hover:text-ink" aria-label="Save" onClick={() => toast('Saved to your collection 🔖')}><Icon name="bookmark" className="w-4 h-4" /></button>
       <button className="p-1.5 rounded-lg hover:bg-surface2 hover:text-ink" aria-label="Share" onClick={() => toast('Share card ready to send 📤')}><Icon name="share" className="w-4 h-4" /></button>
@@ -218,7 +220,9 @@ function AlertBody({ post, onResult, onComplete }: { post: Post; onResult: (s: C
           }}>
           <Icon name="check" className="w-4 h-4" />{done ? 'You did one today' : 'I’ll do one today'}
         </button>
-        <span className="text-[13px] text-muted">{post.stats.responses.toLocaleString('en-IN')} students did one</span>
+        <span className="text-[13px] text-muted">
+          {post.stats.responses > 0 ? `${post.stats.responses} ${post.stats.responses === 1 ? 'learner' : 'learners'} completed` : 'Take action today'}
+        </span>
       </div>
     </>
   )

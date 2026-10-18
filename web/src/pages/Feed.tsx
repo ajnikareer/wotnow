@@ -145,7 +145,7 @@ export default function Feed() {
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-1.5 text-[11px] font-extrabold tracking-wider text-bad"><span className="w-2 h-2 rounded-full bg-bad animate-pulse" />LIVE QUIZ</div>
               <div className="font-bold text-[16px] leading-tight mt-0.5">Road Safety Blitz · 5 questions</div>
-              <div className="text-[13px] text-muted mt-0.5">Fastest correct answers win · 1,204 waiting</div>
+              <div className="text-[13px] text-muted mt-0.5">5 quick questions · Fastest answers earn bonus XP</div>
             </div>
             <span className="btn-grad">Join</span>
           </div>

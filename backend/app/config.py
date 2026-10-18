@@ -47,7 +47,7 @@ class Settings:
         self.MAX_GEN_ATTEMPTS = int(g("MAX_GEN_ATTEMPTS", "3"))
 
         # ---- Demo ----
-        self.DEMO_CROWD = int(g("DEMO_CROWD", "1200"))                  # simulated live-quiz players (0 = real only)
+        self.DEMO_CROWD = int(g("DEMO_CROWD", "0"))                     # simulated live-quiz players (0 = real only)
 
         self.CONTENT_DIR = Path(__file__).resolve().parent / "content"
 

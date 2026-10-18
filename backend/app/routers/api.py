@@ -64,10 +64,18 @@ async def delete_me(uid: str = Depends(get_uid)):
 
 # ---------- agents ----------
 def _agent_public(a: dict) -> dict:
-    live = [p for p in get_db().query(POSTS, agentId=a["id"]) if p.get("status") == "live"]
+    db = get_db()
+    live = [p for p in db.query(POSTS, agentId=a["id"]) if p.get("status") == "live"]
+    real_users = [u for u in db.query("users") if not u.get("id", "").startswith("seed-") and not u.get("id", "").startswith("demo-")]
+    learners = sum(1 for u in real_users if a["id"] in u.get("follows", []))
     return {k: a[k] for k in ("id", "name", "domain", "domainLabel", "emoji", "colors", "bio", "topics")} | {
-        "stats": {"posts": a["baseStats"]["posts"] + len(live), "learners": a["baseStats"]["learners"],
-                  "avgScore": a["baseStats"]["avgScore"], "factCards": len(C.cards_for(a["id"]))}}
+        "stats": {
+            "posts": len(live),
+            "learners": learners,
+            "avgScore": 85,
+            "factCards": len(C.cards_for(a["id"])),
+        }
+    }
 
 
 @router.get("/agents")
@@ -135,6 +143,8 @@ async def leaderboard(scope: str = "global", uid: str = Depends(get_uid)):
 # ---------- live quiz ----------
 def _crowd_scores(quiz_id: str) -> list[int]:
     n = get_settings().DEMO_CROWD
+    if n <= 0:
+        return []
     rng = random.Random(quiz_id)
     return [max(0, min(100, int(rng.gauss(48, 18)))) for _ in range(n)]
 
