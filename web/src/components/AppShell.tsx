@@ -31,6 +31,10 @@ function SideNav() {
           </Link>
         )
       })}
+      <Link to="/about"
+        className={`flex items-center gap-3 px-3 py-2.5 rounded-2xl text-[15px] font-semibold transition ${path.startsWith('/about') ? 'bg-surface2 text-ink' : 'text-muted hover:text-ink hover:bg-surface2/60'}`}>
+        <Icon name="info" className="w-[21px] h-[21px]" strokeWidth={path.startsWith('/about') ? 2.3 : 1.9} />About
+      </Link>
       {role === 'parent' && (
         <Link to="/parent" className={`flex items-center gap-3 px-3 py-2.5 rounded-2xl text-[15px] font-semibold ${path.startsWith('/parent') ? 'bg-surface2' : 'text-muted hover:text-ink'}`}>
           <Icon name="family" className="w-[21px] h-[21px]" />Parent view
@@ -93,8 +97,13 @@ function MobileTop() {
     <header className="lg:hidden sticky top-0 z-30 bg-bg/80 backdrop-blur-xl border-b border-line">
       <div className="flex items-center gap-2 px-4 h-14">
         <Link to="/feed" aria-label="wotnow home"><Logo className="h-8" /></Link>
-        <div className="ml-auto flex items-center gap-1.5"><ThemeToggle compact />
-          <Link to="/me" className="btn-ghost !p-2.5 !rounded-xl" aria-label="Profile"><Icon name="bell" className="w-[18px] h-[18px]" /></Link></div>
+        <div className="ml-auto flex items-center gap-1.5">
+          <Link to="/about" className="chip text-xs font-semibold text-muted hover:text-ink flex items-center gap-1">
+            <Icon name="info" className="w-3.5 h-3.5" />About
+          </Link>
+          <ThemeToggle compact />
+          <Link to="/me" className="btn-ghost !p-2.5 !rounded-xl" aria-label="Profile"><Icon name="bell" className="w-[18px] h-[18px]" /></Link>
+        </div>
       </div>
     </header>
   )

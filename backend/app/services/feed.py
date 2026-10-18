@@ -29,12 +29,12 @@ from ..core.settings import get_platform
 from ..engine import cards as C
 from ..engine.generator import POSTS
 from ..store.base import get_db
-from . import clock
+from . import clock, users
 
 BAND_ORDER = ("junior", "middle", "senior")
 WINDOW = 150                                   # newest live posts kept in the shared window
 DEFAULT_PINS = ()
-TABS = ("today", "foryou", "near", "following")
+TABS = ("today", "learned", "foryou", "near", "following")
 VOTE_TYPES = ("poll", "myth_fact", "scam_legit")
 PASS_SCORE = 50                                # scenario score at which a card turns green (below it: red)
 
@@ -115,6 +115,16 @@ def visible(u: dict, tab: str = "foryou", agent_id: Optional[str] = None, extra:
         posts = [p for p in posts if p["type"] == "local_alert" or p["agentId"] in ("terra", "civic")]
     elif tab == "today":
         posts = [p for p in posts if posted_today(p, today)]
+    elif tab == "learned":
+        my_state = users.my_state(u["id"])
+        my_pids = set(my_state.keys())
+        missing = my_pids - {p["id"] for p in posts}
+        db = get_db()
+        for pid in missing:
+            dp = db.get(POSTS, pid)
+            if dp and dp.get("status") == "live":
+                posts.append(dp)
+        posts = [p for p in posts if p["id"] in my_pids]
     posts.sort(key=lambda p: p.get("createdAt", ""), reverse=True)
     return posts
 
@@ -124,7 +134,7 @@ def select(posts: list[dict], limit: int) -> list[dict]:
     return posts[:limit]
 
 
-def latest(u: dict, tab: str = "foryou", since: Optional[str] = None) -> dict:
+def latest(u: dict, tab: str = "today", since: Optional[str] = None) -> dict:
     """Cheap 'anything new?' check for the web app: newest post time, how many are newer than `since`, and today's post count."""
     posts = visible(u, tab)
     newest = max((p.get("createdAt", "") for p in posts), default=None)

@@ -47,6 +47,7 @@ export default function Profile() {
           <div className="flex flex-wrap items-center gap-3"><div className="flex-1 min-w-[160px]"><div className="font-semibold">Appearance</div><div className="text-sm text-muted">Light, dark or match your device</div></div><ThemeSegment /></div>
           <div className="flex items-center gap-3 p-4 rounded-2xl bg-surface2 text-sm"><Icon name="lock" className="w-5 h-5 text-muted" />Time limits, topics and privacy are managed by your parent.</div>
           <div className="flex flex-wrap gap-2">
+            <button className="btn-ghost" onClick={() => navigate('/about')}><Icon name="info" className="w-4 h-4" />About WotNow</button>
             <button className="btn-ghost" onClick={() => { api.reset(); refreshMe(); toast('Demo data reset ✨') }}>Reset demo data</button>
             <button className="btn-ghost text-bad" onClick={() => { signOut(); navigate('/') }}><Icon name="logout" className="w-4 h-4" />Sign out</button>
           </div>

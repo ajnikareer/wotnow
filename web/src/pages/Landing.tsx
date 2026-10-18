@@ -10,7 +10,7 @@ import { useToast } from '../lib/toast'
 
 const DEFAULT_CFG: AuthConfig = { authMode: 'demo', googleEnabled: false, googleClientId: '', allowDemo: true, devLogin: false, adminTokenLogin: false, maxChildren: 3 }
 
-export default function Landing() {
+export default function Landing({ isAboutPage }: { isAboutPage?: boolean }) {
   const { kind, enterDemo, signOut } = useSession()
   const toast = useToast()
   const [cfg, setCfg] = useState<AuthConfig>(DEFAULT_CFG)
@@ -23,7 +23,7 @@ export default function Landing() {
 
   // What the main button does depends on who is here: a signed-in family, a demo visitor, or a new visitor.
   const primary = signedIn
-    ? { label: 'Open my family', icon: 'family' as const, go: () => navigate('/family') }
+    ? { label: 'Go to Feed', icon: 'arrowRight' as const, go: () => navigate('/feed') }
     : inDemo
       ? { label: 'Continue the demo', icon: 'arrowRight' as const, go: () => navigate('/feed') }
       : { label: 'Parents: sign in or sign up', icon: 'family' as const, go: () => navigate('/signin') }
@@ -32,11 +32,16 @@ export default function Landing() {
     <div className="min-h-screen overflow-x-hidden">
       {/* nav */}
       <header className="max-w-6xl mx-auto flex items-center gap-6 px-5 md:px-8 py-5">
-        <Logo className="h-10 md:h-11" />
+        <a href="#/" aria-label="wotnow home"><Logo className="h-10 md:h-11" /></a>
         <nav className="hidden md:flex gap-6 text-sm text-muted font-medium ml-4">
           <a href="#how" className="hover:text-ink">How it works</a><a href="#experts" className="hover:text-ink">The experts</a><a href="#parents" className="hover:text-ink">For parents</a>
         </nav>
         <div className="ml-auto flex items-center gap-2">
+          {signedIn && (
+            <button className="btn-grad text-xs sm:text-sm !py-2 !px-3.5 shadow-sm" onClick={() => navigate('/feed')}>
+              ← Back to Feed
+            </button>
+          )}
           <ThemeToggle compact />
           {signedIn
             ? <><button className="btn-ghost hidden sm:inline-flex" onClick={() => navigate('/family')}>My family</button><button className="btn-ghost" onClick={out}>Sign out</button></>

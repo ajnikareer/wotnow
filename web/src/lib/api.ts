@@ -42,7 +42,7 @@ export interface Account {
   id: string; email: string; name: string; picture: string; provider: 'google' | 'dev'; isAdmin: boolean; createdAt: string; children: Me[]; maxChildren: number
 }
 export interface NewChild { nickname: string; avatar: string; grade: number; city: string; country?: string; follows?: string[] }
-export type FeedTab = 'today' | 'foryou' | 'near' | 'following'
+export type FeedTab = 'today' | 'learned' | 'foryou' | 'near' | 'following'
 export interface FeedLatest { latest: string | null; newCount: number; todayCount: number }
 export interface SignedIn { token: string; account: Account }
 
@@ -54,6 +54,10 @@ const body = (o: unknown) => JSON.stringify(o)
 /** Sign-in (Google, or the server's test sign-in), the parent's account and the child profiles. Live mode only. */
 export const authApi = {
   config: (): Promise<AuthConfig> => (API_MODE === 'live' ? http<AuthConfig>('/auth/config') : Promise.resolve(NO_AUTH)),
+  checkNickname: (nickname: string, exclude?: string) =>
+    API_MODE === 'live'
+      ? http<{ available: boolean; message: string }>(`/auth/check-nickname?nickname=${encodeURIComponent(nickname)}${exclude ? `&exclude=${encodeURIComponent(exclude)}` : ''}`)
+      : Promise.resolve({ available: true, message: 'Available' }),
   google: (credential: string) => live(() => http<SignedIn>('/auth/google', { method: 'POST', body: body({ credential }) })),
   devLogin: (email: string, name: string) => live(() => http<SignedIn>('/auth/dev-login', { method: 'POST', body: body({ email, name }) })),
   refresh: () => live(() => http<{ token: string }>('/auth/refresh', { method: 'POST' })),
@@ -74,7 +78,7 @@ const liveApi = {
   updateMe: (patch: Partial<Me>) => http<Me>('/me', { method: 'POST', body: body(patch) }),
   agents: () => http<Agent[]>('/agents'),
   agent: (id: string) => http<Agent>(`/agents/${id}`),
-  feed: (tab: FeedTab = 'foryou', agentId?: string) =>
+  feed: (tab: FeedTab = 'today', agentId?: string) =>
     http<Post[]>(`/feed?tab=${tab}${agentId ? `&agent=${agentId}` : ''}`),
   post: (id: string) => http<{ post: Post; responses: Response[] }>(`/posts/${id}`),
   answer: (id: string, text: string) => http<Evaluation>(`/posts/${id}/answer`, { method: 'POST', body: body({ text }) }),

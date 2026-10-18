@@ -78,6 +78,20 @@ def public(u: dict) -> dict:
     return {k: view.get(k) for k in PUBLIC}
 
 
+def is_nickname_taken(nickname: str, exclude_uid: Optional[str] = None) -> bool:
+    clean = re.sub(r"[^A-Za-z0-9]", "", str(nickname)).strip().lower()
+    if not clean:
+        return False
+    db = get_db()
+    for doc in db.query(USERS):
+        if exclude_uid and doc.get("id") == exclude_uid:
+            continue
+        existing = str(doc.get("nickname") or "").strip().lower()
+        if existing == clean:
+            return True
+    return False
+
+
 EDITABLE = {"nickname", "avatar", "grade", "city", "country", "school", "className", "follows"}
 
 
@@ -87,7 +101,13 @@ def update_profile(u: dict, patch: dict) -> dict:
         if k in EDITABLE and v is not None:
             u[k] = v
     if "nickname" in patch:
-        u["nickname"] = re.sub(r"[^A-Za-z0-9]", "", str(u["nickname"]))[:16] or "Learner"
+        raw = str(patch["nickname"]).strip()
+        clean = re.sub(r"[^A-Za-z0-9]", "", raw)[:16]
+        if len(clean) < 3:
+            raise HTTPException(400, "Nickname must be at least 3 letters or numbers.")
+        if is_nickname_taken(clean, exclude_uid=u.get("id")):
+            raise HTTPException(409, f"Nickname '{clean}' is already taken. Please choose another unique nickname!")
+        u["nickname"] = clean
     if "country" in patch and patch["country"]:
         u["country"] = str(patch["country"]).strip()[:50] or "India"
     if "city" in patch and patch["city"]:

@@ -23,7 +23,34 @@ export function ChildForm({ initial, title, submitLabel, busy, onSubmit, onCance
     return initial.follows && initial.follows.length > 0 ? initial.follows : AGENTS.map(a => a.id)
   })
 
-  const ok = f.nickname.replace(/[^A-Za-z0-9]/g, '').length >= 3
+  const [nickStatus, setNickStatus] = useState<{ checking: boolean; available?: boolean; message?: string }>({ checking: false })
+
+  useEffect(() => {
+    const raw = f.nickname.replace(/[^A-Za-z0-9]/g, '')
+    if (raw.length < 3) {
+      setNickStatus({ checking: false })
+      return
+    }
+    if (initial.nickname && initial.nickname.toLowerCase() === raw.toLowerCase()) {
+      setNickStatus({ checking: false, available: true, message: 'Current nickname' })
+      return
+    }
+    let cancelled = false
+    setNickStatus({ checking: true })
+    const timer = setTimeout(async () => {
+      try {
+        const res = await authApi.checkNickname(raw)
+        if (!cancelled) {
+          setNickStatus({ checking: false, available: res.available, message: res.message })
+        }
+      } catch {
+        if (!cancelled) setNickStatus({ checking: false })
+      }
+    }, 350)
+    return () => { cancelled = true; clearTimeout(timer) }
+  }, [f.nickname, initial.nickname])
+
+  const ok = f.nickname.replace(/[^A-Za-z0-9]/g, '').length >= 3 && nickStatus.available !== false
 
   const toggleExpert = (id: string) => {
     setSelectedExperts(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id])
@@ -46,8 +73,25 @@ export function ChildForm({ initial, title, submitLabel, busy, onSubmit, onCance
               <button key={a} type="button" onClick={() => setF({ ...f, avatar: a })} aria-pressed={f.avatar === a}
                 className={`aspect-square rounded-2xl text-2xl grid place-items-center border transition ${f.avatar === a ? 'border-brand-violet bg-brand-violet/10 scale-105' : 'border-line bg-surface2 hover:bg-surface3'}`}>{a}</button>
             ))}</div></div>
-          <div className="mt-4"><label className="label">Nickname (3–16 letters or numbers)</label>
-            <input className="input" value={f.nickname} maxLength={16} placeholder="e.g. CleverFox" onChange={e => setF({ ...f, nickname: e.target.value.replace(/[^A-Za-z0-9]/g, '') })} /></div>
+          <div className="mt-4">
+            <div className="flex items-center justify-between mb-1">
+              <label className="label !mb-0">Nickname (3–16 letters or numbers)</label>
+              {nickStatus.checking ? (
+                <span className="text-xs text-muted">Checking availability…</span>
+              ) : nickStatus.available === true ? (
+                <span className="text-xs text-ok font-semibold">✓ {nickStatus.message || 'Available'}</span>
+              ) : nickStatus.available === false ? (
+                <span className="text-xs text-bad font-semibold">✗ {nickStatus.message || 'Already taken'}</span>
+              ) : null}
+            </div>
+            <input
+              className={`input ${nickStatus.available === false ? '!border-bad focus:!border-bad focus:!ring-bad/15' : nickStatus.available === true ? '!border-ok/60' : ''}`}
+              value={f.nickname}
+              maxLength={16}
+              placeholder="e.g. CleverFox"
+              onChange={e => setF({ ...f, nickname: e.target.value.replace(/[^A-Za-z0-9]/g, '') })}
+            />
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
             <div><label className="label">Class</label>
               <select className="input" value={f.grade} onChange={e => setF({ ...f, grade: +e.target.value })}>

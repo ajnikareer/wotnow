@@ -21,9 +21,9 @@ import AdminPage from './pages/admin/AdminPage'
 
 // Pages anyone can open. Everything else needs a signed-in family or the demo; without either, the visitor is sent to sign in.
 // ('start' is the old sign-up form: it forwards to the sign-in page.)
-const PUBLIC = new Set(['', 'start', 'signin', 'family', 'admin'])
+const PUBLIC = new Set(['', 'start', 'signin', 'family', 'admin', 'about'])
 // The app pages show the account strip (who is signed in, switch child, sign out).
-const APP_PAGES = new Set(['feed', 'post', 'experts', 'leaderboard', 'me', 'parent', 'live'])
+const APP_PAGES = new Set(['feed', 'post', 'experts', 'leaderboard', 'me', 'parent', 'live', 'about'])
 
 /** A safety net: an API error that a page didn't handle (for example "The shared demo student can't be changed") becomes a message
  *  instead of silence. Expired sessions (401) are already handled by the API client. */
@@ -54,6 +54,7 @@ function Routes() {
 function pageFor(page: string, parts: string[]) {
   switch (page) {
     case '': return <Landing />
+    case 'about': return <Landing isAboutPage={true} />
     case 'start': return <Start />
     case 'signin': return <SignIn />
     case 'family': return <Family />

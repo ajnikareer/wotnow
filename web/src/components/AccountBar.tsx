@@ -18,6 +18,7 @@ export function AccountBar() {
         <>
           <span className="truncate max-w-[60vw]">👤 {email || 'Signed in'}{me ? <> · learning as <b className="text-ink">{me.nickname}</b></> : null}</span>
           <span className="ml-auto flex items-center gap-3">
+            <button className={link} onClick={() => navigate('/about')}>About</button>
             <button className={link} onClick={() => navigate('/family')}>Switch child</button>
             <button className={link} onClick={() => navigate('/parent')}>Parent view</button>
             <button className={link} onClick={() => { signOut(); toast('Signed out') }}>Sign out</button>
@@ -27,6 +28,7 @@ export function AccountBar() {
         <>
           <span>🧪 Shared demo student. Progress is shared with other visitors and isn’t saved for you.</span>
           <span className="ml-auto flex items-center gap-3">
+            <button className={link} onClick={() => navigate('/about')}>About</button>
             <button className={link} onClick={() => navigate('/signin')}>Sign in or sign up</button>
             <button className={link} onClick={() => signOut()}>Exit demo</button>
           </span>

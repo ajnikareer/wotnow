@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field
 from ..auth import get_account_required
 from ..core import accounts, security
 from ..core.settings import get_platform
+from ..services import users
 
 router = APIRouter(prefix="/api", tags=["auth"])
 EMAIL = re.compile(r"^[^@\s]{1,64}@[^@\s]{1,120}\.[^@\s]{2,24}$")
@@ -53,6 +54,15 @@ async def auth_config():
     return {"authMode": ps.auth_mode, "googleEnabled": ps.google_enabled, "googleClientId": ps.google_client_id if ps.google_enabled else "",
             "allowDemo": ps.allow_demo or ps.auth_mode == "dev", "devLogin": ps.dev_login_enabled, "adminTokenLogin": ps.admin_token_login,
             "maxChildren": ps.max_children}
+
+
+@router.get("/auth/check-nickname")
+async def check_nickname(nickname: str, exclude: Optional[str] = None):
+    clean = re.sub(r"[^A-Za-z0-9]", "", str(nickname)).strip()
+    if len(clean) < 3:
+        return {"available": False, "message": "At least 3 characters required"}
+    taken = users.is_nickname_taken(clean, exclude_uid=exclude)
+    return {"available": not taken, "message": f"'{clean}' is already taken" if taken else "Available"}
 
 
 @router.post("/auth/google")

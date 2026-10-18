@@ -23,18 +23,18 @@ router = APIRouter(prefix="/api", tags=["feed"])
 
 def _tab(tab: str) -> str:
     if tab not in feed.TABS:
-        raise HTTPException(400, "tab must be today|foryou|near|following")
+        raise HTTPException(400, f"tab must be one of: {', '.join(feed.TABS)}")
     return tab
 
 
 @router.get("/feed")
-async def feed_list(tab: str = "foryou", agent: Optional[str] = None, uid: str = Depends(get_uid)):
+async def feed_list(tab: str = "today", agent: Optional[str] = None, uid: str = Depends(get_uid)):
     """The student's feed. Each post carries `state`: done | retry | new | none (the neon border colour)."""
     return await posts.feed(users.get_user(uid), _tab(tab), agent)
 
 
 @router.get("/feed/latest")
-async def feed_latest(tab: str = "foryou", since: Optional[str] = None, uid: str = Depends(get_uid)):
+async def feed_latest(tab: str = "today", since: Optional[str] = None, uid: str = Depends(get_uid)):
     """{latest, newCount, todayCount}. No AI, tiny reads. `todayCount` is the number on the Today tab."""
     _tab(tab)
     if since:
